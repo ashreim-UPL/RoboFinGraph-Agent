@@ -3,7 +3,7 @@ import logging
 import os
 import json
 import re
-from typing import Dict, Any, Callable
+from typing import Dict, Any, Callable, List
 from functools import partial
 import asyncio
 import inspect
@@ -14,6 +14,36 @@ from tools import report_utils
 from prompts.summarization_intsruction import finrobot_prompt_library
 from prompts.report_summaries import report_section_specs
 from utils.logger import log_agent_step, log_final_summary, log_cost_estimate
+from tools.report_writer import ReportLabUtils
+
+
+# In a config or at the top of your graph_nodes.py
+TOOL_MAP: Dict[str, Callable] = {
+    "get_sec_10k_sections": report_utils.get_sec_10k_sections,
+    "get_company_profile": report_utils.get_company_profile,
+    "get_key_data": report_utils.get_key_data,
+    "get_competitors": report_utils.get_competitor_analysis,
+    "get_income_statement": partial(report_utils.get_financial_statement, statement_type="income_statement"),
+    "get_balance_sheet": partial(report_utils.get_financial_statement, statement_type="balance_sheet"),
+    "get_cash_flow": partial(report_utils.get_financial_statement, statement_type="cash_flow_statement"),
+    "get_pe_eps_chart": report_utils.generate_pe_eps_chart,
+    "get_share_performance_chart": report_utils.generate_share_performance_chart,
+    "financial_metrics": report_utils.get_financial_metrics
+}
+
+DATA_COLLECTION_TASKS: List[Dict[str, str]] = [
+    {'task': 'get_sec_10k_sections',          'file': 'report/sec_filings'},
+    {'task': 'get_key_data',                  'file': 'report/summaries/key_data.json'},
+    {'task': 'get_company_profile',           'file': 'report/company_profile.json'},
+    {'task': 'get_competitors',               'file': 'report/competitors.json'},
+    {'task': 'get_income_statement',          'file': 'report/income_statement.json'},
+    {'task': 'get_balance_sheet',             'file': 'report/balance_sheet.json'},
+    {'task': 'get_cash_flow',                 'file': 'report/cash_flow.json'},
+    {'task': 'get_pe_eps_chart',              'file': 'report/summaries/pe_eps_performance.png'},
+    {'task': 'get_share_performance_chart',   'file': 'report/summaries/share_performance.png'},
+    {'task': 'financial_metrics',             'file': 'report/summaries/financial_metrics.json'}
+]
+
 
 # Parse cost from chat output
 def parse_cost(cost_obj):
@@ -64,52 +94,50 @@ def decide_to_continue(state: AgentState) -> str:
 
 
 # --- The data collection node now inspects function signatures ---
-def data_collection_node(state: AgentState, task_function: Callable, output_file: str) -> Dict[str, Any]:
+def data_collection_node(state: AgentState) -> Dict[str, Any]:
     """
-    Receives a tool function and intelligently calls it with only the
-    arguments it can accept from the available state.
+    Runs all data collection tasks, saving outputs and returning their paths.
     """
-    task_name_str = task_function.func.__name__ if isinstance(task_function, partial) else task_function.__name__
-    print(f"--- Executing Data Collection via tool: {task_name_str} ---")
-
+    print("--- Executing Node: Data Collection ---")
     ticker = state.company_details['identifiers']['ticker']
     region = state.region
     year = state.year
 
-    try:
-        sig = inspect.signature(task_function)
-        
-        # --- Start of Changes ---
-        # Create a dictionary of ALL possible arguments our tools might need.
-        # This makes the node compatible with any of our tool functions.
-        available_args = {
-            "ticker": ticker,
-            "ticker_symbol": ticker, # Alias for ticker
-            "region": region,
-            "fyear": year,
-            "filing_date": f"{year}-12-31", # Provide a constructed filing_date
-            "save_path": output_file
-        }
-        # --- End of Changes ---
-        
-        # Create a dictionary of arguments that the target function actually accepts
-        call_args = {param: available_args[param] for param in sig.parameters if param in available_args}
-        
-        # Execute the function with only the valid arguments
-        task_function(**call_args)
-        
-        return {"raw_data_files": [output_file]}
+    raw_data_files = []
+    error_log = []
 
-    except Exception as e:
-        error_message = f"Error executing task {task_name_str}: {e}"
-        logging.error(error_message, exc_info=True)
-        # Return None or an error message so the graph can continue
-        return {"error_log": [error_message]}
+    available_args = {
+        "ticker": ticker,
+        "ticker_symbol": ticker,
+        "region": region,
+        "fyear": year,
+        "filing_date": f"{year}-12-31",
+    }
 
-    except Exception as e:
-        error_message = f"Error executing task {task_name_str}: {e}"
-        logging.error(error_message, exc_info=True)
-        return {"error_log": [error_message]}
+    for task in DATA_COLLECTION_TASKS:
+        task_name = task['task']
+        output_file = task['file']
+        task_function = TOOL_MAP[task_name]
+
+        try:
+            sig = inspect.signature(task_function)
+            call_args = {param: available_args[param] for param in sig.parameters if param in available_args}
+            # Add save_path argument
+            if 'save_path' in sig.parameters:
+                call_args['save_path'] = output_file
+
+            print(f"[DataCollection] Running {task_name} -> {output_file}")
+            task_function(**call_args)
+            raw_data_files.append(output_file)
+        except Exception as e:
+            error_message = f"Error executing {task_name}: {e}"
+            logging.error(error_message, exc_info=True)
+            error_log.append(error_message)
+
+    return {
+        "raw_data_files": raw_data_files,
+        "error_log": error_log,
+    }
 
 def summarization_node(state: AgentState, agent) -> dict:
     """
@@ -223,9 +251,25 @@ def summarization_node(state: AgentState, agent) -> dict:
         )
         summary_outputs[key] = summary_text
 
-    # Save everything to one file
-    with open("report/preliminaries/all_summaries.json", "w", encoding="utf-8") as f:
-        json.dump(summary_outputs, f, indent=2, ensure_ascii=False)
+    # Validation before writing
+    if not summary_outputs:
+        raise RuntimeError("[FATAL] No summaries generated! Failing before file write.")
+    if any(v.startswith("ERROR:") for v in summary_outputs.values()):
+        raise RuntimeError("[FATAL] One or more summaries failed. Check logs.")
+
+    out_path = "report/preliminaries/all_summaries.json"
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    try:
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(summary_outputs, f, indent=2, ensure_ascii=False)
+        # Immediately verify
+        with open(out_path, "r", encoding="utf-8") as f:
+            reloaded = json.load(f)
+            if len(reloaded) != len(summary_outputs):
+                raise RuntimeError(f"[FATAL] File write mismatch! Expected {len(summary_outputs)} sections, found {len(reloaded)}.")
+    except Exception as file_exc:
+        logging.error(f"[FILE WRITE FAILURE] {out_path}: {file_exc}", exc_info=True)
+        raise
 
     return {"summary_outputs": summary_outputs}
 
@@ -298,19 +342,48 @@ def conceptual_analysis_node(state: AgentState, agent) -> dict:
 
     return {"conceptual_sections": conceptual_outputs}
 
-
-
 # --- Node 4: Thesis Generation ---
-def generate_report_node(state: AgentState, agent) -> Dict[str, Any]:
-    """
-    Generates the final report from the conceptual sections.
-    """
+def generate_report_node(state: AgentState, agent) -> dict:
     print("--- Executing Node: Generate Thesis Report ---")
-    # CORRECTED: Use dot notation
-    sections = state.conceptual_sections
-    # final_report_text = agent.chat(f"Create a report from these sections: {sections}")
-    final_report_text = "This is the final investment report for the company."
-    return {"final_report_text": final_report_text}
+    summaries_dir = "report/summaries"
+    # 1. Conceptual summaries
+    conceptual_sections = state.conceptual_sections
+
+    # 2. Key data
+    with open(os.path.join(summaries_dir,"key_data.json"), "r", encoding="utf-8") as f:
+        key_data = json.load(f)
+
+    # 3. Financial metrics
+    with open(os.path.join(summaries_dir,"financial_metrics.json"), "r", encoding="utf-8") as f:
+        financial_metrics = json.load(f)  
+
+    # 4. Chart paths
+    chart_paths = {
+        "pe_eps_performance": "report/summaries/pe_eps_performance.png",
+        "share_performance": "report/summaries/share_performance.png"
+    }
+
+    # 5. Section summaries (txts)
+    summary_texts = {}
+    for fname in os.listdir(summaries_dir):
+        if fname.endswith(".txt"):
+            with open(os.path.join(summaries_dir, fname), "r", encoding="utf-8") as f:
+                summary_texts[fname] = f.read()
+
+    # 6. Call the new report writer
+    output_pdf_path = "report/final_annual_report.pdf"
+    result = ReportLabUtils.build_annual_report(
+        ticker_symbol=state.company_details['identifiers']['ticker'],
+        filing_date=state.year,
+        output_pdf_path=output_pdf_path,
+        sections=conceptual_sections,
+        key_data=key_data,
+        financial_metrics=financial_metrics,
+        chart_paths=chart_paths,
+        summaries=summary_texts
+    )
+
+    return {"final_report_text": result, "output_pdf": output_pdf_path}
 
 # --- Node 5 & 6: I/O and Auditing ---
 def save_report_node(state: AgentState, io_agent) -> Dict[str, Any]:

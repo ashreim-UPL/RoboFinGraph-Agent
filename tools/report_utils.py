@@ -4,7 +4,11 @@ import json
 import re
 import pandas as pd
 from datetime import datetime, date, timedelta
-from typing import Dict, Any, Annotated
+from typing import Dict, Any, Annotated, Tuple
+from collections import defaultdict
+import os
+import logging
+
 
 # Import the core API calling functions from your toolkit
 from .global_API_toolkit import make_api_request, call_sec_utility, save_to_file
@@ -36,14 +40,21 @@ def get_key_data(
     # --- API Calls via global_api_toolkit (Refactored for Consistency) ---
     
     # Get Historical Data
-    hist_data_json = make_api_request("FMP", "/historical-price-full", {"symbol": ticker_symbol, "from": start_date, "to": end_date})
+    hist_data_json = make_api_request("FMP", "/historical-price-eod/full", {"symbol": ticker_symbol, "from": start_date, "to": end_date})
+
     hist = pd.DataFrame() # Default empty DataFrame
-    if hist_data_json and isinstance(hist_data_json, dict) and 'historical' in hist_data_json:
-        hist = pd.DataFrame(hist_data_json['historical'])
+    if isinstance(hist_data_json, dict) and 'historical' in hist_data_json:
+        data = hist_data_json['historical']
+    elif isinstance(hist_data_json, list):
+        data = hist_data_json
+    else:
+        data = []
+
+    if data:
+        hist = pd.DataFrame(data)
         if not hist.empty and 'date' in hist.columns:
             hist['date'] = pd.to_datetime(hist['date'])
             hist = hist.set_index('date')
-
     # Get Company Profile
     profile_response = make_api_request("FMP", "/profile", {"symbol": ticker_symbol})
     profile = profile_response[0] if profile_response and isinstance(profile_response, list) else {}
@@ -82,7 +93,7 @@ def get_key_data(
         f"52 Week Price Range{suffix}": f"{fifty_two_week_low:.2f} - {fifty_two_week_high:.2f}",
         f"BVPS{suffix}": bvps_formatted,
     }
-
+    
     # Save the final dictionary to a file
     return save_to_file(json.dumps(key_data_dict, indent=2), save_path)
 
@@ -190,3 +201,102 @@ def generate_share_performance_chart(ticker: str, fyear: str, save_path: str, **
 
 def generate_pe_eps_chart(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
     return get_pe_eps_performance(ticker, f"{fyear}-12-31", save_path)
+
+def get_financial_metrics(
+    ticker_symbol: str,
+    save_path: str,
+    years: int = 5,
+    **kwargs
+) -> str:
+
+    """
+    Returns a DataFrame containing financial metrics for the last N years for a given ticker symbol,
+    with years as columns and metrics as rows.
+    """
+    all_metrics_by_year = defaultdict(dict)
+    params = {"limit": years + 1}
+    # Fetch each endpoint via make_api_request (using /stable)
+    income_data = make_api_request("FMP", f"/income-statement?symbol={ticker_symbol}", params)
+    key_metrics_data = make_api_request("FMP", f"/key-metrics?symbol={ticker_symbol}", params)
+    ratios_data = make_api_request("FMP", f"/ratios?symbol={ticker_symbol}", params)
+    cashflow_data = make_api_request("FMP", f"/cash-flow-statement?symbol={ticker_symbol}", params)
+    profile_data = make_api_request("FMP", f"/profile?symbol={ticker_symbol}")
+    # Handle error cases up front
+    if any('error' in x for x in [income_data, key_metrics_data, ratios_data, cashflow_data]):
+        return pd.DataFrame(), "USD", ticker_symbol.upper()
+    if not all(isinstance(x, list) for x in [income_data, key_metrics_data, ratios_data, cashflow_data]):
+        return pd.DataFrame(), "USD", ticker_symbol.upper()
+
+    # --- Process metrics by year ---
+    for i in range(min(years, len(income_data))):
+        if i < len(key_metrics_data) and i < len(ratios_data) and i < len(cashflow_data):
+            income = income_data[i]
+            key_metrics = key_metrics_data[i]
+            ratios = ratios_data[i]
+            cashflow = cashflow_data[i]
+            free_cash_flow = cashflow.get("freeCashFlow", 0)
+
+            revenue = income.get("revenue", 0)
+            gross_profit = income.get("grossProfit", 0)
+            net_income = income.get("netIncome", 1e-9) or 1e-9
+
+            metrics = {
+                "Revenue": round(revenue / 1e6),
+                "Gross Profit": round(gross_profit / 1e6),
+                "Gross Margin": round((gross_profit / revenue) if revenue else 0, 2),
+                "EBITDA": round(income.get("ebitda", 0) / 1e6),
+                "EBITDA Margin": round(ratios.get("ebitdaMargin", 0), 2),
+                "FCF": round(free_cash_flow / 1e6),
+                "FCF Conversion": round((free_cash_flow / net_income), 2),
+                "ROIC": f"{round(key_metrics.get('returnOnInvestedCapital', 0) * 100, 1)}%",
+                "EV/EBITDA": round(key_metrics.get("evToEBITDA", 0), 2),
+                "PE Ratio": round(ratios.get("priceToEarningsRatio", 0), 2),
+                "PB Ratio": round(ratios.get("priceToBookRatio", 0), 2),
+                "CFO": round(cashflow.get("operatingCashFlow", 0) / 1e6),
+            }
+
+            # Revenue growth (YoY)
+            revenue_growth_val = "N/A"
+            if i + 1 < len(income_data):
+                prev_revenue = income_data[i + 1].get("revenue", 0)
+                if prev_revenue:
+                    growth = ((revenue - prev_revenue) / prev_revenue) * 100
+                    revenue_growth_val = f"{round(growth, 1)}%"
+            metrics["Revenue Growth"] = revenue_growth_val
+
+            year = income.get("date", str(pd.Timestamp.now().year - i))[:4]
+            all_metrics_by_year[year].update(metrics)
+
+    # --- Create DataFrame ---
+    df = pd.DataFrame(all_metrics_by_year)
+    kpi_order = [
+        "Revenue", "Revenue Growth", "Gross Profit", "Gross Margin", 
+        "EBITDA", "EBITDA Margin", "FCF", "FCF Conversion", "ROIC",
+        "EV/EBITDA", "PE Ratio", "PB Ratio", "CFO"
+    ]
+    df = df.reindex(kpi_order).dropna(how='all')
+
+    # Currency and company name (fallbacks)
+    currency = income_data[0].get("reportedCurrency", "USD")
+    name = ticker_symbol.upper()
+    if isinstance(profile_data, list) and profile_data:
+        profile = profile_data[0]
+        currency = profile.get("currency", currency)
+        name = profile.get("companyName", name)
+
+    # --- SAVE TO FILE if save_path is given ---
+    if save_path:
+        try:
+            # Save as JSON for consistency (easy reloading)
+            df_json = df.to_dict(orient="index")
+            with open(save_path, "w", encoding="utf-8") as f:
+                json.dump({
+                    "currency": currency,
+                    "company_name": name,
+                    "metrics": df_json
+                }, f, indent=2)
+            logging.info(f"Financial metrics saved to {save_path}")
+        except Exception as e:
+            logging.error(f"Failed to save financial metrics: {e}")
+
+    return df.sort_index(axis=1), currency, name
