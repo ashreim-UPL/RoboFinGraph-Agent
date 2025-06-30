@@ -35,7 +35,7 @@ TOOL_MAP: Dict[str, Callable] = {
 }
 
 def get_data_collection_tasks(state: AgentState) -> List[Dict[str, str]]:
-    work_dir = state.work_dir or f"report/{state.company}_{state.year}"
+    work_dir = state.work_dir or f"{state.work_dir}/{state.company}_{state.year}"
     return [
         {'task': 'get_sec_10k_sections',          'file': f'{work_dir}/sec_filings'},
         {'task': 'get_key_data',                  'file': f'{work_dir}/summaries/key_data.json'},
@@ -328,7 +328,7 @@ def summarization_node(state: AgentState, agent) -> dict:
                         all_data[fname] = f.read()
         return all_data
 
-    all_data = load_all_data("report")
+    all_data = load_all_data(f"{state.work_dir}")
 
     FILE_TO_TEMPLATE_KEY = {
         "income_statement.json": "table_str",
@@ -442,7 +442,7 @@ def conceptual_analysis_node(state: AgentState, agent) -> dict:
 
     print("--- Executing Node: Conceptual Analysis ---")
     company_name = getattr(state, "company", None) or getattr(state, "company_details", {}).get("official_name")
-    
+
     os.makedirs(f"{state.work_dir}/summaries", exist_ok=True)
     with open(f"{state.work_dir}/preliminaries/all_summaries.json", "r", encoding="utf-8") as f:
         all_summaries = json.load(f)
@@ -450,7 +450,7 @@ def conceptual_analysis_node(state: AgentState, agent) -> dict:
     conceptual_outputs = {}
 
     # --- Ensure output directory exists ---
-    output_dir = os.path.join("report", "summaries")
+    output_dir = os.path.join(state.work_dir, "summaries")
     os.makedirs(output_dir, exist_ok=True)
 
     for out_file, spec in report_section_specs.items():
@@ -553,7 +553,7 @@ def save_report_node(state: AgentState, io_agent) -> Dict[str, Any]:
     print("--- Executing Node: Save Final Report ---")
     report_text = state.final_report_text
     # file_path = io_agent.save(report_text, "final_report.md")
-    file_path = "reports/final_report.md"
+    file_path = f"{state.work_dir}/final_report.md"
     return {"final_report_path": file_path}
 
 # --- Node 7, 8, 9: Evaluation and Meta-Reporting ---
@@ -576,7 +576,7 @@ def save_evaluation_report_node(state: AgentState, io_agent) -> Dict[str, Any]:
     # CORRECTED: Use dot notation
     eval_results = state.evaluation_results
     # file_path = io_agent.save(eval_results, "evaluation_report.json")
-    file_path = "reports/evaluation_report.json"
+    file_path = f"{state.work_dir}/evaluation_report.json"
     logging.info(f"Evaluation report saved to {file_path}")
     # This is a final node, it doesn't need to return anything to update the state
     return {}
