@@ -61,7 +61,7 @@ def get_key_data(
     currency = profile.get("currency")
 
     # Get Analyst Ratings (using corrected endpoint and safe access)
-    rating_response = make_api_request("FMP", "/historical-rating", {"symbol": ticker_symbol, "limit": 1})
+    rating_response = make_api_request("FMP", "/ratings-historical", {"symbol": ticker_symbol, "limit": 1})
     rating = rating_response[0].get('rating', 'N/A') if rating_response and isinstance(rating_response, list) else 'N/A'
 
     # Get Ratios for BVPS (Book Value Per Share)

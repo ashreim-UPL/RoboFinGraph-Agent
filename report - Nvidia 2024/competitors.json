@@ -1,0 +1,38 @@
+[
+  {
+    "symbol": "AMD",
+    "companyName": "Advanced Micro Devices, Inc.",
+    "price": 143.81,
+    "mktCap": 233173543204
+  },
+  {
+    "symbol": "AVGO",
+    "companyName": "Broadcom Inc.",
+    "price": 269.35,
+    "mktCap": 1266879644500
+  },
+  {
+    "symbol": "INTC",
+    "companyName": "Intel Corporation",
+    "price": 22.69,
+    "mktCap": 98973780000
+  },
+  {
+    "symbol": "MRVL",
+    "companyName": "Marvell Technology, Inc.",
+    "price": 77.16,
+    "mktCap": 66527352000
+  },
+  {
+    "symbol": "MU",
+    "companyName": "Micron Technology, Inc.",
+    "price": 124.76,
+    "mktCap": 139428033200
+  },
+  {
+    "symbol": "TSM",
+    "companyName": "Taiwan Semiconductor Manufacturing Company Limited",
+    "price": 228.57,
+    "mktCap": 1185482891028
+  }
+]
