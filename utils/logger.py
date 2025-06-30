@@ -96,7 +96,7 @@ def log_audit_result(agent: str, hallucinations: List[str], context: str = "", s
         "agent": agent,
         "hallucinations": hallucinations,
         "explanation": explanation,
-        "timestamp": datetime.utcnow().isoformat()
+        "timestamp": datetime.now(datetime.timezone.utc).isoformat()
     }
     log_event("audit", entry, session_id=session_id or agent)
 
@@ -114,7 +114,7 @@ Return only the exact filename best suited.
 """
     try:
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="go3-mini-2025-01-31",
             messages=[
                 {"role": "system", "content": "You are a financial data assistant."},
                 {"role": "user", "content": prompt}
