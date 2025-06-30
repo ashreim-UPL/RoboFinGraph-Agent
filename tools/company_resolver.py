@@ -113,57 +113,58 @@ async def identify_company_and_region(company_query: str) -> dict:
     competitor_list = []
     
     if fmp_ticker:
+        competitor_list = []  # Safe default
+
         try:
-            company_resolver_logger.info(f"🕵️‍♀️ Searching for competitors for {fmp_ticker}...")
-            
+            company_resolver_logger.info(f"Searching for competitors for {fmp_ticker}...")
+
             response = await asyncio.to_thread(
                 make_api_request,
                 api_name="FMP",
                 endpoint="/stock-peers",
                 params={"symbol": fmp_ticker}
             )
-  
-            # --- MODIFICATION START: New, robust response handling ---
 
-            # First, check if the response is a dictionary containing an error.
             if isinstance(response, dict) and response.get("error"):
                 error_msg = response.get("error")
                 company_resolver_logger.error(
-                    f"Error from Universal Analyst Toolkit during competitor lookup for {fmp_ticker}: {error_msg}"
+                    f"Error during competitor lookup for {fmp_ticker}: {error_msg}"
                 )
-            
-            # Next, check if the response is a non-empty list, which indicates success.
+
             elif isinstance(response, list) and response:
-                peers_data = response[0] # The successful response is a list containing one dictionary
-                peers = peers_data.get("peers", [])
-                
-                if peers and isinstance(peers, list):
-                    competitor_list = [peer.strip() for peer in peers if isinstance(peer, str)][:3]
-                    
-                    # Clean the list to not include the company itself
-                    primary_name_lower = (company_info['company_details']['official_name'] or "").lower()
-                    primary_ticker_lower = (fmp_ticker or "").lower()
-                    
-                    competitor_list = [
-                        comp for comp in competitor_list
-                        if primary_name_lower not in comp.lower() and primary_ticker_lower not in comp.lower()
-                    ]
-                    company_resolver_logger.info(f"✅ Found competitors via Universal Analyst Toolkit: {competitor_list}")
+                peers = [
+                    peer["symbol"]
+                    for peer in response
+                    if isinstance(peer, dict) and "symbol" in peer
+                ]
+
+                competitor_list = peers
+
+                # Filter out the primary company if needed
+                primary_name_lower = (company_info['company_details'].get('official_name') or "").lower()
+                primary_ticker_lower = fmp_ticker.lower()
+
+                competitor_list = [
+                    comp for comp in competitor_list
+                    if primary_name_lower not in comp.lower() and primary_ticker_lower != comp.lower()
+                ]
+
+                if competitor_list:
+                    company_resolver_logger.info(f"✅ Found competitors: {competitor_list}")
                 else:
-                    company_resolver_logger.warning(f"No peers found in the FMP response for {fmp_ticker}.")
-            
-            # Handle any other unexpected cases (e.g., empty list, wrong data type).
+                    company_resolver_logger.warning(f"No valid peers found after filtering for {fmp_ticker}.")
             else:
                 company_resolver_logger.warning(
-                    f"Received an empty or unexpected response during competitor lookup for {fmp_ticker}."
+                    f"⚠️ Unexpected or empty response during competitor lookup for {fmp_ticker}: {response}"
                 )
 
-            # --- MODIFICATION END ---
-
         except Exception as e:
-            company_resolver_logger.error(f"Failed to execute competitor lookup for {fmp_ticker} via toolkit: {e}", exc_info=True)
+            company_resolver_logger.error(
+                f"❌ Exception during competitor lookup for {fmp_ticker}: {e}",
+                exc_info=True
+            )
 
-    company_info["company_details"]["competitors"] = competitor_list
-    company_info["competitors"] = competitor_list  # Maintain for backward compatibility
+        company_info["company_details"]["competitors"] = competitor_list
+        company_info["competitors"] = competitor_list  # Backward compatibility
 
-    return company_info
+        return company_info
