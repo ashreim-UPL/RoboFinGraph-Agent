@@ -20,10 +20,27 @@ from tools.toolkit_loader import load_io_tools
 from tools.file_utils import check_file_stats
 
 
+FILE_TO_TEMPLATE_KEY = {
+    "income_statement.json": "table_str",
+    "balance_sheet.json": "table_str",
+    "cash_flow.json": "table_str",
+    "competitors.json": "table_str",
+    "company_profile.json": "business_summary",
+    "key_data.json": "company_name",
+    # IMPORTANT: Ensure these exact basenames are produced by your data collection tasks
+    "sec_10k_section_7.txt": "section_text",
+    "sec_10k_section_1.txt": "business_summary",
+    "sec_10k_section_1a.txt": "risk_factors",
+    "financial_metrics.json": "financial_metrics_json_str", 
+    # Note: PNG files are handled separately by report writer, not usually summarized directly
+}
+
 # In a config or at the top of your graph_nodes.py
 TOOL_MAP: Dict[str, Callable] = {
-    "get_sec_10k_sections": report_utils.get_sec_10k_sections,
-    "get_company_profile": report_utils.get_company_profile,
+    "get_sec_10k_section_1": report_utils.get_sec_10k_section_1,
+    "get_sec_10k_section_1a": report_utils.get_sec_10k_section_1a,
+    "get_sec_10k_section_7": report_utils.get_sec_10k_section_7,
+    "get_company_profile": report_utils.get_company_profile,  
     "get_key_data": report_utils.get_key_data,
     "get_competitors": report_utils.get_competitor_analysis,
     "get_income_statement": partial(report_utils.get_financial_statement, statement_type="income_statement"),
@@ -33,21 +50,33 @@ TOOL_MAP: Dict[str, Callable] = {
     "get_share_performance_chart": report_utils.generate_share_performance_chart,
     "financial_metrics": report_utils.get_financial_metrics
 }
+print(f"\n--- DEBUG: TOOL_MAP keys at module load: {list(TOOL_MAP.keys())} ---\n") # ADD THIS LINE
 
 def get_data_collection_tasks(state: AgentState) -> List[Dict[str, str]]:
-    work_dir = state.work_dir or f"{state.work_dir}/{state.company}_{state.year}"
-    return [
-        {'task': 'get_sec_10k_sections',          'file': f'{work_dir}/sec_filings'},
-        {'task': 'get_key_data',                  'file': f'{work_dir}/summaries/key_data.json'},
-        {'task': 'get_company_profile',           'file': f'{work_dir}/company_profile.json'},
-        {'task': 'get_competitors',               'file': f'{work_dir}/competitors.json'},
-        {'task': 'get_income_statement',          'file': f'{work_dir}/income_statement.json'},
-        {'task': 'get_balance_sheet',             'file': f'{work_dir}/balance_sheet.json'},
-        {'task': 'get_cash_flow',                 'file': f'{work_dir}/cash_flow.json'},
-        {'task': 'get_pe_eps_chart',              'file': f'{work_dir}/summaries/pe_eps_performance.png'},
-        {'task': 'get_share_performance_chart',   'file': f'{work_dir}/summaries/share_performance.png'},
-        {'task': 'financial_metrics',             'file': f'{work_dir}/summaries/financial_metrics.json'}
+    work_dir = state.work_dir
+    sec_filings_dir = os.path.join(work_dir, 'sec_filings') 
+
+    # Assign the list to a variable first
+    tasks_list = [
+        # Individual entries for each SEC section (as per our last refactoring)
+        {'task': 'get_sec_10k_section_1', 'file': os.path.join(sec_filings_dir, 'sec_10k_section_1.txt')},
+        {'task': 'get_sec_10k_section_1a', 'file': os.path.join(sec_filings_dir, 'sec_10k_section_1a.txt')},
+        {'task': 'get_sec_10k_section_7', 'file': os.path.join(sec_filings_dir, 'sec_10k_section_7.txt')},
+        
+        # The rest of your tasks, which produce a single file
+        {'task': 'get_key_data', 'file': os.path.join(work_dir, 'summaries', 'key_data.json')},
+        {'task': 'get_company_profile',  'file': os.path.join(work_dir, 'company_profile.json')},
+        {'task': 'get_competitors', 'file': os.path.join(work_dir, 'competitors.json')},
+        {'task': 'get_income_statement', 'file': os.path.join(work_dir, 'income_statement.json')},
+        {'task': 'get_balance_sheet', 'file': os.path.join(work_dir, 'balance_sheet.json')},
+        {'task': 'get_cash_flow',  'file': os.path.join(work_dir, 'cash_flow.json')},
+        {'task': 'get_pe_eps_chart', 'file': os.path.join(work_dir, 'summaries', 'pe_eps_performance.png')},
+        {'task': 'get_share_performance_chart',  'file': os.path.join(work_dir, 'summaries', 'share_performance.png')},
+        {'task': 'financial_metrics', 'file': os.path.join(work_dir, 'summaries', 'financial_metrics.json')}
     ]
+
+    print(f"--- DEBUG: get_data_collection_tasks generated tasks: {tasks_list} ---\n") # Now this print is correct
+    return tasks_list
 
 # Parse cost from chat output
 def parse_cost(cost_obj):
@@ -255,6 +284,7 @@ def resolve_company_node(state: AgentState) -> Dict[str, Any]:
 def data_collection_node(state: AgentState) -> Dict[str, Any]:
     """
     Runs all data collection tasks, saving outputs and returning their paths.
+    Each task is now expected to produce a single output file.
     """
     print("--- Executing Node: Data Collection ---")
     ticker = state.company_details['identifiers']['ticker']
@@ -270,23 +300,34 @@ def data_collection_node(state: AgentState) -> Dict[str, Any]:
         "region": region,
         "fyear": year,
         "filing_date": f"{year}-12-31",
+        "work_dir": state.work_dir # Ensure work_dir is passed, though individual functions might not need it if save_path is full path
     }
 
     for task in get_data_collection_tasks(state):
         task_name = task['task']
-        output_file = task['file']
+        output_file = task['file'] # This is now always a full file path
+        print(f"--- DEBUG: Current task_name being looked up: '{task_name}' ---\n") # ADD THIS LINE
+
         task_function = TOOL_MAP[task_name]
 
         try:
+            # Ensure the directory for the output file exists BEFORE calling the tool
+            output_dir = os.path.dirname(output_file)
+            os.makedirs(output_dir, exist_ok=True)
+
             sig = inspect.signature(task_function)
             call_args = {param: available_args[param] for param in sig.parameters if param in available_args}
-            # Add save_path argument
+            
+            # Add save_path argument if the function expects it
             if 'save_path' in sig.parameters:
-                call_args['save_path'] = output_file
+                call_args['save_path'] = output_file # Pass the full file path for saving
 
             print(f"[DataCollection] Running {task_name} -> {output_file}")
-            task_function(**call_args)
+            task_function(**call_args) # Call the function
+            
+            # After execution, add the created file to raw_data_files
             raw_data_files.append(output_file)
+
         except Exception as e:
             error_message = f"Error executing {task_name}: {e}"
             logging.error(error_message, exc_info=True)
@@ -297,52 +338,69 @@ def data_collection_node(state: AgentState) -> Dict[str, Any]:
         "error_log": error_log,
     }
 
+def load_all_data(state: AgentState) -> Dict[str, Any]: # Changed value type to Any for json objects
+    """
+    Loads all collected raw data files specified in get_data_collection_tasks.
+    Returns a dictionary where keys are file basenames and values are content (str for text, dict for JSON).
+    """
+    all_data = {}
+    work_dir = state.work_dir # Correctly access work_dir from the passed AgentState
+
+    # Use the tasks defined by get_data_collection_tasks as the source of truth for paths
+    task_specs = get_data_collection_tasks(state) # Get the full list of expected file paths
+    
+    for task in task_specs:
+        full_file_path = task["file"]
+        # Use the basename of the file as the key in the all_data dictionary
+        # This matches how FILE_TO_TEMPLATE_KEY is likely structured (e.g., "key_data.json")
+        file_basename = os.path.basename(full_file_path) 
+
+        if os.path.exists(full_file_path) and os.path.getsize(full_file_path) > 0:
+            try:
+                # Determine if it's JSON or plain text based on extension
+                if full_file_path.lower().endswith(".json"): # Use .lower() for case-insensitivity
+                    with open(full_file_path, "r", encoding="utf-8") as f:
+                        all_data[file_basename] = json.load(f) # Load JSON as Python object (dict/list)
+                else: # Assume plain text for other extensions (e.g., .txt, .png but png won't be loaded as text here)
+                    with open(full_file_path, "r", encoding="utf-8") as f:
+                        all_data[file_basename] = f.read() # Read content as a string
+            except Exception as e:
+                logging.warning(f"Could not load {full_file_path} into all_data: {e}", exc_info=True)
+                # Consider adding a placeholder or specific error message to all_data here if crucial
+        else:
+            # This handles cases where optional files might be missing, or errors from data_collection
+            logging.warning(f"File not found or empty during data loading for summarization: {full_file_path}")
+            # Add a placeholder for missing data to prevent KeyError in prompt formatting
+            all_data[file_basename] = f"MISSING_DATA_FOR_{file_basename.upper().replace('.', '_')}" 
+    
+    return all_data
+
 def summarization_node(state: AgentState, agent) -> dict:
     """
     Loads all raw data, builds the LLM prompt for each summary, sends it to the agent,
     and saves the resulting summary.
     """
+    print("--- Executing Node: Summarization ---") # Add a clear start message
 
-    import os
-    import json
+    # --- Extract orchestration vars defensively ---
+    company_name = state.company_details.get("official_name", state.company) if state.company_details else state.company
+    ticker = state.company_details.get("identifiers", {}).get("ticker") if state.company_details else None
+    year = state.year
+    peers = state.company_details.get("competitors", []) if state.company_details else []
+    
+    # Ensure work_dir is present and valid
+    if not state.work_dir:
+        logging.error("summarization_node: state.work_dir is missing or empty. Cannot proceed.")
+        raise ValueError("Work directory not set in state for summarization.")
 
-    # --- Extract orchestration vars
-    company_name = getattr(state, "company", None) or getattr(state, "company_details", {}).get("official_name")
-    ticker = getattr(state, "company_details", {}).get("identifiers", {}).get("ticker")
-    year = getattr(state, "year", None)
-    peers = getattr(state, "company_details", {}).get("competitors", []) or []
+    # --- Load all collected raw data using the externalized helper ---
+    # all_data will now have basenames as keys (e.g., "key_data.json")
+    all_data = load_all_data(state) 
+    
+    # Debugging: Check what was loaded
+    logging.info(f"Summarization: Loaded data keys: {list(all_data.keys())}")
 
-    # --- Load all report data
-    def load_all_data(data_dir):
-        all_data = {}
-        for fname in os.listdir(data_dir):
-            if fname.endswith(".json") or fname.endswith(".txt"):
-                with open(os.path.join(data_dir, fname), "r", encoding="utf-8") as f:
-                    all_data[fname] = f.read()
-        # sec_filings subdir
-        sec_dir = os.path.join(data_dir, "sec_filings")
-        if os.path.isdir(sec_dir):
-            for fname in os.listdir(sec_dir):
-                if fname.endswith(".txt"):
-                    with open(os.path.join(sec_dir, fname), "r", encoding="utf-8") as f:
-                        all_data[fname] = f.read()
-        return all_data
-
-    all_data = load_all_data(f"{state.work_dir}")
-
-    FILE_TO_TEMPLATE_KEY = {
-        "income_statement.json": "table_str",
-        "balance_sheet.json": "table_str",
-        "cash_flow.json": "table_str",
-        "competitors.json": "table_str",
-        "company_profile.json": "business_summary",
-        "key_data.json": "company_name",
-        "sec_10k_section_7.txt": "section_text",
-        "sec_10k_section_1.txt": "business_summary",
-        "sec_10k_section_1a.txt": "risk_factors",
-    }
-
-    keys = [
+    keys_to_summarize = [
         "analyze_income_stmt", "analyze_balance_sheet", "analyze_cash_flow",
         "analyze_segment_stmt", "analyze_business_highlights",
         "analyze_company_description", "get_risk_assessment",
@@ -350,84 +408,124 @@ def summarization_node(state: AgentState, agent) -> dict:
     ]
 
     summary_outputs = {}
+    
+    # Loop through each summary type defined in finrobot_prompt_library
+    for key in keys_to_summarize:
+        if key not in finrobot_prompt_library:
+            logging.warning(f"Prompt key '{key}' not found in finrobot_prompt_library. Skipping.")
+            summary_outputs[key] = f"ERROR: Prompt not defined for {key}"
+            continue
 
-    for key in keys:
-        prompt_template = finrobot_prompt_library[key]["prompt_template"]
-        input_files = finrobot_prompt_library[key]["input_files"]
+        prompt_template = finrobot_prompt_library[key].get("prompt_template")
+        input_files_expected = finrobot_prompt_library[key].get("input_files", [])
 
-        file_var_map = {}
-        for file_path in input_files:
-            fname = os.path.basename(file_path)
-            if fname in FILE_TO_TEMPLATE_KEY:
-                file_var_map[FILE_TO_TEMPLATE_KEY[fname]] = fname
+        if not prompt_template:
+            logging.warning(f"Prompt template missing for key '{key}'. Skipping.")
+            summary_outputs[key] = f"ERROR: Prompt template missing for {key}"
+            continue
 
-        # Orchestration variables
+        # Orchestration variables (common to many prompts)
         extra_args = {
             "company_name": company_name,
             "ticker": ticker,
             "year": year,
-            "competitor_names": ", ".join(peers) if isinstance(peers, list) else peers,
+            "competitor_names": ", ".join(peers) if isinstance(peers, list) else str(peers),
         }
 
-        # Gather all required template vars from all_data
+        # Gather all required template vars from all_data using FILE_TO_TEMPLATE_KEY
         template_args = {**extra_args}
-        for var, fname in file_var_map.items():
-            template_args[var] = all_data.get(fname, f"PLACEHOLDER FOR {fname}")
+        
+        missing_template_data = [] # Track what's missing for this prompt
+        for file_rel_path in input_files_expected: # These are relative paths, like 'summaries/key_data.json'
+            fname_basename = os.path.basename(file_rel_path) # Extract basename to match all_data keys
+            template_var_name = FILE_TO_TEMPLATE_KEY.get(fname_basename) # Get the variable name (e.g., "company_name")
 
-        if "section_text" in template_args:
-            template_args["section_7"] = template_args["section_text"]
+            if template_var_name:
+                # Retrieve content from all_data (which uses basenames as keys)
+                content = all_data.get(fname_basename)
+                if content is not None:
+                    # Special handling for JSON content if the template expects a string
+                    if isinstance(content, (dict, list)) and template_var_name.endswith("_json_str"):
+                        template_args[template_var_name] = json.dumps(content, indent=2)
+                    elif isinstance(content, (dict, list)): # If it's json but template expects string, convert
+                         template_args[template_var_name] = str(content)
+                    else: # It's a string (text file content)
+                        template_args[template_var_name] = content
+                else:
+                    # Use the placeholder added by load_all_data if content is None (file missing)
+                    template_args[template_var_name] = f"PLACEHOLDER_FOR_{fname_basename.upper().replace('.', '_')}"
+                    missing_template_data.append(fname_basename)
+            else:
+                logging.warning(f"No FILE_TO_TEMPLATE_KEY mapping for basename '{fname_basename}' from '{file_rel_path}'. Skipping its use in prompt.")
+
+        # Special handling for 'section_text' if prompt expects 'section_7' separately (e.g., for direct naming)
+        if "section_text" in template_args and "section_7" not in template_args:
+             template_args["section_7"] = template_args["section_text"] # Example: copy for backward compatibility
 
         try:
             prompt = prompt_template.format(**template_args)
+            if missing_template_data:
+                logging.warning(f"Prompt '{key}' generated with missing data for: {', '.join(missing_template_data)}")
         except KeyError as e:
-            summary_outputs[key] = f"ERROR: Missing {e} in template_args"
-            continue
+            summary_outputs[key] = f"ERROR: Missing expected placeholder for '{e}' in prompt template '{key}'. Check finrobot_prompt_library and FILE_TO_TEMPLATE_KEY."
+            logging.error(summary_outputs[key], exc_info=True)
+            continue # Skip LLM call for this prompt if formatting failed
 
-        # === KEY LINE: Call the agent and pass the prompt ===
-        summary_info = agent.summarize(prompt)
-  
-        summary_text = summary_info.summary
+        # === Call the agent and pass the prompt ===
+        try:
+            summary_info = agent.summarize(prompt)
+            summary_text = summary_info.summary if hasattr(summary_info, "summary") else str(summary_info) # Defensive access
+            cost_text = summary_info.cost if hasattr(summary_info, "cost") else {} # Defensive access
+            parsed_cost = parse_cost(cost_text) if cost_text else {}
+
+            # --- LOGGING STEPS ---
+            log_agent_step(
+                agent_name=getattr(agent, "name", "summarizer"),
+                input_text=prompt,
+                output_text=summary_text,
+                tool_used="summarize"
+            )
+
+            log_cost_estimate(
+                agent_outputs={
+                    "summary_key": key,
+                    "summary_length": len(summary_text),
+                    **parsed_cost
+                }
+            )
+            summary_outputs[key] = summary_text
+
+        except Exception as agent_exc:
+            error_message = f"Error during agent summarization for key '{key}': {agent_exc}"
+            logging.error(error_message, exc_info=True)
+            summary_outputs[key] = f"ERROR: Agent summarization failed for {key}: {agent_exc}"
 
 
-        # --- LOGGING STEPS ---
-        log_agent_step(
-            agent_name=getattr(agent, "name", "summarizer"),
-            input_text=prompt,
-            output_text=summary_text,
-            tool_used="summarize"
-        )
-
-        cost_text = summary_info.cost
-        parsed_cost = parse_cost(cost_text)
-
-        log_cost_estimate(
-            agent_outputs={
-                "summary_key": key,
-                "summary_length": len(summary_text),
-                **parsed_cost
-            }
-        )
-        summary_outputs[key] = summary_text
-
-    # Validation before writing
+    # --- Post-Summarization Validation and Saving ---
     if not summary_outputs:
-        raise RuntimeError("[FATAL] No summaries generated! Failing before file write.")
-    if any(v.startswith("ERROR:") for v in summary_outputs.values()):
+        logging.error("[FATAL] No summaries generated from any prompt. Failing before file write.")
+        raise RuntimeError("[FATAL] No summaries generated! Workflow cannot proceed.")
+    if any(v and isinstance(v, str) and v.startswith("ERROR:") for v in summary_outputs.values()):
+        logging.error("[FATAL] One or more summaries failed with an ERROR message. Check logs for details.")
+        # Decide if you want to allow partial success or fail completely
+        # For a financial report, a fatal error seems appropriate.
         raise RuntimeError("[FATAL] One or more summaries failed. Check logs.")
 
-    out_path = f"{state.work_dir}/preliminaries/all_summaries.json"
+    out_path = os.path.join(state.work_dir, "preliminaries", "all_summaries.json")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     try:
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(summary_outputs, f, indent=2, ensure_ascii=False)
-        # Immediately verify
+        
+        # Immediately verify write
         with open(out_path, "r", encoding="utf-8") as f:
             reloaded = json.load(f)
             if len(reloaded) != len(summary_outputs):
                 raise RuntimeError(f"[FATAL] File write mismatch! Expected {len(summary_outputs)} sections, found {len(reloaded)}.")
+        logging.info(f"All summaries successfully saved to {out_path}")
     except Exception as file_exc:
-        logging.error(f"[FILE WRITE FAILURE] {out_path}: {file_exc}", exc_info=True)
-        raise
+        logging.error(f"[FILE WRITE FAILURE] Could not save summaries to {out_path}: {file_exc}", exc_info=True)
+        raise # Re-raise to fail the node if saving fails
 
     return {"summary_outputs": summary_outputs}
 
@@ -496,7 +594,7 @@ def conceptual_analysis_node(state: AgentState, agent) -> dict:
             out_f.write(summary_text)
 
     # Save full mapping for downstream steps
-    os.makedirs(f"{state.work_dir}/summaries", exist_ok=True)
+    os.makedirs(os.path.join(state.work_dir, "summaries"), exist_ok=True)
     with open(f"{state.work_dir}/summaries/conceptual_sections.json", "w", encoding="utf-8") as f:
         json.dump(conceptual_outputs, f, indent=2, ensure_ascii=False)
 

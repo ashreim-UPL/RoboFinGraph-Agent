@@ -66,12 +66,6 @@ def run_orchestration(company: str, year: str, config: Dict[str, Any]):
         }
     )
 
-    work_dir = f"report/{company}_{year}"
-    initial_state = {
-        "company": company,
-        "year": year,
-        "work_dir": work_dir
-    }
     # After data collection → run validation on collected files
     workflow.add_edge("data_collection", "validate_collected_data")
 
@@ -94,11 +88,25 @@ def run_orchestration(company: str, year: str, config: Dict[str, Any]):
     workflow.add_edge("run_evaluation", "save_evaluation_report")
     workflow.add_edge("save_evaluation_report", END)
 
+    # Consolidate initial state definition
+    report_work_dir = f"report/{company}_{year}"
+    initial_state_for_graph = {
+        "company": company,
+        "year": year,
+        "work_dir": report_work_dir,
+        "messages": [], 
+        "llm_decision": "continue", 
+    }
+
+    print(f"Report directory initialized to: {initial_state_for_graph['work_dir']}")
+
     # 5. Compile and Run
     app = workflow.compile()
     print("Graph compiled. Starting execution...")
-    initial_state = {"company": company, "year": year}
-    for event in app.stream(initial_state):
+
+    # Pass the correctly populated initial_state_for_graph
+    for event in app.stream(initial_state_for_graph): 
         print(event)
         print("---")
+
     print("\n✅ Orchestration completed. Check logs and output files.\n")
