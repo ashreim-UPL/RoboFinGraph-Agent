@@ -7,14 +7,17 @@ from typing import Dict, Any, Callable, List
 from functools import partial
 import asyncio
 import inspect
+import time
 from graph_utils.state_types import AgentState
 from tools.company_resolver import identify_company_and_region
 from tools import report_utils 
 # Add in graph_nodes.py
 from prompts.summarization_intsruction import finrobot_prompt_library
 from prompts.report_summaries import report_section_specs
-from utils.logger import log_agent_step, log_final_summary, log_cost_estimate
+from utils.logger import get_logger, log_event, log_agent_step, log_final_summary, log_cost_estimate, get_logger
 from tools.report_writer import ReportLabUtils
+from tools.toolkit_loader import load_io_tools
+from tools.file_utils import check_file_stats
 
 
 # In a config or at the top of your graph_nodes.py
@@ -31,19 +34,20 @@ TOOL_MAP: Dict[str, Callable] = {
     "financial_metrics": report_utils.get_financial_metrics
 }
 
-DATA_COLLECTION_TASKS: List[Dict[str, str]] = [
-    {'task': 'get_sec_10k_sections',          'file': 'report/sec_filings'},
-    {'task': 'get_key_data',                  'file': 'report/summaries/key_data.json'},
-    {'task': 'get_company_profile',           'file': 'report/company_profile.json'},
-    {'task': 'get_competitors',               'file': 'report/competitors.json'},
-    {'task': 'get_income_statement',          'file': 'report/income_statement.json'},
-    {'task': 'get_balance_sheet',             'file': 'report/balance_sheet.json'},
-    {'task': 'get_cash_flow',                 'file': 'report/cash_flow.json'},
-    {'task': 'get_pe_eps_chart',              'file': 'report/summaries/pe_eps_performance.png'},
-    {'task': 'get_share_performance_chart',   'file': 'report/summaries/share_performance.png'},
-    {'task': 'financial_metrics',             'file': 'report/summaries/financial_metrics.json'}
-]
-
+def get_data_collection_tasks(state: AgentState) -> List[Dict[str, str]]:
+    work_dir = state.work_dir or f"report/{state.company}_{state.year}"
+    return [
+        {'task': 'get_sec_10k_sections',          'file': f'{work_dir}/sec_filings'},
+        {'task': 'get_key_data',                  'file': f'{work_dir}/summaries/key_data.json'},
+        {'task': 'get_company_profile',           'file': f'{work_dir}/company_profile.json'},
+        {'task': 'get_competitors',               'file': f'{work_dir}/competitors.json'},
+        {'task': 'get_income_statement',          'file': f'{work_dir}/income_statement.json'},
+        {'task': 'get_balance_sheet',             'file': f'{work_dir}/balance_sheet.json'},
+        {'task': 'get_cash_flow',                 'file': f'{work_dir}/cash_flow.json'},
+        {'task': 'get_pe_eps_chart',              'file': f'{work_dir}/summaries/pe_eps_performance.png'},
+        {'task': 'get_share_performance_chart',   'file': f'{work_dir}/summaries/share_performance.png'},
+        {'task': 'financial_metrics',             'file': f'{work_dir}/summaries/financial_metrics.json'}
+    ]
 
 # Parse cost from chat output
 def parse_cost(cost_obj):
@@ -71,27 +75,181 @@ def parse_cost(cost_obj):
         print("Cost parsing error:", e)
         return {}
 
+# --- LLM Decision Node
+def llm_decision_node(state: AgentState, agent) -> Dict[str, str]:
+    company_details = state.company_details
+    region = state.region
+
+    prompt = f"""
+You are an AI workflow validator.
+...
+Your response (just the keywords continue or end):
+"""
+
+    response = agent.summarize(prompt)
+
+    # Defensive fallback
+    if isinstance(response, str):
+        decision = response.strip().lower()
+    elif hasattr(response, "summary"):
+        decision = response.summary.strip().lower()
+    else:
+        decision = "end"
+
+    # Route logic
+    if decision.startswith("continue"):
+        route = "continue"
+    elif decision.startswith("end"):
+        route = "end"
+    else:
+        route = "continue"
+
+    return {
+        "llm_decision": decision,
+        "__route__": route 
+    }
+# --- Validate data
+def validate_collected_data_node(state: AgentState, agent) -> Dict[str, str]:
+    company = state.company
+    year = state.year
+    work_dir = state.work_dir
+
+    # Dynamically load resolved paths
+    task_specs = get_data_collection_tasks(state)
+    file_paths = [task["file"] for task in task_specs]
+
+    missing_or_empty = []
+    stats_summary = {}
+
+    for fpath in file_paths:
+        norm_path = fpath.replace("\\", "/")
+        if not os.path.exists(fpath) or os.path.getsize(fpath) == 0:
+            missing_or_empty.append(norm_path)
+        else:
+            stats_summary[norm_path] = check_file_stats(fpath)
+
+    total_files = len(file_paths)
+    quality_score = int(100 * (total_files - len(missing_or_empty)) / total_files)
+
+    log_event("data_validation_pre_summary", {
+        "company": company,
+        "year": year,
+        "work_dir": work_dir,
+        "quality_score": quality_score,
+        "missing_or_empty": missing_or_empty,
+        "stats_summary": stats_summary
+    })
+
+    prompt = f"""
+You are a financial data quality auditor.
+
+You are reviewing the contents of the following real directory:
+  {work_dir}
+
+Missing or Empty Files:
+{json.dumps(missing_or_empty, indent=2) if missing_or_empty else "None"}
+
+File Stats (sizes, types, etc.):
+{json.dumps(stats_summary, indent=2)}
+
+Scoring Rule:
+- Expected files: {total_files}
+- Missing or empty: {len(missing_or_empty)}
+- Quality Score: {quality_score}%
+
+Rules:
+- Reject if any file is missing or empty.
+- PNG files are mandatory and must be non-zero in size.
+- If quality_score < 100%, return "end: <reason>"
+- If all files are present and valid, return "valid"
+
+Output ONLY:
+- "valid"
+- "end: <reason>"
+"""
+
+    result = agent.summarize(prompt, tools=load_io_tools())
+
+    if isinstance(result, str):
+        decision = result.strip().lower()
+    elif hasattr(result, "summary"):
+        decision = result.summary.strip().lower()
+    else:
+        decision = "end: validator response unclear"
+
+    log_event("data_validation_decision", {
+        "company": company,
+        "year": year,
+        "decision": decision
+    })
+
+    return {
+        "llm_decision": decision,
+        "__route__": "data_collection_continue" if decision.startswith("valid") else "end"
+    }
+
 # --- resolve_company_node and decide_to_continue remain the same ---
 def resolve_company_node(state: AgentState) -> Dict[str, Any]:
-    """
-    Resolves the company name to get ticker, region, and peers by calling
-    the identify_company_and_region tool.
-    """
+    logger = get_logger()
     print("--- Executing Node: Resolve Company (Live Call) ---")
+    
     company_name = state.company
     print(f"Resolving company: {company_name}...")
-    result = asyncio.run(identify_company_and_region(company_name))
-    logging.info(f"Company resolved: {result.get('company_details')}")
-    return {"company_details": result.get('company_details'), "region": result.get('region')}
+    
+    start_time = time.time()
+    api_ok = False
+    company_ok = False
+    region_ok = False
+    peers_ok = False
+    
+    try:
+        result = asyncio.run(identify_company_and_region(company_name))
+        runtime_sec = round(time.time() - start_time, 2)
+        api_ok = True
 
-def decide_to_continue(state: AgentState) -> str:
-    # ... (this function remains the same)
-    print("--- Executing Node: Decide to Continue ---")
-    if state.company_details and state.company_details.get('identifiers', {}).get('ticker'):
-        return "continue"
-    else:
-        return "end"
+        company_details = result.get("company_details")
+        region = result.get("region")
+        peers = company_details.get("competitors") if company_details else None
 
+        company_ok = bool(company_details)
+        region_ok = bool(region)
+        peers_ok = bool(peers and isinstance(peers, list) and len(peers) > 0)
+
+        success_score = (company_ok + region_ok + peers_ok) / 3 * 100
+
+        logger.info(f"Company resolved: {company_details.get('official_name', 'N/A') if company_details else 'None'}")
+        logger.info(f"Region detected: {region}")
+        logger.info(f"Peers: {peers}")
+        logger.info(f"Resolve runtime: {runtime_sec} seconds")
+        logger.info(f"Success Score: {success_score:.0f}%")
+
+        log_event("resolve_company", {
+            "company_input": company_name,
+            "runtime_seconds": runtime_sec,
+            "api_response_ok": api_ok,
+            "company_resolved": company_ok,
+            "region_detected": region_ok,
+            "peers_found": peers_ok,
+            "success_score": success_score,
+            "resolved_company": company_details,
+            "region": region,
+            "peers": peers
+        })
+
+        return {
+            "company_details": company_details,
+            "region": region
+        }
+
+    except Exception as e:
+        runtime_sec = round(time.time() - start_time, 2)
+        logger.error(f"Exception while resolving company '{company_name}': {e}", exc_info=True)
+        log_event("resolve_company_error", {
+            "company_input": company_name,
+            "error": str(e),
+            "runtime_seconds": runtime_sec
+        })
+        return {"company_details": None, "region": None}
 
 # --- The data collection node now inspects function signatures ---
 def data_collection_node(state: AgentState) -> Dict[str, Any]:
@@ -114,7 +272,7 @@ def data_collection_node(state: AgentState) -> Dict[str, Any]:
         "filing_date": f"{year}-12-31",
     }
 
-    for task in DATA_COLLECTION_TASKS:
+    for task in get_data_collection_tasks(state):
         task_name = task['task']
         output_file = task['file']
         task_function = TOOL_MAP[task_name]
@@ -257,7 +415,7 @@ def summarization_node(state: AgentState, agent) -> dict:
     if any(v.startswith("ERROR:") for v in summary_outputs.values()):
         raise RuntimeError("[FATAL] One or more summaries failed. Check logs.")
 
-    out_path = "report/preliminaries/all_summaries.json"
+    out_path = f"{state.work_dir}/preliminaries/all_summaries.json"
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     try:
         with open(out_path, "w", encoding="utf-8") as f:
@@ -284,8 +442,9 @@ def conceptual_analysis_node(state: AgentState, agent) -> dict:
 
     print("--- Executing Node: Conceptual Analysis ---")
     company_name = getattr(state, "company", None) or getattr(state, "company_details", {}).get("official_name")
-
-    with open("report/preliminaries/all_summaries.json", "r", encoding="utf-8") as f:
+    
+    os.makedirs(f"{state.work_dir}/summaries", exist_ok=True)
+    with open(f"{state.work_dir}/preliminaries/all_summaries.json", "r", encoding="utf-8") as f:
         all_summaries = json.load(f)
 
     conceptual_outputs = {}
@@ -337,7 +496,8 @@ def conceptual_analysis_node(state: AgentState, agent) -> dict:
             out_f.write(summary_text)
 
     # Save full mapping for downstream steps
-    with open("report/summaries/conceptual_sections.json", "w", encoding="utf-8") as f:
+    os.makedirs(f"{state.work_dir}/summaries", exist_ok=True)
+    with open(f"{state.work_dir}/summaries/conceptual_sections.json", "w", encoding="utf-8") as f:
         json.dump(conceptual_outputs, f, indent=2, ensure_ascii=False)
 
     return {"conceptual_sections": conceptual_outputs}
@@ -345,7 +505,7 @@ def conceptual_analysis_node(state: AgentState, agent) -> dict:
 # --- Node 4: Thesis Generation ---
 def generate_report_node(state: AgentState, agent) -> dict:
     print("--- Executing Node: Generate Thesis Report ---")
-    summaries_dir = "report/summaries"
+    summaries_dir = f"{state.work_dir}/summaries"
     # 1. Conceptual summaries
     conceptual_sections = state.conceptual_sections
 
@@ -359,8 +519,8 @@ def generate_report_node(state: AgentState, agent) -> dict:
 
     # 4. Chart paths
     chart_paths = {
-        "pe_eps_performance": "report/summaries/pe_eps_performance.png",
-        "share_performance": "report/summaries/share_performance.png"
+        "pe_eps_performance":f"{state.work_dir}/summaries/pe_eps_performance.png",
+        "share_performance": f"{state.work_dir}/summaries/share_performance.png"
     }
 
     # 5. Section summaries (txts)
@@ -371,7 +531,7 @@ def generate_report_node(state: AgentState, agent) -> dict:
                 summary_texts[fname] = f.read()
 
     # 6. Call the new report writer
-    output_pdf_path = "report/final_annual_report.pdf"
+    output_pdf_path = f"{state.work_dir}/final_annual_report.pdf"
     result = ReportLabUtils.build_annual_report(
         ticker_symbol=state.company_details['identifiers']['ticker'],
         filing_date=state.year,
@@ -391,7 +551,6 @@ def save_report_node(state: AgentState, io_agent) -> Dict[str, Any]:
     Saves the final report to disk.
     """
     print("--- Executing Node: Save Final Report ---")
-    # CORRECTED: Use dot notation
     report_text = state.final_report_text
     # file_path = io_agent.save(report_text, "final_report.md")
     file_path = "reports/final_report.md"

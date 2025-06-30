@@ -12,7 +12,8 @@ from agents.single_agent import SingleAssistant
 from config.agent_library import (
     get_data_collector_us, get_data_collector_india,
     get_concept_summarizer_global, get_thesis_creator,
-    get_shadow_auditor, get_io_agent, get_summarizer_agent
+    get_shadow_auditor, get_io_agent, get_summarizer_agent,
+    get_validation_agent
 )
 
 # Import the node logic and the actual tool functions
@@ -30,14 +31,16 @@ def run_orchestration(company: str, year: str, config: Dict[str, Any]):
 
     summarizer_agent = get_summarizer_agent(config)
     concept_agent = get_concept_summarizer_global(config)
+    validation_agent = get_validation_agent(config)
 
     # 2. Define the Graph
     workflow = StateGraph(AgentState)
 
-# 3. Add Nodes to the Graph
+    # 3. Add Nodes to the Graph
     workflow.add_node("resolve_company", graph_nodes.resolve_company_node)
     workflow.add_node("data_collection", graph_nodes.data_collection_node)
-    workflow.add_node("synchronize_data", lambda state: {}) # This might need to do actual synchronization or merge
+    workflow.add_node("validate_collected_data", partial(graph_nodes.validate_collected_data_node, agent=validation_agent))
+    workflow.add_node("synchronize_data", lambda state: {})  # Stub for now
     workflow.add_node("summarization", partial(graph_nodes.summarization_node, agent=summarizer_agent))
     workflow.add_node("conceptual_analysis", partial(graph_nodes.conceptual_analysis_node, agent=concept_agent))
     workflow.add_node("generate_report", partial(graph_nodes.generate_report_node, agent=thesis_agent))
@@ -45,29 +48,52 @@ def run_orchestration(company: str, year: str, config: Dict[str, Any]):
     workflow.add_node("run_evaluation", partial(graph_nodes.run_evaluation_node, audit_agent=audit_agent))
     workflow.add_node("save_evaluation_report", partial(graph_nodes.save_evaluation_report_node, io_agent=io_agent))
 
-    # 4. Set the Entry Point and Wire Up Edges
+    # LLM Decision Node (pre-data)
+    workflow.add_node("llm_decision", partial(graph_nodes.llm_decision_node, agent=validation_agent))
+
+    # 4. Wire Up Edges
     workflow.set_entry_point("resolve_company")
+    workflow.add_edge("resolve_company", "llm_decision")
+
     workflow.add_conditional_edges(
-        "resolve_company",
-        graph_nodes.decide_to_continue,
+        "llm_decision",
+        lambda state: getattr(state, "llm_decision", "end"),
         {
             "continue": "data_collection",
+            "valid": "data_collection",     
+            "approved": "data_collection",     
             "end": END
         }
     )
 
-    workflow.add_edge("data_collection", "synchronize_data")
+    work_dir = f"report/{company}_{year}"
+    initial_state = {
+        "company": company,
+        "year": year,
+        "work_dir": work_dir
+    }
+    # After data collection → run validation on collected files
+    workflow.add_edge("data_collection", "validate_collected_data")
 
+    workflow.add_conditional_edges(
+        "validate_collected_data",
+        lambda state: getattr(state, "llm_decision", "end"),
+        {
+            "data_collection_continue": "synchronize_data",
+            "valid": "synchronize_data", 
+            "end": END
+        }
+    )
+
+    # Standard downstream flow
     workflow.add_edge("synchronize_data", "summarization")
-    workflow.add_edge("summarization", "conceptual_analysis") 
-    workflow.add_edge("conceptual_analysis", "generate_report") 
-
-    # Ensure report is saved THEN evaluated
+    workflow.add_edge("summarization", "conceptual_analysis")
+    workflow.add_edge("conceptual_analysis", "generate_report")
     workflow.add_edge("generate_report", "save_report")
     workflow.add_edge("save_report", "run_evaluation")
     workflow.add_edge("run_evaluation", "save_evaluation_report")
-    workflow.add_edge("save_evaluation_report", END) # The final end point
-    
+    workflow.add_edge("save_evaluation_report", END)
+
     # 5. Compile and Run
     app = workflow.compile()
     print("Graph compiled. Starting execution...")
