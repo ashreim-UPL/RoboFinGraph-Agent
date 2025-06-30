@@ -14,7 +14,7 @@ from tools import report_utils
 # Add in graph_nodes.py
 from prompts.summarization_intsruction import finrobot_prompt_library
 from prompts.report_summaries import report_section_specs
-from utils.logger import get_logger, log_event, log_agent_step, log_final_summary, log_cost_estimate, get_logger
+from utils.logger import get_logger, log_event, log_agent_step, log_final_summary, log_cost_estimate # Removed get_logger duplicate
 from tools.report_writer import ReportLabUtils
 from tools.toolkit_loader import load_io_tools
 from tools.file_utils import check_file_stats
@@ -28,9 +28,9 @@ FILE_TO_TEMPLATE_KEY = {
     "company_profile.json": "business_summary",
     "key_data.json": "company_name",
     # IMPORTANT: Ensure these exact basenames are produced by your data collection tasks
-    "sec_10k_section_7.txt": "section_text",
-    "sec_10k_section_1.txt": "business_summary",
-    "sec_10k_section_1a.txt": "risk_factors",
+    "sec_10k_section_1.txt": "business_summary", # Assuming section 1 is business summary
+    "sec_10k_section_1a.txt": "risk_factors", # Assuming section 1a is risk factors
+    "sec_10k_section_7.txt": "section_text", # Generic text section
     "financial_metrics.json": "financial_metrics_json_str", 
     # Note: PNG files are handled separately by report writer, not usually summarized directly
 }
@@ -119,24 +119,30 @@ Your response (just the keywords continue or end):
 
     # Defensive fallback
     if isinstance(response, str):
-        decision = response.strip().lower()
+        decision_raw = response.strip().lower()
     elif hasattr(response, "summary"):
-        decision = response.summary.strip().lower()
+        decision_raw = response.summary.strip().lower()
     else:
-        decision = "end"
+        decision_raw = "end: validator response unclear" # Default to end with a reason
 
-    # Route logic
-    if decision.startswith("continue"):
-        route = "continue"
-    elif decision.startswith("end"):
-        route = "end"
+    # Extract only the routing keyword
+    if decision_raw.startswith("continue"):
+        route_key = "continue"
+    elif decision_raw.startswith("end"):
+        route_key = "end"
+    elif decision_raw.startswith("valid"): # Added for consistency if 'valid' is a direct output
+        route_key = "valid"
+    elif decision_raw.startswith("approved"): # Added for consistency if 'approved' is a direct output
+        route_key = "approved"
     else:
-        route = "continue"
+        route_key = "end" # Default to 'end' if response is not a recognized keyword
 
     return {
-        "llm_decision": decision,
-        "__route__": route 
+        "llm_decision_route_key": route_key, # Store the clean routing key in a NEW state variable
+        "llm_decision_reason": decision_raw, # Store the full reason in another state variable
+        "__route__": route_key # This is what LangGraph uses for routing
     }
+
 # --- Validate data
 def validate_collected_data_node(state: AgentState, agent) -> Dict[str, str]:
     company = state.company
@@ -173,7 +179,7 @@ def validate_collected_data_node(state: AgentState, agent) -> Dict[str, str]:
 You are a financial data quality auditor.
 
 You are reviewing the contents of the following real directory:
-  {work_dir}
+    {work_dir}
 
 Missing or Empty Files:
 {json.dumps(missing_or_empty, indent=2) if missing_or_empty else "None"}
@@ -200,21 +206,31 @@ Output ONLY:
     result = agent.summarize(prompt, tools=load_io_tools())
 
     if isinstance(result, str):
-        decision = result.strip().lower()
+        decision_raw = result.strip().lower()
     elif hasattr(result, "summary"):
-        decision = result.summary.strip().lower()
+        decision_raw = result.summary.strip().lower()
     else:
-        decision = "end: validator response unclear"
+        decision_raw = "end: validator response unclear"
+
+    # Extract only the routing keyword
+    if decision_raw.startswith("valid"):
+        route_key = "valid"
+    elif decision_raw.startswith("end"):
+        route_key = "end"
+    else:
+        route_key = "end" # Default to 'end' if response is not 'valid' or 'end'
 
     log_event("data_validation_decision", {
         "company": company,
         "year": year,
-        "decision": decision
+        "decision": decision_raw, # Log the full decision
+        "route_key": route_key # Log the route key
     })
 
     return {
-        "llm_decision": decision,
-        "__route__": "data_collection_continue" if decision.startswith("valid") else "end"
+        "llm_decision_route_key": route_key, # Store the clean routing key in a NEW state variable
+        "llm_decision_reason": decision_raw, # Store the full reason in another state variable
+        "__route__": route_key # This is what LangGraph uses for routing
     }
 
 # --- resolve_company_node and decide_to_continue remain the same ---
@@ -448,7 +464,7 @@ def summarization_node(state: AgentState, agent) -> dict:
                     if isinstance(content, (dict, list)) and template_var_name.endswith("_json_str"):
                         template_args[template_var_name] = json.dumps(content, indent=2)
                     elif isinstance(content, (dict, list)): # If it's json but template expects string, convert
-                         template_args[template_var_name] = str(content)
+                        template_args[template_var_name] = str(content)
                     else: # It's a string (text file content)
                         template_args[template_var_name] = content
                 else:
@@ -460,7 +476,7 @@ def summarization_node(state: AgentState, agent) -> dict:
 
         # Special handling for 'section_text' if prompt expects 'section_7' separately (e.g., for direct naming)
         if "section_text" in template_args and "section_7" not in template_args:
-             template_args["section_7"] = template_args["section_text"] # Example: copy for backward compatibility
+            template_args["section_7"] = template_args["section_text"] # Example: copy for backward compatibility
 
         try:
             prompt = prompt_template.format(**template_args)

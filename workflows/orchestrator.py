@@ -6,8 +6,6 @@ from langgraph.graph import StateGraph, END
 from graph_utils.state_types import AgentState
 from agents.single_agent import SingleAssistant
 
-
-
 # Import agent creation functions
 from config.agent_library import (
     get_data_collector_us, get_data_collector_india,
@@ -20,10 +18,29 @@ from config.agent_library import (
 from . import graph_nodes
 from tools import report_utils
 
-def run_orchestration(company: str, year: str, config: Dict[str, Any]):
+# New: Import the model configuration utilities from main.py
+# Adjust 'your_app_root' based on your actual project structure.
+# If main.py is at your project root and workflows is a subfolder, it might be:
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # Adjust if needed
+from main import resolve_model_config, inject_model_env, app as main_app_logger # Import app logger if needed
+
+
+def run_orchestration(company: str, year: str, config: Dict[str, Any], report_type: str, verbose: bool):
     """
     Initializes agents and builds the graph for the financial analysis workflow.
     """
+    print(f"Orchestration starting for {company} ({year}) with report type: {report_type}, verbose: {verbose}")
+    print(f"Full configuration received (first 200 chars): {str(config)[:200]}...")
+
+    llm_models_for_agents = config.get("llm_models", {})
+    model_providers = config.get("model_providers", [])
+
+    if verbose:
+        main_app_logger.logger.info(f"LLM models requested by frontend: {llm_models_for_agents}")
+        main_app_logger.logger.info(f"Model providers from config: {model_providers}")
+
     # 1. Instantiate agents
     thesis_agent = get_thesis_creator(config)
     audit_agent = get_shadow_auditor(config)
@@ -49,32 +66,34 @@ def run_orchestration(company: str, year: str, config: Dict[str, Any]):
     workflow.add_node("save_evaluation_report", partial(graph_nodes.save_evaluation_report_node, io_agent=io_agent))
 
     # LLM Decision Node (pre-data)
-    workflow.add_node("llm_decision", partial(graph_nodes.llm_decision_node, agent=validation_agent))
+    workflow.add_node("llm_decision_node", partial(graph_nodes.llm_decision_node, agent=validation_agent))
 
     # 4. Wire Up Edges
     workflow.set_entry_point("resolve_company")
-    workflow.add_edge("resolve_company", "llm_decision")
+    workflow.add_edge("resolve_company", "llm_decision_node")
 
     workflow.add_conditional_edges(
-        "llm_decision",
-        lambda state: getattr(state, "llm_decision", "end"),
+        "llm_decision_node",
+        lambda state: getattr(state, "llm_decision_route_key", "end"),
         {
             "continue": "data_collection",
-            "valid": "data_collection",     
-            "approved": "data_collection",     
+            "valid": "data_collection",
+            "approved": "data_collection",
             "end": END
         }
     )
 
+
     # After data collection → run validation on collected files
     workflow.add_edge("data_collection", "validate_collected_data")
 
+    # FIX: Use 'llm_decision_route_key' for conditional routing
     workflow.add_conditional_edges(
         "validate_collected_data",
-        lambda state: getattr(state, "llm_decision", "end"),
+        lambda state: getattr(state, "llm_decision_route_key", "end"), # Corrected state key
         {
             "data_collection_continue": "synchronize_data",
-            "valid": "synchronize_data", 
+            "valid": "synchronize_data",
             "end": END
         }
     )
@@ -94,8 +113,10 @@ def run_orchestration(company: str, year: str, config: Dict[str, Any]):
         "company": company,
         "year": year,
         "work_dir": report_work_dir,
-        "messages": [], 
-        "llm_decision": "continue", 
+        "messages": [],
+        "llm_decision": "continue",
+        "report_type": report_type,
+        "verbose": verbose
     }
 
     print(f"Report directory initialized to: {initial_state_for_graph['work_dir']}")
@@ -105,7 +126,7 @@ def run_orchestration(company: str, year: str, config: Dict[str, Any]):
     print("Graph compiled. Starting execution...")
 
     # Pass the correctly populated initial_state_for_graph
-    for event in app.stream(initial_state_for_graph): 
+    for event in app.stream(initial_state_for_graph):
         print(event)
         print("---")
 
