@@ -10,6 +10,17 @@ from autogen import UserProxyAgent
 from agents.single_agent import SingleAssistant
 
 # All functions that create a FinRobot agent have been updated to accept a 'config' dictionary.
+def get_validation_agent(config: Dict[str, Any], **kwargs) -> SingleAssistant:
+    return SingleAssistant(
+        agent_config={
+            "name": "LLMValidator",
+            "description": "Validates if company resolution is sufficient to proceed. Strictly Respond with Continue or End",
+            "toolkits": [],
+        },
+        llm_config={"model": config["llm_models"]["LLMValidator"]},
+        max_consecutive_auto_reply=1,
+        **kwargs
+    )
 
 def get_tool_agent(name: str, endpoint: str, task: str, config: Dict[str, Any], **kwargs) -> FinRobot: #
     """Creates a generic agent for calling a specific tool or API."""

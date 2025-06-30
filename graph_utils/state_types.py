@@ -32,3 +32,5 @@ class AgentState(BaseModel):
     tool_call_result: Optional[Dict[str, Any]] = None
     memory: Dict[str, Any] = Field(default_factory=dict)
     audit_notes: List[str] = Field(default_factory=list)
+    llm_decision: Optional[str] = None
+    work_dir: Optional[str] = None
