@@ -5,9 +5,6 @@ from langchain.agents import Tool
 from typing import Callable, List, Dict, Any
 from autogen import Agent, UserProxyAgent
 
-# IO Tools
-from tools.file_utils import read_json_file, save_to_file
-
 # Audit Tools
 from tools.audit_utils import calculate_token_cost, validate_pipeline_accuracy
 
@@ -18,7 +15,16 @@ from tools.financial_tools import (
     get_filing_date,
     fetch_peers
 )
-
+# IO Tools
+from tools.file_utils import (
+    read_json_file,
+    save_to_file,
+    get_file_metadata,
+    list_directory_files,
+    read_text_file,
+    get_file_size,
+    read_image_metadata
+)
 
 # Optional: RAG Tool
 # from tools.rag_loader import query_rag_api
@@ -26,8 +32,41 @@ from tools.financial_tools import (
 # === IO Tools ===
 def load_io_tools() -> List[Tool]:
     return [
-        Tool.from_function(name="Read_JSON", func=read_json_file, description="Read a JSON file."),
-        Tool.from_function(name="Save_File", func=save_to_file, description="Save data to a file.")
+        Tool.from_function(
+            name="Read_JSON",
+            func=read_json_file,
+            description="Read and parse a JSON file by giving its full path."
+        ),
+        Tool.from_function(
+            name="Read_Text",
+            func=read_text_file,
+            description="Read the contents of a text file by providing the file path."
+        ),
+        Tool.from_function(
+            name="Save_File",
+            func=save_to_file,
+            description="Save data to a file. Provide filename and content."
+        ),
+        Tool.from_function(
+            name="List_Directory",
+            func=list_directory_files,
+            description="List all files in a given directory."
+        ),
+        Tool.from_function(
+            name="Get_File_Metadata",
+            func=get_file_metadata,
+            description="Get metadata (size, type, last modified) for a given file path."
+        ),
+        Tool.from_function(
+            name="Get_File_Size",
+            func=get_file_size,
+            description="Return file size in bytes."
+        ),
+        Tool.from_function(
+            name="Read_Image_Metadata",
+            func=read_image_metadata,
+            description="Returns width, height, and format of image files (e.g., PNGs)."
+        ),
     ]
 
 # === Financial Tools ===

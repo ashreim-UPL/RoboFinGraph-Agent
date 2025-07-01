@@ -160,7 +160,7 @@ async def identify_company_and_region(company_query: str) -> dict:
 
         except Exception as e:
             company_resolver_logger.error(
-                f"❌ Exception during competitor lookup for {fmp_ticker}: {e}",
+                f"Exception during competitor lookup for {fmp_ticker}: {e}",
                 exc_info=True
             )
 
