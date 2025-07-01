@@ -1,126 +1,145 @@
 # main.py
+
 import argparse
 import json
-import os, sys, io
+import os
+import sys
+import io
 import traceback
 from typing import Dict, Any, List
 
-# Placeholder for load_config_into_environ if it's not a separate tool
+from utils.logger import get_logger, log_event
+from utils.config_utils import resolve_model_config, inject_model_env
+
+logger = get_logger()
+
+# Ensure cache directory exists
+if not os.path.isdir(".cache"):
+    os.makedirs(".cache")
+
+
 def load_config_into_environ(config_path: str) -> Dict[str, Any]:
     """
     Loads the full configuration from a JSON file.
     """
     try:
-        with open(config_path, 'r') as f:
+        with open(config_path, 'r', encoding='utf-8') as f:
             full_config = json.load(f)
-            if not isinstance(full_config, dict):
-                print(f"Error: Invalid configuration format in {config_path}: Expected a top-level dictionary.", file=sys.stderr)
-                return {}
-            return full_config
+        if not isinstance(full_config, dict):
+            msg = f"Invalid configuration format in {config_path}: expected a dict."
+            logger.error(msg)
+            log_event("config_load_error", {"path": config_path, "error": msg})
+            return {}
+        logger.info(f"Config loaded from {config_path}")
+        log_event("config_loaded", {"path": config_path})
+        return full_config
+
     except FileNotFoundError:
-        print(f"Error: Config file not found at {config_path}", file=sys.stderr)
+        msg = f"Config file not found at {config_path}"
+        logger.error(msg)
+        log_event("config_load_error", {"path": config_path, "error": msg})
         return {}
+
     except json.JSONDecodeError as e:
-        print(f"Error decoding JSON from {config_path}: {e}", file=sys.stderr)
+        msg = f"JSON decode error in {config_path}: {e}"
+        logger.error(msg)
+        log_event("config_load_error", {"path": config_path, "error": msg})
         return {}
+
     except Exception as e:
-        print(f"An unexpected error occurred loading config: {e}", file=sys.stderr)
+        msg = f"Unexpected error loading config: {e}"
+        logger.error(msg)
+        log_event("config_load_error", {"path": config_path, "error": msg})
         return {}
-
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-if not os.path.isdir(".cache"):
-    os.makedirs(".cache")
-
-class SimpleLogger:
-    def error(self, msg):
-        print(f"ERROR: {msg}", file=sys.stderr)
-    def info(self, msg):
-        print(f"INFO: {msg}")
-app = type('obj', (object,), {'logger': SimpleLogger()})()
-
-
-def resolve_model_config(model_name: str, model_providers: List[Dict[str, Any]]) -> Dict[str, Any]:
-    for provider in model_providers:
-        if "models" in provider and model_name in provider["models"]:
-            config = {
-                "model": model_name,
-                "api_key": provider.get("api_key", ""),
-                "api_type": provider.get("provider", "")
-            }
-            if "base_url" in provider:
-                config["base_url"] = provider["base_url"]
-            return config
-    raise ValueError(f"Model '{model_name}' not found in model_providers.")
-
-def inject_model_env(model_config: Dict[str, Any]):
-    api_key = model_config.get("api_key") or ""
-    if model_config["api_type"] == "openai":
-        os.environ["OPENAI_API_KEY"] = api_key
-        app.logger.info(f"Injected OPENAI_API_KEY for model: {model_config.get('model')}")
-    elif model_config["api_type"] == "together":
-        os.environ["TOGETHER_API_KEY"] = api_key
-        os.environ["TOGETHER_BASE_URL"] = model_config.get("base_url", "")
-        app.logger.info(f"Injected TOGETHER_API_KEY and BASE_URL for model: {model_config.get('model')}")
-    else:
-        app.logger.info(f"No environment variable injection rule for API type: {model_config['api_type']}")
 
 
 def main():
     parser = argparse.ArgumentParser(description="FinRobot Annual Report Orchestration")
-    parser.add_argument("company", type=str, help="Enter the company name (e.g., 'Apple Inc.')")
-    parser.add_argument("year", type=str, help="Enter the year to analyze (e.g., 2023)")
-    parser.add_argument("--config", type=str, default="finrobot_config.json", help="Path to the config JSON file.")
-    parser.add_argument("--llm_models", type=str, default="{}",
-                        help="JSON string of agent-to-model mappings (e.g., '{\"leader\": \"model_x\", \"data_cot\": \"model_y\"}')")
-    parser.add_argument("--report_type", type=str, default="kpi_bullet_insights", help="Type of report to generate")
-    parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
+    parser.add_argument("company", type=str, help="Company name (e.g., 'Apple Inc.')")
+    parser.add_argument("year", type=str, help="Year to analyze (e.g., '2023')")
+    parser.add_argument(
+        "--config",
+        type=str,
+        default="finrobot_config.json",
+        help="Path to the config JSON file."
+    )
+    parser.add_argument(
+        "--llm_models",
+        type=str,
+        default="{}",
+        help="JSON string of agent→model mappings."
+    )
+    parser.add_argument(
+        "--report_type",
+        type=str,
+        default="kpi_bullet_insights",
+        help="Type of report to generate"
+    )
+    parser.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Enable verbose logging"
+    )
 
     args = parser.parse_args()
 
-    # Load full config from file
+    logger.info(f"Starting orchestration for {args.company} ({args.year})")
+    log_event("orchestration_start", {
+        "company": args.company,
+        "year": args.year,
+        "report_type": args.report_type,
+        "verbose": args.verbose
+    })
+
+    # 1. Load config
     app_config = load_config_into_environ(args.config)
+    if not app_config:
+        logger.error("Aborting: could not load configuration.")
+        sys.exit(1)
 
-    # --- FIX: Inject ALL API keys from the 'api_keys' section into os.environ ---
-    api_keys_from_config = app_config.get("api_keys", {})
-    for key_name, key_value in api_keys_from_config.items():
-        if key_name and key_value: # Only set if key_name and key_value are not empty
+    # 2. Inject raw API keys
+    for key_name, key_value in app_config.get("api_keys", {}).items():
+        if key_name and key_value:
             os.environ[key_name] = key_value
-            app.logger.info(f"Injected API key from config: {key_name}")
+            logger.info(f"Injected API key: {key_name}")
+            log_event("api_key_injected", {"key": key_name})
         else:
-            app.logger.warning(f"Skipping empty or missing API key in config: {key_name}")
-    # --- END FIX ---
-
-    # Parse llm_models from the command line argument (from frontend)
-    frontend_llm_models_config = {}
+            logger.warning(f"Skipping empty API key entry: {key_name}")
+            log_event("api_key_skipped", {"key": key_name})
+    print(f"\n Launching FinRobot orchestration for: {args.company} ({args.year})\n")
+    # 3. Parse frontend LLM models override
     try:
-        frontend_llm_models_config = json.loads(args.llm_models)
-        app.logger.info(f"Frontend LLM models received: {frontend_llm_models_config}")
+        frontend_llm = json.loads(args.llm_models)
+        logger.info(f"Frontend LLM models: {frontend_llm}")
+        log_event("frontend_llm_parsed", {"models": frontend_llm})
     except json.JSONDecodeError as e:
-        app.logger.error(f"Error parsing --llm_models argument JSON: {e}. Using empty config.")
-    except Exception as e:
-        app.logger.error(f"Unexpected error with --llm_models argument: {e}. Using empty config.")
+        msg = f"Error parsing --llm_models JSON: {e}"
+        logger.error(msg)
+        log_event("frontend_llm_error", {"error": msg})
+        frontend_llm = {}
 
-    # Merge or override 'llm_models' in the main config with frontend selections
-    final_llm_models_config = app_config.get("llm_models", {}).copy()
-    final_llm_models_config.update(frontend_llm_models_config)
-    app_config["llm_models"] = final_llm_models_config
-    app.logger.info(f"Final LLM models configuration for orchestration: {app_config['llm_models']}")
+    # 4. Merge LLM models
+    final_llm = app_config.get("llm_models", {}).copy()
+    final_llm.update(frontend_llm)
+    app_config["llm_models"] = final_llm
+    logger.info(f"Final LLM models config: {final_llm}")
+    log_event("llm_models_configured", {"models": final_llm})
 
-    # Preload environment for the 'leader' model based on the final config
-    # This is still here, but now all other API keys are also injected.
-    leader_model_name = app_config.get("llm_models", {}).get("leader")
-    if leader_model_name:
+    # 5. Preload env for each LLM model
+    for agent_name, model_name in final_llm.items():
+        if not model_name:
+            continue
         try:
-            leader_config = resolve_model_config(leader_model_name, app_config.get("model_providers", []))
-            inject_model_env(leader_config)
-            app.logger.info(f"Environment preloaded for leader model: {leader_model_name}")
-        except ValueError as e:
-            app.logger.error(f"Could not resolve or inject environment for leader model '{leader_model_name}': {e}")
+            model_cfg = resolve_model_config(model_name, app_config.get("model_providers", []))
+            inject_model_env(model_cfg)
+            logger.info(f"Env preloaded for agent '{agent_name}' → model '{model_name}'")
+            log_event("model_env_preloaded", {"agent": agent_name, "model": model_name})
         except Exception as e:
-            app.logger.error(f"Error preloading environment for leader model: {e}")
+            msg = f"Failed to preload env for '{agent_name}': {e}"
+            logger.error(msg)
+            log_event("model_env_error", {"agent": agent_name, "error": str(e)})
 
-    print(f"\n📊 Launching FinRobot orchestration for: {args.company} ({args.year})\n")
-    
+    # 6. Run orchestration
     try:
         from workflows.orchestrator import run_orchestration
         run_orchestration(
@@ -131,14 +150,23 @@ def main():
             verbose=args.verbose
         )
         print("\n✅ Orchestration completed. Check logs and output files.\n")
-    except ImportError:
-        app.logger.error("Error: 'workflows.orchestrator' module not found. Please ensure it's in your Python path.")
-        print("\n❌ Orchestration failed: Missing orchestrator module.\n")
+        logger.info("Orchestration completed successfully.")
+        log_event("orchestration_completed", {"company": args.company, "year": args.year})
+
+    except ImportError as e:
+        msg = "Module 'workflows.orchestrator' not found."
+        logger.error(msg)
+        log_event("orchestration_import_error", {"error": str(e)})
+        sys.exit(1)
+
     except Exception as e:
-        error_msg = f"Orchestration failed: {str(e)}\n{traceback.format_exc()}"
-        app.logger.error(error_msg)
-        print(f"\n❌ Orchestration failed: {str(e)}\n")
+        err_trace = traceback.format_exc()
+        logger.error(f"Orchestration failed: {e}")
+        log_event("orchestration_failed", {"error": str(e), "traceback": err_trace})
+        sys.exit(1)
 
 
 if __name__ == "__main__":
+    # Ensure stdout is UTF-8
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     main()
