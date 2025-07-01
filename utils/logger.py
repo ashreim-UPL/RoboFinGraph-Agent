@@ -18,9 +18,15 @@ _log_formatter = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
 _logger = logging.getLogger("FinRobotLogger")
 _logger.setLevel(logging.INFO)
 
-_file_handler = logging.FileHandler(os.path.join(LOG_DIR, "finrobot_events.log"))
+_file_handler = logging.FileHandler(os.path.join(LOG_DIR, "finrobot_events.log"), encoding="utf-8")
+_file_handler.setLevel(logging.INFO )
 _file_handler.setFormatter(_log_formatter)
 _logger.addHandler(_file_handler)
+
+import sys
+_stream_handler = logging.StreamHandler(sys.stdout)
+_stream_handler.setFormatter(_log_formatter)
+_logger.addHandler(_stream_handler)
 
 # === Logger Access API ===
 def setup_logging():

@@ -6,7 +6,8 @@ import re
 import socket
 import requests
 import logging
-from typing import Annotated, Dict, Literal, Optional
+import json
+from typing import Annotated, Dict, Literal, Optional, Union, Any
 from contextlib import contextmanager
 from utils.logger import setup_logging, get_logger
 from sec_api import ExtractorApi, QueryApi, RenderApi
@@ -130,51 +131,106 @@ def make_api_request(
 # ----------------------------------------------------------------------------
 # SEC Toolkit Wrapper
 # ----------------------------------------------------------------------------
-def _init_sec_api():
-    global query_api, extractor_api
-    if query_api is None:
+# globals for the SEC client
+_query_api: QueryApi = None
+_extractor_api: ExtractorApi = None
+
+def _init_sec_api() -> None:
+    global _query_api, _extractor_api
+    if _query_api is None:
         from sec_api import QueryApi, ExtractorApi
         api_key = API_CONFIG["SEC"]["api_key"]
-        query_api = QueryApi(api_key=api_key)
-        extractor_api = ExtractorApi(api_key=api_key)
-        
-def call_sec_utility(
-    action: Annotated[str, "Action to perform, e.g., get_10k_section"],
-    params: Annotated[dict, "Parameter dict for the SEC action"]
-) -> dict:
-    _init_sec_api()
-    try:
-        if action == "get_10k_metadata":
-            start_date = params['start_date']
-            end_date = params['end_date']
-            query = {
-                "query": f'ticker:"{params["ticker"]}" AND formType:"10-K" AND filedAt:[{start_date} TO {end_date}]',
-                "from": 0, "size": 1, "sort": [{"filedAt": {"order": "desc"}}]
-            }
-            filings_response = query_api.get_filings(query)
-            filings = filings_response.get('filings', [])
-            if not filings:
-                return {"error": f"No 10-K filings found for {params['ticker']} in range {start_date} to {end_date}"}
-            return filings[0]
+        _query_api     = QueryApi(api_key=api_key)
+        _extractor_api = ExtractorApi(api_key=api_key)
 
-        elif action == "get_10k_section":
-            meta = call_sec_utility("get_10k_metadata", {
-                "ticker": params["ticker_symbol"],
-                "start_date": f"{params['fyear']}-01-01",
-                "end_date": f"{int(params['fyear']) + 1}-06-30"
-            })
-            if meta.get("error"):
-                return meta
-            report_url = meta.get("linkToHtml") or meta.get("linkToFilingDetails")
-            if not report_url:
-                return {"error": "Filing metadata found, but it contains no URL."}
-            
-            return {"text": extractor_api.get_section(report_url, str(params["section"]), "text")}
-        else:
-            return {"error": f"Unsupported SEC action: {action}"}
-    except Exception as e:
-        logging.error(f"SEC utility action '{action}' failed: {e}")
-        return {"error": str(e)}
+def get_10k_metadata(
+    ticker_symbol: str,
+    start_date: str,
+    end_date: str,
+) -> Optional[Dict[str, Any]]:
+    """
+    Search for 10-K filings for `ticker_symbol` between `start_date` and `end_date`,
+    and return the metadata of the most recent one (or None if none found).
+    """
+    _init_sec_api() 
+    query = {
+        "query": (
+            f'ticker:"{ticker_symbol}" AND formType:"10-K" '
+            f'AND filedAt:[{start_date} TO {end_date}]'
+        ),
+        "from": 0,
+        "size": 1,
+        "sort": [{"filedAt": {"order": "desc"}}],
+    }
+    resp = _query_api.get_filings(query)
+    filings = resp.get("filings", [])
+    return filings[0] if filings else None
+
+def get_10k_section(
+    ticker_symbol: str,
+    fyear: str,
+    section: Union[int, str],
+    save_path: Optional[str] = None,
+    use_cache: bool = True
+) -> Dict[str, str]:
+    """
+    Extracts a given section (e.g. 1, "1A", 7) from the most
+    recent 10-K for ticker_symbol in fiscal year fyear.
+    Caches to SEC_SECTION_CACHE/<ticker>_<year>_section_<sec>.txt
+    and optionally writes to save_path.
+    Returns {"text": <section_body>}.
+    """
+    _init_sec_api()
+    
+    # normalize section code
+    sec_str = str(section)
+    valid = [str(i) for i in range(1,16)] + ["1A","1B","7A","9A","9B"]
+    if sec_str not in valid:
+        raise ValueError(f"Invalid section '{sec_str}'. Must be one of {valid}")
+
+    # build cache path
+    cache_dir  = os.path.join("SEC_SECTION_CACHE")
+    cache_file = os.path.join(cache_dir, f"{ticker_symbol}_{fyear}_section_{sec_str}.txt")
+
+    # return cached if available
+    if use_cache and os.path.exists(cache_file):
+        with open(cache_file, "r", encoding="utf-8") as f:
+            return {"text": f.read()}
+
+    # 1) fetch metadata for latest 10-K in that year
+    query = {
+        "query": f'ticker:"{ticker_symbol}" AND formType:"10-K" AND filedAt:[{fyear}-01-01 TO {fyear}-12-31]',
+        "from": 0, "size": 1, "sort": [{"filedAt": {"order": "desc"}}]
+    }
+    meta_resp = _query_api.get_filings(query)
+    filings   = meta_resp.get("filings", [])
+    if not filings:
+        raise RuntimeError(f"No 10-K filings found for {ticker_symbol} in {fyear}")
+    meta = filings[0]
+
+    # 2) pick the best URL
+    report_url = meta.get("linkToTxt") or meta.get("linkToHtml")
+    if not report_url:
+        raise RuntimeError(f"No .txt/.htm URL in SEC metadata for {ticker_symbol}/{fyear}")
+
+    # 3) call extractor
+    section_text = _extractor_api.get_section(report_url, sec_str, "text")
+    if not section_text:
+        raise RuntimeError(f"Extractor returned empty for section {sec_str}")
+
+    # 4) save to cache
+    if use_cache:
+        os.makedirs(cache_dir, exist_ok=True)
+        with open(cache_file, "w", encoding="utf-8") as f:
+            f.write(section_text)
+
+    # 5) optionally save to user path
+    if save_path:
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        with open(save_path, "w", encoding="utf-8") as f:
+            f.write(section_text)
+
+    return {"text": section_text}
 
 def save_to_file(data: str, file_path: str) -> str:
     """Saves string data to a file, creating directories if needed."""
@@ -243,7 +299,8 @@ def load_files_from_directory(
 # ----------------------------------------------------------------------------
 UNIVERSAL_ANALYST_TOOLKIT = [
     make_api_request,
-    call_sec_utility,
+    get_10k_metadata,
+    get_10k_section,
     save_to_file,
     load_files_from_directory
 ]

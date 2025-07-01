@@ -4,14 +4,14 @@ import json
 import re
 import pandas as pd
 from datetime import datetime, date, timedelta
-from typing import Dict, Any, Annotated, Tuple
+from typing import Dict, Any, Annotated, Tuple, Union
 from collections import defaultdict
 import os
 import logging
 
 
 # Import the core API calling functions from your toolkit
-from .global_API_toolkit import make_api_request, call_sec_utility, save_to_file
+from .global_API_toolkit import make_api_request, get_10k_section, save_to_file
 from .charting import *
 
 # This new version REPLACES the previous get_key_data function.
@@ -98,31 +98,31 @@ def get_key_data(
     return save_to_file(json.dumps(key_data_dict, indent=2), save_path)
 
 # --- I. Foundational Company Data Functions ---
-def get_company_profile(ticker: str, save_path: str, **kwargs) -> str:
+def get_company_profile(ticker_symbol: str, save_path: str, **kwargs) -> str:
     """
     Retrieves company profile and description exclusively from FMP.
     """
-    print(f"Fetching company profile for {ticker} from FMP...")
+    print(f"Fetching company profile for {ticker_symbol} from FMP...")
     # MODIFIED: Removed all region-specific and SEC-related logic
-    content = make_api_request("FMP", "/profile", {"symbol": ticker})
+    content = make_api_request("FMP", "/profile", {"symbol": ticker_symbol})
     return save_to_file(json.dumps(content, indent=2), save_path)
 
-def get_competitor_analysis(ticker: str, save_path: str, **kwargs) -> str:
+def get_competitor_analysis(ticker_symbol: str, save_path: str, **kwargs) -> str:
     """
     Retrieves a list of competitors from FMP.
     """
-    print(f"Fetching competitors for {ticker}...")
-    content = make_api_request("FMP", "/stock-peers", {"symbol": ticker})
+    print(f"Fetching competitors for {ticker_symbol}...")
+    content = make_api_request("FMP", "/stock-peers", {"symbol": ticker_symbol})
     return save_to_file(json.dumps(content, indent=2), save_path)
 
 
 
 # --- II. Core Financial Statement Functions ---
-def get_financial_statement(ticker: str, statement_type: str, save_path: str, **kwargs) -> str:
+def get_financial_statement(ticker_symbol: str, statement_type: str, save_path: str, **kwargs) -> str:
     """
     Retrieves a core financial statement (income, balance, cash-flow) from FMP.
     """
-    print(f"Fetching {statement_type} for {ticker} from FMP...")
+    print(f"Fetching {statement_type} for {ticker_symbol} from FMP...")
     # MODIFIED: Removed all SEC-related logic for a direct FMP call
     statement_map = {
         "income_statement": "income-statement",
@@ -130,80 +130,102 @@ def get_financial_statement(ticker: str, statement_type: str, save_path: str, **
         "cash_flow_statement": "cash-flow-statement"
     }
     endpoint = f"/{statement_map.get(statement_type)}"
-    content = make_api_request("FMP", endpoint, {"symbol": ticker, "period": "annual"})
+    content = make_api_request("FMP", endpoint, {"symbol": ticker_symbol, "period": "annual"})
     return save_to_file(json.dumps(content, indent=2), save_path)
 
 # --- III. Key Performance Metrics Functions ---
 
-def get_key_metrics(ticker: str, region: str, save_path: str) -> str:
+def get_key_metrics(ticker_symbol: str, region: str, save_path: str) -> str:
     """
     Retrieves key financial metrics from FMP.
     """
-    print(f"Fetching key metrics for {ticker}...")
-    content = make_api_request("FMP", "/key-metrics", {"symbol": ticker})
+    print(f"Fetching key metrics for {ticker_symbol}...")
+    content = make_api_request("FMP", "/key-metrics", {"symbol": ticker_symbol})
     return save_to_file(json.dumps(content, indent=2), save_path)
 
-def get_historical_prices(ticker: str, region: str, save_path: str) -> str:
+def get_historical_prices(ticker_symbol: str, region: str, save_path: str) -> str:
     """
     Retrieves historical stock prices from FMP.
     """
-    print(f"Fetching historical prices for {ticker}...")
-    content = make_api_request("FMP", "/historical-price-eod/full?", {"symbol": ticker})
+    print(f"Fetching historical prices for {ticker_symbol}...")
+    content = make_api_request("FMP", "/historical-price-eod/full?", {"symbol": ticker_symbol})
     return save_to_file(json.dumps(content, indent=2), save_path)
 
 
-def _fetch_and_save_sec_section(ticker: str, fyear: str, section_id: str, save_path: str) -> str:
+def _fetch_and_save_sec_section(
+    ticker_symbol: str,
+    fyear: str,
+    section_id: Union[int, str],
+    save_path: str
+) -> str:
     """
-    Helper function to fetch and save a single SEC 10-K section.
-    `save_path` here is the full path to the *file* to be saved.
+    Helper function to fetch and save a single SEC 10-K section using
+    the refactored get_10k_section.  Returns the file path on success,
+    or an "ERROR: ..." string on failure.
     """
     try:
-        content_dict = call_sec_utility(
-            "get_10k_section",
-            {"ticker_symbol": ticker, "fyear": fyear, "section": section_id}
+        # this will download, cache, and write to save_path for you
+        result: Dict[str, str] = get_10k_section(
+            ticker_symbol=ticker_symbol,
+            fyear=fyear,
+            section=section_id,
+            save_path=save_path,
+            use_cache=True
         )
+        text = result.get("text")
+        if not text:
+            raise RuntimeError("Empty text returned")
 
-        if content_dict and isinstance(content_dict, dict) and "text" in content_dict:
-            text_to_save = content_dict["text"]
-            
-            # Use the correctly implemented save_to_file
-            save_to_file(text_to_save, save_path)
-            logging.info(f"Successfully saved SEC 10-K Section {section_id} to {save_path}")
-            return save_path
-        else:
-            error_info = content_dict.get('error', 'Unknown error') if isinstance(content_dict, dict) else 'Invalid response'
-            logging.warning(f"Could not retrieve Section {section_id} for {ticker}. Response: {error_info}")
-            return f"ERROR: Failed to retrieve Section {section_id} for {ticker}: {error_info}"
+        logging.info(f"✅ Saved Section {section_id} for {ticker_symbol} → {save_path}")
+        return save_path
 
     except Exception as e:
-        logging.error(f"An error occurred while fetching Section {section_id} for {ticker}: {e}", exc_info=True)
-        return f"ERROR: Exception fetching Section {section_id} for {ticker}: {e}"
+        msg = f"ERROR: fetching Section {section_id} for {ticker_symbol}: {e}"
+        logging.error(msg, exc_info=True)
+        return msg
 
-# --- New individual functions for each section ---
-def get_sec_10k_section_1(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
-    """Fetches and saves SEC 10-K Section 1."""
-    print(f"Fetching SEC 10-K Section 1 for {ticker}...")
-    return _fetch_and_save_sec_section(ticker, fyear, "1", save_path)
 
-def get_sec_10k_section_1a(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
-    """Fetches and saves SEC 10-K Section 1A."""
-    print(f"Fetching SEC 10-K Section 1A for {ticker}...")
-    return _fetch_and_save_sec_section(ticker, fyear, "1A", save_path)
+def get_sec_10k_section_1(
+    ticker_symbol: str,
+    fyear: str,
+    save_path: str,
+    **kwargs
+) -> str:
+    """Fetches and saves SEC 10-K Section 1 (Business)."""
+    logging.debug(f"Fetching SEC 10-K Section 1 for {ticker_symbol}/{fyear}")
+    return _fetch_and_save_sec_section(ticker_symbol, fyear, "1", save_path)
 
-def get_sec_10k_section_7(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
-    """Fetches and saves SEC 10-K Section 7."""
-    print(f"Fetching SEC 10-K Section 7 for {ticker}...")
-    return _fetch_and_save_sec_section(ticker, fyear, "7", save_path)
+
+def get_sec_10k_section_1a(
+    ticker_symbol: str,
+    fyear: str,
+    save_path: str,
+    **kwargs
+) -> str:
+    """Fetches and saves SEC 10-K Section 1A (Risk Factors)."""
+    logging.debug(f"Fetching SEC 10-K Section 1A for {ticker_symbol}/{fyear}")
+    return _fetch_and_save_sec_section(ticker_symbol, fyear, "1A", save_path)
+
+
+def get_sec_10k_section_7(
+    ticker_symbol: str,
+    fyear: str,
+    save_path: str,
+    **kwargs
+) -> str:
+    """Fetches and saves SEC 10-K Section 7 (MD&A)."""
+    logging.debug(f"Fetching SEC 10-K Section 7 for {ticker_symbol}/{fyear}")
+    return _fetch_and_save_sec_section(ticker_symbol, fyear, "7", save_path)
 
 # (Keep your other report_utils functions like get_key_data, get_company_profile, etc.)
 
 # --- IV. Chart and Report Generation Functions ---
 
-def generate_share_performance_chart(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
-    return get_share_performance(ticker, f"{fyear}-12-31", save_path)
+def generate_share_performance_chart(ticker_symbol: str, fyear: str, save_path: str, **kwargs) -> str:
+    return get_share_performance(ticker_symbol, f"{fyear}-12-31", save_path)
 
-def generate_pe_eps_chart(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
-    return get_pe_eps_performance(ticker, f"{fyear}-12-31", save_path)
+def generate_pe_eps_chart(ticker_symbol: str, fyear: str, save_path: str, **kwargs) -> str:
+    return get_pe_eps_performance(ticker_symbol, f"{fyear}-12-31", save_path)
 
 def get_financial_metrics(
     ticker_symbol: str,

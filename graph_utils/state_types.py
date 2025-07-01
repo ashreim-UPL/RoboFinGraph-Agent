@@ -14,7 +14,9 @@ class AgentState(BaseModel):
     
     company_details: Optional[Dict[str, Any]] = None
     region: Optional[str] = None
-    
+    year: int
+    filing_date: Optional[str]
+
     raw_data_files: Annotated[List[str], operator.add] = Field(default_factory=list) # Use Field for default with Annotated
     
     conceptual_sections: Optional[Dict[str, Any]] = None
@@ -31,3 +33,4 @@ class AgentState(BaseModel):
     validation_result_key: Optional[str] = None # Stores the programmatic decision from validate_collected_data_node for routing
     
     work_dir: str 
+    error_log: List[str]
