@@ -1,0 +1,38 @@
+[
+  {
+    "symbol": "CHH",
+    "companyName": "Choice Hotels International, Inc.",
+    "price": 126.28,
+    "mktCap": 5859341488
+  },
+  {
+    "symbol": "H",
+    "companyName": "Hyatt Hotels Corporation",
+    "price": 139.41,
+    "mktCap": 13307561249
+  },
+  {
+    "symbol": "HLT",
+    "companyName": "Hilton Worldwide Holdings Inc.",
+    "price": 265.01,
+    "mktCap": 62992877000
+  },
+  {
+    "symbol": "HTHT",
+    "companyName": "H World Group Limited",
+    "price": 33.935,
+    "mktCap": 10415975165
+  },
+  {
+    "symbol": "IHG",
+    "companyName": "InterContinental Hotels Group PLC",
+    "price": 114.94,
+    "mktCap": 17727539296
+  },
+  {
+    "symbol": "WH",
+    "companyName": "Wyndham Hotels & Resorts, Inc.",
+    "price": 80.805,
+    "mktCap": 6221791068
+  }
+]
