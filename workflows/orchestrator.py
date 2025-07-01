@@ -117,18 +117,8 @@ def run_orchestration(
     )
 
     # 3) Validation & sync
-    #workflow.add_node("validate_collected_data", validate_data_runnable)
-    def validate_with_debug(state, _):
-        # first run your real validator
-        result = graph_nodes.validate_collected_data_node(state, validation_agent)
-        # then dump the state so you can see everything
-        print("[DEBUG validate_collected_data] state at exit:")
-        for k, v in state.__dict__.items():
-            print(f"  {k} = {v!r}")
-        print("[DEBUG validate_collected_data] node returned:", result)
-        return result
+    workflow.add_node("validate_collected_data", validate_data_runnable)
 
-    workflow.add_node("validate_collected_data", validate_with_debug)    
 
     registered_nodes.append("synchronize_data")
     workflow.add_node("synchronize_data", lambda state, _: {})
@@ -188,10 +178,9 @@ def run_orchestration(
     
     workflow.add_conditional_edges(
         "validate_collected_data",
-        lambda state: getattr(state, "__route__", "end"),
-        {"valid": "synchronize_data", "end": END}
+        lambda state: getattr(state, "llm_decision", "end"),
+        {"continue": "synchronize_data", "end": END}
     )
-
 
     # straight-line flow from sync through report
     workflow.add_edge("synchronize_data",      "summarization")

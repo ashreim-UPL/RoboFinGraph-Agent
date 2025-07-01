@@ -97,9 +97,9 @@ Stats: {json.dumps(stats)}
 Score: {score}%
 Rules:
 - If any missing => end: <reason>
-- Else valid
+- Else continue
 Output EXACTLY:
-valid
+continue
 end: <reason>
 """
 
@@ -255,8 +255,13 @@ def validate_collected_data_node(
     prompt  = gen_prompt(state.work_dir, missing, stats, score)
     res     = validator_agent.summarize(prompt)
     route   = extract(res)
+    if route == "end":
+        route= "end"
+    else:
+        route = "continue"
+
     log_event('validate_collected', {'score': score, 'missing': missing, 'route': route})
-    return {'llm_decision_route_key': route, '__route__': route}
+    return {'llm_decision': route, '__route__': route}
 
 
 def summarization_node(
