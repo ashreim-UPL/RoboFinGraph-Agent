@@ -6,9 +6,6 @@ import json
 import logging
 from datetime import datetime
 from typing import Dict, Any, Optional, List
-from tools.audit_utils import (
-    calculate_token_cost, validate_pipeline_accuracy  # replaced broken import
-)
 
 # === Logger Setup ===
 LOG_DIR = "logs"

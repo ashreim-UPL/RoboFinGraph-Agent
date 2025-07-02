@@ -4,22 +4,26 @@ import os
 import json
 from typing import Dict, Any, List
 from langgraph.graph import StateGraph, END
-from graph_utils.state_types import AgentState
+from agents.state_types import AgentState
+from agents.agent_utils import inject_model_env
 from functools import partial
-from . import graph_nodes
 
-import workflows.graph_nodes as graph_nodes
-from config.agent_library import (
-    get_company_resolver_agent,
-    get_data_collector_us,
-    get_data_collector_india,
-    get_thesis_creator,
-    get_shadow_auditor,
-    get_io_agent,
-    get_summarizer_agent,
-    get_concept_summarizer_global,
-    get_validation_agent,
+import tools.graph_tools as graph_tools
+from agents.agent_library import (
+    resolve_company_node,
+    llm_decision_node,
+    data_collection_us_node,
+    data_collection_indian_node,
+    validate_collected_data_node,
+    synchronize_data_node,
+    summarization_node,
+    validate_summarized_data_node,
+    concept_analysis_node,
+    validate_analyzed_data_node,
+    generate_report_node,
+    run_evaluation_node,
 )
+
 from utils.logger import get_logger, log_event
 from utils.config_utils import resolve_model_config, inject_model_env
 
@@ -34,30 +38,6 @@ def run_orchestration(
     report_type: str,
     verbose: bool
 ):
-    
-    resolver_agent      = get_company_resolver_agent(config)
-    data_collector_us   = get_data_collector_us(config)
-    data_collector_in   = get_data_collector_india(config)
-    thesis_agent        = get_thesis_creator(config)
-    audit_agent         = get_shadow_auditor(config)
-    io_agent            = get_io_agent(config)
-    summarizer_agent    = get_summarizer_agent(config)
-    concept_agent       = get_concept_summarizer_global(config)
-    validation_agent    = get_validation_agent(config)
-
-    """data_collection_runnable = partial(
-        graph_nodes.data_collection_node,
-        tool_map=graph_nodes.TOOL_MAP,
-        tasks_fn=graph_nodes.get_data_collection_tasks
-    )"""
-
-    validate_data_runnable = partial(
-        graph_nodes.validate_collected_data_node,
-        validator_agent=validation_agent,
-        tasks_fn=graph_nodes.get_data_collection_tasks,
-        gen_prompt=graph_nodes.generate_validation_prompt,
-        extract=graph_nodes.extract_route
-        )    
 
     # 1. Kickoff
     logger.info(f"Orchestration start → {company} ({year}), report_type={report_type}, verbose={verbose}")
@@ -97,149 +77,62 @@ def run_orchestration(
     # --- Progress: Tools / Graph construction ---
     print(json.dumps({"event_type": "setup_progress", "step": "Setting up Tools"}, ensure_ascii=False))
 
-    # 3. Build graph
-    workflow = StateGraph(AgentState)
+    g = StateGraph(AgentState)
 
-    # these lists will mirror exactly what you register in the graph
-    registered_nodes: List[str] = []
-    registered_edges: List[tuple[str, str]] = []
-
-    # 1) Resolve → validator decision
-    registered_nodes.append("resolve_company")
-    workflow.add_node("resolve_company",        graph_nodes.resolve_company_node)
-    workflow.add_node("get_sec_metadata",       graph_nodes.get_sec_metadata_node)
-    #workflow.add_node("data_collection",        data_collection_runnable)
-    workflow.add_node("data_collection", graph_nodes.data_collection_node)
-    registered_nodes.append("llm_decision_node")
-    workflow.add_node(
-        "llm_decision_node",
-        partial(graph_nodes.llm_decision_node, agent=validation_agent)
+    g.add_node("Resolve Company", resolve_company_node)
+    g.add_node("Branch Decision", llm_decision_node)
+    g.add_node("Data Collection US", data_collection_us_node)
+    g.add_node("Data Collection India", data_collection_indian_node)
+    g.add_conditional_edges(
+        "Branch Decision",
+        {"branch":"us"}    , "Data Collection US",
+        {"branch":"india"}, "Data Collection India",
+        {"branch":"end"}   , END,
     )
-
-    # 3) Validation & sync
-    workflow.add_node("validate_collected_data", validate_data_runnable)
-
-
-    registered_nodes.append("synchronize_data")
-    workflow.add_node("synchronize_data", lambda state, _: {})
-
-    # 4) Summaries and report generation
-    registered_nodes.extend([
-        "summarization",
-        "conceptual_analysis",
-        "generate_report",
-        "save_report"
-    ])
-    workflow.add_node(
-        "summarization",
-        lambda state, _: graph_nodes.summarization_node(state, summarizer_agent)
-    )
-    workflow.add_node(
-        "conceptual_analysis",
-        lambda state, _: graph_nodes.conceptual_analysis_node(state, concept_agent)
-    )
-    workflow.add_node(
-        "generate_report",
-        lambda state, _: graph_nodes.generate_report_node(state, thesis_agent)
-    )
-    workflow.add_node(
-        "save_report",
-        lambda state, _: graph_nodes.save_report_node(state, io_agent)
-    )
-
-    # 5) Audit & finish
-    registered_nodes.extend([
-        "run_evaluation",
-        "save_evaluation_report"
-    ])
-    workflow.add_node(
-        "run_evaluation",
-        lambda state, _: graph_nodes.run_evaluation_node(state, audit_agent)
-    )
-    workflow.add_node(
-        "save_evaluation_report",
-        lambda state, _: graph_nodes.save_evaluation_report_node(state, io_agent)
-    )
-
-    logger.info("Graph nodes added")
-    log_event("graph_nodes_added", {})
-
-    # --- now wire up edges, mirroring what you already have ---
-    workflow.set_entry_point("resolve_company")
-    workflow.add_edge("resolve_company", "llm_decision_node")
-    workflow.add_conditional_edges(
-        "llm_decision_node",
-        lambda state: getattr(state, "llm_decision", "end"),
-        {"continue": "get_sec_metadata", "end": END}
-    )
-    workflow.add_edge("get_sec_metadata", "data_collection")
-    # data collection → validate
-    workflow.add_edge("data_collection",      "validate_collected_data")
-    
-    workflow.add_conditional_edges(
-        "validate_collected_data",
-        lambda state: getattr(state, "llm_decision", "end"),
-        {"continue": "synchronize_data", "end": END}
-    )
-
-    # straight-line flow from sync through report
-    workflow.add_edge("synchronize_data",      "summarization")
-    workflow.add_edge("summarization",         "conceptual_analysis")
-    workflow.add_edge("conceptual_analysis",   "generate_report")
-    workflow.add_edge("generate_report",       "save_report")
-    workflow.add_edge("save_report",           "run_evaluation")
-    workflow.add_edge("run_evaluation",        "save_evaluation_report")
-    workflow.add_edge("save_evaluation_report", END)
+    g.add_node("Validate Collected Data", validate_collected_data_node)
+    g.add_edge("Data Collection US",   "Validate Collected Data")
+    g.add_edge("Data Collection India","Validate Collected Data")
+    g.add_node("Synchronize Data", synchronize_data_node)
+    g.add_edge("Validate Collected Data", "Synchronize Data")
+    g.add_node("Summarize", summarization_node)
+    g.add_edge("Synchronize Data", "Summarize")
+    g.add_node("Validate Summaries", validate_summarized_data_node)
+    g.add_edge("Summarize", "Validate Summaries")
+    g.add_node("Conceptual Analysis", concept_analysis_node)
+    g.add_edge("Validate Summaries", "Conceptual Analysis")
+    g.add_node("Validate Analyzed Data", validate_analyzed_data_node)
+    g.add_edge("Conceptual Analysis", "Validate Analyzed Data")
+    g.add_node("Generate Report", generate_report_node)
+    g.add_edge("Validate Analyzed Data", "Generate Report")
+    g.add_node("Run Evaluation", run_evaluation_node)
+    g.add_edge("Generate Report", "Run Evaluation")
+    g.add_edge("Run Evaluation", END)
 
     logger.info("Graph edges configured")
     log_event("graph_edges_configured", {})
 
-    # ——— DEBUG DUMP ———
-    print("\n=== WORKFLOW NODES ===")
-    for n in registered_nodes:
-        print(f" • {n}")
-
-    print("\n=== WORKFLOW EDGES ===")
-    for src, dst in registered_edges:
-        print(f" {src} → {dst}")
-    print(json.dumps(
-        {"event_type": "setup_progress", "step": "Resolving Company Region & Peers"},
-        ensure_ascii=False
-    ))
-
     # 4. Prepare work dir & initial state
-    report_dir = f"report/{company}_{year}"
+    report_dir = os.path.join("report", f"{company}_{year}")
     os.makedirs(report_dir, exist_ok=True)
-    initial_state = {
-        "company": company,
-        "year": year,
-        "work_dir": report_dir,
-        "report_type": report_type,
-        "verbose": verbose,
-        
-        # --- Add default values for ALL other required fields ---
-        "company_details": {},
-        "region": "",
-        "messages": [],
-        "llm_decision": "",
-        "raw_data_files": [],
-        
-        # --- Specifically add the two missing fields ---
-        "filing_date": None,  # Initialize as None, since it's Optional
-        "error_log": []       # Initialize as an empty list
-    }
+
+    initial_state_object = AgentState(
+        company=company,
+        year=year,
+        user_input=company, # or user_input if different from company
+        work_dir=report_dir # AgentState's __init__ might set this if not provided, but being explicit is good
+    )
 
     logger.info(f"Workdir prepared at {report_dir}")
     log_event("initial_state_ready", initial_state)
 
     # 5. Compile & stream
     try:
-        app = workflow.compile()
+        app = g.compile()
         logger.info("Graph compiled; starting execution")
         log_event("graph_compiled", {})
 
         print(json.dumps({"event_type": "pipeline_start"}, ensure_ascii=False))
-        for event in app.stream(initial_state):
+        for event in app.stream(initial_state_object):
             # forward every event to front-end
             print(json.dumps({"event_type": "graph_event", "payload": str(event)}, ensure_ascii=False))
             logger.info(f"Event: {event}")
