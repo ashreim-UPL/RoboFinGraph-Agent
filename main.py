@@ -20,7 +20,9 @@ if not os.path.isdir(".cache"):
 
 def load_config_into_environ(config_path: str) -> Dict[str, Any]:
     """
-    Loads the full configuration from a JSON file.
+    Loads the full configuration from a JSON file,
+    and injects all API keys from both 'api_keys' and 'providers'
+    into the environment.
     """
     try:
         with open(config_path, 'r', encoding='utf-8') as f:
@@ -30,8 +32,33 @@ def load_config_into_environ(config_path: str) -> Dict[str, Any]:
             logger.error(msg)
             log_event("config_load_error", {"path": config_path, "error": msg})
             return {}
+
         logger.info(f"Config loaded from {config_path}")
         log_event("config_loaded", {"path": config_path})
+
+        # Inject top-level API keys
+        for k, v in full_config.get("api_keys", {}).items():
+            if k and v:
+                os.environ[k] = v
+                logger.info(f"Injected API key: {k}")
+                log_event("api_key_injected", {"key": k})
+
+        # Inject provider API keys (standardized env var names)
+        for provider_name, provider_data in full_config.get("providers", {}).items():
+            env_var = f"{provider_name.upper()}_API_KEY"
+            api_key = provider_data.get("api_key")
+            if api_key:
+                os.environ[env_var] = api_key
+                logger.info(f"Injected Provider API key: {env_var}")
+                log_event("provider_api_key_injected", {"env_var": env_var})
+
+            # Optionally: inject provider-specific base URLs as well
+            if "base_url" in provider_data:
+                url_env = f"{provider_name.upper()}_BASE_URL"
+                os.environ[url_env] = provider_data["base_url"]
+                logger.info(f"Injected {url_env}")
+                log_event("provider_base_url_injected", {"env_var": url_env})
+
         return full_config
 
     except FileNotFoundError:
@@ -60,7 +87,7 @@ def main():
     parser.add_argument(
         "--config",
         type=str,
-        default="finrobot_config.json",
+        default="langgraph_config.json",
         help="Path to the config JSON file."
     )
     parser.add_argument(
@@ -97,15 +124,6 @@ def main():
         logger.error("Aborting: could not load configuration.")
         sys.exit(1)
 
-    # 2. Inject raw API keys
-    for key_name, key_value in app_config.get("api_keys", {}).items():
-        if key_name and key_value:
-            os.environ[key_name] = key_value
-            logger.info(f"Injected API key: {key_name}")
-            log_event("api_key_injected", {"key": key_name})
-        else:
-            logger.warning(f"Skipping empty API key entry: {key_name}")
-            log_event("api_key_skipped", {"key": key_name})
     print(f"\n Launching FinRobot orchestration for: {args.company} ({args.year})\n")
     # 3. Parse frontend LLM models override
     try:
@@ -167,6 +185,6 @@ def main():
 
 
 if __name__ == "__main__":
-    # Ensure stdout is UTF-8
+    # Ensure stdout is UTF-8  
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     main()

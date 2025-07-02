@@ -181,7 +181,7 @@ def get_10k_section(
     Returns {"text": <section_body>}.
     """
     _init_sec_api()
-    
+
     # normalize section code
     sec_str = str(section)
     valid = [str(i) for i in range(1,16)] + ["1A","1B","7A","9A","9B"]

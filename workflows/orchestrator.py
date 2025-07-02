@@ -3,9 +3,9 @@
 import os
 import json
 from typing import Dict, Any, List
-from langgraph.graph import StateGraph, END
-from agents.state_types import AgentState
-from agents.agent_utils import inject_model_env
+from langgraph.graph import StateGraph, END, START
+from agents.state_types import AgentState,NodeStatus
+#from agents.agent_utils import inject_model_env
 from functools import partial
 
 import tools.graph_tools as graph_tools
@@ -59,7 +59,7 @@ def run_orchestration(
         if not model_name:
             continue
         try:
-            mc = resolve_model_config(model_name, providers)
+            mc = resolve_model_config(model_name, CONFIG["model_providers"], CONFIG["providers"])
             inject_model_env(mc)
             logger.info(f"Injected env for agent '{agent_name}' → model '{model_name}'")
             log_event("model_env_injected", {"agent": agent_name, "model": model_name})
@@ -77,18 +77,28 @@ def run_orchestration(
     # --- Progress: Tools / Graph construction ---
     print(json.dumps({"event_type": "setup_progress", "step": "Setting up Tools"}, ensure_ascii=False))
 
+    def resolve_company_node_wrapper(agent_state):
+        return resolve_company_node(agent_state, node_state=None)
+        
     g = StateGraph(AgentState)
-
+    #g.add_edge(START, "Resolve Company")
     g.add_node("Resolve Company", resolve_company_node)
+    g.set_entry_point("Resolve Company")
     g.add_node("Branch Decision", llm_decision_node)
+    g.add_edge("Resolve Company", "Branch Decision")
     g.add_node("Data Collection US", data_collection_us_node)
     g.add_node("Data Collection India", data_collection_indian_node)
     g.add_conditional_edges(
         "Branch Decision",
-        {"branch":"us"}    , "Data Collection US",
-        {"branch":"india"}, "Data Collection India",
-        {"branch":"end"}   , END,
+        lambda state: state.llm_decision,  # This lambda reads the 'llm_decision' from the state
+                                            # which was updated by llm_decision_node.
+        {
+            "us": "Data Collection US",
+            "india": "Data Collection India",
+            "end": END,
+        }
     )
+
     g.add_node("Validate Collected Data", validate_collected_data_node)
     g.add_edge("Data Collection US",   "Validate Collected Data")
     g.add_edge("Data Collection India","Validate Collected Data")
@@ -115,24 +125,36 @@ def run_orchestration(
     report_dir = os.path.join("report", f"{company}_{year}")
     os.makedirs(report_dir, exist_ok=True)
 
-    initial_state_object = AgentState(
+    """initial_state = AgentState(
         company=company,
         year=year,
         user_input=company, # or user_input if different from company
-        work_dir=report_dir # AgentState's __init__ might set this if not provided, but being explicit is good
-    )
+        work_dir=report_dir, # AgentState's __init__ might set this if not provided, but being explicit is good
+        #status=NodeStatus.RUNNING 
+    )"""
+    initial_state = {
+        "company": company,
+        "year": year,
+        "work_dir": report_dir,
+        "messages": [], 
+        "llm_decision": "continue", 
+    }    
 
     logger.info(f"Workdir prepared at {report_dir}")
-    log_event("initial_state_ready", initial_state)
+    log_event("initial_state_ready", {
+    "company": company,
+    "year": year,
+    "work_dir": report_dir})
+
 
     # 5. Compile & stream
     try:
         app = g.compile()
         logger.info("Graph compiled; starting execution")
-        log_event("graph_compiled", {})
+        #log_event("graph_compiled", {})
 
         print(json.dumps({"event_type": "pipeline_start"}, ensure_ascii=False))
-        for event in app.stream(initial_state_object):
+        for event in app.stream(initial_state):
             # forward every event to front-end
             print(json.dumps({"event_type": "graph_event", "payload": str(event)}, ensure_ascii=False))
             logger.info(f"Event: {event}")
