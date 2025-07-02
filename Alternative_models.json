@@ -1,0 +1,66 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Build final table with 3 sets of models
+data = [
+    {
+        "Step": 1,
+        "Task": "Internet search (Company Resolution)",
+        "OpenAI": "gpt-4.1-2025-04-14",
+        "TogetherAI": "Mixtral-8x7B Instruct v0.1",
+        "Qwen/Other": "Qwen2.5 72B Instruct"
+    },
+    {
+        "Step": 2,
+        "Task": "Validate data",
+        "OpenAI": "gpt-4.1-nano-2025-04-14",
+        "TogetherAI": "Mistral-7B Instruct v0.2",
+        "Qwen/Other": "Qwen2.5 7B Instruct"
+    },
+    {
+        "Step": 3,
+        "Task": "Summarize text",
+        "OpenAI": "gpt-4.1-nano-2025-04-14",
+        "TogetherAI": "Nous Hermes 2 Mixtral 8x7B DPO",
+        "Qwen/Other": "Qwen2.5 32B Instruct"
+    },
+    {
+        "Step": 4,
+        "Task": "Validate summaries",
+        "OpenAI": "gpt-4.1-nano-2025-04-14",
+        "TogetherAI": "Mistral-7B Instruct v0.2",
+        "Qwen/Other": "Qwen2.5 3B Instruct"
+    },
+    {
+        "Step": 5,
+        "Task": "Analyze summaries & generate report",
+        "OpenAI": "gpt-4.1-2025-04-14",
+        "TogetherAI": "Mixtral-8x7B Instruct v0.1",
+        "Qwen/Other": "Qwen3 32B"
+    },
+    {
+        "Step": 6,
+        "Task": "Validate final summaries",
+        "OpenAI": "gpt-4.1-nano-2025-04-14",
+        "TogetherAI": "Nous Hermes 2 Mixtral 8x7B DPO",
+        "Qwen/Other": "Qwen2.5 14B"
+    },
+    {
+        "Step": 7,
+        "Task": "Check & evaluate the final report",
+        "OpenAI": "gpt-4.1-2025-04-14",
+        "TogetherAI": "Mixtral-8x22B Instruct v0.1",
+        "Qwen/Other": "Qwen2.5 72B Instruct Turbo"
+    },
+    {
+        "Step": 8,
+        "Task": "Pipeline progress evaluation & KPIs",
+        "OpenAI": "gpt-4.1-2025-04-14",
+        "TogetherAI": "Mixtral-8x7B Instruct v0.1",
+        "Qwen/Other": "Qwen3 235B A22B"
+    }
+]
+
+df_models = pd.DataFrame(data)
+import ace_tools as tools; tools.display_dataframe_to_user(name="LLM Recommendation Table", dataframe=df_models)

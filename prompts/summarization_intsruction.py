@@ -1,4 +1,4 @@
-finrobot_prompt_library = {
+summarization_prompt_library = {
     "analyze_income_stmt": {
         "input_files": ["income_statement.json", "sec_filings/sec_10k_section_7.txt"],
         "raw_data_needed": [
