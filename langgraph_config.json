@@ -1,9 +1,9 @@
- { "api_keys": {
+{
+  "api_keys": {
     "FMP_API_KEY": "h39fQ5nHOcfTMSQhsIJQzOwZKnocttbE",
     "SEC_API_KEY": "5a878201d139df95002fcca9208296106588cb85d2447a923585f37a4c14fbd3",
     "INDIAN_API_KEY": "sk-live-E0WDmXyFSKg6jJDwbkkJdvUwO7gql825EBxqIc8W"
   },
-{
   "default_provider": "openai",
   "temperature": 0.1,
   "max_tokens": 4096,
@@ -12,7 +12,7 @@
   "providers": {
     "openai": {
       "api_key": "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",
-      "base_url": "https://api.openai.com"
+      "base_url": "https://api.openai.com/v1"
     },
     "together": {
       "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
@@ -25,7 +25,8 @@
       "provider": "openai",
       "models": [
         "gpt-4.1-2025-04-14",
-        "gpt-4.1-nano-2025-04-14"
+        "gpt-4.1-nano-2025-04-14",
+        "gpt-4o-search-preview-2025-03-11"
       ]
     },
     {

@@ -57,6 +57,8 @@ class AgentState(BaseModel):
 
     messages:             List[Dict[str, Any]] = Field(default_factory=list)
     evaluation_results:   Optional[Dict[str, Any]] = None
+    success_score:        Optional[float]    = None
+    accuracy_score:       Optional[float] = None
 
     agent_name:           Optional[str] = None
     tool_call_result:     Optional[Dict[str, Any]] = None
@@ -66,6 +68,10 @@ class AgentState(BaseModel):
     llm_decision:         Optional[str] = None
     validation_result_key:Optional[str] = None
 
+    start_time:        Optional[datetime] = None
+    end_time:          Optional[datetime] = None
+    duration:          Optional[float]   = None  # seconds
+    
     error_log:            List[str] = Field(default_factory=list)
 
     def __init__(self, **data: Any):
@@ -139,9 +145,6 @@ class TokenUsage(BaseModel):
 class NodeState(BaseModel):
     id:                str
     name:              Optional[str] = None
-    start_time:        Optional[datetime] = None
-    end_time:          Optional[datetime] = None
-    duration:          Optional[float]   = None  # seconds
     status:            NodeStatus         = NodeStatus.PENDING
     errors:            List[str]          = Field(default_factory=list)
     files_read:        List[str]          = Field(default_factory=list)
@@ -150,6 +153,7 @@ class NodeState(BaseModel):
     tokens:            TokenUsage         = Field(default_factory=TokenUsage)
     tools_used:        Set[str]           = Field(default_factory=set)
     success_score:     Optional[float]    = None
+    accuracy_score:    Optional[float] = None
     custom_metrics:    Dict[str, Any]     = Field(default_factory=dict)
     parents:           List[str]          = Field(default_factory=list)
     children:          List[str]          = Field(default_factory=list)
@@ -161,6 +165,7 @@ class AggregateMetrics(BaseModel):
     total_tokens_sent:      int             = 0
     total_tokens_generated: int             = 0
     overall_success_score:  Optional[float] = None
+    overall_accuracy_score: Optional[float] = None
 
 class PipelineState(BaseModel):
     graph_start_time: datetime
