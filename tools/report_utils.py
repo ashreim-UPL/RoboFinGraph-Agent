@@ -98,13 +98,15 @@ def get_key_data(
     return save_to_file(json.dumps(key_data_dict, indent=2), save_path)
 
 # --- I. Foundational Company Data Functions ---
-def get_company_profile(ticker: str, save_path: str, **kwargs) -> str:
+def get_company_profile(ticker: str, save_path: str, region:str='US', **kwargs) -> str:
     """
     Retrieves company profile and description exclusively from FMP.
     """
     print(f"Fetching company profile for {ticker} from FMP...")
     # MODIFIED: Removed all region-specific and SEC-related logic
     content = make_api_request("FMP", "/profile", {"symbol": ticker})
+    content = content.get('companyProfile', content) if isinstance(content, dict) else content
+
     return save_to_file(json.dumps(content, indent=2), save_path)
 
 def get_competitor_analysis(ticker: str, save_path: str, **kwargs) -> str:
@@ -114,7 +116,6 @@ def get_competitor_analysis(ticker: str, save_path: str, **kwargs) -> str:
     print(f"Fetching competitors for {ticker}...")
     content = make_api_request("FMP", "/stock-peers", {"symbol": ticker})
     return save_to_file(json.dumps(content, indent=2), save_path)
-
 
 
 # --- II. Core Financial Statement Functions ---
@@ -152,47 +153,48 @@ def get_historical_prices(ticker: str, region: str, save_path: str) -> str:
     return save_to_file(json.dumps(content, indent=2), save_path)
 
 
-def get_sec_10k_sections(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
+def _fetch_and_save_sec_section(ticker: str, fyear: str, section_id: str, save_path: str) -> str:
     """
-    Fetches sections 1, 1A, and 7 from the latest 10-K filing for a US company
-    and saves each section to a separate text file.
+    Helper function to fetch and save a single SEC 10-K section.
+    `save_path` here is the full path to the *file* to be saved.
     """
-    print(f"Fetching SEC 10-K sections 1, 1A, and 7 for {ticker}...")
-    
-    os.makedirs(save_path, exist_ok=True)
-    sections_to_fetch = ["1", "1A", "7"]
-    created_files = []
+    try:
+        content_dict = call_sec_utility(
+            "get_10k_section",
+            {"ticker_symbol": ticker, "fyear": fyear, "section": section_id}
+        )
 
-    for section_id in sections_to_fetch:
-        try:
-            # The 'content_dict' variable holds the dictionary returned from the API call
-            content_dict = call_sec_utility(
-                "get_10k_section",
-                {"ticker_symbol": ticker, "fyear": fyear, "section": section_id}
-            )
+        if content_dict and isinstance(content_dict, dict) and "text" in content_dict:
+            text_to_save = content_dict["text"]
+            
+            # Use the correctly implemented save_to_file
+            save_to_file(text_to_save, save_path)
+            logging.info(f"Successfully saved SEC 10-K Section {section_id} to {save_path}")
+            return save_path
+        else:
+            error_info = content_dict.get('error', 'Unknown error') if isinstance(content_dict, dict) else 'Invalid response'
+            logging.warning(f"Could not retrieve Section {section_id} for {ticker}. Response: {error_info}")
+            return f"ERROR: Failed to retrieve Section {section_id} for {ticker}: {error_info}"
 
-            # --- MODIFICATION START: Check the dictionary and extract the text ---
-            # Check if the call was successful and returned a dictionary with the 'text' key
-            if content_dict and isinstance(content_dict, dict) and "text" in content_dict:
-                text_to_save = content_dict["text"] # Extract the string value
-                
-                file_name = f"sec_10k_section_{section_id.lower()}.txt"
-                full_path = os.path.join(save_path, file_name)
-                
-                # Pass the extracted text string to be saved
-                save_to_file(text_to_save, full_path)
-                created_files.append(full_path)
-                logging.info(f"Successfully saved {full_path}")
-            else:
-                # Log the error message returned from the utility
-                error_info = content_dict.get('error', 'Unknown error') if isinstance(content_dict, dict) else 'Invalid response'
-                logging.warning(f"Could not retrieve Section {section_id} for {ticker}. Response: {error_info}")
-            # --- MODIFICATION END ---
+    except Exception as e:
+        logging.error(f"An error occurred while fetching Section {section_id} for {ticker}: {e}", exc_info=True)
+        return f"ERROR: Exception fetching Section {section_id} for {ticker}: {e}"
 
-        except Exception as e:
-            logging.error(f"An error occurred while fetching Section {section_id} for {ticker}: {e}", exc_info=True)
+# --- New individual functions for each section ---
+def get_sec_10k_section_1(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
+    """Fetches and saves SEC 10-K Section 1."""
+    print(f"Fetching SEC 10-K Section 1 for {ticker}...")
+    return _fetch_and_save_sec_section(ticker, fyear, "1", save_path)
 
-    return f"SEC section data saving process completed for {ticker}. Files created: {len(created_files)}"
+def get_sec_10k_section_1a(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
+    """Fetches and saves SEC 10-K Section 1A."""
+    print(f"Fetching SEC 10-K Section 1A for {ticker}...")
+    return _fetch_and_save_sec_section(ticker, fyear, "1A", save_path)
+
+def get_sec_10k_section_7(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
+    """Fetches and saves SEC 10-K Section 7."""
+    print(f"Fetching SEC 10-K Section 7 for {ticker}...")
+    return _fetch_and_save_sec_section(ticker, fyear, "7", save_path)
 
 # --- IV. Chart and Report Generation Functions ---
 
