@@ -98,13 +98,15 @@ def get_key_data(
     return save_to_file(json.dumps(key_data_dict, indent=2), save_path)
 
 # --- I. Foundational Company Data Functions ---
-def get_company_profile(ticker: str, save_path: str, **kwargs) -> str:
+def get_company_profile(ticker: str, save_path: str, region:str='US', **kwargs) -> str:
     """
     Retrieves company profile and description exclusively from FMP.
     """
     print(f"Fetching company profile for {ticker} from FMP...")
     # MODIFIED: Removed all region-specific and SEC-related logic
     content = make_api_request("FMP", "/profile", {"symbol": ticker})
+    content = content.get('companyProfile', content) if isinstance(content, dict) else content
+
     return save_to_file(json.dumps(content, indent=2), save_path)
 
 def get_competitor_analysis(ticker: str, save_path: str, **kwargs) -> str:
@@ -114,7 +116,6 @@ def get_competitor_analysis(ticker: str, save_path: str, **kwargs) -> str:
     print(f"Fetching competitors for {ticker}...")
     content = make_api_request("FMP", "/stock-peers", {"symbol": ticker})
     return save_to_file(json.dumps(content, indent=2), save_path)
-
 
 
 # --- II. Core Financial Statement Functions ---
@@ -157,7 +158,7 @@ def get_sec_10k_sections(ticker: str, fyear: str, save_path: str, **kwargs) -> s
     Fetches sections 1, 1A, and 7 from the latest 10-K filing for a US company
     and saves each section to a separate text file.
     """
-    print(f"Fetching SEC 10-K sections 1, 1A, and 7 for {ticker}...")
+    print(f"Fetching Annual Report Sections sections 1, 1A, and 7 for {ticker}...")
     
     os.makedirs(save_path, exist_ok=True)
     sections_to_fetch = ["1", "1A", "7"]
