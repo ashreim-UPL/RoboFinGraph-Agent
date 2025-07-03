@@ -4,6 +4,7 @@ import asyncio
 import time
 from pathlib import Path
 import logging
+from PIL import Image
 import sys
 from datetime import datetime, timedelta
 import inspect
@@ -22,33 +23,7 @@ from agents.state_types import TOOL_MAP
 
 
 logger = get_logger()
-
-def get_data_collection_tasks(state: AgentState) -> List[Dict[str, str]]:
-    raw_dir = state.raw_data_dir
-    filing_dir= state.filing_dir
-    summaries_dir = state.summaries_dir
-  
-    # Assign the list to a variable first
-    tasks_list = [
-        # Individual entries for each SEC section (as per our last refactoring)
-        {'task': 'get_sec_10k_section_1', 'file': os.path.join(filing_dir, 'sec_10k_section_1.txt')},
-        {'task': 'get_sec_10k_section_1a', 'file': os.path.join(filing_dir, 'sec_10k_section_1a.txt')},
-        {'task': 'get_sec_10k_section_7', 'file': os.path.join(filing_dir, 'sec_10k_section_7.txt')},
-        
-        # The rest of your tasks, which produce a single file
-        {'task': 'get_key_data', 'file': os.path.join(raw_dir, 'key_data.json')},
-        {'task': 'get_company_profile',  'file': os.path.join(raw_dir, 'company_profile.json')},
-        {'task': 'get_competitors', 'file': os.path.join(raw_dir, 'competitors.json')},
-        {'task': 'get_income_statement', 'file': os.path.join(raw_dir, 'income_statement.json')},
-        {'task': 'get_balance_sheet', 'file': os.path.join(raw_dir, 'balance_sheet.json')},
-        {'task': 'get_cash_flow',  'file': os.path.join(raw_dir, 'cash_flow.json')},
-        {'task': 'get_pe_eps_chart', 'file': os.path.join(summaries_dir, 'pe_eps_performance.png')},
-        {'task': 'get_share_performance_chart',  'file': os.path.join(summaries_dir, 'share_performance.png')},
-        {'task': 'financial_metrics', 'file': os.path.join(summaries_dir, 'financial_metrics.json')}
-    ]
-
-    print(f"--- DEBUG: get_data_collection_tasks generated tasks: {tasks_list} ---\n")
-    return tasks_list
+logger = logging.getLogger(__name__)
 
 # --- Node Functions ---
 def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
@@ -85,9 +60,6 @@ def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
         get_logger().error("get_sec_metadata_node failed", exc_info=True)
         return {}
 
-
-logger = logging.getLogger(__name__)
-
 def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
     """
     Comprehensive tool to collect all required US financial data.
@@ -110,7 +82,7 @@ def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
     base_raw_data_dir = os.path.join(work_dir, "raw_data")
     os.makedirs(base_raw_data_dir, exist_ok=True)
 
-    for task_def in get_data_collection_tasks(state):
+    for task_def in state.get_data_collection_tasks():
         print(task_def)
     
         tool_name = task_def["task"]
@@ -118,7 +90,6 @@ def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
         out_file_path = os.path.join(output_filename)
         
         
-        print("Tool map", TOOL_MAP)
         if tool_name not in TOOL_MAP:          
             msg = f"Tool '{tool_name}' not found in TOOL_MAP. Skipping."
             logger.warning(msg)
@@ -126,12 +97,9 @@ def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
             continue
 
         tool_fn = TOOL_MAP[tool_name]
-        print("\n",tool_name, tool_fn,"\n")
         try:
             os.makedirs(os.path.dirname(out_file_path), exist_ok=True)
             sig = inspect.signature(tool_fn)
-            print(sig)
-            input("check function signature")
             kwargs = {}
 
             # Prepare arguments based on the tool's signature
@@ -166,138 +134,108 @@ def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
 
     return {"collected_files": collected_files, "errors": errors}
 
+# ------------------------- File  Validation Function Begin ------------------
 def validate_raw_data(tasks: List[Dict[str, str]]) -> Dict[str, Any]:
     """
-    Checks each file path in `tasks` for existence and valid non-empty JSON.
+    Checks each file path in `tasks` for existence and basic validity:
+      - .json: valid, non-empty JSON
+      - .txt: non-empty text file
+      - .png: valid image (can be opened by PIL)
     Returns a dict with:
       - total: int
       - valid_count: int
       - missing_files: List[str]
       - corrupt_files: List[str]
       - files_read: List[str]
+      - file_results: Dict[str, str]  # optional: {path: status}
     """
     files_read: List[str] = []
     total = len(tasks)
     valid_count = 0
     missing_files: List[str] = []
     corrupt_files: List[str] = []
+    file_results: Dict[str, str] = {}
 
     for t in tasks:
         path = t["file"]
         files_read.append(path)
+        ext = os.path.splitext(path)[1].lower()
         if not os.path.exists(path):
             missing_files.append(path)
+            file_results[path] = "missing"
             continue
+
         try:
-            with open(path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            if data:
-                valid_count += 1
+            if ext == ".json":
+                with open(path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if data:
+                    valid_count += 1
+                    file_results[path] = "valid"
+                else:
+                    corrupt_files.append(path)
+                    file_results[path] = "corrupt (empty JSON)"
+            elif ext == ".txt":
+                with open(path, "r", encoding="utf-8") as f:
+                    text = f.read()
+                if text.strip():  # non-empty after stripping whitespace
+                    valid_count += 1
+                    file_results[path] = "valid"
+                else:
+                    corrupt_files.append(path)
+                    file_results[path] = "corrupt (empty text)"
+            elif ext == ".png":
+                try:
+                    with Image.open(path) as img:
+                        img.verify() 
+                    valid_count += 1
+                    file_results[path] = "valid"
+                except Exception as e:
+                    corrupt_files.append(path)
+                    file_results[path] = f"corrupt (bad image: {e})"
             else:
-                corrupt_files.append(path)
-        except Exception:
+                # Unknown type, just check non-empty file
+                if os.path.getsize(path) > 0:
+                    valid_count += 1
+                    file_results[path] = "valid (unknown type)"
+                else:
+                    corrupt_files.append(path)
+                    file_results[path] = "corrupt (empty, unknown type)"
+        except Exception as e:
             corrupt_files.append(path)
+            file_results[path] = f"corrupt (exception: {e})"
 
     return {
         "total": total,
         "valid_count": valid_count,
         "missing_files": missing_files,
         "corrupt_files": corrupt_files,
-        "files_read": files_read
+        "files_read": files_read,
+        "file_results": file_results,
     }
-
+# ------------------------- File  Validation Function END ------------------
 
 # tools/summarizer.py
 
-def summarize_sections(
-    raw_data_dir: Path,
-    filing_dir: Path,
-    prompts: Dict[str, Any],
-    file_key_map: Dict[str, str],
-    llm_executor: Any
-) -> Tuple[Dict[str, str], int]:
+def get_summary_task_details(summary_name: str, prompt_library: dict) -> dict:
     """
-    For each section in `prompts`:
-      1. Load the required files (JSON from raw_data_dir, text from filing_dir)
-      2. Map each filename into its template key via file_key_map
-      3. Fill prompt_template with those pieces
-      4. Call llm_executor.generate(...)
-      5. Collect the response and increment a counter
-    Returns:
-      - summaries: Dict[section_key, LLM output]
-      - sections_processed: int
+    Given a summary_name (e.g. 'analyze_income_stmt'), return:
+        - output_file: (suggested filename or key)
+        - input_files: list of required filenames (from prompt_library)
+        - prompt_template: instruction template
     """
-    summaries: Dict[str, str] = {}
-    sections_processed = 0
+    if summary_name not in prompt_library:
+        raise ValueError(f"Unknown summary task: {summary_name}")
 
-    for section_key, spec in prompts.items():
-        # 1) Gather inputs
-        inputs: Dict[str, str] = {}
-        for fname in spec["input_files"]:
-            # Decide whether it's in raw_data_dir or filing_dir
-            candidate = raw_data_dir / fname
-            if not candidate.exists():
-                candidate = filing_dir / Path(fname).name
-
-            if candidate.suffix == ".json":
-                data = json.load(candidate.open("r", encoding="utf-8"))
-                # Insert as a JSON‐string
-                inputs[file_key_map[fname]] = json.dumps(data)
-            else:
-                inputs[file_key_map[fname]] = candidate.read_text(encoding="utf-8")
-
-        # 2) Build the prompt
-        prompt = spec["prompt_template"].format(**inputs)
-
-        # 3) Call the LLM
-        response = llm_executor.generate(
-            [HumanMessage(content=prompt)],
-            llm_executor.agent_state,
-            llm_executor.node_state
-        )
-        summaries[section_key] = response.content
-        sections_processed += 1
-
-    return summaries, sections_processed
-
-def validate_raw_data(tasks: List[Dict[str, str]]) -> Dict[str, Any]:
-    """
-    Checks each file path in `tasks` for existence and valid non-empty JSON.
-    Returns a dict with:
-      - total: int
-      - valid_count: int
-      - missing_files: List[str]
-      - corrupt_files: List[str]
-      - files_read: List[str]
-    """
-    files_read: List[str] = []
-    total = len(tasks)
-    valid_count = 0
-    missing_files: List[str] = []
-    corrupt_files: List[str] = []
-
-    for t in tasks:
-        path = t["file"]
-        files_read.append(path)
-        if not os.path.exists(path):
-            missing_files.append(path)
-            continue
-        try:
-            with open(path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            if data:
-                valid_count += 1
-            else:
-                corrupt_files.append(path)
-        except Exception:
-            corrupt_files.append(path)
-
+    spec = prompt_library[summary_name]
+    # Suggest output file name as <summary_name>.txt if not defined
+    output_file = spec.get("output_file", f"{summary_name}.txt")
+    input_files = spec["input_files"]
+    prompt_template = spec["prompt_template"]
     return {
-        "total": total,
-        "valid_count": valid_count,
-        "missing_files": missing_files,
-        "corrupt_files": corrupt_files,
-        "files_read": files_read
+        "output_file": output_file,
+        "input_files": input_files,
+        "prompt_template": prompt_template,
     }
 
 def validate_summaries(

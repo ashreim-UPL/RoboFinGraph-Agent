@@ -8,20 +8,15 @@ import sys
 from utils.logger import get_logger, log_event
 from langchain.schema import HumanMessage
 import uuid
+from agents.agent_utils import normalize_date
 
 from utils.config_utils import LangGraphLLMExecutor
 from agents.state_types import AgentState, NodeState, TOOL_MAP, NodeStatus
-from tools.report_utils import (
-    get_sec_10k_section_1, get_sec_10k_section_1a, get_sec_10k_section_7,
-    get_company_profile, get_key_data, get_competitor_analysis,
-    get_financial_statement, get_financial_metrics
-)
 from tools.charting import get_share_performance, get_pe_eps_performance
 from tools.company_search import process_company_data
-from tools.graph_tools import summarize_sections, generate_concept_insights, validate_summaries, validate_insights, evaluate_pipeline, collect_us_financial_data
+from tools.graph_tools import get_summary_task_details, generate_concept_insights, validate_summaries, validate_insights, evaluate_pipeline, collect_us_financial_data, validate_raw_data
 from pathlib import Path
 from prompts.summarization_intsruction import summarization_prompt_library
-from agents.state_types import FILE_TO_TEMPLATE_KEY
 from prompts.report_summaries import report_section_specs
 from tools.report_writer import ReportLabUtils
 
@@ -128,9 +123,10 @@ def resolve_company_node(agent_state: AgentState) -> AgentState:
 
         agent_state.company_details = data
         agent_state.region = data.get("region", agent_state.region) if data else agent_state.region
-        agent_state.filing_date = (
+        raw_filing_date = (
             data.get(f"filing_date_{agent_state.year}") or data.get("filing_date") if data else None
         )
+        agent_state.filing_date = normalize_date(raw_filing_date)        
         agent_state.validation_result_key = result.get("validation_status", "valid") if result else "Node_Error"
         agent_state.accuracy_score = result.get("accuracy_score", 0.0) if result else 0.0
         agent_state.sec_report_address= data.get("sec_report_address") if data else None
@@ -232,7 +228,7 @@ def data_collection_us_node(state: AgentState) -> Dict[str, Any]:
         for err in collection_results["errors"]:
             messages.append(HumanMessage(content=f"Error during data collection: {err}"))
             
-        status = NodeStatus.COMPLETED.value if not collection_results["errors"] else NodeStatus.PARTIAL_FAILURE.value # Or FAILED
+        status = NodeStatus.COMPLETED.value if not collection_results["errors"] else NodeStatus.PARTIAL_FAILURE.value
 
         # Return the updated state as a dictionary
         return {
@@ -268,15 +264,16 @@ def validate_collected_data_node(agent_state: AgentState) -> AgentState:
     and set branch to 'end'.
     """
     # 1. Build the list of expected files
-    tasks = agent_state.get_data_collection_tasks(agent_state)
+    tasks = agent_state.get_data_collection_tasks()
 
     # 2. Delegate existence + JSON validity to helper
-    from tools.graph_tools import validate_raw_data
     result = validate_raw_data(tasks)
+    
+    # ----------------------------------
 
     # 3. Capture which files we actually read
     #for path in result["files_read"]:
-        #node_state.files_read.append(path)
+    #    node_state.files_read.append(path)
 
     # 4. Compute pass/fail
     total      = result["total"]
@@ -308,25 +305,53 @@ def synchronize_data_node(agent_state: AgentState) -> AgentState:
     return agent_state
 
 def summarization_node(agent_state: AgentState) -> AgentState:
-    executor = LangGraphLLMExecutor("summarizer")
+    required_summaries = [
+        "analyze_income_stmt",
+        "analyze_balance_sheet",
+        "analyze_cash_flow",
+        "analyze_segment_stmt",
+        "get_risk_assessment",
+        "get_competitors_analysis",
+        "analyze_company_description",
+        "analyze_business_highlights"
+    ]
 
-    # 1) Pull prompts from our prompt library
-    prompts = summarization_prompt_library
+    # Build {filename: full_path} mapping from tasks
+    filename_to_path = {
+        os.path.basename(task['file']): task['file']
+        for task in agent_state.get_data_collection_tasks()
+    }
+    memory_summaries = {}
 
-    # 2) Summarize each section
-    summaries, count = summarize_sections(
-        raw_data_dir=Path(agent_state.raw_data_dir),         
-        filing_dir=Path(agent_state.filing_dir),             
-        prompts=prompts,                                    
-        file_key_map=FILE_TO_TEMPLATE_KEY,                   
-        llm_executor=executor
-    )
+    for summary_name in required_summaries:
+        prompt_spec = summarization_prompt_library[summary_name]
+        # Prepare values to inject into the template
+        injection_dict = {}
+        for fname, var_name in prompt_spec["input_file_map"].items():
+            fpath = filename_to_path.get(os.path.basename(fname))
+            if fpath is None:
+                raise FileNotFoundError(f"File {fname} not found in expected task output!")
+            if fname.endswith(".json"):
+                with open(fpath, "r", encoding="utf-8") as f:
+                    value = json.dumps(json.load(f))
+            else:
+                with open(fpath, "r", encoding="utf-8") as f:
+                    value = f.read()
+            injection_dict[var_name] = value
 
-    # 3) Store results and an easy KPI
-    agent_state.memory["summaries"] = summaries
-    #node_state.custom_metrics["sections_processed"] = count
+        # Build the full prompt
+        prompt = prompt_spec["prompt_template"].format(**injection_dict)
+        
+        # Call your LLM executor here (pseudo-code, adapt to your actual call):
+        # result = llm_executor.generate([HumanMessage(content=prompt)])["content"]
+        # For demo, just use the prompt itself as a stub:
+        result = prompt[:200] + "..."  # Demo: only first 200 chars
 
+        memory_summaries[summary_name] = result
+
+    agent_state.memory["summaries"] = memory_summaries
     return agent_state
+
 
 def validate_summarized_data_node(agent_state: AgentState) -> AgentState:
     """

@@ -25,30 +25,33 @@ os.makedirs(BASE_SAVE_DIR, exist_ok=True)
 # ----------------------------------------------------------------------------
 # API Configuration (dynamic extensions supported)
 # ----------------------------------------------------------------------------
-API_CONFIG = {
-    "FMP": {
-        "base_url": "https://financialmodelingprep.com/stable",
-        "method": "GET",
-        "auth_param": "apikey",
-        "api_key": os.getenv("FMP_API_KEY")
-    },
-    "IndianMarket": {
-        "base_url": "https://stock.indianapi.in",
-        "method": "GET",
-        "auth_header": "x-api-key",
-        "api_key": os.getenv("INDIAN_API_KEY")
-    },
-    "LocalRAG": {
-        "base_url": "http://127.0.0.1:8000",
-        "method": "POST",
-        "api_key": "local"
-    },
-    "SEC": {
-        "method": "CUSTOM",
-        "api_key": os.getenv("SEC_API_KEY")
+def get_api_config():
+    return {
+        "FMP": {
+            "base_url": "https://financialmodelingprep.com/stable",
+            "method": "GET",
+            "auth_param": "apikey",
+            "api_key": os.getenv("FMP_API_KEY")
+        },
+        "IndianMarket": {
+            "base_url": "https://stock.indianapi.in",
+            "method": "GET",
+            "auth_header": "x-api-key",
+            "api_key": os.getenv("INDIAN_API_KEY")
+        },
+        "LocalRAG": {
+            "base_url": "http://127.0.0.1:8000",
+            "method": "POST",
+            "api_key": "local"
+        },
+        "SEC": {
+            "method": "CUSTOM",
+            "api_key": os.getenv("SEC_API_KEY")
+        }
     }
-}
 
+# Use everywhere:
+API_CONFIG = get_api_config()
 # ----------------------------------------------------------------------------
 # Init SEC API Clients
 # ----------------------------------------------------------------------------
@@ -82,12 +85,11 @@ def make_api_request(
     endpoint: Annotated[str, "API path like /query or /symbol/AAPL"],
     params: Annotated[Optional[Dict], "Payload or query parameters"] = None
 ) -> Annotated[dict, "JSON response or error"]:
-    config = API_CONFIG.get(api_name)
-    print("API Key", os.getenv("FMP_API_KEY"))
-    print("config: ", config)
-    input("api ok")
+    config = get_api_config()[api_name]
+
     if not config or not config.get("api_key"):
         return {"error": f"API configuration or key is missing for '{api_name}'."}
+
     full_url = f"{config['base_url']}{endpoint}"
     method = config.get("method", "GET").upper()
     headers = {}
@@ -163,10 +165,10 @@ def get_10k_metadata(
         "size": 1,
         "sort": [{"filedAt": {"order": "desc"}}],
     }
-    resp = _query_api.get_filings(query)
+    resp = query_api.get_filings(query)
     filings = resp.get("filings", [])
     return filings[0] if filings else None
-
+#---------------     ---------------------------------------------------
 def get_10k_section(
     ticker_symbol: str,
     fyear: str,
@@ -183,36 +185,35 @@ def get_10k_section(
     Returns {"text": <section_body>}.
     """
     _init_sec_api() 
-    # normalize section code
     sec_str = str(section)
     valid = [str(i) for i in range(1, 16)] + ["1A", "1B", "7A", "9A", "9B"]
     if sec_str not in valid:
         raise ValueError(f"Invalid section '{sec_str}'. Must be one of {valid}")
 
-    # build cache path
     cache_dir = os.path.join("SEC_SECTION_CACHE")
     cache_file = os.path.join(cache_dir, f"{ticker_symbol}_{fyear}_section_{sec_str}.txt")
 
-    # return cached if available
+    # Try cache, else fetch and optionally cache
     if use_cache and os.path.exists(cache_file):
         with open(cache_file, "r", encoding="utf-8") as f:
-            return {"text": f.read()}
+            section_text = f.read()
+    else:
+        report_address = sec_report_address.lstrip("Link: ").split()[0]
+        section_text = extractor_api.get_section(report_address, section, "text")
+        # Save to cache for future runs
+        if use_cache:
+            os.makedirs(cache_dir, exist_ok=True)
+            with open(cache_file, "w", encoding="utf-8") as f:
+                f.write(section_text)
 
-    report_address = sec_report_address.lstrip("Link: ").split()[0]
-    section_text = extractor_api.get_section(report_address, section, "text")
-    # 3) save to cache
-    if use_cache:
-        os.makedirs(cache_dir, exist_ok=True)
-        with open(cache_file, "w", encoding="utf-8") as f:
-            f.write(section_text)
-
-    # 4) optionally save to user path
+    # Always save to save_path (if specified)
     if save_path:
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
         with open(save_path, "w", encoding="utf-8") as f:
             f.write(section_text)
 
     return {"text": section_text}
+#-------                  ------------------------------------
 
 def save_to_file(data: str, file_path: str) -> str:
     """Saves string data to a file, creating directories if needed."""

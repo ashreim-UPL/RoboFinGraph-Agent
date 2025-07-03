@@ -41,8 +41,6 @@ def get_key_data(
 
     # Get Historical Data
     hist_data_json = make_api_request("FMP", "/historical-price-eod/full", {"symbol": ticker, "from": start_date, "to": end_date})
-    print("get key data ", hist_data_json)
-    input("ok")
     hist = pd.DataFrame() # Default empty DataFrame
     if isinstance(hist_data_json, dict) and 'historical' in hist_data_json:
         data = hist_data_json['historical']

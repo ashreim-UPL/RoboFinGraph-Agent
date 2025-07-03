@@ -7,20 +7,6 @@ from pathlib import Path
 from pydantic import BaseModel, Field
 import tools.report_utils as report_utils
 
-# --- Helper Constants & Functions ---
-FILE_TO_TEMPLATE_KEY: Dict[str, str] = {
-    "income_statement.json":       "table_str",
-    "balance_sheet.json":          "table_str",
-    "cash_flow.json":              "table_str",
-    "competitors.json":            "table_str",
-    "company_profile.json":        "business_summary",
-    "key_data.json":               "company_name",
-    "sec_10k_section_1.txt":       "business_summary",
-    "sec_10k_section_1a.txt":      "risk_factors",
-    "sec_10k_section_7.txt":       "section_text",
-    "financial_metrics.json":      "financial_metrics_json_str",
-}
-
 TOOL_MAP: Dict[str, Any] = {
     "get_sec_10k_section_1":    report_utils.get_sec_10k_section_1,
     "get_sec_10k_section_1a":   report_utils.get_sec_10k_section_1a,
@@ -115,7 +101,7 @@ class AgentState(BaseModel):
                 "file": os.path.join(self.filing_dir, filename)
             })
         # JSON data in raw
-        for task_name in ["get_key_data", "get_company_profile", "get_competitors",
+        for task_name in ["get_company_profile", "get_competitors",
                            "get_income_statement", "get_balance_sheet", "get_cash_flow"]:
             json_file = task_name.replace("get_", "") + ".json"
             tasks.append({
@@ -123,7 +109,7 @@ class AgentState(BaseModel):
                 "file": os.path.join(self.raw_data_dir, json_file)
             })
         # charts and metrics in summaries
-        for task_name, ext in [("get_pe_eps_chart", "png"), ("get_share_performance_chart", "png"), ("financial_metrics", "json")]:
+        for task_name, ext in [("get_pe_eps_chart", "png"), ("get_share_performance_chart", "png"), ("financial_metrics", "json"), ("get_key_data", "json")]:
             filename = task_name + (".png" if ext=="png" else ".json")
             tasks.append({
                 "task": task_name,
