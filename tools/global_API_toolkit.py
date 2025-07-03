@@ -83,9 +83,11 @@ def make_api_request(
     params: Annotated[Optional[Dict], "Payload or query parameters"] = None
 ) -> Annotated[dict, "JSON response or error"]:
     config = API_CONFIG.get(api_name)
+    print("API Key", os.getenv("FMP_API_KEY"))
+    print("config: ", config)
+    input("api ok")
     if not config or not config.get("api_key"):
         return {"error": f"API configuration or key is missing for '{api_name}'."}
-
     full_url = f"{config['base_url']}{endpoint}"
     method = config.get("method", "GET").upper()
     headers = {}
@@ -122,6 +124,7 @@ def make_api_request(
             response = requests.request(method, full_url, json=payload if method == "POST" else None,
                                         params=payload if method == "GET" else None, headers=headers, timeout=20)
             response.raise_for_status()
+            print("reached api request: ", api_name, " response: ", response.json())
             return response.json()
         except requests.exceptions.RequestException as e:
             return {"error": str(e), "payload": payload}
@@ -132,16 +135,14 @@ def make_api_request(
 # SEC Toolkit Wrapper
 # ----------------------------------------------------------------------------
 # globals for the SEC client
-_query_api: QueryApi = None
-_extractor_api: ExtractorApi = None
 
 def _init_sec_api() -> None:
-    global _query_api, _extractor_api
-    if _query_api is None:
+    global query_api, extractor_api
+    if query_api is None:
         from sec_api import QueryApi, ExtractorApi
-        api_key = API_CONFIG["SEC"]["api_key"]
-        _query_api     = QueryApi(api_key=api_key)
-        _extractor_api = ExtractorApi(api_key=api_key)
+        api_key = os.getenv("SEC_API_KEY")
+        query_api     = QueryApi(api_key=api_key)
+        extractor_api = ExtractorApi(api_key=api_key)
 
 def get_10k_metadata(
     ticker_symbol: str,
@@ -169,6 +170,7 @@ def get_10k_metadata(
 def get_10k_section(
     ticker_symbol: str,
     fyear: str,
+    sec_report_address: str,
     section: Union[int, str],
     save_path: Optional[str] = None,
     use_cache: bool = True
@@ -180,16 +182,15 @@ def get_10k_section(
     and optionally writes to save_path.
     Returns {"text": <section_body>}.
     """
-    _init_sec_api()
-
+    _init_sec_api() 
     # normalize section code
     sec_str = str(section)
-    valid = [str(i) for i in range(1,16)] + ["1A","1B","7A","9A","9B"]
+    valid = [str(i) for i in range(1, 16)] + ["1A", "1B", "7A", "9A", "9B"]
     if sec_str not in valid:
         raise ValueError(f"Invalid section '{sec_str}'. Must be one of {valid}")
 
     # build cache path
-    cache_dir  = os.path.join("SEC_SECTION_CACHE")
+    cache_dir = os.path.join("SEC_SECTION_CACHE")
     cache_file = os.path.join(cache_dir, f"{ticker_symbol}_{fyear}_section_{sec_str}.txt")
 
     # return cached if available
@@ -197,34 +198,15 @@ def get_10k_section(
         with open(cache_file, "r", encoding="utf-8") as f:
             return {"text": f.read()}
 
-    # 1) fetch metadata for latest 10-K in that year
-    query = {
-        "query": f'ticker:"{ticker_symbol}" AND formType:"10-K" AND filedAt:[{fyear}-01-01 TO {fyear}-12-31]',
-        "from": 0, "size": 1, "sort": [{"filedAt": {"order": "desc"}}]
-    }
-    meta_resp = _query_api.get_filings(query)
-    filings   = meta_resp.get("filings", [])
-    if not filings:
-        raise RuntimeError(f"No 10-K filings found for {ticker_symbol} in {fyear}")
-    meta = filings[0]
-
-    # 2) pick the best URL
-    report_url = meta.get("linkToTxt") or meta.get("linkToHtml")
-    if not report_url:
-        raise RuntimeError(f"No .txt/.htm URL in SEC metadata for {ticker_symbol}/{fyear}")
-
-    # 3) call extractor
-    section_text = _extractor_api.get_section(report_url, sec_str, "text")
-    if not section_text:
-        raise RuntimeError(f"Extractor returned empty for section {sec_str}")
-
-    # 4) save to cache
+    report_address = sec_report_address.lstrip("Link: ").split()[0]
+    section_text = extractor_api.get_section(report_address, section, "text")
+    # 3) save to cache
     if use_cache:
         os.makedirs(cache_dir, exist_ok=True)
         with open(cache_file, "w", encoding="utf-8") as f:
             f.write(section_text)
 
-    # 5) optionally save to user path
+    # 4) optionally save to user path
     if save_path:
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
         with open(save_path, "w", encoding="utf-8") as f:

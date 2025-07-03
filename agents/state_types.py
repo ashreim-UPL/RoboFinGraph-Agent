@@ -49,7 +49,8 @@ class AgentState(BaseModel):
     company_details: Optional[Dict[str, Any]] = None
     region: Optional[str] = None
     filing_date: Optional[str] = None
-
+    sec_report_address: Optional[str] = None
+    
     raw_data_files:       List[str] = Field(default_factory=list)
     summary_files:        List[str] = Field(default_factory=list)
     preliminary_files:    List[str] = Field(default_factory=list)

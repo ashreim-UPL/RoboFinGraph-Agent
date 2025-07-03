@@ -53,6 +53,7 @@ def process_company_data(company_name: str, year: str) -> Dict[str, Any]:
         - stock_market_names
         - fmp_ticker
         - sec_ticker
+        - sec_report_address
         - yfinance_ticker
         - region
         - filing_date for {year}
@@ -99,7 +100,6 @@ def process_company_data(company_name: str, year: str) -> Dict[str, Any]:
         results["accuracy_score"] = 0
         company_resolver_logger.critical(f"Critical error during LLM call for {company_name}: {e}", exc_info=True)
         return results
-        
     return results
 
 # --- Example Usage ---
