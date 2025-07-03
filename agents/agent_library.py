@@ -27,22 +27,23 @@ from tools.report_writer import ReportLabUtils
 
 
 # === Pipeline Metrics Recorder ===
-def _record_metrics(agent_state: AgentState, node_state: NodeState, node_key: str) -> None:
+def _record_metrics(agent_state: AgentState, node_key: str) -> None:
     """
-    Append NodeState metrics to agent_state.memory['pipeline_data'] for KPI calculation.
+    Append metrics from agent_state directly to memory['pipeline_data'].
     """
     metrics = {
         "node": node_key,
-        "status": node_state.status.value,
-        "duration": node_state.duration,
-        "cost_llm": node_state.cost_llm,
-        "tokens_sent": node_state.tokens.sent,
-        "tokens_generated": node_state.tokens.generated,
-        "tools_used": list(node_state.tools_used),
-        "errors": node_state.errors.copy(),
-        "files_created": node_state.files_created.copy(),
-        "files_created_count": len(node_state.files_created)
+        "status": getattr(agent_state, "status", "unknown"),
+        "duration": getattr(agent_state, "duration", None),
+        "cost_llm": getattr(agent_state, "cost_llm", 0.0),
+        "tokens_sent": getattr(agent_state, "tokens", {}).sent if hasattr(agent_state, "tokens") else 0,
+        "tokens_generated": getattr(agent_state, "tokens", {}).generated if hasattr(agent_state, "tokens") else 0,
+        "tools_used": list(getattr(agent_state, "tools_used", set())),
+        "errors": list(getattr(agent_state, "errors", [])),
+        "files_created": list(getattr(agent_state, "files_created", [])),
+        "files_created_count": len(getattr(agent_state, "files_created", []))
     }
+    # Ensure the pipeline_data list exists
     pipeline = agent_state.memory.setdefault("pipeline_data", [])
     pipeline.append(metrics)
 
@@ -53,48 +54,67 @@ def record_node(node_key: str):
     """
     Decorator to wrap graph node functions: sets status, logs start/end events,
     captures timing and errors, and records metrics.
-    The wrapper now creates NodeState internally to be compatible with LangGraph.
     """
     def decorator(fn):
         @wraps(fn)
-        def wrapper(agent_state, *args, **kwargs):
-            print("test")
-            input()
+        def wrapper(agent_state: AgentState, *args, **kwargs):
             start_time = datetime.now()
+
+            # Emit start event for front-end
+            start_event = {
+                "event_type": "node_start",
+                "data": {"node": node_key, "timestamp": start_time.isoformat()}
+            }
+            sys.stdout.write(json.dumps(start_event) + "\n")
+            sys.stdout.flush()
+
+            # Log start internally
+            log_event("node_start", {"node": node_key, "timestamp": start_time.isoformat()})
+
             try:
+                # Execute node function
                 result = fn(agent_state, *args, **kwargs)
-                if agent_state:
-                    agent_state.status = NodeStatus.SUCCESS
-                return result
             except Exception as e:
-                if agent_state:
-                    agent_state.status = NodeStatus.ERROR
-                    agent_state.errors.append(str(e))
+                # Optional: capture to error_log if needed
+                agent_state.error_log.append(str(e))
                 raise
-            finally:
-                end_time = datetime.now()
-                if agent_state:
-                    agent_state.end_time = end_time
-                    agent_state.duration = (end_time - start_time).total_seconds()
+
+            end_time = datetime.now()
+            agent_state.end_time = end_time
+            agent_state.duration = (end_time - start_time).total_seconds()
+
+            # Record metrics in memory
+            _record_metrics(agent_state, node_key)
+            # Emit end event
+            metrics = agent_state.memory.get("pipeline_data", [])[-1]
+            pipeline = agent_state.memory.setdefault("pipeline_data", [])
+            pipeline.append(metrics)
+
+            # Emit end event
+            end_event = {"event_type": "node_end", "data": metrics}
+            sys.stdout.write(json.dumps(end_event) + "\n")
+            sys.stdout.flush()
+
+            # Log end internally
+            log_event("node_end", metrics)
+            return result 
         return wrapper
     return decorator
 
 # === Graph Node Implementations ===
 
-
+@record_node("resolve_company")
 def resolve_company_node(agent_state: AgentState) -> AgentState: 
     """
     Resolves company details using the specialized 'process_company_data' tool (LLM-only).
     This node updates agent_state with comprehensive company_details directly from the LLM.
     """
-    print("testing")
     # 1. Get the company query from AgentState.
     company_query = agent_state.company 
     year  = agent_state.year
 
     if not company_query:
         error_msg = "Error: No company query provided in agent_state.company."
-        print(error_msg)
         agent_state.error_log.append(f"resolve_company_node: {error_msg}") 
         agent_state.company_details = {"error": error_msg} #
         agent_state.validation_result_key = "No_Company_Query" # New specific status
@@ -103,22 +123,24 @@ def resolve_company_node(agent_state: AgentState) -> AgentState:
     try:
         # 2. Call the  process_company_data function.
         result = process_company_data(company_query, year) 
-
         # 3. Update the agent_state with the LLM's results.
         data = result.get("llm_result", {}) if result else {}
 
         agent_state.company_details = data
         agent_state.region = data.get("region", agent_state.region) if data else agent_state.region
-        agent_state.filing_date = data.get("filing_date") if data else None
+        agent_state.filing_date = (
+            data.get(f"filing_date_{agent_state.year}") or data.get("filing_date") if data else None
+        )
         agent_state.validation_result_key = result.get("validation_status", "valid") if result else "Node_Error"
         agent_state.accuracy_score = result.get("accuracy_score", 0.0) if result else 0.0
+        agent_state.sec_report_address= data.get("sec_report_address") if data else None
+
         if result and result.get("message"):
             agent_state.error_log.append(result["message"])
 
         official = data.get("official_name") if data else None
         if official and official.lower() != company_query.lower():
             agent_state.company = official
-
     except Exception as e:
         error_msg = f"resolve_company_node error: {e}"
         agent_state.error_log.append(error_msg) 
@@ -161,6 +183,7 @@ def llm_decision_node(agent_state: AgentState) -> AgentState:
 
     return agent_state
 
+# not need probbaly.....
 def data_collection_switch_node(agent_state: AgentState) -> AgentState:
     """Route pipeline based on LLM decision: 'us', 'india', or 'end'."""
     decision = (agent_state.llm_decision or "").strip().lower()
@@ -194,17 +217,10 @@ def data_collection_us_node(state: AgentState) -> Dict[str, Any]:
         filing_date_val = getattr(state, "filing_date", None)
         if not filing_date_val:
             filing_date_val = f"{state.year}-12-31" # Default to end of year if not set
-
+    
         # Call the comprehensive data collection tool
-        collection_results = collect_us_financial_data(
-            company_name=state.company,
-            company_ticker=primary_ticker,
-            fyear=state.year,
-            filing_date=filing_date_val,
-            work_dir=state.work_dir,
-            company_details=state.company_details # Pass the full details
-        )
-
+        collection_results = collect_us_financial_data(state)
+  
         # Update the AgentState based on the results from the tool
         # Ensure raw_data_files and error_log are lists in AgentState
         updated_raw_data_files = list(state.raw_data_files) + collection_results["collected_files"]
@@ -252,7 +268,7 @@ def validate_collected_data_node(agent_state: AgentState) -> AgentState:
     and set branch to 'end'.
     """
     # 1. Build the list of expected files
-    tasks = agent_state.get_data_collection_tasks()
+    tasks = agent_state.get_data_collection_tasks(agent_state)
 
     # 2. Delegate existence + JSON validity to helper
     from tools.graph_tools import validate_raw_data

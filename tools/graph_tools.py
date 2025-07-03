@@ -23,6 +23,33 @@ from agents.state_types import TOOL_MAP
 
 logger = get_logger()
 
+def get_data_collection_tasks(state: AgentState) -> List[Dict[str, str]]:
+    raw_dir = state.raw_data_dir
+    filing_dir= state.filing_dir
+    summaries_dir = state.summaries_dir
+  
+    # Assign the list to a variable first
+    tasks_list = [
+        # Individual entries for each SEC section (as per our last refactoring)
+        {'task': 'get_sec_10k_section_1', 'file': os.path.join(filing_dir, 'sec_10k_section_1.txt')},
+        {'task': 'get_sec_10k_section_1a', 'file': os.path.join(filing_dir, 'sec_10k_section_1a.txt')},
+        {'task': 'get_sec_10k_section_7', 'file': os.path.join(filing_dir, 'sec_10k_section_7.txt')},
+        
+        # The rest of your tasks, which produce a single file
+        {'task': 'get_key_data', 'file': os.path.join(raw_dir, 'key_data.json')},
+        {'task': 'get_company_profile',  'file': os.path.join(raw_dir, 'company_profile.json')},
+        {'task': 'get_competitors', 'file': os.path.join(raw_dir, 'competitors.json')},
+        {'task': 'get_income_statement', 'file': os.path.join(raw_dir, 'income_statement.json')},
+        {'task': 'get_balance_sheet', 'file': os.path.join(raw_dir, 'balance_sheet.json')},
+        {'task': 'get_cash_flow',  'file': os.path.join(raw_dir, 'cash_flow.json')},
+        {'task': 'get_pe_eps_chart', 'file': os.path.join(summaries_dir, 'pe_eps_performance.png')},
+        {'task': 'get_share_performance_chart',  'file': os.path.join(summaries_dir, 'share_performance.png')},
+        {'task': 'financial_metrics', 'file': os.path.join(summaries_dir, 'financial_metrics.json')}
+    ]
+
+    print(f"--- DEBUG: get_data_collection_tasks generated tasks: {tasks_list} ---\n")
+    return tasks_list
+
 # --- Node Functions ---
 def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
     """
@@ -58,73 +85,53 @@ def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
         get_logger().error("get_sec_metadata_node failed", exc_info=True)
         return {}
 
-def get_sec_10k_section_1(company_ticker: str, fyear: str, save_path: str):
-    """Mocks fetching SEC 10K Section 1 data."""
-    logging.info(f"Fetching SEC 10K Section 1 for {company_ticker} ({fyear}) to {save_path}")
-    with open(save_path, "w") as f:
-        f.write(f"Mock SEC 10K Section 1 data for {company_ticker} {fyear}")
-    return f"SEC 10K Section 1 for {company_ticker} {fyear} saved."
-
-def get_fmp_income_statement(ticker: str, fyear: str, save_path: str):
-    """Mocks fetching FMP Income Statement data."""
-    logging.info(f"Fetching FMP Income Statement for {ticker} ({fyear}) to {save_path}")
-    with open(save_path, "w") as f:
-        f.write(f"Mock FMP Income Statement data for {ticker} {fyear}")
-    return f"FMP Income Statement for {ticker} {fyear} saved."
-
-# Define your TOOL_MAP here, which maps tool names to their functions
-TOOL_MAP = {
-    "get_sec_10k_section_1": get_sec_10k_section_1,
-    "get_fmp_income_statement": get_fmp_income_statement,
-    # Add other individual US data collection tools here
-}
 
 logger = logging.getLogger(__name__)
 
-def collect_us_financial_data(
-    company_name: str,
-    company_ticker: str, # Use a generic ticker as some tools might use FMP, some SEC
-    fyear: str,
-    filing_date: str,
-    work_dir: str,
-    company_details: Dict[str, Any] # Pass company_details if tools might need it
-) -> Dict[str, List[str]]:
+def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
     """
     Comprehensive tool to collect all required US financial data.
     Iterates through a predefined list of US-specific data collection tasks,
     prepares arguments, and calls the respective tools.
     Returns a dictionary of collected files and any errors encountered.
     """
+
+    work_dir = state.work_dir
+    company_name = state.company_details["company_name"]  
+    company_ticker = state.company_details["fmp_ticker"]
+    filing_date = state.filing_date
+    fyear = state.year
+    company_details = state.company_details
+    
+   
     collected_files = []
     errors = []
 
     base_raw_data_dir = os.path.join(work_dir, "raw_data")
     os.makedirs(base_raw_data_dir, exist_ok=True)
 
-    # Define the specific US data collection tasks and their expected output files
-    # This list can be dynamically generated based on report_type, etc., if needed,
-    # but for simplicity, we define it here within the tool.
-    us_data_collection_tasks = [
-        {"task_name": "get_sec_10k_section_1", "output_filename": f"{company_name}_{fyear}_sec_10k_section1.txt"},
-        {"task_name": "get_fmp_income_statement", "output_filename": f"{company_name}_{fyear}_fmp_income_statement.json"},
-        # Add more US-specific tasks here
-    ]
-
-    for task_def in us_data_collection_tasks:
-        tool_name = task_def["task_name"]
-        output_filename = task_def["output_filename"]
-        out_file_path = os.path.join(base_raw_data_dir, output_filename)
-
-        if tool_name not in TOOL_MAP:
+    for task_def in get_data_collection_tasks(state):
+        print(task_def)
+    
+        tool_name = task_def["task"]
+        output_filename = task_def["file"]
+        out_file_path = os.path.join(output_filename)
+        
+        
+        print("Tool map", TOOL_MAP)
+        if tool_name not in TOOL_MAP:          
             msg = f"Tool '{tool_name}' not found in TOOL_MAP. Skipping."
             logger.warning(msg)
             errors.append(msg)
             continue
 
         tool_fn = TOOL_MAP[tool_name]
+        print("\n",tool_name, tool_fn,"\n")
         try:
             os.makedirs(os.path.dirname(out_file_path), exist_ok=True)
             sig = inspect.signature(tool_fn)
+            print(sig)
+            input("check function signature")
             kwargs = {}
 
             # Prepare arguments based on the tool's signature
@@ -133,14 +140,15 @@ def collect_us_financial_data(
                     kwargs[p_name] = company_ticker
                 elif p_name == "ticker": # Some FMP tools might use 'ticker'
                     kwargs[p_name] = company_details.get("fmp_ticker", company_ticker)
+                elif p_name == "sec_report_address":
+                    kwargs[p_name] = state.sec_report_address
                 elif p_name == "fyear":
                     kwargs[p_name] = fyear
                 elif p_name == "filing_date":
                     kwargs[p_name] = filing_date
                 elif p_name == "save_path":
                     kwargs[p_name] = out_file_path
-                # Add other common parameters your tools might need
-                # e.g., if a tool needs 'region', 'api_key', etc.
+
                 elif p_name in ["work_dir", "company_details", "region"]: # Pass directly if needed
                     kwargs[p_name] = locals().get(p_name) # Access local variables
                 elif param.default is inspect.Parameter.empty and p_name not in kwargs:
