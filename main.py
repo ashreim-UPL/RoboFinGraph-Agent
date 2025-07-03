@@ -1,11 +1,11 @@
 # main.py
 import argparse
 import json
-import os
+import os, sys, io
 from typing import Dict, Any, List
 # This tool is not provided, assuming it loads a JSON file into a dict.
 from tools.file_utils import load_config_into_environ 
-
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 if not os.path.isdir(".cache"):
     os.makedirs(".cache")
 
