@@ -258,7 +258,7 @@ class ReportLabUtils:
         data = [
             ["FinRobot"],
             ["Team9 - UOA"],
-            ["https://github.com/ashreim-UPL/FinRobot-Final"],
+            ["GitHub:ashreim-UPL/FinRobot-Langgraph.git"],
             [f"Report date: {filing_date}"],
         ]
         col_widths = [full_length]
