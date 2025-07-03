@@ -236,3 +236,127 @@ def generate_share_performance_chart_indian_market(ticker: str, fyear: str, save
 
 def generate_pe_eps_chart_indian_market(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
     return get_pe_eps_performance_indian_market(ticker, f"{fyear}-12-31", save_path)
+
+def _get_financial_statement_for_table(
+    ticker: str,
+    statement_type: str,
+    start_year: int = None,
+    years: int = 1,
+) -> pd.DataFrame:
+    """
+    Retrieves financial statements (income, balance, cash-flow) for multiple years from IndianAPI.
+    Args:
+        ticker: Stock ticker symbol.
+        statement_type: One of "income_statement", "balance_sheet", "cash_flow_statement".
+        save_path: Path to save the JSON output. If None, no file saved.
+        start_year: Starting fiscal year (int).
+        years: Number of years to retrieve, counting backwards from start_year.
+    Returns:
+        Pandas DataFrame with 'key' as index and columns for each year.
+    """
+    print(f"Fetching {statement_type} for {ticker} from IndianAPI from year {start_year} for {years} years...")
+
+    # Map statement_type to IndianAPI code
+    type_map = {
+        "income_statement": "INC",
+        "balance_sheet": "BAL",
+        "cash_flow_statement": "CAS"
+    }
+    statement_code = type_map.get(statement_type)
+    if not statement_code:
+        raise ValueError(f"Invalid statement type: {statement_type}")
+
+    # Fetch data
+    response = make_api_request2("IndianMarket", "/stock", {"name": ticker})
+    financials = response.get("financials", [])
+
+    # Filter only annual data that contains the required statement
+    statement_data = {
+        int(doc['FiscalYear']): doc['stockFinancialMap'][statement_code]
+        for doc in financials
+        if doc['Type'] == 'Annual' and statement_code in doc.get("stockFinancialMap", {})
+    }
+
+    if start_year is None:
+        # If no start_year given, pick the most recent year available
+        start_year = max(statement_data.keys()) if statement_data else None
+
+    if start_year not in statement_data:
+        raise ValueError(f"Financial data for year {start_year} not available for {ticker}")
+
+    # Collect years to fetch (descending order)
+    years_to_fetch = [start_year - i for i in range(years)]
+
+    # Build dict of DataFrames by year
+    dfs = {}
+    for yr in years_to_fetch:
+        if yr in statement_data:
+            df_year = pd.DataFrame(statement_data[yr])[['key', 'value']].set_index('key')
+            dfs[yr] = df_year.rename(columns={'value': str(yr)})
+        else:
+            print(f"Warning: Data for year {yr} not found for {ticker}")
+
+    if not dfs:
+        raise ValueError(f"No financial data found for years requested for {ticker}")
+
+    # Merge all years on 'key' index
+    result_df = pd.concat(dfs.values(), axis=1)
+    for column in result_df.columns:
+        result_df[column] = pd.to_numeric(result_df[column], errors='coerce')
+
+    return result_df
+
+def calculate_financial_metrics_indian_market(ticker:str, start_year: int, years: int, save_path: str) -> pd.DataFrame:
+
+    df = _get_financial_statement_for_table(ticker=ticker, statement_type="income_statement", start_year=start_year, years=years)
+    # 🔧 Aplanar columnas si tienen MultiIndex o tuplas
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = df.columns.get_level_values(-1)
+    elif any(isinstance(col, tuple) for col in df.columns):
+        df.columns = [col[-1] if isinstance(col, tuple) else col for col in df.columns]
+
+    # 🔢 Asegurar que las columnas estén en string (por seguridad)
+    df.columns = df.columns.astype(str)
+
+    years = [col for col in df.columns if col.isdigit()]
+    
+    metrics = {}
+
+    revenue = df.loc['Revenue']
+    net_income = df.loc['NetIncome']
+    interest_expense = df.loc['InterestExp(Inc)Net-OperatingTotal'] if 'InterestExp(Inc)Net-OperatingTotal' in df.index else pd.Series([0]*len(df.columns), index=df.columns)
+    depreciation = df.loc['Depreciation/Amortization']
+    ebit = df.loc['OperatingIncome']
+    taxes = df.loc['ProvisionforIncomeTaxes']
+    shares = df.loc['DilutedWeightedAverageShares']
+    eps = df.loc['DilutedEPSExcludingExtraOrdItems']
+
+    metrics['Revenue'] = round(revenue, 2)
+    metrics['Net Income'] = round(net_income, 2)
+    metrics['EBIT'] = round(ebit, 2) 
+    metrics['EBIT Margin'] = round((ebit / revenue) * 100, 2)
+    metrics['Net Income Margin'] = round((net_income / revenue) * 100, 2)
+    metrics['Effective Tax Rate'] = round((taxes / (net_income + taxes)) * 100, 2)
+    metrics['Interest Coverage'] = round((ebit / interest_expense).replace([float('inf'), -float('inf')], pd.NA), 2)
+    metrics['EBITDA'] = round(ebit + depreciation, 2)
+    metrics['EPS'] = round(eps, 2)
+    metrics['Shares'] = round(shares, 2)
+
+    metrics_df = pd.DataFrame(metrics)
+    metrics_df = metrics_df.loc[years].T  # asegurar orden correcto y transpuesta
+
+    if save_path:
+        try:
+            # Save as JSON for consistency (easy reloading)
+            df_json = metrics_df.to_dict(orient="index")
+            with open(save_path, "w", encoding="utf-8") as f:
+                json.dump({
+                    "currency": 'crore',
+                    "company_name": ticker.upper(),
+                    "metrics": df_json
+                }, f, indent=2)
+            logging.info(f"Financial metrics saved to {save_path}")
+        except Exception as e:
+            logging.error(f"Failed to save financial metrics: {e}")
+
+    return metrics_df
