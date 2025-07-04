@@ -14,7 +14,7 @@ from agents.agent_utils import normalize_date
 from utils.config_utils import LangGraphLLMExecutor
 from agents.state_types import AgentState, NodeState, TOOL_MAP, NodeStatus
 from tools.company_search import process_company_data
-from tools.graph_tools import generate_concept_insights, validate_summaries, validate_insights, evaluate_pipeline, collect_us_financial_data, validate_raw_data
+from tools.graph_tools import generate_concept_insights, validate_summaries, validate_insights, evaluate_pipeline, collect_us_financial_data, validate_raw_data, collect_indian_financial_data
 from pathlib import Path
 from prompts.summarization_intsruction import summarization_prompt_library
 from prompts.report_summaries import report_section_specs
@@ -245,17 +245,58 @@ def data_collection_us_node(state: AgentState) -> Dict[str, Any]:
             "status": NodeStatus.ERROR.value
         }
 
-def data_collection_indian_node(agent_state: AgentState) -> AgentState:
+def data_collection_indian_node(state: AgentState) -> AgentState:
     """
     Invoke all data‐collection tools (India); currently identical to US.
     """
-    data = {}
-    for tool_name, fn in TOOL_MAP.items():
-        result = fn(agent_state.company)
-        data[tool_name] = result
-        #node_state.tools_used.add(tool_name)
-    agent_state.memory["raw_data"] = data
-    return agent_state
+    try:
+        # Prepare the high-level arguments needed by the comprehensive tool
+        # Ensure these match the parameters expected by collect_Indian_financial_data
+        
+        # Determine the primary ticker to pass to the collection tool
+        primary_ticker = state.company_details.get("sec_ticker") or \
+                         state.company_details.get("fmp_ticker") or \
+                         state.company_details.get("yfinance_ticker") or \
+                         state.company # Fallback to generic company name
+
+        if not primary_ticker:
+            raise ValueError("Could not determine a valid ticker for data collection.")
+            
+        # Get filing_date, with a robust fallback
+        filing_date_val = getattr(state, "filing_date", None)
+        if not filing_date_val:
+            filing_date_val = f"{state.year}-12-31" # Default to end of year if not set
+    
+        # Call the comprehensive data collection tool
+        collection_results = collect_indian_financial_data(state)
+  
+        # Update the AgentState based on the results from the tool
+        # Ensure raw_data_files and error_log are lists in AgentState
+        updated_raw_data_files = list(state.raw_data_files) + collection_results["collected_files"]
+        updated_error_log = list(state.error_log) + collection_results["errors"]
+
+        messages = list(state.messages) # Start with existing messages
+        for f in collection_results["collected_files"]:
+            messages.append(HumanMessage(content=f"Successfully collected: {os.path.basename(f)}"))
+        for err in collection_results["errors"]:
+            messages.append(HumanMessage(content=f"Error during data collection: {err}"))
+            
+        errors_list = collection_results.get("errors", []) # Safely get 'errors', default to empty list if not present
+        status = NodeStatus.COMPLETED.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
+
+        # Return the updated state as a dictionary
+        return {
+            "raw_data_files": updated_raw_data_files,
+            "error_log": updated_error_log,
+            "messages": messages,
+            "status": status
+        }
+
+    except Exception as e:
+        return {
+            "error_log": state.error_log + [f"Critical error in Data Collection Indian Node: {e}"],
+            "status": NodeStatus.ERROR.value
+        }
 
 
 def validate_collected_data_node(agent_state: AgentState) -> AgentState:
@@ -461,8 +502,6 @@ def validate_analyzed_data_node(agent_state: AgentState) -> AgentState:
     if overall < 1.0:
         agent_state.memory["branch"] = "end"
 
-    print(result)
-    input("inside validate_analyzed_data_node, enter to continue")
     # 6) Attach detailed metrics for observability
     #node_state.custom_metrics["insight_section_scores"] = result.get("section_scores", {})
     #node_state.custom_metrics["insight_availability"]   = result.get("availability_score", 0.0)

@@ -170,7 +170,7 @@ def run_orchestration(
         raise
 
     for event in app.stream(initial_state):
-        if event.type == "pipeline_complete":
+        if event["type"] == "pipeline_complete":
             final_state = event.payload  # or however you extract the state
             break
     return final_state
