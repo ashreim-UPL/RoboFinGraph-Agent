@@ -19,7 +19,7 @@ TOOL_MAP: Dict[str, Any] = {
     "get_cash_flow":            partial(report_utils.get_financial_statement, statement_type="cash_flow_statement"),
     "get_pe_eps_chart":         report_utils.generate_pe_eps_chart,
     "get_share_performance_chart": report_utils.generate_share_performance_chart,
-    "financial_metrics":        report_utils.get_financial_metrics,
+    "get_financial_metrics":        report_utils.get_financial_metrics,
 }
 
 # --- LangGraph Agent State Type ---- #
@@ -60,6 +60,10 @@ class AgentState(BaseModel):
     duration:          Optional[float]   = None  # seconds
     
     error_log:            List[str] = Field(default_factory=list)
+    
+    tokens_sent:      int   = 0
+    tokens_generated: int   = 0
+    cost_llm:         float = 0.0
 
     def __init__(self, **data: Any):
         super().__init__(**data)
@@ -109,8 +113,8 @@ class AgentState(BaseModel):
                 "file": os.path.join(self.raw_data_dir, json_file)
             })
         # charts and metrics in summaries
-        for task_name, ext in [("get_pe_eps_chart", "png"), ("get_share_performance_chart", "png"), ("financial_metrics", "json"), ("get_key_data", "json")]:
-            filename = task_name + (".png" if ext=="png" else ".json")
+        for task_name, ext in [("get_pe_eps_chart", "png"), ("get_share_performance_chart", "png"), ("get_financial_metrics", "json"), ("get_key_data", "json")]:
+            filename = task_name.replace("get_", "") + (".png" if ext=="png" else ".json")
             tasks.append({
                 "task": task_name,
                 "file": os.path.join(self.summaries_dir, filename)

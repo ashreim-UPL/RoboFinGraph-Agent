@@ -1,0 +1,260 @@
+ Item 1: Business 
+
+Overview 
+
+Motorola Solutions is a global leader in public safety and enterprise security. Our technologies in Land Mobile Radio Communications ("LMR" or "LMR Communications"), Video Security and Access Control ("Video") and Command Center, 
+
+bolstered by managed and support services, help make communities safer and businesses stay productive and secure. We serve more than 100,000 public safety and commercial customers in over 100 countries, providing &#8220;purpose-built&#8221; solutions designed for their unique needs, and we have a rich heritage of innovation focusing on advancing global safety for more than 90 years. 
+
+We are incorporated under the laws of the State of Delaware as the successor to an Illinois corporation, Motorola, Inc., organized in 1928. We changed our name from Motorola, Inc. to Motorola Solutions, Inc. on January 4, 2011. Our principal executive offices are located at 500 W. Monroe St., Chicago, Illinois 60661. 
+
+Business Organization 
+
+We manage our business organizationally through two segments: &#8220;Products and Systems Integration&#8221; and &#8220;Software and Services.&#8221; Within these segments, we have principal product lines that also follow our three major technologies: LMR Communications, Video and Command Center. In January 2023, we began using Command Center as a naming convention, eliminating the "Software" descriptor from Command Center Software in order to inform investors that the Company has software components more broadly across all technologies; this name change does not require any financial information to be reclassified from previous periods. 
+
+&#8226; LMR Communications: Infrastructure, devices (two-way radio and broadband, including both for public safety and professional and commercial radio ("PCR")) and software that enable communications, inclusive of installation and integration, backed by services, to assure availability, security and resiliency. 
+
+&#8226; Video: Cameras (fixed, body-worn, in-vehicle), access control, infrastructure, video management, software and artificial intelligence ("AI")-enabled analytics that enable visibility &#8220;on scene&#8221; and bring attention to what&#8217;s important. 
+
+&#8226; Command Center: Software suite that enables collaboration and shares information throughout the public safety workflow from "911 call to case closure." 
+
+The Company has invested across these three technologies, evolving the Company&#8217;s LMR focus to purposefully integrate software, video security and access control solutions for public safety and enterprise customers globally. 
+
+Our strategy is to generate value through the integration of critical communications, video security, access control and data and analytics. While each technology individually strives to make users safer and more productive, we believe we can enable better outcomes for our customers when we unite these technologies as one connected system. Our goal is to help remove silos between systems, unify data, streamline workflows and simplify operations for our customers. Across all three technologies, we offer cloud-based solutions, cybersecurity services, software and subscription services as well as managed and support services. 
+
+The schools we serve provide an example of our integrated technology ecosystem in action, which can be tailored to a school's unique needs and can span the end-to-end workflow for daily school operations as well as for emergencies. Video security and analytics such as license plate recognition can alert security and help identify potentially suspicious activities, influencing building access. AI-powered video analytics can search video footage and help locate individuals based on physical descriptions. Software can help share real-time alerts and live video feeds with school officials and public safety agencies for incident response. Voice and data communications can notify school employees of security breaches, while mass notification and incident management platforms can help to coordinate an emergency response across school safety personnel, local law enforcement and administrators. Together, these technologies can help schools to detect, analyze, communicate and manage safety and security threats. 
+
+The principal products within each segment, by technology, are described below: 
+
+Products and Systems Integration Segment 
+
+In 2022, the segment&#8217;s net sales were $5.7 billion, representing 63% of our consolidated net sales. 
+
+LMR Communications 
+
+Our LMR Communications technology includes infrastructure and devices for LMR, public safety Long Term Evolution (&#8220;LTE&#8221;) and enterprise-grade private LTE. Our technology enables voice and multimedia collaborations across two-way radio, WiFi and public and private broadband networks. We are a global leader in the two-way radio category, including Project 25 (P25), Terrestrial Trunked Radio (&#8220;TETRA&#8221;) and Digital Mobile Radio (DMR), as well as other PCR solutions. We also deliver LTE solutions for public safety, government and commercial users, including infrastructure and devices operating in both low-band and mid-band frequencies, including Citizens&#8217; Broadband Radio Service (CBRS) frequencies. Primary sources of revenue for this technology come from selling devices and building telecommunications networks, including infrastructure, installation and integration with our customers&#8217; technology environments. 
+
+We believe that public safety agencies and enterprises continue to trust LMR communications systems and devices because they are purpose-built and designed for reliability, availability, security and resiliency to withstand the most challenging conditions. 
+
+By adding broadband data capabilities to our two-way radios, we strive to provide our customers with greater functionality and multimedia access to the information and data they need in their workflows. Examples include application services such as GPS location to better protect lone workers, job dispatch to share detailed information and over-the-air programming to optimize device uptime. Our view is that complementary data applications such as these enable government, public safety and enterprise 
+
+customers to work more efficiently and safely, while maintaining their mission-critical voice communications to remain connected and working in collaboration with others. 
+
+The LMR technology within the Products and Systems Integration segment represented 82% of the net sales of the total segment in 2022. 
+
+Video 
+
+Our Video technology includes video management infrastructure, AI video powered security cameras including fixed and certain mobile video equipment as well as on-premise and cloud-based access control solutions. Since 2018, we have developed our video security and access control business through investments in research and development and acquisitions, directly contributing to our growth strategy to serve as a leader in end-to-end video security solutions and supporting the expansion of our portfolio. 
+
+We deploy video security and access control solutions to thousands of government and commercial customers around the world including school campuses, transportation systems, healthcare centers, public venues, utilities, prisons, factories, casinos, airports, financial institutions, government facilities, state and local law enforcement agencies and retailers. Organizations such as these utilize video security and access control to verify critical events or incidents in real-time and to provide data to investigate an event or incident after it happens. 
+
+Our view is that government and public safety customers in particular are increasingly turning to video security technologies, including fixed and mobile cameras, to increase visibility, accountability and safety for citizens, communities and first responders alike. Additionally, our view is that government, public safety agencies and businesses are increasingly turning to scalable, cloud-based multi-factor authentication access control to make their facilities more secure. 
+
+The Video technology within the Products and Systems Integration segment represented 18% of the net sales of the total segment in 2022. 
+
+Software and Services Segment 
+
+In 2022, the segment&#8217;s net sales were $3.4 billion, representing 37% of our consolidated net sales. 
+
+LMR Communications 
+
+LMR Communications services include support and managed services, which offer a broad continuum of support for our customers. Support services include repair and replacement, technical support and preventative maintenance, and more advanced offerings such as system monitoring, software updates and cybersecurity services. Managed services range from partial to full operational support of customer-owned or Motorola Solutions-owned networks. Our customers&#8217; systems often have multi-year or multi-decade lifespans that help drive demand for software upgrades, device and infrastructure refresh opportunities, as well as additional services to monitor, manage, maintain and secure these complex networks and solutions. We strive to deliver services to our customers that help improve performance across their systems, devices and applications for greater safety and productivity. 
+
+Given the mission-critical nature of our customers&#8217; operational environments, we aim to design the LMR networks they rely on for availability, security and resiliency. We have a comprehensive approach to system upgrades that addresses hardware, software and implementation services. As new system releases become available, we work with our customers to upgrade software, hardware, or both, with respect to site controllers, comparators, routers, LAN switches, servers, dispatch consoles, logging equipment, network management terminals, network security devices such as firewalls and intrusion detection sensors, and more, on-site or remotely. 
+
+The LMR technology within the Software and Services segment represented 67% of the net sales of the total segment in 2022. 
+
+Video 
+
+Video software includes video management software, decision management and digital evidence management software, certain mobile video equipment, and advanced vehicle location data analysis software, including license plate recognition. Our software is designed to complement video hardware systems, providing end-to-end video security to strive to keep people, property and assets safe. 
+
+Our video network management software is embedded with AI-enabled analytics to deliver operational insights to our customers by bringing attention to important events within their video footage. Given the growing volume of video content, we believe that analytics are critical to deliver meaningful, action-oriented insights. Our view is that these insights can help to proactively detect an important event in real time as well as reactively search video content to detect an important event that occurred in the past. For example, AI-enabled analytics can highlight unusual behavior such as a person at a facility out of hours, locate a missing child at a theme park with Appearance Search, flag a vehicle of interest at a school through license plate recognition, or send an alert through access control if doors are propped open at a hospital. 
+
+Our cloud technologies can offer organizations the ability to access, search and manage their video security and access control system from a centralized dashboard, accessible on devices such as smartphones and laptops. Additionally, our Avigilon fixed video systems can be cloud-administered by connecting to Avigilon Cloud Services (ACS), providing our customers with the ability to securely access video across their sites from a remote or central monitoring location. 
+
+Our Video services include our "video-as-a-service" subscription-based offerings for law enforcement, simplifying procurement by bundling hardware and software into a single subscription. For example, body-worn cameras and in-car video systems can be paired with either on-premises or cloud-based digital evidence management software and complementary command center products. Our cloud solutions are also sold as-a-service, available as single-year to multi-year hosted services, supporting our customers with upgrades and software enhancements to help ensure system performance and technological advancement. 
+
+The Video technology within the Software and Services segment represented 15% of the net sales of the total segment in 2022. 
+
+Command Center 
+
+Our Command Center portfolio consists of native cloud and on-premises software solutions that support the complex process of the public safety workflow from "911 call to case closure." From the moment a person contacts 911, an array of individuals engage to gather information to coordinate a response and manage the post-incident resolution. These individuals include dispatchers who route calls to police, fire and emergency medical services, first responders in the field, intelligence analysts who manage real-time operations, records specialists who preserve the integrity of information and evidence, crime analysts who identify patterns and accelerate investigations, and corrections officers who oversee jail and inmate management. 
+
+Additionally, to help ensure that individuals within the public safety workflow can work as efficiently, effectively and safely as possible, we believe it&#8217;s important that individuals within enterprise settings can communicate and collaborate directly with public safety agencies, particularly during emergencies. We remain focused on strengthening the intersection of public safety and enterprise security, offering solutions that are designed to help individuals, businesses and public safety agencies work together and share the information that better informs people to take appropriate action. 
+
+Our Command Center software supports these individuals through the three phases of incident response: incident awareness, incident management and post-incident resolution. Incident awareness software includes community engagement applications for tip submissions, crime mapping and evidence submission, panic buttons that can share real-time incident details and location, 911 call management software (including multimedia) and next-generation core services for 911 call routing. Incident management software includes voice and computer aided dispatch (CAD) for dispatch and coordinating first response, mass notification software, collaboration software to share operational updates, real-time intelligence software that shows a single, real-time view of video feeds and other alerts on a map, and field response and reporting to help frontline personnel collaborate, manage incident activity and file reports from the field. Post-incident resolution software includes centralized records and evidence management for record-keeping and judicial sharing, analytics including license plate recognition, and jail and inmate management to streamline the process and enable secure inter-agency information sharing. 
+
+As the public safety market continues to leverage both on-premises and cloud "software-as-a-service" (SaaS) technologies to efficiently run their operations, reduce response times and increase officer availability, we offer both native cloud-based applications and cloud features that enhance on-premises applications. We believe our products and services enhance first responders&#8217; situational awareness and safety by integrating critical communications, video security, data and analytics to provide an all-in-one operational view of the incident. 
+
+Another area of public safety evolution is increasing adoption of Next Generation 911 Core Services (&#8220;NGCS&#8221;), a group of products and services needed to create infrastructure connectivity in order to process a 911 call using Next Generation (&#8220;NG&#8221;) technology. The NG infrastructure is an Emergency Service IP Network ("ESInet"), which can carry voice, data and multimedia. ESInet enables 911 call takers at public safety answering points to respond to text, video and data. Our NGCS can be offered as a managed service and includes call routing, ESInet, location services, geographic information services, cybersecurity and our continuous network and security operations center dedicated to public safety. 
+
+Additionally, Command Center includes interoperability software that helps to ensure communication is not limited by coverage area, network technology or device type. Our solutions, including Kodiak, WAVE PTX and CriticalConnect, enable interoperability among devices across multiple networks. For example, a two-way radio network can connect with an LTE network making it possible for individuals to communicate securely and more easily across technologies. 
+
+The Command Center technology within the Software and Services segment represented 18% of the net sales of the total segment in 2022. 
+
+Our Customers and Contracts 
+
+We serve government agencies, state and local public safety agencies, as well as commercial and industrial customers. Our customer base is fragmented and widespread when considering the many levels of government public safety agency and private sector decision-makers that procure and use our products and services. Serving this global customer base spanning federal, state, county, province, territory, municipal, and departmental independent bodies, along with our commercial and industrial customers, requires a significant go-to-market investment. 
+
+Our sales model includes both direct sales by our in-house sales force, which tends to focus on our largest accounts, and sales through our channel partner program. Our trained channel partners include independent dealers, distributors and software vendors around the world. The dealers and distributors each have their own sales organizations that complement and extend the reach of our sales force. The independent software vendors offer customized applications that meet specific needs of the customers we serve. 
+
+Our largest customers are the U.S. government (through multiple contracts with its various branches and agencies, including the armed services) and the Home Office of the United Kingdom ("the UK"), each representing approximately 7% of our consolidated net sales in 2022. The loss of these customers could have a material adverse effect on our revenue and earnings over several quarters as many of our contracts with these governments are long-term in nature. All contracts with the U.S. government, and certain other government agencies within the U.S., are subject to cancellation at the customer&#8217;s convenience. For a discussion of risks related to government contracting requirements, please refer to &#8220;Part I. Item 1A. Risk Factors&#8221; in this Form 10-K. 
+
+Payment terms with our customers vary worldwide. Generally, contractual payment terms range from 30 to 45 days from the invoice date within North America and typically do not exceed 90 days from the invoice date in regions outside of North America. A portion of our contracts include implementation milestones, such as delivery, installation, and system acceptance, which generally take 30 to 180 days to complete. Invoicing the customer is dependent on completion of the milestones. We generally do not grant extended payment terms. As required for competitive reasons, we may provide long-term financing in connection with equipment purchases. Financing may cover all or a portion of the purchase price. Refer to &#8220;Part I. Item 1A. Risk Factors&#8221; in this Form 10-K for a discussion of risks related to requests by customers to provide vendor financing. 
+
+Generally, our contracts do not include a right of return, other than for standard warranty provisions. Due to customer purchasing patterns and the cyclical nature of the markets we serve, our sales tend to be somewhat higher in the second half of the year, with the fourth quarter being the highest. 
+
+Competition 
+
+We operate in highly competitive markets that are sensitive to technological advances. Competitive factors in these markets include product quality and reliability, technological capabilities, cost-effectiveness and industry experience. In operating in these competitive markets, we have broadened how we work with our customers, expanding from our global LMR installed base to integrate Video and Command Center. For example, our Command Center suite can integrate our customers&#8217; LMR systems to provide unified voice and data information throughout the critical 911 workflow. Adding Video enables multimedia collaboration and offers visibility for police officers within the command center and in the field. The interplay of technologies, guided by our deep knowledge of the public safety and enterprise workflows, delivers customers one connected system to unify their critical communications, video security, access control, data, and analytics streams. 
+
+We experience widespread competition from a growing number of existing and new competitors, including large system integrators and manufacturers of private and public wireless network equipment and devices. As demand for fully integrated technologies continues to grow, we may face additional competition from public telecommunications carriers and telecommunications equipment providers to small video solutions startups. 
+
+As we continue to evolve our services strategy, we may subcontract work to other companies to fulfill customer needs in geographical areas that we do not have coverage for or for additional services that we do not provide. For a description of risks related to our use of the services of subcontractors, refer to &#8220;Part I. Item 1A. Risk Factors&#8221; of this Form 10-K. 
+
+Our major competitors within our LMR, Video and Command Center technologies include the following companies: 
+
+##TABLE_START Technology Competitor LMR L3Harris Technologies, Hytera, Airbus, JVCKenwood Corporation, BK Technologies, iCOM, RCA, Sepura, Tait Video Axis Communications, Hikvision, Dahua Technology Company, Hanwha Group, Genetec, Axon Enterprise, Bosch Security Systems, Milestone Systems, LenelS2, Brivo, Allegion, Assa Abloy, dormakaba, SALTO, Spectrum Brands Command Center CentralSquare Technologies, Axon Enterprise, Tyler Technologies, Intrado, Intergraph Corporation, Zetron, ComTech Telecommunications, RapidDeploy, Mark43, Hexagon, Genetec, SOMA Global, AlertMedia, Everbridge, Omnilert, Onsolve ##TABLE_END
+
+Other Information 
+
+Backlog 
+
+Our backlog includes orders that have been received and are believed to be firm. As of December 31, 2022 and December 31, 2021, our backlog was as follows: 
+
+##TABLE_START &#160; December 31 (In millions) 2022 2021 Products and Systems Integration $ 4,900 $ 4,006 Software and Services 9,447 9,553 $ 14,347 $ 13,559 ##TABLE_END
+
+Approximately 60% of the Products and Systems Integration segment backlog and 25% of the Software and Services segment backlog is expected to be recognized as revenue during 2023. The firmness of such orders is subject to future events that may cause the amount recognized to change. 
+
+Recent Acquisitions 
+
+##TABLE_START Technology Segment Acquisition Description Purchase Price Date of Acquisition Command Center Software and Services 
+
+Rave Mobile Safety, Inc. ("Rave Mobile") Provider of mass notification and incident management services. $553 million and share-based compensation of $2 million December 14, 2022 LMR Communications Products and Systems Integration Futurecom Systems Group, ULC Provider of radio coverage extension solutions. $30 million October 25, 2022 LMR Communications Products and Systems Integration Barrett Communications Pty Ltd Provider of specialized radio communications. $18 million August 8, 2022 Video Security and Access Control Products and Systems Integration Videotec S.p.A. Provider of ruggedized video security solutions. $23 million and share-based compensation of $4 million May 12, 2022 Video Security and Access Control Software and Services Calipsa, Inc. Provider of cloud-native advanced video analytics. $39 million and share-based compensation of $4 million April 19, 2022 LMR Communications Software and Services TETRA Ireland Communications Limited Provider of Ireland's National Digital Radio Service. $120 million March 23, 2022 Video Security and Access Control Products and Systems Integration 
+
+Software and Services 
+
+Ava Security Limited Provider of cloud-native video security and analytics. $388 million and share-based awards and compensation of $7 million March 3, 2022 Command Center Software and Services 911 Datamaster, Inc. Provider of Next Generation 911 data solutions that help to ensure emergency calls are accurately located and routed based on the caller's location. $35 million and share-based compensation of $3 million December 16, 2021 Video Security and Access Control Products and Systems Integration 
+
+Software and Services 
+
+Envysion, Inc. Provider of enterprise video security and business analytics. $124 million and share-based compensation of $1 million October 29, 2021 Video Security and Access Control Products and Systems Integration 
+
+Software and Services 
+
+Openpath Security, Inc. Provider of cloud-based mobile access control. $298 million and share-based compensation of $29 million July 15, 2021 Command Center Software and Services Callyo Provider of cloud-based mobile applications for law enforcement in North America, including critical mobile technological capabilities that enable information to flow seamlessly from the field to the command center. $63 million, inclusive of share-based compensation of $3 million August 28, 2020 ##TABLE_END
+
+##TABLE_START Video Security and Access Control Products and Systems Integration 
+
+Software and Services 
+
+Pelco, Inc. Global provider of video security solutions, adding a broad range of products for a variety of commercial and industrial environments and use cases. $110 million July 31, 2020 Video Security and Access Control Products and Systems Integration 
+
+Software and Services 
+
+IndigoVision Group plc Provider of video security solutions to enhance geographical reach across a wider customer base. $37 million June 16, 2020 LMR Communications Software and Services Unnamed cybersecurity services business Provider of vulnerability assessments, cybersecurity consulting, and managed services, including security monitoring of network operations. $32 million April 30, 2020 LMR Communications Software and Services Unnamed cybersecurity services business Provider of vulnerability assessments, cybersecurity consulting, managed services, and remediation and response capabilities. $40 million, inclusive of share-based compensation of $6 million March 3, 2020 ##TABLE_END
+
+Research and Development 
+
+We prioritize investments in research and development ("R&#38;D") to expand and improve our products through both new product introductions and continuous enhancements to our core products. Our R&#38;D programs are focused on the development of: LMR Communications, Video and Command Center. 
+
+R&#38;D expenditures were $779 million in 2022, $734 million in 2021 and $686 million in 2020. As of December 31, 2022, we had approximately 8,000 employees engaged in R&#38;D activities. In addition, we engage in R&#38;D activities with joint development and manufacturing partners and outsource certain activities to engineering firms to further supplement our internal spend. 
+
+Intellectual Property Matters 
+
+Patent protection is an important aspect of our operations. We have a portfolio of U.S. and foreign utility and design patents relating to our products, systems and technologies, including developments in radio frequency technology and circuits, wireless network technologies, over-the-air protocols, mission-critical communications, software and services, video security and access control, and next-generation public safety. We also file new patent applications with the U.S. Patent and Trademark Office and foreign patent offices. 
+
+We license some of our patents to third-parties, but licensing is not a significant source of revenue for our business. We are also licensed to use certain patents owned by others. Royalty and licensing fees vary from year-to-year and are subject to the terms of the agreements and sales volumes of the products subject to the license. Motorola Solutions has a royalty-free license under all of the patents and patent applications assigned to Motorola Mobility at the time of the separation of the two businesses in 2011. 
+
+We actively participate in the development of standards for interoperable, mission-critical digital two-way radio systems. Our patents are used in standards in which our products and services are based. We offer standards-based licenses to those patents on fair, reasonable and non-discriminatory terms. 
+
+We believe that our patent portfolio will continue to provide us with a competitive advantage in our core product areas as well as provide leverage in the development of future technologies. While we are not dependent upon a single patent or even a few patents, we do have patents that protect features and functionality of our products and services. While these patents are important, our success also depends upon our extensive know-how, innovative culture, technological leadership and distribution channels. We do not rely solely on patents or other intellectual property rights to protect or establish our market position; however, we will enforce our intellectual property rights when it is necessary to protect our innovation, or in some cases where attempts to negotiate mutually-agreeable licenses are not successful. 
+
+We seek to obtain patents, copyright registrations, and trademark registrations to protect our proprietary positions whenever possible and wherever practical. As of December 31, 2022, we owned approximately 6,530 granted patents in the U.S. and foreign countries and had approximately 870 U.S. and foreign patent applications pending. Foreign patents and patent applications are mostly counterparts of our U.S. patents. During 2022, we were granted approximately 376 patents in the U.S. and in foreign countries. 
+
+We no longer own certain logos and other trademarks, trade names and service marks, including MOTOROLA, MOTO, MOTOROLA SOLUTIONS and the Stylized M logo and all derivatives thereof (&#8220;Motorola Marks&#8221;) and, since 2010, we have licensed the Motorola Marks from Motorola Trademark Holdings, LLC. which is currently owned by Motorola Mobility. For a description of the risks we face related to intellectual property, refer to &#8220;Part I. Item 1A. Risk Factors&#8221; in this Form 10-K. 
+
+Inventory and Raw Materials 
+
+Our practice is to carry inventory levels to meet customers' delivery requirements. In 2022, we increased our carrying levels of inventory in response to increased demand for our products and to actively manage supply chain disruptions, including those related to the COVID-19 pandemic and semiconductor shortages. We provide custom products that require the stocking of inventories and a large variety of piece parts and replacement parts in order to meet delivery and warranty requirements. To the extent supplier product life cycles are shorter than ours, stocking of lifetime buy inventories is required to meet long-term warranty and contractual requirements. In addition, replacement parts are stocked for delivery on customer demand within a short delivery cycle. 
+
+Availability of required materials and components is generally dependable; however, particularly within the semiconductor market, fluctuations in supply and market demand in 2022 caused selective shortages and increased costs driven by the need to purchase semiconductor components from alternative sources, including brokers. While we continued to navigate supply chain constraints in 2022, we anticipate the broader impact of inflationary pressures driven by material and supply chain costs and disruptions (including elevated costs to procure materials within the semiconductor market) to continue into 2023. For a description of risks related to our supply chain, including relating to the COVID-19 pandemic and the semiconductor market, refer to &#8220;Part I. Item 1A. Risk Factors&#8221; in this Form 10-K. 
+
+We currently procure certain materials and components from single-source vendors. In addition, we import materials and components that are subject to import duties. The duties and tariffs we are subject to do not have a significant impact on our financial results. A material disruption from a single-source vendor may have a material adverse impact on our results of operations. If certain single-source suppliers were to become capacity constrained or insolvent, it could result in a reduction or interruption in supplies, or an increase in the price of supplies, and adversely impact our financial results. 
+
+Natural gas, electricity and, to a lesser extent, oil are the primary sources of energy for our manufacturing operations. Each of these resources is currently in adequate supply for our operations. The cost to operate our facilities and freight costs are dependent on world oil prices and external third-party logistics rates for inbound and outbound air lanes. Freight costs were also impacted by disruptions in transportation related to the COVID-19 pandemic in 2022; however, we expect global transportation costs to decrease in 2023 compared to 2022. Labor is generally available in reasonable proximity to our manufacturing facilities and the manufacturing facilities of our largest outsourced manufacturing suppliers. Difficulties in obtaining any of the aforementioned resources, or significant cost increases, could affect our financial results. 
+
+Government Regulations 
+
+Environment, Worker Health and Safety &#38; Climate Regulations 
+
+Some of our operations use substances regulated under various federal, state, local and international laws governing the environment and worker health and safety, including those governing the discharge of pollutants into the ground, air and water, the management and disposal of hazardous substances and wastes, and the cleanup of contaminated sites, as well as relating to the protection of the environment. Certain products of ours are subject to various federal, state, local and international laws governing chemical substances in electronic products. 
+
+Certain aspects of our operations and supply chain have become, and are expected to become increasingly subject to federal, state, local and international laws, regulations and international treaties and industry standards relating to climate change. For example, in the European Union (the "EU"), the EU Corporate Sustainability Reporting Directive, Corporate Sustainability Due Diligence Directive and EU taxonomy initiatives will introduce additional due diligence and disclosure requirements addressing sustainability that we expect will apply to us in the coming years. 
+
+Radio Spectrum Regulations 
+
+Radio spectrum is required to provide wireless voice, data and video communications service. The allocation of spectrum is regulated in the U.S. and other countries and limited spectrum is allocated to wireless services and specifically to public safety users. We manufacture and market products and provide services in spectrum bands already allocated by regulatory bodies. These include voice and data infrastructure, mobile radios and portable or hand-held devices. Consequently, our results could be positively or negatively affected by the rules and regulations adopted by regulatory agencies. Our products operate both on licensed and unlicensed spectrum. The availability of additional radio spectrum may provide new business opportunities. Conversely, the loss of available radio spectrum may result in the loss of business opportunities. Regulatory changes in current spectrum bands (e.g., the sharing of previously dedicated or other spectrum) may also provide opportunities or may require modifications to some of our products so they can continue to be manufactured and marketed. Based on growing demands for broadband, regulators continue to consider repurposing narrowband spectrum to broadband. 
+
+Telecommunications Regulations 
+
+Certain of our offerings include telecommunications or other communications services that are subject to regulation in various federal, state, and international jurisdictions. For example, we are a provider of selective routing services for 911 calls in the US, which subjects us to various federal and state regulations including those for 911 service reliability. We also provide WAVE PTX push-to-talk offerings with and without telecommunications connectivity in various countries in the EU. Additional types of regulations applicable to our offerings that include telecommunications or other communications services may include certification or licensing requirements, lawful intercept compliance obligations, cybersecurity and incident response obligations, and regulatory fee requirements. If we do not comply with applicable rules and regulations, we could be subject to enforcement actions, fines, and restrictions on our ability to operate or offer certain of our services. 
+
+Data Privacy Regulations 
+
+The U.S. federal government and many state and local governments have adopted or are considering laws or regulations governing the use of AI and biometrics, including facial recognition and license plate recognition technology, which may in some instances cover certain products and services we offer (references to privacy-related legislation or laws in this document encompass all of these technologies). Similar laws and regulations are being enacted or considered in some jurisdictions outside the U.S., including the EU. 
+
+Compliance with the laws currently in effect described above did not have a material effect upon our capital expenditures, earnings or competitive position in 2020 through 2022. For a description of the risks we face related to these and other regulatory matters, refer to &#8220;Part 1. Item 1A. Risk Factors&#8221; of this Form 10-K. 
+
+Human Capital Management 
+
+We have a "people first" philosophy. Our employees are our driving force, drawn from all segments of our global society to make a difference for our customers. 
+
+As of December 31, 2022, we employed approximately 20,000 people globally with 53% in the North America region and 47% in the International region. Of our total global employees, 40% were employed in engineering. Our goal is to foster a workplace where our employees feel that their unique opinions, cultures and abilities contribute to their personal success, as well as our Company&#8217;s success. 
+
+We believe the next big idea can come from anyone, anywhere, at any time. We offer structured mentorship programs and invest in employees&#8217; development and training enabling them to network, develop and grow their skills to influence the future of public safety and enterprise security. Employees also have access to a wide variety of technical, functional, and professional skills learning resources, including virtual, self-directed courses and on-the-job learning opportunities. 
+
+We strive for business growth by creating a supportive, equitable and inclusive environment where employees feel engaged, connected to our business and invested in the collective success of our customers and communities. Our human resources team works with leaders within each business function to perform annual talent reviews to assess the performance of every team member and identify development opportunities. This comprehensive process fosters growth across our Company by focusing on our high-potential talent and the rigor of succession plan development for our most critical roles. As part of our compensation philosophy, we strive to offer and maintain market-competitive wages, incentives, and benefits for our employees to attract and retain talent, and we review our rewards programs each year in an effort to ensure they are competitive with local market practices in the industries and countries where we operate. More specifically, our total rewards package for our global employees includes broad-based stock grants and bonuses, an employee stock purchase plan, healthcare, wellness and retirement benefits, paid parental and family leave, commuter benefits, paid time off (including flexible time off for U.S. exempt employees), flexible work options and other assistance and support for employees going through life-changing events. 
+
+We strive to embed diversity, equity and inclusion (&#8220;DEI&#8221;) across the Company. We continue to incorporate DEI practices into our hiring, and have created partnerships with organizations that help generate and recruit a diverse talent pipeline. We also continue to provide programs within our internal DEI strategic plan. In 2022, our program included development initiatives for high-potential women leaders, events about culture and diversity, a talent recruiting event with students from Historically Black Colleges and Universities, an expanded revision of our marketing, sales and communications materials in an effort to eliminate non-inclusive language and terminology from such materials, and continued DEI education for our global workforce. Also in 2022, we introduced affinity groups to provide a new way for employees with shared interests to create connections and build relationships and grew membership within our eight business councils with the goal of enabling employees from diverse backgrounds to feel a sense of belonging in a supportive community and safe environment. Finally, we published mid-year demographic data on our DEI website, including regarding employees who self identify as LGBTQ+, Veteran or Persons with Disabilities. The Motorola Solutions Foundation also increased its charitable granting as compared to 2021. 
+
+The safety of our employees remains a priority, and we continuously strive to provide a safe and injury-free workplace, using our global environmental, health and safety (&#8220;EHS&#8221;) management system to ensure program and reporting consistency at all of our sites. Our general approach includes assessing risks and identifying controls through the use of our comprehensive job hazard and risk assessment tool. Throughout the COVID-19 pandemic, we have remained focused on protecting the health and safety of our employees 
+
+Additional information regarding how our purpose and ethics informs our approach to corporate responsibility can be found in our 2021 Corporate Responsibility Report, which is available on our website. The information contained on or accessible through our corporate website, including but not limited to our DEI website and our 2021 Corporate Responsibility Report, is not incorporated by reference into and is not a part of this Form 10-K. 
+
+Material Dispositions 
+
+None. 
+
+Available Information 
+
+We make available free of charge through the Investor Relations section of our website, www.motorolasolutions.com/investors , our annual reports on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K, proxy statements, other reports filed under the Securities Exchange Act of 1934, as amended (&#8220;Exchange Act&#8221;), and all other reports and amendments filed with, or furnished to, the SEC simultaneously or as soon as reasonably practicable after such material is electronically filed with, or furnished to, the SEC. Our reports are also available free of charge on the SEC&#8217;s website, 
+
+www.sec.gov . Also available free of charge on our website as provided above are the following corporate governance documents: 
+
+&#8226; Motorola Solutions, Inc. Restated Certificate of Incorporation with Amendments 
+
+&#8226; Conformed Restated Certificate of Incorporation of Motorola Solutions, Inc. (amended Jan. 4, 2011) 
+
+&#8226; Certificate of Amendment to the Restated Certificate of Incorporation of Motorola, Inc. (effective Jan. 4, 2011) 
+
+&#8226; Certificate of Ownership and Merger of Motorola Name Change Corporation into Motorola, Inc. (effective Jan. 4, 2011) 
+
+&#8226; Motorola Solutions, Inc. Amended and Restated Bylaws 
+
+&#8226; Board Governance Guidelines 
+
+&#8226; Director Independence Guidelines 
+
+&#8226; Principles of Conduct for Members of the Motorola Solutions, Inc. Board of Directors 
+
+&#8226; Motorola Solutions Code of Business Conduct, which is applicable to all Motorola Solutions employees, including the principal executive officers, the principal financial officer and the controller (principal accounting officer) 
+
+&#8226; Audit Committee Charter 
+
+&#8226; Compensation and Leadership Committee Charter 
+
+&#8226; Governance and Nominating Committee Charter 
+
+All of our reports and corporate governance documents may also be obtained electronically and without charge by contacting Investor Relations at investors@motorolasolutions.com . Our website (including our DEI website referenced above) and the information contained therein or incorporated therein are not incorporated by reference into and are not a part of this Form 10-K. 
+

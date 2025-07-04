@@ -1,0 +1,728 @@
+ Item 7: Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations 
+
+The following is a discussion and analysis of our financial position as of December 31, 2022 and 2021 and results of operations and cash flows for each of the three years in the period ended December 31, 2022. This commentary should be read in conjunction with our consolidated financial statements and the notes thereto appearing under &#8220;Item 8: Financial Statements and Supplementary Data.&#8221; 
+
+Executive Overview 
+
+Our Business 
+
+Motorola Solutions is a global leader in public safety and enterprise security. Our technologies in Land Mobile Radio Communications ("LMR" or "LMR Communications"), Video Security and Access Control ("Video") and Command Center, bolstered by managed and support services, help make communities safer and businesses stay productive and secure. We serve more than 100,000 public safety and commercial customers in over 100 countries, providing &#8220;purpose-built&#8221; solutions designed for their unique needs, and we have a rich heritage of innovation focusing on advancing global safety for more than 90 years. 
+
+We manage our business organizationally through two segments: &#8220;Products and Systems Integration&#8221; and &#8220;Software and Services.&#8221; Within these segments, we have principal product lines that also follow our three major technologies: LMR Communications, Video and Command Center. In January 2023, we began using Command Center as a naming convention, eliminating the "Software" descriptor from Command Center Software in order to inform investors that the Company has software components more broadly across all technologies; this name change does not require any financial information to be reclassified from previous periods. 
+
+The Company has invested across these three technologies, evolving the Company&#8217;s LMR focus to purposefully integrate software, video security and access control solutions for public safety and enterprise customers globally. 
+
+Our strategy is to generate value through the integration of critical communications, video security, access control and data and analytics. While each technology individually strives to make users safer and more productive, we believe we can enable better outcomes for our customers when we unite these technologies as one connected system. Our goal is to help remove silos between systems, unify data, streamline workflows, and simplify operations for our customers. Across all three technologies, we offer cloud-based solutions, cybersecurity services, software and subscription services as well as managed and support services. 
+
+The schools we serve provide an example of our integrated technology ecosystem in action, which can be tailored to a school's unique needs and can span the end-to-end workflow for daily school operations as well as for emergencies. Video security and analytics such as license plate recognition can alert security and identify potentially suspicious activities, influencing building access. AI-powered video analytics can search video footage and help locate individuals based on physical descriptions. Software can help share real-time alerts and live video feeds with school officials and public safety agencies for incident response. Voice and data communications can notify school employees of security breaches, while mass notification and incident management platforms can help to coordinate an emergency response across school safety personnel, local law enforcement and administrators. Together, these technologies can help schools to detect, analyze, communicate and manage safety and security threats. 
+
+The principal products within each segment, by technology, are described below: 
+
+Products and Systems Integration Segment 
+
+In 2022, the segment&#8217;s net sales were $5.7 billion, representing 63% of our consolidated net sales. 
+
+LMR Communications 
+
+Our LMR Communications technology includes infrastructure and devices for LMR, public safety Long Term Evolution (&#8220;LTE&#8221;) and enterprise-grade private LTE. Our technology enables voice and multimedia collaborations across two-way radio, WiFi and public and private broadband networks. We are a global leader in the two-way radio category, including Project 25 (P25), Terrestrial Trunked Radio ("TETRA") and Digital Mobile Radio (DMR), as well as other PCR solutions. We also deliver LTE solutions for public safety, government and commercial users, including infrastructure and devices operating in both low-band and mid-band frequencies, including Citizens&#8217; Broadband Radio Service (CBRS) frequencies. Primary sources of revenue for this technology come from selling devices and building telecommunications networks, including infrastructure, installation and integration with our customers&#8217; technology environments. 
+
+We believe that public safety agencies and enterprises continue to trust LMR communications systems and devices because they are purpose-built and designed for reliability, availability, security and resiliency to withstand the most challenging conditions. 
+
+By adding broadband data capabilities to our two-way radios, we strive to provide our customers with greater functionality and multimedia access to the information and data they need in their workflows. Examples include application services such as GPS location to better protect lone workers, job dispatch to share detailed information and over-the-air programming to optimize device uptime. Our view is that complementary data applications such as these enable government, public safety and enterprise 
+
+customers to work more efficiently and safely, while maintaining their mission-critical voice communications to remain connected and working in collaboration with others. 
+
+The LMR technology within the Products and Systems Integration segment represent ed 82% of the net sales of the total segment in 2022. 
+
+Video 
+
+Our Video technology includes video management infrastructure, AI-video powered security cameras including fixed and certain mobile video equipment as well as on-premise and cloud-based access control solutions. Since 2018, we have developed our video security and access control business through investments in research and development and acquisitions, directly contributing to our growth strategy to serve as a leader in end-to-end video security solutions and supporting the expansion of our portfolio. 
+
+We deploy video security and access control solutions to thousands of government and commercial customers around the world including school campuses, transportation systems, healthcare centers, public venues, utilities, prisons, factories, casinos, airports, financial institutions, government facilities, state and local law enforcement agencies and retailers. Organizations such as these utilize video security and access control to verify critical events or incidents in real-time and to provide data to investigate an event or incident after it happens. 
+
+Our view is that government and public safety customers in particular are increasingly turning to video security technologies, including fixed and mobile cameras, to increase visibility, accountability and safety for citizens, communities and first responders alike. Additionally, our view is that government, public safety agencies and businesses are increasingly turning to scalable, cloud-based multi-factor authentication access control to make their facilities more secure. 
+
+The Video technology within the Products and Systems Integration segment represented 18% of the net sales of the total segment in 2022. 
+
+Software and Services Segment 
+
+In 2022, the segment&#8217;s net sales were $3.4 billion, representing 37% of our consolidated net sales. 
+
+LMR Communications 
+
+LMR Communications services include support and managed services, which offer a broad continuum of support for our customers. Support services include repair and replacement, technical support and preventative maintenance, and more advanced offerings such as system monitoring, software updates and cybersecurity services. Managed services range from partial to full operational support of customer-owned or Motorola Solutions-owned networks. Our customers&#8217; systems often have multi-year or multi-decade lifespans that help drive demand for software upgrades, device and infrastructure refresh opportunities, as well as additional services to monitor, manage, maintain and secure these complex networks and solutions. We strive to deliver services to our customers that help improve performance across their systems, devices and applications for greater safety and productivity. 
+
+Given the mission-critical nature of our customers&#8217; operational environments, we aim to design the LMR networks they rely on for availability, security and resiliency. We have a comprehensive approach to system upgrades that addresses hardware, software and implementation services. As new system releases become available, we work with our customers to upgrade software, hardware, or both, with respect to site controllers, comparators, routers, LAN switches, servers, dispatch consoles, logging equipment, network management terminals, network security devices such as firewalls and intrusion detection sensors, and more, on-site or remotely. 
+
+Designed to complement our customers&#8217; mission-critical LMR systems, our mission-critical cloud-based LMR technology is also available &#8220;as-a-service&#8221; with a multi-year subscription. We believe this technology increases resiliency and system reliability to help ensure users remain connected, even, for example, in natural disasters where physical communications infrastructure can be damaged. 
+
+The LMR technology within the Software and Services segment represente d 67% o f the net sales of the total segment in 2022. 
+
+Video 
+
+Video software includes video management software, decision management and digital evidence management software, certain mobile video equipment, and advanced vehicle location data analysis software, including license plate recognition. Our software is designed to complement video hardware systems, proving end-to-end video security to strive to keep people, property and assets safe. 
+
+Our video network management software is embedded with AI-enabled analytics to deliver operational insights to our customers by bringing attention to important events within their video footage. Given the growing volume of video content, we believe that analytics are critical to deliver meaningful, action-oriented insights. Our view is that these insights can help to proactively detect an important event in real time as well as reactively search video content to detect an important event that occurred in the past. For example, AI-enabled analytics can highlight unusual behavior such as a person at a facility out of hours, locate a missing child at a theme park with Appearance Search, flag a vehicle of interest at a school through license plate recognition, or send an alert through access control if doors are propped open at a hospital. 
+
+Our cloud technologies can offer organizations the ability to access, search and manage their video security and access control system from a centralized dashboard, accessible on devices such as smartphones and laptops. Additionally, our Avigilon fixed video systems can be cloud-administered by connecting to Avigilon Cloud Services (&#8220;ACS&#8221;), providing our customers with the ability to securely access video across their sites from a remote/central monitoring location. 
+
+Our Video services include our "video-as-a-service" subscription-based offerings for law enforcement, simplifying procurement by bundling hardware and software into a single subscription. For example, body-worn cameras and in-car video systems can be paired with either on-premises or cloud-based digital evidence management software and complementary command center products. Our cloud solutions are also sold as a service, available as single-year to multi-year hosted services, supporting our customers with upgrades and software enhancements to help ensure system performance and technological advancement. 
+
+The Video technology within the Software and Services segment represente d 15% of the net sales of the total segment in 2022. 
+
+Command Center 
+
+Our Command Center portfolio consists of native cloud and on-premises software solutions that support the complex process of the public safety workflow from "911 call to case closure." From the moment a person contacts 911, an array of individuals engage to gather information to coordinate a response and manage the post-incident resolution. These individuals include dispatchers who route calls to police, fire and emergency medical services, first responders in the field, intelligence analysts who manage real-time operations, records specialists who preserve the integrity of information and evidence, crime analysts who identify patterns and accelerate investigations, and corrections officers who oversee jail and inmate management. 
+
+Additionally, to help ensure that individuals within the public safety workflow can work as efficiently, effectively and safely as possible, we believe it&#8217;s important that individuals within enterprise settings can communicate and collaborate directly with public safety agencies, particularly during emergencies. We remain focused on strengthening the intersection of public safety and enterprise security, offering solutions that are designed to help individuals, businesses and public safety agencies work together and share the information that better informs people to take appropriate action. 
+
+Our Command Center software supports these individuals through the three phases of incident response: incident awareness, incident management and post-incident resolution. Incident awareness software includes community engagement applications for tip submissions, crime mapping and evidence submission, panic buttons that can share real-time incident details and location, 911 call management software (including multimedia) and next-generation core services for 911 call routing. Incident management software includes voice and computer aided dispatch (CAD) for dispatch and coordinating first response, mass notification software, collaboration software to share operational updates, real-time intelligence software that shows a single, real-time view of video feeds and other alerts on a map, and field response and reporting to help frontline personnel collaborate, manage incident activity and file reports from the field. Post-incident resolution software includes centralized records and evidence management for record-keeping and judicial sharing, analytics including license plate recognition, and jail and inmate management to streamline the process and enable secure inter-agency information sharing. 
+
+As the public safety market continues to leverage both on-premises and cloud "software-as-a service" (&#8220;SaaS&#8221;) technologies to efficiently run their operations, reduce response times and increase officer availability, we offer both native cloud-based applications and cloud features that enhance on-premises applications. We believe our products and services enhance first responders&#8217; situational awareness and safety by integrating critical communications, video security, data and analytics to provide an all-in-one operational view of the incident. 
+
+Another area of public safety evolution is increasing adoption of Next Generation 911 Core Services (&#8220;NGCS&#8221;), a group of products and services needed to create infrastructure connectivity in order to process a 911 call using Next Generation (&#8220;NG&#8221;) technology. The NG infrastructure is an Emergency Service IP Network ("ESInet"), which can carry voice, data and multimedia. ESInet enables 911 call takers at public safety answering points to respond to text, video and data. Our NGCS can be offered as a managed service and includes call routing, ESInet, location services, geographic information services, cybersecurity and our continuous network and security operations center dedicated to public safety. 
+
+Additionally, Command Center includes interoperability software that helps to ensure communication is not limited by coverage area, network technology or device type. Our solutions, including Kodiak, WAVE PTX and CriticalConnect, enable interoperability among devices across multiple networks. For example, a two-way radio network can connect with an LTE network making it possible for individuals to communicate securely and more easily across technologies. 
+
+The Command Center technology within the Software and Services segment represented 18% of the net sales of the total segment in 2022. 
+
+2022 Financial Results 
+
+&#8226; Net sales were $9.1 billion in 2022 compared to $8.2 billion in 2021. 
+
+&#8226; Operating earnings were $1.7 billion in each of 2021 and 2022. 
+
+&#8226; Net earnings attributable to Motorola Solutions, Inc. were $1.4 billion, or $7.93 per diluted common share in 2022, compared to earnings of $1.2 billion, or $7.17 per diluted common share in 2021. 
+
+&#8226; Our operating cash flow was $1.8 billion in each of 2021 and 2022. 
+
+&#8226; We returned over $1.4 billion of capital to shareholders, in the form of $836 million in share repurchases and $530 million in dividends in 2022. 
+
+&#8226; We increased our quarterly dividend by 11% to $0.88 per share in November 2022. 
+
+&#8226; We ended 2022 with a backlog position of $14.3 billion, up $788 million compared to 2021. 
+
+Segment Financial Highlights 
+
+&#8226; In the Products and Systems Integration segment, net sales were $5.7 billion in 2022, an increase of $695 million, or 14%, compared to $5.0 billion in 2021. On a geographic basis, net sales increased in both the North America region and the International region. Operating earnings were $913 million in 2022, compared to $760 million in 2021. Operating margins increased in 2022 to 15.9% from 15.1% in 2021 primarily due to higher sales volume and increased pricing partially offset by higher direct material costs, higher expenses associated with acquired businesses and $27 million higher share-based compensation expenses. 
+
+&#8226; In the Software and Services segment, net sales were $3.4 billion in 2022, an increase of $246 million, or 8%, compared to $3.1 billion in 2021. On a geographic basis, net sales increased in the North America region. Operating earnings were $748 million in 2022, compared to $907 million in 2021. Operating margins decreased in 2022 to 22.1% from 28.9% in 2021 due to a fixed asset impairment loss of $147 million related to assets constructed and used in the deployment of the Emergency Services Network ("ESN") services contract with the Home Office of the United Kingdom (the "Home Office") which both parties have agreed to exit. 
+
+Macroeconomic Events 
+
+During fiscal year 2022, we operated under challenging market conditions, influenced by events such as those discussed below. For a further discussion of our business and the trends and risks that we encounter in our business, please refer to &#8220;Part I. Item 1. Business&#8221; and &#8220;Part I. Item 1A. Risk Factors&#8221; in this Form 10-K. 
+
+Russia-Ukraine Conflict 
+
+During the first quarter of 2022, in response to Russia's invasion of Ukraine, we suspended all sales, provision of services and shipments of our products to Russia and Belarus, which did not constitute a material portion of our business. For the year ended December 31, 2021, our net sales in Russia and Belarus were less than $25 million. However, throughout 2022, we indirectly experienced impacts from the Russia-Ukraine conflict (as further described below). While we do not anticipate that the current posture of the Russia-Ukraine conflict will materially and adversely affect our results of operations, the conflict is still ongoing and has had, and may continue to have, a significant impact on the global macroeconomic and geopolitical environments, including increased volatility in capital and commodity markets, rapid changes to regulatory conditions (including the use of sanctions), supply chain and operational challenges for multinational corporations, inflationary pressures and an increased risk of cybersecurity incidents. 
+
+COVID-19, Supply Chain Disruptions &#38; Inflationary Cost Environment 
+
+Throughout 2022, our supply chain was, and continues to be, impacted by global issues related to the effects of the COVID-19 pandemic, the Russia-Ukraine conflict and the inflationary cost environment particularly with respect to materials in the semiconductor market, including part shortages, increased freight costs, diminished transportation capacity and labor constraints. This has resulted in disruptions in our supply chain, as well as difficulties and delays in procuring certain semiconductor components. Cost increases were driven by elevated lead times and increased material costs, in particular the need to purchase semiconductor components from alternative sources, including brokers. While we continued to navigate supply chain constraints in 2022, we anticipate the broader impact of inflationary pressures and increased material and supply chain costs and disruptions (including elevated costs to procure materials within the semiconductor market) to continue into 2023. However, we expect global transportation costs to improve in 2023 as compared to 2022. We are closely monitoring supply chain disruptions and continue to remain focused on improving our supplier network, engineering alternative designs and working to reduce supply shortages. We also continue to actively manage our inventory in an effort to minimize supply chain disruptions and enable continuity of supply and services to our customers, and we expect to maintain elevated levels of inventory until supply constraints have been remediated. 
+
+In order to combat rising inflation in the U.S., the Federal Reserve has raised interest rates multiple times since the beginning of 2022. The increase in U.S. dollar interest rates and overall market conditions led to significant strengthening of the U.S. dollar against many other global currencies in 2022. The strong U.S. dollar negatively impacted cash generated from our foreign operations in 2022, driven by revenues and costs that are denominated in foreign currencies. We expect fluctuations in the value of U.S. dollar relative to other currencies to continue to impact our operating cash flows and net earnings throughout 2023. 
+
+Although the macroeconomic environment continued to introduce challenges during 2022, we are encouraged by customer demand for our products and services. Specifically, in our Software and Services segment, with the largely recurring nature of the business and our strong backlog position, we expect that the impact to operating margin will be limited during 2023. While we were encouraged by strong backlog and growth in our Products and Systems Integration segment throughout 2022, which we expect to continue to grow during 2023, supply constraints continue to impact our business and we expect demand for our products will continue to outpace our ability to obtain semiconductor component supply throughout 2023. Where appropriate, we have taken pricing actions around our product and service offerings to mitigate our exposure to inflationary pressures on our businesses and benefited from these adjustments during 2022. We expect to further benefit from such adjustments throughout 
+
+2023. Further, demand continues to be supported with ongoing sources of government funding, including the American Rescue Plan Act of 2021 ("ARPA"), which is intended to provide economic stimulus. We experienced the positive impact of the ARPA funding on our business and results of operations throughout 2022 and anticipate that the ARPA will continue to have a positive impact on our business in 2023. 
+
+We believe our existing balances of cash and cash equivalents, along with other short-term liquidity arrangements, will continue to be sufficient to satisfy our liquidity requirements associated with our existing operations. We were in compliance with all applicable covenants in the 2021 unsecured revolving credit facility as of December 31, 2022. Additionally, we have no bond maturities until 2024. We continue to assess our operating expenses and identify cost reducing initiatives, including lower travel costs, contractor spend and reducing our real estate footprint. 
+
+Lastly, as a result of the challenging market conditions described above, we evaluated whether there were any impairment indicators as of December 31, 2022, which included a review of our receivables and contract assets, inventory, right-of-use lease assets, long-lived assets, investments, goodwill and intangible assets. As of December 31, 2022, we concluded our assets were fairly stated and recoverable. 
+
+Recent Events 
+
+CMA Update 
+
+In October 2021, the United Kingdom&#8217;s ("the U.K.") Competition and Markets Authority (the "CMA") announced that it had opened a market investigation into the Mobile Radio Network for the Police and Emergency Services. This investigation affects Airwave, our private mobile radio communications network that we acquired in 2016. Airwave provides mission-critical voice and data communications to public emergency service agencies in Great Britain. In October 2022, the CMA published a provisional decision with its findings regarding competition and proposed remedies. We disagree with the CMA&#8217;s provisional decision and will continue to work with the CMA to demonstrate the value of the Airwave network and protect Airwave&#8217;s contractual position. 
+
+ESN Matters 
+
+During the year ended December 31, 2022, we signed a mutual agreement with the Home Office for us to exit the ESN communications systems contract early, inclusive of twelve months of transition services through the end of 2023. During the third quarter of 2022, we determined that the future service potential of the ESN communications systems contract was limited, based on the Company's intention to terminate the contract in advance of the contracted service term. We thus recorded a fixed asset impairment loss of $147 million related to assets constructed and used in the deployment of the contract based on our expectation that, more likely than not, the ESN long-lived asset group would be disposed of significantly before the end of its previously estimated useful life. The impairment loss was recorded in the Software and Services segment within cost of sales in the Consolidated Statements of Operations. The recognized impairment loss represents the amount by which the carrying amount of the asset group exceeded the fair value under a measurement of discounted cash flows. 
+
+Recent Acquisitions 
+
+##TABLE_START Technology Segment Acquisition Description Purchase Price Date of Acquisition Command Center Software and Services Rave Mobile Safety, Inc. ("Rave Mobile") Provider of mass notification and incident management services. $553 million and share-based compensation of $2 million December 14, 2022 LMR Communications Products and Systems Integration Futurecom Systems Group, ULC Provider of radio coverage extension solutions. $30 million October 25, 2022 LMR Communications Products and Systems Integration Barrett Communications Pty Ltd Provider of specialized radio communications. $18 million August 8, 2022 Video Security and Access Control Products and Systems Integration Videotec S.p.A. Provider of ruggedized video security solutions. $23 million and share-based compensation of $4 million May 12, 2022 ##TABLE_END
+
+##TABLE_START Video Security and Access Control Software and Services Calipsa, Inc. Provider of cloud-native advanced video analytics. $39 million and share-based compensation of $4 million April 19, 2022 LMR Communications Software and Services TETRA Ireland Communications Limited Provider of Ireland's National Digital Radio Service. $120 million March 23, 2022 Video Security and Access Control Products and Systems Integration 
+
+Software and Services 
+
+Ava Security Limited Provider of cloud-native video security and analytics. $388 million and share-based awards and compensation of $7 million March 3, 2022 Command Center Software and Services 911 Datamaster, Inc. Provider of Next Generation 911 data solutions that help to ensure emergency calls are accurately located and routed based on the caller's location. $35 million and share-based compensation of $3 million December 16, 2021 Video Security and Access Control Products and Systems Integration 
+
+Software and Services 
+
+Envysion, Inc. Provider of enterprise video security and business analytics. $124 million and share-based compensation of $1 million October 29, 2021 Video Security and Access Control Products and Systems Integration 
+
+Software and Services 
+
+Openpath Security, Inc. Provider of cloud-based mobile access control. $298 million and share-based compensation of $29 million July 15, 2021 Command Center Software and Services Callyo Provider of cloud-based mobile applications for law enforcement in North America, including critical mobile technological capabilities that enable information to flow seamlessly from the field to the command center. $63 million, inclusive of share-based compensation of $3 million August 28, 2020 Video Security and Access Control Products and Systems Integration 
+
+Software and Services 
+
+Pelco, Inc. Global provider of video security solutions, adding a broad range of products for a variety of commercial and industrial environments and use cases. $110 million July 31, 2020 Video Security and Access Control Products and Systems Integration 
+
+Software and Services 
+
+IndigoVision Group plc Provider of video security solutions to enhance geographical reach across a wider customer base. $37 million June 16, 2020 LMR Communications Software and Services Unnamed cybersecurity services business 
+
+Provider of vulnerability assessments, cybersecurity consulting, and managed services, including security monitoring of network operations. 
+
+$32 million 
+
+April 30, 2020 LMR Communications Software and Services Unnamed cybersecurity services business 
+
+Provider of vulnerability assessments, cybersecurity consulting, managed services, and remediation and response capabilities. 
+
+$40 million, inclusive of share-based compensation of $6 million 
+
+March 3, 2020 ##TABLE_END
+
+Climate Change 
+
+We expect that our operations and supply chain will become increasingly subject to federal, state, local and foreign laws, regulations and international treaties and industry standards relating to climate change. For example, in the European Union (the &#8220;EU&#8221;), the EU Corporate Sustainability Reporting Directive, Corporate Sustainability Due Diligence Directive and EU taxonomy initiatives will introduce additional due diligence and disclosure requirements addressing sustainability that we expect will apply to us in the coming years. 
+
+Recently, in October 2021 the U.K.&#8217;s Cabinet Office began requiring companies bidding on contracts with the U.K. government that have a value of over &#163;5m per year to have carbon reduction plans that contain a commitment to achieving net zero emissions by 2050 for U.K. operations. This requirement applies to our operations in the U.K. Although Motorola Solutions UK Ltd. and Airwave Solutions Ltd., our U.K. subsidiaries, each committed in early 2022 to achieving net zero emissions by 2050 for such entities' U.K. operations, this requirement and any similar future requirements and other increased regulation of climate change concerns could subject us to additional costs and restrictions, impact our competitive position or require us to make certain changes to our manufacturing practices and/or product designs. 
+
+Looking Forward 
+
+We expect continued growth within our global LMR installed base as a number of events such as natural disasters and large-scale incidents continue to reinforce the importance of having secure, reliable LMR for public safety. We believe our augmentation of LMR with broadband solutions will also drive growth, as we expect our customers will look to integrate valuable data capabilities. We expect to provide additional services to existing LMR customers as communication networks become more complex, software-centric and data-driven. 
+
+As public safety needs continue to evolve, we anticipate growth opportunities within the command center as our Command Center suite covers the public safety workflow from "911 call to case closure" and management. We expect increased growth in our integrated software next generation core services and our cloud-based solutions, such as the PremierOne Cloud suite, as well as hybrid cloud solutions that provide a migration path from on-premises software solutions to cloud-connected capabilities. 
+
+Within Video, we expect growth across our portfolio of fixed and mobile security solutions embedded with advanced analytics and access control solutions. We believe drivers include expansion of traditional video sales beyond commercial customers to government and public safety customers. Additionally, we expect customers to continue to embrace analytics that convert video into data and the scalability of the cloud to run their operations, and we also expect continued expansion of offerings such as video-as-a-service and ACS. 
+
+Finally, we anticipate new opportunities from the investments we are making to integrate our LMR, Video and Command Center technologies into one unified ecosystem. We have made go-to-market and research and development investments in both Video and our Command Center technologies with growth in mind. We have made a number of acquisitions and we see opportunities to continue to rationalize costs within both segments of our business, further driving operating leverage in our businesses. We believe our integrated products and services for public and enterprise safety can enable strong collaboration by removing system silos, simplifying management and automating workflows. 
+
+While we anticipate growth in our business, we also expect to be impacted by a higher tax rate as we look forward, mainly based on lower continuing benefits from stock-based compensation and an increase in the tax rate in the U.K. 
+
+Refer to &#8220;Macroeconomic Events&#8221; set forth in this &#8220;Part II. Item 7. Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations&#8221; of this Form 10-K for a further discussion of our outlook with respect to the continuing impact of certain macroeconomic events on our financial condition, results of operations and cash flows. 
+
+Results of Operations 
+
+##TABLE_START &#160; Years ended December 31 (Dollars in millions, except per share amounts) 2022 % of Sales ** 2021 % of Sales ** 2020 % of Sales ** Net sales from products $ 5,368 &#160; $ 4,606 $ 4,087 Net sales from services 3,744 &#160; 3,565 3,327 Net sales 9,112 &#160; 8,171 7,414 Costs of product sales 2,595 &#160; 48.3 &#160; % 2,104 45.7 % 1,872 45.8 % Costs of services sales 2,288 &#160; 61.1 &#160; % 2,027 56.9 % 1,934 58.1 % Costs of sales 4,883 &#160; 53.6 &#160; % 4,131 50.6 % 3,806 51.3 % Gross margin 4,229 &#160; 46.4 &#160; % 4,040 49.4 % 3,608 48.7 % Selling, general and administrative expenses 1,450 &#160; 15.9 &#160; % 1,353 16.6 % 1,293 17.4 % Research and development expenditures 779 &#160; 8.5 &#160; % 734 9.0 % 686 9.3 % Other charges 339 &#160; 3.7 &#160; % 286 3.5 % 246 3.3 % Operating earnings 1,661 &#160; 18.2 &#160; % 1,667 20.4 % 1,383 18.7 % Other income (expense): Interest expense, net (226) (2.5) % (208) (2.5) % (220) (3.0) % Gains (losses) on sales of investments and businesses, net 3 &#160; &#8212; &#160; % 1 &#8212; % (2) &#8212; % Other, net 77 &#160; 0.8 &#160; % 92 1.1 % 13 0.2 % Total other expense (146) (1.6) % (115) (1.4) % (209) (2.8) % Net earnings before income taxes 1,515 &#160; 16.6 &#160; % 1,552 19.0 % 1,174 15.8 % Income tax expense 148 &#160; 1.6 &#160; % 302 3.7 % 221 3.0 % Net earnings 1,367 &#160; 15.0 &#160; % 1,250 15.3 % 953 12.9 % Less: Earnings attributable to noncontrolling interests 4 &#160; &#8212; &#160; % 5 0.1 % 4 0.1 % Net earnings* $ 1,363 &#160; 15.0 &#160; % $ 1,245 15.2 % $ 949 12.8 % Earnings per diluted common share* $ 7.93 &#160; &#160; $ 7.17 &#160; $ 5.45 &#160; ##TABLE_END
+
+* Amounts attributable to Motorola Solutions, Inc. common shareholders. 
+
+** Percentages may not add due to rounding. 
+
+Geographic Market Sales by Locale of End Customer 
+
+##TABLE_START 2022 2021 2020 North America 70 &#160; % 68 % 68 % International 30 &#160; % 32 % 32 % &#160; 100 &#160; % 100 % 100 % ##TABLE_END
+
+Results of Operations&#8212;2022 Compared to 2021 
+
+Net Sales 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2022 2021 % Change Net sales from Products and Systems Integration $ 5,728 &#160; $ 5,033 14 % Net sales from Software and Services 3,384 &#160; 3,138 8 % Net sales $ 9,112 &#160; $ 8,171 12 % ##TABLE_END
+
+The Products and Systems Integration segment&#8217;s net sales represented 63% of our net sales in 2022, compared to 62% in 2021. The Software and Services segment&#8217;s net sales represented 37% of our net sales in 2022, compared to 38% in 2021. 
+
+Net sales increased by $941 million, or 12%, compared to 2021. The 14% increase in net sales within the Products and Systems Integration segment was driven by a 15% increase in the North America region and a 10% increase in the International region. The 8% increase in the Software and Services segment was driven by a 14% increase in the North America region and consistent net sales within the International region. The increase in net sales included: 
+
+&#8226; an increase in the Products and Systems Integration segment, inclusive of $53 million of revenue from acquisitions, driven by growth in LMR, inclusive of public safety LMR products and PCR, and Video; and 
+
+&#8226; an increase in the Software and Services segment, inclusive of $68 million of revenue from acquisitions, driven by an increase in Video, LMR services and Command Center; partially offset by 
+
+&#8226; $216 million from unfavorable currency rates. 
+
+Regional results included: 
+
+&#8226; a 15% increase in the North America region, inclusive of revenue from acquisitions, driven by growth in LMR, Video and Command Center; and 
+
+&#8226; a 5% increase in the International region, inclusive of revenue from acquisitions, driven by growth in LMR, Video and Command Center. 
+
+Products and Systems Integration 
+
+The 14% increase in the Products and Systems Integration segment was driven by the following: 
+
+&#8226; $510 million, or 12% growth in public safety LMR products and PCR, inclusive of revenue from acquisitions, driven by both the North America and International regions; and 
+
+&#8226; $185 million, or 22% growth in Video, inclusive of revenue from acquisitions, in both the North America and International regions; 
+
+&#8226; inclusive of $98 million from unfavorable currency rates. 
+
+Software and Services 
+
+The 8% increase in the Software and Services segment was driven by the following: 
+
+&#8226; $112 million, or 28% growth in Video, inclusive of revenue from acquisitions, driven by the North America region; 
+
+&#8226; $69 million, or 3% growth in LMR services, inclusive of revenue from acquisitions, driven by the North America region; and 
+
+&#8226; $65 million, or 12% growth in Command Center, inclusive of revenue from acquisitions, driven by both the North America and International regions; 
+
+&#8226; inclusive of $118 million from unfavorable currency rates. 
+
+Gross Margin 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2022 2021 % Change Gross margin $ 4,229 &#160; $ 4,040 5 % ##TABLE_END
+
+Gross margin was 46.4% of net sales in 2022 compared to 49.4% of net sales in 2021. The primary drivers of this decrease in gross margin as a percentage of net sales were: 
+
+&#8226; lower gross margin as a percentage of net sales in the Software and Services segment, inclusive of acquisitions, primarily driven by a fixed asset impairment loss of $147 million related to assets constructed and 
+
+used in the deployment of the ESN services contract with the Home Office which we have executed an agreement to exit; and 
+
+&#8226; lower gross margin as a percentage of net sales in the Products and Systems Integration segment, inclusive of acquisitions, primarily driven by increased direct material costs and freight costs, partially offset by pricing actions and higher sales volume. 
+
+Selling, General and Administrative ("SG&#38;A") Expenses 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2022 2021 % Change Selling, general and administrative expenses $ 1,450 &#160; $ 1,353 7 % ##TABLE_END
+
+SG&#38;A expenses increased $97 million, or 7% in 2022 compared to 2021. SG&#38;A expenses were 15.9% of net sales in 2022 compared to 16.6% of net sales in 2021. The increase in SG&#38;A expenses was primarily due to higher expenses associated with acquired businesses, higher share-based compensation and higher travel expenses. 
+
+Research and Development ("R&#38;D") Expenditures 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2022 2021 % Change Research and development expenditures $ 779 &#160; $ 734 6 % ##TABLE_END
+
+R&#38;D expenditures increased $45 million, or 6% in 2022 compared to 2021 primarily due to an investment in R&#38;D, higher expenses associated with acquired businesses and higher share-based compensation. R&#38;D expenditures were 8.5% of net sales in 2022 and 9.0% of net sales in 2021. 
+
+Other Charges 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2022 2021 Other charges $ 339 &#160; $ 286 ##TABLE_END
+
+Other charges increased $53 million, or 19% in 2022 compared to 2021 primarily due to the following: 
+
+&#8226; $257 million of intangible asset amortization expense in 2022 compared to $236 million in 2021; 
+
+&#8226; $23 million of legal settlements in 2022 compared to $3 million in 2021; 
+
+&#8226; $24 million of operating lease asset impairments in 2022 compared to $10 million in 2021; 
+
+&#8226; $12 million of fixed asset impairments in 2022 that did not occur in 2021; and 
+
+&#8226; $23 million of charges for acquisition-related transaction fees in 2022 compared to $15 million in 2021; partially offset by 
+
+&#8226; $15 million of gain recoveries from the legal settlement under the Hytera bankruptcy proceedings in 2022 that did not occur in 2021; and 
+
+&#8226; $18 million of net reorganization of business charges in 2022 compared to $24 million in 2021 (see "Note 14: Reorganization of Businesses" to our consolidated financial statements in &#8220;Part II. Item 8. Financial Statements and Supplementary Data&#8221; of this Form 10-K for further information. 
+
+Operating Earnings 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2022 2021 Operating earnings from Products and Systems Integration $ 913 &#160; $ 760 Operating earnings from Software and Services 748 &#160; 907 Operating earnings $ 1,661 &#160; $ 1,667 ##TABLE_END
+
+Operating earnings decreased $6 million, or 0.4% in 2022 compared to 2021. The decrease in Operating earnings was due to: 
+
+&#8226; a $159 million decrease in the Software and Services segment from 2021 to 2022, primarily driven by a fixed asset impairment loss of $147 million related to assets constructed and used in the deployment of the ESN services contract with the Home Office which we have executed an agreement to exit; partially offset by 
+
+&#8226; a $153 million increase in the Products and Systems Integration segment from 2021 to 2022, driven by higher sales volume and increased pricing, partially offset by higher direct material costs and higher operating expenses. The increase in operating expenses was primarily driven by higher expenses associated with acquired businesses and $27 million higher share-based compensation expense, partially offset by a $15 million gain from Hytera legal recoveries. 
+
+Interest Expense, net 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2022 2021 Interest expense, net $ (226) $ (208) ##TABLE_END
+
+The $18 million increase in net interest expense in 2022 compared to 2021 was a result of higher debt outstanding and the reversal of a non-cash interest accrual related to an international tax audit in 2021, partially offset by higher interest income earned on cash. 
+
+Gains (losses) on Sales of Investments and Businesses, net 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2022 2021 Gains (losses) on sales of investments and businesses, net $ 3 &#160; $ 1 ##TABLE_END
+
+The net gains on sales of investments and businesses were primarily related to the sales of various equity investments. 
+
+Other, net 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2022 2021 Other, net $ 77 &#160; $ 92 ##TABLE_END
+
+Other, net income decreased $15 million in 2022 compared to 2021 primarily due to: 
+
+&#8226; a $61 million loss on derivatives in 2022 compared to a $30 million loss on derivatives in 2021; 
+
+&#8226; a $30 million loss on fair value adjustments to equity investments in 2022 compared to an $8 million loss on fair value adjustments to equity investments in 2021; and 
+
+&#8226; a $3 million loss on equity method investments in 2022 compared to a $5 million gain on equity method investments in 2021; partially offset by 
+
+&#8226; $21 million gain on TETRA Ireland equity method investment in 2022 that did not occur in 2021; 
+
+&#8226; $37 million of foreign currency gains in 2022 compared to $17 million of foreign currency gains in 2021; and 
+
+&#8226; a $6 million loss on the extinguishment of long-term debt in 2022 compared to a $18 million loss on the extinguishment of long-term debt in 2021 (see "Note 5: Debt and Credit Facilities" to our consolidated financial statements in &#8220;Part II. Item 8. Financial Statements and Supplementary Data&#8221; of this Form 10-K for further information). 
+
+Effective Tax Rate 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2022 2021 Income tax expense $ 148 &#160; $ 302 ##TABLE_END
+
+Income tax expense decreased by $154 million in 2022 compared to 2021, for an effective tax rate of 9.8%, which is lower than the current U.S. federal statutory rate of 21% primarily due to: 
+
+&#8226; a $77 million non-recurring net deferred tax benefit as a result of an intra-group transfer of certain intellectual property rights in 2022 (see "Note 7: Income Taxes" to our consolidated financial statements in &#8220;Part II. Item 8. Financial Statements and Supplementary Data&#8221; of this Form 10-K for further information); 
+
+&#8226; $68 million of benefits due to the recognition of excess tax benefits on share-based compensation; 
+
+&#8226; a $59 million benefit from the foreign derived intangible income deduction; and 
+
+&#8226; a $47 million benefit due to a change in the Company's ability to utilize tax attribute carryforwards resulting in the partial release of valuation allowances. 
+
+Our effective tax rate in 2021 was 19.5%, which is lower than the current U.S. federal statutory rate of 21% primarily due to: 
+
+&#8226; a $34 million benefit due to a change in the Company's ability to utilize tax attribute carryforwards resulting in the partial release of valuation allowances; and 
+
+&#8226; $32 million of benefits due to the recognition of excess tax benefits on share-based compensation. 
+
+Results of Operations&#8212;2021 Compared to 2020 
+
+Net Sales 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2021 2020 % Change Net sales from Products and Systems Integration $ 5,033 &#160; $ 4,634 9 % Net sales from Software and Services 3,138 &#160; 2,780 13 % Net sales $ 8,171 &#160; $ 7,414 10 % ##TABLE_END
+
+The Products and Systems Integration segment&#8217;s net sales represented 62% of our net sales in 2021, compared to 63% in 2020. The Software and Services segment&#8217;s net sales represented 38% of our net sales in 2021, compared to 37% in 2020. 
+
+Net sales increased by $757 million, or 10%, in 2021 compared to 2020. The 9% increase in net sales within the Products and Systems Integration segment was driven by a 9% increase in the North America region and an 8% increase in the International region. The 13% increase in the Software and Services segment was driven by a 14% increase in the North America region and a 11% increase in the International region. The increase in net sales included: 
+
+&#8226; an increase in the Products and Systems Integration segment, inclusive of $89 million of revenue from acquisitions, driven by growth in LMR, inclusive of public safety LMR products and PCR, and Video; 
+
+&#8226; growth in the Software and Services segment, inclusive of $31 million of revenue from acquisitions, driven by an increase in LMR services, Video and Command Center; and 
+
+&#8226; $130 million from favorable currency rates. 
+
+Regional results include: 
+
+&#8226; a 11% increase in the North America region, inclusive of revenue from acquisitions, driven by growth in LMR, Video and Command Center; and 
+
+&#8226; a 9% increase in the International region, inclusive of revenue from acquisitions, driven by growth in LMR, Video and Command Center. 
+
+Products and Systems Integration 
+
+The 9% increase in the Products and Systems Integration segment was driven by the following: 
+
+&#8226; $211 million, or 5% growth in public safety LMR products and PCR, driven by both the North America and International regions; 
+
+&#8226; $188 million, or 29% growth in Video, inclusive of revenue from acquisitions, in both the North America and International regions; 
+
+&#8226; inclusive of $60 million from favorable currency rates. 
+
+Software and Services 
+
+The 13% increase in the Software and Services segment was driven by the following: 
+
+&#8226; $197 million, or 10% growth in LMR services, driven by both the North America and International regions; 
+
+&#8226; $112 million, or 39% growth in Video software, inclusive of revenue from acquisitions, driven by both the North America and International regions; 
+
+&#8226; $49 million, or 10% growth in Command Center, inclusive of revenue from acquisitions, driven by both the North America and International regions; 
+
+&#8226; inclusive of $70 million from favorable currency rates. 
+
+Gross Margin 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2021 2020 % Change Gross margin $ 4,040 &#160; $ 3,608 12 % ##TABLE_END
+
+Gross margin was 49.4% of net sales in 2021 compared to 48.7% of net sales in 2020. The primary drivers of this increase in gross margin as a percentage of net sales were: 
+
+&#8226; higher gross margin as a percentage of net sales in the Software and Services segment, inclusive of acquisitions, primarily driven by higher gross margin contribution from sales growth and improved mix of service offerings, partially offset by higher employee incentive costs; and 
+
+&#8226; consistent gross margin as a percentage of net sales in the Products and Systems Integration segment as a result of favorable product mix and reduced reorganization of business charges, offset by an increase in employee incentive costs. 
+
+Selling, General and Administrative Expenses 
+
+##TABLE_START Years ended December 31 (In millions) 2021 2020 % Change Selling, general and administrative expenses $ 1,353 &#160; $ 1,293 5 % ##TABLE_END
+
+SG&#38;A expenses increased $60 million, or 5% in 2021 compared to 2020. SG&#38;A expenses were 16.6% of net sales in 2021 compared to 17.4% of net sales in 2020. The increase in SG&#38;A expenses was primarily due to higher employee incentive costs, expenses associated with acquired businesses, higher travel expenses and increased share-based compensation expenses. The overall increase in SG&#38;A expenses was partially offset by lower Hytera-related legal expenses. 
+
+Research and Development Expenditures 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2021 2020 % Change Research and development expenditures $ 734 &#160; $ 686 7 % ##TABLE_END
+
+R&#38;D expenditures increased $48 million, or 7% in 2021 compared to 2020 primarily due to higher employee incentive costs and higher expenses associated with acquired businesses, partially offset by lower share-based compensation expenses. R&#38;D expenditures were 9.0% of net sales in 2021 and 9.3% of net sales in 2020. 
+
+Other Charges 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2021 2020 Other charges $ 286 &#160; $ 246 ##TABLE_END
+
+Other charges increased $40 million, or 16% in 2021 compared to 2020 primarily due to the following: 
+
+&#8226; $50 million gain on the sale of property, plant and equipment in 2020 that did not recur in 2021; 
+
+&#8226; $236 million of intangible asset amortization expense in 2021 compared to $215 million in 2020; 
+
+&#8226; $10 million of operating lease asset impairments in 2021 that did not occur in 2020; and 
+
+&#8226; $15 million of charges for acquisition-related transaction fees in 2021 compared to $9 million in 2020; partially offset by 
+
+&#8226; $24 million of net reorganization of business charges in 2021 compared to $57 million in 2020 (see "Note 14: Reorganization of Businesses" to our consolidated financial statements in &#8220;Part II. Item 8. Financial Statements and Supplementary Data&#8221; of this Form 10-K for further information); 
+
+&#8226; $3 million of legal settlements in 2021 compared to $9 million in 2020; and 
+
+&#8226; $5 million of fixed asset impairments in 2020 that did not recur in 2021. 
+
+Operating Earnings 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2021 2020 Operating earnings from Products and Systems Integration $ 760 &#160; $ 656 Operating earnings from Software and Services 907 &#160; 727 Operating earnings $ 1,667 &#160; $ 1,383 ##TABLE_END
+
+Operating earnings increased $284 million, or 21% in 2021 compared to 2020. The increase in Operating earnings was due to: 
+
+&#8226; Software and Services segment increased $180 million from 2020 to 2021 driven by higher sales and gross margin contribution and an improved mix of service offerings, offset by higher operating expenses. The increase in operating expenses was driven by higher expenses associated with acquired businesses, higher employee incentive costs and higher intangible assets amortization expense, partially offset by $11 million lower reorganization of business expenses and $7 million lower share-based compensation expenses; and 
+
+&#8226; Products and Systems Integration increased $104 million from 2020 to 2021 primarily driven by increased sales volume, partially offset by higher operating expenses. The increase in operating expenses was driven by a $50 million gain on the sale of property, plant and equipment in 2020 that did not recur in 2021, higher employee incentive costs and higher expenses associated with acquired businesses, partially offset by: $43 million lower reorganization of business charges and $16 million lower Hytera-related legal expenses. 
+
+Interest Expense, net 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2021 2020 Interest expense, net $ (208) $ (220) ##TABLE_END
+
+The $12 million decrease in net interest expense in 2021 compared to 2020 was a result of the reversal of an $11 million non-cash interest accrual related to an international tax audit and lower interest rates on debt outstanding. 
+
+Gains (losses) on Sales of Investments and Businesses, net 
+
+##TABLE_START &#160; Years ended December 31 (In millions) 2021 2020 Gains (Losses) on sales of investments and businesses, net $ 1 &#160; $ (2) ##TABLE_END
+
+The net gains (losses) on sales of investments and businesses were primarily related to the sales of various equity investments. 
+
+Other, net 
+
+##TABLE_START Years ended December 31 (In millions) 2021 2020 Other, net $ 92 &#160; $ 13 ##TABLE_END
+
+Net Other income increased $79 million in 2021 compared to 2020 primarily due to: 
+
+&#8226; $17 million of foreign currency gains in 2021 compared to $44 million of foreign currency losses in 2020; 
+
+&#8226; $123 million of net periodic pension and postretirement benefits in 2021 compared to $81 million of net periodic pension and postretirement benefits in 2020; 
+
+&#8226; an $18 million loss on the extinguishment of long term debt in 2021 compared to a $56 million loss on the extinguishment of long-term debt in 2020 (see "Note 5: Debt and Credit Facilities" to our consolidated financial statements in &#8220;Part II. Item 8. Financial Statements and Supplementary Data&#8221; of this Form 10-K for further information); and 
+
+&#8226; $4 million of investment impairments in 2020 that did not occur in 2021; partially offset by 
+
+&#8226; $30 million loss on derivatives in 2021 compared to a $25 million gain on derivatives in 2020; and 
+
+&#8226; an $8 million loss on fair value adjustments to equity investments in 2021 compared to a $6 million gain on fair value adjustments to equity investments in 2020. 
+
+Effective Tax Rate 
+
+##TABLE_START Years ended December 31 (In millions) 2021 2020 Income tax expense $ 302 &#160; $ 221 ##TABLE_END
+
+Income tax expense increased by $81 million in 2021 compared to 2020, for an effective tax rate of 19.5%, which is lower than the current U.S. federal statutory rate of 21% primarily due to: 
+
+&#8226; a $34 million benefit due to a change in the Company's ability to utilize tax attribute carryforwards resulting in the partial release of valuation allowances; and 
+
+&#8226; $32 million of benefits due to the recognition of excess tax benefits on share-based compensation. 
+
+Our effective tax rate in 2020 was 18.8%, which is lower than the current U.S. federal statutory rate of 21% primarily due to: 
+
+&#8226; $48 million of benefits due to the recognition of excess tax benefits on share-based compensation; and 
+
+&#8226; $28 million of benefits due to the recognition of increased prior and current R&#38;D tax credits. 
+
+Reorganization of Businesses 
+
+In 2022, we recorded net reorganization of business charges of $36 million relating to the separation of 460 employees, of which 150 were indirect employees and 310 were direct employees. The $36 million of charges included $18 million recorded to Cost of sales and $18 million recorded to Other charges. Included in the aggregate $36 million were charges of $36 million for employee separation costs and $10 million for exit costs, partially offset by $10 million of reversals for accruals no longer needed. 
+
+During 2021, we recorded net reorganization of business charges of $32 million relating to the separation of 600 employees, of which 200 were indirect employees and 400 were direct employees. The $32 million of charges included $8 million recorded to Cost of sales and $24 million recorded to Other charges. Included in the aggregate $32 million were charges of $42 million for employee separation costs, partially offset by $10 million of reversals for accruals no longer needed. 
+
+During 2020, we recorded net reorganization of business charges of $86 million relating to the separation of 1,200 employees, of which 400 were indirect employees and 800 were direct employees. The $86 million of charges included $29 million recorded to Cost of sales and $57 million recorded to Other charges. Included in the aggregate $86 million were charges of $100 million for employee separation costs and $2 million for exit costs, partially offset by $16 million of reversals for accruals no longer needed. 
+
+The following table displays the net charges incurred by business segment due to such reorganizations: 
+
+##TABLE_START Years ended December 31 2022 2021 2020 Products and Systems Integration $ 21 &#160; $ 25 $ 69 Software and Services 15 &#160; 7 17 36 &#160; $ 32 $ 86 ##TABLE_END
+
+Cash payments for employee severance in connection with the reorganization of business plans were $34 million, $77 million, and $85 million in 2022, 2021, and 2020, respectively. The reorganization of business accruals for employee separation costs at December 31, 2022 were $26 million which we expect to pay within one year. 
+
+At January 1, 2022, we did not have an accrual for exit costs. There were $10 million of exit cost charges in 2022 related to our exit of the ESN contract with the Home Office. The $10 million of exit costs are recorded in Accrued liabilities in our Consolidated Balance Sheet at December 31, 2022, and are expected to be paid within one year. 
+
+Liquidity and Capital Resources 
+
+##TABLE_START Years Ended December 31 2022 2021 2020 Cash flows provided by (used for): Operating activities $ 1,823 &#160; $ 1,837 $ 1,613 Investing activities (1,387) (742) (437) Financing activities (906) (429) (966) Effect of exchange rates on cash and cash equivalents 
+
+(79) (46) 43 Increase (decrease) in cash and cash equivalents $ (549) $ 620 $ 253 ##TABLE_END
+
+Cash and Cash Equivalents 
+
+At December 31, 2022, $879 million of our $1.3 billion cash and cash equivalents balance was held in the U.S. and $446 million was held in other countries, with $74 million held in the U.K.. Restricted cash was $2 million at each of December 31, 2022 and December 31, 2021. 
+
+In 2022, we repatriated $378 million in cash to the U.S. from international jurisdictions. We routinely repatriate a portion of non-U.S. earnings each year. We have recorded income tax expense for foreign withholding tax and distribution taxes on such earnings and, under current U.S. tax laws, do not expect to incur material incremental U.S. tax on repatriation. 
+
+Where appropriate, we may also pursue capital reduction activities; however, such activities can be involved and lengthy. While we regularly repatriate funds, and a portion of offshore funds can be repatriated with minimal adverse financial impact, repatriation of some of these funds may be subject to delay due to local country approvals. 
+
+Operating Activities 
+
+The decrease in operating cash flows from 2021 to 2022 was driven by: 
+
+&#8226; an increase in working capital, inclusive of higher inventory; 
+
+&#8226; higher employee incentive costs; and 
+
+&#8226; $50 million of higher income tax payments; partially offset by 
+
+&#8226; higher earnings. 
+
+The increase in operating cash flows from 2020 to 2021 was driven by: 
+
+&#8226; an increase in operating earnings as a result of higher sales volume; partially offset by 
+
+&#8226; $76 million of higher income tax payments. 
+
+Investing Activities 
+
+The increase in net cash used for investing activities from 2021 to 2022 was primarily due to: 
+
+&#8226; $656 million increase in acquisitions and investments, driven by acquisitions of $1.2 billion in 2022 compared to $521 million in 2021; 
+
+&#8226; $30 million increase in sales of investments in 2022 compared to 2021; and 
+
+&#8226; $13 million increase in capital expenditures in 2022 compared to 2021. 
+
+The increase in net cash used for investing activities from 2020 to 2021 was primarily due to: 
+
+&#8226; $234 million increase in acquisitions and investments, driven by acquisitions of $521 million in 2021 compared to $287 million in 20201; 
+
+&#8226; $50 million decrease in proceeds from the sale of property, plant and equipment in 2020 that did not recur in 2021; and 
+
+&#8226; $26 million increase in capital expenditures in 2021 compared to 2020 due to higher expenditures for the Airwave and ESN networks. 
+
+Financing Activities 
+
+The increase in cash used for financing activities in 2022 compared to cash used for financing activities in 2021 was driven by (also see further discussion in "Debt," "Credit Facilities," "Share Repurchase Program" and "Dividends" in this section below): 
+
+&#8226; $836 million used for purchases under our share repurchase program in 2022 compared to $528 million in 2021; and 
+
+&#8226; $530 million cash used for the payment of dividends in 2022 compared to $482 million in 2021; partially offset by 
+
+&#8226; $595 million net proceeds from the issuance of $600 million of 5.6% senior notes due 2032 in the second quarter of 2022, which was subsequently used to repurchase $275 million principal amount of our 4.0% senior notes due 2024 for a purchase price of $279 million, excluding $3 million of accrued interest. 
+
+The decrease in cash used for financing activities in 2021 compared to cash used for financing activities in 2020 was driven by: 
+
+&#8226; $844 million net proceeds from the issuance of $850 million of 2.75% senior notes due 2031 in the second quarter of 2021, which was subsequently used to repurchase $324 million principal amount of our 3.5% senior notes due 2023 for a purchase price of $341 million, excluding $3 million of accrued interest; and 
+
+&#8226; $528 million used for purchases under our share repurchase program in 2021 compared to $612 million in 2020; partially offset by 
+
+&#8226; $482 million cash used for the payment of dividends in 2021 compared to $436 million in 2020. 
+
+Sales of Receivables 
+
+We may choose to sell accounts receivable and long-term receivables to third-parties under one-time arrangements. We may or may not retain the obligation to service the sold accounts receivable and long-term receivables. 
+
+The following table summarizes the proceeds received from sales of accounts receivable and long-term receivables for the years ended December 31, 2022, 2021, and 2020: 
+
+##TABLE_START Years ended December 31 2022 2021 2020 Contract-specific discounting facility 49 &#160; $ 211 $ 228 Accounts receivable sales proceeds 179 &#160; 56 74 Long-term receivables sales proceeds 204 &#160; 248 181 Total proceeds from receivable sales $ 432 &#160; $ 515 $ 483 ##TABLE_END
+
+During the year ended December 31, 2022, we utilized and fully repaid a cost-efficient receivable discounting facility, implemented in 2020, to neutralize the impact of increased payment terms under a renegotiated and extended long-term contract in Europe. Both the proceeds and repayment of our receivable sales are included in "Operating Activities" within our Consolidated Statements of Cash Flows. 
+
+At December 31, 2022, the Company had retained servicing obligations for $891 million of long-term receivables, compared to $940 million of long-term receivables at December 31, 2021. Servicing obligations are limited to collection activities related to the sales of accounts receivables and long-term receivables. 
+
+Debt 
+
+We had outstanding long-term debt of $6.0 billion and $5.7 billion, including the current portions of $1 million and $5 million, at December 31, 2022 and December 31, 2021, respectively. 
+
+On September 5, 2019, we entered into an agreement with Silver Lake Partners to issue $1.0 billion of 1.75% senior convertible notes which mature in September 2024 (the "Senior Convertible Notes"). Interest on these notes is payable semiannually. The Senior Notes became fully convertible on September 5, 2021. The notes are convertible based on a conversion rate of 4.9140 per $1,000 principal amount (which is equal to an initial conversion price of $203.50 per share), adjusted for dividends declared through the date of settlement. We adopted ASU No. 2020-06 on January 1, 2022, using the modified retrospective method of adoption. As a result of the adoption of this ASU, the Senior Convertible Notes are accounted as a single liability measured at its amortized cost, given the embedded conversion feature does not require bifurcation and recognition as a derivative. Upon adoption of this ASU, amounts previously recognized in additional paid-in capital from the original embedded conversion feature of $10 million were reclassified to retained earnings. Refer to "Note 1: Summary of Accounting Policies" in this &#8220;Part II. Item 8. Financial Statements and Supplementary Data&#8221; of this Form 10-K for a further discussion regarding the effect of the adoption of ASU 2020-06. 
+
+In August of 2020, we issued $900 million of 2.30% senior notes due 2030. We recognized net proceeds of $892 million after debt issuance costs and debt discounts. A portion of these proceeds were then used to redeem $552 million in principal amount outstanding of the 3.75% senior notes due 2022 for a redemption price of $582 million, excluding $7 million of accrued interest. The remaining proceeds were used to repurchase $293 million in principal amount outstanding of our long-term debt under a tender offer, for a purchase price of $315 million, excluding $5 million of accrued interest. After accelerating the amortization of debt issuance costs and debt discounts, we recognized a loss of $56 million related to the redemption and the repurchase in Other, net within Other income (expense) in our Consolidated Statements of Operations. 
+
+In May of 2021, we issued $850 million of 2.75% senior notes due 2031. We recognized net proceeds of $844 million after debt issuance costs. A portion of these proceeds was then used to redeem $324 million in principal amount of our outstanding long-term debt for a purchase price of $341 million, excluding $3 million of accrued interest. After accelerating the amortization of debt issuance costs, we recognized a loss of $18 million related to the redemption in Other, net within Other income (expense) in our Consolidated Statements of Operations. 
+
+In May of 2022, we issued $600 million of 5.6% senior notes due 2032. We recognized net proceeds of $595 million after debt issuance costs and discounts. A portion of these proceeds was then used to repurchase $275 million in principal amount of the Company's 4.0% senior notes due 2024 pursuant to a cash tender offer, for a purchase price of $279 million, excluding $3 million of accrued interest. After accelerating the amortization of debt discounts and debt issuance costs, we recognized a loss of $6 million related to the tender offer in Other, net within Other income (expense) in our Consolidated Statements of Operations. 
+
+We have an unsecured commercial paper program, backed by the revolving credit facility described below, under which we may issue unsecured commercial paper notes up to a maximum aggregate principal amount of $2.2 billion outstanding at any one time. At maturity, the notes are paid back in full including the interest component. The notes are not redeemable prior to maturity. As of December 31, 2022, we had no outstanding debt under the commercial paper program. 
+
+Credit Facilities 
+
+As of December 31, 2022, we had a $2.25 billion syndicated, unsecured revolving credit facility scheduled to mature in March 2026 (the "2021 Motorola Solutions Credit Agreement"). The 2021 Motorola Solutions Credit Agreement includes a letter of credit sub-limit and fronting commitments of $450 million. An annual facility fee is payable on the undrawn amount of the credit line. The interest rate and facility fee are subject to adjustment if our credit rating changes. We must comply with certain customary covenants including a maximum leverage ratio, as defined in the 2021 Motorola Solutions Credit Agreement. We were in compliance with our financial covenants as of December 31, 2022. Subsequent to year end, on February 8, 2023, we entered into an amendment to the 2021 Motorola Solutions Credit Agreement to replace the interest rate benchmark from London Interbank Offered Rate (LIBOR) to the Secured Overnight Financing Rate (SOFR). 
+
+Share Repurchase Program 
+
+Through a series of actions, the Board of Directors has authorized an aggregate share repurchase amount of up to $16.0 billion of our outstanding shares of common stock (the &#8220;share repurchase program&#8221;). The share repurchase program does not have an expiration date. As of December 31, 2022, we used approximately $14.7 billion of the share repurchase authority, including transaction costs, to repurchase shares, leaving approximately $1.3 billion of authority available for future repurchases. 
+
+Our share repurchases, including transaction costs, for 2022, 2021, and 2020 are summarized as follows: 
+
+##TABLE_START Year Shares Repurchased (in millions) Average Price Amount (in millions) 2022 3.7 $ 225.00 $ 836 2021 2.5 208.41 528 2020 3.9 155.93 612 ##TABLE_END
+
+Dividends 
+
+We paid cash dividends to holders of our common stock of $530 million in 2022, $482 million in 2021, and $436 million in 2020. On January 13, 2023, we paid an additional $148 million in cash dividends to holders of our common stock. 
+
+Adequate Internal Funding Resources 
+
+We believe that we have adequate internal resources available to generate adequate amounts of cash to meet our expected working capital, capital expenditure and cash requirements for the next twelve months and the foreseeable future, as supported by the level of cash and cash equivalents in the U.S., the ability to repatriate funds from foreign jurisdictions, cash provided by operations, as well as liquidity provided by our commercial paper program backed by the 2021 Motorola Solutions Credit Agreement. 
+
+We do not anticipate a material decrease to net future cash flows generated from operations. We expect to use our available cash, investments, and debt facilities to support and invest in our business. This includes investing in our existing products and technologies, seeking new acquisition opportunities related to our strategic growth initiatives and returning cash to shareholders through common stock cash dividend payments (subject to the discretion of our Board of Directors) and share repurchases. Refer also to &#8220;Macroeconomic Events&#8221; of this section of Form 10-K for a discussion of the impact of macroeconomic events on our liquidity, as well as "Part I. Item 1A. Risk Factors" for further discussion regarding access to the capital markets. 
+
+Material Cash Requirements from Contractual and Other Obligations 
+
+Summarized in the table and text below are our short-term (within the next twelve months) and long-term material cash requirements as of December 31, 2022, which we expect to fund with a combination of operating cash flows, existing cash balances or, as needed, borrowings under new or existing debt: 
+
+##TABLE_START &#160; Payments Due by Period (in millions) Short-term Long-term 
+
+Long-term debt obligations, gross (1) 
+
+$ 1 $ 6,061 
+
+Lease obligations (2) 
+
+137 456 
+
+Purchase obligations (3) 
+
+131 175 Total obligations $ 269 $ 6,692 ##TABLE_END
+
+(1) Amounts included represent the estimated principal payments applicable to outstanding debt. Refer to "Note 5: Debt and Credit Facilities" in "Part II. Item 8. Financial Statements and Supplementary Data" of this Form 10-K for discussion related to our long-term debt obligations. 
+
+(2) We lease certain office, factory and warehouse space, land, and other equipment, principally under non-cancelable operating leases. We are evaluating our real estate needs in order to identify opportunities to reduce long-term cash requirements for office space where practicable. Refer to "Note 3: Leases" to our consolidated financial statements in "Part II. Item 8. Financial Statements and Supplementary Data" of this Form 10-K for further discussion of these material lease obligations. 
+
+(3) Amounts included represent firm, non-cancelable commitments. Such commitments include license agreements and agreements with contract manufacturers and suppliers that either allow them to procure inventory based upon criteria as defined by us or establish the parameters defining our requirements. We do not anticipate the cancellation of any of our take-or-pay agreements in the future and estimate that purchases from these suppliers will exceed the minimum obligations during the agreement periods. 
+
+Other Contingencies 
+
+Potential Contractual Damage Claims in Excess of Underlying Contract Value: In certain circumstances, we enter into contracts with customers pursuant to which the damages that could be claimed by the customer for failed performance might exceed the revenue we receive from the contract. Contracts with these types of uncapped damages provisions are fairly rare, but individual contracts could still represent meaningful risk. There is a possibility that a claim by a counterparty to one of these contracts could result in expenses that are far in excess of the revenue received from the counterparty in connection with the contract. 
+
+Indemnification Provisions: We may provide indemnifications for losses that result from the breach of general warranties contained in certain commercial and intellectual property agreements. Historically, we have not made significant payments under these agreements, nor have there been significant claims asserted against us. However, there is an increasing risk in relation to intellectual property indemnities given the current legal climate. In indemnification cases, payment by us is conditioned on the other party making a claim pursuant to the procedures specified in the particular contract, which procedures typically allow us to challenge the other party&#8217;s claims. In some instances we may have recourse against third-parties for certain payments made by us. 
+
+Legal Matters: We are a defendant in various lawsuits, claims, and actions, which arise in the normal course of business. In the opinion of management, the ultimate disposition of these matters will not have a material adverse effect on our consolidated financial position or liquidity. However, an unfavorable resolution could have a material adverse effect on our results of operations in the periods in which the matters are ultimately resolved, or in the periods in which more information is obtained that changes management's opinion of the ultimate disposition. 
+
+Long-term Customer Financing Commitments 
+
+Outstanding Commitments: &#160; Certain purchasers of our products and services may request that we provide long-term financing (defined as financing with a term of greater than one year) in connection with the sale of equipment. These requests may include all or a portion of the purchase price of the products and services. Our obligation to provide long-term financing may be conditioned on the issuance of a letter of credit in favor of us by a reputable bank to support the purchaser's credit or a pre-existing commitment from a reputable bank to purchase the long-term receivables from us. We had outstanding commitments to provide long-term financing to third-parties totaling $65 million at December 31, 2022 and $56 million at December 31, 2021. 
+
+Critical Accounting Estimates 
+
+This Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations discusses our consolidated financial statements, which have been prepared in accordance with U.S. generally accepted accounting principles ("GAAP"). The preparation of these financial statements requires management to make estimates and assumptions that affect the reported amounts of assets and liabilities and the disclosure of contingent assets and liabilities at the date of the financial statements, as well as the reported amounts of revenues and expenses during the reporting period. 
+
+Management bases its estimates and judgments on historical experience, current economic and industry conditions and on various other factors that are believed to be reasonable under the circumstances. This forms the basis for making judgments about the carrying values of assets and liabilities that are not readily apparent from other sources. Actual results may differ from these estimates under different assumptions or conditions. The Company believes that the following discussion addresses the Company&#8217;s most critical accounting estimates, which are those that are most important to the portrayal of the Company&#8217;s financial condition and results of operations and require management&#8217;s most difficult, subjective and complex judgments. 
+
+Revenue Recognition 
+
+We enter into arrangements which consist of multiple promises to our customers. We evaluate whether the promised goods and services are distinct or a series of distinct goods or services. Where contracts contain multiple performance obligations, we generally allocate the total estimated consideration to each performance obligation based on applying an estimated selling price (&#8220;ESP&#8221;) as our best estimate of standalone selling price. We determine ESP by: (i) collecting all reasonably available data points including sales, cost and margin analyses of the product or services, and other inputs based on our normal pricing and discounting practices, (ii) making any reasonably required adjustments to the data based on market and Company-specific factors, and (iii) stratifying the data points, when appropriate, based on major product or service, type of customer, geographic market, and sales volume. 
+
+We account for certain system contracts on an over-time basis, electing an input method of estimated costs as a measure of performance completed. The selection of the measurement of progress using estimated costs was based on a thorough consideration of alternatives of various output and input measures, including contract milestones and labor hours. However, we have determined that other input and output measures are not an appropriate measure of progress as they do not accurately align with the transfer of control on our customized systems. The selection of costs incurred as a measure of progress aligns the transfer of control to the overall production of the customized system. 
+
+For system contracts accounted for over time using estimated costs as a measure of performance completed, we rely on estimates around the total estimated costs to complete the contract (&#8220;Estimated Costs at Completion&#8221;). Total Estimated Costs at Completion include direct labor, material and subcontracting costs. Due to the nature of the efforts required to be performed to meet the underlying performance obligation, determining Estimated Costs at Completion may be complex and subject to many variables. We have a standard and disciplined quarterly process in which management reviews the progress and performance of open contracts in order to determine the best estimate of Estimated Costs at Completion. As part of this process, management reviews information including, but not limited to, any outstanding key contract matters, progress towards completion, the project schedule, identified risks and opportunities, and the related changes in estimates of costs. The risks and opportunities include management&#8217;s judgment about the ability and cost to achieve the project schedule, technical requirements, and other contract requirements. Management must make assumptions and estimates regarding labor productivity and availability, the complexity of work to be performed, the availability and cost of materials, and performance by subcontractors, among other variables. Based on this analysis, any adjustment to net sales, cost of sales, and the related impact to operating income are recorded as necessary in the period they become known. When estimates of total costs to be incurred on a contract exceed estimates of total revenue to be earned, a provision for the entire loss on the contract is recorded in the period in which the loss is determined. 
+
+Retirement Benefits 
+
+Our benefit obligations and net periodic pension costs (benefits) associated with our domestic noncontributory pension plans (&#8220;U.S. Pension Benefit Plans&#8221;), our foreign noncontributory pension plans (&#8220;Non-U.S. Plans&#8221;), as well as our domestic postretirement health care plan (&#8220;Postretirement Health Care Benefits Plan&#8221;), are determined using actuarial assumptions. The assumptions are based on management&#8217;s best estimates, after consulting with outside investment advisors and actuaries. 
+
+Accounting methodologies use an attribution approach that generally spreads the effects of individual events over the service lives of the participants in the plan, or estimated average lifetime when almost all of the plan participants are considered "inactive." Examples of &#8220;events&#8221; are plan amendments and changes in actuarial assumptions such as discount rate, expected long-term rate of return on plan assets, and rate of compensation increases. 
+
+There are various assumptions used in calculating the net periodic costs (benefits) and related benefit obligations. One of these assumptions is the expected long-term rate of return on plan assets. The required use of the expected long-term rate of return on plan assets may result in recognized pension income that is greater or less than the actual returns of those plan assets in any given year. Over time, however, the expected long-term returns are designed to approximate the actual long-term returns. We use a five-year, market-related asset value method of recognizing asset related gains and losses. 
+
+We use long-term historical actual return experience with consideration of the expected investment mix of the plans&#8217; assets, as well as future estimates of long-term investment returns, to develop our expected rate of return assumption used in calculating the net periodic pension cost (benefit) and the net postretirement health care benefit. Our investment return assumption for the U.S. Pension Benefit Plans was 6.76% in 2022 and 6.75% in 2021. Our investment return assumption for the Postretirement Health Care Benefits Plan was 6.90% in 2022 and 6.75% in 2021. Our weighted average investment return assumption for the Non-U.S. Plans was 4.78% in 2022 and 4.54% in 2021. For the U.S. Pension Benefit Plans, a 25 bps increase in expected return on plan assets would result in $9 million of additional net periodic pension benefit and a 25 bps decrease would result in a $9 million reduction in net periodic pension benefit. The impact of a similar increase or decrease on the Non-U.S. Plans and the Postretirement Health Care Benefits Plan would be de minimis. 
+
+A second key assumption is the discount rate. The discount rate assumptions used for the U.S. Pension Benefit Plans, the Non-U.S. Plans and the Postretirement Health Care Benefits Plan reflect, at December 31 of each year, the prevailing market 
+
+rates for high-quality, fixed-income debt instruments that, if the obligation was settled at the measurement date, would provide the necessary future cash flows to pay the benefit obligation when due. Our discount rates for measuring our U.S. Pension Benefit Plan obligations were 5.20% and 2.98% at December 31, 2022 and 2021, respectively. Our weighted average discount rates for measuring our Non-U.S. Plans were 4.6% and 1.82% at December 31, 2022 and 2021, respectively. Our discount rates for measuring the Postretirement Health Care Benefits Plan obligation were 5.10% and 2.78% at December 31, 2022 and 2021, respectively. 
+
+A change in our discount rate on the Postretirement Health Care Benefits Plan would be de minimis. The effects of a change in the discount rate on the projected benefit obligation for both the U.S. and Non-U.S. Pension Benefit Plans are as follows: 
+
+##TABLE_START 2022 Projected Benefit Obligation 
+
+Increase / (Decrease) 
+
+(in millions) U.S. Pension Benefit Plans Non-U.S. Pension Benefit Plans Discount rate 25 bps increase $ (111) $ (3) 25 bps decrease 117 3 ##TABLE_END
+
+Under relevant accounting rules, when almost all of the plan participants are considered inactive, the amortization period for certain unrecognized losses changes from the average remaining service period to the average remaining lifetime of the participant. As such, depending on the specific plan, we amortize gains and losses over periods ranging from nine to twenty-seven years. Prior service costs are being amortized over periods ranging from one to seventeen years. Benefits under all pension plans are valued based on the projected unit credit cost method. 
+
+Valuation and Recoverability of Goodwill 
+
+We assess the recorded amount of goodwill for recovery on an annual basis as of the last day of the third quarter of each fiscal year. Goodwill is assessed more frequently if an event occurs or circumstances change that would indicate it is more-likely-than-not that the fair value of a reporting unit is below its carrying amount. We continually assess whether any such events and circumstances have occurred, which requires a significant amount of judgment. Such events and circumstances may include: (i) adverse changes in macroeconomic conditions, (ii) adverse changes in the industry or market in which we transact, (iii) changes in cost factors negatively impacting earnings and cash flows, (iv) negative or declining overall financial performance, (v) events affecting the carrying value or composition of a reporting unit, or (vi) a sustained decrease in share price, among others. Any such adverse event or change in circumstances could have a significant impact on the recoverability of goodwill and could have a material impact on our consolidated financial statements. 
+
+The goodwill impairment assessment is performed at the reporting unit level. A reporting unit is an operating segment or one level below an operating segment (referred to as a &#8220;component&#8221;). A component of an operating segment is a reporting unit if the component constitutes a business for which discrete financial information is available and segment management regularly reviews the operating results of that component. When two or more components of an operating segment have similar economic characteristics, the components are aggregated and deemed a single reporting unit. An operating segment is deemed to be a reporting unit if all of its components are similar, if none of its components is a reporting unit, or if the segment comprises only a single component. Based on this guidance, we have determined that our Products and Systems Integration and Software and Services segments are comprised of three and two reporting units, respectively. 
+
+In the fiscal year 2022, we elected to perform a quantitative assessment of goodwill for impairment. The quantitative assessment involved the assignment of assets and liabilities to each of our reporting units and an assessment of the fair value of each of our reporting units. We utilized an income approach (discounted cash flows) to estimate the fair value of each reporting unit which was corroborated by market multiples when available and as appropriate. Key assumptions in the quantitative analysis included revenue growth rates (including long-term growth rates for terminal value assumptions), operating margin estimates, discount rates, and where applicable, the comparable multiples from publicly traded companies in our industry. The quantitative test indicated all reporting units had fair values in excess of their carrying values, and no impairment of goodwill was identified as a result of our annual testing conducted in 2022. 
+
+We performed a qualitative assessment to determine whether it was more-likely-than-not that the fair value of each reporting unit was less than its carrying amount for the fiscal years 2021 and 2020. In performing this qualitative assessment we assessed relevant events and circumstances including macroeconomic conditions, industry and market conditions, cost factors, overall financial performance, changes in enterprise value and entity-specific events. For fiscal years 2021 and 2020, we concluded it was more-likely-than-not that the fair value of each reporting unit exceeded its carrying value. 
+
+Valuation of Deferred Tax Assets and Liabilities 
+
+We use the asset and liability method of accounting for income taxes. Under this method, income tax expense is recognized for the amount of taxes payable or refundable for the current year. In addition, deferred tax assets and liabilities are recognized for the expected future tax consequences of temporary differences between the financial reporting and tax bases of assets and liabilities, and for operating losses and tax credit carryforwards. Management makes assumptions, judgments and estimates to determine our current and deferred tax provision and also the deferred tax assets and liabilities. We evaluate our deferred tax assets quarterly to determine if adjustments to our valuation allowance are required based on the consideration of all available positive and negative evidence. 
+
+Our assumptions, judgments and estimates for computing the income tax provision takes into account current tax laws, our interpretation of current tax law and possible outcomes of current and future audits conducted by foreign and domestic tax authorities. We believe such estimates to be reasonable; however, the final determination of certain audits could significantly impact the amounts provided for income taxes in our financial statements. 
+
+Recent Accounting Pronouncements 
+
+See &#8220;Note 1: Summary of Significant Accounting Policies&#8221; to our consolidated financial statements in &#8220;Part II. Item 8: Financial Statements and Supplementary Data&#8221; of this Form 10-K. 
+

@@ -1,0 +1,264 @@
+ Item 7. Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations 
+
+The following discussion should be read in conjunction with the consolidated financial statements and accompanying notes included in Part II, Item 8 of this Form 10-K. This section of this Form 10-K generally discusses 2022 and 2021 items and year-to-year comparisons between 2022 and 2021. Discussions of 2020 items and year-to-year comparisons between 2021 and 2020 are not included in this Form 10-K, and can be found in &#8220;Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations&#8221; in Part II, Item 7 of the Company&#8217;s Annual Report on Form 10-K for the fiscal year ended September 25, 2021. 
+
+Fiscal Year Highlights 
+
+Fiscal 2022 Highlights 
+
+Total net sales increased 8% or $28.5 billion during 2022 compared to 2021, driven primarily by higher net sales of iPhone, Services and Mac. The weakness in foreign currencies relative to the U.S. dollar had an unfavorable year-over-year impact on all Products and Services net sales during 2022. 
+
+The Company announces new product, service and software offerings at various times during the year. Significant announcements during fiscal 2022 included the following: 
+
+First Quarter 2022: 
+
+&#8226; Updated MacBook Pro 14&#8221; and MacBook Pro 16&#8221;, powered by the Apple M1 Pro or M1 Max chip; and 
+
+&#8226; Third generation of AirPods. 
+
+Second Quarter 2022: 
+
+&#8226; Updated iPhone SE with 5G technology; 
+
+&#8226; All-new Mac Studio, powered by the Apple M1 Max or M1 Ultra chip; 
+
+&#8226; All-new Studio Display&#8482;; and 
+
+&#8226; Updated iPad Air with 5G technology, powered by the Apple M1 chip. 
+
+Third Quarter 2022: 
+
+&#8226; Updated MacBook Air and MacBook Pro 13&#8221;, both powered by the Apple M2 chip; 
+
+&#8226; iOS 16, macOS Ventura, iPadOS 16 and watchOS 9, updates to the Company&#8217;s operating systems; and 
+
+&#8226; Apple Pay Later, a buy now, pay later service. 
+
+Fourth Quarter 2022: 
+
+&#8226; iPhone 14, iPhone 14 Plus, iPhone 14 Pro and iPhone 14 Pro Max; 
+
+&#8226; Second generation of AirPods Pro; and 
+
+&#8226; Apple Watch Series 8, updated Apple Watch SE and all-new Apple Watch Ultra. 
+
+In April 2022, the Company announced an increase to its Program authorization from $315 billion to $405 billion and raised its quarterly dividend from $0.22 to $0.23 per share beginning in May 2022. During 2022, the Company repurchased $90.2 billion of its common stock and paid dividends and dividend equivalents of $14.8 billion. 
+
+COVID-19 
+
+The COVID-19 pandemic has had, and continues to have, a significant impact around the world, prompting governments and businesses to take unprecedented measures, such as restrictions on travel and business operations, temporary closures of businesses, and quarantine and shelter-in-place orders. The COVID-19 pandemic has at times significantly curtailed global economic activity and caused significant volatility and disruption in global financial markets. The COVID-19 pandemic and the measures taken by many countries in response have affected and could in the future materially impact the Company&#8217;s business, results of operations and financial condition. 
+
+Certain of the Company&#8217;s outsourcing partners, component suppliers and logistical service providers have experienced disruptions during the COVID-19 pandemic, resulting in supply shortages. Similar disruptions could occur in the future. 
+
+Apple Inc. | 2022 Form 10-K | 20 
+
+Products and Services Performance 
+
+The following table shows net sales by category for 2022, 2021 and 2020 (dollars in millions): 
+
+##TABLE_START 2022 Change 2021 Change 2020 Net sales by category: iPhone (1) 
+
+$ 205,489 7 % $ 191,973 39 % $ 137,781 Mac (1) 
+
+40,177 14 % 35,190 23 % 28,622 iPad (1) 
+
+29,292 (8) % 31,862 34 % 23,724 Wearables, Home and Accessories (1)(2) 
+
+41,241 7 % 38,367 25 % 30,620 Services (3) 
+
+78,129 14 % 68,425 27 % 53,768 Total net sales $ 394,328 8 % $ 365,817 33 % $ 274,515 ##TABLE_END
+
+(1) Products net sales include amortization of the deferred value of unspecified software upgrade rights, which are bundled in the sales price of the respective product. 
+
+(2) Wearables, Home and Accessories net sales include sales of AirPods, Apple TV, Apple Watch, Beats products, HomePod mini and accessories. 
+
+(3) Services net sales include sales from the Company&#8217;s advertising, AppleCare, cloud, digital content, payment and other services. Services net sales also include amortization of the deferred value of services bundled in the sales price of certain products. 
+
+iPhone 
+
+iPhone net sales increased during 2022 compared to 2021 due primarily to higher net sales from the Company&#8217;s new iPhone models released since the beginning of the fourth quarter of 2021. 
+
+Mac 
+
+Mac net sales increased during 2022 compared to 2021 due primarily to higher net sales of laptops. 
+
+iPad 
+
+iPad net sales decreased during 2022 compared to 2021 due primarily to lower net sales of iPad Pro. 
+
+Wearables, Home and Accessories 
+
+Wearables, Home and Accessories net sales increased during 2022 compared to 2021 due primarily to higher net sales of Apple Watch and AirPods. 
+
+Services 
+
+Services net sales increased during 2022 compared to 2021 due primarily to higher net sales from advertising, cloud services and the App Store. 
+
+Apple Inc. | 2022 Form 10-K | 21 
+
+Segment Operating Performance 
+
+The Company manages its business primarily on a geographic basis. The Company&#8217;s reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific. Americas includes both North and South America. Europe includes European countries, as well as India, the Middle East and Africa. Greater China includes China mainland, Hong Kong and Taiwan. Rest of Asia Pacific includes Australia and those Asian countries not included in the Company&#8217;s other reportable segments. Although the reportable segments provide similar hardware and software products and similar services, each one is managed separately to better align with the location of the Company&#8217;s customers and distribution partners and the unique market dynamics of each geographic region. Further information regarding the Company&#8217;s reportable segments can be found in Part II, Item 8 of this Form 10-K in the Notes to Consolidated Financial Statements in Note 11, &#8220;Segment Information and Geographic Data.&#8221; 
+
+The following table shows net sales by reportable segment for 2022, 2021 and 2020 (dollars in millions): 
+
+##TABLE_START 2022 Change 2021 Change 2020 Net sales by reportable segment: Americas 
+
+$ 169,658 11 % $ 153,306 23 % $ 124,556 Europe 
+
+95,118 7 % 89,307 30 % 68,640 Greater China 
+
+74,200 9 % 68,366 70 % 40,308 Japan 
+
+25,977 (9) % 28,482 33 % 21,418 Rest of Asia Pacific 
+
+29,375 11 % 26,356 35 % 19,593 Total net sales $ 394,328 8 % $ 365,817 33 % $ 274,515 ##TABLE_END
+
+Americas 
+
+Americas net sales increased during 2022 compared to 2021 due primarily to higher net sales of iPhone, Services and Mac. 
+
+Europe 
+
+Europe net sales increased during 2022 compared to 2021 due primarily to higher net sales of iPhone and Services. The weakness in foreign currencies relative to the U.S. dollar had a net unfavorable year-over-year impact on Europe net sales during 2022. 
+
+Greater China 
+
+Greater China net sales increased during 2022 compared to 2021 due primarily to higher net sales of iPhone and Services. The strength of the renminbi relative to the U.S. dollar had a favorable year-over-year impact on Greater China net sales during 2022. 
+
+Japan 
+
+Japan net sales decreased during 2022 compared to 2021 due to the weakness of the yen relative to the U.S. dollar. 
+
+Rest of Asia Pacific 
+
+Rest of Asia Pacific net sales increased during 2022 compared to 2021 due primarily to higher net sales of iPhone, Mac and Services. The weakness in foreign currencies relative to the U.S. dollar had an unfavorable year-over-year impact on Rest of Asia Pacific net sales during 2022. 
+
+Apple Inc. | 2022 Form 10-K | 22 
+
+Gross Margin 
+
+Products and Services gross margin and gross margin percentage for 2022, 2021 and 2020 were as follows (dollars in millions): 
+
+##TABLE_START 2022 2021 2020 Gross margin: Products $ 114,728 $ 105,126 $ 69,461 Services 56,054 47,710 35,495 Total gross margin $ 170,782 $ 152,836 $ 104,956 ##TABLE_END
+
+##TABLE_START Gross margin percentage: Products 36.3 % 35.3 % 31.5 % Services 71.7 % 69.7 % 66.0 % Total gross margin percentage 43.3 % 41.8 % 38.2 % ##TABLE_END
+
+Products Gross Margin 
+
+Products gross margin increased during 2022 compared to 2021 due primarily to a different Products mix and higher Products volume, partially offset by the weakness in foreign currencies relative to the U.S. dollar. 
+
+Products gross margin percentage increased during 2022 compared to 2021 due primarily to a different Products mix, partially offset by the weakness in foreign currencies relative to the U.S. dollar. 
+
+Services Gross Margin 
+
+Services gross margin increased during 2022 compared to 2021 due primarily to higher Services net sales, partially offset by the weakness in foreign currencies relative to the U.S. dollar. 
+
+Services gross margin percentage increased during 2022 compared to 2021 due primarily to improved leverage and a different Services mix, partially offset by the weakness in foreign currencies relative to the U.S. dollar. 
+
+The Company&#8217;s future gross margins can be impacted by a variety of factors, as discussed in Part I, Item 1A of this Form 10-K under the heading &#8220;Risk Factors.&#8221; As a result, the Company believes, in general, gross margins will be subject to volatility and downward pressure. 
+
+Operating Expenses 
+
+Operating expenses for 2022, 2021 and 2020 were as follows (dollars in millions): 
+
+##TABLE_START 2022 Change 2021 Change 2020 Research and development 
+
+$ 26,251 20 % $ 21,914 17 % $ 18,752 Percentage of total net sales 
+
+7 % 6 % 7 % Selling, general and administrative 
+
+$ 25,094 14 % $ 21,973 10 % $ 19,916 Percentage of total net sales 
+
+6 % 6 % 7 % Total operating expenses 
+
+$ 51,345 17 % $ 43,887 13 % $ 38,668 Percentage of total net sales 
+
+13 % 12 % 14 % ##TABLE_END
+
+Research and Development 
+
+The year-over-year growth in R&#38;D expense in 2022 was driven primarily by increases in headcount-related expenses and engineering program costs. 
+
+Selling, General and Administrative 
+
+The year-over-year growth in selling, general and administrative expense in 2022 was driven primarily by increases in headcount-related expenses, advertising and professional services. 
+
+Apple Inc. | 2022 Form 10-K | 23 
+
+Other Income/(Expense), Net 
+
+Other income/(expense), net (&#8220;OI&#38;E&#8221;) for 2022, 2021 and 2020 was as follows (dollars in millions): 
+
+##TABLE_START 2022 Change 2021 Change 2020 Interest and dividend income 
+
+$ 2,825 $ 2,843 $ 3,763 Interest expense 
+
+(2,931) (2,645) (2,873) Other income/(expense), net (228) 60 (87) Total other income/(expense), net 
+
+$ (334) (229) % $ 258 (68) % $ 803 ##TABLE_END
+
+The decrease in OI&#38;E during 2022 compared to 2021 was due primarily to higher realized losses on debt securities, unfavorable fair value adjustments on equity securities and higher interest expense, partially offset by higher foreign exchange gains. 
+
+Provision for Income Taxes 
+
+Provision for income taxes, effective tax rate and statutory federal income tax rate for 2022, 2021 and 2020 were as follows (dollars in millions): 
+
+##TABLE_START 2022 2021 2020 Provision for income taxes 
+
+$ 19,300 $ 14,527 $ 9,680 Effective tax rate 
+
+16.2 % 13.3 % 14.4 % Statutory federal income tax rate 
+
+21 % 21 % 21 % ##TABLE_END
+
+The Company&#8217;s effective tax rate for 2022 was lower than the statutory federal income tax rate due primarily to a lower effective tax rate on foreign earnings, tax benefits from share-based compensation and the impact of the U.S. federal R&#38;D credit, partially offset by state income taxes. The Company&#8217;s effective tax rate for 2021 was lower than the statutory federal income tax rate due primarily to a lower effective tax rate on foreign earnings, tax benefits from share-based compensation and foreign-derived intangible income deductions. 
+
+The Company&#8217;s effective tax rate for 2022 was higher compared to 2021 due primarily to a higher effective tax rate on foreign earnings, including the impact to U.S. foreign tax credits as a result of regulatory guidance issued by the U.S. Department of the Treasury in 2022, and lower tax benefits from foreign-derived intangible income deductions and share-based compensation. 
+
+Liquidity and Capital Resources 
+
+The Company believes its balances of cash, cash equivalents and unrestricted marketable securities, which totaled $156.4 billion as of September 24, 2022, along with cash generated by ongoing operations and continued access to debt markets, will be sufficient to satisfy its cash requirements and capital return program over the next 12 months and beyond. 
+
+The Company&#8217;s material cash requirements include the following contractual obligations. 
+
+Debt 
+
+As of September 24, 2022, the Company had outstanding fixed-rate notes with varying maturities for an aggregate principal amount of $111.8 billion (collectively the &#8220;Notes&#8221;), with $11.1 billion payable within 12 months. Future interest payments associated with the Notes total $41.3 billion, with $2.9 billion payable within 12 months. 
+
+The Company also issues unsecured short-term promissory notes (&#8220;Commercial Paper&#8221;) pursuant to a commercial paper program. As of September 24, 2022, the Company had $10.0 billion of Commercial Paper outstanding, all of which was payable within 12 months. 
+
+Leases 
+
+The Company has lease arrangements for certain equipment and facilities, including corporate, data center, manufacturing and retail space. As of September 24, 2022, the Company had fixed lease payment obligations of $15.3 billion, with $2.0 billion payable within 12 months. 
+
+Apple Inc. | 2022 Form 10-K | 24 
+
+Manufacturing Purchase Obligations 
+
+The Company utilizes several outsourcing partners to manufacture subassemblies for the Company&#8217;s products and to perform final assembly and testing of finished products. The Company also obtains individual components for its products from a wide variety of individual suppliers. Outsourcing partners acquire components and build product based on demand information supplied by the Company, which typically covers periods up to 150 days. As of September 24, 2022, the Company had manufacturing purchase obligations of $71.1 billion, with $68.4 billion payable within 12 months. The Company&#8217;s manufacturing purchase obligations are primarily noncancelable. 
+
+Other Purchase Obligations 
+
+The Company&#8217;s other purchase obligations primarily consist of noncancelable obligations to acquire capital assets, including assets related to product manufacturing, and noncancelable obligations related to internet services and content creation. As of September 24, 2022, the Company had other purchase obligations of $17.8 billion, with $6.8 billion payable within 12 months. 
+
+Deemed Repatriation Tax Payable 
+
+As of September 24, 2022, the balance of the deemed repatriation tax payable imposed by the U.S. Tax Cuts and Jobs Act of 2017 (the &#8220;Act&#8221;) was $22.0 billion, with $5.3 billion expected to be paid within 12 months. 
+
+In addition to its contractual cash requirements, the Company has a capital return program authorized by the Board of Directors. The Program does not obligate the Company to acquire a minimum amount of shares. As of September 24, 2022, the Company&#8217;s quarterly cash dividend was $0.23 per share. The Company intends to increase its dividend on an annual basis, subject to declaration by the Board of Directors. 
+
+Critical Accounting Estimates 
+
+The preparation of financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (&#8220;GAAP&#8221;) and the Company&#8217;s discussion and analysis of its financial condition and operating results require the Company&#8217;s management to make judgments, assumptions and estimates that affect the amounts reported. Note 1, &#8220;Summary of Significant Accounting Policies&#8221; of the Notes to Consolidated Financial Statements in Part II, Item 8 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company&#8217;s consolidated financial statements. Management bases its estimates on historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. 
+
+Uncertain Tax Positions 
+
+The Company is subject to income taxes in the U.S. and numerous foreign jurisdictions. The evaluation of the Company&#8217;s uncertain tax positions involves significant judgment in the interpretation and application of GAAP and complex domestic and international tax laws, including the Act and matters related to the allocation of international taxation rights between countries. Although management believes the Company&#8217;s reserves are reasonable, no assurance can be given that the final outcome of these uncertainties will not be different from that which is reflected in the Company&#8217;s reserves. Reserves are adjusted considering changing facts and circumstances, such as the closing of a tax examination. Resolution of these uncertainties in a manner inconsistent with management&#8217;s expectations could have a material impact on the Company&#8217;s financial condition and operating results. 
+
+Legal and Other Contingencies 
+
+The Company is subject to various legal proceedings and claims that arise in the ordinary course of business, the outcomes of which are inherently uncertain. The Company records a liability when it is probable that a loss has been incurred and the amount is reasonably estimable, the determination of which requires significant judgment. Resolution of legal matters in a manner inconsistent with management&#8217;s expectations could have a material impact on the Company&#8217;s financial condition and operating results. 
+
+Apple Inc. | 2022 Form 10-K | 25 
+

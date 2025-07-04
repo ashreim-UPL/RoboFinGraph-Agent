@@ -96,7 +96,7 @@ summarization_prompt_library = {
 
     },
 
-    "get_risk_assessment": {
+    "risk_assessment": {
         "input_files": ["company_profile.json", "sec_filings/sec_10k_section_1a.txt"],
         "input_file_map": {
             "company_profile.json": "company_name",
@@ -121,11 +121,11 @@ summarization_prompt_library = {
         Finally, provide a detailed and nuanced assessment that reflects the true risk landscape of the company. And Avoid any bullet points in your response."""
     },
 
-    "get_competitors_analysis": {
-        "input_files": ["competitors.json", "get_key_data.json"],
+    "competitors_analysis": {
+        "input_files": ["competitors.json", "key_data.json"],
         "input_file_map": {
             "competitors.json": "table_str",
-            "get_key_data.json": "company_name"
+            "key_data.json": "company_name"
         },
         "raw_data_needed": [
             "Financial metrics for target and competitors (multi-year)",
@@ -133,14 +133,14 @@ summarization_prompt_library = {
         ],
         "prompt_template": """{table_str}
 
-        Resource: Financial metrics for {company_name} and {competitor_names}
+        Resource: Financial metrics for {company_name} competitors
 
         Instruction: 
-        Analyze the financial metrics for {company_name} and its competitors: {competitor_names} across multiple years (indicated as 0, 1, 2, 3, with 0 being the latest year and 3 the earliest year). 
+        Analyze the financial metrics for {company_name} and its competitors across multiple years (indicated as 0, 1, 2, 3, with 0 being the latest year and 3 the earliest year). 
         Focus on the following metrics: EBITDA Margin, EV/EBITDA, FCF Conversion, Gross Margin, ROIC, Revenue, and Revenue Growth. 
         For each year: Year-over-Year Trends: Identify and discuss the trends for each metric from the earliest year (3) to the latest year (0) for {company_name}. 
         Highlight any significant improvements, declines, or stability in these metrics over time. 
-        Competitor Comparison: For each year, compare {company_name} against its {competitor_names} for each metric. Evaluate how {company_name} performs relative to its competitors, noting where it outperforms or lags behind.
+        Competitor Comparison: For each year, compare {company_name} against its competitors for each metric. Evaluate how {company_name} performs relative to its competitors, noting where it outperforms or lags behind.
         Metric-Specific Insights:
         EBITDA Margin: Discuss the profitability of {company_name} compared to its competitors, particularly in the most recent year.
         EV/EBITDA: Provide insights on the valuation and whether {company_name} is over or undervalued compared to its competitors in each year.

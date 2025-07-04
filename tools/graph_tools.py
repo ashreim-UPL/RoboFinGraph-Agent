@@ -14,6 +14,7 @@ from langchain.schema import HumanMessage
 from tools.file_utils import check_file_stats
 from tools.global_API_toolkit import get_10k_section, get_10k_metadata
 from utils.logger import get_logger, log_event, log_agent_step, log_cost_estimate
+from utils.config_utils import LangGraphLLMExecutor
 from prompts.summarization_intsruction import summarization_prompt_library
 from prompts.report_summaries import report_section_specs
 from functools import partial
@@ -33,7 +34,7 @@ def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
     """
     print("---Fetching SEC Metadata---")
     try:
-        ticker = state.company_details['identifiers']['ticker']
+        sec_ticker = state.company_details['identifiers']['sec_ticker']
         report_year = int(state.year)
         filing_year = report_year + 1
         start_date = f"{filing_year}-01-01"
@@ -42,7 +43,7 @@ def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
         # call your real helper directly:
         from tools.global_API_toolkit import get_10k_metadata
         metadata = get_10k_metadata(
-            ticker_symbol=ticker,
+            ticker_symbol=sec_ticker,
             fyear=filing_year,
             save_path =state.filing_files,
             start_date=start_date,
@@ -108,6 +109,8 @@ def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
                     kwargs[p_name] = company_ticker
                 elif p_name == "ticker": # Some FMP tools might use 'ticker'
                     kwargs[p_name] = company_details.get("fmp_ticker", company_ticker)
+                elif p_name == "sec_ticker":
+                    kwargs[p_name] = company_details.get("sec_ticker", company_ticker)
                 elif p_name == "sec_report_address":
                     kwargs[p_name] = state.sec_report_address
                 elif p_name == "fyear":
@@ -287,6 +290,7 @@ def generate_report_sections(
     sections: Dict[str, str] = {}
     files: Dict[str, str] = {}
 
+    output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
     for filename, spec in specs.items():
@@ -304,7 +308,6 @@ def generate_report_sections(
         resp = llm_executor.generate(
             [HumanMessage(content=prompt)],
             llm_executor.agent_state,
-            llm_executor.node_state
         )
         text = resp.content
         sections[filename] = text
@@ -317,35 +320,49 @@ def generate_report_sections(
     return sections, files
 
 def generate_concept_insights(
-    summaries: Dict[str, str],
-    llm_executor: Any
+    raw_summaries: Dict[str, str],
+    llm_executor: Any,
+    company_name: str
 ) -> Tuple[Dict[str, str], int]:
-    """
-    For each summary section, generate a conceptual analysis insight.
-    Returns a dict mapping section_key -> insight, and the count of sections.
-    """
     insights: Dict[str, str] = {}
     count = 0
 
-    for section_key, summary_text in summaries.items():
-        if not summary_text:
+    for filename, spec in report_section_specs.items():
+        # strip “.txt” to get our canonical key
+        section_key = filename.replace(".txt", "")
+
+        # gather the raw summaries this section depends on
+        parts = []
+        for src in spec["sources"]:
+            text = raw_summaries.get(src)
+            if text:
+                parts.append(text)
+        if not parts:
             continue
-        # Build a generic prompt for concept analysis
-        prompt = (
-            f"Perform a conceptual analysis of the following summary for '{section_key}'. "
-            "Extract key themes, strategic implications, and potential risks or opportunities. "
-            "Provide your answer in one concise paragraph.\n\n" + summary_text
+
+        # join them into one block
+        joined = "\n\n".join(parts)
+
+        # fill the template
+        prompt = spec["prompt_template"].format(
+            company_name=company_name,
+            sections=joined
         )
-        # Call the LLM
+
+        # call the LLM
         response = llm_executor.generate(
             [HumanMessage(content=prompt)],
-            llm_executor.agent_state,
-            llm_executor.node_state
+            llm_executor.agent_state
         )
+
         insights[section_key] = response.content
         count += 1
 
+    # after loop, you can also do
+    print("Insight keys produced:", list(insights.keys()))
+
     return insights, count
+
 
 def validate_insights(insights: Dict[str, str]) -> Dict[str, Any]:
     """
@@ -374,61 +391,44 @@ def validate_insights(insights: Dict[str, str]) -> Dict[str, Any]:
         "overall_score": overall_score
     }
 
-def generate_report_node(
-    state: AgentState,
-    builder: Any
-) -> Dict[str, Any]:
-    pdf = os.path.join(state.work_dir, 'final_annual_report.pdf')
-    result = builder.build_annual_report(
-        ticker_symbol=state.company_details['identifiers']['ticker'],
-        filing_date=state.year,
-        output_pdf_path=pdf,
-        sections=state.conceptual_sections,
-        key_data=json.loads(state.summary_outputs.get('key_data','{}')),
-        financial_metrics=json.loads(state.summary_outputs.get('financial_metrics','{}')),
-        chart_paths=state.raw_data_files,
-        summaries=state.summary_outputs
-    )
-    log_event('report_generated', {'pdf': pdf})
-    return {'final_report_text': result, 'output_pdf': pdf}
-
 def evaluate_pipeline(
     agent_state: AgentState,
-    node_state: NodeState
+    audit_executor: LangGraphLLMExecutor
 ) -> Dict[str, Any]:
     """
     Performs both quantitative and qualitative evaluation of the pipeline.
     - Quantitative KPIs: total cost, total latency, per-step models
-    - Qualitative assessment: uses the 'audit' LLM via LangGraphLLMExecutor
+    - Qualitative assessment: uses the provided 'audit_executor'
 
     Returns a dict with 'kpis' and 'quality_assessment'.
     """
-    # Quantitative
+    # --- Quantitative ---
     steps = agent_state.memory.get("pipeline_data", [])
-    total_cost = sum(s.get("cost_llm", 0.0) for s in steps)
-    total_latency = sum(s.get("duration", 0.0) for s in steps)
-    model_steps = {s["node"]: s.get("tools_used", []) for s in steps}
+    total_cost    = sum(s.get("cost_llm",    0.0) for s in steps)
+    total_latency = sum(s.get("duration",    0.0) for s in steps)
+    model_steps   = {s["node"]: s.get("tools_used", []) for s in steps}
 
     kpis = {
-        "total_pipeline_cost_usd": round(total_cost, 4),
-        "total_pipeline_latency_sec": round(total_latency, 2),
-        "model_steps": model_steps
+        "total_pipeline_cost_usd":    round(total_cost,    4),
+        "total_pipeline_latency_sec": round(total_latency,  2),
+        "model_steps":                model_steps,
     }
 
-    # Qualitative: assemble context
+    # --- Qualitative ---
     payload = {
         "initial_query": agent_state.user_input,
-        "summaries": agent_state.memory.get("summaries"),
-        "final_report": agent_state.memory.get("final_report")
+        "summaries":     agent_state.memory.get("summaries"),
+        "final_report":  agent_state.memory.get("final_report"),
     }
-    # Use existing executor attached to node_state
-    executor = getattr(node_state, "llm_executor", None)
-    if not executor:
-        raise ValueError("No LLM executor attached for evaluation")
-
-    from langchain.schema import HumanMessage
     prompt = f"Evaluate the final report quality given context: {json.dumps(payload)}"
-    resp = executor.generate([HumanMessage(content=prompt)], agent_state, node_state)
-    qualitative = resp.content
 
-    return {"kpis": kpis, "quality_assessment": qualitative}
+    # Use the passed-in executor, which already knows its model & state
+    resp = audit_executor.generate(
+        [HumanMessage(content=prompt)],
+        agent_state
+    )
+
+    return {
+        "kpis":               kpis,
+        "quality_assessment": resp.content
+    }

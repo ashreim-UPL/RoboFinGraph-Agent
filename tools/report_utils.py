@@ -152,7 +152,7 @@ def get_historical_prices(ticker: str, region: str, save_path: str) -> str:
 
 
 def _fetch_and_save_sec_section(
-    ticker: str,
+    sec_ticker: str,
     fyear: str,
     sec_report_address: str,
     section_id: Union[int, str],
@@ -166,7 +166,7 @@ def _fetch_and_save_sec_section(
     try:
         # this will download, cache, and write to save_path for you
         result: Dict[str, str] = get_10k_section(
-            ticker_symbol=ticker,
+            sec_ticker=sec_ticker,
             fyear=fyear,
             sec_report_address=sec_report_address,
             section=section_id,
@@ -177,46 +177,46 @@ def _fetch_and_save_sec_section(
         if not text:
             raise RuntimeError("Empty text returned")
 
-        logging.info(f"✅ Saved Section {section_id} for {ticker} → {save_path}")
+        logging.info(f"✅ Saved Section {section_id} for {sec_ticker} → {save_path}")
         return save_path
 
     except Exception as e:
-        msg = f"ERROR: fetching Section {section_id} for {ticker}: {e}"
+        msg = f"ERROR: fetching Section {section_id} for {sec_ticker}: {e}"
         logging.error(msg, exc_info=True)
         return msg
 
 
 def get_sec_10k_section_1(
-    ticker: str,
+    sec_ticker: str,
     fyear: str,
     sec_report_address: str,
     save_path: str,
 ) -> str:
     """Fetches and saves SEC 10-K Section 1 (Business)."""
-    logging.debug(f"Fetching SEC 10-K Section 1 for {ticker}/{fyear}")
-    return _fetch_and_save_sec_section(ticker, fyear, sec_report_address,"1", save_path)
+    logging.debug(f"Fetching SEC 10-K Section 1 for {sec_ticker}/{fyear}")
+    return _fetch_and_save_sec_section(sec_ticker, fyear, sec_report_address,"1", save_path)
 
 
 def get_sec_10k_section_1a(
-    ticker: str,
+    sec_ticker: str,
     fyear: str,
     sec_report_address: str,
     save_path: str,
 ) -> str:
     """Fetches and saves SEC 10-K Section 1A (Risk Factors)."""
-    logging.debug(f"Fetching SEC 10-K Section 1A for {ticker}/{fyear}")
-    return _fetch_and_save_sec_section(ticker, fyear, sec_report_address, "1A", save_path)
+    logging.debug(f"Fetching SEC 10-K Section 1A for {sec_ticker}/{fyear}")
+    return _fetch_and_save_sec_section(sec_ticker, fyear, sec_report_address, "1A", save_path)
 
 
 def get_sec_10k_section_7(
-    ticker: str,
+    sec_ticker: str,
     fyear: str,
     sec_report_address: str,
     save_path: str,
 ) -> str:
     """Fetches and saves SEC 10-K Section 7 (MD&A)."""
-    logging.debug(f"Fetching SEC 10-K Section 7 for {ticker}/{fyear}")
-    return _fetch_and_save_sec_section(ticker, fyear, sec_report_address,"7", save_path)
+    logging.debug(f"Fetching SEC 10-K Section 7 for {sec_ticker}/{fyear}")
+    return _fetch_and_save_sec_section(sec_ticker, fyear, sec_report_address,"7", save_path)
 
 # (Keep your other report_utils functions like get_key_data, get_company_profile, etc.)
 

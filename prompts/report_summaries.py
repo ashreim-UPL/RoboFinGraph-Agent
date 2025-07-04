@@ -32,7 +32,7 @@ report_section_specs = {
         ),
     },
     "risk_assessment.txt": {
-        "sources": ["get_risk_assessment"],
+        "sources": ["risk_assessment"],
         "word_limit": 300,
         "prompt_template": (
             "IMPORTANT: Reply using only plain text. Do not use any markdown formatting, bold, italics, underlines, bullets, numbers, code blocks, or emojis. Write your answer as a simple block of unformatted text."
@@ -44,7 +44,7 @@ report_section_specs = {
     "sell_side_summary.txt": {
         "sources": [
             "analyze_company_description", "analyze_business_highlights", "analyze_income_stmt",
-            "analyze_balance_sheet", "analyze_cash_flow", "get_risk_assessment", "get_competitors_analysis"
+            "analyze_balance_sheet", "analyze_cash_flow", "risk_assessment", "competitors_analysis"
         ],
         "word_limit": 300,
         "prompt_template": (
@@ -55,7 +55,7 @@ report_section_specs = {
         ),
     },
     "competitors_analysis.txt": {
-        "sources": ["get_competitors_analysis"],
+        "sources": ["competitors_analysis"],
         "word_limit": 300,
         "prompt_template": (
             "IMPORTANT: Reply using only plain text. Do not use any markdown formatting, bold, italics, underlines, bullets, numbers, code blocks, or emojis. Write your answer as a simple block of unformatted text."

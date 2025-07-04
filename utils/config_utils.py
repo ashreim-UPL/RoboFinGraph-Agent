@@ -3,7 +3,6 @@ import json
 from pathlib import Path
 from typing import Any, List, Dict, Tuple
 from langchain_community.chat_models import ChatOpenAI
-from langchain_community.callbacks.manager import get_openai_callback
 from langchain_together import ChatTogether
 from langchain.schema import BaseMessage, AIMessage
 from langchain.callbacks import get_openai_callback
@@ -46,7 +45,7 @@ def _get_node_config(node_name: str) -> Tuple[str, str]:
     """
     Returns (provider, model_name) for a given node based on DEFAULT_PROVIDER.
     """
-    key = node_name.lower().rstrip("_agent")
+    key = node_name.lower().removesuffix("_agent")
     if DEFAULT_PROVIDER == "openai":
         model = OPENAI_MODELS.get(key)
         provider = "openai"
@@ -99,8 +98,7 @@ def _init_llm(provider: str, model_name: str) -> Any:
 class LangGraphLLMExecutor:
     """
     Wraps a LangChain chat model for use in LangGraph nodes,
-    auto-selecting provider/model per node and capturing metrics.
-    """
+    auto-selecting provider/model per node and capturing metrics."""
     def __init__(self, node_name: str):
         self.provider, self.model_name = _get_node_config(node_name)
         self.llm = _init_llm(self.provider, self.model_name)
@@ -108,33 +106,31 @@ class LangGraphLLMExecutor:
     def generate(
         self,
         messages: List[BaseMessage],
-        agent_state: AgentState,
-        node_state: NodeState
+        agent_state: AgentState
     ) -> AIMessage:
-        """
-        Sends `messages` to the LLM, updates AgentState and NodeState metrics,
-        and returns the AIMessage response.
-        """
-        # Audit input
+        # audit input
         for msg in messages:
             agent_state.messages.append({"role": msg.type, "content": msg.content})
 
-        # Invoke LLM
+        # call LLM
         if self.provider == "openai":
             with get_openai_callback() as cb:
                 response: AIMessage = self.llm(messages)
-            node_state.tokens.sent      += cb.prompt_tokens
-            node_state.tokens.generated += cb.completion_tokens
-            node_state.cost_llm         += cb.total_cost
+            # update agent totals
+            agent_state.tokens_sent      += cb.prompt_tokens
+            agent_state.tokens_generated += cb.completion_tokens
+            agent_state.cost_llm         += cb.total_cost
         else:
             response: AIMessage = self.llm(messages)
-            usage = getattr(response, 'usage', {}) or {}
-            node_state.tokens.sent      += usage.get('prompt_tokens', 0)
-            node_state.tokens.generated += usage.get('completion_tokens', 0)
+            usage = getattr(response, "usage", {}) or {}
+            agent_state.tokens_sent      += usage.get("prompt_tokens", 0)
+            agent_state.tokens_generated += usage.get("completion_tokens", 0)
+            # (if Together returns cost, add that here)
 
-        # Record model usage
-        node_state.tools_used.add(f"{self.provider}:{self.model_name}")
-        # Audit output
+        # record which model you used
+        agent_state.memory.setdefault("models_used", []).append(f"{self.provider}:{self.model_name}")
+
+        # audit output
         agent_state.messages.append({"role": "assistant", "content": response.content})
         return response
 
