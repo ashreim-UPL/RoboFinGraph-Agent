@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Dict, Any, List, Tuple
 from functools import wraps
 from datetime import datetime
+from tabulate import tabulate
 import sys
 from utils.logger import get_logger, log_event
 from langchain.schema import HumanMessage
@@ -12,9 +13,8 @@ from agents.agent_utils import normalize_date
 
 from utils.config_utils import LangGraphLLMExecutor
 from agents.state_types import AgentState, NodeState, TOOL_MAP, NodeStatus
-from tools.charting import get_share_performance, get_pe_eps_performance
 from tools.company_search import process_company_data
-from tools.graph_tools import get_summary_task_details, generate_concept_insights, validate_summaries, validate_insights, evaluate_pipeline, collect_us_financial_data, validate_raw_data
+from tools.graph_tools import generate_concept_insights, validate_summaries, validate_insights, evaluate_pipeline, collect_us_financial_data, validate_raw_data
 from pathlib import Path
 from prompts.summarization_intsruction import summarization_prompt_library
 from prompts.report_summaries import report_section_specs
@@ -228,7 +228,8 @@ def data_collection_us_node(state: AgentState) -> Dict[str, Any]:
         for err in collection_results["errors"]:
             messages.append(HumanMessage(content=f"Error during data collection: {err}"))
             
-        status = NodeStatus.COMPLETED.value if not collection_results["errors"] else NodeStatus.PARTIAL_FAILURE.value
+        errors_list = collection_results.get("errors", []) # Safely get 'errors', default to empty list if not present
+        status = NodeStatus.COMPLETED.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
 
         # Return the updated state as a dictionary
         return {
@@ -305,53 +306,79 @@ def synchronize_data_node(agent_state: AgentState) -> AgentState:
     return agent_state
 
 def summarization_node(agent_state: AgentState) -> AgentState:
-    required_summaries = [
+    """
+    1) For each required summary spec:
+       - load the two input files (JSON or TXT) from raw_data_dir / filing_dir
+       - fill in the prompt_template
+       - call the LLM
+    2) Save each output to preliminaries/<summary_name>.txt
+    3) Track the file names in agent_state.preliminary_files
+    4) Also stash the dict of <summary_name>->text in agent_state.memory["summaries"]
+    """
+    executor = LangGraphLLMExecutor("summarizer")
+    executor.agent_state = agent_state
+
+    required = [
         "analyze_income_stmt",
         "analyze_balance_sheet",
         "analyze_cash_flow",
         "analyze_segment_stmt",
-        "get_risk_assessment",
-        "get_competitors_analysis",
+        "risk_assessment",
+        "competitors_analysis",
         "analyze_company_description",
         "analyze_business_highlights"
     ]
 
-    # Build {filename: full_path} mapping from tasks
+    prelim_dir = Path(agent_state.preliminary_dir)
+    prelim_dir.mkdir(parents=True, exist_ok=True)
+
+    summaries: Dict[str, str] = {}
+    files: List[str] = []
+
+    # map just the basename -> full path from data collection
     filename_to_path = {
-        os.path.basename(task['file']): task['file']
+        os.path.basename(task["file"]): task["file"]
         for task in agent_state.get_data_collection_tasks()
     }
-    memory_summaries = {}
 
-    for summary_name in required_summaries:
-        prompt_spec = summarization_prompt_library[summary_name]
-        # Prepare values to inject into the template
-        injection_dict = {}
-        for fname, var_name in prompt_spec["input_file_map"].items():
+    for key in required:
+        spec = summarization_prompt_library[key]
+
+        # build the injection dict for template
+        injection: Dict[str, str] = {}
+        for fname, var in spec["input_file_map"].items():
             fpath = filename_to_path.get(os.path.basename(fname))
-            if fpath is None:
-                raise FileNotFoundError(f"File {fname} not found in expected task output!")
+            if not fpath:
+                raise FileNotFoundError(f"Expected {fname} under raw/filings but none found")
             if fname.endswith(".json"):
                 with open(fpath, "r", encoding="utf-8") as f:
-                    value = json.dumps(json.load(f))
+                    content = json.dumps(json.load(f))
             else:
                 with open(fpath, "r", encoding="utf-8") as f:
-                    value = f.read()
-            injection_dict[var_name] = value
+                    content = f.read()
+            injection[var] = content
 
-        # Build the full prompt
-        prompt = prompt_spec["prompt_template"].format(**injection_dict)
-        
-        # Call your LLM executor here (pseudo-code, adapt to your actual call):
-        # result = llm_executor.generate([HumanMessage(content=prompt)])["content"]
-        # For demo, just use the prompt itself as a stub:
-        result = prompt[:200] + "..."  # Demo: only first 200 chars
+        prompt = spec["prompt_template"].format(**injection)
 
-        memory_summaries[summary_name] = result
+        # --- call the LLM ---
+        resp = executor.generate(
+            [HumanMessage(content=prompt)],
+            agent_state,
+        )
+        text = resp.content.strip()
 
-    agent_state.memory["summaries"] = memory_summaries
+        # --- write out to preliminary_dir ---
+        out_path = prelim_dir / f"{key}.txt"
+        out_path.write_text(text, encoding="utf-8")
+
+        summaries[key] = text
+        files.append(str(out_path))
+
+    # persist into state
+    agent_state.memory["summaries"] = summaries
+    agent_state.preliminary_files = files
+
     return agent_state
-
 
 def validate_summarized_data_node(agent_state: AgentState) -> AgentState:
     """
@@ -389,15 +416,22 @@ def concept_analysis_node(agent_state: AgentState) -> AgentState:
     Generate conceptual insights for each summary section using our shared helper.
     """
     executor = LangGraphLLMExecutor("concept")
-    # Attach state so executor can track metrics
     executor.agent_state = agent_state
-    #executor.node_state  = node_state
 
-    summaries = agent_state.memory.get("summaries", {})
-    insights, count = generate_concept_insights(summaries, executor)
-
+    raw = agent_state.memory.get("summaries", {})
+    insights, _ = generate_concept_insights(raw, executor, agent_state.company_details["company_name"])
     agent_state.memory["concepts"] = insights
-    #node_state.custom_metrics["concepts_generated"] = count
+
+    # write out only the eight canonical files
+    sum_dir = Path(agent_state.summaries_dir)
+    sum_dir.mkdir(parents=True, exist_ok=True)
+
+    for section_key in report_section_specs:
+        key = section_key.replace(".txt","")
+        if key in insights:
+            p = sum_dir / f"{key}.txt"
+            p.write_text(insights[key], encoding="utf-8")
+            agent_state.summary_files.append(str(p))
 
     return agent_state
 
@@ -427,6 +461,8 @@ def validate_analyzed_data_node(agent_state: AgentState) -> AgentState:
     if overall < 1.0:
         agent_state.memory["branch"] = "end"
 
+    print(result)
+    input("inside validate_analyzed_data_node, enter to continue")
     # 6) Attach detailed metrics for observability
     #node_state.custom_metrics["insight_section_scores"] = result.get("section_scores", {})
     #node_state.custom_metrics["insight_availability"]   = result.get("availability_score", 0.0)
@@ -436,56 +472,134 @@ def validate_analyzed_data_node(agent_state: AgentState) -> AgentState:
 
 def generate_report_node(agent_state: AgentState) -> AgentState:
     """
-    Build final report sections from summaries using report_section_specs,
-    write each section to disk, and record file paths and counts.
+    Build out individual report‐section text files from the in-memory summaries,
+    using report_section_specs for prompts & templates, then record all file paths
+    and a simple metric into agent_state.memory.
     """
-    # 1) Prepare executor
-    executor = LangGraphLLMExecutor("thesis")
-    
-    # Attach state references so helper can emit metrics
-    executor.agent_state = agent_state
-    # executor.node_state  = node_state
+    # 1) Prepare the output directory & PDF filename
+    report_dir = Path(agent_state.work_dir) / "report_sections"
+    report_dir.mkdir(parents=True, exist_ok=True)
 
-    # 2) Generate all sections
-    output_dir = Path(agent_state.work_dir) / "report_sections"
-    sections, files = ReportLabUtils.build_annual_report(
-        company_name=agent_state.company,
-        summaries=agent_state.memory.get("summaries", {}),
-        specs=report_section_specs,
-        llm_executor=executor,
-        output_dir=output_dir
+    pdf_filename = f"{agent_state.company}_{agent_state.year}_annual_report.pdf"
+    pdf_path = report_dir / pdf_filename
+
+    # 2) Load the artifacts your report builder needs
+    key_data_file    = Path(agent_state.summaries_dir) / "key_data.json"
+    fin_metrics_file = Path(agent_state.summaries_dir) / "financial_metrics.json"
+    key_data         = json.loads(key_data_file.read_text(encoding="utf-8"))
+    financial_metrics= json.loads(fin_metrics_file.read_text(encoding="utf-8"))
+
+    # 3) Point to the charts (these should already have been generated)
+    chart_paths = {
+        "share_performance":    str(Path(agent_state.summaries_dir) / "share_performance_chart.png"),
+        "pe_eps_performance":   str(Path(agent_state.summaries_dir) / "pe_eps_chart.png"),
+    }
+
+    # 4) Pull in your LLM‐generated section texts & appendix summaries
+    sections_map = agent_state.memory.get("concepts", {})
+
+    # ←—— NEW: read every file in summaries_dir into a dict of filename→text
+    appendix: Dict[str,str] = {}
+    for f in Path(agent_state.summaries_dir).iterdir():
+        if f.is_file() and f.suffix in (".txt", ".json"):
+            appendix[f.name] = f.read_text(encoding="utf-8")
+
+    # 5) Call your ReportLab builder with the exact signature
+    result = ReportLabUtils.build_annual_report(
+        ticker_symbol     = agent_state.company_details["sec_ticker"],
+        filing_date       = agent_state.filing_date,
+        output_pdf_path   = str(pdf_path),
+        sections          = sections_map,
+        key_data          = key_data,
+        financial_metrics = financial_metrics,
+        chart_paths       = chart_paths,
+        summaries         = appendix,   # now a proper filename→content map
     )
 
-    # 3) Persist into state
-    agent_state.memory["report_sections"] = sections
-    agent_state.memory["report_files"]    = files
-
-    # 4) Record files created
-    for f in files.values():
-        node_state.files_created.append(f)
-
-    # Optionally track a custom metric
-    node_state.custom_metrics["sections_generated"] = len(sections)
+    # 6) Record the PDF on state so you can inspect it
+    agent_state.memory["final_report_path"]   = str(pdf_path)
+    agent_state.memory["final_report_status"] = result
 
     return agent_state
 
+def parse_scores(response_text):
+    """
+    Parse LLM response into a dictionary of ICAIF scores.
+    Expected format in response_text:
+    [Accuracy] Score: X
+    [Logicality] Score: Y
+    [Storytelling] Score: Z
+    """
+    scores = {}
+    for line in response_text.splitlines():
+        if "Accuracy" in line:
+            try:
+                scores["Accuracy"] = float(line.split(":")[1].strip())
+            except:
+                continue
+        elif "Logicality" in line:
+            try:
+                scores["Logicality"] = float(line.split(":")[1].strip())
+            except:
+                continue
+        elif "Storytelling" in line:
+            try:
+                scores["Storytelling"] = float(line.split(":")[1].strip())
+            except:
+                continue
+    return scores
 
 def run_evaluation_node(agent_state: AgentState) -> AgentState:
     """
     Perform final pipeline evaluation: quantitative KPIs + qualitative LLM audit.
-    Delegates logic to tools.evaluation_utils.evaluate_pipeline.
+    Enhanced to include ICAIF scoring and a pipeline stats matrix.
     """
-    # Attach executor for qualitative call
-    executor = LangGraphLLMExecutor("audit")
-    #node_state.llm_executor = executor
+    # 1) instantiate and attach the audit-model executor
+    audit_executor = LangGraphLLMExecutor("audit")
+    audit_executor.agent_state = agent_state
 
-    # Delegate both quantitative and qualitative evaluation
-    result = evaluate_pipeline(agent_state, node_state)
+    # 2) delegate to utility, passing in the executor
+    result = evaluate_pipeline(agent_state, audit_executor)
 
-    # Store full evaluation
+    # 3) report evaluation (ICAIF)
+    report_text = agent_state.memory.get("generated_report_text", "")
+    icaif_prompt = (
+        "You are a financial analyst. Evaluate the following report on ICAIF criteria.\n"
+        "[Accuracy], [Logicality], [Storytelling] — provide scores 0-10:\n\n"
+        f"{report_text}"
+    )
+
+    messages = [HumanMessage(content=icaif_prompt)]
+    response_msg = audit_executor.llm(messages)
+    icaif_response = response_msg.content
+
+    icaif_scores = parse_scores(icaif_response)
+
+    # 4) pipeline matrix from agent_stats
+    stats = getattr(agent_state, "agent_stats", {})
+    pipeline_matrix = []
+    for agent_name, stat in stats.items():
+        pipeline_matrix.append([
+            agent_name,
+            stat.get("requests", 0),
+            stat.get("avg_latency_ms", 0),
+            stat.get("errors", 0)
+        ])
+
+    # 5) store results back on the state
+    result["icaif_scores"] = icaif_scores
+    result["pipeline_matrix"] = pipeline_matrix
     agent_state.memory["final_evaluation"] = result
+    agent_state.accuracy_score = result["kpis"].get("total_pipeline_cost_usd", 0)
 
-    # Optionally break out scores for easy access
-    agent_state.accuracy_score = result["kpis"].get("total_pipeline_cost_usd", 0.0)  # or choose a different metric
+    # 6) print tables in a nice format
+    print("### ICAIF Ratings ###")
+    print(tabulate(icaif_scores.items(), headers=["Criterion", "Score"], tablefmt="github"))
+    print("\n### Pipeline Matrix ###")
+    print(tabulate(
+        pipeline_matrix,
+        headers=["Agent", "Requests", "Avg Latency (ms)", "Errors"],
+        tablefmt="github"
+    ))
 
     return agent_state

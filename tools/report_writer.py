@@ -181,7 +181,25 @@ class ReportLabUtils:
         metrics = financial_metrics["metrics"]
         df = pd.DataFrame(metrics).T
         df = df[sorted(df.columns, reverse=True)]
+        
+        def fmt_cell(x):
+            # if it’s already a string (e.g. "2.0%") just leave it alone
+            if isinstance(x, str):
+                return x
+            # if it’s missing
+            if pd.isna(x):
+                return ""
+            # else force to float
+            v = float(x)
+            # if it’s really an integer value, show no decimals
+            if v.is_integer():
+                return f"{int(v):,}"
+            # otherwise show two decimals
+            return f"{v:,.2f}"
 
+        df_formatted = df.copy()
+        for col in df_formatted.columns:
+            df_formatted[col] = df_formatted[col].apply(fmt_cell)
         # 准备左栏和右栏内容
         content = []
         # 标题
@@ -204,8 +222,8 @@ class ReportLabUtils:
 
         content.append(Paragraph("Summarization", subtitle_style))
 
-        df.reset_index(inplace=True)
-        df.rename(columns={"index": f"FY ({currency} mn)"}, inplace=True)
+        df_formatted.reset_index(inplace=True)
+        df_formatted.rename(columns={"index": f"FY ({currency} mn)"}, inplace=True)
 
         # Transpose the table: metrics as rows, years as columns
         #df_flipped = df.set_index(f"FY ({currency} mn)")
@@ -214,19 +232,19 @@ class ReportLabUtils:
         #print("after currency", df)
 
         # Now use this transposed DataFrame for the table
-        table_data = [df.columns.to_list()] + df.values.tolist()
+        table_data = [df_formatted.columns.to_list()] + df_formatted.values.tolist()
 
         #table_data = [["Financial Metrics"]]
         #table_data += [df.columns.to_list()] + df.values.tolist()
 
         # Compute adaptive column widths based on column types
         base_width = (left_column_width - margin * 4)
-        num_cols = len(df.columns)
+        num_cols = len(df_formatted.columns)
 
         # Assign slightly larger width to potentially wider columns like "Gross Profit" or "Revenue"
         column_weights = [
             1.2 if "Profit" in col or "Revenue" in col else 1.0
-            for col in df.columns
+            for col in df_formatted.columns
         ]
         total_weight = sum(column_weights)
         col_widths = [base_width * w / total_weight for w in column_weights]
@@ -323,7 +341,7 @@ class ReportLabUtils:
         print("ticker_symbol:", ticker_symbol)
         print("filing_date:", filing_date)
         print("output_pdf_path:", output_pdf_path)
-        print("Section Map:", summaries)
+        #print("Section Map:", summaries)
         print("Share Performance Image:", share_performance_image_path, "Exists:", os.path.exists(share_performance_image_path) if share_performance_image_path else 'N/A')
         print("PE/EPS Image:", pe_eps_performance_image_path, "Exists:", os.path.exists(pe_eps_performance_image_path) if pe_eps_performance_image_path else 'N/A')
         print("Report Sections:")

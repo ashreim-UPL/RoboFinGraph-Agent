@@ -7,6 +7,7 @@ import sys
 import io
 import traceback
 from typing import Dict, Any, List
+from tabulate import tabulate
 
 from utils.logger import get_logger, log_event
 from utils.config_utils import resolve_model_config, inject_model_env
@@ -160,13 +161,28 @@ def main():
     # 6. Run orchestration
     try:
         from workflows.orchestrator import run_orchestration
-        run_orchestration(
+        
+        final_state= run_orchestration(
             company=args.company,
             year=args.year,
             config=app_config,
             report_type=args.report_type,
             verbose=args.verbose
         )
+
+        eval = final_state.memory["final_evaluation"]
+
+        # Print ICAIF scores
+        print("\n=== ICAIF Ratings ===")
+        print(tabulate(eval["icaif_scores"].items(),
+                    headers=["Criterion", "Score"],
+                    tablefmt="github"))
+
+        # Print pipeline matrix
+        print("\n=== Pipeline Matrix ===")
+        print(tabulate(eval["pipeline_matrix"],
+                    headers=["Agent", "Requests", "Avg Latency (ms)", "Errors"],
+                    tablefmt="github"))
         print("\n✅ Orchestration completed. Check logs and output files.\n")
         logger.info("Orchestration completed successfully.")
         log_event("orchestration_completed", {"company": args.company, "year": args.year})
@@ -182,7 +198,6 @@ def main():
         logger.error(f"Orchestration failed: {e}")
         log_event("orchestration_failed", {"error": str(e), "traceback": err_trace})
         sys.exit(1)
-
 
 if __name__ == "__main__":
     # Ensure stdout is UTF-8  

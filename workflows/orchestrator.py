@@ -39,6 +39,7 @@ def run_orchestration(
     verbose: bool
 ):
 
+    final_state = None
     # 1. Kickoff
     logger.info(f"Orchestration start → {company} ({year}), report_type={report_type}, verbose={verbose}")
     log_event("orchestration_start", {
@@ -167,3 +168,9 @@ def run_orchestration(
         logger.error(f"Orchestration failed: {e}")
         log_event("orchestration_failed", {"error": str(e)})
         raise
+
+    for event in app.stream(initial_state):
+        if event.type == "pipeline_complete":
+            final_state = event.payload  # or however you extract the state
+            break
+    return final_state

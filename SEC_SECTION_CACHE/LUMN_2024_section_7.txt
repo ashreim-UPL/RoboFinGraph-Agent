@@ -1,0 +1,460 @@
+ ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS 
+
+All references to "Notes" in this Item 7 of Part II refer to the Notes to Consolidated Financial Statements included in Item 8 of Part II of this report. Certain statements in this report constitute forward-looking statements. See "Special Note Regarding Forward-Looking Statements" immediately prior to Item 1 of Part I of this report for factors relating to these statements and "Risk Factors" in Item 1A of Part I of this report for a discussion of certain risk factors applicable to our business, financial condition, results of operations, liquidity or prospects. 
+
+Overview 
+
+We are a facilities-based technology and communications company that provides a broad array of integrated products and services to our domestic and global business customers and our domestic mass markets customers. We operate one of the world's most interconnected networks. Our platform empowers our customers to swiftly adjust digital programs to meet immediate demands, create efficiencies, accelerate market access and reduce costs, which allows our customers to rapidly evolve their IT programs to address dynamic changes. With approximately 170,000 on-net buildings and 350,000 route miles of fiber optic cable globally, we are among the largest providers of communications services to domestic and global enterprise customers. Our long-haul network throughout North America and Asia Pacific connects to metropolitan fiber networks that we operate. 
+
+Divestitures of the Latin American, ILEC and EMEA Businesses 
+
+On August 1, 2022, affiliates of Level 3 Parent, LLC, an indirect wholly-owned subsidiary of Lumen Technologies, Inc., sold Lumen&#8217;s Latin American business for pre-tax cash proceeds of approximately $2.7 billion. 
+
+On October 3, 2022, we and certain of our affiliates sold the portion of our ILEC business conducted primarily within 20 Midwestern and Southeastern states. In exchange, we received $7.5 billion of consideration, which was reduced by approximately $0.4 billion of closing adjustments and partially paid through purchaser's assumption of approximately $1.5 billion of our long-term consolidated indebtedness, resulting in pre-tax cash proceeds of approximately $5.6 billion. 
+
+On November 1, 2023, we and certain of our affiliates sold Lumen's operations in Europe, the Middle East and Africa (the "EMEA business") to Colt Technology Services Group Limited, a portfolio company of Fidelity Investments, for pre-tax cash proceeds of $1.7 billion after certain closing adjustments and transaction costs. This consideration is further subject to certain other post-closing adjustments and indemnities set forth in the Purchase Agreement, as amended and supplemented to date. 
+
+For more information, see (i) Note 2&#8212;Divestitures of the Latin American, ILEC and EMEA Businesses to our consolidated financial statements in Item 8 of Part II of this report and (ii) the risk factors included in Item 1A of Part I of this report. 
+
+Changes in the Macroeconomic, Industry and Work Environments 
+
+Societal, governmental and macroeconomic changes have impacted us, our customers and our business in several ways since the onset of the COVID-19 pandemic in the U.S. in March 2020. Beginning in the second half of 2020 and continuing into 2023, we rationalized our lease footprint and ceased using 42 underutilized leased property locations. These lease cancellations resulted in accelerated lease costs, including $35 million and $8 million of such costs recognized during the years ended December 31, 2021 and 2023, respectively, but will lower our future operating costs. We did not incur material accelerated lease costs during the year ended December 31, 2022. During the second quarter of 2023, we also donated our Monroe, Louisiana campus and leased back a portion thereof. This donation resulted in a loss recognized during the second and fourth quarters, as discussed further below. In conjunction with our plans to continue to reduce costs, we expect to continue our real estate rationalization efforts and expect to incur additional accelerated real estate costs in future periods. 
+
+Additionally, as discussed further elsewhere herein, the pandemic and macroeconomic changes arising therefrom have resulted in (i) increases in certain revenue streams and decreases in others, (ii) operational challenges resulting from inflation and, to a lesser extent, shortages of certain components and other supplies that we use in our business, (iii) delays in our cost transformation initiatives and (iv) delayed decision-making by certain of our customers. None of these effects, individually or in the aggregate, have to date materially impacted our financial performance or financial position. 
+
+Industry developments over the past couple years have increased fiber construction demand. The resulting increase in construction labor rates increased the cost of enabling units to be capable of receiving our fiber broadband services. In 2022 and 2021, we believe these factors contributed to a delay in attaining our Quantum Fiber buildout targets. 
+
+Continued inflationary pressures, supply constraints or business uncertainty could materially impact our financial results in a variety of ways, including by increasing our expenses, decreasing our revenues, further delaying our network expansion plans or otherwise interfering with our ability to deliver products and services. For additional information on the impacts of the pandemic and the macroeconomic changes arising therefrom, see (i) the remainder of this item, including "&#8212;Liquidity and Capital Resources&#8212;Overview of Sources and Uses of Cash" and (ii) Item 1A of this report. 
+
+Reporting Segments 
+
+Our reporting segments are currently organized as follows, by customer focus: 
+
+&#8226; Business Segment: Under our Business segment, we provide our products and services under four sales channels: 
+
+&#9702; Large Enterprise: Under our large enterprise sales channel, we provide our products and services to large enterprises, including multinational and global enterprise customers and carriers. 
+
+&#9702; Mid-Market Enterprise: Under our mid-market enterprise sales channel, we provide our products and services to medium-sized enterprises directly and through our indirect channel partners. 
+
+&#9702; Public Sector: Under our public sector sales channel, we provide our products and services to the public sector, including the U.S. Federal government, state and local governments and research and education institutions. 
+
+&#9702; Wholesale: Under our wholesale sales channel, we provide our products and services to a wide range of other communication companies providing wireline, wireless, cable, voice and data center services. 
+
+&#8226; Mass Markets Segment. Under our Mass Markets segment, we provide products and services to residential and small business customers. At December 31, 2023, we served 2.8 million broadband subscribers under our Mass Markets segment. 
+
+See Note 17&#8212;Segment Information to our consolidated financial statements in Item 8 of Part II of this report for additional information. 
+
+We categorize our Business segment revenue among the following products and services categories: 
+
+&#8226; Grow , which includes products and services that we anticipate will grow, including our dark fiber, Edge Cloud services, IP, managed security, software-defined wide area networks ("SD WAN"), secure access service edge ("SASE"), Unified Communications and Collaboration ("UC&#38;C") and wavelengths services; 
+
+&#8226; Nurture , which includes our more mature offerings, including ethernet and VPN data networks services; 
+
+&#8226; Harvest , which includes our legacy services managed for cash flow, including Time Division Multiplexing ("TDM") voice, private line and other legacy services; and 
+
+&#8226; Other , which includes equipment sales, IT solutions and other services. 
+
+We categorize our Mass Markets products and services revenue among the following categories: 
+
+&#8226; Fiber Broadband , under which we provide high speed broadband services to residential and small business customers utilizing our fiber-based network infrastructure; 
+
+&#8226; Other Broadband , under which we provide primarily lower speed broadband services to residential and small business customers utilizing our copper-based network infrastructure; and 
+
+&#8226; Voice and Other, under which we derive revenues from (i) providing local and long-distance voice services, professional services, and other ancillary services, and (ii) federal broadband and state support programs. 
+
+Trends Impacting Our Operations 
+
+In addition to the above-described impact of the pandemic and its aftermath, our consolidated operations have been, and will continue to be, impacted by the following company-wide trends: 
+
+&#8226; Customers&#8217; demand for automated products and services and competitive pressures will require that we continue to invest in new technologies and automated processes to improve the customer experience and reduce our operating expenses. 
+
+&#8226; The increased use of digital applications, online video, gaming and artificial intelligence has substantially increased demand for robust, scalable network services. We are continuing to enhance our product capabilities and simplify our product portfolio based on demand and profitability to enable customers to have access to greater bandwidth. 
+
+&#8226; Businesses continue to adopt distributed, global operating models. We are expanding and enhancing our fiber network, connecting more buildings to our network to generate revenue opportunities and reducing our reliance upon other carriers. 
+
+&#8226; Changes in customer preferences and in the regulatory, technological and competitive environment are (i) significantly reducing demand for our more mature service offerings, commoditizing certain of our other offerings, or resulting in volume or rate reductions for other of our offerings and (ii) also creating certain opportunities for us arising out of increased demand for lower latency provided by Edge computing and for faster and more secure data transmissions. 
+
+&#8226; The operating margins of several of our newer, more technologically advanced services, some of which may connect to customers through other carriers, are lower than the operating margins on our traditional, on-net wireline services. 
+
+&#8226; Uncertainties regarding our financial performance, leverage and debt covenant compliance have caused, and may continue to cause, certain of our customers and other third parties to reduce or cease transacting business with us. 
+
+&#8226; Our expenses will be impacted by higher vendor costs, reduced economies of scale and other dis-synergies due to our completed 2022 and 2023 divestitures and any future divestitures. 
+
+&#8226; Declines in our traditional wireline services and other more mature offerings have necessitated right-sizing our cost structures to remain competitive. 
+
+Inflation has placed downward pressure on our margins and macroeconomic uncertainties have likely contributed to delayed decision-making by certain of our customers, which are trends that will likely continue to impact us as long as inflation rates remain elevated. These and other developments and trends impacting our operations are discussed elsewhere in this Item 7. 
+
+Results of Operations 
+
+In this section, we discuss our overall results of operations and highlight special items that are not included in our segment results. In "Segment Results" we review the performance of our two reporting segments in more detail. Results in this section include the results of our Latin American, ILEC and EMEA businesses prior to their sale on August 1, 2022, October 3, 2022 and November 1, 2023 respectively. 
+
+Revenue 
+
+The following table summarizes our consolidated operating revenue recorded under each of our two segments and in our four revenue sales channels within the Business segment described above: 
+
+##TABLE_START &#160; Years Ended December 31, 2023 vs 2022 % Change 
+
+2022 vs 2021 % Change 
+
+&#160; 2023 2022 2021 &#160; (Dollars in millions) Business Segment: Large Enterprise $ 4,616 5,377 5,918 (14) % (9) % Mid-Market Enterprise 2,011 2,212 2,398 (9) % (8) % Public Sector 1,783 1,861 2,111 (4) % (12) % Wholesale 3,125 3,591 3,692 (13) % (3) % Business Segment Revenue 11,535 13,041 14,119 (12) % (8) % Mass Markets Segment Revenue 3,022 4,437 5,568 (32) % (20) % Total operating revenue $ 14,557 17,478 19,687 (17) % (11) % ##TABLE_END
+
+Our consolidated operating revenue decreased by $2.9 billion for the year ended December 31, 2023 as compared to the year ended December 31, 2022, $2.1 billion of which is attributable to the sale of our Latin American and ILEC businesses in the second half of 2022, and the sale of our EMEA business on November 1, 2023. Our consolidated revenue decreased by $2.2 billion for the year ended December 31, 2022 compared to the year ended December 31, 2021 due to revenue declines in all of our revenue categories listed above, in addition to an approximately $1.0 billion decrease attributable to the sale of our Latin American and ILEC businesses in the second half of 2022. See our segment results below for additional information. 
+
+Operating Expenses 
+
+The following table summarizes our operating expenses for the years ended December 31, 2023 and 2022. For information regarding expenses for the year ended December 31, 2021, see "Management's Discussion and Analysis of Financial Condition and Results of Operations" in Item 7 of Part II of our Annual Report Form 10-K for the year ended December 31, 2022. 
+
+##TABLE_START &#160; Years Ended December 31, % Change &#160; 2023 2022 &#160; (Dollars in millions) Cost of services and products (exclusive of depreciation and amortization) $ 7,144 7,868 (9) % Selling, general and administrative 3,198 3,078 4 % Net loss (gain) on sale of businesses 121 (113) nm 
+
+Loss on disposal group held for sale 
+
+&#8212; 40 nm Depreciation and amortization 2,985 3,239 (8) % Goodwill impairment 10,693 3,271 nm Total operating expenses $ 24,141 17,383 39 % ##TABLE_END
+
+_______________________________________________________________________________ 
+
+nm Percentages greater than 200% and comparisons between positive and negative values or to/from zero values are considered not meaningful. 
+
+Cost of Services and Products (exclusive of depreciation and amortization) 
+
+Cost of services and products (exclusive of depreciation and amortization) decreased by $724 million for the year ended December 31, 2023 as compared to the year ended December 31, 2022. This decrease was primarily due to a decrease of $718 million due to the sale of the Latin American and ILEC businesses in the second half of 2022 and the sale of the EMEA business on November 1, 2023, as well as reduction of $108 million in employee-related expense from lower headcount. These decreases were partially offset by higher network and maintenance expense of $130 million. 
+
+Selling, General and Administrative 
+
+Selling, general and administrative expenses increased by $120 million for the year ended December 31, 2023 as compared to the year ended December 31, 2022. This increase in selling, general and administrative expenses was primarily driven by a $101 million loss incurred as a result of our donation of our Monroe, Louisiana campus and a $73 million net loss as a result of the sale of select CDN contracts. Additionally, employee-related expense increased $97 million and marketing and advertising expense increased $50 million. A portion of these and other expense increases were driven by our ongoing growth and optimization initiatives. These increases were partially offset by a $185 million decrease due to the sale of the Latin American and ILEC businesses in the second half of 2022 as well as the sale of the EMEA business on November 1, 2023 and $21 million from gains on the sale of property and assets. 
+
+Loss (Gain) on Sale of Businesses 
+
+For a discussion of the loss on the sale of the EMEA business and gain on the sales of the Latin American and ILEC businesses that we recognized for the years ended December 31, 2023 and December 31, 2022, see Note 2&#8212;Divestitures of the Latin American, ILEC and EMEA Businesses. 
+
+Depreciation and Amortization 
+
+The following table provides detail of our depreciation and amortization expense: 
+
+##TABLE_START Years Ended December 31, % Change 2023 2022 (Dollars in millions) Depreciation $ 1,932 2,133 (9) % Amortization 1,053 1,106 (5) % Total depreciation and amortization $ 2,985 3,239 (8) % ##TABLE_END
+
+Depreciation expense decreased by $201 million for the year ended December 31, 2023 as compared to the year ended December 31, 2022 primarily due to the discontinuation during the fourth quarter of 2022 of the depreciation of the tangible EMEA assets we divested, resulting in a decrease of $152 million of depreciation expense during the year ended December 31, 2023 compared to the year ended December 31, 2022. In addition, for the year ended December 31, 2023 as compared to the year ended December 31, 2022, depreciation expense decreased $137 million due to the impact of annual rate depreciable life changes, The decreases were partially offset by higher depreciation expense of $92 million associated with net growth in depreciable assets. 
+
+Amortization expense decreased by $53 million for the year ended December 31, 2023 as compared to the year ended December 31, 2022. The decrease was primarily due to the discontinuation during the fourth quarter of 2022 of the amortization of the intangible EMEA assets we divested, resulting in a decrease of $30 million of amortization expense during the year ended December 31, 2023 compared to the year ended December 31, 2022. In addition, for the year ended December 31, 2023, as compared to the year ended December 31, 2022, amortization expense decreased $18 million resulting from certain customer relationship intangible assets becoming fully amortized in the second quarter of 2023. 
+
+Further analysis of our segment operating expenses by segment is provided below in "Segment Results." 
+
+Goodwill Impairments 
+
+We are required to perform impairment tests related to our goodwill annually, which we perform as of October 31, or sooner if an indicator of impairment occurs. We considered the sustained decline in our share price during the second quarter of 2023 an event or change in circumstance requiring evaluation of goodwill impairment. 
+
+We report under two segments: Business and Mass Markets. As of December 31, 2023, we had three reporting units for goodwill impairment testing, which are (i) Mass Markets, (ii) North America Business ("NA Business") and (iii) Asia Pacific ("APAC") region. Prior to the divestiture of the EMEA business, the EMEA region was also a reporting unit and was tested for impairment in the pre-classification test as of October 31, 2022 discussed elsewhere herein. Prior to its August 1, 2022 divestiture, the Latin American ("LATAM") region was also a reporting unit. 
+
+During the second and fourth quarters of 2023, we determined circumstances existed indicating it was more likely than not that the carrying value of one or more of our reporting units exceeded its fair value. When we performed an impairment test, we concluded that the estimated fair value of certain of our reporting units was less than their carrying value of equity as of our testing date. As a result, we recorded non-cash, non-tax-deductible goodwill impairment charges aggregating to $10.7 billion for the year ended December 31, 2023. When we performed our impairment tests during the fourth quarter of 2022, we concluded that the estimated fair value of certain of our reporting units was less than our carrying value of equity as of our testing date. As a result, we recorded non-cash, non-tax-deductible goodwill impairment charges aggregating to $3.3 billion in the fourth quarter of 2022. When we performed our annual impairment test in the fourth quarter of 2021, we concluded it was more likely than not that the fair value of each of our reporting units exceeded the carrying value of equity of our reporting units. Therefore, we concluded no impairment existed as of our annual assessment date in the fourth quarter of 2021. 
+
+We are currently experiencing competitive, macroeconomic and financial pressures, including dis-synergies resulting from our 2022 and 2023 divestitures and concerns about our ability to refinance debt in the future. In 2023, we also experienced a sustained decline in our share price. These and other factors contributed to us recognizing the above-described goodwill impairments. If these pressures continue, we may experience additional deterioration in our projected cash flows or market capitalization, or make significant changes to our assumptions of discount rates and market multiples. Any of these could result in additional goodwill impairments in future quarters. 
+
+See Note 3&#8212;Goodwill, Customer Relationships and Other Intangible Assets to our consolidated financial statements in Item 8 of Part II of this report for further details on these tests and impairment charges. 
+
+Other Consolidated Results 
+
+The following tables summarize our total other expense, net and income tax expense: 
+
+##TABLE_START &#160; Years Ended December 31, % Change &#160; 2023 2022 &#160; (Dollars in millions) Interest expense $ (1,158) (1,332) (13) % Net gain on early retirement of debt 618 214 189 % Other (expense) income, net (113) 32 nm Total other expense, net $ (653) (1,086) (40) % Income tax expense $ 61 557 (89) % ##TABLE_END
+
+_______________________________________________________________________________ 
+
+nm Percentages greater than 200% and comparisons between positive and negative values or to/from zero values are considered not meaningful. 
+
+Interest Expense 
+
+Interest expense decreased by $174 million for the year ended December 31, 2023 as compared to the year ended December 31, 2022. The decline was primarily due to a $4.5 billion decrease in average outstanding long-term debt (inclusive of debt classified as held for sale), which was partially offset by an increase in the average interest rate from 5.14% to 5.9%. 
+
+Net Gain on Early Retirement of Debt 
+
+For a discussion of the exchange offers that resulted in the net gain on debt that we recognized for the years ended December 31, 2023 and 2022, see Note 7&#8212;Long-Term Debt and Credit Facilities. 
+
+Other (Expense) Income, Net 
+
+Other (expense) income, net reflects certain items not directly related to our core operations, including (i) components of net periodic pension and post-retirement benefit costs, (ii) foreign currency gains and losses, (iii) our share of income from partnerships we do not control, (iv) interest income, (v) gains and losses from non-operating asset dispositions, (vi) income from transition and separation services provided by us to the purchasers of our divested businesses and (vii) other non-core items. 
+
+##TABLE_START Years Ended December 31, 2023 2022 (Dollars in millions) Pension and post-retirement net periodic (expense) income $ (158) 1 Foreign currency (loss) gain (10) 12 Loss on investment in limited partnership (75) (83) Loss on investment in equity securities (22) (109) Transition and separation services 186 152 Interest income 41 24 Other (75) 35 Other (expense) income, net $ (113) 32 ##TABLE_END
+
+See Note 14&#8212;Fair Value of Financial Instruments for more information regarding the losses recognized on our investments in equity securities and a limited partnership. 
+
+Income Tax Expense 
+
+For the years ended December 31, 2023 and 2022, our effective income tax rate was (0.6)% and (56.2)%, respectively. The effective tax rate for the year ended December 31, 2023 includes a $2.2 billion unfavorable aggregate impact of non-deductible goodwill impairments and a $137 million favorable impact as a result of utilizing available capital losses generated by the sale of our Latin American business in 2022. The effective tax rate for the year ended December 31, 2022 includes a $682 million unfavorable impact of non-deductible goodwill impairments and $128 million unfavorable impact as a result of the sale of our Latin American business. For additional information, see Note 16&#8212;Income Taxes to our consolidated financial statements in Item 8 of Part II of this report and "Critical Accounting Policies and Estimates&#8212;Income Taxes". 
+
+Segment Results 
+
+General 
+
+Reconciliation of segment revenue to total operating revenue is below. The results presented in this section include results of our Latin American, ILEC and EMEA businesses prior to their sale on August 1, 2022, October 3, 2022 and November 1, 2023 respectively: 
+
+##TABLE_START &#160; Years Ended December 31, &#160; 2023 2022 2021 &#160; (Dollars in millions) Operating revenue Business $ 11,535 13,041 14,119 Mass Markets 3,022 4,437 5,568 Total operating revenue $ 14,557 17,478 19,687 ##TABLE_END
+
+Reconciliation of segment EBITDA to total adjusted EBITDA is below: 
+
+##TABLE_START &#160; Years Ended December 31, &#160; 2023 2022 2021 &#160; (Dollars in millions) Net (loss) income $ (10,298) (1,548) 2,033 Income tax expense 61 557 668 Total other expense, net 653 1,086 1,584 Depreciation and amortization expense 2,985 3,239 4,019 Goodwill impairment 10,693 3,271 &#8212; Stock-based compensation expense 52 98 120 Total adjusted EBITDA $ 4,146 6,703 8,424 Business segment adjusted EBITDA $ 7,165 8,569 9,358 Mass Markets segment adjusted EBITDA 1,589 2,690 3,730 Other unallocated expense (4,608) (4,556) (4,664) ##TABLE_END
+
+For additional information on our reportable segments and product and services categories, see Note 4&#8212;Revenue Recognition and Note 17&#8212;Segment Information to our consolidated financial statements in Item 8 of Part II of this report. 
+
+Business Segment 
+
+##TABLE_START &#160; Years Ended December 31, Percent Change &#160; 2023 2022 2021 2023 vs 2022 
+
+2022 vs 2021 
+
+&#160; (Dollars in millions) Business Segment Product Categories: Grow $ 4,469 4,595 4,687 (3) % (2) % Nurture 3,465 4,094 4,540 (15) % (10) % Harvest 2,785 3,557 4,069 (22) % (13) % Other 816 795 823 3 % (3) % Total Business Segment Revenue 11,535 13,041 14,119 (12) % (8) % Expenses: Total expense 4,370 4,472 4,761 (2) % (6) % Total adjusted EBITDA $ 7,165 8,569 9,358 (16) % (8) % ##TABLE_END
+
+Year ended December 31, 2023 compared to the years ended December 31, 2022 and December 31, 2021 
+
+Business segment revenue decreased $1.5 billion for the year ended December 31, 2023 compared to December 31, 2022 and decreased $1.1 billion for the year ended December 31, 2022 compared to December 31, 2021. Approximately $1.0 billion of the decrease for the year ended December 31, 2023 compared to December 31, 2022 was due to the sale of the Latin American, ILEC and EMEA businesses in late 2022 and 2023. For the year ended December 31, 2022 compared to December 31, 2021, the sale of the Latin American and ILEC businesses in the second half of 2022 caused a decrease of $511 million. More specifically, within each product category for the year ended December 31, 2023 compared to December 31, 2022 and for the year ended December 31, 2022 compared to December 31, 2021: 
+
+&#8226; Grow decreased $126 million and $92 million, reflecting decreases of approximately $370 million and $176 million associated with the sale of the divested businesses. This was offset by increases of approximately $244 million primarily in our IP, wavelengths, dark fiber, enterprise broadband and colocation products for the year ended December 31, 2023 compared to December 31, 2022 and approximately $84 million primarily in our IP, enterprise broadband, and wavelengths products for the year ended December 31, 2022 compared to December 31, 2021; 
+
+&#8226; Nurture decreased $629 million and $446 million, approximately $262 million and $119 million of which was attributable to the sale of the divested businesses. The remainder of these declines are principally attributable to declines in traditional VPN networks services of $261 million and $245 million and declines in Ethernet services of $112 million and $87 million; 
+
+&#8226; Harvest decreased by $772 million and $512 million, approximately $370 million and $209 million of which was attributable to the sale of the divested businesses. The remainder of the decline is principally attributable to a $265 million and $211 million decline in legacy voice services; 
+
+&#8226; Other increased by $21 million for the year ended December 31, 2023 compared to December 31, 2022 and decreased $28 million for the year ended December 31, 2022 compared to December 31, 2021. Equipment revenue drove both the increase for the year ended December 31, 2023 and the decrease for the year ended December 31, 2022 with an increase of $35 million and a decrease of $20 million, respectively. 
+
+The decrease in Business segment revenue for the year ended December 31, 2023 was also driven by $31 million of unfavorable foreign currency adjustments as compared to December 31, 2022. The decrease in Business segment revenue for the year ended December 31, 2022 was also driven by $54 million of unfavorable foreign currency adjustments for the year ended December 31, 2022 as compared to December 31, 2021. 
+
+Business segment expense decreased by $102 million for the year ended December 31, 2023 compared to December 31, 2022 primarily due to the sale of the divested businesses of $230 million. This decrease was partially offset by an increase of $80 million in cost of sales and $48 million in selling, general and administrative expenses, primarily $31 million of increased professional fees and $17 million of increased employee-related costs. A portion of these and other expense increases were driven by our ongoing growth and optimization initiatives. Business segment expenses decreased by $289 million for the year ended December 31, 2022 compared to December 31, 2021, primarily due to a $138 million decrease in expenses from the divested businesses, as well as decreases in cost of sales of $105 million and $46 million in selling, general and administrative expenses, primarily in reduced employee-related costs of $38 million. 
+
+Business segment adjusted EBITDA as a percentage of revenue was 62%, 66% and 66% for the years ended December 31, 2023, 2022 and 2021. 
+
+Mass Markets Segment 
+
+##TABLE_START &#160; Years Ended December 31, Percent Change &#160; 2023 2022 2021 2023 vs 2022 
+
+2022 vs 2021 
+
+&#160; (Dollars in millions) Mass Markets Product Categories: Fiber Broadband $ 636 604 524 5 % 15 % Other Broadband 1,394 2,164 2,507 (36) % (14) % Voice and Other 992 1,669 2,537 (41) % (34) % Total Mass Markets Segment Revenue 3,022 4,437 5,568 (32) % (20) % Expenses: Total expense 1,433 1,747 1,838 (18) % (5) % Total adjusted EBITDA $ 1,589 2,690 3,730 (41) % (28) % ##TABLE_END
+
+Year ended December 31, 2023 compared to the years ended December 31, 2022 and December 31, 2021 
+
+Mass Markets segment revenue decreased by $1.4 billion for the year ended December 31, 2023 compared to December 31, 2022 and decreased $1.1 billion for the year ended December 31, 2022 compared to December 31, 2021. Approximately $1.1 billion and $448 million of these decreases are due to the sale of our ILEC business in the fourth quarter of 2022. More specifically, within each product category for the year ended December 31, 2023 compared to December 31, 2022 and for the year ended December 31, 2022 compared to December 31, 2021: 
+
+&#8226; Fiber Broadband revenue increased $32 million and $80 million, primarily driven by $73 million and $83 million of increases driven by growth in the number of fiber customers associated with our continued increase in enabled locations from our Quantum Fiber buildout, which was partially offset by respective decreases of $41 million and $3 million due to the sale of the ILEC business relating to such periods; 
+
+&#8226; Other Broadband revenue decreased $770 million and $343 million. Approximately $563 million and $230 million of this decrease was due to the ILEC divestiture and $207 million and $113 million was due to fewer customers for our lower speed copper-based broadband services; 
+
+&#8226; Voice and Other decreased $677 million and $868 million. These declines were principally due to (i) a $472 million and $215 million decrease due to the sale of the ILEC business, (ii) a $146 million and $222 million decrease due to the continued loss of copper-based voice customers and (iii) for the year ended December 31, 2023 compared to December 31, 2022, the recognition in the first quarter of 2022 of $59 million of previously deferred revenue related to the CAF II program, which lapsed on December 31, 2021. The decrease for the year ended December 31, 2022 compared to December 31, 2021 was additionally driven by the net reduction in CAF II revenue of $431 million. 
+
+Mass Markets segment expense decreased by $314 million for the year ended December 31, 2023 compared to December 31, 2022 primarily due to a $295 million decrease due to the ILEC divestiture and a $37 million decrease in professional fees, partially offset by an increase of $42 million in employee-related costs and $27 million in marketing and advertising costs. Mass Markets segment expense decreased $91 million for the year ended December 31, 2022 compared to December 31, 2021 primarily due to a $176 million decrease due to the divestiture of the ILEC business, partially offset by $107 million of increased bad debt expense, network expense and professional fees. 
+
+Mass Markets segment adjusted EBITDA as a percentage of revenue was 53%, 61% and 67% for the years ended December 31, 2023, 2022 and 2021, respectively. 
+
+Critical Accounting Policies and Estimates 
+
+Our consolidated financial statements are prepared in accordance with accounting principles that are generally accepted in the United States. The preparation of these consolidated financial statements requires management to make estimates and assumptions that affect the reported amounts of our assets, liabilities, revenue and expenses. We have identified certain policies and estimates as critical to our business operations and the understanding of our past or present results of operations related to (i) goodwill, customer relationships and other intangible assets; (ii) pension and post-retirement benefits; (iii) loss contingencies and litigation reserves and (iv) income taxes. These policies and estimates are considered critical because they had a material impact, or they have the potential to have a material impact, on our consolidated financial statements and because they require us to make significant judgments, assumptions or estimates. We believe that our estimates, judgments and assumptions made when accounting for the items described below were reasonable, based on information available at the time they were made. However, actual results may differ from those estimates, and these differences may be material. 
+
+Goodwill, Customer Relationships and Other Intangible Assets 
+
+We have a significant amount of goodwill and indefinite-lived intangible assets that are assessed at least annually for impairment. At December 31, 2023, goodwill and intangible assets totaled $7.4 billion, or 22%, of our total assets. The impairment analyses of these assets are considered critical because of their significance to us and our segments and the subjective nature of certain assumptions used to estimate fair value. 
+
+We have assigned our goodwill balance to our segments at December 31, 2023 as follows: 
+
+##TABLE_START Business Mass Markets Total (Dollars in millions) 
+
+As of December 31, 2023 
+
+$ &#8212; 1,964 1,964 ##TABLE_END
+
+Intangible assets arising from business combinations, such as goodwill, customer relationships, capitalized software, trademarks and tradenames, are initially recorded at estimated fair value. We amortize customer relationships primarily over an estimated life of 7 to 14 years, using the straight-line method, depending on the customer. Certain customer relationship intangible assets became fully amortized at the end of the first quarter 2021 using the sum-of-years-digits method, which we no longer use for any of our remaining intangible assets. We amortize capitalized software using the straight-line method primarily over estimated lives ranging up to 7 years. We amortize our other intangible assets using the straight-line method over an estimated life of 9 to 20 years. Other intangible assets not arising from business combinations are initially recorded at cost. Where there are no legal, regulatory, contractual or other factors that would reasonably limit the useful life of an intangible asset, we classify them as indefinite-lived intangible assets and such intangible assets are not amortized. 
+
+We assess our long-lived intangible assets, other than goodwill, with indefinite lives for impairment annually, or, under certain circumstances, more frequently, such as when events or changes in circumstances indicate there may be an impairment. These assets are carried at the estimated fair value at the time of acquisition and assets not acquired in acquisitions are recorded at historical cost. However, if their estimated fair value is less than their carrying amount, we recognize an impairment charge for the amount by which the carrying amount of these assets exceeds their estimated fair value. For the year ended December 31, 2023 and 2022, we concluded it was more likely than not that our indefinite-lived intangible assets were not impaired; thus we recorded no impairment charge for these assets. 
+
+We are required to assess our goodwill for impairment annually, or more frequently if an event occurs or circumstances change that indicates it is more likely than not the fair values of any of our reporting units were less than their carrying values. In assessing goodwill for impairment, we may first assess qualitative factors to determine whether it is more likely than not that the fair value of a reporting unit is less than its carrying value. 
+
+Our annual impairment assessment date for goodwill is October 31, at which date we assess our reporting units. We report two segments: Business and Mass Markets. At October 31, 2023, we had three reporting units for goodwill impairment testing, which are (i) Mass Markets (ii) North America Business ("NA Business") and (iii) Asia Pacific ("APAC") region. Prior to their divestitures in 2023 and 2022, the EMEA and Latin American ("LATAM") regions were also each considered their own reporting unit. 
+
+Our reporting units are not discrete legal entities with discrete full financial statements. Our assets and liabilities are employed in and relate to the operations of multiple reporting units and are allocated to individual reporting units based on their relative revenue or earnings before interest, taxes depreciation and amortization ("EBITDA"). For each reporting unit, we compare its estimated fair value of equity to its carrying value of equity that we assign to the reporting unit. If the estimated fair value of the reporting unit is greater than its carrying value, we conclude that no impairment exists. If the estimated fair value of the reporting unit is less than the carrying value, we record a non-cash impairment charge equal to the excess amount. Depending on the facts and circumstances, we typically estimate the fair value of our reporting units by considering either or both of (i) a discounted cash flow method, which is based on the present value of projected cash flows over a discrete projection period and a terminal value, which is based on the expected normalized cash flows of the reporting units following the discrete projection period, and (ii) a market approach, which includes the use of multiples of publicly-traded companies whose services are comparable to ours. With respect to our analysis using the discounted cash flow method, the timing and amount of projected cash flows under these forecasts require estimates developed from our long-range plan, which is informed by wireline industry trends, the competitive landscape, product lifecycles, operational initiatives, capital allocation plans and other company-specific and external factors that influence our business. These projected cash flows consider recent historical results and are consistent with our short-term financial forecasts and long-term business strategies. The development of these projected cash flows, and the discount rate applied to such cash flows, is subject to inherent uncertainties, and actual results could vary significantly from such estimates. Our determination of the discount rate is based on a weighted average cost of capital approach, which uses a market participant&#8217;s cost of equity and after-tax cost of debt and reflects certain risks inherent in the projected cash flows. With respect to our analysis using the market approach, we estimate the fair value of a reporting unit based upon a market multiple applied to the reporting unit&#8217;s revenue and EBITDA, adjusted for an appropriate control premium based on recent market transactions. We weigh these revenue and EBITDA market multiples depending on the characteristics of the individual reporting unit. We also reconcile the estimated fair values of the reporting units to our market capitalization to conclude whether the indicated control premium is reasonable in comparison to recent transactions in the marketplace. 
+
+Declines in our stock price have in the past caused an impairment of our goodwill, and future declines in our stock price could potentially cause additional impairments of our goodwill. Changes in the underlying assumptions that we use in allocating the assets and liabilities to reporting units under either the discounted cash flow or market approach method can result in materially different determinations of fair value. We perform sensitivity analyses that consider a range of discount rates and a range of EBITDA market multiples and we believe the estimates, judgments, assumptions and allocation methods used by us are reasonable. Nonetheless, changes in any of them can significantly affect whether we must incur impairment charges, as well as the size of such charges. 
+
+For additional information on our goodwill balances by segment and results of our impairment analyses, see Note 3&#8212;Goodwill, Customer Relationships and Other Intangible Assets to our consolidated financial statements in Item 8 of Part II of this report. 
+
+Pension and Post-retirement Benefits 
+
+We sponsor a noncontributory qualified defined benefit pension plan (referred to herein as our qualified pension plan, the "Lumen Combined Pension Plan" or the "Combined Pension Plan") for a substantial portion of our current and former employees in the United States. As of January 1, 2022, we spun off a new pension plan (the "Lumen Pension Plan") from the Combined Pension Plan in anticipation of the sale of a portion of our ILEC business on October 3, 2022. We recognized pension costs related to both plans through the sale of the ILEC business, at which time balances related to the Lumen Pension Plan were reflected in the calculation of our gain on the sale of the ILEC business and the pension obligation and assets of the Lumen Pension Plan were transferred to the purchaser. 
+
+In addition to the Lumen Combined Pension Plan, we also maintain several non-qualified pension plans for certain eligible highly compensated employees. Due to the insignificant impact of these non-qualified plans on our consolidated financial statements, we have excluded them from the following pension and post-retirement benefits disclosures for 2023, 2022 and 2021. See Note 11&#8212;Employee Benefits for additional information. 
+
+We also maintain post-retirement benefit plans that provide health care and life insurance benefits primarily for certain eligible retirees. 
+
+In 2023, approximately 62% of the Combined Pension Plan's January 1, 2023 net actuarial loss balance of $1.4 billion was subject to amortization as a component of net periodic expense over the average remaining service period of 14 years for participating employees expected to receive benefits under the plan. We treated the other 38% of the Combined Pension Plan's beginning net actuarial loss balance as indefinitely deferred during 2023. In 2023, approximately 56% of the beginning net actuarial gain of $371 million at January 1, 2023 for the post-retirement benefit plans was subject to amortization as a component of net periodic expense, with the other 44% of the beginning net actuarial gain balance for the post-retirement benefit plans treated as indefinitely deferred. 
+
+In 2022, approximately 62% of the Combined Pension Plan's January 1, 2022 net actuarial loss balance of $2.2 billion was subject to amortization as a component of net periodic expense over the average remaining service period of 14 years for participating employees expected to receive benefits under the plan. We treated the other 38% of the Combined Pension Plan's beginning net actuarial loss balance as indefinitely deferred during 2022. Additionally, upon the sale of the ILEC business on October 3, 2022, we recognized $564 million of net actuarial loss, pre-tax, related to the Lumen Pension Plan, which partially offset our gain on the sale of the business. We treated the entire beginning net actuarial loss of $217 million at January 1, 2022 for the post-retirement benefit plans as indefinitely deferred during 2022. 
+
+As of January 1, 2021, our qualified pension plan had a net actuarial loss balance of approximately $3.0 billion. A portion of this balance was subject to amortization as a component of net periodic expense over the average remaining service period for participating employees expected to receive benefits under the plan. During 2021, our lump sum pension settlement payments exceeded the settlement threshold and as a result we recognized a non-cash settlement charge of $383 million, accelerating previously unrecognized actuarial losses from our net actuarial loss balance. For our post-retirement benefit plans, the majority of the beginning net actuarial loss balance of $346 million at January 1, 2021 continued to be deferred during 2021. 
+
+In computing our pension and post-retirement health care and life insurance benefit obligations, our most significant assumptions are the discount rate and mortality rates. In computing our periodic pension expense, our most significant assumptions are the discount rate and the expected rate of return on plan assets. In computing our post-retirement benefit expense, our most significant assumption is the discount rate. 
+
+The discount rate for each plan is the rate at which we believe we could effectively settle the plan's benefit obligations as of the end of the year. We selected each plan's discount rate based on a cash flow matching analysis using hypothetical yield curves from high-quality U.S. corporate bonds and projections of the future benefit payments that constitute the projected benefit obligation for the plans. This process establishes the uniform discount rate that produces the same present value of the estimated future benefit payments as is generated by discounting each year's benefit payments by a spot rate applicable to that year. The spot rates used in this process were derived from a yield curve created from yields on the 60th to 90th percentile of U.S. high quality bonds. 
+
+The table below illustrates hypothetical changes in our benefit obligation for the qualified pension plan and the post-retirement benefit plans obligation if we had selected a higher or lower discount rate. 
+
+##TABLE_START Percentage point change Increase/(decrease) at December 31, 2023 
+
+&#160; (Dollars in millions) Combined Pension Plan discount rate 1 % $ (451) (1) % 373 Post-retirement benefit plans discount rate 1 % (158) (1) % 158 ##TABLE_END
+
+Published mortality rates help predict the expected life of plan participants and are based on historical demographic studies by the Society of Actuaries ("SOA"). The SOA publishes new mortality tables and projection scales on a regular basis which reflect updates to projected life expectancies in North America. Historically, we have adopted the new projection tables immediately after publication. The SOA did not release any revised mortality tables or projection scales in 2022 or 2023. 
+
+The expected rate of return on plan assets is the long-term rate of return we expect to earn on the plans' assets in the future, net of administrative expenses paid from plan assets. The rate of return is determined by the strategic allocation of plan assets and the long-term risk and return forecast for each asset class. The forecasts for each asset class are generated primarily from an analysis of the long-term expectations of various third-party investment management organizations, to which we then add a factor of 50 basis points to reflect the benefit we expect to result from our active management of the assets. The expected rate of return on plan assets is reviewed annually by management and our Board of Directors and is revised, as necessary, to reflect changes in the financial markets and our investment strategy. 
+
+Changes in any of the above factors could significantly impact operating expenses in our consolidated statements of operations and other comprehensive loss in our consolidated statements of comprehensive income (loss), as well as the amount of the liability and accumulated other comprehensive loss of stockholders' equity on our consolidated balance sheets. 
+
+Loss Contingencies and Litigation Reserves 
+
+We are involved in several potentially material legal proceedings, as described in more detail in Note 18&#8212;Commitments, Contingencies and Other Items. On a quarterly basis, we assess potential losses in relation to these and other pending or threatened tax and legal matters. For matters not related to income taxes, if a loss is considered probable and the amount can be reasonably estimated, we recognize an expense for the estimated loss. To the extent these estimates are more or less than the actual liability incurred upon resolving these matters, our earnings will be increased or decreased accordingly. If the differences are material, our consolidated financial statements could be materially impacted. 
+
+For matters related to income taxes, if we determine in our judgment that the impact of an uncertain tax position is more likely than not to be sustained upon audit by the relevant taxing authority, then we recognize in our financial statements a benefit for the largest amount that is more likely than not to be sustained. We do not recognize any portion of an uncertain tax position if we determine in our judgment that the position has less than a 50% likelihood of being sustained. Though the validity of any tax position is a matter of tax law, the body of statutory, regulatory and interpretive guidance on the application of the law is complex and often ambiguous, particularly in certain of the non-U.S. jurisdictions in which we operate. As such, our tax positions may not be sustained, which could materially impact our consolidated financial statements. 
+
+Income Taxes 
+
+Our provision for income taxes includes amounts for tax consequences deferred to future periods. We record deferred income tax assets and liabilities reflecting future tax consequences attributable to (i) tax credit carryforwards, (ii) differences between the financial statement carrying value of assets and liabilities and the tax basis of those assets and liabilities and (iii) tax NOLs. Deferred taxes are computed using enacted tax rates expected to apply in the year in which the differences are expected to affect taxable income. The effect of a change in tax rate on deferred income tax assets and liabilities is recognized in earnings in the period that includes the enactment date. 
+
+The measurement of deferred taxes often involves the exercise of considerable judgment related to the realization of tax basis. Our deferred tax assets and liabilities reflect our assessment that tax positions taken in filed tax returns and the resulting tax basis are more likely than not to be sustained if they are audited by taxing authorities. Assessing tax rates that we expect to apply and determining the years when the temporary differences are expected to affect taxable income requires judgment about the future apportionment of our income among the states in which we operate. Any changes in our practices or judgments involved in the measurement of deferred tax assets and liabilities could materially impact our financial condition or results of operations. 
+
+In connection with recording deferred income tax assets and liabilities, we establish valuation allowances when necessary to reduce deferred income tax assets to amounts that we believe are more likely than not to be realized. We evaluate our deferred tax assets quarterly to determine whether adjustments to our valuation allowances are appropriate in light of changes in facts or circumstances, such as changes in tax law, interactions with taxing authorities and developments in case law. In making this evaluation, we rely on our recent history of pre-tax earnings. We also rely on our forecasts of future earnings and the nature and timing of future deductions and benefits represented by the deferred tax assets, all of which involve the exercise of significant judgment. At December 31, 2023, we established a valuation allowance of $399 million primarily related to state NOLs, based on our determination that it was more likely than not that this amount of these NOLs would expire unused. If forecasts of future earnings and the nature and estimated timing of future deductions and benefits change in the future, we may determine that existing valuation allowances must be revised or eliminated or new valuation allowances created, any of which could materially impact our financial condition or results of operations. See Note 16&#8212;Income Taxes to our consolidated financial statements in Item 8 of Part II of this report. 
+
+Liquidity and Capital Resources 
+
+Overview of Sources and Uses of Cash 
+
+We are a holding company that is dependent on the capital resources of our subsidiaries to satisfy our parent company liquidity requirements. Several of our significant operating subsidiaries have borrowed funds either on a standalone basis or as part of a separate restricted group with certain of its subsidiaries or affiliates. The terms of the instruments governing the indebtedness of these borrowers or borrowing groups may restrict our ability to access their accumulated cash. In addition, our ability to access the liquidity of these and other subsidiaries may be constrained by tax, legal and other limitations. 
+
+At December 31, 2023, we held cash and cash equivalents of $2.2 billion. As of December 31, 2023, we had approximately $1.8 billion of borrowing capacity available under our $2.2 billion revolving credit facility, net of undrawn letters of credit and borrowings issued to us thereunder. We typically use our revolving credit facility as a source of liquidity for operating activities and our other cash requirements. We had approximately $61 million of cash and cash equivalents outside the United States at December 31, 2023. We currently believe that there are no material restrictions on our ability to repatriate cash and cash equivalents into the United States, and that we may do so without paying or accruing U.S. taxes. We do not currently intend to repatriate to the United States any of our foreign cash and cash equivalents from operating entities. 
+
+Our executive officers and our Board of Directors review our sources and potential uses of cash in connection with our annual budgeting process and throughout the year as circumstances warrant. Generally speaking, our principal funding source is cash from operating activities, and our principal cash requirements include operating expenses, capital expenditures, income taxes, debt repayments, periodic securities repurchases, periodic pension contributions and other benefits payments. The impact of the sales of our Latin American, ILEC and EMEA businesses is further described below. 
+
+Based on our current capital allocation objectives, during 2024 we project expending approximately $2.7 billion to $2.9 billion of capital expenditures. 
+
+For the 12-month period ending December 31, 2024, we project our fixed commitments will include (i) $125 million of scheduled term loan amortization payments and (ii) $32 million of finance lease and other fixed payments. 
+
+In January 2024, we received a cash federal income tax refund of $729 million, including interest. For additional information, see Note 24&#8212;Subsequent Events, to our consolidated financial statements included under Item 8 of Part II of this annual report. 
+
+As discussed elsewhere herein, we recorded an aggregate of $14.0 billion of non-cash, non tax-deductible goodwill impairment charges in 2023 and 2022, which has substantially reduced our total stockholders&#8217; equity. See "Results of Operations&#8212;Goodwill Impairments" discussing the potential for additional goodwill impairments in future quarters. 
+
+We will continue to monitor our future sources and uses of cash, and anticipate that we will make adjustments to our capital allocation strategies when, as and if determined by our Board of Directors. We may also draw on our revolving credit facility as a source of liquidity for operating activities and to give us additional flexibility to finance our capital investments, repayments of debt, pension contributions and other cash requirements. 
+
+For additional information, see "Risk Factors&#8212;Financial Risks" in Item 1A of Part I of this report. 
+
+Impact of the Divestitures of the Latin American, ILEC and EMEA Businesses 
+
+As discussed in Note 2&#8212;Divestitures of the Latin American, ILEC and EMEA Businesses to our consolidated financial statements in Item 8 of Part II of this report, we sold our Latin American, ILEC and EMEA businesses on August 1, 2022, October 3, 2022 and November 1, 2023, respectively. As further described elsewhere herein, these transactions have provided us with a substantial amount of cash proceeds but have also reduced our base of income-generating assets that generate our recurring cash from operating activities. For a discussion of the impact of our divestitures upon our federal income taxes, see "Liquidity and Capital Resources&#8211;Federal Income Tax Obligations.&#8221; 
+
+Capital Expenditures 
+
+We incur capital expenditures on an ongoing basis to expand and improve our service offerings, enhance and modernize our networks and compete effectively in our markets. We evaluate capital expenditure projects based on a variety of factors, including expected strategic impacts (such as forecasted impact on revenue growth, productivity, expenses, service levels and customer retention) and our expected return on investment. The amount of capital investment is influenced by, among other things, current and projected demand for our services and products, our network requirements, cash flow generated by operating activities, cash required for debt services and other purposes, regulatory considerations (such as governmentally-mandated infrastructure buildout requirements) and the availability of requisite supplies, labor and permits. 
+
+Our capital expenditures continue to be focused on enhancing network operating efficiencies, supporting new service developments, and expanding our fiber network, including our Quantum Fiber buildout plan. A portion of our 2023 capital expenditures will also be focused on restoring network assets destroyed or damaged by Hurricane Ian in Florida during 2022 or replacing aged network assets. For more information on our capital spending, see (i) "&#8212;Overview of Sources and Uses of Cash" above, (ii) "Cash Flow Activities&#8212;Investing Activities" below and (iii) Item 1 of Part 1 of this report. 
+
+Debt Instruments and Financing Arrangements 
+
+Debt Instruments 
+
+On January 22, 2024, Lumen entered into an amended and restated transaction support agreement with a group of creditors representing over $12.5 billion of the outstanding indebtedness of the Company and its subsidiaries to, among other things, extend maturities of the debt instruments of the Company and Level 3 Financing, Inc. and provide access to a new revolving credit facility in an amount expected to be approximately $1.0 billion. In addition, the creditors have committed to provide $1.325 billion of financing to the Company through new long-term debt. The consummation of the transactions contemplated by the amended and restated transaction support agreement is subject to the satisfaction of various closing conditions. For more information, see Note 24&#8212;Subsequent Events, to our consolidated financial statements included under Item 8 of Part II of this annual report. 
+
+Pursuant to exchange offers commenced on March 16, 2023 (the "Exchange Offers"), (i) on March 31, 2023, Level 3 Financing, Inc. issued $915 million of its 10.500% Senior Secured Notes due 2030 in exchange for $1.535 billion of Lumen&#8217;s outstanding senior unsecured notes and (ii) on April 17, 2023, Level 3 Financing, Inc. issued an additional $9 million of its 10.500% Notes in exchange for $19 million of Lumen's outstanding senior unsecured notes. All exchanged notes were concurrently cancelled. These transactions resulted in a net reduction in the aggregate principal amount of Lumen&#8217;s consolidated indebtedness of approximately $630 million and, along with a repurchase of notes in the first quarter of 2023, a gain of $618 million during the year ended December 31, 2023. 
+
+At December 31, 2023, we had $11.4 billion of outstanding consolidated secured indebtedness, $8.5 billion of outstanding consolidated unsecured indebtedness (excluding (i) finance lease obligations, (ii) unamortized premiums, net and (iii) unamortized debt issuance costs) and approximately $1.8 billion of unused borrowing capacity under our revolving credit facility, as discussed further below. 
+
+Under our amended and restated credit agreement dated as of January 31, 2020 (the &#8220;Amended Credit Agreement&#8221;), we maintained at December 31, 2023 (i) a $2.2 billion senior secured revolving credit facility, under which we owed $200 million and had $218 million of letters of credit issued and undrawn as of such date, and (ii) $5.1 billion of senior secured term loan facilities. For additional information, see (i) "&#8212;Overview of Sources and Uses of Cash," and (ii) Note 7&#8212;Long-Term Debt and Credit Facilities to our consolidated financial statements in Item 8 of Part II of this report. 
+
+At December 31, 2023, we had $260 million undrawn letters of credit outstanding, $218 million of which were issued under our revolving line of credit, $40 million of letters of credit outstanding under our $225 million uncommitted letter of credit facility and $2 million of which were issued under a separate facility maintained by one of our subsidiaries (the full amount of which is collateralized by cash that is reflected on our consolidated balance sheets as restricted cash within other assets). 
+
+In addition to its indebtedness under our Amended Credit Agreement, Lumen Technologies is indebted under its outstanding senior notes, and several of its subsidiaries are indebted under separate credit facilities or senior notes. 
+
+For additional information on the terms and conditions of other debt instruments of ours and our subsidiaries, including financial and operating covenants, see (i) Note 7&#8212;Long-Term Debt and Credit Facilities to our consolidated financial statements in Item 8 of Part II of this report and (ii) "&#8212;Other Matters" below. 
+
+Future Financings and Debt Reduction Transactions 
+
+Subject to market conditions, we plan to continue to issue debt securities from time to time in the future to refinance a substantial portion of our maturing debt, including issuing debt securities of certain of our subsidiaries to refinance their maturing debt to the extent permitted under our debt covenants and consistent with our capital allocation strategies. The availability, interest rate and other terms of any new borrowings will depend on the ratings assigned by credit rating agencies, among other factors. 
+
+As of the filing date of this report, the credit ratings for the senior secured and unsecured debt of Lumen Technologies, Inc., Level 3 Financing, Inc. and Qwest Corporation were as follows: 
+
+##TABLE_START Borrower Moody's Investors Service, Inc. Standard &#38; Poor's Fitch Ratings Lumen Technologies, Inc.: Unsecured Ca CCC-/C CCC- Secured Caa3 B/CC B- Level 3 Financing, Inc.: Unsecured Caa2 CC CCC+ Secured B3 B B- Qwest Corporation: Unsecured Caa3 B B+ ##TABLE_END
+
+Our credit ratings are reviewed and adjusted from time to time by the rating agencies. Any future changes in the senior unsecured or secured debt ratings of us or our subsidiaries could impact our access to capital or borrowing costs. We cannot provide any assurances that we will be able to borrow additional funds on favorable terms, or at all. See "Risk Factors&#8212;Financial Risks" in Item 1A of Part I of this report. 
+
+From time to time over the past couple of years, we have engaged in various refinancings, redemptions, tender offers, open market purchases and other transactions designed to reduce our consolidated indebtedness, improve our financial flexibility or otherwise enhance our debt profile. Subject to market conditions, restrictions under our debt covenants, and other limitations, we may pursue similar transactions in the future to the extent feasible. See Note 7&#8212;Long-Term Debt and Credit Facilities to our consolidated financial statements in Item 8 of Part II of this report for additional information. 
+
+Federal Income Tax Obligations 
+
+As of December 31, 2023, Lumen Technologies had approximately $800 million of federal NOLs which, for U.S. federal income tax purposes, may be used to offset future taxable income. These NOLs are primarily related to federal NOLs we acquired through the Level 3 acquisition on November 1, 2017 and are subject to limitations under Section 382. We maintain a Section 382 rights agreement designed to safeguard through late 2026 our ability to use those NOLs. We utilized a substantial portion of our previously available NOLs to offset taxable gains generated by the completion of our 2022 divestitures. As a result, we anticipate that our cash income tax liability will increase in future periods. The amounts of our near-term future tax payments will depend upon many factors, including our future earnings and tax circumstances and the impact of any corporate tax reform or taxable transactions. 
+
+Although we expect to use substantially all of our remaining NOLs in future periods in accordance with Section 382's annual limitations, we cannot assure this. See "Risk Factors&#8212;Financial Risks&#8212;We may not be able to fully utilize our NOLs" in Item 1A of Part I of this report. 
+
+Stock Repurchases 
+
+Effective November 2, 2022, our Board of Directors authorized a new two-year program to repurchase up to an aggregate of $1.5 billion of our outstanding common stock (the "November 2022 stock repurchase program"). During the year ended December 31, 2023, we did not repurchase any shares of our outstanding common stock under this program. As of December 31, 2023, we were authorized to purchase up to an aggregate of $1.3 billion of our outstanding common stock under this program. We currently do not plan to purchase any shares of our outstanding common stock under this program in the near term. 
+
+Pension and Post-retirement Benefit Obligations 
+
+We are subject to material obligations under our existing defined benefit pension plans and post-retirement benefit plans. At December 31, 2023, the accounting unfunded status of our qualified and non-qualified defined benefit pension plans and our qualified post-retirement benefit plans was $769 million and $1.9 billion, respectively. For additional information about our pension and post-retirement benefit arrangements, see "Critical Accounting Policies and Estimates&#8212;Pension and Post-retirement Benefits" in Item 7 of Part II of this report and Note 11&#8212;Employee Benefits to our consolidated financial statements in Item 8 of Part II of this report. 
+
+On October 19, 2021, we, as sponsor of the Lumen Combined Pension Plan ("Combined Pension Plan"), along with the Plan&#8217;s independent fiduciary, entered into an agreement committing the Plan to use a portion of its plan assets to purchase an annuity from an insurance company (the "Insurer") to transfer $1.4 billion of the Plan&#8217;s pension liabilities. This agreement irrevocably transferred to the Insurer future Plan benefit obligations for approximately 22,600 U.S. Lumen participants ("Transferred Participants") effective on December 31, 2021. This annuity transaction was funded entirely by existing Plan assets and was intended to provide equivalent benefits to the Transferred Participants. The Insurer is committed to assume responsibility for administrative and customer service support, including distribution of payments to the Transferred Participants. 
+
+As of January 1, 2022, we spun off the Lumen Pension Plan from the Combined Pension Plan in anticipation of the sale of the ILEC business, as described further in Note 2&#8212;Divestitures of the Latin American, ILEC and EMEA Businesses to our consolidated financial statements in Item 1 of Part I of this report. At the time of the spin-off we transferred $2.5 billion of pension benefit obligation and $2.2 billion of plan assets to the Lumen Pension Plan. Following a revaluation of the pension obligation and pension assets for the Lumen Pension Plan in preparation for the closing of the ILEC business divestiture, we contributed approximately $319 million of cash in September 2022 to satisfy our contractual obligations to the purchaser of the divested business. This plan was subsequently assumed by the purchaser as part of our ILEC business divestiture on October 3, 2022. Upon sale of the ILEC business, we recognized $403 million of net actuarial loss and prior service cost, net of tax impact, related to the Lumen Pension Plan, which partially offset our gain on sale of the business. 
+
+Benefits paid by our Combined Pension Plan are paid through the trust that holds the Combined Pension Plan's assets. Based on current laws and circumstances, we do not expect any contributions to be required for our Combined Pension Plan during 2024. The amount of required contributions to our Combined Pension Plan in 2025 and beyond will depend on a variety of factors, most of which are beyond our control, including earnings on plan investments, prevailing interest rates, demographic experience, changes in plan benefits and changes in funding laws and regulations. We occasionally make voluntary contributions to our plans in addition to required contributions and reserve the right to do so in the future. We last made a voluntary contribution to the trust for our Combined Pension Plan during 2018. We currently do not expect to make a voluntary contribution in 2024. 
+
+Substantially all of our post-retirement health care and life insurance benefits plans are unfunded and are paid by us with available cash. As described further in Note 11&#8212;Employee Benefits, aggregate benefits paid by us under these plans (net of participant contributions and direct subsidy receipts) were $194 million, $210 million and $203 million for the years ended December 31, 2023, 2022 and 2021, respectively. For additional information on our expected future benefits payments for our post-retirement benefit plans, see Note 11&#8212;Employee Benefits to our consolidated financial statements in Item 8 of Part II of this report. 
+
+For 2023, our expected annual long-term rate of return on the pension plan assets, net of administrative expenses, was 6.5%. For 2024, our expected annual long-term rate of return on these assets is 6.5%. However, actual returns could be substantially different. 
+
+Our pension plan contains provisions that allow us, from time to time, to offer lump sum payment options to certain former employees in settlement of their future retirement benefits. We record an accounting settlement charge, consisting of the recognition of certain deferred costs of the pension plan, associated with these lump sum payments only if, in the aggregate, they exceed the sum of the annual service and interest costs for the plan&#8217;s net periodic pension benefit cost, which represents the settlement accounting threshold. As of December 31, 2021, lump sum pension settlement payments exceeded the settlement threshold. As a result, for the year ended December 31, 2021 we recognized a non-cash settlement charge of $383 million to accelerate the recognition of a portion of the previously unrecognized actuarial losses in the qualified pension plan, which was allocated and reflected in other (expense) income, net in our consolidated statement of operations for the year ended December 31, 2021. The settlement threshold was not exceeded for the years ended December 31, 2023 or December 31, 2022. The amount of any future non-cash settlement charges will be dependent on several factors, including the total amount of our future lump sum benefit payments. 
+
+Future Contractual Obligations 
+
+Our estimated future obligations as of December 31, 2023 include both current and long term obligations. At December 31, 2023, we had a current obligation of $157 million and a long-term obligation of $20 billion of long-term debt (excluding unamortized premiums, net and unamortized debt issuance costs). Under our operating leases, at December 31, 2023 we had a current obligation of $350 million and a long-term obligation of $1.5 billion. As of such date, we had current obligations related to right-of-way agreements and purchase commitments of $587 million and a long-term obligation of $1.5 billion. Additionally, as of such date we had a current obligation for asset retirement obligation of $26 million and a long-term obligation of $131 million. Finally, at December 31, 2023 our pension and post-retirement benefit plans had an unfunded benefit obligation, of which $197 million is classified as current and $2.5 billion is classified as long-term. For additional information, see Note 7&#8212;Long-Term Debt and Credit Facilities, Note 5&#8212;Leases, Note 18&#8212;Commitments, Contingencies and Other Items, Note 9&#8212;Property, Plant and Equipment and Note 11&#8212;Employee Benefits, respectively. 
+
+Federal Broadband Support Programs 
+
+In January 2020, the FCC created the Rural Digital Opportunity Fund (&#8220;RDOF&#8221;) program, a federal support program designed to fund broadband deployment in rural America. For the first phase of this program, RDOF Phase I, the FCC ultimately awarded $6.4 billion in support payments to be paid in equal monthly installments over 10 years. We were awarded RDOF funding in several of the states in which we operate and began receiving monthly support payments during the second quarter of 2022. We received approximately $17 million in annual RDOF Phase I support payments during 2023 and 2022 and expect to receive this same amount each year thereafter during the program period. 
+
+For additional information on these programs, see (i) Note 4&#8212;Revenue Recognition to our consolidated financial statements in Item 8 of Part II of this report, (ii) "Business&#8212;Regulation of Our Business" in Item 1 of Part I of this report and (iii) "Risk Factors&#8212;Legal and Regulatory Risks" in Item 1A of Part I of this report. 
+
+Federal officials have proposed changes to current programs and laws that could impact us, including proposals designed to increase broadband access, increase competition among broadband providers, lower broadband costs and re-adopt "net neutrality" rules similar to those adopted under a prior administration. In late 2021, the U.S. Congress enacted legislation that appropriated $65 billion to improve broadband affordability and access, primarily through federally funded state grants. As of the date of this report, various state and federal agencies are continuing to take steps to make this funding available to eligible applicants, including us. Although it remains premature to speculate on the ultimate impact of this legislation on us, we anticipate that the release of this funding would increase competition for broadband customers in newly-served areas. 
+
+Cash Flow Activities 
+
+The following table summarizes our consolidated cash flow activities for the years ended December 31, 2023 and 2022. For information regarding cash flow activities for the year ended December 31, 2021, see "Management's Discussion and Analysis of Financial Condition and Results of Operations" in Item 7 of Part II of our Annual Report Form 10-K for the year ended December 31, 2022. 
+
+##TABLE_START &#160; Years Ended December 31, (Decrease) / Increase &#160; 2023 2022 &#160; (Dollars in millions) Net cash provided by operating activities $ 2,160 4,735 (2,575) Net cash (used in) provided by investing activities (1,201) 5,476 (6,677) Net cash used in financing activities (18) (9,313) (9,295) ##TABLE_END
+
+Operating Activities 
+
+Net cash provided by operating activities decreased by $2.6 billion for the year ended December 31, 2023 as compared to the year ended December 31, 2022 primarily due to lower net income adjusted for non-cash expenses and gains, largely due to the impacts of the 2022 and 2023 divestitures discussed elsewhere herein. Cash provided by operating activities is subject to variability period over period as a result of timing differences, including with respect to the collection of receivables and payments of interest expense, accounts payable, income taxes and bonuses. 
+
+For additional information about our operating results, see "Results of Operations" above. 
+
+Investing Activities 
+
+Net cash (used in) provided by investing activities changed by $6.7 billion for the year ended December 31, 2023 as compared to the year ended December 31, 2022 primarily due to substantial pre-tax cash proceeds from the sales of our Latin American and ILEC businesses in 2022, partially offset by pre-tax cash proceeds from the sale of the EMEA business in 2023. 
+
+Financing Activities 
+
+Net cash used in financing activities decreased by $9.3 billion for the year ended December 31, 2023 as compared to the year ended December 31, 2022 primarily due to substantially higher debt repayments and dividends paid in 2022. 
+
+See Note 7&#8212;Long-Term Debt and Credit Facilities to our consolidated financial statements in Item 8 of Part II of this report for additional information on our outstanding debt securities. 
+
+Other Matters 
+
+We have cash management and loan arrangements with a majority of our income-generating subsidiaries, in which a substantial portion of the aggregate cash of those subsidiaries' is periodically advanced or loaned to us or our service company affiliate. Although we periodically repay these advances to fund the subsidiaries' cash requirements throughout the year, at any given point in time we may owe a substantial sum to our subsidiaries under these arrangements. In accordance with generally accepted accounting principles, these arrangements are reflected in the balance sheets of our subsidiaries, but are eliminated in consolidation and therefore not recognized on our consolidated balance sheets. 
+
+Our network includes some residual lead-sheathed copper cables installed years ago. These lead-sheathed cables constitute a small portion of our network. Due to recent media coverage of potential health and environmental risks associated with these cables, we anticipate incurring certain investigative costs. We also may incur other costs from related proceedings, including litigation, regulatory initiatives, and remediation. As of December 31, 2023, we had not accrued for any such potential costs and will only accrue when such costs are probable and reasonably estimable. For additional information about related litigation and potential risks, see Note 18&#8212;Commitments, Contingencies and Other Items to our consolidated financial statements in Item 1 of Part I of this report, and the risk factor disclosures incorporated by reference herein under &#8220;Risk Factors&#8221; in Item 1A of Part II of this report. 
+
+We are also involved in various legal proceedings that could substantially impact our financial position. See Note 18&#8212;Commitments, Contingencies and Other Items to our consolidated financial statements in Item 8 of Part II of this report for additional information. 
+
+Market Risk 
+
+As of December 31, 2023, we were exposed to market risk from changes in interest rates on our variable rate long-term debt obligations and fluctuations in certain foreign currencies. 
+
+Management periodically reviews our exposure to interest rate fluctuations and periodically implements strategies to manage the exposure. From time to time, we have used derivative instruments to swap our exposure to variable interest rates for fixed interest rates. We have established policies and procedures for risk assessment and the approval, reporting and monitoring of derivative instrument activities. As of December 31, 2023, we did not hold or issue derivative financial instruments for trading or speculative purposes. 
+
+As of December 31, 2023, we had approximately $7.9 billion of unhedged floating rate debt based on the secured overnight financing rate ("SOFR"). A hypothetical increase of 100 basis points in SOFR relating to our $7.9 billion of unhedged floating rate debt would, among other things, decrease our annual pre-tax earnings by approximately $79 million. 
+
+We conduct a portion of our business in currencies other than the U.S. dollar, the currency in which our consolidated financial statements are reported. Prior to the November 1, 2023 divestiture of our EMEA business, certain of our former European subsidiaries used the local currency as their functional currency, as the majority of their sales and purchases were transacted in their local currencies. Although we continue to evaluate strategies to mitigate risks related to the effect of fluctuations in currency exchange rates, we will likely recognize gains or losses from international transactions. Accordingly, changes in foreign currency rates relative to the U.S. dollar could positively or negatively impact our operating results. 
+
+Certain shortcomings are inherent in the method of analysis presented in the computation of exposures to market risks. Actual values may differ materially from those disclosed by us from time to time if market conditions vary from the assumptions used in the analyses performed. These analyses only incorporate the risk exposures that existed at December 31, 2023. 
+
