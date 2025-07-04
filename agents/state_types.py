@@ -6,6 +6,8 @@ from enum import Enum
 from pathlib import Path
 from pydantic import BaseModel, Field
 import tools.report_utils as report_utils
+import tools.report_utils_india as report_utils_indian
+
 
 TOOL_MAP: Dict[str, Any] = {
     "get_sec_10k_section_1":    report_utils.get_sec_10k_section_1,
@@ -20,6 +22,21 @@ TOOL_MAP: Dict[str, Any] = {
     "get_pe_eps_chart":         report_utils.generate_pe_eps_chart,
     "get_share_performance_chart": report_utils.generate_share_performance_chart,
     "get_financial_metrics":        report_utils.get_financial_metrics,
+}
+
+TOOL_IN_MAP: Dict[str, Any] = {
+    "get_sec_10k_section_1":    report_utils_indian.get_annual_report_sections_1,
+    "get_sec_10k_section_1a":   report_utils_indian.get_annual_report_sections_1a,
+    "get_sec_10k_section_7":    report_utils_indian.get_annual_report_sections_7,
+    "get_company_profile":      report_utils_indian.get_company_profile,
+    "get_key_data":             report_utils_indian.get_key_data_india,
+    "get_competitors":          report_utils_indian.get_competitor_analysis,
+    "get_income_statement":     partial(report_utils_indian.get_financial_statement, statement_type="income_statement"),
+    "get_balance_sheet":        partial(report_utils_indian.get_financial_statement, statement_type="balance_sheet"),
+    "get_cash_flow":            partial(report_utils_indian.get_financial_statement, statement_type="cash_flow_statement"),
+    "get_pe_eps_chart":         report_utils_indian.generate_pe_eps_chart_indian_market,
+    "get_share_performance_chart": report_utils_indian.generate_share_performance_chart_indian_market,
+    "get_financial_metrics":        report_utils_indian.get_financial_metrics_indian_market,
 }
 
 # --- LangGraph Agent State Type ---- #
@@ -113,7 +130,7 @@ class AgentState(BaseModel):
                 "file": os.path.join(self.raw_data_dir, json_file)
             })
         # charts and metrics in summaries
-        for task_name, ext in [("get_pe_eps_chart", "png"), ("get_share_performance_chart", "png"), ("get_financial_metrics", "json"), ("get_key_data", "json")]:
+        for task_name, ext in [("get_financial_metrics", "json"), ("get_key_data", "json"), ("get_pe_eps_chart", "png"), ("get_share_performance_chart", "png")]:
             filename = task_name.replace("get_", "") + (".png" if ext=="png" else ".json")
             tasks.append({
                 "task": task_name,
@@ -121,6 +138,36 @@ class AgentState(BaseModel):
             })
         return tasks
 
+# -------------------   Indian Specific eventually coudl be integrated
+    def get_in_data_collection_tasks(self) -> List[Dict[str, str]]:   
+        """
+        Build a list of tasks with target filenames for data collection based on state directories.
+        """
+        tasks: List[Dict[str, str]] = []
+        # SEC sections
+        for section in ["1", "1a", "7"]:
+            key = f"get_sec_10k_section_{section}"
+            filename = f"sec_10k_section_{section}.txt"
+            tasks.append({
+                "task": key,
+                "file": os.path.join(self.filing_dir, filename)
+            })
+        # JSON data in raw
+        for task_name in ["get_company_profile", "get_competitors",
+                           "get_income_statement", "get_balance_sheet", "get_cash_flow"]:
+            json_file = task_name.replace("get_", "") + ".json"
+            tasks.append({
+                "task": task_name,
+                "file": os.path.join(self.raw_data_dir, json_file)
+            })
+        # charts and metrics in summaries
+        for task_name, ext in [("get_pe_eps_chart", "png"), ("get_share_performance_chart", "png"), ("get_financial_metrics", "json"), ("get_key_data", "json")]:
+            filename = task_name.replace("get_", "") + (".png" if ext=="png" else ".json")
+            tasks.append({
+                "task": task_name,
+                "file": os.path.join(self.summaries_dir, filename)
+            })
+        return tasks
 # --- Instrumentation & Observability Types ---- #
 class NodeStatus(str, Enum):
     PENDING = "pending"

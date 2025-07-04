@@ -1,0 +1,1492 @@
+
+
+Forward-Looking Statements 
+
+This Form 10-K contains forward-looking statements that involve a number of risks and uncertainties. Words such as "accelerate", "achieve", "aim", "ambitions", "anticipate", "believe", "committed", "continue", "could", "designed", "estimate", "expect", "forecast", "future", "goals", "grow", "guidance", "intend", "likely", "may", "might", "milestones", "next generation", "objective", "on track", "opportunity", "outlook", "pending", "plan", "position", "possible", "potential", "predict", "progress", "ramp", "roadmap", "seek", "should", "strive", "targets", "to be", "upcoming", "will", "would", and variations of such words and similar expressions are intended to identify such forward-looking statements, which may include statements regarding: 
+
+&#8226; our business plans and strategy and anticipated benefits therefrom, including with respect to our IDM 2.0 strategy, our Smart Capital strategy, our partnership with Brookfield, the transition to an internal foundry model, updates to our reporting structure, and our AI strategy; 
+
+&#8226; projections of our future financial performance, including future revenue, gross margins, capital expenditures, and cash flows; 
+
+&#8226; projected costs and yield trends; 
+
+&#8226; future cash requirements, the availability, uses, sufficiency, and cost of capital resources, and sources of funding, including for future capital and R&#38;D investments and for returns to stockholders, such as stock repurchases and dividends, and credit ratings expectations; 
+
+&#8226; future products, services, and technologies, and the expected goals, timeline, ramps, progress, availability, production, regulation, and benefits of such products, services, and technologies, including future process nodes and packaging technology, product roadmaps, schedules, future product architectures, expectations regarding process performance, per-watt parity, and metrics, and expectations regarding product and process leadership; 
+
+&#8226; investment plans and impacts of investment plans, including in the US and abroad; 
+
+&#8226; internal and external manufacturing plans, including future internal manufacturing volumes, manufacturing expansion plans and the financing therefor, and external foundry usage; 
+
+&#8226; future production capacity and product supply; 
+
+&#8226; supply expectations, including regarding constraints, limitations, pricing, and industry shortages; 
+
+&#8226; plans and goals related to Intel's foundry business, including with respect to anticipated customers, future manufacturing capacity and service, technology, and IP offerings; 
+
+&#8226; expected timing and impact of acquisitions, divestitures, and other significant transactions, including the sale of our NAND memory business; 
+
+&#8226; expected completion and impacts of restructuring activities and cost-saving or efficiency initiatives 
+
+&#8226; future social and environmental performance goals, measures, strategies, and results; 
+
+&#8226; our anticipated growth, future market share, and trends in our businesses and operations; 
+
+&#8226; projected growth and trends in markets relevant to our businesses; 
+
+&#8226; anticipated trends and impacts related to industry component, substrate, and foundry capacity utilization, shortages, and constraints; 
+
+&#8226; expectations regarding government incentives; 
+
+&#8226; future technology trends and developments, such as AI; 
+
+&#8226; future macro environmental and economic conditions; 
+
+&#8226; geopolitical tensions and conflicts and their potential impact on our business; 
+
+&#8226; tax- and accounting-related expectations; 
+
+&#8226; expectations regarding our relationships with certain sanctioned parties; and 
+
+&#8226; other characterizations of future events or circumstances. 
+
+Such statements involve many risks and uncertainties that could cause our actual results to differ materially from those expressed or implied, including those associated with: 
+
+&#8226; the high level of competition and rapid technological change in our industry; 
+
+&#8226; the significant long-term and inherently risky investments we are making in R&#38;D and manufacturing facilities that may not realize a favorable return; 
+
+&#8226; the complexities and uncertainties in developing and implementing new semiconductor products and manufacturing process technologies; 
+
+&#8226; our ability to time and scale our capital investments appropriately and successfully secure favorable alternative financing arrangements and government grants; 
+
+&#8226; implementing new business strategies and investing in new businesses and technologies; 
+
+&#8226; changes in demand for our products; 
+
+&#8226; macroeconomic conditions and geopolitical tensions and conflicts, including geopolitical and trade tensions between the US and China, the impacts of Russia's war on Ukraine, tensions and conflict affecting Israel, and rising tensions between the US and Taiwan; 
+
+&#8226; the evolving market for products with AI capabilities; 
+
+##TABLE_START 
+
+##TABLE_END
+
+&#8226; our complex global supply chain, including from disruptions, delays, trade tensions and conflicts, or shortages; 
+
+&#8226; product defects, errata and other product issues, particularly as we develop next-generation products and implement next-generation manufacturing process technologies; 
+
+&#8226; potential security vulnerabilities in our products; 
+
+&#8226; increasing and evolving cybersecurity threats and privacy risks; 
+
+&#8226; IP risks including related litigation and regulatory proceedings; 
+
+&#8226; the need to attract, retain, and motivate key talent; 
+
+&#8226; strategic transactions and investments; 
+
+&#8226; sales-related risks, including customer concentration and the use of distributors and other third parties; 
+
+&#8226; our significantly reduced return of capital in recent years; 
+
+&#8226; our debt obligations and our ability to access sources of capital; 
+
+&#8226; complex and evolving laws and regulations across many jurisdictions; 
+
+&#8226; fluctuations in currency exchange rates; 
+
+&#8226; changes in our effective tax rate; 
+
+&#8226; catastrophic events; 
+
+&#8226; environmental, health, safety, and product regulations; 
+
+&#8226; our initiatives and new legal requirements with respect to corporate responsibility matters; and 
+
+&#8226; other risks and uncertainties described in this report and our other filings with the SEC. 
+
+Given these risks and uncertainties, readers are cautioned not to place undue reliance on such forward-looking statements. Readers are urged to carefully review and consider the various disclosures made in this Form 10-K and in other documents we file from time to time with the SEC that disclose risks and uncertainties that may affect our business. 
+
+Unless specifically indicated otherwise, the forward-looking statements in this Form 10-K do not reflect the potential impact of any divestitures, mergers, acquisitions, or other business combinations that have not been completed as of the date of this filing. In addition, the forward-looking statements in this Form 10-K are based on management's expectations as of the date of this filing, unless an earlier date is specified, including expectations based on third-party information and projections that management believes to be reputable. We do not undertake, and expressly disclaim any duty, to update such statements, whether as a result of new information, new developments, or otherwise, except to the extent that disclosure may be required by law. 
+
+Note Regarding Third-Party Information 
+
+This Form 10-K includes market data and certain other statistical information and estimates that are based on reports and other publications from industry analysts, market research firms, and other independent sources, as well as management's own good faith estimates and analyses. Intel believes these third-party reports to be reputable, but has not independently verified the underlying data sources, methodologies, or assumptions. The reports and other publications referenced are generally available to the public and were not commissioned by Intel. Information that is based on estimates, forecasts, projections, market research, or similar methodologies is inherently subject to uncertainties, and actual events or circumstances may differ materially from events and circumstances reflected in this information. 
+
+Intel, Arc, Arria, Celeron, Intel Agilex, Intel Atom, Intel Core, eASIC, Intel Evo, FlexRAN, Granulate, the Intel logo, Intel Optane, Intel Unison, MAX, Movidius, OpenVINO, OpenVINO logo, Pentium, Stratix, Thunderbolt and the Thunderbolt logo, Intel vPro, and Xeon are trademarks of Intel Corporation or its subsidiaries. 
+
+The Bluetooth &#174; word mark and logos are registered trademarks owned by Bluetooth SIG, Inc. and any use of such marks by Intel Corporation is under license. 
+
+* Other names and brands may be claimed as the property of others. 
+
+Availability of Company Information 
+
+We use our Investor Relations website, www.intc.com , as a routine channel for distribution of important, and often material, information about us, including our quarterly and annual earnings results and presentations, press releases, announcements, information about upcoming webcasts, analyst presentations, and investor days, archives of these events, financial information, corporate governance practices, and corporate responsibility information. We also post our filings on this website the same day they are electronically filed with, or furnished to, the SEC, including our annual and quarterly reports on Forms 10-K and 10-Q and current reports on Form 8-K, our proxy statements, and any amendments to those reports. All such information is available free of charge. Our Investor Relations website allows interested persons to sign up to automatically receive e-mail alerts when we post financial information and issue press releases, and to receive information about upcoming events. We encourage interested persons to follow our Investor Relations website in addition to our filings with the SEC to timely receive information about the company. 
+
+##TABLE_START 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START 
+
+A Year in Review 
+
+##TABLE_END
+
+##TABLE_START 2023 revenue was $54.2 billion, down $8.8 billion, or 14%, from 2022. CCG revenue decreased 8% due to lower notebook and desktop volume from lower demand across market segments, partially offset by increased volume in the second half of the year as customer inventory levels normalized compared to higher levels in the first half. Notebook ASPs decreased due to a higher mix of small core products combined with a higher mix of older generation products. This was partially offset by higher desktop ASPs due to an increased mix of product sales to the commercial and gaming market segments. DCAI revenue decreased 20% due to lower server volume resulting from a softening CPU data center market, partially offset by higher ASPs from a lower mix of hyperscale customer-related revenue and a higher mix of high core count products. NEX revenue decreased 31% as customers tempered purchases to reduce inventories and adjust to a lower demand environment across product lines. We invested $16.0 billion in R&#38;D, made capital investments of $25.8 billion, and had $11.5 billion in cash from operations and $(11.9) billion of adjusted free cash flow. 
+
+##TABLE_END
+
+##TABLE_START Revenue Gross Margin Diluted EPS Attributable to Intel Cash Flows 
+
+&#9632; GAAP $B 
+
+&#9632; GAAP &#9632; Non-GAAP 
+
+&#9632; GAAP &#9632; Non-GAAP 
+
+&#9632; Operating Cash Flow $B 
+
+&#9632; Adjusted Free Cash Flow 1 $B 
+
+##TABLE_END
+
+##TABLE_START $54.2B 40.0% 43.6% $0.40 $1.05 $11.5B $(11.9)B GAAP GAAP 
+
+non-GAAP 1 
+
+GAAP 
+
+non-GAAP 1 
+
+GAAP 
+
+non-GAAP 1 
+
+Revenue down 14% from 2022 revenue Gross margin down 2.6 ppts from 2022 Gross margin down 3.7 ppts from 2022 Diluted EPS down $1.54 or 79% from 2022 Diluted EPS down $0.62 or 37% from 2022 
+
+Operating cash flow down $4.0B or 26% from 2022 
+
+Adjusted free cash flow down $7.8B or 191% from 2022 
+
+Lower revenue in CCG, DCAI, and NEX. 
+
+Lower GAAP gross margin from lower revenue, higher unit cost, and higher excess capacity charges, partially offset by the sell-through of previously reserved inventory, lower inventory reserves taken in 2023, lower product ramp costs, and the absence of one-time charges recognized in 2022. 
+
+Lower GAAP EPS from lower gross margin and absence of one-time gains recognized in 2022, partially offset by lower R&#38;D and MG&#38;A spending, and a higher tax benefit. 
+
+Lower operating cash flow primarily driven by lower net income, partially offset by favorable changes in working capital and other adjustments. 
+
+##TABLE_END
+
+Managing to our long-term financial model 
+
+Our 2023 results reflect the continued advancement of our transformational journey. We continued to prioritize investments critical to our IDM 2.0 transformation, achieved operational milestones, and executed disciplined expense management. To achieve our long-term financial model, we believe it is imperative that we drive to world-class product cost and operational efficiency. A key component of our overall strategy is our internal foundry model. Under this model, we intend to reshape our operational dynamics and establish transparency and accountability through standalone profit and loss reporting for our manufacturing group in 2024. We expect this model to enable increased efficiencies across a number of aspects of our organization that we believe are integral to achieving our financial and operational goals. At the same time, we continue to prioritize capital investments critical to our efforts to regain process leadership and establish a leading-edge, at-scale foundry business. 
+
+1 See "Non-GAAP Financial Measures" within MD&#38;A. 
+
+##TABLE_START 
+
+Fundamentals of Our Business 
+
+##TABLE_END
+
+Table of Contents 
+
+Delivering leadership products 
+
+We seek to develop and offer leading products that will help enable a future in which every human can have more computing power and quicker access to data. We remain committed to our goal of delivering five technology nodes in four years to regain transistor performance and power performance leadership by 2025. This year, we achieved several key milestones on our product roadmap, including: 
+
+&#9642; We launched the Intel &#174; Core&#8482; Ultra processors, featuring our first integrated neural processing unit, for power-efficient AI acceleration and local inference on the PC. 
+
+&#9642; We introduced the 13th Gen Intel &#174; Core&#8482; mobile processor family, led by the launch of the first 24-core processor for laptops, and introduced the new Intel vPro &#174; Platform powered by the full lineup of 13th Gen Intel Core processors. 
+
+&#9642; We introduced the 14th Gen Intel &#174; Core&#8482; desktop processor family, delivering fast desktop frequencies and enhanced desktop experience for enthusiasts. 
+
+&#9642; We launched the 4th&#8239;Gen Intel &#174; Xeon &#174; Scalable processors, a critical part of our heterogeneous hardware and software portfolio to accelerate real-world data center, cloud and edge workloads, including AI, and also launched the 4th&#8239;Gen Intel Xeon Scalable processors with Intel &#174; vRAN Boost, a new general-purpose chip that fully integrates Layer 1 acceleration into the Xeon SoC and is designed to eliminate the need for external accelerator cards. 
+
+&#9642; We launched the 5th Gen Intel &#174; Xeon &#174; Scalable processors for data center, cloud, and edge, with embedded capabilities for powering AI workloads. 
+
+&#9642; We introduced two new Intel &#174; Arc&#8482; Pro Graphics Processing Units, Intel Arc Pro A60 and Intel Pro A60M, and shipped Intel Arc Pro A40-based systems. 
+
+Investing in leading-edge, at-scale manufacturing 
+
+We are committed to strengthening the resilience of the global semiconductor supply chain for leading-edge semiconductor products by investing in geographically balanced manufacturing capacity. In the US, we are expanding our existing operations in Arizona, New Mexico, and Oregon, and investing in two new leading-edge chip factories in Ohio. We have submitted all four of our major project proposals in Arizona, New Mexico, Ohio, and Oregon, estimated to represent over $100 billion of US manufacturing and research investments over the next five years, to the US Department of Commerce's CHIPS Program Office. 
+
+In the European Union and Israel, we have announced a series of investments, spanning our existing operations in Ireland and Israel, as well as our planned investment of more than $33 billion in Germany to build a leading-edge wafer fabrication mega-site, and our plans to invest up to $4.6 billion in an assembly and test facility in Poland. We also announced the start of high-volume manufacturing using Intel 4 technology and EUV technology in Ireland. 
+
+Unlocking value 
+
+We continue to look for innovative ways to unlock value for our stakeholders. We sold a 32.4% minority stake in our IMS Nanofabrication business, including investments from Bain Capital and Taiwan Semiconductor Manufacturing Company (TSMC). Net proceeds resulting from the IMS minority stake sales totaled $1.4 billion. We also executed a secondary offering of Mobileye stock that generated net proceeds of $1.6 billion. Further, we communicated our intent to operate our Programmable Solutions Group (PSG) as a standalone business, with standalone financial reporting beginning January 1, 2024. This is expected to enable potential private and public equity investments. These transactions provide an additional source of capital to support the critical investments needed to advance our strategy. 
+
+##TABLE_START 
+
+Fundamentals of Our Business 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START 
+
+Our Strategy 
+
+##TABLE_END
+
+Technology permeates every aspect of our lives and is increasingly central to every aspect of human existence. As we look ahead to the next decade, we expect to see continued demand for processing power. Semiconductors are the underlying technology powering this digital expansion, and we are strategically positioning ourselves to create a resilient global semiconductor supply chain by investing in geographically balanced manufacturing capacity. The demand for compute is being accelerated by five superpowers: ubiquitous compute, pervasive connectivity, cloud-to-edge infrastructure, AI, and sensing. Together these superpowers combine to amplify and reinforce each other, and will exponentially increase the world's need for computing by packing even more processing capability onto ever-smaller microchips. We intend to lead the industry by harnessing these superpowers for our customers' growth and our own. 
+
+We are uniquely positioned with the depth and breadth of our silicon, platforms, and software, and packaging and process technology with at-scale manufacturing. With these strengths and the tailwinds of the superpowers driving digital disruption, our strategy to win is focused on four key themes: product leadership, open platforms, manufacturing at scale, and our people. 
+
+Our Priorities 
+
+##TABLE_START Product Leadership ##TABLE_END
+
+Lead and democratize compute with Intel x86 and xPU. Our product offerings provide end-to-end solutions, scaling from data center to network, PCs, edge computing, and the emerging fields of AI and autonomous driving, to serve an increasingly smart and connected world. 
+
+At our core is the x86 computing ecosystem, which supports an extensive and deep universe of software applications, with billions of lines of code written and optimized for x86 CPUs. We continue to advance this ecosystem with x86 microarchitectures focused on performance, which push the limits of low latency and single-threaded application performance, and microarchitectures focused on efficiency, which are designed for computing throughput efficiency to enable scalable multithreaded performance. 
+
+Beyond the CPU, we are delivering a growing family of xPU products, which encompass client and data center GPUs, IPUs, FPGAs, and other accelerators. The xPU approach recognizes that different workloads benefit from different computing architectures, and our broad portfolio helps meet our customers' increasingly diverse computing needs. As part of our strategy, we seek to develop and offer leading products across each of these architectural categories. 
+
+We also seek to address every phase of the AI continuum, including the largest, most challenging GenAI and large language models. We believe AI represents a generational shift in computing by expanding human abilities and solving the most challenging problems.&#8239;We are in the early stages of realizing AI's full potential and GenAI is just the beginning. Our strategy is to bring AI to where the data is being generated and used and we believe we have a full spectrum of hardware and software platforms, offering open and modular solutions, for competitive total cost of ownership and time to value that customers need to win in this era of exponential growth and AI everywhere. We are infusing AI into Intel technologies, supporting today's GenAI workloads, fueling emerging usages like AI PC and AI at the edge, and pioneering innovations that we believe advance the future of AI in the next decade. We believe our leadership in IP, process, packaging, security, software, services, manufacturing, and foundry services positions us to realize AI's full potential to transform industries and solve the world's biggest challenges. 
+
+##TABLE_START 
+
+Fundamentals of Our Business 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START Open Platforms ##TABLE_END
+
+We aim to deliver open software and hardware platforms with industry-defining standards . Around the globe, companies are building their networks, systems, and solutions on open standards-based platforms. Intel has helped set the stage for this movement, with our historic contributions in developing standards such as CXL, Thunderbolt&#8482;, and PCI Express*. We also contributed to the design, build, and validation of open-source products in the industry such as Linux*, Android*, and others. The world's developers constantly innovate and expand the capabilities of these open platforms while increasing their stability, reliability, and security. In addition, microservices have enabled the development of flexible, loosely coupled services that are connected via application programming interfaces to create end-to-end processes. We use industry collaboration, co-engineering, and open-source contributions to accelerate software innovation. Through our oneAPI initiative, developers use a unified language across CPUs, GPUs, and FPGAs that is designed to reduce development time and to enhance productivity. We also deliver a steady stream of open-source code and optimizations that are designed for projects across virtually every platform and usage model. We are committed to co-engineering and jointly designing, building, and validating new products with software industry leaders to accelerate mutual technology advancements and help new software and hardware work better together. Our commitment extends to developers through our developer-first approach based on openness, choice, and trust. 
+
+Ultimately, we believe our pivot to a software-defined, silicon-enhanced strategy will enable us to realize value at all layers of the compute stack. This should allow us to continue to monetize foundational and ecosystem-enabling software through hardware sales, limited licensing, and customer-enabling service offerings. Additionally, we are expanding our software portfolio by developing and monetizing software solutions, services, and platforms with SaaS, software subscriptions, and other business models. We are prioritizing three portfolios of offerings for our SaaS and subscription-based software: AI, trust and security, and performance optimization. We are also scaling the availability of Intel &#174; Developer Cloud, which is designed to enable developers to learn, prototype, test, and run their own AI workloads across multiple Intel hardware architectures to experience the competitive performance of Intel platforms and develop their AI software from today&#8217;s hardware portfolio to next-generation architectures. 
+
+An open approach and deep engagement with the developer ecosystem are essential to lowering barriers to entry and unlocking AI innovations for developers and customers. We are expediting an open AI software ecosystem that we believe is needed to break down proprietary walls. We offer customers, partners, and developers early access and a rapid path to scale their AI solutions with the Intel Developer Cloud and integrated and scalable hardware and software systems and solutions. 
+
+We believe AI will only be truly accessible to all when its use is ethical and responsible. Partnering with industry leaders, we are working to deliver innovative ecosystem tools and solutions intended to make AI safer and more secure, and help address privacy concerns as AI scales exponentially. We are building platforms and technologies for the convergence of AI and security to help customers confidently secure diverse AI workloads across the data center, cloud, PC, and edge. 
+
+##TABLE_START Manufacturing at Scale ##TABLE_END
+
+IDM 2.0, the next evolution and expansion of our IDM model, is a differentiated strategy that combines three capabilities: 
+
+Internal factory network. Our global, internal factory network has been foundational to our success, enabling product optimization, improved economics, and supply resilience. We intend to remain a leading developer of process technology and a major manufacturer of semiconductors and will continue to build the majority of our products in our factories. 
+
+Strategic use of foundry capacity. We expect to expand our use of third-party foundry manufacturing capacity, which will provide us with increased flexibility and scale to optimize our product roadmaps for cost, performance, schedule, and supply. Our use of foundry capacity will include manufacturing for a range of modular tiles on advanced process technologies. 
+
+Open System Foundry. We are building a world-class foundry business to meet the growing long-term global demand for semiconductors. We plan to differentiate our foundry offerings from those of others through a combination of leading-edge packaging and process technology, committed capacity in the US and Europe available for customers globally, and a world-class IP portfolio that will include x86 cores, as well as other ecosystem IP. The current foundry model enabled explosion of ecosystem innovation at the wafer level. We believe this established model has historically served the industry well, but a new mindset is needed in our new era of chipmaking. As innovation evolves, we see the rack has collapsed into a system and the system has collapsed into an advanced package. We are building out an Open System Foundry that has four components: wafer fabrication, packaging, chiplet standard, and software. 
+
+The Open System Foundry involves engaging with customers at multiple levels, from basic wafer manufacturing to helping define and implement their desired system architectures. We intend to build our customers' silicon designs and deliver full end-to-end customizable products built with our advanced packaging technology. 
+
+We believe our IDM 2.0 strategy enables us to deliver leading process technology and products to meet growing long-term demand using internal and external capacity, while leveraging our core strengths to provide foundry services to others and providing superior capacity, supply resilience, and an advantageous cost structure. 
+
+In the upcoming year, we plan to implement an internal foundry model, where our business units engage with our manufacturing group in an arm's-length fashion, similar to how fabless semiconductor companies engage with external foundries. The model is integral to our IDM 2.0 operational and financial strategies and aims to fully leverage our invested capital while serving a wide variety of chip customers worldwide. 
+
+##TABLE_START 
+
+Fundamentals of Our Business 
+
+##TABLE_END
+
+Table of Contents 
+
+Recent events, including the pandemic-related global chip shortage, made clear how supply chain disruptions can severely impact everyday life. The steady rise of chipmaking capacity in Asia has made the world vulnerable to continued and increasingly extreme shortages. We believe a secure, balanced, and resilient supply of semiconductors is essential to the interests of the entire global economy. With one of the most geographically balanced supply chains across North America, Europe and Asia, we plan to partner with the public sector to strengthen the resilience of the global semiconductor supply chain by investing in a more geographically balanced capacity. We believe our investments will help develop a more resilient supply chain for generations to come and hedge against geopolitical instability. 
+
+##TABLE_START Our People ##TABLE_END
+
+Our world-class talent is at the heart of everything we do. Together we strive to have a positive effect on business, society, and the planet. Delivering on our strategy and growth ambitions requires attracting, developing, and retaining top talent from across the world. Our people build our technology, unlock new business opportunities, and work with our partners and customers to create global impact. 
+
+Fostering a culture of empowerment, inclusion, and accountability is also core to our strategy. We are committed to creating an inclusive workplace where the world&#8217;s best engineers and technologists can fulfill their dreams and create technology that improves the life of every person on the planet. 
+
+Growth Imperative 
+
+We are investing to position the company for accelerated long-term growth, focusing on both our core businesses and our growth businesses. In our client and server businesses, our strategy is to invest to strengthen the competitiveness of our product roadmap and to explore new opportunities. We believe we have significant opportunities to grow and gain share in graphics; mobility, including autonomous driving; networking and edge; AI; software; and foundry services. 
+
+Focus on Innovation and Execution 
+
+We are focused on executing our product and process roadmap and accelerating our cadence of innovation. We have set a detailed process and packaging technology roadmap and announced key architectural innovations to further our goal of delivering leadership products in every area in which we compete. We are returning our culture to its roots in innovation and execution, drawing on principles established by our former CEO Andy Grove that emphasize discipline and accountability. This includes using OKRs throughout the organization to drive a common purpose. 
+
+To help us execute toward our IDM 2.0 strategy, we are leveraging our Smart Capital approach. This approach is designed to enable us to adjust quickly to opportunities in the market, while managing our margin structure and capital spending. The key elements of Smart Capital include: 
+
+&#9642; Smart capacity investments. We are aggressively building out manufacturing shell space, which gives us flexibility in how and when we bring additional capacity online based on milestone triggers such as product readiness, market conditions, and customer commitments. 
+
+&#9642; Government incentives. We are continuing to work with governments in the US and Europe to advance and benefit from incentives for domestic manufacturing capacity for leading-edge semiconductors. 
+
+&#9642; SCIP. We are accessing strategically aligned capital to increase our flexibility and help efficiently accelerate and scale manufacturing build-outs. This type of co-investment also demonstrates how private capital is unlocked and becomes a force multiplier for government incentives for semiconductor manufacturing expansion. 
+
+&#9642; Customer commitments. IFS is working closely with potential customers to make advance payments to secure capacity. This provides us with the advantage of committed volume, de-risking investments while providing capacity corridors for our foundry customers. 
+
+&#9642; External foundries. We intend to continue our use of external foundries where their unique capabilities support our leadership products. 
+
+##TABLE_START 
+
+Fundamentals of Our Business 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START 
+
+Our Capital 
+
+##TABLE_END
+
+We deploy various forms of capital to execute our strategy in a way that seeks to reflect our corporate values, help our customers succeed, and create value for our stakeholders. 
+
+##TABLE_START Capital Strategy Value Financial 
+
+Leverage financial capital to invest in ourselves and exit businesses to optimize our portfolio, both to drive our strategy and long-term value creation. 
+
+We strategically invest financial capital to continue to build our business, create long-term value and provide returns to our stockholders. 
+
+Intellectual 
+
+Invest significantly in R&#38;D and IP to enable us to deliver on our accelerated process technology roadmap, introduce leading x86 and xPU products, and develop new businesses and capabilities. We develop IP to enable next-generation products, create synergies across our businesses, expand into new markets, and establish and support our brands. 
+
+Manufacturing 
+
+Build manufacturing capacity efficiently to meet the growing long-term global demand for semiconductors, aligned with our IDM 2.0 strategy. 
+
+Our geographically balanced manufacturing scope and scale enable us to provide our customers with a broad range of leading-edge products and foundry capabilities. 
+
+Human 
+
+Build a diverse, inclusive, and safe work environment to attract, develop, and retain top talent needed to build transformative products. Our talented employees enable the development of solutions and enhance the intellectual and manufacturing capital critical to helping our customers win the technology inflections of the future. Social and Relationship 
+
+Build trusted relationships for both Intel and our stakeholders, including employees, suppliers, customers, local communities, and governments. We collaborate with stakeholders on programs to empower underserved communities through education and technology, and on initiatives to advance accountability and capabilities across our global supply chain, including accountability for the respect of human rights. Natural 
+
+Strive to reduce our environmental footprint through efficient and responsible use of natural resources and materials used to create our products. 
+
+With our proactive efforts, we seek to mitigate climate and water impacts, achieve efficiencies, lower costs, and position ourselves to respond to the expectations of our stakeholders. 
+
+##TABLE_END
+
+Comprehensive ESG and Corporate Responsibility Strategy: RISE 
+
+Our commitment to corporate responsibility and sustainability leadership is deeply integrated throughout our business. We strive to create an inclusive and positive work environment where every employee has a voice and a sense of belonging, and we are proactive in our efforts to reduce our environmental footprint through efficient and responsible use of natural resources and materials. 
+
+We continue to raise the bar for ourselves and leverage our leadership position in the global technology ecosystem to make greater strides in corporate responsibility and apply technology to address social and environmental challenges. Through our RISE strategy, we aim to create a more responsible , inclusive, and sustainable world, enabled by our technology and the expertise and passion of our employees. Our corporate responsibility strategy is designed to increase the scale of our work through collaboration with our stakeholders and other organizations; we know that we cannot achieve the broad social impact to which we aspire by acting alone. More information about our RISE goals, including progress we have made toward achieving them, is included in our Corporate Responsibility Report 1 . 
+
+1 The contents of our Corporate Responsibility Report are referenced for general information only and are not incorporated by reference in this Form 10-K. 
+
+##TABLE_START &#160; 
+
+Fundamentals of Our Business 
+
+Our Capital 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START 
+
+Financial Capital ##TABLE_END
+
+We take a disciplined approach to our financial capital allocation strategy, which continues to focus on building stakeholder value and is driven by our priority to invest in the business and capacity and our capital needs. We also seek to pay competitive dividends, optimize our portfolio, look for innovative ways to unlock value across our assets, and, from time-to-time, engage in mergers and acquisitions. As we invest in our IDM 2.0 strategy and implement our next phase of capacity expansions and the acceleration of our process technology roadmap, our allocation priorities have shifted more heavily toward investing in the business and away from stock repurchases. In the long term, we will continue to look for opportunities to further our strategy through acquisitions while remaining disciplined on capital allocation. 
+
+##TABLE_START Cash from Operating Activities $B ##TABLE_END
+
+##TABLE_START 
+
+&#9632; Cash from Operating Activities 
+
+&#9632; Adjusted Free Cash Flow 1 
+
+##TABLE_END
+
+Our Financial Capital Allocation Strategy 
+
+Invest in the Business 
+
+Our first allocation priority is to invest in R&#38;D and capital spending to capitalize on the opportunity presented by the world's demand for semiconductors. In 2023, we continued our focus on capital investment and the deployment of our Smart Capital strategy. 
+
+Return Excess Cash to Stockholders 
+
+Our capital allocation strategy includes returning excess cash to stockholders. We achieve this through our dividend policy and, when permissible, stock repurchases. In 2023, we declared a reduced quarterly dividend on our common stock. This dividend reduction reflects our deliberate approach to capital allocation, is expected to support the critical investments needed to execute our business strategy, and is designed to position us to create long-term value. We expect future stock repurchases to continue to be curtailed during this time of meaningful investment in capital. 
+
+##TABLE_START R&#38;D and Capital Investments $B Cash to Stockholders $B ##TABLE_END
+
+&#160; ##TABLE_START ##TABLE_END &#160; 
+
+##TABLE_START 
+
+&#9632; R&#38;D 
+
+&#9632; Logic 
+
+&#9632; Memory 2 
+
+&#9632; Repurchases 
+
+&#9632; Dividend 
+
+##TABLE_END 
+
+Optimize our Portfolio and Unlock Value 
+
+Our capital allocation strategy also includes opportunistic investment in and acquisition of companies that complement our strategic objectives. We look for acquisitions that supplement and strengthen our capital and R&#38;D investments. 
+
+We also seek to drive value creation through transactions such as the 2022 Mobileye IPO, the 2023 minority stake sales in IMS, and the 2023 announcement of our intent to operate PSG as a standalone business which we expect to enable potential private and public equity investments. Together, these transactions provide an additional source of capital to support the critical investments needed to advance our business strategy. 
+
+Lastly, we take action when investments do not strategically align to our key priorities. In the last three years, we exited numerous businesses, including the NAND memory business and Intel &#174; Optane&#8482; memory business. 
+
+1 See "Non-GAAP Financial Measures" within MD&#38;A. 
+
+2 2021-2023 capital investments in Memory are not presented due to the divestiture of the NAND memory business announced in October 2020. 2019 and 2020 capital investments presented include Memory. 
+
+##TABLE_START &#160; 
+
+Fundamentals of Our Business 
+
+Our Capital 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START 
+
+Intellectual Capital 
+
+##TABLE_END
+
+Research and Development 
+
+R&#38;D investment is critical to enable us to deliver on our accelerated technology roadmap, introduce leading products, and develop new businesses and capabilities in the future. We seek to protect our R&#38;D efforts through our IP rights and may augment R&#38;D initiatives by acquiring or investing in companies, entering into R&#38;D agreements, and directly purchasing or licensing technology. 
+
+Areas Key to Product Leadership 
+
+We have intensified our focus on areas key to product leadership. Our objective with each new generation of products is to improve user experiences and value through advances in performance, power, cost, connectivity, security, form factor, and other features. We also focus on reducing our design complexity, re-using IP, and increasing ecosystem collaboration to improve our efficiency. 
+
+##TABLE_START Process and packaging. Our leading-edge process and packaging technology and world-class IP portfolio are key to the success of our strategy. We are committed to achieving process technology leadership in 2025 by planning to deliver five technology nodes in four years. In addition, we have solidified our process and packaging offerings to external customers through IFS. 
+
+&#9642; Intel 7 process node is in production for our 13th Gen Intel Core processors and represents the continuous improvement of transistor and interconnect performance. 
+
+&#9642; Intel 4, our first EUV node, delivers significant density scaling and approximately 20% performance-per-watt improvement over Intel 7. The Intel Core Ultra processor is our first high-volume client product on Intel 4 and began shipping to customers in Q3 2023. 
+
+&#9642; Intel 3 is expected to deliver further logic scaling and up to 18% performance-per-watt improvement over Intel 4. Intel 3 is our first advanced node offered to IFS customers and is optimized for the needs of data center products. 
+
+&#9642; Intel 20A will follow Intel 3 and will introduce two breakthrough technologies that we expect to deliver up to a 15% performance-per-watt improvement over Intel 3: RibbonFET and PowerVia. RibbonFET, our implementation of a gate-all-around transistor, is designed to deliver faster transistor switching speeds while achieving the same drive current as multiple fins, but in a smaller footprint. PowerVia is our unique industry-first implementation of backside power delivery that is designed to optimize signal transmission by eliminating the need for power routing on the front side of the wafer. 
+
+&#9642; Intel 18A, our second IFS advanced node offering, will improve on Intel 20A by delivering ribbon innovation for design optimization and line width reduction. Intel 18A is expected to deliver an additional 10% improvement in performance per watt over Intel 20A. 
+
+&#9642; Beyond Intel 18A, we have initiated definition and development of our next two process nodes and continue to define, build, and develop the next-generation High Numerical Aperture EUV lithography into our process technology roadmap. To continue our modernization and infrastructure expansions, we have begun the installation of the world&#8217;s first High-NA EUV tool for commercial use at our Gordon Moore Park in Oregon. 
+
+&#9642; Our family of 3D advanced packaging technology will usher in the next generation of Foveros technology, enabling us to mix multiple top die tiles with multiple base tiles across mixed fab nodes, providing greater flexibility for disaggregated chip designs. Our future Foveros Direct technology should scale interconnect pitch below 10&#181;m, enable direct copper-to-copper bonding for low-resistance interconnects, and blur the boundary between wafer and package. Longer term, we expect to deliver complete glass substrate solutions as the next generation of advanced packaging designed to enable continued scaling of transistors in a package. 
+
+xPU architecture. We believe th e future is a diverse mix of scalar, vector, matrix, and spatial architectures deployed in CPU, GPU, IPU, accelerator, and FPGA sockets, enabled by a scalable software stack and integrated into systems by advanced packaging technology. We are building processors that span several major computing architectures, moving toward an era of heterogeneous computing: 
+
+##TABLE_END
+
+&#9642; CPU. We started shipping our 5th Gen Intel Xeon Scalable processors based on Intel 7 with built-in AI acceleration, cryptographic acceleration, and advanced security capabilities. We also launched our 14th Gen Intel Core processors, which are designed to scale from thin and light laptops to enthusiast desktop and notebook platforms. These are based on a hybrid architecture utilizing our most advanced performance cores and power-efficient cores. 
+
+&#9642; GPU and HPC . The Intel Arc graphics family offers modern GPU features to power today's demanding games, applications, and AI workloads. In 2023, the Intel Arc portfolio expanded while offering a substantial performance uplift through continual driver updates, offering consumer and professional solutions that target a significant part of the market. Intel Arc discrete GPUs currently ship in three performance tiers, with Intel Arc 7, 5, and 3 series for consumers, and Intel Arc Pro A60, A50, and A40 for workstations. In the mobile segment, Intel Arc A-series GPUs can be found powering a range of consumer and workstation designs. In Q1 2023, we launched the Intel &#174; Xeon &#174; CPU Max Series and Intel &#174; Data Center GPU Max Series. Designed for the future compute demands of HPC and AI workloads, the Intel Max Series product family power the Aurora supercomputer at Argonne National Laboratory. 
+
+##TABLE_START &#160; 
+
+Fundamentals of Our Business 
+
+Our Capital 
+
+##TABLE_END
+
+Table of Contents 
+
+&#9642; Infrastructure Acceleration. Our first ASIC IPU has been deployed widely across Google Cloud. Our second generation IPU, is also co-developed with Google and is expected to tape in the first half of 2024. It is expected to double the throughput and compute capabilities. The IPU becomes the center of the CSP compute platform, with the bulk of CSP infrastructure cycles spent running on the IPU and not the host processor. This frees up processing cores for business-value applications and infrastructure as a service rental. 
+
+&#9642; Ethernet. Our 200G foundational network interface card targeting cloud, enterprise, and edge, is expected to go into production in 2H 2024 and extend our 100G market. Additionally, we plan to productize our 10G/2.5G/1G offering, a refresh of our high-volume 10G and 1G portfolio with modernized software, management, and manufacturing technologies. 
+
+&#9642; Matrix Accelerator. We are showing strong customer and performance momentum for our Intel &#174; Gaudi &#174; AI accelerators. In Q3 2023, we announced that a large AI supercomputer would be built entirely on Intel Xeon processors and 4,000 Intel Gaudi 2 AI hardware accelerators, with Stability AI as the anchor customer. 
+
+Software. Software unleashes the potential of our hardware platforms across all workloads, domains, and architectures. 
+
+&#9642; oneAPI adoption continues to expand across the industry. oneAPI is designed to enable developers to build cross-architecture applications using a single code base across CPUs, GPUs, and FPGAs to reduce development time and enhance productivity. Our oneAPI-based tools take advantage of unique hardware features and lower software development and maintenance costs. Developers can choose the best architecture for the problem at hand without rewriting their entire code base, accelerating their time to value. 
+
+&#9642; We seek to accelerate adoption of oneAPI and Intel software developer tools through diverse ecosystem activities, including developer training, summits, centers of excellence, access to Intel hardware and software through Intel Developer Cloud and industry collaboration through the Linux Foundation's Unified Acceleration (UXL) Foundation project. Our Intel Developer Cloud offering is designed to host global users spanning AI, data science, high-performance computing, media and graphics, and other accelerated computing workloads using oneAPI and the latest Intel hardware. 
+
+&#9642; We believe AI will be ubiquitous, and with our tools and the broad open software ecosystem, we are well-positioned to scale AI. We optimize and contribute software to popular frameworks, such as PyTorch and TensorFlow, to achieve the best performance for Intel platforms and to deliver productivity and programmability for AI developers. We are accelerating the disruption of the proprietary ecosystems through Intel contributions to new software AI languages such as Triton, Mojo, and JAX. This higher level of open, vendor-independent programmability, combined with Intel's commitment to open spec governance, implementations, licensing models, and segment-optimized solutions, such as OpenVINO&#8482; powered by oneAPI, offers customers a choice of hardware and software stack tailored to diverse workload needs. 
+
+&#9642; We seek to continually improve our system and foundational-level software in support of our client, data center, networking, and graphics products, delivering AI-optimized software across the stack, including BIOS, firmware, simulation, operating systems, and virtualization. 
+
+IP Rights 
+
+We own and develop significant IP and related IP rights around the world that support our products, services, R&#38;D, and other activities and assets. Our IP portfolio includes patents, copyrights, trade secrets, trademarks, mask works, and other rights. We actively seek to protect our global IP rights and deter unauthorized use of our IP and other assets. 
+
+We have obtained patents in the US and other countries. Because of the fast pace of innovation and product development, our products are often obsolete before the patents related to them expire, and in some cases our products may be obsolete before the patents are granted. As we expand our product offerings, particularly around our foundry business, we also seek to extend our patent development efforts. In addition to developing patents based on our own R&#38;D efforts, we may purchase or license patents from third parties. 
+
+The software that we distribute, including software embedded in our products, is entitled to copyright and other IP protection. To distinguish our products from our competitors' products, we have obtained trademarks and trade names for our products, and we maintain cooperative advertising programs with customers to promote our brands and to identify products containing genuine Intel components. We also protect details about our processes, products, and strategies as trade secrets, keeping confidential the information that we believe provides us with a competitive advantage. 
+
+Efforts to protect our IP can be difficult, particularly in countries that provide less protection to IP rights and in the absence of harmonized international IP standards. Competitors and others may already have IP rights covering similar products. There is no assurance that we will be able to obtain IP rights covering our own products or that we will be able to obtain IP licenses from other companies on favorable terms or at all. For a discussion of IP-related risks, see "Risk Factors" within Risk Factors and Other Key Information. While our IP rights are important to our success, our business as a whole is not significantly dependent on any single patent, copyright, or other IP right. 
+
+##TABLE_START &#160; 
+
+Fundamentals of Our Business 
+
+Our Capital 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START 
+
+Manufacturing Capital 
+
+##TABLE_END
+
+As the guardians of Moore's Law, we continue to innovate to advance the design and manufacturing of semiconductors to help address our customers' greatest challenges. This makes possible new leadership products with higher performance while balancing power efficiency, cost, and size. 
+
+Our IDM 2.0 strategy allows us to deliver leadership products using internal and external capacity while leveraging our core strengths to provide foundry services to others. IDM 2.0 combines three capabilities. First, we will continue to build most of our products in our fabs. Second, we expect to expand our use of third-party foundry capacity to manufacture a range of modular tiles on advanced process technologies. Third, we are building a world-class foundry business with IFS, which we expect will combine leading-edge packaging and process technology, committed capacity in the US and Europe, and a world-class IP portfolio that will include x86 cores, as well as other ecosystem IP. 
+
+Network and Supply Chain 
+
+In 2023, our factories delivered continuous support to our customers as we ramped new process technologies and equipment for our products and expanded Open System Foundry offerings. We continue to work across our supply chain to minimize disruptions, improve productivity, and increase overall capacity and output to meet customer expectations. 
+
+Our global supply chain supports internal partners across architecture, product design, technology development, manufacturing and operations, sales and marketing, and business units, and our supply ecosystem comprises thousands of suppliers globally. Our mission is to enable product and process leadership, industry-leading total cost of ownership, and on-time and uninterrupted supply for our customers, delivered in a responsible and sustainable manner. 
+
+As of the end of 2023, we had nine geographically dispersed manufacturing sites in production. The following map shows the locations of these factory sites. Our manufacturing facilities are primarily used for silicon wafer manufacturing, assembling, testing, and advanced packaging. We operate in a network of manufacturing facilities integrated as though they were one factory to provide the most flexible supply capacity, allowing us to better analyze our production costs and adapt to changes in capacity needs. Our new process technologies, when ready for high volume manufacturing, are transferred from a central development fab to one or more of our manufacturing facilities. The network of factories and the development fab collaborate to continue driving operational improvements. This enables fast ramp of the operation, quick learning, and quality control. 
+
+We are expanding manufacturing capacity across multiple sites and geographies. These include silicon wafer manufacturing in Arizona, Germany, Ireland, Israel, Ohio, and Oregon and advanced packaging manufacturing in Malaysia and New Mexico. This year, we added Poland to our assembly and test expansion roadmap. These investments further our IDM 2.0 strategy and are expected to support a resilient semiconductor supply chain and to create the foundation for a next-generation chip ecosystem. 
+
+##TABLE_START &#160; 
+
+Fundamentals of Our Business 
+
+Our Capital 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START 
+
+Human Capital ##TABLE_END
+
+Our human capital strategy is grounded in our belief that our people are fundamental to our success. Delivering on our strategy and growth ambitions requires attracting, developing, and retaining top talent across the world. We are committed to creating an inclusive workplace where the world's best engineers and technologists can fulfill their dreams and create technology that improves the life of every person on the planet. We invest in our highly skilled workforce of 124,800 people (as of December 30, 2023) by creating practices, programs, and benefits that support the evolving world of work and our employees' needs. 
+
+Our human capital philosophy includes three pillars we believe are needed to position our talent strategy as a competitive advantage: 
+
+&#9642; Hire and retain the best talent : We have embraced the future of work with a flexible, hybrid-first approach that differentiates Intel from competitors. 
+
+&#9642; Develop our talent to full potential : We have updated role descriptions and career pathways to better enable movement and help top talent work on the highest priorities. 
+
+&#9642; Create a winning culture : We have reignited Intel ' s results-driven, performance culture. 
+
+Fostering a culture of empowerment, inclusion, and accountability is also core to our strategy. We believe that an inclusive culture is important for attracting, developing, and retaining top talent, and we strive to provide a work environment where all employees from all backgrounds are valued, challenged, and rewarded. We are focused on reinvigorating our culture to strengthen our execution and accelerate our cadence of innovation. Our values&#8212;customer first, fearless innovation, results driven, one Intel, inclusion, quality, and integrity&#8212;inspire us and are key to delivering on our purpose. All employees are responsible for upholding these values, the Intel Code of Conduct, and Intel's Global Human Rights Principles, which form the foundation of our policies and practices and ethical business culture. 
+
+Talent Management We continue to see significant competition for talent throughout the semiconductor industry. Our hiring was limited in 2023, in line with macroeconomic forecasts, financial performance, and cost-cutting measures, and we took actions to rebalance our workforce. However, the investments we are making to accelerate our process technology require continued and focused efforts to attract and retain talent&#8212;especially technical talent. Our undesired turnover rate 1 was 5.6% in both 2023 and 2022. 
+
+We invest significant resources to develop the talent needed to remain at the forefront of innovation and make Intel an employer of choice. We offer extensive training programs and provide rotational assignment opportunities and have updated our job architecture to help employees create custom learning curricula for building skills and owning their careers. To further support the growth and development of our people, we continue to increase mentoring in our technical community, drive engagement through employee resource groups, and promote health and wellness resources to all our people. Through our annual employee experience survey, employee inclusion survey, and manager development feedback survey, employees can voice their perceptions of the company, their managers, their work experiences, and their learning and development opportunities. Our employees' voices are important to enable our culture of continuous improvement, and as a result, we link a portion of our executive and employee performance bonus to year-over-year improvements of our employee experience survey results. Our performance management system is designed to support our cultural evolution and to increase our focus on disciplined OKRs. 
+
+1 Undesired turnover includes all regular Intel employees who voluntarily left Intel, but does not include Intel contract employees, interns, or employees who separated from Intel due to divestiture, retirement, voluntary separation packages, death, job elimination, or redeployment. 
+
+##TABLE_START &#160; 
+
+Fundamentals of Our Business 
+
+Our Capital 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START Inclusion 
+
+Diversity and inclusion are core elements of Intel's values and instrumental to driving innovation and positioning us for growth. Over the past decade, we have taken actions to integrate diversity and inclusion expectations into our culture, performance and management systems, leadership expectations, and annual bonus metrics. Through our annual employee inclusion survey, employees can voice their experiences at Intel and provide feedback on how we can continue to improve. We are proud of what we have accomplished to advance diversity and inclusion, but we believe we can achieve more, including beyond the walls of Intel. Our RISE strategy and 2030 goals set our global ambitions for the rest of the decade, including, in part, ambitious goals to achieve 25% representation of women in senior leadership; achieve 12% representation of underrepresented minorities in US senior leadership; achieve 10% representation of employees with a disability in our global workforce; and exceed 40% representation of women in technical roles, including engineering positions and other roles with technical job requirements. Our ambitious goals were established, in part, based on modeling of where market availability is expected to be in 2030. Market availability analysis will be re-conducted over the time period to assess ongoing alignment and expectations. To drive accountability, we continue to link a portion of our executive and employee compensation to diversity and inclusion metrics. 
+
+We have committed our scale, expertise, and reach through our comprehensive RISE strategy to work with customers and other stakeholders to accelerate the adoption of inclusive business practices across industries. As part of the Alliance for Global Inclusion, we worked with a coalition of technology companies to create a global inclusion index survey, which serves as a benchmark for companies to track diversity and inclusion improvements, provide information on current best practices, and highlight opportunities to improve outcomes across industries. The results of the third global inclusion index survey were published in 2023 and shared with business leaders across industries. For the first time, based on the maturity of the respondents' best practices, the survey results transitioned to an index, in which organizations that received an overall score of 50% or higher across all regions in which they participated were recognized for their diversity and inclusion efforts. There were 27 respondents and, of those, 18 earned spots on the index, including Intel. This collective effort allows the industry to more clearly identify actions needed to advance progress on closing persistent gaps and advancing more inclusive practices in workplaces, industry, and society. The survey shows increased commitment to diversity and inclusion around key areas of workforce inclusivity, recruitment, advancement opportunities, and accountability. We will also continue to collaborate on initiatives that expand the diverse pipeline of talent for our industry, advance social equity, make technology fully inclusive, and expand digital readiness for millions of people around the world. 
+
+2 Senior leadership refers to salary grades 10+ and equivalent grades. While we present male and female, we acknowledge this is not fully encompassing of all gender identities. 3 The term underrepresented minority (URM) is used to describe diverse populations, including Black/African American, Hispanic, and Native American employees in the US. 
+
+##TABLE_END
+
+Compensation and Benefits 
+
+We structure pay, benefits, and services to meet the varying needs of our employees, helping support employee financial well-being with competitive compensation, investment opportunities, and financial resources. Our total rewards package includes market-competitive pay, broad-based stock grants and bonuses, an employee stock purchase plan, healthcare and retirement benefits, paid time off and family leave, parent reintegration, fertility assistance, flexible work schedules, sabbaticals, and on-site services. Since 2019, we have achieved gender pay equity globally and we continue to maintain race/ethnicity pay equity in the US. We achieve pay equity by closing the gap in average pay between employees of different genders or race/ethnicity in the same or similar roles after accounting for legitimate business factors that can explain differences, such as location, time at grade level, and tenure. We have also advanced transparency in our pay and representation data by publicly releasing our EEO-1 survey pay data since 2019. We believe that our holistic approach toward pay equity, representation, and creating an inclusive culture enables us to cultivate a workplace that helps employees develop and progress in their careers at all levels. Our "hybrid-first" approach to working was informed by employees surveyed around the globe and involves the majority of our employees splitting their time between working remotely and in the office. Hybrid-first and remote work options cast a wider recruitment net and support our ambition to hire the best global talent. Currently, there is no company-wide mandate on the number of days per week employees should be on site or how they should collaborate. Our goal is to enable remote and on-site work where it drives the best output, while providing our employees with equitable access to systems, resources, and opportunities that allow them to succeed. 
+
+Health, Safety, and Wellness 
+
+We are committed to providing a safe and injury-free workplace. We regularly invest in programs designed to improve physical, mental, and social well-being. We provide access to a variety of innovative, flexible, and convenient health and wellness programs, including on-site health centers, and we aim to increase awareness of and support for mental and behavioral health. In support of our RISE goals, we intend to continue our efforts to build our strong safety culture and drive the global expansion of our corporate wellness program through employee education and engagement activities. 
+
+##TABLE_START &#160; 
+
+Fundamentals of Our Business 
+
+Our Capital 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START 
+
+Social and Relationship Capital 
+
+##TABLE_END
+
+We are committed to engaging in initiatives that support our communities and help us develop trusted relationships with our stakeholders. Proactive engagement with our stakeholders and investments in social impact initiatives, including those aligned with the United Nations Sustainable Development Goals, advance our position as a leading corporate citizen and create shared value for Intel, our global supply chain, and our communities. 
+
+Economic and social. The health of our business and local economies depends in part on continued investments in innovation. We provide high-skill, high-paying jobs around the world, many of which are manufacturing and R&#38;D jobs located in our factories. As we expand operations in both existing and new locations around the world, we are building a pipeline of qualified workers through our talent strategy and the many investments we are making in education. We also benefit economies through our R&#38;D ecosystem spending, sourcing activities, employee spending, and tax payments. We make sizable capital investments and provide leadership in public-private partnerships to spur economic growth and innovation. 
+
+We stand at the forefront of new technologies that are increasingly being used to empower individuals, companies, and governments around the world to solve global challenges. We aim to empower people through education and advance social initiatives to create career pathways into the technology industry. This includes our global Intel Digital Readiness Programs, such as AI for Youth and AI for Workforce, scaled in partnership with governments and institutions to empower individuals with digital readiness and AI skills. Additionally, we invest in multi-year partnerships with historically Black colleges and universities in the US to increase the number of Black/African Americans who pursue electrical engineering, computer engineering, and computer science fields. Our employees and retirees share their expertise through volunteer initiatives in the communities where we operate, volunteering 3.8 million 1 hours over the past four years. These efforts contribute to our RISE goal to volunteer 10 million hours over a decade. Since 2020, we announced and further expanded upon the Intel RISE Technology Initiative, which provides an expanded channel to build deeper relationships with our customers and partners aligned with our corporate purpose and work to create shared value through our RISE strategy. Specifically, we are funding projects in areas such as using technology to improve health and safety, making technology more inclusive while expanding digital readiness, and carbon-neutral computing to help address climate change. 
+
+Human rights commitment. We are committed to maintaining and improving systems and processes to avoid causing or contributing to adverse impacts on human rights in our own operations, products, and supply chain. We have established an integrated approach to managing human rights across our business, including senior-level management involvement and board-level oversight. We also meet throughout the year with external stakeholders and experts on human rights to continue to inform and evolve our human rights policies and oversight processes. While we do not always know nor can we control what products our customers create or the applications end users may develop, we do not support or tolerate our products being used to adversely impact human rights. Where we become aware of a concern that Intel products are being used by a business partner in connection with abuses of human rights, we intend to evaluate and restrict or cease business with the third party unless and until we have a high confidence that Intel's products are not being used to adversely impact human rights. 
+
+1 This is a preliminary estimate. The final number will be reported in our 2023-24 Corporate Responsibility Report, to be issued later in 2024. 
+
+##TABLE_START &#160; 
+
+Fundamentals of Our Business 
+
+Our Capital 
+
+##TABLE_END
+
+Table of Contents 
+
+Supply Chain Responsibility 
+
+We actively manage our supply chain to help reduce risk, improve product quality, achieve environmental and social goals, and improve overall performance and value creation for Intel, our customers, and our suppliers. To drive responsible and sustainable practices throughout our supply chain, we have robust programs to educate and engage suppliers that support our global manufacturing operations. We actively collaborate with other companies and lead industry initiatives on key issues such as improving transparency around climate and water impacts in the global electronics supply chain and, as part of our RISE strategy, we are advancing collaboration across our industry on responsible minerals sourcing. Through these efforts we help set electronics industry-wide standards, develop audit processes, and conduct training. 
+
+Over the past decade, we have directly engaged with suppliers to verify compliance and build capacity to address risks of forced and bonded labor and other human rights issues. We perform periodic audits, and identify critical direct suppliers to engage through capability-building programs, which help suppliers build sustainability acumen and verify compliance with the Responsible Business Alliance and the Intel Code of Conduct. We also engage with indirect suppliers through our programs on forced and bonded labor, responsible minerals, and supplier diversity. To achieve our RISE goals, we are significantly expanding the number of suppliers covered by our engagement activities. The supply chain environmental team is also actively engaging suppliers to measure and reduce their greenhouse gas emissions footprints and the resulting impact on our footprint. These activities are intended to help us meet our long-term emissions reductions goals, including our goal to achieve net-zero upstream Scope 3 greenhouse gas emissions by 2050, which we announced in 2023. 
+
+Our commitment to diversity and inclusion also extends to our suppliers. We believe a diverse supply chain supports greater innovation and value for our business. We have set additional spending targets with women-owned suppliers outside the US and with minority-owned suppliers globally to accelerate progress toward our goal to increase global annual spending with diverse suppliers to reach $2.0 billion in annual spending by 2030. 
+
+##TABLE_START 
+
+Natural Capital 
+
+##TABLE_END
+
+Driving to the lowest possible environmental footprint as we grow helps us create efficiencies, support our communities, and respond to the needs of our stakeholders. We invest in environmental projects and set company-wide environmental targets to drive reductions in greenhouse gas emissions, energy and water use, and waste generation. We build energy efficiency into our products to help our customers lower their own emissions, energy usage, and costs, and we collaborate with policymakers and other stakeholders to use technology to address environmental challenges. 
+
+In April 2022, we announced our new goal to reach net-zero greenhouse gas emissions in our operations by 2040, creating an important target to strengthen our commitment to sustainable business practices. We furthered our commitment in 2023 by announcing our goal to reach net-zero upstream Scope 3 greenhouse gas emissions by 2050. Our 2030 RISE goals continue to be important milestones to drive to higher levels of operational efficiency, including a goal of a 10% reduction in our greenhouse gas emissions on an absolute basis from a 2019 baseline by 2030. We continue to take action on emissions reduction strategies focused on emissions abatement, and to make additional investments in renewable electricity, process and equipment optimization, and energy conservation. In 2023, we linked a portion of the executive and employee performance bonus to our goal to reduce our 2023 Scope 1 and 2 greenhouse gas emissions by 130,000 metric tons carbon dioxide equivalent, compared to 2022. Our RISE strategy also focuses on addressing climate change impacts upstream and downstream in the value chain. This includes improving product energy efficiency and increasing our "handprint"&#8212;the ways in which Intel technologies can help others reduce their footprints, including Internet of Things solutions that enable intelligence in machines, buildings, supply chains, and factories, and make electrical grids smarter, safer, and more efficient. 
+
+In August 2023, we published our inaugural green bond report, which provides an update on the allocation of the net proceeds of the $ 1.3 billion principal amount of senior notes issued in 2022. We are using the proceeds from the green bond offering to fund projects that support our investments in sustainable operations, which can include items such as green buildings, energy efficiency, circular economy and waste management, greenhouse gas emissions reductions, water stewardship, and renewable energy. 
+
+Energy 
+
+We focus on reducing our own climate change impact, and over the past two decades have reduced our direct and indirect greenhouse gas emissions associated with energy consumption. Through our RISE goals, we have committed to a goal of conserving 4 billion kWh of energy this decade. We have conserved 1.6 billion kWh 1 of energy cumulatively since 2020. We also invest in renewable electricity and on-site alternative energy projects in support of our 2030 goal to achieve 100% renewable electricity use across our global operations. In 2023, continuing our practice of linking a portion of our executive and employee performance bonus to our corporate sustainability metrics, we linked a portion of the performance bonus to our 2023 target to reach 95% renewable electricity use globally. We reached our target and achieved 99% 1 renewable electricity usage globally in 2023. 
+
+1 This is a preliminary estimate. The final number will be reported in our 2023-24 Corporate Responsibility Report, to be issued later in 2024. 
+
+##TABLE_START &#160; 
+
+Fundamentals of Our Business 
+
+Our Capital 
+
+##TABLE_END
+
+Table of Contents 
+
+Water Stewardship 
+
+Water is essential to the semiconductor manufacturing process. We use ultrapure water to remove impurities from our silicon wafers, and we use fresh and reclaimed water to run our manufacturing facility systems. Through our RISE goals, we have committed to achieve net positive water globally, and as part of that effort, conserve 60 billion gallons of water in this decade. Water conservation reduces the amount of water needed from fresh water sources; we have conserve d 35.9 billion gallons 1 of water and enabled restoration of 9.6 billion gallons 1 of water to local watersheds since 2020. In 2023, we linked a portion of our executive and employee performance bonus to our target to conserve and restore 12.0 billion gallons of water during the year. 
+
+Circular Economy and Waste Management 
+
+We have long been committed to waste management, recycling, and circular economy strategies that enable the recovery and productive re-use of waste streams. Our 2030 goals include a target of zero waste 2 to landfill, as well as implementation of circular economy strategies for 60% of our manufacturing waste streams in partnership with our suppliers. We continue to focus on opportunities to upcycle waste by improving waste segregation practices and collaborating with our suppliers to evaluate new technologies for waste recovery. In 2023, we linked a portion of our executive and employee performance bonus to our interim target to achieve 5% of waste to landfill. 
+
+Governance and Disclosure 
+
+We are committed to transparency around our carbon footprint and climate risk, and use the framework developed by the TCFD to inform our disclosure on climate governance, strategy, risk management, and metrics and targets. For governance and strategy, we follow an integrated approach to address climate change, with multiple teams responsible for managing climate-related activities, initiatives, and policies, with senior-level management involvement and board-level oversight, including the Corporate Governance and Nominating Committee. We describe our overall risk management processes in our Proxy Statement, and describe climate-related risks and opportunities in our annual Corporate Responsibility Report, the Intel Climate Change Policy, and "Risk Factors" within this Form 10-K. In addition to what is included in this Form 10-K, information about and progress toward our RISE goals is included in our Corporate Responsibility Report. Our Corporate Responsibility Report also includes a mapping of our disclosure to the TCFD, GRI and SASB frameworks. The Corporate Responsibility Report and our CDP Climate Change Survey are available on our website and are published annually. 3 In November 2023, we published our first Climate Transition Action Plan, which is available on our website. 
+
+1 This is a preliminary estimate. The final number will be reported in our 2023-24 Corporate Responsibility Report, to be issued later in 2024. 
+
+2 Intel defines zero waste as less than 1%. 
+
+3 The contents of our website and our Corporate Responsibility Report, Climate Change Policy, Climate Transition Action Plan and CDP Climate Change Survey are referenced for general information only and are not incorporated by reference in this Form 10-K. 
+
+##TABLE_START &#160; 
+
+Fundamentals of Our Business 
+
+Our Capital 
+
+##TABLE_END
+
+Table of Contents 
+
+##TABLE_START 
+
+Management's Discussion and Analysis 
+
+##TABLE_END
+
+Our Products 
+
+We are a global IDM of CPUs and related solutions that we design, develop, manufacture, market, sell, support, and service. Our CPUs and related solutions are incorporated in computing and related end products and services, and utilized globally by consumers, enterprises, governments, and educational organizations. Our customers primarily include OEMs, ODMs, cloud service providers, and other manufacturers and service providers, such as industrial and communication equipment manufacturers and other cloud service providers who buy our products through distributor, reseller, retail, and OEM channels throughout the world. We market and sell these products directly through our global sales and marketing organizations and indirectly through channel partners. We manufacture our products at our fabrication and assembly and test facilities located throughout the world. 
+
+Our product offerings provide end-to-end solutions, scaling from data center to network, PCs, edge computing, and the emerging fields of AI and autonomous driving, to serve an increasingly smart and connected world. Products, such as our gaming CPUs, may be sold directly to end consumers, or they may be further integrated by our customers into end products such as notebooks and storage servers. Combining some of these products&#8212;for example, integrating FPGAs with Intel Xeon processors in a data center solution&#8212;enables incremental synergistic value and performance. In 2023 we launched new products, including the 13th Gen Intel Core mobile processor family, the 4th Gen Intel Xeon Scalable processors with Intel vRAN Boost, and the Intel Core Ultra processors, which feature our first integrated neural processing unit for power-efficient AI acceleration and local inference on the PC. 
+
+Our diverse product line includes CPU and chipset, an SoC, or a multichip package based on Intel &#174; architecture that processes data and controls other devices in a system. The primary CPU products in CCG are our Intel Core processors, which include designs specifically for notebook and desktop applications. The primary CPU product in DCAI is our Intel Xeon processor, which includes solutions for data center compute, networking, and the intelligent edge. The primary offerings of NEX include Intel Xeon, Intel Core, and Intel Atom &#174; processor products. 
+
+During 2023, we managed our business through the operating segments that are presented below and have included the 2023, 2022 and 2021 financial results for each segment."Note 3: Operating Segments" within the Notes to Consolidated Financial Statements of this Form 10-K reconciles our segment revenues presented below to our total revenues, and our segment operating income (loss) presented below to our total operating income (loss), for each of the periods presented. We have also included a discussion of our 2023, 2022 and 2021 consolidated results of operations and related information subsequent to the operating segment discussion below. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+##TABLE_START Overview We are committed to advancing PC experiences by delivering an annual cadence of leadership products and deepening our relationships with industry partners to co-engineer and deliver leading platform innovation. We engage in an intentional effort to bring together the operating system, system architecture, hardware, and software application integration to enable industry-leading PC experiences. We embrace these opportunities by focusing our roadmap, delivering innovative PC capabilities, and designing advanced PC experiences. By doing this, we believe we help continue to fuel innovation across the industry, providing a solid source of IP, scale, and cash flow for Intel. 
+
+Key Business Developments 
+
+&#9632; 
+
+We launched our 13th Gen Intel Core mobile and select desktop processors, Intel Core 14th Gen processors, and Intel Core Ultra processors, the first client processor family on Intel 4 technology that features a new neural processing unit to drive AI at scale. 
+
+&#9632; 
+
+We launched the industry's first AI PC Acceleration Program to help enable AI on more than 100 million PCs through 2025. 
+
+&#9632; 
+
+We worked with industry partners to co-engineer and deliver new experiences with the Intel &#174; Evo&#8482; device, including phone to PC capabilities with Intel &#174; Unison&#8482; application and future premium laptop experiences with AI and Intel Core Ultra processors. 
+
+##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Market and Business Overview 
+
+Market Trends and Strategy 
+
+In 2023, the PC market started to stabilize from a soft macroeconomic environment and inflationary pressures, with PC supply and demand levels beginning to normalize. We remain positive on the long-term outlook for PCs, as household density is stable to increasing, educational device penetration rates remain low outside of the US, and PC usage remains elevated compared to pre-pandemic rates 1 . Commercial growth opportunities also remain as corporations expand the size of their PC fleets, while also replacing older devices. Currently, approximately 200 million commercial devices are more than four years old 2 . 
+
+We see the AI PC as a critical inflection point for the PC market over the coming years, and we believe we are well positioned to capitalize on the emerging growth opportunity of AI. We believe that the PC is as essential as ever, and we expect our leadership in client AI to further support our original forecasted long-term PC TAM of approximately 300 million units 3 . Together with our industry partners, we are working to increase demand and drive market growth through enhanced PC capabilities, which we expect will lead to greater market penetration and faster PC refresh cycles. 
+
+As we continue on our strategy to develop more competitive products and more capabilities for customers, we are designing our product roadmap to drive product leadership grounded in a philosophy of openness and choice. We deliver value to our customers by leveraging our engineering capabilities and working with our partners across an open, innovative ecosystem to deliver technology that drives every major vector of the computing experience, including performance, power efficiency, battery life, connectivity, graphics, and form factors, to create the most advanced PC platforms. 
+
+Products and Competition 
+
+We released our 14th Gen Intel Core desktop processor family, delivering improved single-threaded and multi-threaded performance when gaming, streaming, and recording. In addition, we released our first Intel Core Ultra family of processors, which utilizes a disaggregated architecture and is the first PC platform built on Intel 4 technology. Our latest processor family is the first client processor to feature a dedicated NPU for AI acceleration and delivers improved power efficiency and graphics performance. Intel Core Ultra represents an inflection point in Intel's client processor roadmap as we usher in the age of the AI PC. With new capabilities in the PC, including significantly improved battery life, AI capabilities with our NPU and GPU products, and up to double the graphics performance with Intel Core Ultra processors, we seek to provide compelling reasons to drive refresh in commercial and consumer markets. We expect to deliver more than 230 Intel Core Ultra designs to market. 
+
+There is strong demand for our 13th Gen Intel Core processor family, which features Intel &#174; Thread Director technology and our second-generation performance hybrid architecture. We expect to deliver more than 300 designs from partners across major multi-national corporations and leading manufacturers. 
+
+We continue to innovate beyond the CPU to deliver premium PC experiences with Intel Evo Edition laptops and Intel vPro Platforms. We worked with industry partners to co-engineer and deliver new experiences with Intel Evo Edition, which are designed to deliver key experience indicators such as responsiveness, battery life, intelligence collaboration, and Intel Unison Multi-Device Experience. Intel vPro is designed for enterprise needs and delivers increased productivity, connectivity, security features, and remote manageability. 
+
+We operate in a particularly competitive market. In processors, we compete with Advanced Micro Devices, Inc. (AMD) and vendors who design applications processors based on ARM architecture*, such as Qualcomm Inc. (Qualcomm), and Apple Inc. (Apple), with its M1 and M2 products. We expect this competitive environment to continue to intensify in 2024. 
+
+We remain committed to creating an open ecosystem to foster growth and technology innovations. We embrace and collaborate with a global ecosystem of industry partners to deliver leadership technologies together. We launched the industry's first AI PC Acceleration Program, designed to provide the software ecosystem with engineering tools and resources to enable AI on more than 100 million PCs through 2025. We also announced a collaboration with Microsoft to drive the development of AI on personal computing, with Intel Core Ultra processors and Windows 11 expected to scale across the ecosystem of Intel and Microsoft OEM and ISV partners. 
+
+During 2023, we continued to diversify our product strategy across nodes, advance our packaging capabilities with disaggregated silicon, and balance internal and external manufacturing. We increased our levels of operating inventory and worked with our customers to develop strategically located supply hubs that forward position inventory. In addition, we continue to invest in a globally diverse supply chain that enables us the flexibility and proximity to support customers. These have further enhanced the service and responsiveness we are able to provide our customers. 
+
+1 Source Intel calculated PC density from industry analyst reports. 
+
+2 Source: Intel calculated volume of devices over four years old from industry analyst reports and internal data. 
+
+3 Source: Intel calculated multi-year TAM forecast derived from industry analyst reports. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Financial Performance 
+
+##TABLE_START CCG Revenue $B CCG Operating Income $B ##TABLE_END
+
+##TABLE_START &#9632; | &#9632; Notebook 
+
+&#160;&#9632; | &#9632; Desktop 
+
+&#160;&#9632; | &#9632; Other 
+
+##TABLE_END
+
+##TABLE_START Revenue Summary ##TABLE_END
+
+2023 vs. 2022 
+
+&#9642; Notebook revenue was $17.0 billion, down $1.8 billion from 2022. Notebook volume decreased 5% from 2022, driven by lower demand across market segments, partially offset by increased volume in the second half of the year as customer inventory levels normalized compared to higher levels in the first half. Notebook ASPs decreased 5% from 2022 due to relative strength in the education market segment resulting in a higher mix of small core products combined with a higher mix of older generation products. 
+
+&#9642; Desktop revenue was $10.2 billion, down $495 million from 2022. Desktop volume decreased 9% from 2022, driven by lower demand across market segments, partially offset by increased volume in the second half of the year as customer inventory levels normalized compared to higher levels in the first half. Desktop ASPs increased 5% from 2022, due to an increased mix of product sales to the commercial and gaming market segments. 
+
+&#9642; Other revenue was $2.1 billion, down $229 million from 2022, primarily driven by the continued ramp down of our legacy smartphone modem business and lower demand for our wireless and connectivity products as a result of lower notebook volumes. 
+
+2022 vs. 2021 
+
+&#9642; Notebook revenue was $18.8 billion, down $6.7 billion from 2021. Notebook volume decreased 36% from 2021, driven by lower demand in the consumer and education market segments, and notebook ASPs increased 15% from 2021 due to an increased mix of commercial and consumer products and a lower mix of education products. 
+
+&#9642; Desktop revenue was $10.7 billion, down $1.8 billion from 2021. Desktop volume decreased 19% from 2021, driven by lower demand in the consumer and education market segments, and desktop ASPs increased 5% from 2021, primarily from an increased mix of commercial products. 
+
+&#9642; Other revenue was $2.3 billion, down $870 million from 2021, primarily driven by the continued ramp down of our legacy smartphone modem business and lower demand for our wireless and connectivity products. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+##TABLE_START Operating Income Summary ##TABLE_END
+
+Operating income increased 17% year over year, and operating margin was 22% in 2023 and 18% in 2022. 
+
+##TABLE_START (In Millions) $ 6,520 &#160; 
+
+2023 Operating Income 
+
+1,692 Lower period charges driven by the sell-through of previously reserved inventory and lower reserves taken in 2023 1,220 Lower operating expenses driven by various cost-cutting measures 268 Lower period charges primarily driven by a decrease in product ramp costs (1,704) Lower product margin primarily from lower notebook and desktop revenue (385) Higher unit cost primarily from increased mix of Intel 7 products (140) Higher period charges related to excess capacity charges $ 5,569 &#160; 2022 Operating Income (3,047) Lower product margin from notebook revenue (2,183) Higher notebook and desktop unit cost primarily from increased mix of Intel 7 products (1,306) Lower product margin from desktop revenue (1,400) Higher operating expenses driven by increased investments in leadership products (1,155) Higher period charges primarily driven by inventory reserves taken in 2022 (364) Lower CCG other product margin driven by lower demand for our wireless and connectivity products and the continued ramp down from the exit of our 5G smartphone modem business (267) Higher period charges primarily associated with the ramp of Intel 4 (162) Higher period charges related excess capacity charges 192 Lower period charges due to a benefit related to insurance proceeds received for business interruption and property damage that occurred in 2020 (262) Other $ 15,523 &#160; 
+
+2021 Operating Income 
+
+##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+##TABLE_START Overview DCAI delivers cutting-edge workload-optimized solutions to cloud service providers and enterprises, along with silicon devices for communications service providers, network and edge, and HPC customers. Our unique capabilities enable us to help solve our customers' most complex challenges with the depth and breadth of our hardware and software portfolio, advanced packaging, and at-scale manufacturing made possible through a resilient, global supply chain. Our global customers and partners encompass cloud hyperscalers, multinational corporations, small-and medium-sized enterprises, independent software vendors, systems integrators, communications service providers, and governments. 
+
+Key Business Developments 
+
+&#9632; 
+
+We have sold more than 2 million 4th Generation Intel Xeon Scalable processors as of the end of 2023, and launched the 5th Gen Intel Xeon processors in Q4 2023. 
+
+&#9632; 
+
+We were recognized by MLCommons, which published MLPerf Training performance benchmark data showing that 4th Gen Xeon and Intel Gaudi 2 are two compelling, open computing platforms in the AI market that compete on performance, price, and broad availability. 
+
+&#9632; 
+
+We announced our intent to separate PSG into a standalone company, giving PSG the autonomy and operational and financial flexibility it needs to accelerate growth to more effectively compete in the FPGA market. Standalone financial reporting for PSG began January 1, 2024. 
+
+##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Market and Business Overview 
+
+Market Trends and Strategy 
+
+Data is a significant force in society and is generated daily at an unprecedented pace. The desire to harness insights from data to drive better outcomes for businesses and society is ever expanding. AI is becoming pervasive in nearly all applications, creating the potential for intelligence everywhere, and enabling powerful new uses of compute resources across all market segments. The installed base of Intel Xeon processors, combined with our portfolio of heterogeneous compute solutions (FPGAs, GPUs, IPUs, and AI accelerators), we believe positions us to lead in this high-growth area. DCAI is integral to our growth in AI through deep investments in the AI ecosystem, developer tools, frameworks, networking and memory, technologies, and open standards to drive a scalable path forward. 
+
+We take a system-level approach that supplies the necessary hardware and software optimized for power and performance. Our technology is differentiated at the system level and in high-growth workloads based on our integrated hardware acceleration engines and software. For example, architected into our Intel Xeon processors are Intel &#174; Advanced Matrix Extensions (Intel &#174; AMX) for AI acceleration; Intel &#174; Software Guard Extensions (Intel &#174; SGX), providing enclaves of protected memory designed to deliver enhanced security for sensitive data; and Intel &#174; Crypto Acceleration, which is designed to deliver breakthrough performance across cryptographic algorithms. We believe this acceleration and performance will continue to drive our differentiated value and growth across our customer base. 
+
+Products and Competition 
+
+Our products and services include: 
+
+##TABLE_START &#9632; 
+
+A portfolio of hardware, including Intel Xeon processors, the Intel &#174; Xeon CPU Max Series, the Intel &#174; Data Center GPU Max Series, the Intel &#174; Data Center GPU Flex Series, Intel Agilex &#174; and Intel &#174; Stratix &#174; FPGAs, Intel &#174; eASIC&#8482; devices, and the Intel Gaudi processors. 
+
+&#9632; 
+
+Platform enabling and validation in partnership with ODMs, OEMs, CSPs, and independent software vendors. 
+
+&#9632; 
+
+Optimized solutions for leading workloads such as AI, cryptography, security, storage, and networking, leveraging differentiated features supporting diverse compute environments. 
+
+##TABLE_END
+
+We provide our customers with an extensive portfolio of silicon and software products, engineered to deliver workload-optimized performance. Our hardware portfolio comprises CPUs, GPUs, domain-specific accelerators, and FPGAs, designed to support the performance, agility, and security that our customers demand. Deployment of our silicon platforms is accelerated by a software development environment that enables workload mobility across our heterogeneous architectures and enables developers to execute their workloads on the hardware that best meets application requirements. 
+
+Our competitors include AMD, providers of GPU products such as NVIDIA, companies developing their own custom silicon, and new entrants and incumbents developing ARM- and RISC-V-based products customized for specific data center workloads. We expect this competitive landscape to continue. 
+
+The Intel Xeon Scalable processor family delivers advanced CPUs for the data center, the network, and the edge, driving industry-leading performance, manageability, and security with differentiated features and capabilities. In 2023, we launched the 5th Gen Intel Xeon Scalable processors, which utilize modular SoCs for increased scalability and flexibility to deliver a range of products that meet the growing scale, processing, and power efficiency needs for AI, cloud, and enterprise installations. 
+
+Our Intel Gaudi 2 AI deep learning processor is engineered to allow customers to benefit from the most cost-effective, high-performance training and inference alternative to comparable GPUs. 
+
+Our FPGA and structured ASIC portfolio enhances Intel's ability to meet the needs of customers in the data center, across the network, and at the edge. In 2023, we released 21 new products within our FPGA business. These include the Intel Agilex 9 and Intel Agilex 7 product families, which are intended to handle the increased demand for customized workloads, including enhanced AI capabilities, and to provide lower total cost of ownership. 
+
+Our Intel Xeon CPU Max Series, introduced in 2022, was the first and only x86-based processor with high bandwidth memory for HPC and AI workloads. The Intel Data Center GPU Max Series 1550 and 1100 are now broadly available through OEM systems. Our Intel CPU Max Series includes 64GB of on-package high bandwidth memory, which benefits data-intensive HPC workloads. Our Intel Data Center GPU Flex Series offers customers a flexible, general-purpose GPU for the data center and the intelligent visual cloud. We delivered and installed, in collaboration with Argonne National Laboratory (ANL) and Hewlett Packard Enterprise (HPE), the largest cluster of Max GPUs to the Aurora Supercomputer at ANL. 
+
+The ubiquity of Intel Xeon in the installed base, along with our heterogeneous compute solutions combined with software that unlocks the value of our hardware, enable our customers to develop highly differentiated solutions. Our integrated approach has created significant value for Intel, our customers, and our partners by helping us mitigate risks, reduce costs, build brand value, and identify new market opportunities to apply our technology to address our customers' and society's most complex issues. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Financial Performance 
+
+##TABLE_START DCAI Revenue $B DCAI Operating Income (Loss) $B 
+
+##TABLE_END
+
+##TABLE_START Revenue Summary ##TABLE_END
+
+2023 vs. 2022 
+
+Revenue was $15.5 billion, down $3.9 billion from 2022, driven by a decrease in server revenue. Server volume decreased 37% from 2022, due to lower demand in a softening CPU data center market. Server ASPs increased 20% from 2022, primarily due to a lower mix of hyperscale customer-related revenue and a higher mix of high core count products. 
+
+2022 vs. 2021 
+
+Revenue was $19.4 billion, down $3.3 billion from 2021, due to a decrease in server revenue, partially offset by higher other DCAI revenue. Server volume decreased 16% from 2021, led by enterprise customers in a competitive environment, and due to customers tempering purchases to reduce existing inventories in a softening data center market. Server ASPs decreased 5% from 2021, driven by a higher mix of revenue from hyperscale customers. Other DCAI revenue increased 18% from 2021 primarily driven by growth in our FPGA business. 
+
+##TABLE_START Operating Income (Loss) Summary ##TABLE_END
+
+We had an operating loss of $530 million in 2023, compared to operating income of $1.3 billion in 2022. 
+
+##TABLE_START (In Millions) $ (530) 2023 Operating Income (Loss) (2,709) Lower product margin primarily due to lower server revenue (1,269) Higher server unit cost primarily from increased mix of Intel 7 products (171) Higher period charges related to excess capacity charges 1,337 Lower operating expenses driven by various cost-cutting measures 520 Lower period charges primarily driven by a decrease in product ramp costs 462 Lower period charges driven by the sell-through of previously reserved inventory and lower reserves taken in 2023 $ 1,300 &#160; 2022 Operating Income (3,325) Lower product margin from server revenue (1,137) Higher period charges primarily associated with the ramp up of Intel 4 (1,043) Higher operating expenses driven by increased investments in leadership products (671) Higher server unit cost from increased mix of 10nm SuperFin products (645) Higher period charges driven by inventory reserves taken in 2022 (189) Higher period charges related to excess capacity charges 785 Higher product margin from DCAI other product revenue 223 Lower period charges due to a benefit related to insurance proceeds received for business interruption and property damage that occurred in 2020 (74) Other $ 7,376 &#160; 
+
+2021 Operating Income 
+
+##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+##TABLE_START Overview NEX transforms the world's networks and edge compute systems from fixed-function hardware to general-purpose compute, acceleration, and networking devices running cloud native software on programmable hardware. We work with partners and customers to deliver and deploy intelligent edge platforms that allow developers to achieve agility and to drive automation using AI for efficient operations while securing the integrity of their data at the edge. We have a broad portfolio of hardware and software platforms, tools, and ecosystem partnerships for the rapid digital transformation happening from the cloud to the edge. We are leveraging our core strengths in compute, connectivity, software, and manufacturing at scale to grow traditional markets and to accelerate entry into emerging ones. 
+
+Key Business Developments 
+
+&#9632; 
+
+We launched the 4th Gen Intel Xeon processor with Intel vRAN Boost, and announced the Intel Xeon D-1800 series and the Intel Xeon D-2800 series processors optimized for cloud, edge, and 5G networks. 
+
+&#9632; 
+
+We continue to update solutions to improve developers' digital strategies and to accelerate market adoption of edge and AI applications. We announced 13th Gen Intel Core processors for Internet of Things edge and OpenVINO toolkit version 2023.1 with enhanced features for GenAI and edge computing. 
+
+&#9632; 
+
+We continue to work with our ecosystem partners like Ericsson, Nokia, Cisco, Dell Technologies, HPE, Lenovo, Amazon, Google, and Microsoft to drive the software-defined transformation of the world's network and edge infrastructure and accelerate AI-driven automation of physical operations. 
+
+##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Market and Business Overview 
+
+Market Trends and Strategy 
+
+The Internet is undergoing a shift toward a cloud-to-edge infrastructure, combining unrivaled scale and capacity in the cloud with faster response times at nearby edges. As AI is transforming and automating every industry&#8212;from factories to smart cities to hospitals&#8212;the demand for high-performance computing at the edge has expanded exponentially. Networks are moving toward software, becoming more programmable and flexible. 
+
+Our network and edge solutions aim to unleash the power of intelligent edge solutions for our customers and move the world's networks to a software infrastructure that runs on Intel technologies by (1) providing edge-optimized, AI-enabled compute and connectivity solutions to run every workload at the edge, between the cloud and the end user, and (2) deploying software platforms that enable developers to build, deploy, run, manage, connect, and secure distributed edge infrastructure, applications, and edge AI across several verticals, such as industrials, federal, aerospace, retail, healthcare, education, and smart cities. 
+
+Products and Competition 
+
+With a greater emphasis on systems and solutions designed to harness the growth of data processed at the edge to yield insights, our competitive landscape has shifted beyond application-specific standard product vendors to include cloud, network, and AI computing platform providers. 
+
+Today, we speed the deployment of network and edge computing solutions based on our open software frameworks, AI-enabled platform solutions, and edge and network-optimized broad silicon portfolio to address a wide range of applications across several markets. 
+
+On-Premises Edge: More than just providing silicon, we partner with companies to design and deliver solutions to help a wide range of customers transform their businesses and take advantage of the rapidly increasing number of connected and intelligent devices. We develop high-performance, AI-enabled compute platforms that solve for technology and business use cases that scale across several industries, such as retail, education, manufacturing, energy, healthcare, and medical. 
+
+We deliver edge-optimized AI-enabled platforms for edge applications based on our Intel Xeon, Intel Core, and Intel Atom processor portfolio, which reduces operational complexity for our customers and helps our customers create, store, and process data at the edge so they can analyze it faster and act on it sooner. We also build differentiated networking offerings that keep pace with industry speeds and deliver unique features needed for the intelligent edge, such as networking offloads, time-sensitive networking, and scalable reliable transport. 
+
+Enterprise Networking: Enterprises are evolving their networks to connect new and varying environments, host services from anywhere between cloud and edge, deliver heightened service levels, and handle growing volumes of devices and data. We are leading the world's shift to run networking workloads in software and create network function virtualization to provide our customers with more efficient, cost-effective, and programmable platforms that enable secure, agile, and reliable networking solutions from edge to cloud. We work with our ecosystem partners of over 500 network builders to help enterprises optimize their networks with right-sized compute and connectivity requirements for current and future needs. 
+
+Telecommunication Networks: We lead 5G core network deployments, demonstrating that 5G base stations can be almost entirely built from software running on Intel Xeon processors with Intel vRAN Boost. We continue to drive the transformation from fixed-function networks onto Intel Xeon Scalable processors and Intel Xeon D processors coupled with our FlexCore and FlexRAN&#8482; software. Our customers are tier-one global communication service providers and their equipment suppliers. Our software-based cloud RAN platform is designed to allow operators to deploy the fastest cloud-native 5G infrastructure quickly and efficiently at scale to meet the needs of their end customers. 
+
+Cloud Networking: Our cloud customers require uncompromised data center network performance and reliability driven by increased networking investments to support AI cluster deployments. We address these requirements by providing our open-standards-based NICs and IPUs. The IPU, a new class of product, is an open and programmable compute platform that frees up more compute cycles for customers by running infrastructure workloads in a separate, secure, and isolated set of CPU cores. 
+
+Software and Platforms: Our customers' need for flexibility, programmability, and versatility drives workloads toward software and away from fixed-function hardware. As networking in the cloud, core network, 5G, and private networks move to software, and as our edge customers increasingly deploy AI applications, we aim to simplify innovation on Intel hardware. We support our customers' software strategy at the edge with an edge-native software platform with modular building blocks, premium service, and support offerings. The platform enables developers to build, deploy, run, manage, connect, and secure distributed edge infrastructure, applications, and edge AI. The platform is a horizontal approach to scaling the needed infrastructure for the intelligent edge and hybrid AI, as well as bringing together an ecosystem of Intel and third-party vertical applications. Offering unique optimizations for network, the Internet of Things, hybrid AI, and edge workloads on Intel architecture, the platform also broadly supports diverse architectures and can be consumed on a modular basis&#8212;avoiding vendor lock-in. The platform delivers a seamless cloud-like experience, combining truly edge-native capabilities for security and zero-touch management with our deep industry experience and unrivaled ecosystem. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Financial Performance 
+
+##TABLE_START NEX Revenue $B NEX Operating Income (Loss) $B 
+
+##TABLE_END
+
+##TABLE_START Revenue Summary ##TABLE_END
+
+2023 vs. 2022 
+
+Revenue was $5.8 billion, down $2.6 billion from 2022, as customers tempered purchases to reduce inventories and adjust to a lower demand environment across product lines. 
+
+2022 vs. 2021 
+
+Revenue was $8.4 billion, up $744 million from 2021, driven by higher Ethernet ASPs and increased demand for 5G products, partially offset by lower demand for Network Xeon. Ethernet demand declined in Q4 2022 due to lower server demand, and edge demand declined in Q4 2022 due to macroeconomic factors. 
+
+##TABLE_START Operating Income (Loss) Summary ##TABLE_END
+
+We had an operating loss of $482 million in 2023, compared to operating income of $1.0 billion in 2022. ##TABLE_START (In Millions) $ (482) 2023 Operating Income (Loss) (1,832) Lower product margin driven by lower revenue across NEX product lines (181) Higher period charges driven by inventory reserves taken in 2023 498 Lower operating expenses driven by various cost-cutting measures $ 1,033 &#160; 
+
+2022 Operating Income 
+
+(520) Higher operating expenses driven by increased investments in leadership products (377) Higher period charges primarily associated with the ramp of Intel 4 (367) Higher period charges primarily due to other product enhancements (290) Higher period charges driven by reserves taken in 2022 and lack of sell-through of reserves compared to 2021 522 Higher product margin from Ethernet revenue 203 Lower unit cost primarily from10nm SuperFin products (73) Other $ 1,935 &#160; 
+
+2021 Operating Income 
+
+##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+##TABLE_START Overview 
+
+Mobileye is a leader in the development and deployment of ADAS and autonomous driving technologies and solutions. We pioneered ADAS technology more than 20 years ago, and have continued to expand the scope of our ADAS offerings while playing a leading role in the evolution of autonomous driving solutions. Our portfolio of solutions is built upon a comprehensive suite of purpose-built software and hardware technologies designed to provide the capabilities needed to make the future of ADAS and autonomous driving a reality. These technologies can be harnessed to deliver mission-critical capabilities at the edge and in the cloud, advancing the safety of road users, and revolutionizing the driving experience and the movement of people and goods globally. Our customers and strategic partners include major global OEMs, Tier 1 automotive system integrators, and public transportation operators. 
+
+Key Business Developments 
+
+&#9632; 
+
+We launched EyeQ&#8482;-based systems into approximately 300 different vehicle models and built significant traction with our advanced portfolio of products, including Cloud-enhanced ADAS, Mobileye SuperVision&#8482;, and Mobileye Chauffeur&#8482;. 
+
+&#9632; 
+
+Mobileye SuperVision execution continues to progress as we delivered an over-the-air update in August 2023 delivering highway navigate-on-pilot capabilities that are now enabled in 22 cities, as compared to two cities at the August 2023 launch. Customer traction also saw an acceleration in 2023, as we achieved new SuperVision design wins with Porsche, FAW, Mahindra &#38; Mahindra, and a major global western OEM. We achieved our first production design wins for the Chauffeur product during 2023 as well, including with Polestar, FAW, and a major global western OEM. 
+
+&#9632; 
+
+We were recognized as the leader in the development of autonomous vehicle technology by two leading research groups, Guidehouse Insights and ABI Research, excelling in quantitative and qualitative assessments across various criteria such as technology, innovation, strategy, implementation, and customer bases. We moved up six positions in the Guidehouse Leaderboard since the 2021 report, demonstrating progress in realizing our autonomous vision. 
+
+##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Market and Business Overview 
+
+Market Trends and Strategy 
+
+In 2023, the automotive industry grew with an approximately 9% increase in global vehicle production year over year. We expect industry ADAS volumes to grow faster than overall global vehicle production in the coming years and anticipate long-term ADAS growth from increases in the percentage of vehicles that are equipped with basic ADAS features from the factory. Despite our expectation for a decline in Mobileye ADAS volumes in 2024 due to a correction of inventory with our customers, we continue to believe we will benefit from positive industry ADAS growth over the medium-term. In addition to potential volume growth, our portfolio of advanced solutions has the potential to drive higher average system price over time. 
+
+Beyond ADAS solutions, we believe that the availability of AVs will cause a significant transformation in mobility, including vehicle ownership and utilization. We expect that AV technology will eventually be accessed by consumers through shared-vehicle MaaS networks, as well as in consumer-owned and operated AVs. We are pursuing this market trend by using our eyes-on/hands-off Mobileye SuperVision solution as a baseline to scale to our eyes-off/hands-off Mobileye Chauffeur consumer AV product in a variety of operational design domains. As it relates to AMaaS, we intend to primarily go to market by supplying Mobileye Drive&#8482; self-driving system to transportation network companies, public transit operators, and suppliers of AV-ready vehicle platforms. In some cases, we expect to bundle our Mobileye Drive self-driving system with Moovit&#8217;s urban mobility and transit intelligence application and its global user base. 
+
+Products and Competition 
+
+We currently ship a variety of ADAS solutions to a large number of global automakers. We are recognized for our top-rated safety solutions globally, and since 2007, we have introduced numerous industry-first ADAS products. 
+
+We are building a robust portfolio of end-to-end ADAS and autonomous driving solutions to provide the capabilities needed for the future of autonomous driving, leveraging a comprehensive suite of purpose-built software and hardware technologies. We pioneered &#8220;base&#8221; ADAS features to enhance vehicle safety and to meet global regulatory requirements and safety ratings with our driver assist solution and we have since created a new category of ADAS with our Cloud-Enhanced Driver-Assist&#8482; and premium driver assist offerings, such as Mobileye SuperVision. By leveraging Mobileye SuperVision&#8217;s full-surround computer vision and True Redundancy&#8482;, we are developing Mobileye Chauffeur, our consumer AV solution and Mobileye Drive, our eyes-off/hands-off autonomous driving solution designed for fleet deployment. Our current offerings to Tier 1 and OEM customers do not include cameras, radars, lidar systems, or other sensors (except in particular cases). We intend in the future to offer radar and lidar products that are currently in development stages. 
+
+The ADAS and autonomous driving industries are highly competitive. In the ADAS and consumer AV market, we face competition primarily from other external providers, including Tier 1 automotive suppliers and silicon providers, as well as in-house solutions developed by OEMs to a certain extent. Our Tier 1 customers may be developing or may in the future develop competing solutions. In the autonomous driving market, including AMaaS and consumer AV, we face competition from technology companies; internal development teams from the automakers themselves, sometimes in combination with investments in early-stage autonomous vehicle technology companies, Tier 1 automotive companies, as well as robotaxi providers. 
+
+1 Source: S&#38;P Global Production Forecast 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Financial Performance 
+
+##TABLE_START Mobileye Revenue $B Mobileye Operating Income $B ##TABLE_END
+
+##TABLE_START Revenue and Operating Income Summary ##TABLE_END
+
+2023 vs. 2022 
+
+Revenue was $2.1 billion, up $210 million from 2022, primarily driven by higher demand for EyeQ products . Operating income was $664 million, down $26 million from 2022. 
+
+2022 vs. 2021 
+
+Revenue was $1.9 billion, up $483 million from 2021, primarily driven by higher demand for EyeQ products and Mobileye SuperVision systems . Operating income was $690 million, up $136 million from 2021, primarily due to higher revenue, partially offset by increased investments in leadership products. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+##TABLE_START Overview As the first Open System Foundry, we enable our customers' transition from general-purpose monolithic chips to systems of chips tailored to high-growth applications, including AI, and optimize their solutions by combining the best technologies from Intel and the ecosystem. We believe this combination of systems technology, systems expertise, ecosystem partnerships, and robust supply chain helps fuel the growth of our customers, creates more robust global supply chains, and ultimately transforms the foundry industry. Our customers and strategic partners include traditional fabless companies, cloud service providers, automotive, and military, aerospace, and defense firms. We also offer IMS mask-making equipment for advanced lithography used by most of the world's leading-edge foundries. 
+
+Key Business Developments 
+
+&#9632; 
+
+In 2023, we were granted four design wins on Intel 18A, including a design win with a significant high performance computing customer on Intel 18A and a large prepayment. We have seen accelerated interest in our advanced packaging business, especially for AI related designs, and have secured five new design wins. 
+
+&#9632; 
+
+Our IFS Accelerator Ecosystem Alliance program doubled in size to over 40 strategic agreements across EDA, silicon IP, design services, cloud, and USMAG alliances since launching in Q1 2022. We announced a multigenerational agreement with ARM and a definitive agreement with Synopsys. The ARM agreement is expected to enable chip designers to build optimized compute SoCs on the Intel 18A process. The Synopsys agreement expands the development of a portfolio of IP on Intel 3 and Intel 18A. These agreements and the IFS accelerator program are expected to enable customers to design using a robust suite of EDA and IP across IFS nodes, similar to the way they would design with their existing foundry supplier. 
+
+&#9632; 
+
+We expanded partnerships under the Rapid Assured Microelectronics Prototypes-Commercial (RAMP-C) program created by the US Department of Defense in 2021 to assure domestic access to leading-edge technology and the US-based foundry ecosystem. The combination of expanded partnerships and RAMP-C enables customers to develop and fabricate chips on Intel 18A, including customers such as Nvidia, IBM, Microsoft, Boeing, and Northrop Grumman. 
+
+&#9632; 
+
+We announced a commercial agreement with Tower, pursuant to which we are expected to provide foundry services and manufacturing capacity through our New Mexico advanced manufacturing facility for 300mm advanced analog processing. 
+
+##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Market and Business Overview 
+
+Market Trends and Strategy 
+
+The chip industry is undergoing a structural transformation driven by: 
+
+&#9642; Five superpowers: ubiquitous compute, pervasive connectivity, cloud-to-edge infrastructure, AI, and sensing; 
+
+&#9642; A generational shift in computer architectures: the move from system on chip to system of chips (chiplets), increased tailoring of chips to workloads, especially AI, and the vertical integration into chipmaking by OEMs and CSPs; 
+
+&#9642; Increasing costs of R&#38;D and capacity for advanced node technologies; and 
+
+&#9642; Supply chain risk highlighted by geo-political issue s and the growing need for a resilient, secure, and sustainable global supply chain. 
+
+These transformational trends are driving significant semiconductor market growth in leading-edge silicon and packaging technologies, especially in systems of chips for AI applications. Customers have to make complex design choices at every level of the system, from packaging technologies, process nodes, interconnects, physical IP, and compute elements to software. The abundance of technology choices and optimizations is adding complexity in design, technology, integration, and manufacturing. 
+
+Our IDM 2.0 strategy includes our pursuit of these complex manufacturing and market growth opportunities by making significant capital investments in leading-edge semiconductor technologies in order to create foundry capacity and establish IFS as a major provider of foundry services that provides semiconductor manufacturing solutions for others and for ourselves. We have made and expect to continue to make significant capital investments in furtherance of this strategy. 
+
+Products and Competition 
+
+We seek to address this tectonic shift in the chip industry by enabling our customers to create optimized systems of chips by combining the best technologies from Intel and the ecosystem. We believe Open System Foundry is a world-class foundry offering, delivered from a resilient, secure, and sustainable source of supply and complemented by access to the systems of chips capabilities from Intel. The basic foundry offering is advanced process technologies backed by an ecosystem of IP, EDA, and design services, which enable customers to design as they would with other foundries. The systems of chips capabilities include advanced packaging technologies, software to accelerate bring-up and integration of complex chips, and driving standards that will improve system performance. 
+
+With our IFS accelerator program members and the Arm and Synopsys agreements, we believe we are well on the way to building out a world-class foundry offering. With the rise of AI, our advanced packaging business is expected to be another unique advantage for Intel. Chips created with us or other foundries can be packaged using Intel's advanced packaging technologies, including 2D and 2.5D/3D solutions designed to enable large, highly scalable packages at competitive costs. We continue to drive technologies, capabilities, and standards needed to optimize systems of chips, including the Universal Chiplet Interconnect Express* standard for communication between chips in a system, which was demonstrated in silicon in 2023. We accelerate our customers' designs by providing services and software that leverage Intel's vast experience as a systems company. 
+
+Our competitors are mostly pure-play foundries that focus on delivering a pure-play foundry offering from fabrication plants based primarily in Asia. Of the five major semiconductor foundries, TSMC, Samsung, Global Foundries (GF), United Microelectronics Corporation (UMC), and Semiconductor Manufacturing International Corporation (SMIC), only Samsung is an IDM and foundry, and only GF is headquartered in the US. TSMC leads the market with 59% market share, followed by Samsung at 16% in 2022 1 . Neither Samsung nor TSMC currently offers its most advanced nodes outside of Asia and both have limited advanced node capacity in the US. 
+
+We believe the Open System Foundry model delivers differentiated capabilities to help our customers lead in their industries while bringing stability to the global semiconductor supply chain. The momentum and customer commitments we are seeing demonstrate that our strategy and offerings are resonating, and we look to build on this success in 2024 and in future periods. 
+
+1 Source: TrendForce 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Financial Performance 
+
+##TABLE_START IFS Revenue $B IFS Operating Income (Loss) $B ##TABLE_END
+
+##TABLE_START Revenue and Operating Income (Loss) Summary ##TABLE_END
+
+2023 vs. 2022 
+
+Revenue was $952 million, up $483 million from 2022, driven by higher packaging revenue . We had an operating loss of $482 million , compared to an operating loss of $281 million from 2022, primarily due to increased spending to drive strategic growth . 
+
+2022 vs. 2021 
+
+Revenue was $469 million, up $122 million from 2021, primarily driven by higher sales of multi-beam mask writer tools. We had an operating loss of $281 million, compared to operating income of $76 million in 2021, primarily due to increased spending to drive strategic growth . 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+##TABLE_START 
+
+Consolidated Results of Operations 
+
+##TABLE_END
+
+For additional key highlights of our results of operations, see "A Year in Review." 
+
+##TABLE_START Years Ended (In Millions, Except Per Share Amounts) December 30, 2023 December 31, 2022 December 25, 2021 Amount % of Net Revenue Amount % of Net Revenue Amount % of Net Revenue Net revenue $ 54,228 &#160; 100.0 &#160; % $ 63,054 &#160; 100.0 &#160; % $ 79,024 &#160; 100.0 &#160; % Cost of sales 32,517 60.0 % 36,188 57.4 % 35,209 44.6 % Gross margin 21,711 &#160; 40.0 &#160; % 26,866 &#160; 42.6 &#160; % 43,815 &#160; 55.4 &#160; % Research and development 16,046 29.6 % 17,528 27.8 % 15,190 19.2 % Marketing, general, and administrative 5,634 10.4 % 7,002 11.1 % 6,543 8.3 % Restructuring and other charges (62) (0.1) % 2 &#8212; % 2,626 3.3 % Operating income 93 &#160; 0.2 &#160; % 2,334 &#160; 3.7 &#160; % 19,456 &#160; 24.6 &#160; % Gains (losses) on equity investments, net 40 0.1 % 4,268 6.8 % 2,729 3.5 % Interest and other, net 629 1.2 % 1,166 1.8 % (482) (0.6) % Income before taxes 762 &#160; 1.4 &#160; % 7,768 &#160; 12.3 &#160; % 21,703 &#160; 27.5 &#160; % Provision for (benefit from) taxes (913) (1.7) % (249) (0.4) % 1,835 2.3 % Net income 1,675 &#160; 3.1 &#160; % 8,017 &#160; 12.7 &#160; % 19,868 &#160; 25.1 &#160; % Less: Net income (loss) attributable to non-controlling interests (14) &#8212; % 3 &#8212; % &#8212; &#8212; % Net income attributable to Intel $ 1,689 &#160; 3.1 &#160; % $ 8,014 &#160; 12.7 &#160; % $ 19,868 &#160; 25.1 &#160; % Earnings per share attributable to Intel&#8212;diluted $ 0.40 &#160; $ 1.94 &#160; $ 4.86 &#160; ##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Revenue 
+
+##TABLE_START Segment Revenue Walk $B ##TABLE_END
+
+2023 vs. 2022 
+
+2023 revenue was $54.2 billion, down $8.8 billion, or 14%, from 2022. CCG revenue decreased 8% from 2022 primarily due to lower notebook and desktop volume driven by lower demand across market segments, partially offset by increased volume in the second half of the year as customer inventory levels normalized compared to higher levels in the first half. Notebook ASPs decreased due to the relative strength in the education market segment resulting in a higher mix of small core products combined with a higher mix of older generation products, and were partially offset by higher desktop ASPs due to an increased mix of product sales to the commercial and gaming market segments. DCAI revenue decreased 20% from 2022 due to lower server volume resulting from a softening CPU data center market, which was partially offset by higher server ASPs from a lower mix of hyperscale customer-related revenue and a higher mix of high core count products. NEX revenue decreased 31% from 2022 as customers tempered purchases to reduce existing inventories and adjust to a lower demand environment across product lines. 
+
+Incentives offered to certain customers to accelerate purchases and to strategically position our products with customers for market segment share purposes, contributed approximately $700 million to our revenue during Q4 2023, the impacts of which were contemplated in our financial guidance for Q1 2024, as included in our Form 8-K dated January 25, 2024. 
+
+2022 vs. 2021 
+
+2022 revenue was $63.1 billion, down $16.0 billion, or 20%, from 2021. CCG revenue was down 23% from 2021 due to lower notebook and desktop volume in the consumer and education market segments, and lower revenue due to the continued ramp down from the exit of our 5G smartphone modem business and lower demand for our wireless and connectivity products. Notebook volume decreased, driven by lower demand in the consumer and education market segments, while ASPs increased due to the resulting product mix. Desktop volume decreased, driven by lower demand in the consumer and education market segments while ASPs increased due to an increased mix of commercial products. DCAI revenue decreased 15% from 2021 due to lower server demand from enterprise customers, and due to customers tempering purchases to reduce existing inventories in a softening data center market. The decrease was partially offset by higher revenue from our FPGA business. Server ASPs decreased due to customer and product mix. NEX revenue increased 10% from 2021, driven by higher Ethernet ASPs and increased demand for 5G products, partially offset by lower demand for Network Xeon. Mobileye revenue increased 35% from 2021, primarily driven by higher demand for EyeQ products and Mobileye Supervision systems. The decrease in our "all other" revenue was due to revenue from the divested NAND memory business of $4.3 billion recognized in 2021, for which historical results are recorded in &#8220;all other,&#8221; and $584 million of revenue recognized in 2021 from a prepaid customer supply agreement. 
+
+Incentives offered to certain customers to accelerate purchases and to strategically position our products with customers for market segment share purposes, particularly in CCG, contributed approximately $1.7 billion to our revenue during Q4 2022. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Gross Margin 
+
+We derived most of our overall gross margin in 2023 from the sale of products in the CCG and DCAI operating segments. Our overall gross margin dollars in 2023 decreased by $5.2 billion, or 19%, compared to 2022, and in 2022 decreased by $16.9 billion, or 39%, compared to 2021. 
+
+##TABLE_START Gross Margin $B (Percentages in chart indicate gross margin as a percentage of total revenue) ##TABLE_END
+
+##TABLE_START (In Millions) $ 21,711 &#160; 
+
+2023 Gross Margin 
+
+(2,709) Lower product margin primarily due to lower server revenue (1,832) Lower product margin driven by lower revenue across NEX product lines (1,704) Lower product margin primarily from lower notebook and desktop revenue (1,654) Higher unit cost primarily from increased mix of Intel 7 products (411) Higher period charges related to excess capacity charges 1,973 Lower period charges driven by the sell-through of previously reserved inventory and lower reserves taken in 2023 788 Lower period charges primarily driven by a decrease in product ramp costs 723 Absence of the inventory impairment charge taken in 2022 related to the wind down of our Intel Optane memory business 204 Absence of corporate charges from a patent settlement in 2022 (533) Other $ 26,866 &#160; 
+
+2022 Gross Margin 
+
+(4,717) Lower product margin primarily from lower notebook and desktop revenue (3,325) Lower product margin primarily due to lower server revenue (2,651) Higher unit cost primarily from increased mix of Intel 7 products and 10nm SuperFin (2,090) Higher period charges primarily driven by inventory reserves taken in 2022 (1,995) Lower gross margin related to the divested NAND memory business (2,148) Higher period charges primarily associated with the ramp up of Intel 4 and other product enhancements (723) Inventory impairment related to the wind down of our Intel Optane memory business (584) Lack of revenue recognized in Q1 2021 from a prepaid customer supply agreement (423) Higher period charges due to excess capacity charges (313) Higher stock-based compensation (204) Corporate charges from patent settlement 484 Lower period charges due to a benefit related to insurance proceeds received for business interruption and property damage that occurred in 2020 522 Higher product margin from NEX Ethernet revenue 785 Higher product margin from DCAI other product revenue 433 Other $ 43,815 &#160; 
+
+2021 Gross Margin 
+
+##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+We are making capital investments in furtherance of our IDM 2.0 strategy. As of December 30, 2023, our capital investments classified as construction in progress totaled $43.4 billion ($36.7 billion as of December 31, 2022). These assets have not yet been placed into service and have not yet begun depreciating. As these construction-in-progress assets are placed into service, we expect to incur depreciation expense that impacts future production costs and, ultimately, cost of sales. To the extent we are unable to grow our revenues to offset these production costs, our gross margin and operating income will be unfavorably affected. Additionally, we could incur asset impairments on property, plant, and equipment assets if our IDM 2.0 strategy is not successful. 
+
+Effective January 2023, we increased the estimated useful life of certain production machinery and equipment from 5 to 8 years. When compared to the estimated useful life in place as of the end of 2022, we estimate total depreciation expense in 2023 was reduced by $4.2 billion. We estimate this change resulted in an approximately $2.5 billion increase to gross margin, $400 million decrease in R&#38;D expenses, and $1.3 billion decrease in ending inventory values. These estimates are based on the assets in use and under construction as of the beginning of 2023 and are calculated at that point in time. Most of the depreciation expense associated with this useful life change is included in overhead cost pools and is combined with other costs and other depreciation expense from assets placed into service after this calculation was performed, for which such costs are subsequently absorbed into inventory as each product passes through our manufacturing process. As a result, the actual amount of impact from the useful life change that is included in our 2023 operating results and financial position is impractical to individually and specifically quantify on a year-over-year basis. 
+
+Operating Expenses 
+
+Total R&#38;D and MG&#38;A expenses for 2023 were $21.7 billion, down 12% compared to 2022. These expenses represent 40.0% of revenue for 2023 and 38.9% of revenue for 2022. In support of our strategy, we continue to make significant investments to accelerate our process technology roadmap. This requires increased investments in R&#38;D and focused efforts to attract and retain talent. We have implemented certain cost-cutting measures while we continue to improve our product execution. 
+
+##TABLE_START Research and Development $B Marketing, General, and Administrative $B 
+
+(Percentages indicate expenses as a percentage of total revenue) ##TABLE_END
+
+##TABLE_START Research and Development ##TABLE_END
+
+##TABLE_START 2023 vs. 2022 R&#38;D decreased by $1.5 billion, or 8%, driven by the following: - The effects of various cost-cutting measures + Higher incentive-based cash compensation 2022 vs. 2021 R&#38;D spending increased by $2.3 billion, or 15%, driven by the following: + Investments in our process technology + Increase in corporate spending + 
+
+Investments in leadership products 
+
+- Incentive-based cash compensation ##TABLE_END
+
+##TABLE_START Marketing, General, and Administrative 
+
+##TABLE_END
+
+##TABLE_START 2023 vs. 2022 MG&#38;A decreased by $1.4 billion, or 20%, driven by the following: - Lower corporate spending as a result of various cost-cutting measures + Higher incentive-based cash compensation 2022 vs. 2021 MG&#38;A spending increased by $459 million, or 7%, driven by the following: + Increase in corporate spending - Incentive-based cash compensation ##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Restructuring and Other Charges 
+
+##TABLE_START Years Ended (In Millions) Dec 30, 2023 Dec 31, 2022 Dec 25, 2021 Employee severance and benefit arrangements $ 222 $ 1,038 $ 48 Litigation charges and other (329) (1,187) 2,291 Asset impairment charges 45 151 287 Total restructuring and other charges $ (62) $ 2 &#160; $ 2,626 &#160; ##TABLE_END
+
+The 2022 Restructuring Program was approved to rebalance our workforce and operations and to create efficiencies and improve our product execution in alignment with our strategy. In 2023, activity related to the 2022 Restructuring Program consisted of cash settlements of previously accrued employee severance and benefit arrangements, as well as incremental accruals throughout the year and was substantially complete as of December 30, 2023. The 2022 Restructuring Plan, in conjunction with other initiatives, reduced our cost structure and allowed us to reinvest certain of these cost savings in resources and capacity to develop, manufacture, market, sell, and deliver our products in furtherance of our strategy. The cumulative cost of the 2022 Restructuring Program as of December 30, 2023 was $1.3 billion. 
+
+Litigation charges and other includes a $1.2 billion benefit in 2023 due to a reduction in the previously accrued $2.2 billion charge as a result of developments in the VLSI litigation in Q4 2023. 2023 charges also include a $401 million charge for an EC-imposed fine. In 2009, we recorded and paid an EC-imposed fine that was subsequently annulled, resulting in a benefit of $1.2 billion in 2022. Also in 2023 , we mutually agreed with Tower to terminate the acquisition agreement that was entered into during 2022 and, as a result, we paid a $353 million termination fee to Tower in accordance with the terms of the agreement . 
+
+Gains (Losses) on Equity Investments and Interest and Other, Net 
+
+##TABLE_START Years Ended (In Millions) Dec 30, 2023 Dec 31, 2022 Dec 25, 2021 Ongoing mark-to-market adjustments on marketable equity securities $ (36) $ (787) $ (130) Observable price adjustments on non-marketable equity securities 17 299 750 Impairment charges (214) (190) (154) 
+
+Sale of equity investments and other 
+
+273 4,946 2,263 Gains (losses) on equity investments, net $ 40 &#160; $ 4,268 &#160; $ 2,729 &#160; Interest and other, net $ 629 &#160; $ 1,166 &#160; $ (482) ##TABLE_END
+
+Gains (Losses) on Equity Investments, Net 
+
+Ongoing mark-to-market adjustments recognized in 2023, 2022, and 2021 were primarily driven by our investment in Montage Technology, Co. Ltd. (Montage). 
+
+In 2023, we recognized $243 million of initial fair value adjustments in sale of equity investments and other related to the public market offerings of four of our portfolio companies; in 2022, we recognized $278 million of initial fair value adjustments related to the public market offerings of five of our portfolio companies; and in 2021, we recognized $447 million related to the public market offerings of four of our portfolio companies. 
+
+In 2022, the sale of McAfee Corp. (McAfee) consumer business was completed, and we received $4.6 billion in cash for the sale of our remaining share of McAfee, recognizing a $4.6 billion gain in sale of equity investments and other . In 2021, we recognized McAfee dividends of $1.3 billion, which included a special dividend of $1.1 billion paid in connection with the sale of McAfee's enterprise business, and recognized $228 million related to the partial sale of our investment in McAfee. 
+
+In 2021, we recognized $471 million in observable price adjustments related to our investment in Beijing Unisoc Technology Ltd. 
+
+Interest and Other, Net 
+
+In 2022, we recognized a gain of $1.0 billion from the first closing of the divestiture of our NAND memory business. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Provision for (Benefit from) Taxes 
+
+##TABLE_START 
+
+Years Ended (In Millions) 
+
+Dec 30, 2023 Dec 31, 2022 Dec 25, 2021 Income before taxes $ 762 $ 7,768 $ 21,703 Provision for (benefit from) taxes $ (913) $ (249) $ 1,835 Effective tax rate (119.8) % (3.2) % 8.5 % ##TABLE_END
+
+Our effective tax rate decreased in 2023 compared to 2022, primarily driven by our R&#38;D tax credits, which provide a tax benefit based on our eligible R&#38;D spending and are not dependent on lower income before taxes, and a higher proportion of our income being taxed in non-US jurisdictions. Our benefit from income taxes increased in 2023 compared to 2022 primarily due to a higher proportion of our income being taxed in non-US jurisdictions. The 2023 shift in income was attributable to the 2022 tax costs associated with the gains recognized from the equity sale of McAfee and the divestiture of our NAND memory business. 
+
+Our effective tax rate decreased in 2022 compared to 2021, primarily driven by a higher proportion of our income being taxed in non-US jurisdictions and a change in tax law from 2017 Tax Reform related to the capitalization of R&#38;D expenses that went into effect in January 2022. In 2022 we recognized a benefit from taxes as compared to a provision for taxes in 2021 as the higher proportion of our income being taxed in non-US jurisdictions and the change in tax law from 2017 Tax Reform were only partially offset by the tax costs associated with the gains recognized from the equity sale of McAfee and the divestiture of our NAND memory business. 
+
+In 2021 the OECD announced an Inclusive Framework on Base Erosion and Profit Shifting including Pillar Two Model Rules defining the global minimum tax, which calls for the taxation of large multinational corporations at a minimum rate of 15%. Subsequently multiple sets of administrative guidance have been issued. Many non-US tax jurisdictions have either recently enacted legislation to adopt certain components of the Pillar Two Model Rules beginning in 2024 (including the European Union Member States) with the adoption of additional components in later years or announced their plans to enact legislation in future years. We are continuing to evaluate the impacts of enacted legislation and pending legislation to enact Pillar Two Model Rules in the non-US tax jurisdictions we operate in. 
+
+Liquidity and Capital Resources 
+
+We believe we have sufficient sources of funding to meet our business requirements for the next 12 months and in the longer term. Cash generated by operations, supplemented by our total cash and investments 1 , is our primary source of liquidity for funding our strategic business requirements. These sources are further supplemented by our committed credit facilities and other borrowing capacity and certain other Smart Capital initiatives that we have undertaken . Our short-term funding requirements include capital expenditures for worldwide manufacturing and assembly and test, including investments in our process technology roadmap; working capital requirements; and potential and pending acquisitions, strategic investments, and dividends. Our long-term funding requirements incrementally contemplate investments in significant manufacturing expansion plans and investments to accelerate our process technology. These plans include expanding existing operations in Arizona, Ireland, Israel, New Mexico, and Oregon, and investing in new leading-edge manufacturing facilities in Germany and Ohio. We also expect to continue to benefit from government incentives and any incentives above our current expectations would enable us to increase the pace and size of our investments. Conversely, incentives below our expectations would increase our anticipated cash requirements. We expect our planned capital investments to continue to put pressure on our adjusted free cash flow in the short term. 
+
+As we invest in multiple expansions, we expect our capital expenditures to continue to be higher than historical levels for the next several years. We expect to adjust the cadence of our investments based on the execution of our roadmap and changing business conditions. As of December 30, 2023, we had commitments for capital expenditures of $20.4 billion for 2024 and had $7.1 billion in capital expenditures committed in the long term. As of December 30, 2023, other purchase obligations and commitments in 2024 under our binding commitments for purchases of goods and services were $2.7 billion, with an additional $5.6 billion committed in the long term. 
+
+We have additional obligations as part of our ordinary course of business, beyond those committed for capital expenditures and other purchase obligations and commitments for purchases of goods and services. For example, see "Note 19: Commitments and Contingencies" within the Notes to Consolidated Financial Statements for information about our lease obligations, which include supply agreements structured as leases; "Note 8: Income Taxes" within the Notes to Consolidated Financial Statements for information about our tax obligations, including impacts from Tax Reform enacted in 2017 for the one-time transition tax on previously untaxed foreign earnings; and "Note 13: Borrowings" within the Notes to Consolidated Financial Statements for information about our debt obligations. The expected timing of payments of our obligations is estimated based on current information. Timing of payments and actual amounts paid may be different, depending on the timing of receipt of goods or services, or changes to agreed-upon amounts for some obligations. In addition, some of our purchasing requirements are not current obligations and are therefore not included in the amounts above. For example, some of these requirements are not handled through binding contracts or are fulfilled by vendors on a purchase order basis within short time horizons. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+When assessing our current sources of liquidity, we include our total cash and investments 1 as follows: 
+
+##TABLE_START (In Millions) Dec 30, 2023 Dec 31, 2022 Cash and cash equivalents $ 7,079 &#160; $ 11,144 &#160; Short-term investments 17,955 17,194 Loans receivable and other 5 463 
+
+Total cash and investments 1 
+
+$ 25,039 &#160; $ 28,801 &#160; Total debt $ 49,266 &#160; $ 42,051 &#160; ##TABLE_END
+
+1 See "Non-GAAP Financial Measures" within MD&#38;A. 
+
+We maintain a diverse investment portfolio that we continually analyze based on issuer, industry, and country. Substantially all of our investments in debt instruments are in investment-grade securities. 
+
+Our sources of liquidity in 2023 included $1.5 billion from partner contributions, net proceeds of $1.6 billion from a secondary offering of Mobileye Class A common stock, $1.4 billion of cash proceeds from the sale of minority stakes in our IMS business to both Bain Capital and TSMC, and government incentives of $1.0 billion. Other potential sources of liquidity include our commercial paper program and our automatic shelf registration statement on file with the SEC, pursuant to which we may offer an unspecified amount of debt, equity, other securities, and non-recourse factoring arrangements with third-party financial institutions. Under our commercial paper program, we have an ongoing authorization from our Board of Directors to borrow up to $10.0 billion and, as of December 30, 2023, we had no commercial paper obligations outstanding. During 2023 , we issued a total of $11.0 billion aggregate principal amount of senior notes for general corporate purposes, including, but not limited to, refinancing our outstanding debt and funding for working capital and capital expenditures. We also amended both our five-year $5.0 billion variable-rate revolving credit facility agreement, extending that maturity date by one year to March 2028, and our 364-day $5.0 billion credit facility agreement, extending the maturity date to March 2024. As of December 30, 2023, we had no borrowings outstanding on the revolving credit facilities. 
+
+In Q1 2023, we declared a reduced quarterly dividend on our common stock. This dividend reduction reflects our deliberate approach to capital allocation, is expected to support the critical investments needed to execute our business strategy, and is designed to position us to create long-term value. In January 2024, our Board of Directors declared a quarterly dividend of $0.125 per share on the company's common stock, which will be payable on March 1, 2024 to stockholders of record as of February 7, 2024. Future declarations of dividends and the establishment of future record and payment dates are subject to the final determination of our Board of Directors. 
+
+Our cash and investments and related cash flows may be affected by certain discretionary actions we may take with customers and suppliers to accelerate or delay certain cash receipts or payments to manage liquidity, among other factors, for our strategic business requirements. In 2023 these actions included, among others, negotiating with suppliers to optimize our payment terms and conditions, adjusting the amounts and timing of cash flows associated with customer sales programs and collections, managing inventory levels and purchasing practices, and selling certain of our accounts receivable on a non-recourse basis to third-party financial institutions. While such actions have benefited, and may further benefit, cash flow in the near term, we may experience a corresponding detriment to cash flow in future periods as these actions cease or as the impacts of these actions reverse or normalize. 
+
+Our cash flows for each period were as follows: 
+
+##TABLE_START Years Ended (In Millions) Dec 30, 2023 Dec 31, 2022 Dec 25, 2021 Net cash provided by operating activities $ 11,471 $ 15,433 $ 29,456 Net cash used for investing activities (24,041) (10,231) (24,283) Net cash provided by (used for) financing activities 8,505 1,115 (6,211) Net increase (decrease) in cash and cash equivalents $ (4,065) $ 6,317 &#160; $ (1,038) ##TABLE_END
+
+Operating Activities 
+
+Cash provided by operating activities is net income adjusted for certain non-cash items and changes in assets and liabilities. 
+
+For 2023 compared to 2022, the $4.0 billion decrease in cash provided by operating activities was primarily driven by lower 2023 net income after adjusting for non-cash items, partially offset by 2023 cash-favorable working capital changes compared to 2022. 
+
+For 2022 compared to 2021, the $14.0 billion decrease in cash provided by operating activities was primarily driven by lower 2022 net income after adjusting for non-cash items, including the gain on the sale of McAfee and the pre-tax gain from the divestiture of our NAND business, partially offset by 2022 cash-favorable working capital changes compared to 2021. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Investing Activities 
+
+Investing cash flows consist primarily of capital expenditures; investment purchases, sales, maturities, and disposals; proceeds from capital-related government incentives; and proceeds from divestitures. Our capital expenditures were $25.8 billion in 2023 ($24.8 billion in 2022 and $18.7 billion in 2021). 
+
+The increase in cash used for investing activities in 2023 compared to 2022 was primarily due to a lack of proceeds from the divestiture of our NAND business and from the sale of our remaining McAfee share that occurred in 2022, lower maturities and sales of short-term investments, and increased capital expenditures. These unfavorable cash flow impacts during 2023 were partially offset by higher 2023 proceeds from capital-related government incentives and by other cash favorable investment activities, including lower acquisitions during 2023. 
+
+The decrease in cash used for investing activities in 2022 compared to 2021 was primarily due to increased maturities and sales of short-term investments, proceeds from the divestiture of our NAND business, and proceeds from the sale of our remaining share of McAfee, partially offset by an increase in capital expenditures. 
+
+Financing Activities 
+
+Financing cash flows consist primarily of payment of dividends to stockholders, issuance and repayment of short-term and long-term debt, and proceeds from partner contributions and equity-related issuances. 
+
+The increase in cash provided by financing activities in 2023 compared to 2022 was primarily due to higher debt issuances along with lower repayment of long-term debt, decreased dividend payments to stockholders, and increased proceeds from sales of subsidiary shares, partially offset by commercial paper issuances in 2022 that were subsequently repaid in 2023. Our total dividend payments were $3.1 billion in 2023, compared to $6.0 billion in 2022. We have paid a cash dividend in each of the past 125 quarters. 
+
+Cash provided by financing activities in 2022 compared to cash used for financing activities in 2021 was primarily due to higher commercial paper and debt issuances, our 2022 curtailment of common stock repurchases, proceeds from the Mobileye IPO, and partner contributions for joint investments, partially offset by higher 2022 debt repayments. 
+
+Critical Accounting Estimates 
+
+The methods, assumptions, and estimates that we use in applying our accounting policies may require us to apply judgments regarding matters that are inherently uncertain. We consider an accounting policy to be a critical estimate if: (1) we must make assumptions that are uncertain when the judgment is made, and (2) changes in the estimate assumptions, or selection of a different estimate methodology, could have a significant impact on our financial position and the results that we report in our Consolidated Financial Statements. While we believe that our estimates, assumptions, and judgments are reasonable, they are based on information available when the estimate was made. 
+
+Refer to "Note 2: Accounting Policies" within the Notes to Consolidated Financial Statements for further information on our critical accounting estimates, which are as follows, as well as our significant accounting policies: 
+
+&#9642; Inventories &#8212;the transition of manufacturing costs to inventory, net of factory excess capacity costs. Inventory reflected at the lower of cost or net realizable value considering forecasted future demand and market conditions; 
+
+&#9642; Long-lived assets &#8212;the valuation methods and assumptions used in assessing the impairment and evaluation of useful lives of property, plant, and equipment; identified intangibles; and impairment of goodwill, including the determination of asset groupings and the identification and allocation of goodwill to reporting units; and 
+
+&#9642; Loss contingencies &#8212;the estimation of when a loss is probable and reasonably estimable. 
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Non-GAAP Financial Measures 
+
+In addition to disclosing financial results in accordance with US GAAP, this document contains references to the non-GAAP financial measures below. We believe these non-GAAP financial measures provide investors with useful supplemental information about our operating performance, enable comparison of financial trends and results between periods where certain items may vary independent of business performance, and allow for greater transparency with respect to key metrics used by management in operating our business and measuring our performance. These non-GAAP financial measures are used in our performance-based RSUs and our cash bonus plans. 
+
+Our non-GAAP financial measures reflect adjustments based on one or more of the following items, as well as the related income tax effects. Beginning in 2023, income tax effects are calculated using a fixed long-term projected tax rate of 13% across all adjustments. We project this long-term non-GAAP tax rate on an annual basis using a five-year non-GAAP financial projection that excludes the income tax effects of each adjustment. The projected non-GAAP tax rate also considers factors such as our tax structure, our tax positions in various jurisdictions, and key legislation in significant jurisdictions where we operate. This long-term non-GAAP tax rate may be subject to change for a variety of reasons, including the rapidly evolving global tax environment, significant changes in our geographic earnings mix, or changes to our strategy or business operations. Management uses this non-GAAP tax rate in managing internal short- and long-term operating plans and in evaluating our performance; we believe this approach facilitates comparison of our operating results and provides useful evaluation of our current operating performance. Prior-period non-GAAP financial measures have been retroactively adjusted to reflect this updated approach. Our non-GAAP financial measures should not be considered a substitute for, or superior to, financial measures calculated in accordance with US GAAP, and the financial results calculated in accordance with US GAAP and reconciliations from these results should be carefully evaluated. 
+
+##TABLE_START Non-GAAP adjustment or measure Definition Usefulness to management and investors NAND memory business 
+
+We completed the first closing of the divestiture of our NAND memory business to SK hynix on December 29, 2021 and fully deconsolidated our ongoing interests in the NAND OpCo Business in Q1 2022. 
+
+We exclude the impact of our NAND memory business in certain non-GAAP measures. While the second closing of the sale is still pending and subject to closing conditions, we deconsolidated this business in Q1 2022 and management does not view the historical results of the business as a part of our core operations. We believe these adjustments provide investors with a useful view, through the eyes of management, of our core business model and how management currently evaluates core operational performance. In making these adjustments, we have not made any changes to our methods for measuring and calculating revenue or other financial statement amounts. 
+
+Acquisition-related adjustments Amortization of acquisition-related intangible assets consists of amortization of intangible assets such as developed technology, brands, and customer relationships acquired in connection with business combinations. Charges related to the amortization of these intangibles are recorded within both cost of sales and MG&#38;A in our US GAAP financial statements. Amortization charges are recorded over the estimated useful life of the related acquired intangible asset, and thus are generally recorded over multiple years. We exclude amortization charges for our acquisition-related intangible assets for purposes of calculating certain non-GAAP measures because these charges are inconsistent in size and are significantly impacted by the timing and valuation of our acquisitions. These adjustments facilitate a useful evaluation of our current operating performance and comparison to our past operating performance and provide investors with additional means to evaluate cost and expense trends. Share-based compensation Share-based compensation consists of charges related to our employee equity incentive plans. We exclude charges related to share-based compensation for purposes of calculating certain non-GAAP measures because we believe these adjustments provide better comparability to peer company results and because these charges are not viewed by management as part of our core operating performance. We believe these adjustments provide investors with a useful view, through the eyes of management, of our core business model, how management currently evaluates core operational performance, and additional means to evaluate expense trends, including in comparison to other peer companies. ##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+##TABLE_START Non-GAAP adjustment or measure Definition Usefulness to management and investors Patent settlement 
+
+A portion of the charge from our IP settlements represents a catch-up of cumulative amortization that would have been incurred for the right to use the related patents in prior periods. This charge related to prior periods is excluded from our non-GAAP results; amortization related to the right to use the patents in the current and ongoing periods is included. 
+
+We exclude the catch-up charge related to prior periods for purposes of calculating certain non-GAAP measures because this adjustment facilitates comparison to past operating results and provides a useful evaluation of our current operating performance. 
+
+Optane inventory impairment A charge in 2022 as we initiated the wind-down of our Intel Optane memory business. 
+
+We exclude these impairments for purposes of calculating certain non-GAAP measures because these charges do not reflect our current operating performance. This adjustment facilitates a useful evaluation of our current operating performance and comparisons to past operating results. 
+
+Restructuring and other charges Restructuring charges are costs associated with a formal restructuring plan and are primarily related to employee severance and benefit arrangements. Other charges may include periodic goodwill and asset impairments, certain pension charges, and costs associated with restructuring activity. 2023 includes a benefit as a result of developments in the VLSI litigation in Q4 2023, an EC-imposed fine, and a fee related to the termination of our agreement to acquire Tower. 2022 includes a benefit related to the annulled EC fine and 2021 includes a charge related to the VLSI litigation. 
+
+We exclude restructuring and other charges, including any adjustments to charges recorded in prior periods, for purposes of calculating certain non-GAAP measures because these costs do not reflect our core operating performance. These adjustments facilitate a useful evaluation of our core operating performance and comparisons to past operating results and provide investors with additional means to evaluate expense trends. (Gains) losses on equity investments, net (Gains) losses on equity investments, net consists of ongoing mark-to-market adjustments on marketable equity securities, observable price adjustments on non-marketable equity securities, related impairment charges, and the sale of equity investments and other. We exclude these non-operating gains and losses for purposes of calculating certain non-GAAP measures because it provides better comparability between periods. The exclusion reflects how management evaluates the core operations of the business. (Gains) losses from divestiture (Gains) losses are recognized at the close of a divestiture, or over a specified deferral period when deferred consideration is received at the time of closing. Based on our ongoing obligation under the NAND wafer manufacturing and sale agreement entered into in connection with the first closing of the sale of our NAND memory business on December 29, 2021, a portion of the initial closing consideration was deferred and will be recognized between first and second closing. We exclude gains or losses resulting from divestitures for purposes of calculating certain non-GAAP measures because they do not reflect our current operating performance. These adjustments facilitate a useful evaluation of our current operating performance and comparisons to past operating results. Adjusted free cash flow We reference a non-GAAP financial measure of adjusted free cash flow, which is used by management when assessing our sources of liquidity, capital resources, and quality of earnings. Adjusted free cash flow is operating cash flow adjusted for (1) additions to property, plant, and equipment, net of proceeds from capital-related government incentives and partner contributions, (2) payments on finance leases, and (3) proceeds from the McAfee equity sale in 2022. 
+
+This non-GAAP financial measure is helpful in understanding our capital requirements and sources of liquidity by providing an additional means to evaluate the cash flow trends of our business. Since the 2017 divestiture, McAfee equity distributions and sales contributed to prior operating and free cash flow, and while the McAfee equity sale in Q1 2022 would have typically been excluded from adjusted free cash flow as an equity sale, we believe including the sale proceeds in adjusted free cash flow facilitate a better, more consistent comparison to current and past presentations of liquidity. 
+
+Total cash and investments Total cash and investments is used by management when assessing our sources of liquidity, which include cash and cash equivalents, short-term investments, and loans receivable and other. This non-GAAP measure is helpful in understanding our capital resources and liquidity position. ##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+Following are the reconciliations of our most comparable US GAAP measures to our non-GAAP measures presented: 
+
+##TABLE_START Years Ended (In Millions, Except Per Share Amounts) Dec 30, 2023 Dec 31, 2022 Dec 25, 2021 Net revenue $ 54,228 &#160; $ 63,054 &#160; $ 79,024 &#160; NAND memory business &#8212; &#8212; (4,306) Non-GAAP net revenue $ 54,228 &#160; $ 63,054 &#160; $ 74,718 &#160; Gross margin percentage 40.0 &#160; % 42.6 &#160; % 55.4 &#160; % Acquisition-related adjustments 2.3 % 2.1 % 1.6 % Share-based compensation 1.3 % 1.0 % 0.4 % Patent settlement &#8212; % 0.3 % &#8212; % Optane inventory impairment &#8212; % 1.1 % &#8212; % NAND memory business &#8212; % &#8212; % 0.6 % Non-GAAP gross margin percentage 43.6 &#160; % 47.3 &#160; % 58.1 &#160; % Earnings per share attributable to Intel&#8212;diluted $ 0.40 &#160; $ 1.94 &#160; $ 4.86 &#160; Acquisition-related adjustments 0.33 0.37 0.36 Share-based compensation 0.77 0.76 0.50 Patent settlement &#8212; 0.05 &#8212; Optane inventory impairment &#8212; 0.18 &#8212; Restructuring and other charges (0.01) &#8212; 0.65 (Gains) losses on equity investments, net (0.01) (1.04) (0.67) (Gains) losses from divestiture (0.04) (0.28) &#8212; NAND memory business &#8212; &#8212; (0.33) Adjustments attributable to non-controlling interest (0.02) &#8212; &#8212; Income tax effects (0.37) (0.31) (0.32) Non-GAAP earnings per share attributable to Intel&#8212;diluted $ 1.05 &#160; $ 1.67 &#160; $ 5.05 &#160; ##TABLE_END
+
+##TABLE_START Years Ended (In Millions) Dec 30, 2023 Dec 31, 2022 Dec 25, 2021 Dec 26, 2020 Dec 28, 2019 Net cash provided by operating activities $ 11,471 &#160; $ 15,433 &#160; $ 29,456 &#160; $ 35,864 &#160; $ 32,618 &#160; Net additions to property, plant, and equipment (23,228) (23,724) (18,567) (14,086) (15,948) Payments on finance leases (96) (345) &#8212; &#8212; &#8212; Sale of equity investment &#8212; 4,561 &#8212; &#8212; &#8212; Adjusted free cash flow $ (11,853) $ (4,075) $ 10,889 &#160; $ 21,778 &#160; $ 16,670 &#160; Net cash used for investing activities $ (24,041) $ (10,231) $ (24,283) $ (21,351) $ (13,314) Net cash provided by (used for) financing activities $ 8,505 &#160; $ 1,115 &#160; $ (6,211) $ (12,842) $ (18,129) ##TABLE_END
+
+##TABLE_START 
+
+MD&#38;A 
+
+##TABLE_END
+
+##TABLE_START 
+
+Risk Factors and Other Key Information 
+
+##TABLE_END
+

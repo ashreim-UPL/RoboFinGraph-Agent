@@ -19,8 +19,7 @@ from prompts.summarization_intsruction import summarization_prompt_library
 from prompts.report_summaries import report_section_specs
 from functools import partial
 from agents.state_types import NodeState, AgentState
-from agents.state_types import TOOL_MAP
-
+from agents.state_types import TOOL_MAP, TOOL_IN_MAP
 
 
 logger = get_logger()
@@ -61,6 +60,83 @@ def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
         get_logger().error("get_sec_metadata_node failed", exc_info=True)
         return {}
 
+# ------------------     Indian DATA COLLECTION NODE
+def collect_indian_financial_data(state: AgentState) -> Dict[str, List[str]]:
+    """
+    Comprehensive tool to collect all required US financial data.
+    Iterates through a predefined list of US-specific data collection tasks,
+    prepares arguments, and calls the respective tools.
+    Returns a dictionary of collected files and any errors encountered.
+    """
+
+    work_dir = state.work_dir
+    company_name = state.company_details["company_name"]  
+    company_ticker = state.company_details["fmp_ticker"]
+    filing_date = state.filing_date
+    fyear = state.year
+    company_details = state.company_details
+    
+   
+    collected_files = []
+    errors = []
+
+    base_raw_data_dir = os.path.join(work_dir, "raw_data")
+    os.makedirs(base_raw_data_dir, exist_ok=True)
+
+    for task_def in state.get_data_collection_tasks():
+        print(task_def)
+    
+        tool_name = task_def["task"]
+        output_filename = task_def["file"]
+        out_file_path = os.path.join(output_filename)
+        
+        if tool_name not in TOOL_IN_MAP:     
+            print(tool_name)
+            input("Tool not found")     
+            msg = f"Tool '{tool_name}' not found in TOOL_IN_MAP. Skipping."
+            logger.warning(msg)
+            errors.append(msg)
+            continue
+
+        tool_fn = TOOL_IN_MAP[tool_name]
+        try:
+            os.makedirs(os.path.dirname(out_file_path), exist_ok=True)
+            sig = inspect.signature(tool_fn)
+            kwargs = {}
+            # Prepare arguments based on the tool's signature
+            for p_name, param in sig.parameters.items():
+                if p_name == "company_ticker":
+                    kwargs[p_name] = company_ticker
+                elif p_name == "ticker": # Some FMP tools might use 'ticker'
+                    kwargs[p_name] = company_details.get("fmp_ticker", company_ticker)
+                elif p_name == "sec_ticker":
+                    kwargs[p_name] = company_details.get("sec_ticker", company_ticker)
+                elif p_name == "sec_report_address":
+                    kwargs[p_name] = state.sec_report_address
+                elif p_name == "fyear":
+                    kwargs[p_name] = int(fyear)
+                elif p_name == "filing_date":
+                    kwargs[p_name] = filing_date
+                elif p_name == "save_path":
+                    kwargs[p_name] = out_file_path
+
+                elif p_name in ["work_dir", "company_details", "region"]: # Pass directly if needed
+                    kwargs[p_name] = locals().get(p_name) # Access local variables
+                elif param.default is inspect.Parameter.empty and p_name not in kwargs:
+                    # If a required parameter is missing and no default, raise error
+                    raise ValueError(f"Missing required argument for tool '{tool_name}': '{p_name}'")
+
+            logger.info(f"Calling tool: {tool_name} with kwargs: {kwargs}")
+            tool_fn(**kwargs) # Execute the individual tool
+            collected_files.append(out_file_path)
+
+        except Exception as e:
+            msg = f"Error running tool '{tool_name}' for {company_name} ({fyear}): {e}"
+            logger.error(msg, exc_info=True)
+            errors.append(msg)
+
+    return {"collected_files": collected_files, "errors": errors}
+# ------------------     US DATA COLLECTION NODE
 def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
     """
     Comprehensive tool to collect all required US financial data.
