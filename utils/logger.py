@@ -23,6 +23,8 @@ _logger.addHandler(_file_handler)
 import sys
 _stream_handler = logging.StreamHandler(sys.stdout)
 _stream_handler.setFormatter(_log_formatter)
+_stream_handler.setStream(sys.stdout)
+_stream_handler.encoding = 'utf-8' 
 _logger.addHandler(_stream_handler)
 
 # === Logger Access API ===

@@ -164,18 +164,19 @@ def make_api_request2(
         elif "auth_header" in config:
             headers[config["auth_header"]] = config["api_key"]
 
-        try:
+        for attempt in range(retries):
+            try:
                 with force_ipv4_context():
                     response = requests.get(full_url, params=payload, headers=headers, timeout=20)
                 response.raise_for_status()
                 return response.json()
-        except requests.exceptions.RequestException as e:
-            if attempt < retries - 1:
-                print(f"API request failed (attempt {attempt+1}/{retries}): {e}. Retrying in {delay} seconds...")
-                time.sleep(delay)
-            else:
-                print(f"API request failed after {retries} attempts: {e}")
-                return {"error": str(e), "payload": payload}
+            except requests.exceptions.RequestException as e:
+                if attempt < retries - 1:
+                    print(f"API request failed (attempt {attempt+1}/{retries}): {e}. Retrying in {delay} seconds...")
+                    time.sleep(delay)
+                else:
+                    print(f"API request failed after {retries} attempts: {e}")
+                    return {"error": str(e), "payload": payload}
 
     elif api_name == "LocalRAG":
         if "auth_param" in config:

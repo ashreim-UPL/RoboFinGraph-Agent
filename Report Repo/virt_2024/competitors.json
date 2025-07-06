@@ -1,0 +1,68 @@
+[
+  {
+    "symbol": "EVR",
+    "companyName": "Evercore Inc.",
+    "price": 270.21,
+    "mktCap": 10446156474
+  },
+  {
+    "symbol": "HLI",
+    "companyName": "Houlihan Lokey, Inc.",
+    "price": 179.29,
+    "mktCap": 12516407018
+  },
+  {
+    "symbol": "JEF",
+    "companyName": "Jefferies Financial Group Inc.",
+    "price": 54.67,
+    "mktCap": 11276015520
+  },
+  {
+    "symbol": "LAZ",
+    "companyName": "Lazard Ltd",
+    "price": 47.895,
+    "mktCap": 4509189723
+  },
+  {
+    "symbol": "LPLA",
+    "companyName": "LPL Financial Holdings Inc.",
+    "price": 373.165,
+    "mktCap": 29844132091
+  },
+  {
+    "symbol": "MC",
+    "companyName": "Moelis & Company",
+    "price": 62.39,
+    "mktCap": 4628302326
+  },
+  {
+    "symbol": "PIPR",
+    "companyName": "Piper Sandler Companies",
+    "price": 279.01,
+    "mktCap": 4954296867
+  },
+  {
+    "symbol": "PJT",
+    "companyName": "PJT Partners Inc.",
+    "price": 164,
+    "mktCap": 4006618400
+  },
+  {
+    "symbol": "PWP",
+    "companyName": "Perella Weinberg Partners",
+    "price": 19.41,
+    "mktCap": 1207664579
+  },
+  {
+    "symbol": "RJF",
+    "companyName": "Raymond James Financial, Inc.",
+    "price": 152.9225,
+    "mktCap": 30852878988
+  },
+  {
+    "symbol": "TW",
+    "companyName": "Tradeweb Markets Inc.",
+    "price": 145.76,
+    "mktCap": 34463947131
+  }
+]

@@ -3,8 +3,10 @@ import json
 from pathlib import Path
 from typing import Dict, Any, List, Tuple
 from functools import wraps
-from datetime import datetime
+from datetime import datetime, timezone
 from tabulate import tabulate
+from collections import defaultdict
+import re
 import sys
 from utils.logger import get_logger, log_event
 from langchain.schema import HumanMessage
@@ -22,88 +24,107 @@ from tools.report_writer import ReportLabUtils
 
 
 # === Pipeline Metrics Recorder ===
-def _record_metrics(agent_state: AgentState, node_key: str) -> None:
+def _record_metrics(agent_state: AgentState, node_key: str, start_time, end_time) -> None:
     """
     Append metrics from agent_state directly to memory['pipeline_data'].
     """
     metrics = {
         "node": node_key,
         "status": getattr(agent_state, "status", "unknown"),
-        "duration": getattr(agent_state, "duration", None),
+        "start_time": start_time.isoformat(),
+        "end_time": end_time.isoformat(),
+        "duration": (end_time - start_time).total_seconds(),
         "cost_llm": getattr(agent_state, "cost_llm", 0.0),
         "tokens_sent": getattr(agent_state, "tokens", {}).sent if hasattr(agent_state, "tokens") else 0,
         "tokens_generated": getattr(agent_state, "tokens", {}).generated if hasattr(agent_state, "tokens") else 0,
         "tools_used": list(getattr(agent_state, "tools_used", set())),
         "errors": list(getattr(agent_state, "errors", [])),
         "files_created": list(getattr(agent_state, "files_created", [])),
-        "files_created_count": len(getattr(agent_state, "files_created", []))
+        "files_created_count": len(getattr(agent_state, "files_created", [])),
+        # Optional extras:
+        "agent_name": getattr(agent_state, "agent_name", None),
+        "models_used": agent_state.memory.get("models_used", []),
+        # Add summaries/hashes of input/output if desired
     }
-    # Ensure the pipeline_data list exists
-    pipeline = agent_state.memory.setdefault("pipeline_data", [])
-    pipeline.append(metrics)
+    agent_state.memory.setdefault("pipeline_data", []).append(metrics)
+
 
 # === Decorator for Node Functions ===
-import json
 
 def record_node(node_key: str):
-    """
-    Decorator to wrap graph node functions: sets status, logs start/end events,
-    captures timing and errors, and records metrics.
-    """
     def decorator(fn):
         @wraps(fn)
         def wrapper(agent_state: AgentState, *args, **kwargs):
-            start_time = datetime.now()
+            node_start = datetime.now(timezone.utc)
 
-            # Emit start event for front-end
-            start_event = {
-                "event_type": "node_start",
-                "data": {"node": node_key, "timestamp": start_time.isoformat()}
+            # --- TRACK NODE SEQUENCE ---
+            pipeline_nodes = agent_state.memory.setdefault("pipeline_nodes", [])
+            if not pipeline_nodes or pipeline_nodes[-1] != node_key:
+                pipeline_nodes.append(node_key)
+
+            record = {
+                "current_node": node_key,  
+                "status": NodeStatus.RUNNING,
+                "start_time": node_start.isoformat(),
+                "end_time": None,
+                "duration": None,
+                "cost_llm": 0.0,
+                "tokens_sent": 0,
+                "tokens_generated": 0,
+                "tools_used": [],
+                "errors": [],
+                "files_read": [],
+                "files_created": [],
+                "custom_metrics": {},
             }
-            sys.stdout.write(json.dumps(start_event) + "\n")
-            sys.stdout.flush()
+            pipeline = agent_state.memory.setdefault("pipeline_data", [])
+            # Set pipeline_start_time ONLY ONCE
+            if not agent_state.memory.get("pipeline_start_time"):
+                agent_state.memory["pipeline_start_time"] = node_start.isoformat()
 
-            # Log start internally
-            log_event("node_start", {"node": node_key, "timestamp": start_time.isoformat()})
+            sys.stdout.write(json.dumps({
+                "event_type": "node_start",
+                "data": {"node": node_key, "timestamp": record["start_time"]}
+            }) + "\n")
+            sys.stdout.flush()
 
             try:
-                # Execute node function
+                setattr(agent_state, "_current_node_record", record)
                 result = fn(agent_state, *args, **kwargs)
+                record["status"] = NodeStatus.SUCCESS
             except Exception as e:
-                # Optional: capture to error_log if needed
-                agent_state.error_log.append(str(e))
+                record["status"] = NodeStatus.ERROR
+                record["errors"].append(str(e))
+                agent_state.error_log.append(f"{node_key}: {e}")
                 raise
+            finally:
+                node_end = datetime.now(timezone.utc)
+                record["end_time"] = node_end.isoformat()
+                record["duration"] = (node_end - node_start).total_seconds()
 
-            end_time = datetime.now()
-            agent_state.end_time = end_time
-            agent_state.duration = (end_time - start_time).total_seconds()
+                # Update pipeline_end_time each node
+                agent_state.memory["pipeline_end_time"] = node_end.isoformat()
 
-            # Record metrics in memory
-            _record_metrics(agent_state, node_key)
-            # Emit end event
-            metrics = agent_state.memory.get("pipeline_data", [])[-1]
-            pipeline = agent_state.memory.setdefault("pipeline_data", [])
-            pipeline.append(metrics)
+                pipeline.append(record)
+                sys.stdout.write(json.dumps({
+                    "event_type": "node_end",
+                    "data": record
+                }) + "\n")
+                sys.stdout.flush()
 
-            # Emit end event
-            end_event = {"event_type": "node_end", "data": metrics}
-            sys.stdout.write(json.dumps(end_event) + "\n")
-            sys.stdout.flush()
-
-            # Log end internally
-            log_event("node_end", metrics)
-            return result 
+            return result
         return wrapper
     return decorator
 
 # === Graph Node Implementations ===
 
-@record_node("resolve_company")
+@record_node("Get Company Details")
 def resolve_company_node(agent_state: AgentState) -> AgentState: 
     """
     Resolves company details using the specialized 'process_company_data' tool (LLM-only).
     This node updates agent_state with comprehensive company_details directly from the LLM.
     """
+    model_start = datetime.now(timezone.utc)
     # 1. Get the company query from AgentState.
     company_query = agent_state.company 
     year  = agent_state.year
@@ -137,6 +158,21 @@ def resolve_company_node(agent_state: AgentState) -> AgentState:
         official = data.get("official_name") if data else None
         if official and official.lower() != company_query.lower():
             agent_state.company = official
+
+        model_end = datetime.now(timezone.utc)
+        model_duration = (model_end - model_start).total_seconds()
+        agent_state.memory.setdefault("models_used", []).append({
+            "agent": "company search",
+            "provider": "OpenAI",
+            "model": "gpt-4o-search-preview-2025-03-11",
+            "tokens_sent": result.get("tokens_sent", 0),
+            "tokens_generated": result.get("tokens_generated", 0),
+            "cost_llm": result.get("cost_llm", 0.0),
+            "model_start_time": model_start.isoformat(),
+            "model_end_time": model_end.isoformat(),
+            "model_duration": model_duration, 
+        })
+
     except Exception as e:
         error_msg = f"resolve_company_node error: {e}"
         agent_state.error_log.append(error_msg) 
@@ -145,8 +181,8 @@ def resolve_company_node(agent_state: AgentState) -> AgentState:
         agent_state.accuracy_score = 0.0
     return agent_state
 
-
-def llm_decision_node(agent_state: AgentState) -> AgentState:
+@record_node("Check Region")
+def region_decision_node(agent_state: AgentState) -> AgentState:
     """
     Determine data‐collection branch based on company region (no LLM).
     Sets both agent_state.llm_decision and agent_state.memory['branch'].
@@ -174,24 +210,13 @@ def llm_decision_node(agent_state: AgentState) -> AgentState:
             branch = "end"
 
     # 3) Persist both the “decision” and the explicit branch flag
-    agent_state.llm_decision           = branch
+    agent_state.llm_decision       = branch
     agent_state.memory["branch"]      = branch
 
     return agent_state
 
-# not need probbaly.....
-def data_collection_switch_node(agent_state: AgentState) -> AgentState:
-    """Route pipeline based on LLM decision: 'us', 'india', or 'end'."""
-    decision = (agent_state.llm_decision or "").strip().lower()
-    if decision in ("us", "continue"):  branch = "us"
-    elif decision == "india":             branch = "india"
-    elif decision == "end":               branch = "end"
-    else:                                  branch = "us"
-    agent_state.memory["branch"] = branch
-    return agent_state
-
-
-def data_collection_us_node(state: AgentState) -> Dict[str, Any]:
+@record_node("US Data Collection")
+def data_collection_us_node(agent_state: AgentState) -> Dict[str, Any]:
     """
     High-level node to orchestrate US-specific data collection using a dedicated tool.
     """
@@ -201,28 +226,28 @@ def data_collection_us_node(state: AgentState) -> Dict[str, Any]:
         # Ensure these match the parameters expected by collect_us_financial_data
         
         # Determine the primary ticker to pass to the collection tool
-        primary_ticker = state.company_details.get("sec_ticker") or \
-                         state.company_details.get("fmp_ticker") or \
-                         state.company_details.get("yfinance_ticker") or \
-                         state.company # Fallback to generic company name
+        primary_ticker = agent_state.company_details.get("sec_ticker") or \
+                         agent_state.company_details.get("fmp_ticker") or \
+                         agent_state.company_details.get("yfinance_ticker") or \
+                         agent_state.company # Fallback to generic company name
 
         if not primary_ticker:
             raise ValueError("Could not determine a valid ticker for data collection.")
             
         # Get filing_date, with a robust fallback
-        filing_date_val = getattr(state, "filing_date", None)
+        filing_date_val = getattr(agent_state, "filing_date", None)
         if not filing_date_val:
-            filing_date_val = f"{state.year}-12-31" # Default to end of year if not set
+            filing_date_val = f"{agent_state.year}-12-31" # Default to end of year if not set
     
         # Call the comprehensive data collection tool
-        collection_results = collect_us_financial_data(state)
+        collection_results = collect_us_financial_data(agent_state)
   
         # Update the AgentState based on the results from the tool
         # Ensure raw_data_files and error_log are lists in AgentState
-        updated_raw_data_files = list(state.raw_data_files) + collection_results["collected_files"]
-        updated_error_log = list(state.error_log) + collection_results["errors"]
+        updated_raw_data_files = list(agent_state.raw_data_files) + collection_results["collected_files"]
+        updated_error_log = list(agent_state.error_log) + collection_results["errors"]
 
-        messages = list(state.messages) # Start with existing messages
+        messages = list(agent_state.messages) # Start with existing messages
         for f in collection_results["collected_files"]:
             messages.append(HumanMessage(content=f"Successfully collected: {os.path.basename(f)}"))
         for err in collection_results["errors"]:
@@ -231,6 +256,19 @@ def data_collection_us_node(state: AgentState) -> Dict[str, Any]:
         errors_list = collection_results.get("errors", []) # Safely get 'errors', default to empty list if not present
         status = NodeStatus.COMPLETED.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
 
+        agent_state.llm_provider = "NA"
+        agent_state.llm_model = "NA"
+
+        # === LOG LLM/AGENT USAGE ===
+        agent_state.memory.setdefault("models_used", []).append({
+            "agent": "US collection",
+            "provider": agent_state.llm_provider,
+            "model": agent_state.llm_model,
+            "tokens_sent": agent_state.tokens_sent,
+            "tokens_generated": agent_state.tokens_generated,
+            "cost_llm": agent_state.cost_llm,
+        })
+        
         # Return the updated state as a dictionary
         return {
             "raw_data_files": updated_raw_data_files,
@@ -241,11 +279,12 @@ def data_collection_us_node(state: AgentState) -> Dict[str, Any]:
 
     except Exception as e:
         return {
-            "error_log": state.error_log + [f"Critical error in Data Collection US Node: {e}"],
+            "error_log": agent_state.error_log + [f"Critical error in Data Collection US Node: {e}"],
             "status": NodeStatus.ERROR.value
         }
 
-def data_collection_indian_node(state: AgentState) -> AgentState:
+@record_node("India Data Collection")
+def data_collection_indian_node(agent_state: AgentState) -> AgentState:
     """
     Invoke all data‐collection tools (India); currently identical to US.
     """
@@ -254,28 +293,28 @@ def data_collection_indian_node(state: AgentState) -> AgentState:
         # Ensure these match the parameters expected by collect_Indian_financial_data
         
         # Determine the primary ticker to pass to the collection tool
-        primary_ticker = state.company_details.get("sec_ticker") or \
-                         state.company_details.get("fmp_ticker") or \
-                         state.company_details.get("yfinance_ticker") or \
-                         state.company # Fallback to generic company name
+        primary_ticker = agent_state.company_details.get("sec_ticker") or \
+                         agent_state.company_details.get("fmp_ticker") or \
+                         agent_state.company_details.get("yfinance_ticker") or \
+                         agent_state.company # Fallback to generic company name
 
         if not primary_ticker:
             raise ValueError("Could not determine a valid ticker for data collection.")
             
         # Get filing_date, with a robust fallback
-        filing_date_val = getattr(state, "filing_date", None)
+        filing_date_val = getattr(agent_state, "filing_date", None)
         if not filing_date_val:
-            filing_date_val = f"{state.year}-12-31" # Default to end of year if not set
+            filing_date_val = f"{agent_state.year}-12-31" # Default to end of year if not set
     
         # Call the comprehensive data collection tool
-        collection_results = collect_indian_financial_data(state)
+        collection_results = collect_indian_financial_data(agent_state)
   
         # Update the AgentState based on the results from the tool
         # Ensure raw_data_files and error_log are lists in AgentState
-        updated_raw_data_files = list(state.raw_data_files) + collection_results["collected_files"]
-        updated_error_log = list(state.error_log) + collection_results["errors"]
+        updated_raw_data_files = list(agent_state.raw_data_files) + collection_results["collected_files"]
+        updated_error_log = list(agent_state.error_log) + collection_results["errors"]
 
-        messages = list(state.messages) # Start with existing messages
+        messages = list(agent_state.messages) # Start with existing messages
         for f in collection_results["collected_files"]:
             messages.append(HumanMessage(content=f"Successfully collected: {os.path.basename(f)}"))
         for err in collection_results["errors"]:
@@ -284,6 +323,19 @@ def data_collection_indian_node(state: AgentState) -> AgentState:
         errors_list = collection_results.get("errors", []) # Safely get 'errors', default to empty list if not present
         status = NodeStatus.COMPLETED.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
 
+        agent_state.llm_provider = "NA"
+        agent_state.llm_model = "NA"
+
+        # === LOG LLM/AGENT USAGE ===
+        agent_state.memory.setdefault("models_used", []).append({
+            "agent": "IN collection",
+            "provider": agent_state.llm_provider,
+            "model": agent_state.llm_model,
+            "tokens_sent": agent_state.tokens_sent,
+            "tokens_generated": agent_state.tokens_generated,
+            "cost_llm": agent_state.cost_llm,
+        })
+    
         # Return the updated state as a dictionary
         return {
             "raw_data_files": updated_raw_data_files,
@@ -294,11 +346,11 @@ def data_collection_indian_node(state: AgentState) -> AgentState:
 
     except Exception as e:
         return {
-            "error_log": state.error_log + [f"Critical error in Data Collection Indian Node: {e}"],
+            "error_log": agent_state.error_log + [f"Critical error in Data Collection Indian Node: {e}"],
             "status": NodeStatus.ERROR.value
         }
 
-
+@record_node("Validate Collected Data")
 def validate_collected_data_node(agent_state: AgentState) -> AgentState:
     """
     Verify each expected raw file exists and is valid JSON via our shared tool.
@@ -339,6 +391,19 @@ def validate_collected_data_node(agent_state: AgentState) -> AgentState:
         # tell the orchestrator to stop
         agent_state.memory["branch"] = "end"
 
+        agent_state.llm_provider = "NA"
+        agent_state.llm_model = "NA"
+
+        # === LOG LLM/AGENT USAGE ===
+        agent_state.memory.setdefault("models_used", []).append({
+            "agent": "collection validation",
+            "provider": agent_state.llm_provider,
+            "model": agent_state.llm_model,
+            "tokens_sent": agent_state.tokens_sent,
+            "tokens_generated": agent_state.tokens_generated,
+            "cost_llm": agent_state.cost_llm,
+        })
+
     return agent_state
 
 
@@ -346,6 +411,7 @@ def synchronize_data_node(agent_state: AgentState) -> AgentState:
     agent_state.memory["normalized_data"] = agent_state.memory.get("raw_data", {})
     return agent_state
 
+@record_node("Summarize Data")
 def summarization_node(agent_state: AgentState) -> AgentState:
     """
     1) For each required summary spec:
@@ -358,7 +424,7 @@ def summarization_node(agent_state: AgentState) -> AgentState:
     """
     executor = LangGraphLLMExecutor("summarizer")
     executor.agent_state = agent_state
-
+   
     required = [
         "analyze_income_stmt",
         "analyze_balance_sheet",
@@ -408,6 +474,19 @@ def summarization_node(agent_state: AgentState) -> AgentState:
         )
         text = resp.content.strip()
 
+        # IF NOde is LLM we don't need this here- testing
+        """agent_state.llm_provider = str(executor.provider)
+        agent_state.llm_model = str(executor.model_name)
+        # === LOG LLM/AGENT USAGE ===
+        agent_state.memory.setdefault("models_used", []).append({
+            "agent": "summarization",
+            "provider": agent_state.llm_provider,
+            "model": agent_state.llm_model,
+            "tokens_sent": agent_state.tokens_sent,
+            "tokens_generated": agent_state.tokens_generated,
+            "cost_llm": agent_state.cost_llm,
+        })"""
+
         # --- write out to preliminary_dir ---
         out_path = prelim_dir / f"{key}.txt"
         out_path.write_text(text, encoding="utf-8")
@@ -421,6 +500,7 @@ def summarization_node(agent_state: AgentState) -> AgentState:
 
     return agent_state
 
+@record_node("Validate Summarized Data")
 def validate_summarized_data_node(agent_state: AgentState) -> AgentState:
     """
     Check that each section summary exists and meets basic criteria.
@@ -446,12 +526,22 @@ def validate_summarized_data_node(agent_state: AgentState) -> AgentState:
     if overall < 1.0:
         agent_state.memory["branch"] = "end"
 
-    # 6) Attach detailed scores for observability
-    #node_state.custom_metrics["section_scores"]     = result.get("section_scores", {})
-    #node_state.custom_metrics["availability_score"] = result.get("availability_score", 0.0)
+    agent_state.llm_provider = "None"
+    agent_state.llm_model = "None"
+
+    # === LOG LLM/AGENT USAGE ===
+    agent_state.memory.setdefault("models_used", []).append({
+        "agent": "summarization validation",
+        "provider": agent_state.llm_provider,
+        "model": agent_state.llm_model,
+        "tokens_sent": agent_state.tokens_sent,
+        "tokens_generated": agent_state.tokens_generated,
+        "cost_llm": agent_state.cost_llm,
+    })
 
     return agent_state
 
+@record_node("Concept Analysis")
 def concept_analysis_node(agent_state: AgentState) -> AgentState:
     """
     Generate conceptual insights for each summary section using our shared helper.
@@ -474,9 +564,23 @@ def concept_analysis_node(agent_state: AgentState) -> AgentState:
             p.write_text(insights[key], encoding="utf-8")
             agent_state.summary_files.append(str(p))
 
+    # IF NOde is LLM we don't need this here- testing
+    """agent_state.llm_provider = str(executor.provider)
+    agent_state.llm_model = str(executor.model_name)
+
+    # === LOG LLM/AGENT USAGE ===
+    agent_state.memory.setdefault("models_used", []).append({
+        "agent": "analysis",
+        "provider": agent_state.llm_provider,
+        "model": agent_state.llm_model,
+        "tokens_sent": agent_state.tokens_sent,
+        "tokens_generated": agent_state.tokens_generated,
+        "cost_llm": agent_state.cost_llm,
+    })"""
+
     return agent_state
 
-
+@record_node("Validate Conceptual Insights")
 def validate_analyzed_data_node(agent_state: AgentState) -> AgentState:
     """
     Validate each conceptual insight section:
@@ -502,13 +606,22 @@ def validate_analyzed_data_node(agent_state: AgentState) -> AgentState:
     if overall < 1.0:
         agent_state.memory["branch"] = "end"
 
-    # 6) Attach detailed metrics for observability
-    #node_state.custom_metrics["insight_section_scores"] = result.get("section_scores", {})
-    #node_state.custom_metrics["insight_availability"]   = result.get("availability_score", 0.0)
+    agent_state.llm_provider = "None"
+    agent_state.llm_model = "None"
+
+    # === LOG LLM/AGENT USAGE ===
+    agent_state.memory.setdefault("models_used", []).append({
+        "agent": "analysis validation",
+        "provider": agent_state.llm_provider,
+        "model": agent_state.llm_model,
+        "tokens_sent": agent_state.tokens_sent,
+        "tokens_generated": agent_state.tokens_generated,
+        "cost_llm": agent_state.cost_llm,
+    })
 
     return agent_state
 
-
+@record_node("Generate Annual Report")
 def generate_report_node(agent_state: AgentState) -> AgentState:
     """
     Build out individual report‐section text files from the in-memory summaries,
@@ -537,6 +650,12 @@ def generate_report_node(agent_state: AgentState) -> AgentState:
     # 4) Pull in your LLM‐generated section texts & appendix summaries
     sections_map = agent_state.memory.get("concepts", {})
 
+    # Compose the text for LLM evaluation (flatten all section texts)
+    full_report_text = "\n\n".join(
+        [f"## {k}\n{v}" for k, v in sections_map.items()]
+    )
+    agent_state.memory["generated_report_text"] = full_report_text
+    
     # ←—— NEW: read every file in summaries_dir into a dict of filename→text
     appendix: Dict[str,str] = {}
     for f in Path(agent_state.summaries_dir).iterdir():
@@ -559,86 +678,152 @@ def generate_report_node(agent_state: AgentState) -> AgentState:
     agent_state.memory["final_report_path"]   = str(pdf_path)
     agent_state.memory["final_report_status"] = result
 
+    agent_state.llm_provider = "None"
+    agent_state.llm_model = "None"
+
+    # === LOG LLM/AGENT USAGE ===
+    agent_state.memory.setdefault("models_used", []).append({
+        "agent": "report generation",
+        "provider": agent_state.llm_provider,
+        "model": agent_state.llm_model,
+        "tokens_sent": agent_state.tokens_sent,
+        "tokens_generated": agent_state.tokens_generated,
+        "cost_llm": agent_state.cost_llm,
+    })
     return agent_state
 
-def parse_scores(response_text):
+def parse_icaif_scores(response: str) -> dict:
     """
-    Parse LLM response into a dictionary of ICAIF scores.
-    Expected format in response_text:
-    [Accuracy] Score: X
-    [Logicality] Score: Y
-    [Storytelling] Score: Z
+    Extracts ICAIF scores from LLM output, supporting both section and table formats.
+    Returns a dict with keys: 'accuracy', 'logicality', 'storytelling'.
     """
     scores = {}
-    for line in response_text.splitlines():
-        if "Accuracy" in line:
-            try:
-                scores["Accuracy"] = float(line.split(":")[1].strip())
-            except:
-                continue
-        elif "Logicality" in line:
-            try:
-                scores["Logicality"] = float(line.split(":")[1].strip())
-            except:
-                continue
-        elif "Storytelling" in line:
-            try:
-                scores["Storytelling"] = float(line.split(":")[1].strip())
-            except:
-                continue
+
+    # 1. Try to find headers like: ## 1. Accuracy: **9/10**
+    patterns = {
+        "accuracy": r"Accuracy\W{0,10}(\d{1,2})\s*/\s*10",
+        "logicality": r"Logicality\W{0,10}(\d{1,2})\s*/\s*10",
+        "storytelling": r"Storytelling\W{0,10}(\d{1,2})\s*/\s*10"
+    }
+
+    # 2. Table format: | Accuracy | 9 | Justification |
+    table_patterns = {
+        "accuracy": r"\|\s*Accuracy\s*\|\s*(\d{1,2})\s*\|",
+        "logicality": r"\|\s*Logicality\s*\|\s*(\d{1,2})\s*\|",
+        "storytelling": r"\|\s*Storytelling\s*\|\s*(\d{1,2})\s*\|"
+    }
+
+    # First, try section header pattern
+    for key, pat in patterns.items():
+        m = re.search(pat, response, re.IGNORECASE)
+        if m:
+            scores[key] = int(m.group(1))
+        else:
+            # Try table format if section not found
+            m2 = re.search(table_patterns[key], response, re.IGNORECASE)
+            scores[key] = int(m2.group(1)) if m2 else None
+
     return scores
 
-def run_evaluation_node(agent_state: AgentState) -> AgentState:
+def run_evaluation_node(agent_state: "AgentState") -> "AgentState":
     """
     Perform final pipeline evaluation: quantitative KPIs + qualitative LLM audit.
     Enhanced to include ICAIF scoring and a pipeline stats matrix.
     """
-    # 1) instantiate and attach the audit-model executor
+
+    # === 1) Instantiate the audit LLM executor ===
     audit_executor = LangGraphLLMExecutor("audit")
     audit_executor.agent_state = agent_state
 
-    # 2) delegate to utility, passing in the executor
-    result = evaluate_pipeline(agent_state, audit_executor)
-
-    # 3) report evaluation (ICAIF)
+    # === 2) ICAIF LLM-based report scoring ===
     report_text = agent_state.memory.get("generated_report_text", "")
+
     icaif_prompt = (
         "You are a financial analyst. Evaluate the following report on ICAIF criteria.\n"
         "[Accuracy], [Logicality], [Storytelling] — provide scores 0-10:\n\n"
         f"{report_text}"
     )
-
     messages = [HumanMessage(content=icaif_prompt)]
-    response_msg = audit_executor.llm(messages)
-    icaif_response = response_msg.content
 
-    icaif_scores = parse_scores(icaif_response)
+    # Save ICAIF prompt for debug
+    work_dir = getattr(agent_state, "work_dir", ".")
+    os.makedirs(work_dir, exist_ok=True)
+    prompt_path = os.path.join(work_dir, "icaif_prompt_debug.txt")
+    with open(prompt_path, "w", encoding="utf-8") as f:
+        f.write(icaif_prompt)
 
-    # 4) pipeline matrix from agent_stats
-    stats = getattr(agent_state, "agent_stats", {})
+    # Run the LLM for ICAIF
+    icaif_response_msg = audit_executor.llm(messages)
+    icaif_response = getattr(icaif_response_msg, "content", str(icaif_response_msg))
+
+    # Save ICAIF LLM response for debug
+    response_path = os.path.join(work_dir, "icaif_response_debug.txt")
+    with open(response_path, "w", encoding="utf-8") as f:
+        f.write(icaif_response)
+
+    # Parse ICAIF scores
+    icaif_scores = parse_icaif_scores(icaif_response)
+    # Save parsed scores for debug
+    scores_path = os.path.join(work_dir, "icaif_scores_debug.json")
+    with open(scores_path, "w", encoding="utf-8") as f:
+        json.dump(icaif_scores, f, indent=2, ensure_ascii=False)
+
+    # === 3) Quantitative & Qualitative evaluation (pass ICAIF scores to KPIs) ===
+    result = evaluate_pipeline(agent_state, icaif_scores=icaif_scores)
+    pipeline_steps = result.get("pipeline_steps", [])
+
+    # === 4) Build pipeline matrix (agent stats) ===
+    agent_stats = defaultdict(lambda: {"requests": 0, "latencies": [], "errors": 0})
+    for step in pipeline_steps:
+        node = step.get("current_node", "unknown")   # Updated for new schema!
+        agent_stats[node]["requests"] += 1
+        agent_stats[node]["latencies"].append(step.get("duration", 0))
+        if step.get("errors"):
+            agent_stats[node]["errors"] += len(step.get("errors"))
+
     pipeline_matrix = []
-    for agent_name, stat in stats.items():
+    for agent_name, stat in agent_stats.items():
+        avg_latency = (sum(stat["latencies"]) / len(stat["latencies"])) if stat["latencies"] else 0
         pipeline_matrix.append([
             agent_name,
-            stat.get("requests", 0),
-            stat.get("avg_latency_ms", 0),
-            stat.get("errors", 0)
+            stat["requests"],
+            round(avg_latency, 1),
+            stat["errors"],
+            stat.get("provider", "unknown"),
+            stat.get("model", "unknown"),
         ])
 
-    # 5) store results back on the state
+    # === 5) Save back to agent_state ===
     result["icaif_scores"] = icaif_scores
     result["pipeline_matrix"] = pipeline_matrix
     agent_state.memory["final_evaluation"] = result
     agent_state.accuracy_score = result["kpis"].get("total_pipeline_cost_usd", 0)
 
-    # 6) print tables in a nice format
+    # === 6) Pretty print to console ===
     print("### ICAIF Ratings ###")
     print(tabulate(icaif_scores.items(), headers=["Criterion", "Score"], tablefmt="github"))
     print("\n### Pipeline Matrix ###")
     print(tabulate(
         pipeline_matrix,
-        headers=["Agent", "Requests", "Avg Latency (ms)", "Errors"],
+        headers=["Agent", "Requests", "Avg Latency (sec)", "Errors", "Provider", "Model"],
         tablefmt="github"
     ))
+
+    # === 7) Persist all evaluation data ===
+    metrics_to_save = {
+        "final_evaluation": result,
+        "icaif_scores": icaif_scores,
+        "pipeline_matrix": pipeline_matrix,
+        "pipeline_data": pipeline_steps,
+        "agent_stats": dict(agent_stats),
+        "error_log": getattr(agent_state, "error_log", []),
+    }
+    out_path = os.path.join(work_dir, "pipeline_metrics.json")
+    try:
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(metrics_to_save, f, indent=2, default=str)
+        print(f"[✓] Pipeline metrics saved to {out_path}")
+    except Exception as e:
+        print(f"[!] Could not save pipeline metrics: {e}")
 
     return agent_state

@@ -1,0 +1,458 @@
+ Item 1. Business. 
+
+OVERVIEW 
+
+Mission 
+
+Lucid&#8217;s mission is to advance the state-of-the-art of EV technology for the benefit of all. 
+
+About Us 
+
+Lucid is a technology company that is setting new standards with the world&#8217;s most advanced EVs, the award-winning Lucid Air and all-new Lucid Gravity. This includes the Lucid Air Pure, the most efficient vehicle on the market today (as measured by miles of range per kilowatt-hour), the Lucid Air Grand Touring, the longest-range (up to 512 miles of U.S. Environmental Protection Agency (&#8220;EPA&#8221;)-estimated range) and the fastest-charging (as measured by miles of range per minute) fully electric car in its class on the market today, and the Lucid Gravity, capable of up to 450 miles of an EPA-estimated range and up to 400 kW fast charging. Estimated ranges, including EPA-estimated ranges where applicable, are provided for Lucid Air vehicles equipped with 19-inch wheels and Lucid Gravity Grand Touring vehicles equipped with 20&#8221;F/21&#8221;R wheels and configured as 2-row, 5-seat vehicle. Actual range will vary depending on many factors, including vehicle configuration, battery age, driving habits, charging habits, temperatures, accessory use, and other factors. Lucid (i) designs, engineers and manufactures EVs, EV powertrains, and battery systems in-house using our own equipment and factories, (ii) designs and develops proprietary software in-house for Lucid vehicles that can be continuously enhanced upon through over-the-air (&#8220;OTA&#8221;) software updates, (iii) offers a refined customer experience at our own geographically distributed retail and service locations and through direct-to-consumer online sales, (iv) plans to supply and license technology to third parties, and (v) boasts a strong product roadmap of future vehicle programs and technologies. Our focus on in-house hardware and software innovation, vertical integration, and a &#8220;clean sheet&#8221; approach to engineering and design led to the development of the award-winning Lucid Air and Lucid Gravity. 
+
+The Lucid Air redefines both the luxury sedan segment and the EV space, with an EPA-estimated range of up to 512 miles on a single charge for the Grand Touring trim. A significant enabler of this range is an efficient and powerful drivetrain that Lucid developed and built in-house through our vertically integrated manufacturing structure. 
+
+The Lucid Gravity is a groundbreaking new class of sport utility vehicle (&#8220;SUV&#8221;), conceived from the ground up without compromise. The Lucid Gravity provides the interior space and practicality of a full-size SUV within the exterior footprint of a mid-size SUV. As a result, it provides a space for up to seven adults, game-changing versatility, and an unparalleled driving experience. Leveraging Lucid&#8217;s in-house powertrain technology, we have engineered the Lucid Gravity to deliver up to 450 miles of EPA-estimated range, while the only other competitive vehicle on the market today offering comparable driving range requires a battery pack over 60 percent larger in capacity. 
+
+The Lucid Space Concept underpins the design of Lucid Air and Lucid Gravity, merging a smaller exterior footprint with more interior space and better comfort. This achievement is enabled by our wholistic approach to vehicle design and integration, which is aided by highly efficient miniaturized drivetrain components. 
+
+The Lucid Air and the Lucid Gravity are assembled at our EV manufacturing facility in Casa Grande, Arizona, named Advanced Manufacturing Plant-1 (&#8220;AMP-1&#8221;). In 2024, we completed key expansion activities to bring installed capacity at AMP-1 to 90,000 vehicles per year. By building AMP-1 from a clean slate, we expect to achieve greater operational efficiencies and more consistent production quality than would be possible through outsourced manufacturing or adaptation of an existing facility. An emphasis on vertical integration of manufacturing capabilities provides us the opportunity to control our technology roadmap, ensure a high degree of quality control, and improve product margins relative to an outsourced manufacturing arrangement. We plan to diversify our vehicle portfolio and increase production capacity through localization of manufacturing in another geographical region. In 2022, we broke ground on the Advanced Manufacturing Plant-2 in Saudi Arabia (&#8220;AMP-2&#8221;), and in 2023, we began semi knocked-down (&#8220;SKD&#8221;) assembly, with installed annual capacity of 5,000 vehicles. The initial operation is re-assembly of the Lucid Air vehicle &#8216;kits&#8217; that are pre-manufactured at AMP-1. In 2024, we started an expansion at AMP-2 to enable completely-built-up (&#8220;CBU&#8221;) unit production with an additional installed annual capacity of 150,000 vehicles. The start of production of our Midsize platform is scheduled for late 2026, which we expect will expand our market reach into higher-volume vehicle segments. 
+
+We sell vehicles directly to consumers through our retail sales network and through direct online sales, including utilizing Lucid Financial Services. As of December 31, 2024, we have opened 42 Studios and service centers in North America, 11 in Europe, and 4 in the Middle East. In addition, we have various temporary and satellite service centers. We believe that owning and operating our sales network provides an opportunity to closely manage the customer experience, gather direct customer feedback, and ensure that customer interactions are tailored to our customers&#8217; needs. 
+
+We own and operate a vehicle service network comprised of service centers in major metropolitan areas and a fleet of mobile service vehicles. In addition to our in-house service capabilities, we established and continue to grow an approved list of specially trained collision repair shops which also serve as repair hubs for our mobile service offerings in some cases. We have contracted with a third-party roadside assistance partner for urgent roadside needs. As a technology company, we also complement our in-house service offerings with remote vehicle diagnostics and alerts, and OTA updates. This combination of in-house capabilities, supplementary service partners, and remote support and update capability is intended to offer a premium service experience. 
+
+We began delivering the Lucid Air to customers in October 2021. We have leveraged and expanded the technological advancements from the Lucid Air to the Lucid Gravity, which started commercial production in December 2024. Beyond the Lucid Air and the Lucid Gravity, we plan to expand our vehicle lineup with the upcoming Midsize platform, which is scheduled for start of production in late 2026. 
+
+Market Opportunity 
+
+We are defining the next generation of sustainable mobility by uniting our California aesthetic with our high-tech and Silicon Valley roots. Current competitive vehicles are based on traditions established by internal combustion automotive manufacture and design. We believe that we are leading the next wave of innovation in the vehicle space. With the Lucid Air and the Lucid Gravity, we target consumers who desire EVs with a high-end aesthetic and the accompanying premium experience. 
+
+The Lucid Air and the Lucid Gravity compete in the global luxury car market. Our competitive advantage is defined by our leading EV hardware and software technology, developed entirely in-house. The Lucid Air Pure is the most efficient vehicle in the world (as measured by miles of range per kilowatt-hour), the Lucid Air Grand Touring is the longest-range and the fastest-charging (as measured by miles of range per minute) fully electric car in its class on the market today, and the Lucid Air Sapphire is the highest-performance version of the Lucid Air (boasting 1,234 horsepower from three motors, the ability to accelerate from zero to 60 miles per hour in 1.89 seconds, and a quarter-mile time of 8.95 seconds). 
+
+We are defining a recognizable brand that is synonymous with elegant design, excellent driving performance, and outstanding range. We believe the automotive experience is one comprised of several essential elements, including: (i) high-end comfort and significant attention to detail in design, content, materials, and fit and finish, (ii) superior customer interaction, with high-touch customer engagement throughout both the sales cycle and ownership journey, and (iii) convenient service that exceeds that of a non-premium automotive experience. 
+
+Our long-term goal is to make a positive impact on the global climate crisis through mass production of advanced technologies and EVs. The market is still nascent, with approximately 11.1% and 8.1% of new passenger vehicle sales in 2024 being battery electric vehicles (&#8220;BEV&#8221;) worldwide and in North America, respectively (worldwide figure is an estimate from S&#38;P Global AutoInsight, and the North America figure is an actual result from S&#38;P Global Catalyst Registration). 
+
+As our launch vehicle, the Lucid Air has established the bar for excellence across all our future products and experiences. We started delivering vehicles to customers in North America in October 2021. In 2022, we delivered our first vehicles to customers in Europe and the Middle East. Over the course of 2023, we delivered the entire Lucid Air lineup including the Lucid Air Sapphire, the world&#8217;s first luxury electric super-sports sedan, and the Lucid Air Pure, the most attainable and most efficient Lucid Air model. The Lucid Air has received critical acclaim since it debuted, winning MotorTrend 2022 Car of the Year, followed by the 2023 World Luxury Car Award, and most recently was named to Car and Driver&#8217;s 10Best list for 2024 and 2025. Production of our second vehicle, the Lucid Gravity, began in December 2024. The Lucid Gravity builds on innovations and processes from the Lucid Air sedan for an unprecedented combination of performance, interior space, and efficiency. Beyond the Lucid Air and the Lucid Gravity, our business plan expands to vehicles using our upcoming Midsize platform, which is scheduled for start of production in late 2026. 
+
+In addition to the sale of Lucid-branded vehicles, we believe that our technological prowess and manufacturing capabilities present a further opportunity to generate revenue and combat climate change through the sale or licensing of EV powertrains, battery technology, and embedded controls software to third parties. Such powertrain and battery arrangements could facilitate and accelerate the shift to electrification for traditional automotive original equipment manufacturers (&#8220;OEMs&#8221;), pure-play EV companies, and prospective partners in the transportation sector, and thereby enable the global production of EVs in greater volumes and at varying price points. We believe that the sale or licensing of our technology would also accelerate our efforts to refine our manufacturing efficiencies and the real world, practical operation of our technologies. 
+
+Competitive Strengths 
+
+&#8226; Revolutionary Powertrain Technology. Our proprietary EV technology delivers outstanding range, charging, and driver-oriented performance all while achieving higher efficiency ratings than other EVs as measured by miles of range per kilowatt hour of energy consumed. All variants of the Lucid Air have received EPA-estimated range ratings of over 400 miles and the Lucid Air Grand Touring holds the title for the longest range passenger vehicle with an EPA-estimated range of 512 miles. The Lucid Gravity delivers up to 450 miles of EPA-estimated range, while the only other competitive vehicle on the market today offering comparable driving range requires a battery pack over 60 percent larger in capacity. 
+
+The Air&#8217;s proprietary high-voltage electrical architecture, the Wunderbox on-board inverter charger, and our efficient battery management system, all developed in-house by our teams, enable customers to spend less time charging. For example, the Lucid Air Grand Touring can add approximately 300 miles in about 21 minutes using DC fast charging, while the Lucid Air Pure can add up to 150 miles in about 12 minutes with DC fast charging. (Estimates are based on use of a 350 kW DC fast charger and vehicles equipped with 19-inch wheels. Actual rates will vary based upon vehicle equipment and charging conditions.) 
+
+In November 2023, we launched RangeXchange, the first application of the bi-directional charging capability built into the Lucid Air. Using Lucid&#8217;s innovative new vehicle-to-vehicle (&#8220;V2V&#8221;) RangeXchange adapter and the latest mobile charging cable, the Lucid Air can function as the power source to charge another EV. In the future, we plan to further unlock the potential of the bi-directional charging capability built into the Lucid Air to serve as a back-up power source for residential applications, such as during emergency power grid outages, when paired with Lucid Connected Home Charging Station. (Additional equipment is needed at the home to enable back-up power capabilities.) 
+
+In June 2023, we entered into an agreement (the &#8220;Implementation Agreement&#8221;) with Aston Martin Lagonda Global Holdings plc (together with its subsidiaries, &#8220;Aston Martin&#8221;), under which we and Aston Martin have established a long-term strategic technology and supply arrangement. On November 6, 2023, pursuant to the terms of the Implementation Agreement, integration and supply arrangements became effective, under which we will provide Aston Martin access to our powertrain, battery system, and software technologies, work with Aston Martin to integrate our powertrain and battery components with Aston Martin&#8217;s BEV chassis, and supply powertrain and battery components to Aston Martin (collectively, the &#8220;Strategic Technology Arrangement&#8221;). 
+
+&#8226; Proven, Real World Validation. Our battery technology developed over the past decade has been validated as world-class technology. Through our prototype and production vehicles and our role as the sole battery supplier to the second generation of the premier EV racing series, our patented battery technology has driven more than 230 million real world miles since Lucid&#8217;s inception. 
+
+&#8226; Highly Differentiated Performance. Our advancements in battery pack and drivetrain technology, created through a clean-sheet approach to engineering, have resulted in compelling performance and efficiency in our vehicles. The Lucid Air Sapphire offers 1,234 horsepower, a 0-60 miles per hour acceleration time of 1.89 seconds and a standing quarter-mile time of 8.95 seconds. 
+
+&#8226; Directly Owned Manufacturing. Our vehicles are produced at AMP-1, the first purpose-built, greenfield EV manufacturing facility in North America. With the Lucid Air already in production, expansion activities have recently been completed to enable the concurrent production of the Lucid Air and the Lucid Gravity. Key elements of our vehicle engineering enable efficient and advanced manufacturing processes with a high degree of quality control. For example, the aircraft-inspired riveted and bonded monocoque body structure is designed to enhance structural efficiency and replace spot welds in the manufacturing process. Additionally, we manufacture and assemble our complete electric powertrain at AMP-1, including assembly of battery packs, integrated drive units, and the Wunderbox. In September 2023, we also opened AMP-2, which was Saudi Arabia&#8217;s first-ever car manufacturing facility and our first manufacturing facility outside the United States, where we commenced SKD assembly operations. 
+
+&#8226; In-House Sales and Service. Consistent with the focus on vertical integration in our manufacturing processes, we employ a direct sales and service model to maintain full control over the customer experience and ensure that interactions are aligned with Lucid standards. We enable a superior customer experience by vertically integrating our sales operations instead of relying on a traditional outsourced dealership model. We are also scaling our own service operations to support planned future growth, in addition to further developing our established network of partnerships with body shops and other ancillary service partners that meet our expectations for customer service. 
+
+&#8226; Product Design. The Lucid Air and the Lucid Gravity fuse art and science to capture the full potential of electrification. As our company&#8217;s first vehicle, the Air established the bar for excellence across all our products and experiences. Our Space Concept represents a technical breakthrough, achieved by rethinking the way an automobile is designed from the ground up. Our reimagining of the car has resulted in class-leading interior space for the driver, passengers, and storage within a compact and efficient exterior. The Lucid Gravity builds upon this design philosophy to deliver an occupant and cargo space that outclasses the competition in a vehicle with a significantly smaller exterior footprint. 
+
+&#8226; Deep Experience. We have assembled a seasoned management and advisory team with deep experience in the automotive and EV industries. The management team is rounded out by executives with significant experience from such companies as Tesla, Audi, Ford, Hyundai, Mazda, Mercedes-Benz, Porsche, Stellantis, and Volkswagen, among others. 
+
+&#8226; Strategic Partnerships. We have established strong relationships with suppliers and partners to deliver the Lucid Air and the Lucid Gravity. We have battery cell supply agreements in place with leading suppliers in the EV space and have also begun entering into agreements to help ensure our supply of critical battery materials. 
+
+&#8226; Software Defined. Our advanced software-defined vehicle architecture is applied throughout our vehicles to allow us to continually tune and improve vehicle performance, add features, and delight our existing and new customers through OTA software updates. 
+
+Growth Strategy 
+
+We aim to create opportunity as an automotive company and a technology provider for other automotive OEMs. 
+
+&#8226; Vehicle Roadmap. We have established a roadmap for future vehicle lines that includes a variety of vehicle types expected to perform well in various customer segments. Establishing the brand with the Lucid Air and the Lucid Gravity, we plan to unlock further sales with a new Midsize platform, enabling sales in some of the highest-volume vehicle segments, which we expect will enable us to leverage economies of scale and efficiency of operations. We will seek to establish a strong customer base in premium vehicle markets across the globe. 
+
+&#8226; International Expansion. We expect to increase our market presence in multiple geographies along with the relevant retail and service footprint across each geographic region. Expanding across global markets is key to achieving the scale of economies needed for a profitable OEM. The expansion is expected to enhance the brand presence and awareness and support top line growth objectives. Additional business and distribution models are being implemented to both accelerate speed to market while optimizing resource requirements. 
+
+Long term, we are also exploring expansion of our manufacturing footprint. These manufacturing facilities could include facilities for component subassembly, vehicle kit reassembly, and complete built unit vehicle production. We believe that establishing a global manufacturing footprint will help us to grow the brand, scale the business and address market demand in the Middle East, European and Asia-Pacific markets, while also taking action to reduce our carbon footprint and address climate change. 
+
+We anticipate that a localized supply chain, production, distribution and retail network will yield cost savings and lower carbon emissions with shorter transportation distances of products to customers. 
+
+&#8226; Technology Outbound Sales &#38; Licensing. We are actively engaged in supplying all racing teams in the premier EV open wheel racing series with a front drive unit and related software. We also entered into the Strategic Technology Arrangement with Aston Martin in 2023 under which we will provide Aston Martin access to our powertrain and battery system technology to use in Aston Martin&#8217;s battery electric vehicles. We plan to continue expanding this technology division to supply our world class technologies to other automotive OEMs and partners in the transportation sector to help accelerate the adoption of EVs. 
+
+We are motivated to achieve a future where transportation is fully sustainable. The sale of technology solutions to traditional automotive OEMs and pure-EV brands would support that goal, as would sales to customers in other transportation sectors. Our technology is modular and readily customizable, enhancing our suitability for build-to-print powertrain and battery solutions for other manufacturers. 
+
+Our Vehicles 
+
+Lucid Air 
+
+The Lucid Air is the most advanced car in the world, featuring California-inspired design and award-winning powertrain technology. As Lucid&#8217;s first vehicle, the Air has established Lucid as the preeminent force in electric vehicle technology. Since the first deliveries to customers in October 2021, the Lucid Air has been the benchmark for luxury vehicles and EVs, continuing to grow in popularity and garnering continuing accolades from the media. The Lucid Air is offered in an array of trims and configurations at different price points with distinct superlatives. The 2025 Air Pure offers a remarkable 420 miles of EPA-estimated range, with just an 84-kWh battery pack, and thus achieves a landmark 5.0 miles per kilowatt hour of energy, making it the most efficient vehicle on the market today. With 512 miles of EPA-estimated range, the Lucid Air Grand Touring continues to lead the market in range by a significant margin, enabled by advancements in Lucid&#8217;s electric powertrain technology. The Lucid Air Sapphire is the highest-performance version of the Lucid Air, boasting 1,234 horsepower from three motors, 427 miles of an EPA-estimated range (when equipped with standard wheel covers), the ability to accelerate from zero to 60 miles per hour in 1.89 seconds, and a quarter-mile time of 8.95 seconds. In 2024, the Lucid Air outperformed many major and well-established brand in the U.S. across both electric and combustion vehicles within its competitive set, based on the data from Motor Intelligence. 
+
+Lucid Gravity 
+
+The Lucid Gravity, for which we began commercial production in December 2024, reimagines what an SUV can be, and is conceived from the ground up to offer a previously impossible combination of features. Enabled by Lucid&#8217;s revolutionary technology, the Lucid Gravity provides the interior space and practicality of a full-size SUV within the exterior footprint of a mid-size SUV. As a result, it provides a sophisticated space for up to seven adults, game-changing versatility, and an unparalleled driving experience. Leveraging Lucid&#8217;s in-house powertrain technology, we have engineered the Lucid Gravity to deliver up to 450 miles of EPA-estimated range, while the only other competitive vehicle on the market today offering comparable driving range requires a battery pack over 60 percent larger in capacity. 
+
+The Lucid Gravity is designed to share components with the Lucid Air where optimal, and we continue to evaluate opportunities to apply components developed for the Lucid Gravity to the Lucid Air, further expanding the number of common parts while also enhancing the customer experience in the Lucid Air. We anticipate that all of these measures will enable efficiency in design, engineering, and capital expenditure deployment for the Lucid Gravity. 
+
+The Lucid Air and the Lucid Gravity are true software-defined vehicles, designed to improve over time, with OTA software updates and key hardware already in place in the vehicle. This holistic systems approach to the integration of hardware and software is what allows us to provide these value-add updates and is what sets us apart in the automotive industry. 
+
+As discussed in &#8220; &#8212;&#8201;Technology &#8221; below, the Lucid Air and the Lucid Gravity are underpinned by the Lucid Electric Advanced Platform (&#8220;LEAP&#8221;), which is designed with adjustability to support multiple vehicle variants to enable greater capital deployment efficiency and speed to market. 
+
+Future Vehicle Programs 
+
+We started by manufacturing higher-end vehicles to establish our brand. We expect to progress to higher-volume vehicle segments over time, which require a higher throughput from manufacturing to distribution. Beyond the Lucid Air and the Lucid Gravity, our roadmap calls to expand our vehicle lineup with vehicles built on a new Midsize platform, with which we intend to enter lower-price and higher-volume vehicle segments. The Midsize platform is currently in development, and is scheduled for start of production in late 2026. 
+
+Technology 
+
+We are a technology company that has set new standards for sustainable transportation. We have done so in part by developing proprietary EV technology in-house. Core to our DNA is the achievement of technical excellence. 
+
+Our in-house engineering team is focused on delivering innovation in all facets of vehicle development, including hardware and software development, vehicle design, and passenger comfort. The development of the Lucid Air and the Lucid Gravity have been predicated on the premise that miniaturizing the powertrain would allow us to redesign what a passenger vehicle can be from the ground up. 
+
+We have refined our battery technologies over many years in real-world applications, including more than 230 million miles of vehicle testing and the supply of battery packs to all teams in the world&#8217;s premier EV open wheel racing series. We have used the data accumulated from these activities to refine our technology and thoughtfully develop the Lucid Air, and subsequently the Lucid Gravity. 
+
+We believe our in-house research and development organization establishes us as a leader across multiple technologies and areas of expertise. Our technological achievements include significant advancements to the core technologies that drive an EV and are instrumental in the LEAP. 
+
+LEAP was designed and developed in-house, incorporating our six key powertrain elements: (i) battery pack &#38; battery management software, (ii) electric motors, (iii) power electronics, (iv) transmission, (v) control software, and (vi) two-way onboard boost-charger. The LEAP structure is an enabling factor allowing the Lucid Space Concept to support class-leading interior and cargo room for a luxury EV. 
+
+Areas where our in-house engineering has driven advancement include: 
+
+&#8226; Battery Pack. The Lucid Air&#8217;s battery pack translates our motorsport experience and more than 230 million miles of real-world testing into a compact and energy dense unit that was developed in-house with a clean-sheet approach to engineering. The battery pack is designed to be scalable and modular, providing opportunities for cost and range variations as we develop future variants on our LEAP architecture. It is also designed for performance, with advanced cell end-cooling and low resistance technologies designed to reduce heat generation, control battery cell thermal conditions and ultimately increase range. 
+
+Our battery packs incorporate battery cells from suppliers that have extensive experience in the development and manufacturing of cells for high-performance EV applications and robust battery cycle life. The battery cells incorporated into our battery packs are required to conform to our high standards, including with respect to our targets for range, energy density, recharge/discharge rates and other characteristics, and to support our compact, energy-dense battery pack form. 
+
+Our battery packs support our vision to revolutionize EV technology through mass industrialization. Our single piece injection molded battery module is race derived yet designed for mass production, with electrical &#8220;bus bar&#8221; connectors that are integrally captured in the molding in a single operation&#8201;&#8212;&#8201;a profound technological advancement. 
+
+The technology developed for the battery pack in the Lucid Air has transferred to the Lucid Gravity, and we believe is suitable for the industrialization of our Midsize platform, and to technologically adjacent markets. See &#8220; &#8212;&#8201;Growth Strategy. &#8221; 
+
+&#8226; Integrated Electric Motor, Inverter and Transmission Drive Unit. For our motor and gearbox system, we developed permanent magnet motors in-house. Combining these motors with an inverter and an integrated gearbox and differential creates an advanced electric drive unit that weighs just 163lb (74kg) and is small enough to fit inside a carry-on roller bag. 
+
+The Lucid drive unit is capable of producing up to 670 horsepower with power density up to 9.0 horsepower per kg, depending on vehicle trim and variant. This compactness allows for one, two or even three units to be used to power a Lucid Air or Lucid Gravity. Further to this, we have developed motor and transmission technology for the world&#8217;s premier EV open wheel racing series with a power density of over 14.5 horsepower per kg. 
+
+The enablers of these electric motor characteristics include a set of inventions that are part of our intellectual property portfolio. Most notably, a new motor winding technology has been introduced to increase power output and reduce electrical losses. The motor also features an innovative patented cooling system that more effectively removes heat from the stator winding, reducing losses and boosting efficiency. 
+
+The compactness of these electric drive units lays the foundation for our Space Concept vehicle design approach. The patented fully integrated transmission and differential also contribute to this approach. Together, these components comprise a unified, integrated rotational system that is both lightweight and extremely efficient. Meanwhile, we leverage a high voltage, silicon-carbide metal&#8211;oxide&#8211;semiconductor field-effect transistor (&#8220;MOSFET&#8221;) system in our inverters to increase efficiency, especially in real-world driving conditions. 
+
+&#8226; Bi-directional Charging. The 900V+ high voltage architecture and our Wunderbox are key enablers inside the Lucid Air&#8217;s and the Lucid Gravity&#8217;s electrical platform. The Wunderbox is designed to enable ultra-fast DC and bi-directional AC charging with proprietary technology. It is a multi-function unit, developed in-house to help ensure compatibility with various charging stations and power levels, from Level 1 AC up to Level 3 DC fast charging. It also enables &#8220;boost-charging&#8221; when needed, such as when connected to 400V DC charging infrastructure. 
+
+The Wunderbox is also designed to enable a wide array of future-ready, bi-directional power delivery features, such as vehicle-to-grid (&#8220;V2G&#8221;) applications for situations such as managing home power outages. In November 2023, we launched RangeXchange, an innovative new feature enabling the Lucid Air to directly charge another EV. This capability is enabled by our bi-directional charging technology built into every Air via an OTA software update, as well as the RangeXchange adapter. This holistic systems approach to the integration of hardware and software is what allows us to provide these value-add updates and truly sets us apart in the automotive industry. 
+
+&#8226; Software System. The Lucid Air and the Lucid Gravity are true software-defined vehicles. With software-enabled future-ready hardware, Lucid vehicles can evolve over time to best meet customer needs long after they take delivery. With highly advanced processing capabilities, the system leverages data analytics and OTA updates to improve and refresh the vehicle over time. 
+
+We have deployed more than 100 OTA software updates for improvements and bug fixes since customer deliveries began in October 2021. 
+
+In October 2022, we introduced Lucid UX 2.0, our most extensive software update to that point, with hundreds of updates and new features for every Lucid Air on the road. These included new capabilities for the DreamDrive advanced driver assistance systems, enhanced system performance, and new on-screen layouts to make Lucid UX more ergonomically friendly. These software updates are developed, coded, validated, and deployed by Lucid&#8217;s in-house hardware and software engineering teams. 
+
+In March 2023, we introduced wireless Apple CarPlay integration. Scheduled Charging, introduced in February 2023, allows customers to plug in a Lucid Air to a charger and begin charging at a predetermined time. In addition to these enhancements, we introduced several new features including Creature Comfort Mode for pets left in an otherwise unoccupied vehicle, Max A/C, Multitasking Widget, and Easy Entry, and made improvements to existing features including Highway Assist, SiriusXM, and Range Estimation. 
+
+In September, 2024, we added support for a new &#8220;Hey Lucid&#8221; vehicle voice assistant and made significant enhancements to our DreamDrive automated driving features as described below. 
+
+In November 2024, we released an OTA update for Lucid Air that significantly enhanced the audio experience in vehicles with the Surreal Sound Pro option and improved low volume level sound quality in all vehicles. This OTA update also improved the in-car navigation system, now displaying traffic lights and stop signs in regions supporting this feature. Additionally, as described below, this update included significant enhancements to our DreamDrive automated driving features. 
+
+&#8226; Controls Software. The core technology in the Lucid Air and the Lucid Gravity is fully conceived in-house. This includes a state-of-the-art computing platform, using our Ethernet Ring architecture, as well as intelligent fuse boxes and future proofed advance lighting systems, which is able to be upgraded with software to enable additional and improved features related to performance, range, and user experience. In 2023, with the release of the Lucid Sapphire, an In-House Traction Control and Torque Vectoring system was designed, implemented, and calibrated on various surfaces, delivering the performance attributes which gained broad acclaim. In 2024, with the Lucid Air rear-wheel drive, Regen Traction Control was developed to improve the performance of the vehicles in regen mode. In 2024, we also introduced a no-regen mode as an additional option for Lucid Air customers. 
+
+Our charging software was developed fully in-house from 2020; and in 2024, we released improvements to the software that led to 110V charging becoming 10% more efficient. At the same time, we also introduced new control algorithms on the rear drive units which improved our efficiency and range. 
+
+&#8226; Lucid DreamDrive. The Lucid Air is equipped with an extensive sensor suite, high on-board computing power, back-up systems for Advanced Driver Assistance Systems (&#8220;ADAS&#8221;) and, over time, increased levels of automation. With up to 32 ADAS sensors onboard, the Lucid Air features one of the most comprehensive sensor suites among currently available production vehicles. The Lucid Air includes certain features with Level 2 ADAS functionality and is capable of software upgrades via OTA updates. Further, by collecting and analyzing fleet data, we continue to enhance our ADAS features and improve the Lucid experience. 
+
+In September 2024, an OTA update introduced major enhancements to DreamDrive Pro&#8217;s Level 2 Highway Assist feature, significantly improving lane centering performance and adding Active Curve Speed control to slow the vehicle in curves for a more comfortable experience. A new Lane Change Assist feature was also added to Highway Assist, allowing vehicles to change lanes automatically after initiation by driver. In addition, this release extended stop-and-go support for heavy traffic driver assistance, and added a 3-D visualization of surrounding vehicles and pedestrians in the instrument cluster display. 
+
+In November 2024, we added the Curb Rash Alert, which automatically detect curbs at low vehicle speeds and warn the driver of potential wheel scraping. Lucid is the first-to-market with this feature and has filed a patent application. 
+
+&#8226; Lucid&#8217;s Micro Lens Array (&#8220;MLA&#8221;) Lighting. A revolution in optical technology, our MLA was created in-house and allows more accurate control over the intensity distribution of the headlamp than conventional technologies. In a very compact form factor, the technology delivers exceptional contrast, high peak intensity, and high color uniformity. This technology enables a long-illuminated distance in low-beam mode with good visibility on both sides of the road and low glare for oncoming traffic. The MLA also allows angular distribution adaptation without mechanical movement of the light module only by changing the electrical current to the LED. For example, it can change the beam pattern from a more range focused brighter narrow beam on a highway to a broader mid-distance focused beam in cities or improve illumination of the roadside in curves or intersections. 
+
+Manufacturing 
+
+We built North America&#8217;s first greenfield, purpose-built EV manufacturing facilities, in Casa Grande, Arizona. Lucid&#8217;s manufacturing activities are carried out at our vehicle manufacturing plant, AMP-1. An emphasis on vertical integration of manufacturing capabilities provides us the opportunity to control our technology roadmap, ensure a high degree of quality control, and improve product margins relative to an outsourced manufacturing arrangement. This vertical integration has allowed us to use decades of industry experience to achieve greater capital efficiencies, greater operational efficiencies, and consistent production quality. 
+
+We began the production of the Lucid Air at AMP-1 in September 2021. The manufacturing expansion of phase 2 at AMP-1 kicked off in mid-2021, adding approximately 3 million square feet of manufacturing space to our facility. In September 2023, we began producing vehicles at the AMP-1 phase 2 expanded facility, using innovative production processes and state-of-the-art equipment. 
+
+In 2024, we completed the phase 2 expansion project for all key manufacturing activities at AMP-1, including paint shop, stamping, a new body shop for the Lucid Gravity, and a majority of powertrain shop. Our AMP-1 phase 2 facility currently manufactures the Lucid Air and the Lucid Gravity. These expansion activities resulted in 90,000 units per year of installed capacity. In the fourth quarter of 2024, we started to phase out operations at Lucid Powertrain Manufacturing-1 (&#8220;LPM-1&#8221;) plant from dedicated powertrain manufacturing to remanufacturing. By May 2025, we expect that LPM-1 will focus on remanufacturing while AMP-1 phase 2 will house all dedicated powertrain operations. 
+
+In September 2023, we opened AMP-2, which was Saudi Arabia&#8217;s first-ever car manufacturing facility and our first manufacturing facility outside the United States, where we commenced SKD assembly operations. The facility&#8217;s initial operation is re-assembly of SKD Lucid Air vehicle &#8220;kits&#8221; that are pre-manufactured at AMP-1. It has installed annual capacity of 5,000 vehicles with the intent to scale up operations to meet demand in the Middle East. 
+
+In 2024, we started the expansion of our AMP-2 facility to enable CBU unit production with target installed annual capacity of 150,000. Once completed, AMP-2 is expected to have all the key manufacturing activities including stamping, body in white, painting, general assembly, and eventually powertrain production. 
+
+Supply Chain 
+
+Our supplier partners remain key in delivering our plan. Our vehicle contains thousands of parts and materials from suppliers around the globe. Lucid&#8217;s sourcing plans utilize a comprehensive qualification process to assess technical capability, quality, cost, footprint, etc. Challenges in supply chain remain, so collaborative relationships are essential. Lucid works closely with suppliers in the upfront development process and in supporting production needs and requirements. We have a multi-year sourcing agreement for lithium-ion batteries, a key component of our battery system, with Panasonic Energy Co., Ltd. and certain of its affiliates. 
+
+Go-To-Market Strategy 
+
+Our typical customer journey begins through our advanced digital platform. We use several channels to educate customers regarding our brand identity, explain the creation of our technology, highlight the people behind our design and technology, and provide an easy gateway towards ordering and ownership. The goal is to cultivate brand loyalty and affinity with our customers. Our direct-to-consumer model allows customers the option of building vehicles to order or selecting from available cars via our digital platform. On the website, customers can experience our online vehicle configurator, which provides an opportunity to explore trims, colors, and features to determine the perfect Lucid for their needs. From there, we provide the customer with the option to either schedule a test drive, place an order online, contact our sales department, or visit one of our retail stores or gallery locations, which we refer to as &#8220;Studios.&#8221; Our direct-to-consumer sales model, combined with a digitally enhanced luxury experience through our website and a refined in-store experience, creates opportunities to tailor to each customer&#8217;s purchase and ownership preferences and provide Lucid with a level of control and refinement essential to building loyalty and ambassadorship among our intenders and customers. Through our omni-channel approach, Lucid intenders have the option to visit a Studio in person, make their inquiries entirely online, talk to an inside sales representative, or enjoy a combination of the three experiences with seamless handoffs. 
+
+In developing our Studios, we have built a network of retail spaces to enable customers to experience the brand and our products in locations that underscore our design aesthetic and allow the customers to experience our full product breadth through different sensory tools. Like the Lucid Air and the Lucid Gravity, the interiors of Lucid Studios showcase color and material themes that represent specific locations within California as well as our focus on innovation with immersive technology experiences. We intend our Studios to provide a pressure-free environment for our customers to comfortably experience the brand and our products. Lucid Studios draw inspiration from the beauty and innovation of our home state of California. 
+
+Retail locations serve both as our sales channels and marketing tools in high-foot-traffic locations within urban areas. As of December 31, 2024, we had 57 Studios and service center locations opened, including locations in North America, Europe , and Middle East markets. We expect to increase coverage throughout these regions in 2025 . Expanding our presence in existing and new geographies will increase our customer convenience, share of total addressable market, and overall brand awareness and consideration. 
+
+With a focus on convenience, our service operations include vehicle and customer support through our network of brick-and-mortar service centers, and at customers&#8217; physical locations through our mobile service offerings. Customers are also served through certified partners for roadside assistance and collision repairs. We designed the Lucid Air to enable OTA updates and remote diagnostics. 
+
+We leverage third-party charging networks in our market regions, rather than investing heavily in proprietary fast-charging infrastructure or high-power networks. Our Lucid App provides customers seamless Plug and Charge (&#8220;PnC&#8221;) access at partnering networks in North America and Europe, ensuring convenient charging options. 
+
+On Jan 31, 2025, we gained access to Tesla&#8217;s supercharging network in addition to the vast Combined Charging System infrastructure, which is expected to significantly enhance convenience and reduce concerns related to range anxiety. The Lucid Gravity vehicles can use the Tesla Supercharger network with native the North American Charging Standard (&#8220;NACS&#8221;) charge port in the first quarter of 2025, while we expect the Lucid Air vehicles will be granted access to the network, via an adapter, in the second quarter of 2025. 
+
+For at home charging, the Lucid Connected Home Charging Station can be installed to provide convenient, simple, and seamless charging at home, or the Lucid mobile charging cable can plug into a variety of household outlets. The Lucid Air now supports V2V charging and we expect to support further bi-directional capabilities with the Lucid Air and Lucid Connected Home Charging Station. 
+
+In 2025, we plan to launch the mobile charging cable in the KSA market, enhancing on-the-go charging as public infrastructure develops. 
+
+We have an agreement with the Government of Saudi Arabia, as represented by the Ministry of Finance, under which the Government of Saudi Arabia and its entities and corporate subsidiaries and other beneficiaries undertook to purchase up to 100,000 vehicles, with a minimum purchase quantity of 50,000 vehicles and an option to purchase up to an additional 50,000 vehicles over a ten-year period. We believe that our customer traction is strong and will continue to grow as we expand our footprint in Saudi Arabia. 
+
+Government Regulations and Credits 
+
+Environmental Regulations 
+
+We operate in an industry that is subject to extensive environmental regulation, which has become more stringent over time. The laws and regulations to which we are or may become subject govern, among other things, water use; air emissions; use of recycled materials; energy sources; the storage, handling, treatment, transportation, and disposal of hazardous materials; the protection of the environment, natural resources, and endangered species; and the remediation of environmental contamination. Compliance with such laws and regulations at an international, regional, national, state, provincial and local level is and will be an important aspect of our ability to continue our operations. 
+
+Environmental standards applicable to us are established by United States laws and regulations and those of other jurisdictions in which we operate, standards adopted by regulatory agencies and the permits and licenses we are required to obtain. Each of these sources is subject to periodic modifications. Violations of these laws, regulations or permits and licenses may result in substantial civil and criminal fines, penalties and orders to cease the violating operations or to conduct or pay for corrective works. In some instances, violations may also result in the suspension or revocation of permits and licenses. 
+
+Many countries and U.S. states have announced a requirement for the sale of zero-emission vehicles only within prescribed timeframes, one as early as 2025, and we as an EV manufacturer are already able to comply with these requirements across our entire product portfolio as we expand. Our competitors, by contrast, will need to reconcile an expensive infrastructure with factories and equipment tailored for production of internal combustion engine (&#8220;ICE&#8221;) vehicles, along with workforces trained to produce ICE vehicles and intellectual property portfolios geared for ICE vehicles. 
+
+Emissions Credits 
+
+We expect that the manufacture, sale, and/or registration of Zero Emission Vehicles (&#8220;ZEVs&#8221;) in various regions will earn certain regulatory credits that we can sell to other manufacturers. Under several regulatory schemes to control emissions from automobiles Lucid&#8217;s sales of ZEVs generate credits that can be sold to other manufacturers that do not comply with regulatory standards. At the U.S. federal level, credits may include Corporate Average Fuel Economy (&#8220;CAFE&#8221;) credits under U.S. Department of Transportation standards, greenhouse gas (&#8220;GHG&#8221;) and other emission limitations credits from EPA programs. Similar national-level programs exist in other markets, including the European Union, Switzerland, Canada, and Saudi Arabia. It may also include credits in up to 17 U.S. jurisdictions referred to collectively as the &#8220;ZEV States&#8221; that require compliance with ZEV program mandates (California, Colorado, Connecticut, Delaware, Maine, Maryland, Massachusetts, Minnesota, Nevada, New Jersey, New Mexico, New York, Oregon, Rhode Island, Vermont, Washington, and the District of Columbia). Low-Emission Vehicle (&#8220;LEV&#8221;) credits may also be generated and sold in California and most of the ZEV States plus Pennsylvania. 
+
+ZEV credits are calculated under applicable regulation and are paid in relation to ZEVs manufactured and registered, including BEVs. ZEV programs generally assign ZEV credits to each vehicle manufacturer. Vehicle manufacturers are required to maintain ZEV credits equal to a set percentage of non-EV sold and registered in California and ZEV States. Each vehicle sold and registered in the state earns a number of credits based on the drivetrain type and the all-electric range of the vehicle under the Urban Dynamometer Driving Schedule Test Cycle. 
+
+For reference, the ZEV credit requirement in California was 17% in 2023 and will rise to 22% in 2025. Under current regulations which are valid through the end of Model Year 2025, if a vehicle manufacturer does not sell enough EVs to meet its quota, it can choose to buy credits from other manufacturers who do, or it would be required to pay a $5,000 fine for each credit it is short. We expect this requirement to provide an opportunity to generate revenue from the sale of ZEV credits. 
+
+While we expect these environmental regulations to provide a tailwind to our growth, it is possible for certain regulations, to result in margin pressures. For example, regulations that effectively impose EV production quotas on auto manufacturers may lead to an oversupply of EV, which in turn could promote price decreases. Changes to these incentives and regulations could affect our revenues and gross margins. 
+
+Other Credits and Benefits 
+
+We may benefit from additional opportunities under government regulations and legislation, such as the following: 
+
+&#8226; Customer tax credits and other benefits arising from government regulation may spur interest in our products and business. In the United States, our EVs qualify for the $7,500 federal tax credit under IRS Section 45W when sold for commercial uses, including those leased to customers, and future vehicles may be eligible for the 30D clean vehicle tax credit. Our vehicles may also be eligible for purchase incentives in other jurisdictions, such as Norway, and certain U.S. states such as California that offer high-occupancy lane driving privileges and other benefits. 
+
+&#8226; We are eligible for various tax credits, abatements and other benefits, including: the federal 45X Advanced Energy Production Credit; the federal 30C Alternative Fuel Infrastructure tax credit for alternative fuel infrastructure; the Qualified Facilities tax credit in Arizona; a California sales and use tax exclusion under the California Alternative Energy and Advanced Transportation Financing Authority; and other hiring and job training grants and income tax credits in Arizona, California, and Michigan. 
+
+&#8226; We may also be eligible for a loan pursuant to the Advanced Technology Vehicles Manufacturing Loan Program administered by the U.S. Department of Energy. 
+
+EPA Emissions and Certificate of Conformity 
+
+The U.S. Clean Air Act requires that we obtain a Certificate of Conformity issued by the EPA and a California Executive Order issued by the California Air Resources Board (&#8220;CARB&#8221;) certifying that our vehicles comply with applicable emissions requirements. A Certificate of Conformity is required for vehicles sold in the United States, and an Executive Order from CARB is required for vehicles sold in states that have adopted California standards. CARB sets the California standards for emissions control for certain regulated pollutants for new vehicles and engines sold in California. States that have adopted the California emission standards as approved by EPA also recognize the CARB Executive Order for sales of vehicles. In addition to California, there are 16 states plus the District of Columbia that have adopted California&#8217;s stricter emissions LEV standards, including New York, Massachusetts, Vermont, Maine, Pennsylvania, Connecticut, Rhode Island, Washington, Oregon, New Jersey, Maryland, Delaware, Colorado, Minnesota, Nevada and New Mexico. 
+
+Although the Lucid Air has zero emissions, we are required to seek an EPA Certificate of Conformity and, for vehicles sold in California or any of the other 17 U.S. jurisdictions that have adopted the stricter California emission standards, a CARB Executive Order. 
+
+Vehicle Safety and Testing 
+
+Our vehicles are subject to, and are required to comply with, numerous regulatory requirements established by the National Highway Traffic Safety Administration (&#8220;NHTSA&#8221;), including applicable U.S. Federal Motor Vehicle Safety Standards (&#8220;FMVSS&#8221;). The Lucid Air fully complies with all applicable FMVSS without any exemptions, and we expect our future vehicles to either fully comply or comply with limited exemptions related to new technologies. Additionally, there are regulatory changes being considered for several FMVSS, and while we anticipate compliance, there is no assurance that we will comply with such changes under the final versions as enacted. 
+
+We must self-certify that our vehicles meet all applicable FMVSS, as well as the NHTSA bumper standard, or otherwise are exempt, before our vehicles can be sold in the United States. Numerous FMVSS will apply to our vehicles, such as crash-worthiness requirements, crash avoidance requirements and EV-specific requirements. We are also required to comply with other federal laws and regulations administered by NHTSA, including, among other things, ensuring our vehicles do not contain defects related to motor vehicle safety, recall requirements, the CAFE standards, Theft Prevention Act standards, consumer information labeling requirements, reporting required notices, bulletins and other communications, Early Warning Reporting, foreign recall reporting, and owner&#8217;s manual requirements. 
+
+The Automobile Information and Disclosure Act requires manufacturers of motor vehicles to disclose certain information regarding the manufacturer&#8217;s suggested retail price, optional equipment and pricing. In addition, this law requires inclusion of city and highway fuel economy ratings, as determined by the EPA, as well as crash test ratings as determined by NHTSA if such tests are conducted. 
+
+We intend to continue expanding our offerings outside of the United States, and in connection with such expansion, our vehicles will be subject to foreign safety, environmental and other regulations. Many of those regulations are different from those applicable in the United States and may require redesign and/or retesting. For example, the European Union (&#8220;E.U.&#8221;) has established approval and oversight rules requiring that a national authority certify compliance with heightened safety rules, emissions limits and production requirements before vehicles can be sold in each E.U. member state. 
+
+In addition to the various territorial legal requirements we are obligated to meet, the Lucid Air has earned five-stars, the highest possible overall safety rating, from the two main voluntary vehicle safety performance assessment programs, the NHTSA New Car Assessment Program (&#8220;NCAP&#8221;) and Euro NCAP. These programs have introduced several additional safety related tests aimed at improving the safety of passenger vehicles, both for occupants and pedestrians involved in collisions with vehicles. Some of these tests are derived from legal requirements, such as side impact, but have higher performance requirements. Others are unique to the programs. Areas covered by these tests included: 
+
+&#8226; Mobile Progressive Deformable Barrier; 
+
+&#8226; Full Width Rigid Barrier; 
+
+&#8226; Mobile Side Impact Barrier; 
+
+&#8226; Side Pole; 
+
+&#8226; Far Side Impact; 
+
+&#8226; Whiplash; 
+
+&#8226; Vulnerable Road Users (Pedestrians and Cyclists); 
+
+&#8226; Safety Assist; and 
+
+&#8226; Rescue and Extrication. 
+
+ADAS Regulations 
+
+We have equipped our vehicles with certain advanced driver assistance features. Generally, laws pertaining to driver assistance features and self-driving vehicles are evolving globally, and in some cases may create restrictions on advanced driver assistance or self-driving features that Lucid may develop. 
+
+While there are currently no U.S. federal regulations specifically pertaining to autonomous vehicles or autonomy equipment, NHTSA has published recommended guidelines on autonomous vehicles and retains the authority to investigate and/or act on the safety of any vehicle, equipment or features operating on public roads. Certain U.S. states also have legal restrictions on the operation, registration or licensure of autonomous vehicles, and many other states are considering similar restrictions. This regulatory patchwork increases the legal complexity with respect to autonomous vehicles in the United States. 
+
+In markets that follow the regulations of the United Nations Economic Commission for Europe, some requirements restrict the design of advanced driver assistance or autonomous features, which can compromise or prevent their use entirely. Other applicable laws, both current and proposed, may hinder the path and timeline to introducing such features in the markets where they apply. Jurisdictions, including China, have implemented autonomous vehicle regulation while others continue to consider new regulation. Any implemented regulations may differ materially from those in the United States and Europe, which may further increase the legal complexity of advanced driver assistance and autonomous features and limit or prevent certain features. 
+
+Automobile Manufacturer and Dealer Regulation 
+
+In the United States, state laws regulate the manufacture, distribution, sale and service of automobiles, and generally require motor vehicle manufacturers and dealers to be licensed in order to sell vehicles directly to residents. Certain states do not permit automobile manufacturers to be licensed as dealers or to act in the capacity of a dealer or otherwise restrict a manufacturer&#8217;s ability to deliver or service vehicles. To sell vehicles to residents of states where we are not licensed as a dealer, we expect to conduct the transfer of title out of the state. In certain such states, we expect to open Studios that serve an educational purpose and where the title transfer may not occur. 
+
+Some automobile dealer trade associations have challenged the legality of our operations and direct selling operations by OEMs in court and have used administrative and legislative processes to attempt to prohibit or limit such OEMs&#8217; ability to operate existing stores or expand to new locations. Certain dealer associations have also actively lobbied state licensing agencies and legislators to interpret existing laws or enact new laws in ways not favorable to our planned direct sales and service model. We expect dealer trade associations to continue to lobby state licensing agencies and legislators to interpret existing laws or enact new laws in ways not favorable to our business model; however, we intend to oppose such efforts to limit our ability to operate and intend to proactively support legislation, and litigation when necessary, that enables our business model. 
+
+Battery Safety and Testing Regulations 
+
+We design our battery packs to conform to mandatory regulations that govern transport of &#8220;dangerous goods,&#8221; defined to include lithium-ion batteries, which may present a risk in transportation. The governing regulations, which are issued by the Pipeline and Hazardous Materials Safety Administration, are based on the United Nations (&#8220;U.N.&#8221;) Recommendations on the Safe Transport of Dangerous Goods Model Regulations and related U.N. Manual Tests and Criteria. The regulations vary by mode of shipping transportation, such as by ocean vessel, rail, truck or air. We plan to complete all applicable transportation tests for our battery packs, demonstrating our compliance with applicable regulations. We use lithium-ion cells in the high voltage battery packs in our vehicles. The use, storage and disposal of battery packs is regulated under federal and state laws. 
+
+We also design our battery packs to comply with the United Nations Economic Commission for Europe (&#8220;UNECE&#8221;) R100 regulation necessary for type approval in the European Union (&#8220;EU&#8221;) as well as the CE requirements necessary to import or sell EVs in the EU. 
+
+Our battery packs are tested for compliance with applicable requirements of the UNECE Manual of Tests and Criteria demonstrating our ability to ship battery packs by any method. These tests include: 
+
+&#8226; Altitude simulation&#8201;&#8212;&#8201;simulating air transport; 
+
+&#8226; Thermal cycling&#8201;&#8212;&#8201;assessing cell and battery seal integrity, as well as cell and battery thermal stability; 
+
+&#8226; Vibration&#8201;&#8212;&#8201;simulating vibration during transport; 
+
+&#8226; Shock&#8201;&#8212;&#8201;simulating possible impacts during transport; and 
+
+&#8226; External short circuit&#8201;&#8212;&#8201;simulating an external short circuit. 
+
+We equip our battery systems with a set of passive and active safety features to help ensure the battery always operates within the design envelope and fails safe in case of abnormal conditions. 
+
+We test our battery packs for compliance with applicable requirements of the UNECE R100 regulation demonstrating battery safety. These tests include: 
+
+&#8226; Vibration &#8212; simulating vibration during driving; 
+
+&#8226; Thermal cycle &#8212; assessing pack thermal stability in elevated temperatures; 
+
+&#8226; Fire resistance &#8212; assessing the ability of the pack to sustain exposure to large flames without explosion; 
+
+&#8226; External short circuit &#8212; assessing the ability of the pack to fail safe when exposed to external short circuit; 
+
+&#8226; Overcharge protection &#8212; assessing the ability of the pack to fail safe when it is attempted to overcharge; 
+
+&#8226; Overdischarge protection &#8212; assessing the ability of the pack to fail safe when it is attempted to overdischarge; 
+
+&#8226; Overtemperature protection &#8212; assessing the ability of the pack to fail safe when it overheats; 
+
+&#8226; Overcurrent protection &#8212; assessing the ability of the pack to fail safe when it is exposed to overcurrent conditions; 
+
+&#8226; Thermal event warning &#8212; assessing the ability of the pack to detect a thermal event and generate a warning to the driver; and 
+
+&#8226; Thermal propagation &#8212; assessing the ability of the pack to tolerate a single cell thermal event safely. 
+
+Data Privacy and Cybersecurity Regulation 
+
+We are subject to, or otherwise affected by, a variety of increasingly stringent federal, state, local and international laws and regulations relating to data privacy and cybersecurity, including, among other laws and regulations, contractual obligations, and industry standards that impose certain obligations and restrictions with respect to the processing of personal information of our employees, customers, and other third-party individuals. The EU&#8217;s General Data Protection Regulation (&#8220;GDPR&#8221;), Cyber Resiliency Act, Data Act and AI Act, as well as other global regulations such as the United Kingdom General Data Protection Regulation (i.e., a version of the GDPR as implemented into the law of the United Kingdom), Saudi Arabia&#8217;s Personal Data Protection Law (&#8220;PDPL&#8221;), the rules and regulations promulgated under the authority of the Federal Trade Commission of the United States, the Gramm Leach Bliley Act, the California Consumer Privacy Act of 2018 (as amended by the California Privacy Rights Act of 2020), certain other comprehensive state data privacy and cybersecurity laws and regulations, and various state data breach notification laws. 
+
+We are also impacted by regulations obligating us to share vehicle repair-related information with third parties, including repair shops and repair tool hardware developers, under what are commonly called &#8220;right-to-repair&#8221; laws. In addition, the UNECE has introduced regulations governing connected vehicle cybersecurity in the EU which are mandatory for all new vehicle types from July 2022 and all new vehicles produced from July 2024, and we are required to comply with the vehicle certification process and maintenance of a Cybersecurity Management System. See &#8220;Risk Factors &#8212; Risks Related to Cybersecurity and Data Privacy&#8221; for more information regarding applicable cybersecurity and data privacy laws and regulations and risks related to cybersecurity and data privacy and &#8220;Item 1C &#8212; Cybersecurity&#8221; for more information regarding our cybersecurity risk management program. 
+
+Competition 
+
+We face competition from both traditional automotive OEMs and newer companies focused on electric and other alternative fuel vehicles. We expect this competition to increase, particularly as the transportation sector continues to shift towards low-emission, zero-emission, or carbon neutral solutions. 
+
+The Lucid Air, the Lucid Gravity, and planned future vehicles are expected to compete with both traditional luxury internal combustion vehicles from established automotive OEMs and electric and other alternative fuel vehicles from both new manufacturers and established automotive OEMs, many of which have entered or have announced plans to enter the alternative fuel and electric vehicle market. Many major automobile manufacturers, including luxury automobile manufacturers, have EVs available today, and other current and prospective automobile manufacturers are also developing EVs. In addition, numerous manufacturers offer hybrid vehicles, including plug-in versions, with which our vehicles also compete. 
+
+We believe the primary competitive factors on which we will compete include, but are not limited to: 
+
+&#8226; product quality, reliability and safety; 
+
+&#8226; range, efficiency and charging speeds; 
+
+&#8226; product performance; 
+
+&#8226; technological innovation, including with respect to ADAS features; 
+
+&#8226; access to charging options; 
+
+&#8226; design, styling, and luxury; 
+
+&#8226; service options and customer experience; 
+
+&#8226; management team experience at bringing EV and other disruptive technologies to market; 
+
+&#8226; manufacturing efficiency; 
+
+&#8226; brand recognition and prestige; and 
+
+&#8226; product price. 
+
+We believe that we compete favorably on the basis of these factors. However, many of our current and potential competitors have substantially greater financial, technical, manufacturing, marketing and other resources than us. Our competitors may be able to deploy greater resources to the design, development, manufacturing, distribution, promotion, sales, marketing, and support of their products. Additionally, many of our competitors also have greater name recognition, longer operating histories, larger sales forces, broader customer and industry relationships, and other tangible and intangible resources that exceed ours. Furthermore, many of our competitors operate with a traditional sales and dealer distribution model for vehicles that may be viewed more favorably by potential customers. These competitors also compete with us in recruiting and retaining qualified research and development, sales, marketing and management personnel, as well as in acquiring technologies complementary to, or necessary for, our products. Additional mergers and acquisitions or joint venture agreements in the EV and luxury automotive markets may result in even more resources being concentrated in our competitors. 
+
+Intellectual Property 
+
+Intellectual property is important to our business. Our commercial success depends in part on our ability to obtain, maintain, enforce, defend, and protect the intellectual property and other proprietary technology that we develop, to operate without infringing, misappropriating or otherwise violating the intellectual property and proprietary rights of others; and to prevent others from infringing, misappropriating or violating our intellectual property and proprietary rights. We rely on a combination of patents, trademarks, copyrights, trade secrets, know-how, continuing technological innovation, confidential information, and other measures to develop and maintain our proprietary position including through employee, contractor, consultant and third-party nondisclosure and invention assignment agreements, and other contractual arrangements. 
+
+Regardless of the coverage we seek under our existing patent applications, there is always a risk that alterations from our products or processes may provide sufficient basis for a competitor to avoid infringement claims. In addition, the coverage claimed in a patent application can be significantly reduced before a patent is issued and courts can reinterpret patent scope after issuance. Many jurisdictions, including the United States, permit third parties to challenge issued patents in administrative proceedings, which may result in further narrowing or even cancellation of patent claims. We cannot provide any assurance that any patents will be issued from our pending or any future applications or that any current or future issued patents will adequately protect our intellectual property. For this and other risks related to our intellectual property, proprietary technology, inventions and improvements, please see the section entitled &#8220;Risk Factors&#8201;&#8212;&#8201;Risks Related to Our Business and Operations&#8201;&#8212;&#8201;Risks Related to Intellectual Property.&#8221; 
+
+As of December 31, 2024, we owned approximately 207 issued U.S. patents, 147 pending U.S. patent applications, 140 issued foreign patents, 161 pending foreign patent applications and 71 pending Patent Cooperation Treaty patent applications. 
+
+As of December 31, 2024, we also owned approximately 16 registered U.S. trademarks and 19 pending U.S. trademark applications, as well as 461 registered foreign trademarks and 79 pending foreign trademark applications in approximately 33 countries worldwide in addition to the European Union. 
+
+As of December 31, 2024, we also owned approximately 56 issued U.S. design patents and 38 pending U.S. design patent applications, as well as 260 issued foreign design patents/industrial designs and 25 pending foreign design patent/industrial design applications. 
+
+We expect to develop additional intellectual property and proprietary technology as our engineering and validation activities proceed. Technologies that we have and intend to invest in and develop include engineering software, powertrain systems and controls, infotainment, cybersecurity, telematics and electrical architecture hardware and software. As we develop our technology, we will continue to build our intellectual property portfolio, including by pursuing patent and other intellectual property protection when we believe it is possible, cost-effective, beneficial, and consistent with our overall intellectual property protection strategy. 
+
+In addition to the intellectual property that we own, we also procure key technologies under our supply chain agreements, and we license key technologies under our license agreements. 
+
+See &#8220;&#8212; &#8201;Our Vehicles &#8221; and &#8220;&#8212;&#8201; Technology &#8221; above for more information. 
+
+The terms of individual issued patents extend for varying periods depending on the date of filing of the patent application or the date of patent issuance and the legal term of patents in the countries in which they are obtained. Generally, utility patents issued for applications filed in the United States are granted a term of 20 years from the earliest effective filing date of a non-provisional patent application, assuming the patent has not been terminally disclaimed over a commonly-owned patent or a patent naming a common inventor, or over a patent not commonly owned but that was disqualified as prior art as the result of activities undertaken within the scope of a joint research agreement. The life of a patent, and the protection it affords, is therefore limited and once the patent lives of our issued patents have expired, we may face competition, including from other competing technologies. The duration of foreign patents varies in accordance with provisions of applicable local law, but typically is also 20 years from the earliest effective filing date. The actual protection afforded by a patent may vary from country to country and can depend upon many factors, including the type of patent, the scope of its coverage, the availability of patent term adjustments or extensions, the availability of legal remedies in a particular country, and the validity and enforceability of the patent. As a result, our owned patent portfolio may not provide us with sufficient rights to exclude others from commercializing products similar or identical to ours. 
+
+Furthermore, we rely upon trade secrets, know-how, confidential information, unpatented technologies, continuing technological innovation, and other proprietary information to develop, protect, and maintain our competitive position and aspects of our business that are not amenable to, or that we do not presently consider appropriate for, patent protection and prevent competitors from reverse engineering or copying our technologies. However, the foregoing rights, technologies and information are difficult to protect. We seek to protect them by, in part, using confidentiality agreements with our employees, contractors, consultants, and any potential commercial partners and collaborators and invention assignment agreements with our employees. We also have implemented or intend to implement confidentiality agreements or invention assignment agreements with our selected contractors, consultants, and potential commercial partners. These agreements are designed to protect our proprietary information and, in the case of the invention assignment agreements, to grant us ownership of technologies that are developed through a relationship with a third party. These agreements may be breached, and we may not have adequate remedies for any breach. There can be no assurance that these agreements will be self-executing or otherwise provide meaningful protection for our trade secrets or other intellectual property or proprietary information or technology. In addition, our trade secrets may otherwise become known or be independently discovered by our competitors. To the extent that our commercial partners, collaborators, employees, contractors, and consultants use intellectual property owned by others in their work for us, disputes may arise as to the rights in related or resulting know-how and inventions. 
+
+Our commercial success will also depend in part on not infringing, misappropriating or otherwise violating the intellectual or proprietary rights of third parties. The issuance of third-party patents could require us to alter our development or commercial strategies, change our products or processes, obtain licenses to additional third-party patents or other intellectual property or cease certain activities. Our breach of any license agreements or failure to obtain a license to proprietary rights that we may require to develop or commercialize our future products or technologies may have an adverse impact on us. Given that patent applications in the United States and certain other jurisdictions are maintained in secrecy for 18 months or potentially longer, and since publication of discoveries in the scientific or patent literature often lags behind actual discoveries, we cannot be certain of the patent protection being sought by third parties and/or the priority of inventions covered by such patent applications. Moreover, we may have to participate in interference, revocation, derivation, re-examination, post-grant review, inter partes review or opposition proceedings brought by third parties or declared by the U.S. Patent and Trademark Office or an equivalent foreign body. See &#8220; Risk Factors&#8201;&#8212;&#8201;Risks Related to Our Business and Operations &#8212;&#8201;Risks Related to Intellectual Property &#8221; for more information regarding these and other risks related to our intellectual property portfolio and their potential effect on us. 
+
+HUMAN CAPITAL RESOURCES 
+
+At Lucid, we strongly believe in the power of our talented employees and partners to create, build, and support the world&#8217;s most advanced EVs available in the market. We seek to attract and retain employees whose respective professional and personal backgrounds can help craft an unparalleled suite of state-of-the-art, technologically advanced, California-inspired vehicles for consumers worldwide. 
+
+Towards these goals, as of December 31, 2024, we employed approximately 6,800 full-time employees globally. Our employees are primarily based at our headquarters in Newark, California, at our regional headquarters in Riyadh, Saudi Arabia, at our satellite location in Southfield, Michigan, at our EV manufacturing facilities in Casa Grande, Arizona, and King Abdullah Economic City (&#8220;KAEC&#8221;), Saudi Arabia, and at our retail stores and service centers throughout the United States and Canada, Europe, Saudi Arabia, and United Arab Emirates. 
+
+We believe that our mission-first passion to advance the state-of-the-art of EV technology for the benefit of all would not be possible without a broad array of experiences and professional and personal backgrounds across our team. 
+
+Our Culture 
+
+When design is led by inspiration, invention by insight, and engineering by experience, we believe that anything is possible. Our relentless focus on innovation, luxury, and sustainability moves us toward a future where you no longer must choose between doing great things and doing the right thing. 
+
+We are a collective of future visionaries; those who can think and do differently, that thrive on challenge and collaboration. Inspired by infinite possibilities, we strive to make a profound difference in the world. We are a team that values innovation, harnesses our passions, and embraces the entrepreneurial mind of limitless potential. We recognize, welcome, and appreciate the unique experiences and a broad range of perspectives that each of our employees bring with them, that in turn fuel our shared successes. 
+
+We strive to foster an open, egalitarian culture where all ideas and concerns can be raised to any member of leadership. It is a core belief that each employee has a unique lens which helps propel Lucid&#8217;s mission forward. To that end, we urge all employees to communicate their thoughts and to use any channel they deem warranted to share their perspective towards our mission. This approach helps fuel innovation, prevent stumbling blocks, and engages all employees towards being a member of one, unified team. 
+
+This year we added &#8220;customer focus&#8221; to our core values to ensure that everything we do is in service to our internal and external customers and stakeholders. We are bringing our core values to life by engaging members of the workforce in helping us define the expected behaviors for each of our core values. These values are woven into our performance management systems and help us identify talent. In addition to Customer Focus, our values include: 
+
+&#8226; Integrity in Action; 
+
+&#8226; Breakthrough Innovation; 
+
+&#8226; One Team; 
+
+&#8226; Passion for Excellence; 
+
+&#8226; Act With Urgency; and 
+
+&#8226; Ownership Mindset. 
+
+Safety 
+
+We instill an expectation and culture of safety in our workplace. As a manufacturing company, we are committed to ensuring workplace health, safety and environmental protection for our employees, suppliers, business partners, customers, and all our stakeholders. We protect the health and safety of our employees through a proactive and systematic approach to safety and health management. To demonstrate this, in 2024, we maintained ISO 45001 and ISO 14001 certifications for AMP-1 and achieved ISO 45001 and ISO 14001 certifications for AMP-2, which validates our system of continuous improvement to reduce occupational risk and improve worker safety. In 2024, the AMP-2 manufacturing site celebrated over 2 million man-hours of construction without a lost time injury. 
+
+Our Workforce and Commitment to Inclusion 
+
+At Lucid, inclusion is an essential part of who we are. We value the broad range of perspectives and experiences of our employees who reflect the communities we serve. Our differences spark innovation and drive us forward, which is why we are committed to fostering an inclusive culture that empowers us to bring our best selves to work and achieve our mission to build a better future together. 
+
+Our people centric and data-driven workforce strategy focuses on three pillars: 
+
+1. Growing our workforce by attracting, hiring, and promoting talent from all backgrounds 
+
+2. Fostering an inclusive culture by promoting policies, practices, and programs that support and engage all employees 
+
+3. Being key contributors to the community by engaging with and investing in local communities where we operate 
+
+Of note, Lucid sponsors nine employee resource groups to support and empower our employees. Membership in employee resource groups is open to all Lucid employees. 
+
+Compensation and Benefits 
+
+We offer competitive compensation to attract and retain the best people in the world, and we help care for our people so they can focus on our mission. Our employees' total compensation package includes market-competitive cash compensation and equity awards to all employees. We offer full-time employees equity at the time of hire and through annual equity grants because we want them to be owners of the company and committed to our long-term success. In 2024, we strengthened our support for employees and their families through the introduction of new health and wellness benefits. We are pleased to support employees and families through a comprehensive suite of insurance and retirement offerings, most of which can be individually selected by each employee to best fit their needs. 
+
+ENVIRONMENTAL IMPACT 
+
+As a technology and EV company focused on efficiently using our planet&#8217;s precious resources, we are proud that sustainability has been at the core of our business since day one. We are committed to improving environmental and social impacts across our value chain and helping ensure a robust governance structure to support our efforts. We believe in the importance of accountability and transparency, and we published our first sustainability report in 2024 that contains the details of our program. 
+
+Highlights of our sustainable impact include: 
+
+Product: Efficiency is a key measure of the in-house technology embedded in our products, contributing to our goal of a best-in-class experience for our customers while benefiting the environment. The Lucid Air continues to be the longest-range fully electric vehicle (the Lucid Air Grand Touring has an EPA-estimated range of 512 miles per charge with 19-inch wheels) and the most efficient vehicle (the Lucid Air Pure with 5.0 miles of range per kilowatt-hour), and the Lucid Air has one of the lowest coefficients of drag of any vehicle on the market (0.197 coefficient of drag with 19-inch wheels). These achievements are based on a relentless focus on efficiency through the EV powertrain, battery pack and system, and an aerodynamic design. This focus on efficiency also enables our vehicles to travel further per kilowatt-hour. Each extra mile that we extract per kilowatt-hour of energy means less energy required and fewer carbon emissions from the electrical grid. This same efficient technology and approach enables the possibility of vehicles with smaller, lower-cost battery packs that retain competitive range, &#8212;which would benefit the environment by requiring fewer battery cells per vehicle. 
+
+Environmental, Social, and Governance (&#8220;ESG&#8221;) Strategy: Our dedicated ESG team continues to drive our efforts to implement thoughtful ESG strategies and programs. We base our priorities on a high-level ESG materiality assessment to identify key topics for our strategy. This effort includes insight from investors, ratings and rankings, Company leadership interviews, research on peers and consumer trends, and a media review. Our ESG Steering Committee, established in 2021, is comprised of senior executive leaders who meet on a regular basis to drive our strategy on ESG topics. 
+
+GOVERNANCE 
+
+We recognize that sound governance practices are critical to ethical business practices and our overall success as an organization and business. 
+
+&#8226; Corporate Governance: Our corporate governance best practices include: a majority independent Board under SEC and Nasdaq rules; a well-qualified Board with broad range of skills, backgrounds, and experiences, which includes 4 female directors and 5 members of under-represented communities; an independent chairman of the Board; and no classified board structure (all directors must be elected every year). 
+
+&#8226; Business Ethics: We have a publicly available Code of Business Conduct and Ethics and a framework to receive and investigate reports of policy violations. The Code of Business Conduct and Ethics is available on our Investor Relations website at https://ir.lucidmotors.com under the subheading &#8220;Governance.&#8221; 
+
+&#8226; Compliance: We continue to enhance our compliance program centered around a clear statement of principles and an expectation for both legal compliance and high ethical standards. We intend to achieve these goals through ongoing training of our contractors and employees, due diligence of our suppliers, clear policies and guidelines, internal controls over financial transactions, technological solutions to automate screenings for legal compliance and a reporting hotline which enables employees and service providers to share allegations of any legal or ethical matters on an anonymous basis. 
+
+AVAILABLE INFORMATION 
+
+We are required to file annual, quarterly and current reports, proxy statements and other information with the SEC. We also maintain an Investor Relations website at https://ir.lucidmotors.com . Through our website, we make available, free of charge, the following documents of Lucid as soon as reasonably practicable after they are electronically filed with, or furnished to, the SEC: Annual Reports on Form 10-K; proxy statements for our annual and special shareholder meetings; Quarterly Reports on Form 10-Q; Current Reports on Form 8-K; Forms 3, 4 and 5 and Schedules 13D; and amendments to those documents. Our SEC filings are available on the SEC&#8217;s website at www.sec.gov. 
+
+Our website, the SEC&#8217;s website and the information contained therein or linked thereto are not a part of this Annual Report. 
+

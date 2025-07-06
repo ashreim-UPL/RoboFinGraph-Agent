@@ -1,0 +1,13 @@
+Certainly! Here are the performance highlights for each of Microsoft's business lines based on the provided information:
+
+**Productivity and Business Processes:**  
+Microsoft's Productivity and Business Processes segment experienced a 12% revenue increase driven by growth in Office 365 Commercial, LinkedIn, and Dynamics 365, reflecting strong demand for cloud-based productivity tools and enterprise solutions.  
+This growth was supported by increased Office 365 seat counts, expanding LinkedIn monetization, and broad adoption of Dynamics 365 across various workloads, leading to higher operating income and margins.
+
+**Intelligent Cloud:**  
+The Intelligent Cloud segment saw a 20% revenue increase primarily fueled by Azure and other cloud services, highlighting the continued shift toward cloud infrastructure and AI-enabled solutions.  
+Growth was driven by a 30% increase in Azure and cloud service consumption, alongside demand for hybrid solutions like Windows Server and SQL Server, resulting in significant operating income expansion.
+
+**More Personal Computing:**  
+More Personal Computing experienced a 13% revenue rise, with notable contributions from Windows, gaming, and search advertising, indicating a balanced performance across devices, gaming, and advertising.  
+This was driven by an 8% increase in Windows revenue, a 50% surge in Xbox content and services, and higher search advertising revenue, despite a decline in device sales.

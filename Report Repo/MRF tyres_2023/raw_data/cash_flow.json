@@ -1,0 +1,92 @@
+[
+  {
+    "Cashflow Statement": "NetIncome/StartingLine",
+    "2023": "1069.74",
+    "2022": "907.93"
+  },
+  {
+    "Cashflow Statement": "Depreciation/Depletion",
+    "2023": "1253.05",
+    "2022": "1205.05"
+  },
+  {
+    "Cashflow Statement": "Non-CashItems",
+    "2023": "164.58",
+    "2022": "33.59"
+  },
+  {
+    "Cashflow Statement": "ChangesinWorkingCapital",
+    "2023": "268.10",
+    "2022": "-2724.60"
+  },
+  {
+    "Cashflow Statement": "CashfromOperatingActivities",
+    "2023": "2755.47",
+    "2022": "-578.03"
+  },
+  {
+    "Cashflow Statement": "CapitalExpenditures",
+    "2023": "-3291.24",
+    "2022": "-1707.01"
+  },
+  {
+    "Cashflow Statement": "OtherInvestingCashFlowItemsTotal",
+    "2023": "1367.77",
+    "2022": "1872.02"
+  },
+  {
+    "Cashflow Statement": "CashfromInvestingActivities",
+    "2023": "-1923.47",
+    "2022": "165.01"
+  },
+  {
+    "Cashflow Statement": "FinancingCashFlowItems",
+    "2023": "-269.26",
+    "2022": "-235.79"
+  },
+  {
+    "Cashflow Statement": "TotalCashDividendsPaid",
+    "2023": "-63.62",
+    "2022": "-63.60"
+  },
+  {
+    "Cashflow Statement": "Issuance(Retirement)ofDebtNet",
+    "2023": "-506.66",
+    "2022": "723.15"
+  },
+  {
+    "Cashflow Statement": "CashfromFinancingActivities",
+    "2023": "-839.54",
+    "2022": "423.76"
+  },
+  {
+    "Cashflow Statement": "ForeignExchangeEffects",
+    "2023": "1.66",
+    "2022": "1.10"
+  },
+  {
+    "Cashflow Statement": "NetChangeinCash",
+    "2023": "-5.88",
+    "2022": "11.84"
+  },
+  {
+    "Cashflow Statement": "CashInterestPaid",
+    "2023": "269.83",
+    "2022": "236.10"
+  },
+  {
+    "Cashflow Statement": "CashTaxesPaid",
+    "2023": "327.77",
+    "2022": "213.46"
+  },
+  {
+    "Cashflow Statement": "periodLength",
+    "2023": "12",
+    "2022": "12"
+  },
+  {
+    "Cashflow Statement": "periodType",
+    "2023": "Months",
+    "2022": "Months"
+  }
+]

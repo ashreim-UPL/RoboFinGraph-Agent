@@ -11,16 +11,13 @@ import inspect
 from typing import Dict, Any, List, Callable, Tuple
 from langchain.schema import HumanMessage
 
-from tools.file_utils import check_file_stats
-from tools.global_API_toolkit import get_10k_section, get_10k_metadata
 from utils.logger import get_logger, log_event, log_agent_step, log_cost_estimate
 from utils.config_utils import LangGraphLLMExecutor
 from prompts.summarization_intsruction import summarization_prompt_library
 from prompts.report_summaries import report_section_specs
-from functools import partial
-from agents.state_types import NodeState, AgentState
+from agents.state_types import AgentState
 from agents.state_types import TOOL_MAP, TOOL_IN_MAP
-
+from collections import Counter
 
 logger = get_logger()
 logger = logging.getLogger(__name__)
@@ -91,8 +88,6 @@ def collect_indian_financial_data(state: AgentState) -> Dict[str, List[str]]:
         out_file_path = os.path.join(output_filename)
         
         if tool_name not in TOOL_IN_MAP:     
-            print(tool_name)
-            input("Tool not found")     
             msg = f"Tool '{tool_name}' not found in TOOL_IN_MAP. Skipping."
             logger.warning(msg)
             errors.append(msg)
@@ -468,43 +463,73 @@ def validate_insights(insights: Dict[str, str]) -> Dict[str, Any]:
     }
 
 def evaluate_pipeline(
-    agent_state: AgentState,
-    audit_executor: LangGraphLLMExecutor
+    agent_state: "AgentState",
+    icaif_scores: dict = None   
 ) -> Dict[str, Any]:
-    """
-    Performs both quantitative and qualitative evaluation of the pipeline.
-    - Quantitative KPIs: total cost, total latency, per-step models
-    - Qualitative assessment: uses the provided 'audit_executor'
+    from collections import Counter
+    from datetime import datetime
 
-    Returns a dict with 'kpis' and 'quality_assessment'.
-    """
-    # --- Quantitative ---
-    steps = agent_state.memory.get("pipeline_data", [])
-    total_cost    = sum(s.get("cost_llm",    0.0) for s in steps)
-    total_latency = sum(s.get("duration",    0.0) for s in steps)
-    model_steps   = {s["node"]: s.get("tools_used", []) for s in steps}
+    steps = agent_state.memory.get("pipeline_data", []) or []
+    models_used = agent_state.memory.get("models_used", []) or []
+    nodes_sequence = agent_state.memory.get("pipeline_nodes", [])
 
+    # --- Aggregate LLM KPIs from models_used ---
+    filtered = [
+        m for m in models_used
+        if m.get("provider") and m["provider"].lower() not in ("none", "", "na")
+        and m.get("model") and m["model"].lower() not in ("none", "", "na")
+    ]
+    provider_counts = Counter(m["provider"] for m in filtered)
+    most_common_provider = provider_counts.most_common(1)[0][0] if provider_counts else "None"
+    unique_models = sorted(set(m["model"] for m in filtered))
+    total_tokens_sent = sum(m.get("tokens_sent", 0) for m in filtered)
+    total_tokens_generated = sum(m.get("tokens_generated", 0) for m in filtered)
+    total_cost_llm = sum(m.get("cost_llm", 0.0) for m in filtered)
+
+    # --- KPIs from pipeline steps (non-LLM metrics) ---
+    total_latency = sum(s.get("duration", 0.0) for s in steps if isinstance(s, dict))
+    # To avoid 'unhashable type: list', just take the node name string, not a list!
+    model_steps = {}
+    for s in steps:
+        node_name = s.get("current_node") or s.get("node")
+        if node_name:
+            model_steps[str(node_name)] = s.get("tools_used", [])
+
+    # --- Pipeline start/end/duration ---
+    pipeline_start = agent_state.memory.get("pipeline_start_time")
+    pipeline_end   = agent_state.memory.get("pipeline_end_time")
+    pipeline_duration = None
+    if pipeline_start and pipeline_end:
+        try:
+            start_dt = datetime.fromisoformat(pipeline_start)
+            end_dt   = datetime.fromisoformat(pipeline_end)
+            pipeline_duration = (end_dt - start_dt).total_seconds()
+        except Exception:
+            pipeline_duration = None
+
+    # --- KPIs output ---
     kpis = {
-        "total_pipeline_cost_usd":    round(total_cost,    4),
-        "total_pipeline_latency_sec": round(total_latency,  2),
-        "model_steps":                model_steps,
+        "total_pipeline_cost_usd":      round(total_cost_llm, 4),
+        "total_pipeline_latency_sec":   round(total_latency, 2),
+        "pipeline_nodes_sequence":      nodes_sequence,
+        "pipeline_start_time":          pipeline_start,
+        "pipeline_end_time":            pipeline_end,
+        "pipeline_total_duration_sec":  round(pipeline_duration, 2) if pipeline_duration is not None else None,
+        "model_steps":                  model_steps,
+        "main_llm_provider":            most_common_provider,
+        "unique_llm_models":            unique_models,
+        "total_tokens_sent":            total_tokens_sent,
+        "total_tokens_generated":       total_tokens_generated,
     }
-
-    # --- Qualitative ---
-    payload = {
-        "initial_query": agent_state.user_input,
-        "summaries":     agent_state.memory.get("summaries"),
-        "final_report":  agent_state.memory.get("final_report"),
-    }
-    prompt = f"Evaluate the final report quality given context: {json.dumps(payload)}"
-
-    # Use the passed-in executor, which already knows its model & state
-    resp = audit_executor.generate(
-        [HumanMessage(content=prompt)],
-        agent_state
-    )
+    if icaif_scores:
+        kpis.update({
+            'icaif_accuracy':     icaif_scores.get('accuracy'),
+            'icaif_logicality':   icaif_scores.get('logicality'),
+            'icaif_storytelling': icaif_scores.get('storytelling'),
+            'icaif_scores':       icaif_scores,
+        })
 
     return {
-        "kpis":               kpis,
-        "quality_assessment": resp.content
+        "kpis":           kpis,
+        "pipeline_steps": steps,
     }

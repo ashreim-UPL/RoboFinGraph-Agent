@@ -1,0 +1,31 @@
+Certainly! Here are the performance highlights for each company's business line, summarized in two sentences each:
+
+**Mastercard's Business Line Performance Highlights:**
+
+1. **Core Payments Network:**  
+   Mastercard's core payments network supports over $9.0 trillion in gross dollar volume, reflecting a 24% growth in 2023, driven by increased transaction volumes and expanded acceptance.  
+   This network facilitates secure, efficient, and flexible electronic transactions worldwide, connecting consumers, merchants, and financial institutions across multiple currencies and countries.
+
+2. **Payment Products (Consumer, Commercial, and Prepaid):**  
+   Mastercard's consumer credit, debit, and prepaid card volumes grew by approximately 12% in 2023, with total cardholder accounts reaching over 3.5 billion.  
+   These products enable convenient, secure, and diverse payment options for consumers and businesses globally, supporting increased transaction activity and acceptance.
+
+3. **Value-Added Services and Solutions:**  
+   Revenue from value-added services increased by 18% in 2023, driven by growth in cyber and intelligence solutions, analytics, consulting, and loyalty programs.  
+   These services enhance transaction security, provide actionable insights, and strengthen customer engagement, contributing significantly to Mastercard’s overall revenue growth.
+
+4. **Innovation and Digital Capabilities:**  
+   Mastercard's digital and tokenization solutions, including the Multi Token Network, marked milestones such as three billion tokens in a month, supporting secure digital asset transactions.  
+   These innovations help expand digital payment experiences, support emerging technologies like blockchain, and improve transaction security and scalability.
+
+5. **Cyber and Intelligence Solutions:**  
+   Mastercard's cyber and intelligence solutions prevented over $20 billion in fraud globally in 2023, leveraging AI and multi-layered security strategies.  
+   These solutions protect the payments ecosystem from cyber threats, enhance fraud detection, and build trust among stakeholders.
+
+6. **Open Banking and Digital Identity:**  
+   Mastercard's open banking platform connected over 95% of U.S. deposit accounts and enabled secure data sharing, supporting seamless consumer experiences.  
+   These capabilities facilitate consumer-permissioned data exchange and digital identity solutions, fostering financial inclusion and secure digital transactions.
+
+7. **Financial Performance and Shareholder Returns:**  
+   Mastercard achieved a 13% increase in net revenue to $25.1 billion in 2023, with $12.0 billion returned to shareholders through share repurchases and dividends.  
+   The company’s strong financial results reflect growth across its network and services, supported by strategic investments and capital return programs.

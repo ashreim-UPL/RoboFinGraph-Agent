@@ -1,0 +1,17 @@
+**Intel Corporation (Overall):**  
+Intel continues to execute its long-term transformation strategy focused on advancing process technology, expanding manufacturing capacity, and delivering innovative products across multiple segments. The company has made significant investments in IDM 2.0, launched new leading-edge processors, and advanced its manufacturing roadmap to regain transistor performance leadership by 2025.
+
+**Client Computing Group (CCG):**  
+Intel's Client Computing Group is focused on delivering high-performance, AI-enabled processors for PCs and laptops. The segment launched the 13th and 14th Gen Intel Core processors, including the first AI-capable Core Ultra family, to enhance user experiences with improved performance, power efficiency, and AI capabilities.
+
+**Data Center and AI (DCAI):**  
+Intel's Data Center and AI segment provides workload-optimized solutions for cloud, enterprise, and AI applications. Despite revenue declines driven by lower server demand, it has introduced the 4th and 5th Gen Xeon processors with AI acceleration and expanded its AI hardware portfolio, including the Gaudi deep learning processors.
+
+**Network and Edge (NEX):**  
+Intel's Network and Edge business develops solutions for networking infrastructure, 5G, and edge computing. The segment experienced revenue declines but continues to innovate with new processors and platforms, including AI-enabled edge platforms and 5G solutions, to support the evolving network landscape.
+
+**Mobileye:**  
+Mobileye is a leader in ADAS and autonomous driving technologies, delivering advanced driver-assistance systems and autonomous vehicle solutions. The company has expanded its EyeQ-based systems into hundreds of vehicle models, achieved key design wins, and is progressing in autonomous driving capabilities with products like Mobileye Chauffeur and Mobileye SuperVision.
+
+**Intel Foundry Services (IFS):**  
+Intel's Foundry Services aim to establish a leading-edge, open system foundry business for third-party semiconductor manufacturing. The segment has secured multiple design wins on Intel 18A, expanded its ecosystem partnerships, and is developing advanced packaging and process technologies to compete globally in the foundry market.

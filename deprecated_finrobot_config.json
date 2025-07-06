@@ -1,0 +1,56 @@
+{
+  "api_keys":{
+    "FMP_API_KEY": "h39fQ5nHOcfTMSQhsIJQzOwZKnocttbE",
+    "SEC_API_KEY": "5a878201d139df95002fcca9208296106588cb85d2447a923585f37a4c14fbd3",
+    "INDIAN_API_KEY": "sk-live-E0WDmXyFSKg6jJDwbkkJdvUwO7gql825EBxqIc8W"
+
+  },
+  "llm_models": {
+    "leader": "o3-mini-2025-01-31",
+    "data_cot": "gpt-4.1-nano-2025-04-14",
+    "summarizer": "gpt-4.1-mini-2025-04-14",
+    "concept_cot": "o3-mini-2025-01-31",
+    "thesis_cot": "gpt-4.1-nano-2025-04-14",
+    "auditor": "o3-mini-2025-01-31",
+    "LLMValidator": "o3-mini-2025-01-31"
+  },
+  "evaluation_models": [
+    "gpt-4.1-nano-2025-04-14",
+    "Qwen/Qwen3-235B-A22B-fp8-tput",
+    "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"
+  ],
+  "model_providers": [
+    {
+      "provider": "openai",
+      "api_key": "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",
+      "models": [
+        "gpt-4-0125-preview",
+        "gpt-4-1106-vision-preview",
+        "gpt-4.1-2025-04-14",
+        "gpt-4.1-nano-2025-04-14",
+        "gpt-4.1-mini-2025-04-14",
+        "o3-mini-2025-01-31"
+      ]
+    },
+    {
+      "provider": "together",
+      "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
+      "base_url": "https://api.together.xyz/v1",
+      "models": [
+        "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
+        "Qwen/Qwen3-235B-A22B-fp8-tput",
+        "mistralai/Mistral-7B-Instruct-v0.2",
+        "deepseek-ai/DeepSeek-V3"
+      ]
+    }
+  ],
+  "report_dir": "report",
+  "log_dir": "logs",
+  "enable_hooks": true,
+  "tool_timeout_sec": 60,
+  "max_tokens": 4096,
+  "temperature": 0.4,
+  "default_region_fallback": "US",
+  "max_competitor_peers": 3
+}
