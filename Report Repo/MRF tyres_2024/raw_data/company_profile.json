@@ -1,0 +1,26 @@
+{
+  "companyDescription": "MRF Limited is an India-based multinational tire maker. The Company is engaged in the manufacture of rubber products, such as tires, tubes, flaps, tread rubber. The Company's tires products include MRF PERFINZA, MRF MARKUS, MRF CITIBUS, MRF MOGRIP METEOR M TT, MRF ZAPPER TL, MRF ZAPPER N TL, MRF SUPER MILER 99 PLUS, MRF SUPER LUG FIFTY PLUS R, MRF SAVARI EXTRA, and others. The Company's international business has a range of tires in various categories, including heavy-duty truck/bus tires, light trucks, MUV/RCV/passenger cars, motorsports, farm services, military services, forklifts, two/three-wheeler, off-the-road/earthmovers, and pretreads. Its tires and services stocks the entire range of MRF tires and is equipped to provide services, such as computerized nitrogen inflation, tubeless repair, wheel alignment, wheel balancing and tire changing. The Company provides paints and coats, including water-based wood finishes, pigmented finishes, special coatings, and others.",
+  "mgIndustry": "Tires",
+  "metrics": {
+    "tickerId": "S0003187",
+    "companyName": "Mrf",
+    "priceToBookValueRatio": 3.33,
+    "priceToEarningsValueRatio": 32.95,
+    "marketCap": 61149.25,
+    "price": 144066.1,
+    "percentChange": -0.54,
+    "netChange": -779.6,
+    "returnOnAverageEquity5YearAverage": 8.98,
+    "returnOnAverageEquityTrailing12Month": 10.62,
+    "ltDebtPerEquityMostRecentFiscalYear": 6.11,
+    "netProfitMargin5YearAverage": 5.96,
+    "netProfitMarginPercentTrailing12Month": 6.64,
+    "dividendYieldIndicatedAnnualDividend": 0.14,
+    "totalSharesOutstanding": 0.42,
+    "languageSupport": "Mrf",
+    "imageUrl": "https://logo.clearbit.com/mrftyres.com/",
+    "overallRating": "Bullish",
+    "yhigh": 147890,
+    "ylow": 100500
+  }
+}

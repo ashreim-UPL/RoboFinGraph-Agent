@@ -7,215 +7,246 @@ from langchain_together import ChatTogether
 from langchain.schema import BaseMessage, AIMessage
 from langchain.callbacks import get_openai_callback
 from agents.state_types import AgentState, NodeState
+from datetime import datetime, timezone
 
 from utils.logger import get_logger, log_event
 
 logger = get_logger()
 
-# --- Load Configuration --- #
-env_path = os.getenv("CONFIG_PATH")
-if env_path and Path(env_path).is_file():
-    CONFIG_PATH = Path(env_path)
-else:
-    # Default location: two levels up from this file, langgraph_config.json
-    CONFIG_PATH = (Path(__file__).resolve().parent.parent / "langgraph_config.json")
+def get_config_path() -> Path:
+    """Resolve config path from env or fallback location."""
+    env_path = os.getenv("CONFIG_PATH")
+    if env_path and Path(env_path).is_file():
+        return Path(env_path)
+    # Default: two levels up from this file, langgraph_config.json
+    return Path(__file__).resolve().parent.parent / "langgraph_config.json"
 
-try:
-    with CONFIG_PATH.open("r", encoding="utf-8") as f:
-        CONFIG: Dict[str, Any] = json.load(f)
-except FileNotFoundError:
-    raise FileNotFoundError(f"FinRobot config not found at {CONFIG_PATH}")
+def load_config(config_path: str = None) -> Dict[str, Any]:
+    """Loads config from path (or default) and returns as dict."""
+    path = Path(config_path) if config_path else get_config_path()
+    if not path.is_file():
+        raise FileNotFoundError(f"FinRobot config not found at {path}")
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f)
 
-# Global settings
-DEFAULT_PROVIDER = CONFIG.get("default_provider", "openai").lower()
-TEMPERATURE      = float(CONFIG.get("temperature", 0.1))
-MAX_TOKENS       = int(CONFIG.get("max_tokens", 4096))
-TOOL_TIMEOUT     = int(CONFIG.get("tool_timeout", 30))
+def inject_env_from_config(config: Dict[str, Any]) -> None:
+    """Injects all API keys and provider URLs from config into os.environ."""
+    # Inject top-level API keys
+    for k, v in config.get("api_keys", {}).items():
+        if k and v:
+            os.environ[k] = v
+            logger.info(f"Injected API key: {k}")
+            log_event("api_key_injected", {"key": k})
 
-# Providers credentials & endpoints
-PROVIDERS: Dict[str, Dict[str, str]] = CONFIG.get("providers", {})
+    # Inject provider API keys and base URLs
+    for provider_name, provider_data in config.get("providers", {}).items():
+        env_var = f"{provider_name.upper()}_API_KEY"
+        api_key = provider_data.get("api_key")
+        if api_key:
+            os.environ[env_var] = api_key
+            logger.info(f"Injected Provider API key: {env_var}")
+            log_event("provider_api_key_injected", {"env_var": env_var})
+        if "base_url" in provider_data:
+            url_env = f"{provider_name.upper()}_BASE_URL"
+            os.environ[url_env] = provider_data["base_url"]
+            logger.info(f"Injected {url_env}")
+            log_event("provider_base_url_injected", {"env_var": url_env})
 
-# Per-node model mappings by provider
-OPENAI_MODELS : Dict[str, str] = CONFIG.get("openai_llm_models", {})
-MIXTRAL_MODELS: Dict[str, str] = CONFIG.get("mixtral_llm_models", {})
-QWEN_MODELS   : Dict[str, str] = CONFIG.get("qwen_llm_models", {})
+def available_llm_options(config: Dict[str, Any]) -> Dict[str, List[str]]:
+    """Returns available models per provider for UI selection."""
+    return {
+        k: v.get("models", [])
+        for k, v in config.get("providers", {}).items()
+    }
 
-
-def _get_node_config(node_name: str) -> Tuple[str, str]:
-    """
-    Returns (provider, model_name) for a given node based on DEFAULT_PROVIDER.
-    """
+def get_node_model(node_name: str, config: dict, provider: str = None) -> tuple:
+    default_provider = (provider or config.get("default_provider", "openai")).lower()
+    provider_map = {
+        "openai": config.get("openai_llm_models", {}),
+        "mixtral": config.get("mixtral_llm_models", {}),
+        "qwen": config.get("qwen_llm_models", {}),
+    }
+    models = provider_map.get(default_provider)
+    if not models:
+        raise ValueError(f"Provider not found in config: {default_provider}")
     key = node_name.lower().removesuffix("_agent")
-    if DEFAULT_PROVIDER == "openai":
-        model = OPENAI_MODELS.get(key)
-        provider = "openai"
-    elif DEFAULT_PROVIDER == "together":
-        model = MIXTRAL_MODELS.get(key)
-        provider = "together"
-    elif DEFAULT_PROVIDER == "qwen":
-        model = QWEN_MODELS.get(key)
-        provider = "qwen"
-    else:
-        raise ValueError(f"Unsupported default provider: {DEFAULT_PROVIDER}")
-
+    model = models.get(key)
     if not model:
-        raise ValueError(f"No model configured for node '{key}' under provider '{provider}'")
-    return provider, model
+        raise ValueError(f"No model for node '{key}' under provider '{default_provider}'")
+    return default_provider, model
 
+def get_provider_creds(provider: str, config: Dict[str, Any]) -> Dict[str, Any]:
+    """Return API keys/base_url for a given provider, with together-fallback for qwen."""
+    p = provider
+    if p == "qwen":
+        p = "together"
+    creds = config.get("providers", {}).get(p, {})
+    if not creds:
+        raise ValueError(f"No credentials for provider '{p}'")
+    return creds
 
-def _init_llm(provider: str, model_name: str) -> Any:
+def inject_model_env(model_config: Dict[str, Any]) -> None:
+    """Injects API keys for any provider."""
+    api_type = model_config.get("api_type", "").lower()
+    if api_type == "openai":
+        os.environ["OPENAI_API_KEY"] = model_config.get("api_key", "")
+        os.environ["OPENAI_BASE_URL"] = model_config.get("base_url", "")
+    elif api_type in ("mixtral", "qwen"):
+        os.environ["TOGETHER_API_KEY"] = model_config.get("api_key", "")
+        os.environ["TOGETHER_BASE_URL"] = model_config.get("base_url", "")
+
+def resolve_model_config(model_name: str, config: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Find the provider entry for `model_name` and return its config,
+    looking up credentials from config['providers'].
+    """
+    for provider_name, provider_data in config.get("providers", {}).items():
+        if "models" in provider_data and model_name in provider_data["models"]:
+            return {
+                "model": model_name,
+                "api_key": provider_data.get("api_key", ""),
+                "api_type": provider_name,
+                "base_url": provider_data.get("base_url", "")
+            }
+    raise ValueError(f"Model '{model_name}' not found in config providers.")
+
+def _init_llm(provider: str, model_name: str, config: Dict[str, Any]) -> Any:
     """
     Initializes a LangChain chat model for the given provider and model.
     """
     # For Qwen, use Together creds, since that's how you're serving it.
-    actual_provider = provider
-    if provider == "qwen":
-        actual_provider = "together"
-    conf = PROVIDERS.get(actual_provider, {})
-    api_key  = conf.get("api_key")
-    base_url = conf.get("base_url")
+    creds = config.get("providers", {}).get(provider, {})
+    api_key  = creds.get("api_key")
+    base_url = creds.get("base_url")
+    temperature = float(config.get("temperature", 0.3))
+    max_tokens = int(config.get("max_tokens", 4096))
+    tool_timeout = int(config.get("tool_timeout", 30))
 
-    if actual_provider == "openai":
+    if provider == "openai":
         return ChatOpenAI(
             model=model_name,
-            temperature=TEMPERATURE,
-            max_tokens=MAX_TOKENS,
+            temperature=temperature,
+            max_tokens=max_tokens,
             openai_api_key=api_key,
             openai_api_base=base_url,
-            timeout=TOOL_TIMEOUT
+            timeout=tool_timeout
         )
-
-    elif actual_provider == "together":
+    elif provider == "mixtral":
         return ChatTogether(
             model=model_name,
-            temperature=TEMPERATURE,
+            temperature=temperature,
             auth_token=api_key,
             base_url=base_url,
-            request_timeout=TOOL_TIMEOUT
+            request_timeout=tool_timeout
         )
+    elif provider == "qwen":
+        return ChatTogether(
+            model=model_name,
+            temperature=temperature,
+            auth_token=api_key,
+            base_url=base_url,
+            request_timeout=tool_timeout
+        )
+    
     else:
         raise ValueError(f"Unsupported provider '{provider}'")
+
 class LangGraphLLMExecutor:
     """
     Wraps a LangChain chat model for use in LangGraph nodes,
-    auto-selecting provider/model per node and capturing metrics."""
+    auto-selecting provider/model per node and capturing metrics.
+    """
     def __init__(self, node_name: str):
-        self.provider, self.model_name = _get_node_config(node_name)
-        self.llm = _init_llm(self.provider, self.model_name)
+        self.node_name = node_name
+        config = self._load_config()
+        self.provider, self.model_name = get_node_model(node_name, config)
+        self.llm = _init_llm(self.provider, self.model_name, config)
 
-    def generate(
-        self,
-        messages: List[BaseMessage],
-        agent_state: AgentState
-    ) -> AIMessage:
-        # audit input
+    @staticmethod
+    def _load_config() -> dict:
+        from utils.config_utils import load_config
+        return load_config()
+
+    def generate(self, messages: List[BaseMessage], agent_state: AgentState):
+        # agent_state._current_node_record = step_record_dict                           check this
+        # 1. Audit all inputs (for trace/debug)
+        model_start = datetime.now(timezone.utc)
         for msg in messages:
-            agent_state.messages.append({"role": msg.type, "content": msg.content})
+            agent_state.messages.append({
+                "role": msg.type,
+                "content": msg.content,
+                "ts": datetime.now(timezone.utc).isoformat()
+            })
 
-        # call LLM
+        # 2. Call LLM, record usage
         if self.provider == "openai":
             with get_openai_callback() as cb:
-                response: AIMessage = self.llm(messages)
-            # update agent totals
-            agent_state.tokens_sent      += cb.prompt_tokens
-            agent_state.tokens_generated += cb.completion_tokens
-            agent_state.cost_llm         += cb.total_cost
+                response = self.llm(messages)
+            prompt_tokens = cb.prompt_tokens
+            completion_tokens = cb.completion_tokens
+            cost = cb.total_cost
         else:
-            response: AIMessage = self.llm(messages)
+            response = self.llm(messages)
             usage = getattr(response, "usage", {}) or {}
-            agent_state.tokens_sent      += usage.get("prompt_tokens", 0)
-            agent_state.tokens_generated += usage.get("completion_tokens", 0)
-            # (if Together returns cost, add that here)
+            prompt_tokens = usage.get("prompt_tokens", 0)
+            completion_tokens = usage.get("completion_tokens", 0)
+            # Support more providers here (e.g., "cost" or other fields)
+            cost = usage.get("total_cost", 0.0)
 
-        # record which model you used
-        agent_state.memory.setdefault("models_used", []).append(f"{self.provider}:{self.model_name}")
+        # 3. Update global agent state (totals)
+        agent_state.tokens_sent += prompt_tokens
+        agent_state.tokens_generated += completion_tokens
+        agent_state.cost_llm += cost
 
-        # audit output
-        agent_state.messages.append({"role": "assistant", "content": response.content})
+        # 4. If using node/task-level records, update those as well
+        rec = getattr(agent_state, "_current_node_record", None)
+        if rec is not None:
+            rec["tokens_sent"] += prompt_tokens
+            rec["tokens_generated"] += completion_tokens
+            rec["cost_llm"] += cost
+            rec.setdefault("tools_used", []).append(f"{self.provider}:{self.model_name}")
+        model_end = datetime.now(timezone.utc)
+        model_duration = (model_end - model_start).total_seconds() 
+        agent = self.node_name
+        rec = {
+            "agent": agent,
+            "provider": self.provider,
+            "model": self.model_name,
+            "tokens_sent": prompt_tokens,
+            "tokens_generated": completion_tokens,
+            "cost_llm": cost,
+            "model_start_time": model_start.isoformat(),
+            "model_end_time": model_end.isoformat(),
+            "model_duration": model_duration
+        }
+        agent_state.memory.setdefault("models_used", []).append(rec)
+
+
+
+        # 5. Audit output
+        agent_state.messages.append({
+            "role": "assistant",
+            "content": response.content,
+            "ts": datetime.now(timezone.utc).isoformat()
+        })
+        # (Optionally, add LLM metadata in output if needed)
+
         return response
 
-def resolve_model_config(model_name: str, model_providers: List[Dict[str, Any]], provider_secrets: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Find the provider entry for `model_name` and return its config,
-    looking up credentials from provider_secrets.
-    """
-    for provider in model_providers:
-        if "models" in provider and model_name in provider["models"]:
-            provider_name = provider.get("provider", "")
-            secrets = provider_secrets.get(provider_name, {})
-            config = {
-                "model": model_name,
-                "api_key": secrets.get("api_key", ""),
-                "api_type": provider_name,
-            }
-            if "base_url" in secrets:
-                config["base_url"] = secrets["base_url"]
-
-            logger.info(f"Resolved config for model '{model_name}' from provider '{provider_name}'")
-            log_event("model_config_resolved", config)
-            return config
-
-    err_msg = f"Model '{model_name}' not found in model_providers."
-    logger.error(err_msg)
-    log_event("model_config_error", {"model": model_name, "error": err_msg})
-    raise ValueError(err_msg)
-
-
-def inject_model_env(model_config: Dict[str, Any]):
-    """
-    Injects the API key (and base_url if needed) into environment vars
-    and logs the injection event.
-    """
-    api_type = model_config.get("api_type", "").lower()
-    model_name = model_config.get("model", "<unknown>")
-
-    if api_type == "openai":
-        os.environ["OPENAI_API_KEY"] = model_config.get("api_key", "")
-        msg = f"Injected OPENAI_API_KEY for model: {model_name}"
-        logger.info(msg)
-        log_event("env_injection", {"model": model_name, "api": "openai"})
-
-    elif api_type == "together":
-        os.environ["TOGETHER_API_KEY"] = model_config.get("api_key", "")
-        os.environ["TOGETHER_BASE_URL"] = model_config.get("base_url", "")
-        msg = f"Injected TOGETHER_API_KEY and BASE_URL for model: {model_name}"
-        logger.info(msg)
-        log_event("env_injection", {
-            "model": model_name,
-            "api": "together",
-            "base_url": model_config.get("base_url", "")
-        })
-
-    else:
-        msg = f"No env rules for API type: '{api_type}' (model: {model_name})"
-        logger.info(msg)
-        log_event("env_injection_skipped", {"model": model_name, "api_type": api_type})
-
-def test_get_node_config_openai():
-    global DEFAULT_PROVIDER, OPENAI_MODELS
-    DEFAULT_PROVIDER = "openai"
-    OPENAI_MODELS = {"resolve_company": "gpt-3.5-turbo"}
-    assert _get_node_config("resolve_company") == ("openai", "gpt-3.5-turbo")
-
-def test_get_node_config_missing():
-    global DEFAULT_PROVIDER, OPENAI_MODELS
-    DEFAULT_PROVIDER = "openai"
-    OPENAI_MODELS = {}
-    try:
-        _get_node_config("resolve_company")
-        assert False, "Should have raised ValueError"
-    except ValueError:
-        pass
-
 if __name__ == "__main__":
-    # Setup a minimal fake config for openai
-    OPENAI_MODELS = {"resolve_company": "gpt-3.5-turbo"}
-    PROVIDERS["openai"] = {"api_key": "testkey"}
-    DEFAULT_PROVIDER = "openai"
-
-    provider, model = _get_node_config("resolve_company")
-    print("Provider/model:", provider, model)
-
-    # Now test env injection
-    inject_model_env({"api_type": "openai", "model": model, "api_key": "testkey"})
-    print("Env var loaded?", os.environ.get("OPENAI_API_KEY"))
+    # Test example: always pass config
+    try:
+        config = load_config()
+        p, m = get_node_model("resolve_company", config)
+        print("Resolved:", p, m)
+        creds = get_provider_creds(p, config)
+        print("Creds:", creds)
+        inject_model_env({
+            "api_type": p,
+            "model": m,
+            "api_key": creds.get("api_key"),
+            "base_url": creds.get("base_url")
+        })
+        print("OPENAI_API_KEY:", os.environ.get("OPENAI_API_KEY"))
+    except Exception as e:
+        print("Error:", e)

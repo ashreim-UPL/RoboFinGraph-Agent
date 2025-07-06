@@ -1,0 +1,434 @@
+ Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations 
+
+In this Annual Report on Form 10-K ("Annual Report"), the term "Celanese" refers to Celanese Corporation, a Delaware corporation, and not its subsidiaries. The terms the "Company," "we," "our" and "us," refer to Celanese and its subsidiaries on a consolidated basis. The term "Celanese U.S." refers to the Company's subsidiary, Celanese US Holdings LLC, a Delaware limited liability company, and not its subsidiaries. 
+
+The following discussion should be read in conjunction with the accompanying consolidated financial statements and notes to the consolidated financial statements, which are prepared in accordance with accounting principles generally accepted in the United States of America ("U.S. GAAP"). 
+
+Investors are cautioned that the forward-looking statements contained in this section and other parts of this Annual Report involve both risk and uncertainty. Several important factors could cause actual results to differ materially from those anticipated by these statements. Many of these statements are macroeconomic in nature and are, therefore, beyond the control of management. See "Forward-Looking Statements" below. 
+
+Forward-Looking Statements 
+
+Management's Discussion and Analysis of Financial Condition and Results of Operations ("MD&#38;A") and other parts of this Annual Report contain certain forward-looking statements and information relating to us that are based on the beliefs of our management as well as assumptions made by, and information currently available to, us. Generally, words such as "believe," "expect," "intend," "estimate," "anticipate," "project," "plan," "may," "can," "could," "might," and "will," and similar expressions, as they relate to us are intended to identify forward-looking statements. These statements reflect our current views and beliefs with respect to future events at the time that the statements are made, are not historical facts or guarantees of future performance and involve risks and uncertainties that are difficult to predict and many of which are outside of our control. Further, certain forward-looking statements are based upon assumptions as to future events that may not prove to be accurate. See " Special Note Regarding Forward-Looking Statements " at the beginning of this Annual Report for further discussion. All forward-looking statements made in this Annual Report are made as of the date hereof, and the risk that actual results will differ materially from expectations expressed in this Annual Report will increase with the passage of time. We undertake no obligation, and disclaim any duty, to publicly update or revise any forward-looking statements, whether as a result of new information, future events, changes in our expectations or otherwise. 
+
+Risk Factors 
+
+Item 1A. Risk Factors of this Annual Report also contains a description of certain risk factors that you should consider which could significantly affect our financial results. In addition, the following factors, among others, could cause our actual results to differ materially from those results, performance or achievements that may be expressed or implied by such forward-looking statements: 
+
+&#8226; changes in general economic, business, political and regulatory conditions in the countries or regions in which we operate; 
+
+&#8226; the length and depth of product and industry business cycles particularly in the automotive, electrical, textiles, electronics and construction industries; 
+
+&#8226; volatility or changes in the price and availability of raw materials and energy, particularly changes in the demand for, supply of, and market prices of ethylene, methanol, natural gas, wood pulp and fuel oil and the prices for electricity and other energy sources; 
+
+&#8226; the ability to pass increases in raw material prices, logistics costs and other costs on to customers or otherwise improve margins through price increases; 
+
+&#8226; the possibility that we will not be able to timely or effectively continue to integrate the Mobility &#38; Materials business (the "M&#38;M Business") we acquired from DuPont de Nemours, Inc. (the "M&#38;M Acquisition") in order to realize the anticipated benefits of the M&#38;M Acquisition, including synergies and growth opportunities, whether as a result of difficulties arising from the operation of the M&#38;M Business or other unanticipated delays, costs, inefficiencies or liabilities; 
+
+&#8226; increased commercial, legal or regulatory complexity of entering into, or expanding our exposure to, certain end markets and geographies; 
+
+&#8226; risks in the global economy and equity and credit markets and their potential impact on our ability to pay down debt in the future and/or refinance at suitable rates, in a timely manner, or at all; 
+
+&#8226; risks and costs associated with increased leverage from the M&#38;M Acquisition, including increased interest expense and potential reduction of business and strategic flexibility; 
+
+&#8226; the ability to maintain plant utilization rates and to implement planned capacity additions, expansions and maintenance; 
+
+&#8226; the ability to reduce or maintain current levels of production costs and to improve productivity by implementing technological improvements to existing plants; 
+
+&#8226; increased price competition and the introduction of competing products by other companies; 
+
+&#8226; the ability to identify desirable potential acquisition or divestiture opportunities and to complete such transactions, including obtaining regulatory approvals, consistent with our strategy; 
+
+&#8226; market acceptance of our products and technology; 
+
+&#8226; compliance and other costs and potential disruption or interruption of production or operations due to accidents, interruptions in sources of raw materials, transportation, logistics or supply chain disruptions, cybersecurity incidents, terrorism or political unrest, public health crises (including, but not limited to, the COVID-19 pandemic), or other unforeseen events or delays in construction or operation of facilities, including as a result of geopolitical conditions, the direct or indirect consequences of acts of war or conflict (such as the Russia-Ukraine conflict or the Israel-Hamas conflict) or terrorist incidents or as a result of weather, natural disasters, or other crises; 
+
+&#8226; the ability to obtain governmental approvals and to construct facilities on terms and schedules acceptable to us; 
+
+&#8226; changes in applicable tariffs, duties and trade agreements, tax rates or legislation throughout the world including, but not limited to, adjustments, changes in estimates or interpretations or the resolution of tax examinations or audits that may impact recorded or future tax impacts and potential regulatory and legislative tax developments in the United States and other jurisdictions; 
+
+&#8226; changes in the degree of intellectual property and other legal protection afforded to our products or technologies, or the theft of such intellectual property; 
+
+&#8226; potential liability for remedial actions and increased costs under existing or future environmental, health and safety regulations, including those relating to climate change or other sustainability matters; 
+
+&#8226; potential liability resulting from pending or future claims or litigation, including investigations or enforcement actions, or from changes in the laws, regulations or policies of governments or other governmental activities, in the countries in which we operate; 
+
+&#8226; changes in currency exchange rates and interest rates; and 
+
+&#8226; various other factors, both referenced and not referenced in this Annual Report. 
+
+Many of these factors are macroeconomic in nature and are, therefore, beyond our control. Should one or more of these risks or uncertainties materialize, affect us in ways or to an extent that we currently do not expect or consider to be significant, or should underlying assumptions prove incorrect, our actual results, performance or achievements may vary materially from those described in this Annual Report as anticipated, believed, estimated, expected, intended, planned or projected. We neither intend nor assume any obligation to update these forward-looking statements, which speak only as of their dates. 
+
+Results of Operations 
+
+Financial Highlights 
+
+##TABLE_START Year Ended December 31, 2023 2022 Change (In $ millions, except percentages) Statement of Operations Data Net sales 10,940 9,673 1,267 Gross profit 2,603 2,380 223 Selling, general and administrative ("SG&#38;A") expenses 
+
+(1,075) (824) (251) Other (charges) gains, net (68) (8) (60) Gain (loss) on disposition of businesses and assets, net 505 5 500 Operating profit (loss) 1,687 1,378 309 Equity in net earnings (loss) of affiliates 102 220 (118) Non-operating pension and other postretirement employee benefit (expense) income 
+
+(69) 17 (86) Interest expense (720) (405) (315) Interest income 39 69 (30) Dividend income - equity investments 126 133 (7) Earnings (loss) from continuing operations before tax 1,183 1,421 (238) Earnings (loss) from continuing operations 1,973 1,910 63 Earnings (loss) from discontinued operations (9) (8) (1) Net earnings (loss) 1,964 1,902 62 Net earnings (loss) attributable to Celanese Corporation 1,960 1,894 66 Other Data Depreciation and amortization 706 462 244 SG&#38;A expenses as a percentage of Net sales 9.8 &#160;% 8.5 &#160;% 
+
+Operating margin (1) 
+
+15.4 &#160;% 14.2 &#160;% Other (charges) gains, net Restructuring (52) (6) (46) Asset impairments (15) (14) (1) Plant/office closures (1) 12 (13) Total Other (charges) gains, net (68) (8) (60) ##TABLE_END
+
+_____________________________ 
+
+(1) Defined as Operating profit (loss) divided by Net sales. 
+
+##TABLE_START As of December 31, 2023 2022 (In $ millions) Balance Sheet Data Cash and cash equivalents 1,805 1,508 Short-term borrowings and current installments of long-term debt - third party and affiliates 1,383 1,306 Long-term debt, net of unamortized deferred financing costs 12,301 13,373 Total debt 13,684 14,679 ##TABLE_END
+
+Factors Affecting Business Segment Net Sales 
+
+The percentage increase (decrease) in Net sales attributable to each of the factors indicated for each of our business segments is as follows: 
+
+Year Ended December 31, 2023 Compared to Year Ended December 31, 2022 
+
+##TABLE_START Volume Price Currency Total (In percentages) Engineered Materials 54 (1) &#8212; 53 Acetyl Chain 2 (17) &#8212; (15) Total Company 23 (10) &#8212; 13 ##TABLE_END
+
+Consolidated Results 
+
+Year Ended December 31, 2023 Compared to Year Ended December 31, 2022 
+
+Net sales increased $1.3 billion, or 13%, for the year ended December 31, 2023 compared to the same period in 2022 primarily due to: 
+
+&#8226; higher volume, primarily in our Engineered Materials segment related to the M&#38;M Acquisition and the KEPCO restructuring (see Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information) and also in our Acetyl Chain segment due to increased demand for most of our products in Asia; 
+
+partially offset by: 
+
+&#8226; lower pricing, primarily in our Acetyl Chain segment as market and pricing conditions reverted from increased levels in the prior year and also in our Engineered Materials segment due to decreased energy surcharges, market considerations, and an unfavorable product mix; and 
+
+&#8226; lower volume in our Acetyl Chain segment due to decreased demand for vinyl acetate monomer ("VAM"), acid and emulsion polymers in the Western Hemisphere. 
+
+Operating profit increased $309 million, or 22%, for the year ended December 31, 2023 compared to the same period in 2022 primarily due to: 
+
+&#8226; higher Net sales in our Engineered Materials segment; 
+
+&#8226; a gain of $515 million in our Engineered Materials segment recognized on the formation of the Nutrinova joint venture (see Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information); and 
+
+&#8226; lower raw material and sourcing costs in our Acetyl Chain segment, primarily for ethylene, methanol and acid; 
+
+partially offset by: 
+
+&#8226; higher raw material costs and spending in our Engineered Materials segment as a result of additional production capacity gained through the M&#38;M Acquisition; and 
+
+&#8226; lower Net sales in our Acetyl Chain segment. 
+
+Non-operating pension and other postretirement employee expense increased $86 million for the year ended December 31, 2023 compared to the same period in 2022 primarily due to higher interest costs of $66 million and lower expected return on plan assets of $34 million, partially offset by a decrease in recognized actuarial loss of $15 million primarily as a result of a decrease in the weighted average discount rate used to determine benefit obligations from 4.9% to 4.5%. See Note 12 - Benefit Obligations in the accompanying consolidated financial statements for further information. 
+
+Our effective income tax benefit rate for the year ended December 31, 2023 was 67% compared to 34% for the year ended 2022. The higher effective income tax benefit rate for the year ended December 31, 2023 compared to the same period in 2022 was primarily due to the relocation of certain intangible assets to better align with the acquired M&#38;M foreign operations, the realignment of our European headquarters and principal operations to Switzerland to achieve operational efficiencies, the release of valuation allowances on U.S. foreign tax credit carryforwards, and the excess of the U.S. GAAP gain over the tax gain from the formation of the Nutrinova joint venture. See Note 15 - Income Taxes in the accompanying consolidated financial statements for further information. 
+
+Discussion of our financial condition and results of operations for the year ended December 31, 2022 compared to the year ended December 31, 2021 and for the year ended December 31, 2021 compared to the year ended December 31, 2020, can be found in Part II - Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations in our Annual Reports for the years ended December 31, 2022 and December 31, 2021, respectively. 
+
+Business Segments 
+
+Engineered Materials 
+
+##TABLE_START Year Ended December 31, % 2023 2022 Change Change (In $ millions, except percentages) Net sales 6,149 4,024 2,125 52.8 % Net Sales Variance Volume 54 &#160;% Price (1) &#160;% Currency &#8212; &#160;% Operating profit (loss) 1,083 429 654 152.4 % Operating margin 17.6 % 10.7 &#160;% Equity in net earnings (loss) of affiliates 
+
+83 202 (119) (58.9) % Depreciation and amortization 
+
+462 226 236 104.4 % ##TABLE_END
+
+Year Ended December 31, 2023 Compared to Year Ended December 31, 2022 
+
+Net sales increased for the year ended December 31, 2023 compared to the same period in 2022 primarily due to: 
+
+&#8226; higher volume, primarily related to the M&#38;M Acquisition and the KEPCO restructuring (see Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information); 
+
+partially offset by: 
+
+&#8226; lower pricing for most of our products, primarily due to decreased energy surcharges, market considerations, and an unfavorable product mix, particularly in Asia and Europe. 
+
+Operating profit increased for the year ended December 31, 2023 compared to the same period in 2022 primarily due to: 
+
+&#8226; higher Net sales; and 
+
+&#8226; a gain of $515 million recognized on the formation of the Nutrinova joint venture (see Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information); 
+
+partially offset by: 
+
+&#8226; higher raw material costs as a result of additional production capacity gained through the M&#38;M Acquisition; and 
+
+&#8226; higher spending of $558 million as a result of the M&#38;M Acquisition, which includes selling and administrative, distribution and operating costs. 
+
+Equity in net earnings (loss) of affiliates decreased for the year ended December 31, 2023 compared to the same period in 2022 primarily due to: 
+
+&#8226; losses from our DuPont Teijin Films strategic affiliates due to restructuring; and 
+
+&#8226; a decrease in equity investment in earnings of $35 million from our Ibn Sina strategic affiliate, primarily as a result of reduced oil prices. 
+
+Depreciation and amortization, which is included in Operating profit, increased for the year ended December 31, 2023 compared to the same period in 2022 primarily as a result of the M&#38;M Acquisition. 
+
+Acetyl Chain 
+
+##TABLE_START Year Ended December 31, % 2023 2022 Change Change (In $ millions, except percentages) Net sales 4,884 5,743 (859) (15.0) % Net Sales Variance Volume 2 &#160;% Price (17) &#160;% Currency &#8212; &#160;% Operating profit (loss) 1,109 1,447 (338) (23.4) % Operating margin 22.7 % 25.2 &#160;% Dividend income - equity investments 124 132 (8) (6.1) % Depreciation and amortization 
+
+217 213 4 1.9 % ##TABLE_END
+
+Year Ended December 31, 2023 Compared to Year Ended December 31, 2022 
+
+Net sales decreased for the year ended December 31, 2023 compared to the same period in 2022 primarily due to: 
+
+&#8226; lower pricing for most of our products, primarily VAM, acid and emulsion polymers, as market and pricing conditions reverted from increased levels in the prior year particularly in Asia and Europe; and 
+
+&#8226; lower volume due to decreased demand for VAM, acid and emulsion polymers in the Western Hemisphere; 
+
+partially offset by: 
+
+&#8226; higher pricing for acetate tow; and 
+
+&#8226; higher volume due to increased demand for most of our products, primarily in Asia. 
+
+Operating profit decreased for the year ended December 31, 2023 compared to the same period in 2022 primarily due to: 
+
+&#8226; lower Net sales; 
+
+partially offset by: 
+
+&#8226; lower raw material and sourcing costs, primarily for ethylene, methanol and acid. 
+
+Other Activities 
+
+##TABLE_START Year Ended December 31, % 2023 2022 Change Change (In $ millions, except percentages) Operating profit (loss) 
+
+(505) (498) (7) (1.4) % Non-operating pension and other postretirement employee benefit (expense) income 
+
+(68) 17 (85) (500.0) % ##TABLE_END
+
+Year Ended December 31, 2023 Compared to Year Ended December 31, 2022 
+
+Operating loss increased for the year ended December 31, 2023 compared to the same period in 2022 primarily due to: 
+
+&#8226; higher functional spending of $106 million, primarily related to additional sites and employees gained through the M&#38;M Acquisition; 
+
+partially offset by: 
+
+&#8226; lower merger and acquisition project spending of $66 million; and 
+
+&#8226; a favorable currency impact of $33 million. 
+
+Non-operating pension and other postretirement employee expense increased for the year ended December 31, 2023 compared to the same period in 2022 primarily due to: 
+
+&#8226; higher interest costs of $66 million and lower expected return on plan assets of $34 million, partially offset by a decrease in recognized actuarial loss of $15 million primarily as a result of a decrease in the weighted average discount rate used to determine benefit obligations from 4.9% to 4.5%. See Note 12 - Benefit Obligations in the accompanying consolidated financial statements for further information. 
+
+Liquidity and Capital Resources 
+
+Our primary sources of liquidity are cash generated from operations, available cash and cash equivalents, dividends from our portfolio of strategic investments and available borrowings under our senior unsecured revolving credit facility. As of December 31, 2023, we have $1.75 billion available for borrowing under our senior U.S. unsecured revolving credit facility and $34 million available for borrowing under our separate China Revolving Credit Facility (defined below), if required, in meeting our working capital needs and other contractual obligations. In addition, we held cash and cash equivalents of $1.8 billion as of December 31, 2023. We are actively managing our business to maintain cash flow, and we believe that liquidity from the above-referenced sources will be sufficient to meet our operational and capital investment needs and financial obligations for the foreseeable future. 
+
+On October 31, 2023, we announced the planned closure of our Polyamide 66 ("PA66") and High-Performance Nylon ("HPN") polymerization units at our facility in Uentrop, Germany to optimize production costs across our global network. These operations are included in the Engineered Materials segment and we expect to complete the closure in 2024. We expect to incur additional exit and shutdown costs related to the closure of the PA66 and HPN polymerization units in Uentrop, Germany of approximately $70 million in 2024, inclusive of estimated employee termination costs. 
+
+On September 27, 2023, we formed a food ingredients joint venture with Mitsui &#38; Co., Ltd. ("Mitsui") under the name Nutrinova. We contributed receivables, inventory, property, plant and equipment, certain other assets, liabilities, technology and employees of our food ingredients business while retaining a 30% interest in the joint venture. Mitsui acquired the remaining 70% interest in the food ingredients business for a purchase price of $503 million, subject to transaction adjustments. We accounted for our interest in the joint venture as an equity method investment, and our portion of the results will continue to be included in the Engineered Materials segment. For further information regarding the food ingredients joint venture, see Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements. 
+
+On November 1, 2022, we acquired a majority of the M&#38;M Business for a purchase price of $11.0 billion, subject to transaction adjustments, in an all-cash transaction. For further information regarding the acquisition and related financing 
+
+transactions, see Debt and Other Obligations in this Liquidity and Capital Resources and Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information. 
+
+Our incurrence of debt to finance the purchase price for the M&#38;M Acquisition has increased our leverage and our ratio of indebtedness to consolidated EBITDA as set forth in our senior unsecured credit facilities. We believe that cash flows from our operations, together with synergy opportunities from the M&#38;M Acquisition and cost reduction initiatives, will support our deleveraging efforts over the next few years. In furtherance of these deleveraging efforts, we have paused our share repurchase program and are in the process of evaluating additional cash generation opportunities which may also include, in addition to the food ingredients joint venture described above, additional opportunistic dispositions or monetization of other product or business lines or other assets. We are committed to rapid deleveraging and to maintaining our investment grade debt rating. 
+
+While our contractual obligations, commitments and debt service requirements over the next several years are significant, we continue to believe we will have available resources to meet our liquidity requirements, including debt service, for the next twelve months. If our cash flow from operations is insufficient to fund our debt service and other obligations, we may be required to use other means available to us such as increasing our borrowings, reducing or delaying capital expenditures, seeking additional capital or seeking to restructure or refinance our indebtedness. There can be no assurance, however, that we will continue to generate cash flows at or above current levels. 
+
+Total capital expenditures were $568 million for the year ended December 31, 2023. We continue to prioritize projects that drive growth and productivity in the near term and expect total capital expenditures to be approximately $400 million in 2024, primarily due to certain investments in growth opportunities and productivity improvements. In Engineered Materials, at our Nanjing, China facility, our expansions of (1) the compounding plant and (2) the new liquid crystal polymer ("LCP") plant are on schedule and in construction, and at our Bishop, Texas facility, our debottleneck of the ultra-high molecular weight polyethylene ("UHMW-PE") unit is on schedule and in detailed engineering design/construction. Our energy optimization productivity project at our polyoxymethylene ("POM") unit in Frankfurt, Germany is in detailed engineering design. In the Acetyl Chain, our planned expansion of our acetic acid unit at Clear Lake, Texas is on track to be commissioned and started in the first quarter of 2024. The other major projects that support the Acetyl Chain are in various stages of construction or commissioning and on schedule. These projects include our planned expansions of (1) our vinyl acetate ethylene ("VAE") emulsions units in Nanjing, China, and (2) our VAE emulsion plant in Frankfurt, Germany. The sustainable production of methanol ("MeOH") through carbon capture utilization at our Fairway joint venture MeOH unit in Clear Lake, Texas, using captured carbon dioxide as feedstock, was successfully commissioned and started in December 2023. The announced expansion of our vinyl acetate monomer ("VAM") plant in Bay City, Texas is on temporary hold. We continue to see the incremental capacity from investments made in recent years strengthen the growth and reliability of our manufacturing network reliability to best serve our customers. 
+
+We did not repurchase any Common Stock during the year ended December 31, 2023. 
+
+On a stand-alone basis, Celanese and its immediate 100% owned subsidiary, Celanese U.S., have no independent external operations of their own. Accordingly, they generally depend on the cash flow of their subsidiaries and their ability to pay dividends and make other distributions to Celanese and Celanese U.S. in order to meet their obligations, including their obligations under senior credit facilities and senior notes, and to pay dividends on our Common Stock. 
+
+We are subject to capital controls and exchange restrictions imposed by the local governments in certain jurisdictions where we operate, such as China, South Korea, India and Indonesia. Capital controls impose limitations on our ability to exchange currencies, repatriate earnings or capital, lend via intercompany loans or create cross-border cash pooling arrangements. Our largest exposure to a country with capital controls is in China. Pursuant to applicable regulations, foreign-invested enterprises in China may pay dividends only out of their accumulated profits, if any, determined in accordance with Chinese accounting standards and regulations. In addition, the Chinese government imposes certain currency exchange controls on cash transfers out of China, puts certain limitations on duration, purpose and amount of intercompany loans, and restricts cross-border cash pooling. While it is possible that future tightening of these restrictions or application of new similar restrictions could impact us, these limitations do not currently restrict our operations. 
+
+We remain in compliance with the covenants in the existing Global Credit Agreements (defined below, and as amended to date) and expect to remain in compliance based on our current expectation of future results of operations and planned cash generation activities. If the actual future results of our operations and cash generation activities differ materially from these expectations, we may be required to seek an amendment to or waiver of any impacted covenants, which may increase our borrowing costs under the existing Global Credit Agreements. 
+
+Cash Flows 
+
+Cash and cash equivalents increased $297 million to $1.8 billion as of December 31, 2023 compared to December 31, 2022. As of December 31, 2023, $1.5 billion of the $1.8 billion of cash and cash equivalents was held by our foreign subsidiaries. Under the Tax Cuts and Jobs Act, we have incurred a prior year charge associated with the deemed repatriation of previously unremitted foreign earnings, including foreign held cash. These funds are largely accessible without additional material tax consequences, if needed in the U.S., to fund operations. See Note 15 - Income Taxes in the accompanying consolidated financial statements for further information. 
+
+Year Ended December 31, 2023 Compared to Year Ended December 31, 2022 
+
+&#8226; Net Cash Provided by (Used in) Operating Activities 
+
+Net cash provided by operating activities increased $80 million to $1.9 billion for the year ended December 31, 2023 compared to $1.8 billion for the same period in 2022, primarily due to: 
+
+&#8226; favorable trade working capital of $642 million, primarily related to inventory reduction due to aligning inventory and production levels to demand and lower raw materials and inventory costs, and the timing of settlement of trade payables and collections of trade receivables during the year ended December 31, 2023; and 
+
+&#8226; cash receipts of non-trade receivables of $346 million, primarily related to the receivable balances arising from the M&#38;M Acquisition and other transaction activities; 
+
+partially offset by: 
+
+&#8226; an increase in cash interest paid of $639 million related primarily to the debt incurred to finance the M&#38;M Acquisition; and 
+
+&#8226; a decrease in earnings performance, net of the gain recognized on the formation of the Nutrinova joint venture (see Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information). 
+
+&#8226; Net Cash Provided by (Used in) Investing Activities 
+
+Net cash used in investing activities decreased $11.0 billion to $134 million for the year ended December 31, 2023 compared to $11.1 billion for the same period in 2022, primarily due to: 
+
+&#8226; a cash outflow of $10.6 billion related to the M&#38;M Acquisition in November 2022, which did not recur in the current year. See Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information; and 
+
+&#8226; a cash inflow of $461 million related to the formation of the Nutrinova joint venture (see Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information). 
+
+&#8226; Net Cash Provided by (Used in) Financing Activities 
+
+Net cash used in financing activities increased $11.7 billion to $1.5 billion for the year ended December 31, 2023 compared to net cash provided by financing activities of $10.3 billion for the same period in 2022, primarily due to: 
+
+&#8226; a decrease in net proceeds of long-term debt, primarily due to the Tender Offer (defined below) of $2.25 billion, payment in full of the 3-year Term Loans (defined below) of $750 million, repayment at maturity of the 1.125% senior unsecured notes during the year ended December 31, 2023, and issuance of the Acquisition Notes (defined below), borrowings under the 3-year and 5-year Term Loans (defined below) during the year ended December 31, 2022 (see Note 11 - Debt in the accompanying consolidated financial statements for further information), which did not recur in the current year; and 
+
+&#8226; an increase in net payments on short-term debt, primarily as a result of payments on our revolving credit facilities and payment in full of the 364-day Term Loans (defined below); 
+
+partially offset by: 
+
+&#8226; an increase in net proceeds of long-term debt, primarily due to the 2023 Offering (defined below) of $3.0 billion in principal amount during the year ended December 31, 2023 and repayment at maturity of the 4.625% senior unsecured notes during the year ended December 31, 2022; and 
+
+&#8226; a decrease in net payments on short-term debt, primarily due to borrowings on our revolving credit facilities and China Working Capital Term Loan Agreement (defined below) during the year ended December 31, 2023 and borrowing under the senior unsecured revolving credit facility related to the M&#38;M Acquisition in November 2022. 
+
+In addition, exchange rates had an unfavorable impact of $12 million on cash and cash equivalents and a favorable impact of $4 million on cash and cash equivalents for the years ended December 31, 2023 and 2022, respectively. 
+
+Debt and Other Obligations 
+
+&#8226; Senior Credit Facilities 
+
+In March 2022, we entered into a term loan credit agreement (the "March 2022 U.S. Term Loan Credit Agreement"), pursuant to which lenders provided a tranche of delayed-draw term loans due 364 days from issuance in an amount equal to $500 million (the "364-day Term Loans") and a tranche of delayed-draw term loans due 5 years from issuance in an amount equal to $1.0 billion (the "5-year Term Loans"). In September 2022, we entered into an additional term loan credit agreement (the "September 2022 U.S. Term Loan Credit Agreement" and, together with the March 2022 U.S. Term Loan Credit Agreement, the "U.S. Term Loan Credit Agreements"), pursuant to which lenders have provided delayed-draw term loans due 3 years from issuance in an amount equal to $750 million (the "3-year Term Loans" and collectively with the 364-day Term Loans and the 5-year Term Loans, the "U.S. Term Loan Facility"). The U.S. Term Loan Facility was fully drawn during the three months ended December 31, 2022. The 364-day Term Loans and 3-year Term Loans have been fully repaid. 
+
+Also in March 2022, we entered into a new revolving credit agreement (the "U.S. Revolving Credit Agreement" and, together with the U.S. Term Loan Credit Agreements the "U.S. Credit Agreements") consisting of a $1.75 billion senior unsecured revolving credit facility (with a letter of credit sublimit), maturing in 2027. The proceeds of a $365 million borrowing under the new senior unsecured revolving credit facility were used to repay and terminate our then-existing revolving credit facility. 
+
+On February 21, 2023 and February 16, 2024, we amended certain covenants in the U.S. Credit Agreements, including financial ratio maintenance covenants. 
+
+On August 9, 2023, we amended certain covenants in the March 2022 U.S. Term Loan Credit Agreement to permit refinancing certain senior notes without requiring a mandatory prepayment under the March 2022 U.S. Term Loan Credit Agreement. 
+
+The March 2022 U.S. Term Loan Credit Agreement and the U.S. Revolving Credit Agreement are, and the September 2022 U.S. Term Loan Credit Agreement was, guaranteed by Celanese, Celanese U.S. and domestic subsidiaries together representing substantially all of the Company's U.S. assets and business operations (the "Subsidiary Guarantors"). 
+
+On January 4, 2023, Celanese (Shanghai) International Trading Co., Ltd ("CSIT"), a fully consolidated subsidiary, entered into a restatement of an existing credit facility agreement (the "China Revolving Credit Agreement") to upsize and modify the facility thereunder to consist of an aggregate CNY1.75 billion uncommitted senior unsecured revolving credit facility available under two tranches (with overdraft, bank guarantee and documentary credit sublimits) (the "China Revolving Credit Facility"). Obligations bear interest at certain fixed and floating rates. The China Revolving Credit Agreement is guaranteed by Celanese U.S. 
+
+On January 6, 2023, CSIT entered into a senior unsecured working capital loan contract for CNY800 million (the "China Working Capital Term Loan Agreement," together with the China Revolving Credit Agreement, the "China Credit Agreements," and the China Credit Agreements together with the U.S. Credit Agreements, the "Global Credit Agreements"), payable 12 months from withdrawal date and bearing interest at 0.5% less than certain interbank rates. The loan under the China Working Capital Term Loan Agreement was fully drawn on January 10, 2023 and was supported by a letter of comfort from us. We expect the China Credit Agreements will facilitate our efficient repatriation of cash to the U.S. to repay debt and effectively redomicile a portion of our U.S. debt to China at a lower average interest rate. 
+
+&#8226; Senior Notes 
+
+We have outstanding senior unsecured notes, issued in public offerings registered under the Securities Act of 1933 ("Securities Act"), as amended, as follows (collectively, the "Senior Notes"): 
+
+##TABLE_START Senior Notes Issue Date Principal Interest Rate Interest Pay Dates Maturity Date (In millions) (In percentages) 3.500% Notes May 2019 $500 3.500 May 8 November 8 May 8, 2024 5.900% Notes July 2022 $2,000 5.900 January 5 July 5 July 5, 2024 1.250% Notes December 2017 &#8364;300 1.250 February 11 February 11, 2025 6.050% Notes July 2022 $1,750 6.050 March 15 September 15 March 15, 2025 4.777% Notes July 2022 &#8364;1,000 4.777 July 19 July 19, 2026 1.400% Notes August 2021 $400 1.400 February 5 August 5 August 5, 2026 2.125% Notes November 2018 &#8364;500 2.125 March 1 March 1, 2027 6.165% Notes July 2022 $2,000 6.165 January 15 July 15 July 15, 2027 0.625% Notes September 2021 &#8364;500 0.625 September 10 September 10, 2028 6.350% Notes August 2023 $1,000 6.350 May 15 November 15 November 15, 2028 5.337% Notes July 2022 &#8364;500 5.337 January 19 January 19, 2029 6.330% Notes July 2022 $750 6.330 January 15 July 15 July 15, 2029 6.550% Notes August 2023 $999 6.550 May 15 November 15 November 15, 2030 6.379% Notes July 2022 $1,000 6.379 January 15 July 15 July 15, 2032 6.700% Notes August 2023 $1,000 6.700 May 15 November 15 November 15, 2033 ##TABLE_END
+
+The Senior Notes were issued by Celanese U.S. and are guaranteed on a senior unsecured basis by Celanese and the Subsidiary Guarantors. Celanese U.S. may redeem some or all of each of the Senior Notes, prior to their respective maturity dates, at a redemption price of 100% of the principal amount, plus a "make-whole" premium as specified in the applicable indenture, plus accrued and unpaid interest, if any, to the redemption date. 
+
+In July 2022, Celanese U.S. completed an offering of $7.5 billion aggregate principal amount of notes of various maturities in a public offering registered under the Securities Act (the "Acquisition USD Notes"). Also in July 2022, Celanese U.S. completed an offering of &#8364;1.5 billion in aggregate principal amount of euro-denominated senior unsecured notes in a public offering registered under the Securities Act (collectively, the "Acquisition Euro Notes" and together with the Acquisition USD Notes, the "Acquisition Notes"). Fees and expenses of the offering of the Acquisition Notes, inclusive of underwriting discounts, were $65 million. Net proceeds from the sale of the Acquisition Notes were used to fund the purchase price for the M&#38;M Acquisition, with any remaining proceeds being used for general corporate purposes. 
+
+The entry into the U.S. Term Loan Credit Agreements and the offerings of the Acquisition Notes reduced availability under the Bridge Facility to zero, and we terminated the Bridge Facility. During the year ended December 31, 2022, we paid $66 million in fees related to the Bridge Facility commitment, amortizing these fees to interest expense. 
+
+On August 24, 2023, Celanese U.S. completed an offering of $3.0 billion aggregate principal amount of senior unsecured notes of various maturities in a public offering registered under the Securities Act (the "2023 Offering"). Deferred financing costs related to the 2023 Offering, including underwriting discounts, were $26 million. 
+
+On August 25, 2023, Celanese U.S. completed a cash tender offer for $2.25 billion in aggregate principal amount (the "Tender Offer") as follows: 
+
+##TABLE_START Maturity Date Aggregate Principal Amount Tendered Purchase price per $1,000 principal amount Total Tender Offer Consideration Accrued and Unpaid Interest (In $ millions) (In $ millions) June 30, 2024 1,473 $ 999.92 1,473 12 March 15, 2025 750 $ 1,002.85 752 20 April 30, 2024 27 $ 983.95 27 &#8212; ##TABLE_END
+
+The net proceeds from the 2023 Offering were used (i) to fund the Tender Offer and (ii) for the repayment of other outstanding indebtedness, including the payment in full of the 364-day Term Loans and the 3-year Term Loans. 
+
+&#8226; Accounts Receivable Securitization Facility 
+
+On June 1, 2023, we entered into an amendment to the amended and restated receivables purchase agreement under our U.S. accounts receivable purchasing facility among certain of our subsidiaries, our wholly-owned, "bankruptcy remote" special purpose subsidiary ("SPE") and certain global financial institutions ("Purchasers"). We de-recognized $1.4 billion and $1.1 billion of accounts receivable under this agreement for the years ended December 31, 2023 and 2022, respectively, and collected $1.3 billion and $1.1 billion of accounts receivable sold under this agreement during the same periods. Unsold U.S. accounts receivable of $109 million were pledged by the SPE as collateral to the Purchasers as of December 31, 2023. 
+
+&#8226; Factoring and Discounting Agreements 
+
+We have factoring agreements in Europe and Singapore with financial institutions. We de-recognized $423 million and $320 million of accounts receivable under these factoring agreements for the years ended December 31, 2023 and 2022, respectively, and collected $407 million and $325 million of accounts receivable sold under these factoring agreements during the same periods. 
+
+In March 2021, we entered into a letter of credit discounting agreement in Singapore with a financial institution. We de-recognized $8 million and $50 million of accounts receivable under this agreement for the years ended December 31, 2023 and 2022, respectively. 
+
+On December 15, 2023, we entered into a Master Discounting Agreement (the "Master Discounting Agreement") with a financial institution in China to discount, on a non-recourse basis, banker's acceptance drafts ("BADs"), classified as accounts receivable. We received $45 million from the accounts receivable transferred under the Master Discounting Agreement as of December 31, 2023. The impacts of discounting are not material to the Company's results of operations, cash flows or financial position. 
+
+Our material financing arrangements contain customary covenants, including the maintenance of certain financial ratios, events of default and change of control provisions. Failure to comply with these covenants, or the occurrence of any other event of default, could result in acceleration of the borrowings and other financial obligations. We are in compliance with all of the covenants related to our debt agreements as of December 31, 2023. On February 21, 2023 and February 16, 2024, we amended certain covenants, including the financial ratio covenant, included in the U.S. Credit Agreements. 
+
+See Note 11 - Debt in the accompanying consolidated financial statements for further information. 
+
+Guarantor Financial Information 
+
+We have outstanding senior unsecured notes, issued in public offerings registered under the Securities Act of 1933, as amended (collectively, the "Senior Notes"). The Senior Notes were issued by Celanese U.S. ("Issuer") and are guaranteed by Celanese Corporation ("Parent Guarantor") and the Subsidiary Guarantors (collectively the "Obligor Group"). See Note 11 - Debt in the accompanying consolidated financial statements for further information. The Issuer and Subsidiary Guarantors are 100% owned subsidiaries of the Parent Guarantor. The Subsidiary Guarantors are listed in Exhibit 22.1 to this Annual Report. 
+
+The Parent Guarantor and the Subsidiary Guarantors have guaranteed the Senior Notes on a full and unconditional, joint and several, senior unsecured basis. The guarantees are subject to certain customary release provisions, including that a Subsidiary Guarantor will be released from its respective guarantee in specified circumstances, including (i) the sale or transfer of all of its assets or capital stock; (ii) its merger or consolidation with, or transfer of all or substantially all of its assets to, another person; or (iii) its ceasing to be a majority-owned subsidiary of the Issuer in connection with any sale of its capital stock or other transaction. Additionally, a Subsidiary Guarantor will be released from its guarantee of the Senior Notes at such time that it ceases to guarantee the Issuer's obligations under the existing U.S. Credit Agreements (subject to the satisfaction of customary document delivery requirements). The obligations of the Subsidiary Guarantors under their guarantees are limited as necessary to prevent such guarantees from constituting a fraudulent conveyance or fraudulent transfer under applicable law. 
+
+The Parent Guarantor and the Issuer are holding companies that conduct substantially all of their operations through their subsidiaries, which own substantially all of our consolidated assets. The Parent Guarantor holds the stock of its immediate 100% owned subsidiary, the Issuer, but has no material consolidated assets. The principal source of cash to pay the Parent Guarantor's and the Issuer's obligations, including obligations under the Senior Notes and the guarantee of the Issuer's obligations under the existing U.S. Credit Agreements, is the cash that our subsidiaries generate from their operations. Each of the Subsidiary Guarantors and our non-guarantor subsidiaries is a distinct legal entity and, under certain circumstances, applicable country or state laws, regulatory limitations and terms of other debt instruments may limit our subsidiaries' ability to distribute cash to the Issuer and the Parent Guarantor. 
+
+For cash management purposes, we transfer cash among the Parent Guarantor, Issuer, Subsidiary Guarantors and non-guarantors through intercompany financing arrangements, contributions or declaration of dividends between the respective parent and its subsidiaries. While the non-guarantor subsidiaries do not guarantee the Issuer's obligations under our outstanding debt, the transfer of cash under these activities facilitates the ability of the recipient to make specified third-party payments for principal and interest on the Senior Notes, the existing U.S. Credit Agreements, other outstanding debt, Common Stock dividends and Common Stock repurchases. 
+
+The summarized financial information of the Obligor Group is presented below on a combined basis after the elimination of: (i) intercompany transactions among such entities and (ii) equity in earnings from and investments in the non-guarantor subsidiaries. Transactions with, and amounts due to or from, non-guarantor subsidiaries and affiliates are separately disclosed. 
+
+##TABLE_START Year Ended December 31, 2023 (In $ millions) Net sales to third parties 1,826 Net sales to non-guarantor subsidiaries 1,048 Total net sales 2,874 Gross profit 561 Earnings (loss) from continuing operations 1,464 Net earnings (loss) 1,456 Net earnings (loss) attributable to the Obligor Group 1,456 ##TABLE_END
+
+##TABLE_START As of December 31, 2023 2022 (In $ millions) Receivables from non-guarantor subsidiaries 787 754 Other current assets 2,245 1,588 Total current assets 3,032 2,342 Goodwill 536 567 Other noncurrent assets 3,289 2,718 Total noncurrent assets 3,825 3,285 Current liabilities due to non-guarantor subsidiaries 2,993 2,100 Current liabilities due to affiliates 6 2 Other current liabilities 1,940 2,201 Total current liabilities 4,939 4,303 Noncurrent liabilities due to non-guarantor subsidiaries 3,365 3,400 Other noncurrent liabilities 13,007 13,842 Total noncurrent liabilities 16,372 17,242 ##TABLE_END
+
+Share Capital 
+
+On February 7, 2024, we declared a quarterly cash dividend of $0.70 per share on our Common Stock amounting to approximately $76 million. The cash dividend will be paid on March 5, 2024 to holders of record as of February 20, 2024. 
+
+Our Board of Directors has authorized the aggregate repurchase of $6.9 billion of our Common Stock since February 2008. These authorizations give management discretion in determining the timing and conditions under which shares may be repurchased. This repurchase program does not have an expiration date. During the year ended December 31, 2023, we did not repurchase any shares of our Common Stock. As of December 31, 2023, we had $1.1 billion remaining under authorizations by our Board of Directors. 
+
+See Note 14 - Shareholders' Equity in the accompanying consolidated financial statements for further information. 
+
+Contractual Obligations, Guarantees and Commitments 
+
+We calculated $3.3 billion of all future interest payments on debt and other obligations using the rate in effect on December 31, 2023 and $495 million of all future pension and other postretirement funding obligations. We have directly guaranteed various debt obligations under agreements with third parties related to certain equity affiliates. As of December 31, 2023, we have directly guaranteed $145 million and &#8364;31 million of such obligations. 
+
+We have not entered into any material off-balance sheet arrangements. 
+
+In the accompanying consolidated financial statements, see Note 10 - Current Other Liabilities for current asset retirement obligations, Note 11 - Debt for a description of the guarantees under our Senior Notes and Credit Agreement, Note 12 - Benefit Obligations for a description of the pension and other postretirement funding obligations, Note 13 - Environmental for a description of environmental obligations, Note 15 - Income Taxes for a description of uncertain tax positions, Note 16 - Leases for lease obligations and Note 19 - Commitments and Contingencies for a discussion of commitments and contingencies related to legal and regulatory proceedings. 
+
+Market Risks 
+
+See Item 7A. Quantitative and Qualitative Disclosure about Market Risk for further information. 
+
+Business Environment 
+
+We continued to experience destocking in addition to volatile underlying demand conditions across several end-markets in 2023. We continue to closely monitor the impact of, and responses to, geopolitical effects on demand conditions and the supply chain. Demand conditions and moderating raw material costs resulted in elevated industry competitive dynamics and continuing pricing pressure across end-markets. We expect demand challenges to persist and to pressure pricing, which effects we anticipate to be partially offset by improvement in input costs across the year. 
+
+Critical Accounting Policies and Estimates 
+
+Our consolidated financial statements are based on the selection and application of significant accounting policies. The preparation of consolidated financial statements in conformity with U.S. GAAP requires management to make estimates and assumptions that affect the reported amounts of assets and liabilities, disclosure of contingent assets and liabilities at the date of the consolidated financial statements and the reported amounts of net sales, expenses and allocated charges during the reporting period. Actual results could differ from those estimates. However, we are not currently aware of any reasonably likely events or circumstances that would result in materially different results. 
+
+We believe the following accounting policies and estimates are critical to understanding the financial reporting risks present in the current economic environment. These matters, and the judgments and uncertainties affecting them, are also essential to understanding our reported and future operating results. See Note 2 - Summary of Accounting Policies in the accompanying consolidated financial statements for further information. 
+
+&#8226; Purchase Accounting 
+
+We recognize the identifiable tangible and intangible assets acquired and liabilities assumed based on their estimated fair values as of the acquisition date. The excess of purchase price over the aggregate fair values is recorded as goodwill. Intangible assets are valued using the relief from royalty, multi-period excess earnings and discounted cash flow methodologies, which are considered Level 3 measurements. The relief from royalty method estimates our theoretical royalty savings from ownership of the intangible asset. Key assumptions used in this method include discount rates, royalty rates, growth rates, sales projections and terminal value rates. Key assumptions used in the multi-period excess earnings method include discount rates, retention rates, growth rates, sales projections, expense projections and contributory asset charges. Key assumptions used in the discounted cash flow valuation model include discount rates, growth rates, tax rates, cash flow projections and terminal value rates. All of these methodologies require significant management judgment and, therefore, are susceptible to change. We calculate the fair value of the identifiable tangible and intangible assets acquired and liabilities assumed to allocate the purchase price at the acquisition date. We may use the assistance of third-party valuation consultants. See Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information. 
+
+&#8226; Recoverability of Long-Lived Assets 
+
+Recoverability of Goodwill and Indefinite-Lived Assets 
+
+We assess the recoverability of the carrying amount of our goodwill and other indefinite-lived intangible assets annually during the third quarter of our fiscal year using June 30 balances or whenever events or changes in circumstances indicate that the carrying amount of the asset may not be fully recoverable. 
+
+When assessing the recoverability of goodwill and other indefinite-lived intangible assets, we may first assess qualitative factors in determining whether it is more likely than not that the fair value of a reporting unit or another indefinite-lived intangible asset is less than its carrying amount. The qualitative evaluation is an assessment of multiple factors, including the current operating environment, financial performance and market considerations. We may elect to bypass the qualitative assessment for some or all of our reporting units or other indefinite-lived intangible assets and proceed directly to a quantitative analysis depending on the facts and circumstances. 
+
+In performing a quantitative analysis of goodwill, recoverability of goodwill for each reporting unit is measured using a discounted cash flow model incorporating discount rates commensurate with the risks involved. The key assumptions used in the discounted cash flow valuation model include discount rates, growth rates, tax rates, cash flow projections and terminal value rates. Discount rates, growth rates and cash flow projections are the most sensitive and susceptible to change as they require significant management judgment. 
+
+Management tests other indefinite-lived intangible assets quantitatively utilizing the relief from royalty method under the income approach to determine the estimated fair value for each indefinite-lived intangible asset. Key assumptions used in this model include discount rates, royalty rates, growth rates, tax rates, sales projections and terminal value rates. Discount rates, royalty rates, growth rates, tax rates and sales projections are the assumptions most sensitive and susceptible to change as they require significant management judgment. 
+
+Specific assumptions discussed above are updated at the date of each test to consider current industry and company-specific risk factors from the perspective of a market participant. The current business environment is subject to evolving market conditions and requires significant management judgment to interpret the potential impact to our assumptions. To the extent that changes in the current business environment result in adjusted management projections, impairment losses may occur in future periods. 
+
+See Note 9 - Goodwill and Intangible Assets, Net in the accompanying consolidated financial statements for further information. 
+
+&#8226; Benefit Obligations 
+
+Various assumptions are used in the calculation of the actuarial valuation of the employee benefit plans. These key assumptions include the discount rate and expected long-term rates of return on plan assets. The actuarial assumptions used may differ materially from actual results due to changing market and economic conditions. These differences may result in a significant impact to the amount of net periodic benefit cost recorded in future periods. 
+
+Pension assumptions are reviewed annually in the fourth quarter of each fiscal year and whenever a plan is required to be remeasured. Assumptions are reviewed on a plan and country-specific basis by third-party actuaries and senior management. Such assumptions are adjusted as appropriate to reflect changes in market rates and outlook. 
+
+See Note 12 - Benefit Obligations in the accompanying consolidated financial statements for further information. 
+
+The estimated change in pension net periodic benefit cost and projected benefit obligations that would occur in 2024 from a change in the indicated assumptions are as follows: 
+
+##TABLE_START Change in Rate Impact on Net Periodic Benefit Cost Impact on Projected Benefit Obligations (In $ millions) U.S. Pension Benefits Decrease in the discount rate 0.5 % (6) 84 Decrease in the long-term expected rate of return on plan assets (1) 
+
+0.5 % 10 N/A Non-U.S. Pension Benefits Decrease in the discount rate 0.5 % (1) 59 Decrease in the long-term expected rate of return on plan assets 0.5 % 3 N/A ##TABLE_END
+
+______________________________ 
+
+(1) Excludes nonqualified pension plans. 
+
+&#8226; Income Taxes 
+
+We regularly review our deferred tax assets for recoverability and establish a valuation allowance as needed. In forming our judgment regarding the recoverability of deferred tax assets related to deductible temporary differences and tax attribute carryforwards, we give weight to positive and negative evidence based on the extent to which the forms of evidence can be objectively verified. 
+
+The recoverability of deferred tax assets and the recognition and measurement of uncertain tax positions are subject to various assumptions and management judgment. If actual results differ from the estimates made by management in establishing or maintaining valuation allowances against deferred tax assets, the resulting change in the valuation allowance would generally impact earnings or Other comprehensive income depending on the nature of the respective deferred tax asset. In addition, the positions taken with regard to tax contingencies may be subject to audit and review by tax authorities, which may result in future taxes, interest and penalties. 
+
+See Note 15 - Income Taxes in the accompanying consolidated financial statements for further information. 
+
+Recent Accounting Pronouncements 
+
+See Note 3 - Recent Accounting Pronouncements in the accompanying consolidated financial statements for information regarding recent accounting pronouncements. 
+

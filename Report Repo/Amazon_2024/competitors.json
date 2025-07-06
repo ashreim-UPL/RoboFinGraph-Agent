@@ -1,0 +1,56 @@
+[
+  {
+    "symbol": "BABA",
+    "companyName": "Alibaba Group Holding Limited",
+    "price": 112.9588,
+    "mktCap": 269490331126
+  },
+  {
+    "symbol": "ETSY",
+    "companyName": "Etsy, Inc.",
+    "price": 50.1,
+    "mktCap": 5224528200
+  },
+  {
+    "symbol": "GLBE",
+    "companyName": "Global-e Online Ltd.",
+    "price": 33.4382,
+    "mktCap": 5665601417
+  },
+  {
+    "symbol": "JD",
+    "companyName": "JD.com, Inc.",
+    "price": 32.6012,
+    "mktCap": 46994631185
+  },
+  {
+    "symbol": "JMIA",
+    "companyName": "Jumia Technologies AG",
+    "price": 4.02,
+    "mktCap": 246150278
+  },
+  {
+    "symbol": "MELI",
+    "companyName": "MercadoLibre, Inc.",
+    "price": 2606.37,
+    "mktCap": 132136182438
+  },
+  {
+    "symbol": "PDD",
+    "companyName": "PDD Holdings Inc.",
+    "price": 104.73,
+    "mktCap": 145445946509
+  },
+  {
+    "symbol": "SE",
+    "companyName": "Sea Limited",
+    "price": 160.4617,
+    "mktCap": 94996535634
+  },
+  {
+    "symbol": "VIPS",
+    "companyName": "Vipshop Holdings Limited",
+    "price": 15.015,
+    "mktCap": 37862350200
+  }
+]

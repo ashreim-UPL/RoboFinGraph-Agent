@@ -1,0 +1,137 @@
+[
+  {
+    "Income Statement": "Revenue",
+    "2024": "25169.21",
+    "2023": "23008.50"
+  },
+  {
+    "Income Statement": "TotalRevenue",
+    "2024": "25169.21",
+    "2023": "23008.50"
+  },
+  {
+    "Income Statement": "CostofRevenueTotal",
+    "2024": "16695.31",
+    "2023": "16993.31"
+  },
+  {
+    "Income Statement": "GrossProfit",
+    "2024": "8473.90",
+    "2023": "6015.19"
+  },
+  {
+    "Income Statement": "Selling/General/AdminExpensesTotal",
+    "2024": "4045.18",
+    "2023": "3414.17"
+  },
+  {
+    "Income Statement": "Depreciation/Amortization",
+    "2024": "1429.97",
+    "2023": "1253.05"
+  },
+  {
+    "Income Statement": "UnusualExpense(Income)",
+    "2024": "1.10",
+    "2023": "0.36"
+  },
+  {
+    "Income Statement": "OtherOperatingExpensesTotal",
+    "2024": "143.02",
+    "2023": "179.14"
+  },
+  {
+    "Income Statement": "TotalOperatingExpense",
+    "2024": "22314.58",
+    "2023": "21840.03"
+  },
+  {
+    "Income Statement": "OperatingIncome",
+    "2024": "2854.63",
+    "2023": "1168.47"
+  },
+  {
+    "Income Statement": "InterestInc(Exp)Net-Non-OpTotal",
+    "2024": "-103.79",
+    "2023": "-126.52"
+  },
+  {
+    "Income Statement": "Gain(Loss)onSaleofAssets",
+    "2024": "-10.68",
+    "2023": "-7.65"
+  },
+  {
+    "Income Statement": "OtherNet",
+    "2024": "47.26",
+    "2023": "35.44"
+  },
+  {
+    "Income Statement": "NetIncomeBeforeTaxes",
+    "2024": "2787.42",
+    "2023": "1069.74"
+  },
+  {
+    "Income Statement": "ProvisionforIncomeTaxes",
+    "2024": "706.19",
+    "2023": "300.78"
+  },
+  {
+    "Income Statement": "NetIncomeAfterTaxes",
+    "2024": "2081.23",
+    "2023": "768.96"
+  },
+  {
+    "Income Statement": "NetIncomeBeforeExtraItems",
+    "2024": "2081.23",
+    "2023": "768.96"
+  },
+  {
+    "Income Statement": "NetIncome",
+    "2024": "2081.23",
+    "2023": "768.96"
+  },
+  {
+    "Income Statement": "IncomeAvailabletoComExclExtraOrd",
+    "2024": "2081.23",
+    "2023": "768.96"
+  },
+  {
+    "Income Statement": "IncomeAvailabletoComInclExtraOrd",
+    "2024": "2081.23",
+    "2023": "768.96"
+  },
+  {
+    "Income Statement": "DilutedNetIncome",
+    "2024": "2081.23",
+    "2023": "768.96"
+  },
+  {
+    "Income Statement": "DilutedWeightedAverageShares",
+    "2024": "0.42",
+    "2023": "0.42"
+  },
+  {
+    "Income Statement": "DilutedEPSExcludingExtraOrdItems",
+    "2024": "4907.24",
+    "2023": "1813.10"
+  },
+  {
+    "Income Statement": "DPS-CommonStockPrimaryIssue",
+    "2024": "200.00",
+    "2023": "175.00"
+  },
+  {
+    "Income Statement": "DilutedNormalizedEPS",
+    "2024": "4927.98",
+    "2023": "1826.67"
+  },
+  {
+    "Income Statement": "periodLength",
+    "2024": "12",
+    "2023": "12"
+  },
+  {
+    "Income Statement": "periodType",
+    "2024": "Months",
+    "2023": "Months"
+  }
+]

@@ -1,0 +1,266 @@
+ ITEM 7. MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS 
+
+The following discussion and analysis of our financial condition and results of operations should be read in conjunction with &#8220;Item 1A. Risk Factors&#8221;, our Consolidated Financial Statements and related Notes thereto, as well as other cautionary statements and risks described elsewhere in this Annual Report on Form 10-K, before deciding to purchase, hold or sell shares of our common stock. 
+
+Overview 
+
+Our Company and Our Businesses 
+
+NVIDIA pioneered accelerated computing to help solve the most challenging computational problems. Since our original focus on PC graphics, we have expanded to several other large and important computationally intensive fields. Fueled by the sustained demand for exceptional 3D graphics and the scale of the gaming market, NVIDIA has leveraged its GPU architecture to create platforms for scientific computing, AI, data science, AV, robotics, metaverse and 3D internet applications. 
+
+Our two operating segments are "Compute &#38; Networking" and "Graphics." Refer to Note 17 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for additional information. 
+
+Headquartered in Santa Clara, California, NVIDIA was incorporated in California in April 1993 and reincorporated in Delaware in April 1998. 
+
+Recent Developments, Future Objectives and Challenges 
+
+Supply, Products Transitions, and New Products and Business Models 
+
+Our supply, which includes inventory on hand, purchase obligations and prepaid supply agreements, has grown significantly due to current supply chain conditions, complexity of our products, and recent reductions in demand. At the end of fiscal year 2023, purchase obligations and prepaid supply agreements represented more than half of our total supply. Inventory provisions for excess inventory and purchase obligations totaled $2.17 billion in fiscal year 2023. We may incur inventory provisions if our inventory or supply commitments are misaligned with demand for our products. 
+
+Product transitions are complex as we often ship both new and legacy architecture products simultaneously and we and our channel partners prepare to ship and support new products. We are currently transitioning the architecture of our Data Center, Professional Visualization, and Gaming products. Qualification time for new products, customers anticipating product transitions and channel partners reducing channel inventory of legacy architectures ahead of new product introductions can create reductions or volatility in our revenue. While we have managed prior product transitions and have previously sold multiple product architectures at the same time, these transitions are difficult and prior trends may not continue. 
+
+We build technology and products for use cases and applications that may be new or may not yet exist. Examples include our Omniverse platform and third-party large language models and generative models. Our demand estimates for these use cases and applications can be incorrect and create volatility in our revenue or supply levels, and we may not be able to generate any revenue from these use cases and applications. 
+
+NVIDIA AI Cloud Service Offerings 
+
+We will offer enterprise customers NVIDIA AI cloud services directly and through our network of partners. Examples of these services include NVIDIA DGX Cloud, which is cloud-based infrastructure and software for training AI models, and customizable pretrained AI models. NVIDIA has partnered with leading cloud service providers to host these services in their data centers. 
+
+We entered into multi-year cloud service agreements in the second half of fiscal year 2023 to these offerings and our research and development activities. NVIDIA AI cloud services may not be successful and will take time, resources and investment. We also offer or plan to offer standalone software solutions for AI including NVIDIA AI Enterprise, NVIDIA Omniverse, NVIDIA DRIVE for automotive, and several other software solutions. These new business models or strategies may not be successful and we may fail to sell any meaningful standalone software or as-a-service solutions. We may incur significant costs and may not achieve any significant revenue from these offerings. 
+
+Global Trade 
+
+During the third quarter of fiscal year 2023, the USG announced new license requirements that, with certain exceptions, impact exports to China (including Hong Kong and Macau) and Russia of our A100 and H100 integrated circuits, DGX or any other systems or boards which incorporate A100 or H100 integrated circuits and our A100X. We are required to transition certain operations out of China (including Hong Kong), including research and development and supply and distribution operations. We have engaged with customers in China to provide alternative products not subject to the new license requirements, such as our new A800 offering. 
+
+Management of these new license and other requirements is complicated and time consuming. Our results and competitive position may be harmed if customers in China do not want to purchase our alternative product offerings, if customers purchase product from competitors, or if customers develop their own internal solution, if the USG does not grant licenses in a timely manner or denies licenses to significant customers, or if we incur significant transition costs. 
+
+COVID-19 
+
+During fiscal year 2023, we reopened our offices worldwide. We incurred incremental expenses and related in-office costs as we ramped onsite services. 
+
+Restrictions may be imposed or reinstated as the pandemic resurfaces, such as lockdown measures due to COVID-19 containment efforts in China. During fiscal year 2023, end customer sales for our products in China have been negatively impacted by lockdowns and this impact may continue if lockdowns return. COVID-19-related disruptions have created and may continue to create supply chain and logistics constraints. Challenges in estimating demand could become more pronounced or volatile in the future on both a global and regional basis. 
+
+Russia 
+
+In fiscal year 2023, we stopped direct sales to Russia and later in the year, we closed business operations in Russia. Direct sales to Russia in fiscal year 2022 were immaterial. Our revenue to partners that sell into Russia may have been negatively impacted due to the war in Ukraine. 
+
+Termination of the Arm Share Purchase Agreement 
+
+In February 2022, NVIDIA and SoftBank announced the termination of the Share Purchase Agreement whereby NVIDIA would have acquired Arm from SoftBank due to significant regulatory challenges preventing the completion of the transaction. We recorded an acquisition termination cost of $1.35 billion in fiscal year 2023 reflecting the write-off of the prepayment provided at signing. 
+
+Fiscal Year 2023 Summary 
+
+##TABLE_START &#160; Year Ended &#160; January 29, 2023 January 30, 2022 Change ($ in millions, except per share data) Revenue $ 26,974 $ 26,914 &#8212; % Gross margin 56.9 % 64.9 % Down 8.0 pts Operating expenses $ 11,132 $ 7,434 Up 50% Income from operations $ 4,224 $ 10,041 Down 58% Net income $ 4,368 $ 9,752 Down 55% Net income per diluted share $ 1.74 $ 3.85 Down 55% ##TABLE_END
+
+We specialize in markets where our computing platforms can provide tremendous acceleration for applications. These platforms incorporate processors, interconnects, software, algorithms, systems, and services to deliver unique value. Our platforms address four large markets where our expertise is critical: Data Center, Gaming, Professional Visualization, and Automotive. 
+
+Revenue for fiscal year 2023 revenue was $26.97 billion, flat compared with a year ago. 
+
+Data Center revenue was up 41% from a year ago led by strong growth from hyperscale customers and also reflects purchases made by several CSP partners to support multi-year cloud service agreements for our new NVIDIA AI cloud service offerings and our research and development activities. 
+
+Gaming revenue was down 27% from a year ago reflecting lower sell-in to partners to help reduce channel inventory levels as global macro-economic conditions and COVID-19 related disruptions in China weighed on gaming demand. 
+
+Professional Visualization revenue was down 27% from a year ago reflecting a lower sell-in to partners to help reduce channel inventory levels. 
+
+Automotive revenue was up 60% from a year ago reflecting growth in sales of self-driving solutions, computing solutions for electric vehicle makers and strength in sales of AI cockpit solutions. The increase also included growth in automotive development arrangements. 
+
+OEM and Other revenue was down 61% from a year ago driven by notebook OEM and CMP. CMP revenue was nominal in fiscal year 2023 and $550 million in fiscal year 2022. 
+
+Gross margin for fiscal year 2023 declined from a year ago, driven by $2.17 billion of inventory charges largely relating to excess supply of NVIDIA Ampere architecture Gaming and Data Center products as compared to the demand expectations for these products, particularly for the expected demand in China. The inventory charges were comprised of $1.04 billion for inventory on hand and $1.13 billion for inventory purchase obligations in excess of our demand expectations. 
+
+Operating expenses, which included a $1.35 billion acquisition termination charge related to the Arm transaction, were up 50% from a year ago. The increase also reflected compensation, data center infrastructure, and engineering development costs. 
+
+Cash, cash equivalents and marketable securities were $13.30 billion. 
+
+During fiscal year 2023, we returned $10.44 billion to shareholders in the form of share repurchases and cash dividends. As of the end of fiscal year 2023, we had $7.23 billion remaining under our share repurchase authorization through December 2023. 
+
+Market Platform Highlights 
+
+Data Center revenue for fiscal year 2023 was $15.01 billion, up 41% from fiscal year 2022. The strong growth in Data Center revenue was influenced by hyperscaler and cloud usage of our accelerated computing platforms and networking portfolio. In Data Center, we announced the NVIDIA Hopper GPU architecture and began ramping the first products based on the architecture, including the NVIDIA H100 Tensor Core GPU. The NVIDIA OVX server reference design launched for digital twins and other Omniverse applications. We completed two new large language models for cloud AI services &#8212; NVIDIA NeMo LLM and NVIDIA BioNeMo LLM. Additionally, we announced the NVIDIA Spectrum-4 end-to-end 400Gbps networking platform and began shipping Quantum-2 in December 2022. 
+
+Gaming revenue for fiscal year 2023 was $9.07 billion, down 27% from fiscal year 2022. Gaming results were influenced by the rapid change in economic conditions causing excess inventory with our channel partners. We introduced pricing programs for our channel partners and started undershipping GPU supply to the partners so that we could lower inventory in the channel. As we exited fiscal year 2023, we have made meaningful progress in establishing lower inventory levels with our channel partners. In Gaming, we announced the new Ada Lovelace GPU architecture, and introduced the first products based on Ada, including the GeForce RTX 4090, RTX 4080, and RTX 4070 Ti desktop GPUs and laptop GPUs featured in over 170 laptop designs. We introduced NVIDIA DLSS 3 for over 50 games and applications. We brought GeForce RTX 4080-class performance to the GeForce NOW Ultimate membership tier. 
+
+Professional Visualization revenue for fiscal year 2023 was $1.54 billion, down 27% from fiscal year 2022. Professional Visualization results were influenced by the rapid change in economic conditions causing excess inventory with our OEM partners. In Professional Visualization, we added new NVIDIA Ampere architecture RTX GPUs for workstations. We also announced Omniverse Avatar Cloud Engine and Omniverse Cloud and released a major update to NVIDIA Omniverse Enterprise. 
+
+Automotive revenue for fiscal year 2023 grew 60% compared to fiscal year 2022 to $903 million. In Automotive, we started production of the NVIDIA DRIVE Orin autonomous vehicle SOC and introduced next-generation NVIDIA DRIVE Thor. 
+
+Critical Accounting Policies and Estimates 
+
+Management&#8217;s discussion and analysis of financial condition and results of operations are based upon our consolidated financial statements, which have been prepared in accordance with accounting principles generally accepted in the United States, or U.S. GAAP. The preparation of these financial statements requires us to make estimates and judgments that affect the reported amounts of assets, liabilities, revenue, cost of revenue, expenses and related disclosure of contingencies. On an on-going basis, we evaluate our estimates, including those related to inventories, revenue recognition, and income taxes. We base our estimates on historical experience and on various other assumptions that are believed to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. 
+
+We believe the following critical accounting policies affect our significant judgments and estimates used in the preparation of our consolidated financial statements. Our management has discussed the development and selection of these critical accounting policies and estimates with the Audit Committee of our Board of Directors. The Audit Committee has reviewed our disclosures relating to our critical accounting policies and estimates in this Annual Report on Form 10-K. 
+
+Inventories 
+
+Inventory cost is computed on an adjusted standard basis, which approximates actual cost on an average or first-in, first-out basis. We charge cost of sales for inventory provisions to write-down our inventory to the lower of cost or net realizable value or for obsolete or excess inventory, and for excess product purchase commitments. Most of our inventory provisions relate to excess quantities of products or components, based on our inventory levels and future product purchase commitments compared to assumptions about future demand and market conditions, which requires management judgment. 
+
+Situations that may result in excess or obsolete inventory or excess product purchase commitments include changes in business and economic conditions, changes in market conditions, sudden and significant decreases in demand for our products, inventory obsolescence because of changing technology and customer requirements, new product introductions resulting in less demand for existing products or inconsistent spikes in demand due to unexpected end use cases, failure to estimate customer demand properly, ordering in advance of historical lead-times and the impact of changes in future demand, or increase in demand for competitive products, including competitive actions. Cancellation or deferral of customer purchase orders could result in our holding excess inventory. 
+
+The overall net effect on our gross margin from inventory provisions and sales of items previously written down was an unfavorable impact of 7.5% in fiscal year 2023 and 0.9% in fiscal year 2022. As a fabless semiconductor company, we must make commitments to purchase inventory based on forecasts of future customer demand. In doing so, we must account for our third-party manufacturers' lead times and constraints. In the past, our manufacturing lead times have been long, and in some cases, extended beyond twelve months for some products. We place non-cancellable inventory orders for certain product components in advance of our historical lead times, pay premiums and provide deposits to secure future supply and capacity. We also adjust to other market factors, such as product offerings and pricing actions by our competitors, new product transitions, and macroeconomic conditions - all of which may impact demand for our products. 
+
+Refer to the Gross Profit and Gross Margin discussion below in this Management's Discussion and Analysis for further discussion. 
+
+Revenue Recognition 
+
+We derive our revenue from product sales, including hardware and systems, license and development arrangements, software licensing, and cloud services. We determine revenue recognition through the following steps: (1) identification of the contract with a customer; (2) identification of the performance obligations in the contract; (3) determination of the transaction price; (4) allocation of the transaction price to the performance obligations in the contract (where revenue is allocated on a relative standalone selling 
+
+price basis by maximizing the use of observable inputs to determine the standalone selling price for each performance obligation); and (5) recognition of revenue when, or as, we satisfy a performance obligation. 
+
+Product Sales Revenue 
+
+Revenue from product sales is recognized upon transfer of control of products to customers in an amount that reflects the consideration we expect to receive in exchange for those products. Certain products are sold with support or an extended warranty for the incorporated system, hardware, and/or software. Support and extended warranty revenue are recognized ratably over the service period, or as services are performed. Revenue is recognized net of allowances for returns, customer programs and any taxes collected from customers. 
+
+For products sold with a right of return, we record a reduction to revenue by establishing a sales return allowance for estimated product returns at the time revenue is recognized, based primarily on historical return rates. However, if product returns for a fiscal period are anticipated to exceed historical return rates, we may determine that additional sales return allowances are required to properly reflect our estimated exposure for product returns. 
+
+Our customer programs involve rebates, which are designed to serve as sales incentives to resellers of our products in various target markets, and marketing development funds, or MDFs, which represent monies paid to our partners that are earmarked for market segment development and are designed to support our partners&#8217; activities while also promoting NVIDIA products. We account for customer programs as a reduction to revenue and accrue for potential rebates and MDFs based on the amount we expect to be claimed by customers. 
+
+License and Development Arrangements 
+
+Our license and development arrangements with customers typically require significant customization of our IP components. As a result, we recognize the revenue from the license and the revenue from the development services as a single performance obligation over the period in which the development services are performed. We measure progress to completion based on actual cost incurred to date as a percentage of the estimated total cost required to complete each project. If a loss on an arrangement becomes probable during a period, we record a provision for such loss in that period. 
+
+Refer to Note 1 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for additional information. 
+
+Income Taxes 
+
+We recognize federal, state and foreign current tax liabilities or assets based on our estimate of taxes payable or refundable in the current fiscal year by tax jurisdiction. We recognize federal, state and foreign deferred tax assets or liabilities, as appropriate, for our estimate of future tax effects attributable to temporary differences and carryforwards; and we record a valuation allowance to reduce any deferred tax assets by the amount of any tax benefits that, based on available evidence and judgment, are not expected to be realized. 
+
+Our calculation of deferred tax assets and liabilities is based on certain estimates and judgments and involves dealing with uncertainties in the application of complex tax laws. Our estimates of deferred tax assets and liabilities may change based, in part, on added certainty or finality to an anticipated outcome, changes in accounting standards or tax laws in the United States, or foreign jurisdictions where we operate, or changes in other facts or circumstances. In addition, we recognize liabilities for potential United States and foreign income tax contingencies based on our estimate of whether, and the extent to which, additional taxes may be due. If we determine that payment of these amounts is unnecessary or if the recorded tax liability is less than our current assessment, we may be required to recognize an income tax benefit or additional income tax expense in our financial statements accordingly. 
+
+As of the end of fiscal years 2023 and 2022, we had a valuation allowance of $1.48 billion and $907 million, respectively, related to capital loss carryforwards, state, and certain other deferred tax assets that management determined not likely to be realized due, in part, to jurisdictional projections of future taxable income, including capital gains. To the extent realization of the deferred tax assets becomes more-likely-than-not, we would recognize such deferred tax assets as income tax benefits during the period. 
+
+We recognize the benefit from a tax position only if it is more-likely-than-not that the position would be sustained upon audit based solely on the technical merits of the tax position. Our policy is to include interest and penalties related to unrecognized tax benefits as a component of income tax expense. 
+
+Refer to Note 14 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for additional information. 
+
+Change in Accounting Estimate 
+
+In February 2023, we completed an assessment of the useful lives of our property, plant, and equipment. Based on advances in technology and usage rate, we increased the estimated useful life of a majority of the server, storage, and network equipment from three years to a range of four to five years, and assembly and test equipment from five years to seven years. This change in accounting estimate became effective at the beginning of fiscal year 2024. Based on the carrying amounts of a majority of our server, storage, network, and assembly and test equipment, net in use as of the end of fiscal year 2023, it is estimated this change will increase our fiscal year 2024 operating income by $133 million as a result of the reduction in depreciation expense. 
+
+Results of Operations 
+
+A discussion regarding our financial condition and results of operations for fiscal year 2023 compared to fiscal year 2022 is presented below. A discussion regarding our financial condition and results of operations for fiscal year 2022 compared to fiscal year 2021 can be found under Item 7 in our Annual Report on Form 10-K for the fiscal year ended January 30, 2022, filed with the SEC on March 18, 2022, which is available free of charge on the SEC&#8217;s website at http://www.sec.gov and at our investor relations website, http://investor.nvidia.com. 
+
+The following table sets forth, for the periods indicated, certain items in our Consolidated Statements of Income expressed as a percentage of revenue. 
+
+##TABLE_START &#160; Year Ended &#160; January 29, 2023 January 30, 2022 Revenue 100.0 % 100.0 % Cost of revenue 43.1 35.1 Gross profit 56.9 64.9 Operating expenses &#160; Research and development 27.2 19.6 Sales, general and administrative 9.1 8.0 Acquisition termination cost 5.0 &#8212; Total operating expenses 41.3 27.6 Income from operations 15.6 37.3 Interest income 1.0 0.1 Interest expense (1.0) (0.9) Other, net (0.1) 0.4 Other income (expense), net (0.1) (0.4) Income before income tax 15.5 36.9 Income tax expense (benefit) (0.7) 0.7 Net income 16.2 % 36.2 % ##TABLE_END
+
+Revenue 
+
+Revenue by Reportable Segments 
+
+##TABLE_START Year Ended January 29, 2023 January 30, 2022 $ Change % Change ($ in millions) Compute &#38; Networking $ 15,068 $ 11,046 $ 4,022 36 % Graphics 11,906 15,868 (3,962) (25) % Total $ 26,974 $ 26,914 $ 60 &#8212; % ##TABLE_END
+
+Compute &#38; Networking - The year-on-year increase was led by growth from hyperscale customers and also reflects purchases made by several CSP partners to support multi-year cloud service agreements for our new NVIDIA AI cloud service offerings and our research and development activities. The increase was also related to the growth in Automotive. CMP contributed an insignificant amount in fiscal year 2023 compared to $550 million in fiscal year 2022. 
+
+Graphics - The year-on-year decrease primarily reflects lower sell-in to partners to help reduce channel inventory levels as global macro-economic conditions and COVID-19 related disruptions in China weighed on gaming demand. 
+
+Concentration of Revenue 
+
+Revenue from sales to customers outside of the United States accounted for 69% and 84% of total revenue for fiscal years 2023 and 2022, respectively. The decline in revenue outside the U.S. was primarily driven by China and Taiwan related to Data Center and Gaming. Revenue by geographic region is allocated to countries based on the billed location even if the revenue may be attributable to end customers in a different location. 
+
+No customer represented 10% or more of total revenue for fiscal years 2023 and 2022. 
+
+Gross Profit and Gross Margin 
+
+Gross profit consists of total revenue, net of allowances, less cost of revenue. Cost of revenue consists primarily of the cost of semiconductors, including wafer fabrication, assembly, testing and packaging, board and device costs, manufacturing support costs, including labor and overhead associated with such purchases, final test yield fallout, inventory and warranty provisions, memory and component costs, tariffs, and shipping costs. Cost of revenue also includes acquisition-related costs, development costs for license and service arrangements, IP-related costs, and stock-based compensation related to personnel associated with manufacturing operations. 
+
+Gross margin was 56.9% and 64.9% for fiscal years 2023 and 2022, respectively. The decrease in fiscal year 2023 was primarily due to $2.17 billion of inventory provisions in fiscal year 2023, which consists of approximately $1.04 billion for inventory on hand and approximately $1.13 billion for inventory purchase obligations in excess of our current demand projections. 
+
+Inventory provisions totaled $2.17 billion and $354 million for fiscal years 2023 and 2022, respectively. Sales of inventory that was previously written-off totaled $137 million and $111 million for fiscal years 2023 and 2022, respectively. As a result, the overall net effect on our gross margin was an unfavorable impact of 7.5% and 0.9% in fiscal years 2023 and 2022, respectively. 
+
+Compute &#38; Networking - The gross margin of our Compute &#38; Networking segment decreased during fiscal year 2023 when compared to fiscal year 2022, primarily due to inventory provisions. 
+
+Graphics - The gross margin of our Graphics segment decreased during fiscal year 2023 when compared to fiscal year 2022, primarily due to inventory and related provisions and lower margins of GeForce GPUs. 
+
+Operating Expenses 
+
+##TABLE_START &#160; Year Ended &#160; January 29, 2023 January 30, 2022 $ Change % Change &#160; ($ in millions) Research and development expenses $ 7,339 $ 5,268 $ 2,071 39 % % of revenue 27.2 % 19.6 % &#160; &#160; Sales, general and administrative expenses 2,440 2,166 274 13 % % of revenue 9.1 % 8.0 % &#160; &#160; Acquisition termination cost 1,353 &#8212; 1,353 100 % % of revenue 5.0 % &#8212; % Total operating expenses $ 11,132 $ 7,434 $ 3,698 50 % % of revenue 41.3 % 27.6 % ##TABLE_END
+
+The increase in research and development expense for fiscal year 2023 was primarily driven by increased compensation, employee growth, engineering development costs, and data center infrastructure. 
+
+The increase in sales, general and administrative expense for fiscal year 2023 was primarily driven by increased compensation and employee growth. 
+
+We recorded an acquisition termination cost related to the Arm transaction of $1.35 billion in fiscal year 2023 reflecting the write-off of the prepayment provided at signing. 
+
+Other Income (Expense), Net 
+
+##TABLE_START &#160; Year Ended &#160; January 29, 2023 January 30, 2022 $ Change % Change &#160; ($ in millions) Interest income $ 267 $ 29 $ 238 821 % Interest expense (262) (236) (26) 11 % Other, net (48) 107 (155) (145) % Other income (expense), net $ (43) $ (100) $ 57 (57) % ##TABLE_END
+
+Interest income consists of interest earned on cash, cash equivalents and marketable securities. The increase in interest income was primarily due to higher yields earned on our investments. 
+
+Interest expense is primarily comprised of coupon interest and debt discount amortization related to our notes. The increase in expense reflects interest on the $5.00 billion debt offering issued in June 2021. 
+
+Other, net, consists primarily of realized or unrealized gains and losses from investments in non-affiliated entities and the impact of changes in foreign currency rates. Change in other, net, compared to fiscal year 2022 was primarily driven by mark-to-market losses from publicly traded equity investments and changes in value from our non-affiliated private investments. Refer to Note 8 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for additional information regarding our investments in non-affiliated entities. 
+
+Income Taxes 
+
+We recognized income tax benefit of $187 million for fiscal year 2023 and income tax expense of $189 million for fiscal year 2022. Income tax as a percentage of income before income tax was a benefit of 4.5% for fiscal year 2023 and an expense of 1.9% for fiscal year 2022. 
+
+Beginning in fiscal year 2023, the 2017 Tax Cuts and Jobs Act, or TCJA, requires taxpayers to capitalize research and development expenditures and to amortize domestic expenditures over five years and foreign expenditures over fifteen years. 
+
+The fiscal year 2023 effective tax rate includes the mandatory capitalization and amortization of research and development expenses beginning in fiscal year 2023, which resulted in a greater FDII deduction and significantly increased current taxes, with a corresponding deferred tax benefit at the relevant statutory tax rate. 
+
+The decrease in our effective tax rate in fiscal year 2023 as compared to fiscal year 2022 was primarily due to increased tax benefits of the FDII deduction, stock-based compensation, and the U.S. federal research tax credit, relative to lower profitability. This is partially offset by the impact of an increase in the proportion of earnings subject to U.S. tax in fiscal year 2023 and the one-time benefits of the domestication of a foreign subsidiary in fiscal year 2022, or the Domestication. 
+
+Our effective tax rate for fiscal year 2023 was lower than the U.S. federal statutory rate of 21% due primarily to tax benefits from the FDII deduction, tax benefits related to stock-based compensation and the U.S. federal research tax credit. 
+
+Our effective tax rate for fiscal year 2022 was lower than the U.S. federal statutory rate of 21% due to tax benefits from the FDII deduction, income earned in jurisdictions that are subject to taxes lower than the U.S. federal statutory tax rate, excess tax benefits related to stock-based compensation, recognition of U.S. federal research tax credit and the one-time benefits of the Domestication. 
+
+Refer to Note 14 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for additional information. 
+
+Liquidity and Capital Resources 
+
+##TABLE_START &#160; January 29, 2023 January 30, 2022 &#160; (In millions) Cash and cash equivalents $ 3,389 $ 1,990 Marketable securities 9,907 19,218 Cash, cash equivalents, and marketable securities $ 13,296 $ 21,208 ##TABLE_END
+
+##TABLE_START &#160; Year Ended January 29, 2023 January 30, 2022 &#160; (In millions) Net cash provided by operating activities $ 5,641 $ 9,108 Net cash provided by (used in) investing activities $ 7,375 $ (9,830) Net cash provided by (used in) financing activities $ (11,617) $ 1,865 ##TABLE_END
+
+As of January 29, 2023, we had $13.30 billion in cash, cash equivalents and marketable securities, a decrease of $7.91 billion from the end of fiscal year 2022. Our investment policy requires the purchase of highly rated fixed income securities, the diversification of investment types and credit exposures, and certain maturity limits on our portfolio. 
+
+Cash provided by operating activities decreased in fiscal year 2023 compared to fiscal year 2022, primarily due to a decrease in net income adjusted for certain non-cash items, such as the Arm acquisition termination cost of $1.35 billion, and higher tax payments, partially offset by changes in working capital. Changes in working capital were primarily driven by lower accounts receivable due to strong collections partially offset by timing of supplier payments and inventory deliveries. 
+
+Cash provided by investing activities increased in fiscal year 2023 compared to fiscal year 2022, primarily driven by lower purchases and higher sales and maturities of marketable securities, offset by higher capital expenditures. 
+
+Cash used in financing activities increased in fiscal year 2023 compared to fiscal year 2022, due to share repurchases and the absence of debt issuance proceeds in fiscal year 2023, offset by absence of debt repayment. 
+
+Liquidity 
+
+Our primary sources of liquidity are our cash and cash equivalents, our marketable securities, and cash generated by our operations. At the end of fiscal year 2023, we had $13.30 billion in cash, cash equivalents and marketable securities. We believe that we have sufficient liquidity to meet our operating requirements for at least the next twelve months, and for the foreseeable future, including our future supply obligations and $1.25 billion of debt repayment due in fiscal year 2024. We continuously evaluate our liquidity and capital resources, including our access to external capital, to ensure we can finance future capital requirements. 
+
+Our marketable securities consist of debt securities issued by the U.S. government and its agencies, highly rated corporations and financial institutions, and foreign government entities, as well as certificates of deposit issued by highly rated financial institutions. These marketable securities are primarily denominated in U.S. dollars. Refer to Note 8 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for additional information. 
+
+During fiscal year 2024, we expect to use our existing cash and cash equivalents, our marketable securities, and the cash generated by our operations to fund our capital investments of approximately $1.10 billion to $1.30 billion related to property and equipment. 
+
+Except for approximately $1.38 billion of cash, cash equivalents, and marketable securities held outside the U.S. for which we have not accrued any related foreign or state taxes if we repatriate these amounts to the U.S., substantially all of our cash, cash equivalents and marketable securities held outside of the U.S. at the end of fiscal year 2023 are available for use in the U.S. without incurring additional U.S. federal income taxes. 
+
+Beginning in fiscal year 2023, the TCJA requires taxpayers to capitalize research and development expenditures and to amortize domestic expenditures over five years and foreign expenditures over fifteen years. The adverse cash flow impact of mandatory capitalization will be reduced in future years as capitalized research and development expenditures continue to amortize. Refer to Note 14 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for additional information. 
+
+Capital Return to Shareholders 
+
+During fiscal year 2023, we returned $10.04 billion in share repurchases and $398 million in quarterly cash dividends. Our cash dividend program and the payment of future cash dividends under that program are subject to our Board of Directors' continuing determination that the dividend program and the declaration of dividends thereunder are in the best interests of our shareholders. 
+
+As of January 29, 2023, we were authorized, subject to certain specifications, to repurchase additional shares of our common stock up to $7.23 billion through December 2023. 
+
+Outstanding Indebtedness and Commercial Paper Program 
+
+Our aggregate debt maturities as of January 29, 2023, by year payable, are as follows: 
+
+##TABLE_START &#160; January 29, 2023 &#160; (In millions) Due in one year $ 1,250 Due in one to five years 2,250 Due in five to ten years 4,000 Due in greater than ten years 3,500 Unamortized debt discount and issuance costs (47) Net carrying amount 10,953 Less short-term portion (1,250) Total long-term portion $ 9,703 ##TABLE_END
+
+We have a $575 million commercial paper program to support general corporate purposes. As of the end of fiscal year 2023, we had not issued any commercial paper. 
+
+Refer to Note 12 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for further discussion. 
+
+Material Cash Requirements and Other Obligations 
+
+For a description of our long-term debt, purchase obligations, and operating lease obligations, refer to Note 12, Note 13, and Note 3 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K, respectively. 
+
+We have unrecognized tax benefits of $1.02 billion, which includes related interest and penalties of $95 million, recorded in non-current income tax payable at the end of fiscal year 2023. We are unable to reasonably estimate the timing of any potential tax liability, interest payments, or penalties in individual years due to uncertainties in the underlying income tax positions and the timing of the effective settlement of such tax positions. We are currently under examination by the Internal Revenue Service for our fiscal years 2018 and 2019. Refer to Note 14 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for further information. 
+
+Climate Change 
+
+To date, there has been no material impact to our results of operations associated with global sustainability regulations, compliance, costs from sourcing renewable energy or climate-related business trends. 
+
+Adoption of New and Recently Issued Accounting Pronouncements 
+
+Refer to Note 1 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for a discussion of adoption of new and recently issued accounting pronouncements. 
+

@@ -1,0 +1,276 @@
+ Item 7. Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations. 
+
+The following discussion and analysis of our financial position and results of operations should be read together with our audited consolidated financial statements and related notes appearing elsewhere in this Form 10-K. This discussion and analysis may contain forward-looking statements that involve risks and uncertainties &#8211; please refer to the section entitled, &#8220;Special Note Regarding Forward-Looking Statements,&#8221; contained in Part I, Item 1A, &#8220;Risk Factors,&#8221; of this Form 10-K. You should review the &#8220;Risk Factors&#8221; section of this Form 10-K for a discussion of important factors that could cause actual results to differ materially from the results described in or implied by the forward-looking statements described in the following discussion and analysis. 
+
+EXECUTIVE SUMMARY 
+
+We are a specialty pharmaceutical company focused on the acquisition, development and commercialization of branded prescription pharmaceutical products. We are dedicated to our mission of working together to provide unique products that improve the quality of patient care. 
+
+Our commercial portfolio includes six branded products approved for marketing by the FDA. In addition to these commercial brands, we have Phase II clinical programs underway evaluating our ifetroban product candidate for patients with 1) Systemic Sclerosis or scleroderma, a debilitating autoimmune disorder characterized by fibrosis of the skin and internal organs and 2) Idiopathic Pulmonary Fibrosis, the most common form of progressive fibrosing interstitial lung disease. Additionally, we recently completed a Phase II study in patients with cardiomyopathy associated with Duchenne muscular dystrophy, a rare, fatal, genetic neuromuscular disease results in deterioration of the skeletal, heart and lung muscles. Next steps include further data analysis and completion of a full study report in preparation for an end-of-Phase-II meeting with the FDA to determine next steps associated with the product&#8217;s development and commercialization. 
+
+Our primary target markets are hospital acute care, gastroenterology and oncology. These medical specialties are characterized by relatively concentrated prescriber bases that we believe can be served effectively by small, targeted sales forces. We promote our approved products through our hospital, field and oncology sales divisions in the United States and are building a network of international partners to register and provide our medicines to patients in their countries. 
+
+We have established the capabilities needed to acquire, develop and commercialize branded pharmaceuticals in the U.S. We believe we can leverage this existing infrastructure to support new products and our expected growth. 
+
+Our management team consists of pharmaceutical industry veterans with significant experience in their areas of responsibility. Our business development team identifies, evaluates and negotiates product acquisition, licensing and co-promotion agreements. Our product development team creates proprietary formulations, manages our clinical studies, prepares our FDA submissions and staffs our medical call center. Our quality and manufacturing professionals oversee the manufacturing, release and shipment of our products. Our marketing and sales organization is responsible for our commercial activities, and we work closely with our distribution partners to ensure the availability of our brands. 
+
+2024 Highlights 
+
+Below is a list of our Company&#8217;s highlights from 2024. For more information, please see Part I, Item I, Business of this Form 10-K. 
+
+&#8226; Announced the publication of new real-world outcomes research involving 150,000 patients, which compared our Caldolor &#174; (ibuprofen) injection to its key competitor &#8211; ketorolac. The results provided compelling evidence that Caldolor is associated with a significantly reduced incidence of adverse drug reactions and also improved healthcare utilization. 
+
+&#8226; Shared a Caldolor &#174; Special Report, which was published in Anesthesiology News , General Surgery News and Pharmacy Practice News that presented the growing amount of data supporting the use of Caldolor as a standard of care for the treatment of pain and fever. The results demonstrated that the product is a safe and effective treatment for pain and fever in adults, children and infants as young as 3 months of age. 
+
+&#8226; Announced the FDA approval of a supplemental New Drug Application for Acetadote &#174; , our IV treatment for preventing or lessening liver injury after ingestion of potentially toxic quantities of acetaminophen. The new, streamlined approach reduces the frequency of medication errors and potentially serious non-allergic anaphylactoid reactions without compromising the effectiveness of Acetadote. By simplifying the dosing regimen, health care providers can administer the life-saving treatment more efficiently, potentially improving patient outcomes. 
+
+&#8226; Introduced our newly Cumberland-packaged Sancuso &#174; , supported by our expanded oncology sales division, after successfully transferring its supply to a new facility that previously received FDA approval for manufacturing the product there. 
+
+&#8226; Helped advance the submissions for the approval of Vibativ &#174; in China and Saudi Arabia. 
+
+&#8226; Progressed our clinical trials evaluating ifetroban for patients with Systemic Sclerosis, Duchenne muscular dystrophy and Idiopathic Pulmonary Fibrosis. 
+
+&#8226; Received both Orphan Drug Designation and Rare Pediatric Disease Designation from the FDA for the use of ifetroban for the treatment of Duchenne muscular dystrophy heart disease, reflecting its potential significance in treating this devastating condition. 
+
+&#8226; Continued our corporate share repurchase initiative, with a group of our board members also purchasing shares through trading plans in order to add to their holdings in the Company. 
+
+CRITICAL ACCOUNTING POLICIES AND SIGNIFICANT JUDGMENTS AND ESTIMATES 
+
+Accounting Estimates and Judgments 
+
+The preparation of condensed consolidated financial statements in conformity with U.S. generally accepted accounting principles requires management to make estimates, judgments and assumptions that affect the reported amounts of assets and liabilities and disclosure of contingent liabilities at the date of the financial statements and the reported amounts of revenues and expenses during the period. We base our estimates on past experience and on other factors we deem reasonable given the circumstances. Past results help form the basis of our judgments about the carrying value of assets and liabilities that cannot be determined from other sources. Actual results could differ from these estimates. The Company&#8217;s most significant estimates include: (1) its allowances for chargebacks and accruals for rebates and product returns, (2) the allowances for obsolescent or unmarketable inventory, (3) valuation of contingent consideration liabilities associated with business combinations and (4) valuation of continuing utility of intangible assets. 
+
+Revenue Recognition 
+
+We recognize revenue in accordance with the Accounting Standards Codification (ASC) Topic 606. Effective January 1, 2018, we adopted the Financial Accounting Standards Board&#8217;s (&#8220;FASB&#8221;) amended guidance in the form of Accounting Standards Update (&#8220;ASU&#8221;) No. 2014-09, "Revenue from Contracts with Customers," (ASC 606). 
+
+Our revenue is derived primarily from the product sales of our FDA approved pharmaceutical brands. Revenue from sales of products is recognized at the point where the customer obtains control of the goods and we satisfy our performance obligation, which occurs upon either shipment of the product or arrival at its destination, depending upon the shipping terms of the transaction. Payment terms typically range from 30 to 60 days from date of shipment. Our net product revenue reflects the reduction from gross product revenue for estimated allowances for chargebacks, and discounts and reflects sales related accruals for rebates, coupons, product returns, and certain administrative and service fees. Significant judgments must be made in determining the transaction price for our sales of products related to these adjustments. Other revenue, which is a component of net revenues, includes non-refundable upfront payments and milestone payments under licensing agreements along with grant and rental income. Other revenue was approximately 3.5% of net revenues in 2024 and 5.2% in 2023. 
+
+Our financial statements reflect accounts receivable allowances of $1.1 million and $0.6 million at December 31, 2024 and 2023, respectively, for chargebacks and early pay discounts for products. 
+
+The following table reflects our sales-related accrual activity for the periods indicated below: 
+
+##TABLE_START 2024 2023 Balance, January 1 $ 7,579,783 $ 8,347,214 Current provision 20,235,610 22,184,661 Actual product returns and credits issued (19,981,182) (22,952,092) Balance, December 31 $ 7,834,211 $ 7,579,783 ##TABLE_END
+
+The allowances for chargebacks and discounts and sales related accruals for rebates, fee for service and product returns are determined on a product-by-product basis. We establish them using our best estimate at the time of sale based on: 
+
+&#8226; Each product&#8217;s historical experience adjusted to reflect known changes in the factors that impact such allowances; 
+
+&#8226; The contractual terms with direct and indirect customers; 
+
+&#8226; Analyses of historical levels of chargebacks, discounts and returns of product; 
+
+&#8226; Communications with customers; 
+
+&#8226; Purchased information about the rate of prescriptions being written and the level of inventory remaining in the distribution channel, if known; and 
+
+&#8226; Expectations about the market for each product, including any anticipated introduction of competitive products. 
+
+Other organizations, such as managed care providers, pharmacy benefit management companies and government agencies, may receive rebates from us based on either negotiated contracts to carry our products or reimbursements for filled prescriptions. These entities are considered our indirect customers. When recognizing a sale to a wholesaler, sales revenues are reduced and accrued liabilities are increased by our estimate of the rebate that may be claimed. 
+
+The allowances for chargebacks and accruals for rebates and product returns are the most significant estimates used in the recognition of our revenue from product sales. Of the accounts receivable allowances and our sales related accruals, our accrual for product returns and rebates represents the majority of the balance. Sales related accrued liabilities for rebates, product returns, service fees, and administrative fees totaled $7.8 million and $7.6 million as of December 31, 2024 and 2023, respectively. Of these amounts, our estimated liability for fee for services represented $1.5 million and $1.4 million, respectively, while our accrual for product returns totaled $2.7 million and $2.6 million, respectively. If the actual amount of cash discounts, chargebacks, rebates, and product returns differs from the amounts estimated by management, material differences may result from the amount of our revenue recognized from product sales. A change in our rebate estimate of one percentage point would have impacted net sales by approximately $0.6 million for the years ended December 31, 2024 and 2023. A change in our product return estimate of one percentage point would have impacted net sales by $0.4 million for the years ended December 31, 2024 and 2023. 
+
+Inventories 
+
+We record amounts for estimated obsolescence or unmarketable inventory in an amount equal to the difference between the cost of inventory and the net realizable value based upon assumptions about remaining shelf life, future demand and market conditions. The estimated inventory obsolescence amounts are calculated based upon specific review of the inventory expiration dates and the quantity on-hand at December 31, 2024, in comparison to our expected inventory usage. The amount of actual inventory obsolescence and unmarketable inventory could differ (either higher or lower) in the near term from the estimated amounts. Changes in our estimates would be recorded in our statement of operations in the period of the change. 
+
+Non-current inventories consist of active pharmaceutical ingredients which typically have an extended life and selected finished good products with an extended life longer than one year. 
+
+Income Taxes 
+
+We provide for deferred taxes using the asset and liability approach. Under this method, deferred tax assets and liabilities are recognized for the future tax consequences attributable to operating loss and tax credit carry-forwards and differences between the financial statement carrying amounts of existing assets and liabilities and their respective tax bases. Our principal differences are related to the timing of deductibility of certain items such as depreciation, amortization and expense for options issued to nonemployees. Deferred tax assets and liabilities are measured using management&#8217;s estimate of tax rates expected to apply to taxable income in the years in which management believes those temporary differences are expected to be recovered or settled. The effect on deferred tax assets and liabilities of a change in tax rates is recognized in our results of operations in the period that includes the enactment date. 
+
+In assessing the realizability of deferred tax assets, management considers whether it is more likely than not that some portion or all of the deferred tax assets will not be realized. The ultimate realization of deferred tax assets is dependent upon the generation of future taxable income during the periods in which those temporary differences become deductible. Management considers the scheduled reversal of deferred tax liabilities, projected future taxable income and tax planning strategies in making this assessment. 
+
+The Company&#8217;s accounting policy with respect to interest and penalties arising from income tax settlements is to recognize them as part of the provision for income taxes. 
+
+Share-Based Payments 
+
+We recognize compensation expense for all share-based payments based on the fair value of the award on the date of grant. In addition, incremental compensation expense is recognized upon the modification of equity awards. 
+
+We issue restricted stock and incentive stock option awards to employees, directors and consultants. Compensation expense for restricted equity awards granted to employees and directors is generally equal to the fair market value of the underlying common stock on the date of grant. If a sufficient disincentive for nonperformance does not exist at the date of grant, the compensation cost is remeasured at each reporting date at the then-current fair market value of the underlying common stock until the award vests. 
+
+Research and Development 
+
+We accrue for and expense research and development costs based on estimates of work performed, patient enrollment or fixed-fee-for-services. As work is performed and/or invoices are received, we adjust our estimates and accruals. To date, our accruals have not differed materially from our estimates. Total research and development costs are a function of studies being conducted and will increase or decrease based on the level of activity in any particular year. 
+
+Intangible Assets and Goodwill 
+
+Intangible assets include product rights, license agreements, other identifiable intangible assets and goodwill associated with the Vibativ acquisition. We assess the impairment of goodwill at least annually. We assess the impairment of identifiable intangible assets subject to amortization whenever events or changes in circumstances indicate the carrying value may not be recoverable. In determining the recoverability of our intangible assets, we make assumptions regarding estimated future cash flows and other factors. If the estimated undiscounted future cash flows do not exceed the carrying value of the intangible assets, we must determine the fair value of the intangible assets. If the fair value of the intangible assets is less than the carrying value, an impairment loss will be recognized in an amount equal to the difference. Fair value is determined through various valuation techniques including quoted market prices, third-party independent appraisals and discounted cash flow models, as considered necessary. 
+
+RESULTS OF OPERATIONS 
+
+Year ended December 31, 2024 compared to year ended December 31, 2023 
+
+The following table presents the statements of operations for the years ended December 31, 2024 and 2023: ##TABLE_START &#160; Years ended December 31, &#160; 2024 2023 Change Net revenues $ 37,867,945 $ 39,552,507 $ (1,684,562) Costs and expenses: Cost of products sold 6,585,972 6,066,611 519,361 Selling and marketing 17,023,023 18,451,765 (1,428,742) Research and development 4,816,206 5,834,229 (1,018,023) General and administrative 11,126,901 10,651,915 474,986 Amortization and impairment 4,748,252 8,102,648 (3,354,396) Total costs and expenses 44,300,354 49,107,168 (4,806,814) Operating loss (6,432,409) (9,554,661) 3,122,252 Interest income 334,444 286,854 47,590 Other income &#8212; 2,828,871 (2,828,871) Other income - settlement &#8212; 475,000 (475,000) Other income - gain on insurance proceeds 237,089 346,800 (109,711) Interest expense (605,508) (667,861) 62,353 Loss before income taxes (6,466,384) (6,284,997) (181,387) Income tax benefit (expense) 22,669 (45,769) 68,438 Net loss $ (6,443,715) $ (6,330,766) $ (112,949) ##TABLE_END
+
+The following table summarizes net revenues for the years presented: 
+
+##TABLE_START &#160; Years ended December 31, &#160; 2024 2023 Change Products: Kristalose $ 15,315,259 $ 15,981,850 $ (666,591) Sancuso 9,005,129 8,096,788 908,341 Vibativ 7,160,125 8,812,692 (1,652,567) Caldolor 4,959,385 4,333,923 625,462 Acetadote 185,182 458,759 (273,577) Omeclamox (3,075) 20,030 (23,105) Vaprisol (174,538) 151,336 (325,874) RediTrex 90,237 (341,886) 432,123 Other 1,330,241 2,039,015 (708,774) Total net revenues $ 37,867,945 $ 39,552,507 $ (1,684,562) ##TABLE_END
+
+Net revenues. Net revenues for the year ended December 31, 2024, were approximately $37.9 million compared to $39.6 million for the year ended December 31, 2023. As detailed in the table above, net revenue increased during 2024 for two of our marketed products: Sancuso and Caldolor. These increases were mainly offset by decreases in net product sales of Kristalose and Vibativ. 
+
+Kristalose revenue decreased by $0.7 million, compared to December 31, 2023, primarily as a result of decreased shipments of the product. 
+
+Sancuso revenue was $9.0 million compared to $8.1 million in the prior year, an increase of $0.9 million or 11.2% for the year ended December 31, 2024. This increase in net revenue was impacted by an improvement in product returns in 2024. 
+
+Vibativ revenue decreased to $7.2 million for the year ended December 31, 2024, compared to $8.8 million in the same prior year period. The decrease was the result of decreased shipments of the product and higher product returns. 
+
+Caldolor revenue was $5.0 million during the year ended December 31, 2024, compared to $4.3 million in the same period last year. This 14.4% increase in Caldolor revenue for the year ended December 31, 2024, w as impacted by an increase in international shipments. 
+
+There was no Vaprisol revenue for the year ended December 31, 2024, as Cumberland is currently out of commercial inventory of the product. Net revenue was negatively impacted by various sales deduction adjustments. 
+
+Acetadote revenue included net sales of our branded product and our share of net sales from our Authorized Generic. For the year ended December 31, 2024, the Acetadote net revenue was $0.2 million, as compared to $0.5 million from the prior year period. This decrease results from lower sales for our Authorized Generic. 
+
+Omeclamox-Pak had no sales for the years ended December 31, 2024 and 2023 as Cumberland is currently out of commercial inventory of this product. The packager for our Omeclamox-Pak product encountered financial difficulties and currently is under new management and is reorganizing. 
+
+We discontinued the product RediTrex in 2023. Net revenue was positively impacted by various sales deduction adjustments. 
+
+Other Revenue. Other revenue decreased from 2023 when milestone payments of $1 million associated with our Vibativ product were recorded. 
+
+Cost of products sold . Cost of products sold for the year ended December 31, 2024, were $6.6 million compared to $6.1 million in the prior year, an increase of $0.5 million. The gross margin for the years ended December 31, 2024 and 2023, were 82.6% and 84.7%, respectively. 
+
+Selling and marketing . Selling and marketing expense for the year ended December 31, 2024, were $17.0 million compared to $18.5 million in the prior year, which was a decrease of $1.4 million. This decrease was primarily a result of a decrease in marketing expenses associated with royalty costs and promotional spending. 
+
+Research and development . Research and development costs for the year ended December 31, 2024, were $4.8 million, compared to $5.8 million in the prior year, representing a decrease of $1.0 million due primarily to reduced FDA fees, salaries and consulting expenses. A portion of our research and development costs is variable based on the number of trials, study sites, number of patients and the cost per patient in each of our clinical programs. We continue to fund our ongoing clinical initiatives associated with our pipeline products. 
+
+General and administrative . General and administrative expenses for the year ended December 31, 2024, were $11.1 million compared to $10.7 million in the prior year. The primary driver of the increase was higher salary costs. 
+
+The components of the statements of operations discussed above reflect the following impacts from Vibativ: 
+
+##TABLE_START Financial Impact of Vibativ Years ended December 31, 2024 2023 
+
+Net revenue (1) 
+
+$ 7,161,413 $ 9,812,692 
+
+Cost of products sold (2) 
+
+1,829,824 1,423,399 Royalty and operating expenses 1,754,411 2,379,939 Vibativ contribution $ 3,577,178 $ 6,009,354 ##TABLE_END
+
+(1) 2023 net revenue includes a $1,000,000 payment to Cumberland related to a settlement agreement of milestone payments. 
+
+(2) The Vibativ inventory included in the costs of product sold during the period was acquired and paid for by Cumberland as part of the acquisition of the brand during 2018. 
+
+The components of the statements of operations discussed above reflect the following impacts from Sancuso: 
+
+##TABLE_START Financial Impact of Sancuso Years ended December 31, 2024 2023 Net revenue $ 9,005,132 $ 8,096,788 
+
+Cost of products sold (1) 
+
+856,608 1,214,826 Royalty and operating expenses 3,777,160 3,375,823 Sancuso contribution $ 4,371,364 $ 3,506,139 ##TABLE_END
+
+(1) The Sancuso inventory included in the costs of product sold during the period was acquired and paid for by Cumberland as part of the acquisition of the brand during 2022. 
+
+Amortization. Amortization expense represent the ratable use of our capitalized intangible assets including product and license rights, patents, trademarks and patent defense costs. Amortization for 2024 totaled approximately $4.7 million which is a decrease of $3.4 million due to a $3.3 million write down of our Omeclamox intangible assets for the year ended December 31, 2023. 
+
+Income taxes . Income taxes totaled $22,669 as a benefit for the year ended December 31, 2024, and $45,769 tax expense for the year ended December 31, 2023. 
+
+Other income. For the year ended December 31, 2024, we recognized a gain of $0.2 million for a payout earned on a company owned insurance policy. For the year ended December 31, 2023, we recognized a $2.8 million refund of FDA fees for the periods of 2023 and 2022 to further our product research efforts. In addition, in 2023 we recognized a gain of $0.5 million to settle a manufacturing dispute and a gain of $0.3 million for a payout earned on a company owned insurance policy. 
+
+LIQUIDITY AND CAPITAL RESOURCES 
+
+Our primary sources of liquidity are cash flows provided by our operations, the amounts borrowed and available under our line of credit and the cash proceeds from our initial public offering of common stock that was completed in August 2009. We believe that our internally generated cash flows, existing working capital and our line of credit will be adequate to finance internal growth, finance business development initiatives, and fund capital expenditures for the foreseeable future. 
+
+At December 31, 2024 and December 31, 2023, all our investments had original maturities of less than ninety days and as a result were classified as cash equivalents. 
+
+The following table summarizes our liquidity and working capital as of the years ended December 31: 
+
+##TABLE_START &#160; 2024 2023 Cash and cash equivalents $ 17,964,184 $ 18,321,624 Total cash and cash equivalents $ 17,964,184 $ 18,321,624 Working capital (current assets less current liabilities) $ 4,830,429 $ 7,732,161 Current ratio (multiple of current assets to current liabilities) 1.2 1.3 Revolving line of credit availability $ 4,723,830 $ 7,215,856 ##TABLE_END
+
+The following table summarizes our net changes in cash and cash equivalents for the years ended December 31: 
+
+##TABLE_START &#160; 2024 2023 Cash provided by (used in): Operating activities $ (612,186) $ 6,093,821 Investing activities 57,842 (105,695) Financing activities 196,904 (7,424,472) 
+
+Net decrease in cash and 
+
+cash equivalents 
+
+$ (357,440) $ (1,436,346) ##TABLE_END
+
+The net $0.4 million decrease in cash and cash equivalents for the year ended December 31, 2024, was attributable to cash used in operating activities offset by cash provided by financing and investing activities. Cash used in operating activities of $0.6 million is primarily due to an increase in accounts receivable of $1.9 million, a decrease in non-cash contingent consideration of $1.5 million, an increase in CSV of life insurance policies over premiums paid of $0.1 million, the gain on insurance proceeds of $0.2 million and a $1.0 million decrease in operating lease liabilities, partially offset by an increase in inventory of $2.4 million and an increase in accounts payable and other accrued liabilities. 
+
+Cash provided by investing activities less than $0.1 million was the result of more life insurance proceeds received offset by additions of intangibles and property. 
+
+Cash provided by financing activities of $0.2 million was primarily due to a $2.5 million net borrowing, partially offset by payments of $1.7 million of contingent consideration for Vibativ and Sancuso, and $0.6 million in cash used to repurchase shares of our common stock. 
+
+As noted above, we continue to repurchase shares of our common stock, as discussed in Part II, Item 5, "Market for Registrant&#8217;s Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities", of this Form 10-K. 
+
+The net $1.4 million decrease in cash and cash equivalents for the year ended December 31, 2023, was attributable to cash provided by operating activities offset by cash used in investing and financing activities. Cash provided by operating activities of $6.1 million is primarily due to an increase in accounts payable and other accrued liabilities of $3.7 million, and a $3.4 million decrease in accounts receivable, partially offset by a decrease in non-cash contingent consideration of $1.3 million. Cash used in investing activities of $0.1 million was the result of additions of intangibles and property and equipment offset by life insurance proceeds received. Our financing activities included payments of $3.3 million of contingent consideration for Vibativ and Sancuso, a pay down on our line of credit of $3.4 and $0.7 million in cash used to repurchase shares of our common stock. 
+
+Shelf Registration 
+
+On December 14, 2023, the Company filed a Shelf Registration on Form S-3 with the SEC associated with the sale of up to $100 million in corporate securities which also was declared effective on December 26, 2023. The Company entered into a Sales Agreement (the &#8220;Sales Agreement&#8221;) with H.C. Wainwright &#38; Co., LLC (&#8220;H.C. Wainwright&#8221;) on March 20, 2024, in order to allow the Company to sell shares at market prices. The Company did not issue any shares under its ATM program during the year ended December 31, 2024. 
+
+On February 5, 2025, the Company utilized the Sales Agreement with H. C. Wainwright and sold 1,000,000 shares of Cumberland&#8217;s common shares. These shares sold at a volume weighted average price of $5.4688 per share for aggregate gross proceeds of $5,468,800. 
+
+On February 14, 2025, the Company increased the maximum aggregate offering amount of the shares of the Company&#8217;s common stock issuable under the Sales Agreement with H.C. Wainwright for to up to $10 million and filed a prospectus supplement under the Sales Agreement for that aggregate offering amount. 
+
+Debt Agreement 
+
+On September 5, 2023, the Company entered into a new Revolving Credit Loan Agreement with Pinnacle Bank. This facility provides for an aggregate principal funding amount of up to $25 million. The initial revolving line of credit is up to $20 million, with the ability for Cumberland to increase the amount to $25 million, under certain conditions. It has a three year term expiring on October 1, 2026. The interest rate is based on Benchmark (Term SOFR) plus a spread of 2.75%. Cumberland is subject to one financial covenant, the maintenance of a Funded Debt Ratio, determined on a quarterly basis. Borrowings under the line of credit are collateralized by substantially all of our assets. 
+
+On May 6, 2024, the Company entered into a First Amendment to the Loan Agreement which provides an alternative to the financial covenant by delivering to the lender a borrowing base certificate and complying with certain borrowing base requirements which set forth a maximum revolver amount equal to the lessor of (a) up to $20 million or (b) the sum of the Company's cash balances and eligible accounts receivable. 
+
+Minimum Product Purchase Requirements 
+
+Our manufacturing and supply agreements do not require minimum annual purchase obligations. 
+
+Contractual cash obligations 
+
+The following table summarizes our contractual cash obligations as of December 31, 2024: 
+
+##TABLE_START &#160; &#160; Payments Due by Year 
+
+Contractual obligations (1) 
+
+Total 
+
+2025 2026 2027 2028 2029 and after 
+
+Line of credit (2) 
+
+$ 15,276,170 $ &#8212; $ 15,276,170 $ &#8212; $ &#8212; $ &#8212; 
+
+Estimated interest on debt (2) 
+
+1,904,747 1,088,427 816,320 &#8212; &#8212; &#8212; 
+
+Vibativ contingent consideration liability payments (3) 
+
+3,242,999 381,989 474,553 512,466 481,680 1,392,311 
+
+Sancuso contingent consideration liability payments (4) 
+
+1,516,000 332,594 336,884 325,578 204,427 316,517 
+
+Operating leases (5) 
+
+8,268,382 836,100 909,910 934,180 740,791 4,847,401 
+
+Total (1) 
+
+$ 30,208,298 $ 2,639,110 $ 17,813,837 $ 1,772,224 $ 1,426,898 $ 6,556,229 ##TABLE_END
+
+1. The sum of the individual amounts may not agree due to rounding. 
+
+2. The line of credit payments represent the estimated unused line of credit payments and the amount due at maturity. The estimated interest on debt represents the interest on the principal outstanding on the line of credit. These amounts are based on the $15.3 million line of credit assuming the current $15.3 million balance outstanding on December 31, 2024 is consistently outstanding through maturity of October 2026. Interest and unused line of credit payments are due and payable quarterly in arrears. 
+
+3. The contingent consideration liability represents the fair value of the royalty payments of up to 20% of future net sales as part of the Vibativ acquisition. 
+
+4. The contingent consideration liability represents the fair value of the royalty payments of up to 10% of future net sales as part of the Sancuso acquisition. 
+
+5. The Broadwest contractual cash obligation began upon commencement in October 2022 and CET began May 2023. 
+
+OFF-BALANCE SHEET ARRANGEMENTS 
+
+During 2024 and 2023 we did not engage in any off-balance sheet arrangements. 
+
+RECENT ACCOUNTING PRONOUNCEMENTS 
+
+Recent Accounting Pronouncements 
+
+In June 2016, the FASB issued ASU No. 2016-13, &#8220;Financial Instruments-Credit Losses,&#8221; which changes the impairment model for most financial assets and certain other instruments. For trade and other receivables, held-to-maturity debt securities, loans and other instruments, companies will be required to use a new forward-looking &#8220;expected loss&#8221; model that generally will result in the earlier recognition of allowances for losses. For available-for-sale debt securities with unrealized losses, companies will measure credit losses in a manner similar to what they do today, except that the losses will be recognized as allowances rather than as reductions in the amortized cost of the securities. Companies will have to disclose additional information, including information they use to track credit quality by year of origination for most financing receivables. Companies will apply the ASU&#8217;s provisions as a cumulative-effect adjustment, if any, to accumulated deficit as of the beginning of the first reporting period in which the guidance is adopted. 
+
+Related to ASU No. 2016-13 discussed above, in May 2019, the FASB issued ASU 2019-05, "Financial Instruments-Credit Losses (Topic 326): Targeted Transition Relief" which provides transition relief for ASU 2016-13 by providing entities with an alternative to irrevocably electing the fair value option for eligible financial assets measured at amortized cost upon adoption of the new credit losses standard. Certain eligibility requirements must be met and the election must be applied on an instrument-by-instrument basis. The election is not available for either available-for-sale or held-to-maturity debt securities. We adopted both ASU 2016-13 and ASU 2019-05 on January 1, 2023. The adoption of ASU 2016-13 and ASU 2019-05 did not have a material impact on the Company&#8217;s consolidated financial statements. 
+

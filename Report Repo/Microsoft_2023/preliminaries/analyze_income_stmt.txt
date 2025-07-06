@@ -1,0 +1,7 @@
+**Revenue Performance:** Microsoft achieved a record $245.1 billion in FY2024, up 16% YoY from $211.9 billion in FY2023, driven primarily by a 22% increase in Microsoft Cloud revenue to $111.6 billion and growth in Office Commercial (10%) and LinkedIn (10%). Key segments like Intelligent Cloud and Productivity and Business Processes fueled overall growth, while More Personal Computing declined 9%, mainly due to Windows OEM (-25%) and Devices (-24%).
+
+**Cost Control & Margins:** Cost of revenue rose 5% to $74.1 billion, reflecting cloud infrastructure investments, yet gross profit surged 26% to $171 billion, boosting gross margin to 69.8%. Operating expenses increased 10% to $61.6 billion, but operating income grew 31% to $110.7 billion, resulting in a strong operating margin of 45.2%. Net income reached $88.1 billion, with net profit margins at 36%, indicating efficient cost management amid revenue expansion.
+
+**Profitability & EPS:** Diluted EPS improved slightly to $11.86 from $11.80 in FY2023, supported by higher net income and share count stability. The robust earnings reflect operational efficiency and strategic investments, positioning Microsoft favorably against industry peers.
+
+**Strategic Outlook:** Microsoft’s diversified revenue streams, especially cloud services, underpin its resilient financial health, despite challenges in consumer hardware. Continued growth in cloud and AI investments is expected to sustain profitability, with margins remaining healthy and investor confidence reinforced by consistent EPS performance.

@@ -1,0 +1,8 @@
+{
+  "error": "402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/balance-sheet-statement?symbol=0P0001F6D7.TO&period=annual&apikey=h39fQ5nHOcfTMSQhsIJQzOwZKnocttbE",
+  "payload": {
+    "symbol": "0P0001F6D7.TO",
+    "period": "annual",
+    "apikey": "h39fQ5nHOcfTMSQhsIJQzOwZKnocttbE"
+  }
+}

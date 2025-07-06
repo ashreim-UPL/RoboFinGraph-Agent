@@ -65,6 +65,8 @@ class AgentState(BaseModel):
     accuracy_score:       Optional[float] = None
 
     agent_name:           Optional[str] = None
+    llm_provider:         Optional[str] = None
+    llm_model:         Optional[str] = None
     tool_call_result:     Optional[Dict[str, Any]] = None
     memory:               Dict[str, Any] = Field(default_factory=dict)
     audit_notes:          List[str] = Field(default_factory=list)

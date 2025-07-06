@@ -1,0 +1,202 @@
+[
+  {
+    "Balance Sheet": "Cash",
+    "2024": "285.84",
+    "2023": "203.05"
+  },
+  {
+    "Balance Sheet": "CashEquivalents",
+    "2024": "351.40",
+    "2023": "1204.38"
+  },
+  {
+    "Balance Sheet": "ShortTermInvestments",
+    "2024": "1041.31",
+    "2023": "202.19"
+  },
+  {
+    "Balance Sheet": "CashandShortTermInvestments",
+    "2024": "1678.55",
+    "2023": "1609.62"
+  },
+  {
+    "Balance Sheet": "AccountsReceivable-TradeNet",
+    "2024": "209.80",
+    "2023": "265.29"
+  },
+  {
+    "Balance Sheet": "TotalReceivablesNet",
+    "2024": "472.46",
+    "2023": "484.26"
+  },
+  {
+    "Balance Sheet": "TotalInventory",
+    "2024": "4013.45",
+    "2023": "3326.28"
+  },
+  {
+    "Balance Sheet": "PrepaidExpenses",
+    "2024": "15.60",
+    "2023": "12.61"
+  },
+  {
+    "Balance Sheet": "OtherCurrentAssetsTotal",
+    "2024": "21.97",
+    "2023": "15.62"
+  },
+  {
+    "Balance Sheet": "TotalCurrentAssets",
+    "2024": "6202.03",
+    "2023": "5448.39"
+  },
+  {
+    "Balance Sheet": "Property/Plant/EquipmentTotal-Gross",
+    "2024": "16374.36",
+    "2023": "13632.99"
+  },
+  {
+    "Balance Sheet": "AccumulatedDepreciationTotal",
+    "2024": "-3076.07",
+    "2023": "-2402.50"
+  },
+  {
+    "Balance Sheet": "Property/Plant/EquipmentTotal-Net",
+    "2024": "14233.51",
+    "2023": "12059.65"
+  },
+  {
+    "Balance Sheet": "GoodwillNet",
+    "2024": "78.27",
+    "2023": "78.27"
+  },
+  {
+    "Balance Sheet": "IntangiblesNet",
+    "2024": "30.35",
+    "2023": "23.18"
+  },
+  {
+    "Balance Sheet": "LongTermInvestments",
+    "2024": "110.13",
+    "2023": "8.95"
+  },
+  {
+    "Balance Sheet": "NoteReceivable-LongTerm",
+    "2024": "369.34",
+    "2023": "371.06"
+  },
+  {
+    "Balance Sheet": "OtherLongTermAssetsTotal",
+    "2024": "153.57",
+    "2023": "116.79"
+  },
+  {
+    "Balance Sheet": "TotalAssets",
+    "2024": "21177.20",
+    "2023": "18106.29"
+  },
+  {
+    "Balance Sheet": "AccountsPayable",
+    "2024": "984.81",
+    "2023": "753.79"
+  },
+  {
+    "Balance Sheet": "AccruedExpenses",
+    "2024": "103.06",
+    "2023": "72.76"
+  },
+  {
+    "Balance Sheet": "NotesPayable/ShortTermDebt",
+    "2024": "0.00",
+    "2023": "0.00"
+  },
+  {
+    "Balance Sheet": "CurrentPortofLTDebt/CapitalLeases",
+    "2024": "192.92",
+    "2023": "166.32"
+  },
+  {
+    "Balance Sheet": "OtherCurrentliabilitiesTotal",
+    "2024": "698.35",
+    "2023": "474.14"
+  },
+  {
+    "Balance Sheet": "TotalCurrentLiabilities",
+    "2024": "1979.14",
+    "2023": "1467.01"
+  },
+  {
+    "Balance Sheet": "CapitalLeaseObligations",
+    "2024": "399.24",
+    "2023": "476.66"
+  },
+  {
+    "Balance Sheet": "TotalLongTermDebt",
+    "2024": "399.24",
+    "2023": "476.66"
+  },
+  {
+    "Balance Sheet": "TotalDebt",
+    "2024": "592.16",
+    "2023": "642.98"
+  },
+  {
+    "Balance Sheet": "DeferredIncomeTax",
+    "2024": "91.93",
+    "2023": "76.96"
+  },
+  {
+    "Balance Sheet": "MinorityInterest",
+    "2024": "-0.48",
+    "2023": "0.08"
+  },
+  {
+    "Balance Sheet": "OtherLiabilitiesTotal",
+    "2024": "9.55",
+    "2023": "6.88"
+  },
+  {
+    "Balance Sheet": "TotalLiabilities",
+    "2024": "2479.38",
+    "2023": "2027.59"
+  },
+  {
+    "Balance Sheet": "CommonStockTotal",
+    "2024": "650.73",
+    "2023": "648.26"
+  },
+  {
+    "Balance Sheet": "AdditionalPaid-InCapital",
+    "2024": "6113.47",
+    "2023": "6015.14"
+  },
+  {
+    "Balance Sheet": "RetainedEarnings(AccumulatedDeficit)",
+    "2024": "11933.62",
+    "2023": "9415.30"
+  },
+  {
+    "Balance Sheet": "TotalEquity",
+    "2024": "18697.82",
+    "2023": "16078.70"
+  },
+  {
+    "Balance Sheet": "TotalLiabilitiesShareholders'Equity",
+    "2024": "21177.20",
+    "2023": "18106.29"
+  },
+  {
+    "Balance Sheet": "TotalCommonSharesOutstanding",
+    "2024": "65.07",
+    "2023": "64.83"
+  },
+  {
+    "Balance Sheet": "TangibleBookValueperShareCommonEq",
+    "2024": "285.67",
+    "2023": "246.46"
+  },
+  {
+    "Balance Sheet": "periodLength",
+    "2024": "0.00",
+    "2023": "0.00"
+  }
+]

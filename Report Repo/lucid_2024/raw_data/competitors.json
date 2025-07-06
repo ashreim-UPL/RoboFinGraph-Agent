@@ -1,0 +1,38 @@
+[
+  {
+    "symbol": "CHPT",
+    "companyName": "ChargePoint Holdings, Inc.",
+    "price": 0.7152,
+    "mktCap": 330172080
+  },
+  {
+    "symbol": "MULN",
+    "companyName": "Mullen Automotive, Inc.",
+    "price": 0.2235,
+    "mktCap": 2281
+  },
+  {
+    "symbol": "NIO",
+    "companyName": "NIO Inc.",
+    "price": 3.51,
+    "mktCap": 7362190068
+  },
+  {
+    "symbol": "RIVN",
+    "companyName": "Rivian Automotive, Inc.",
+    "price": 13.07,
+    "mktCap": 14881500693
+  },
+  {
+    "symbol": "SOFI",
+    "companyName": "SoFi Technologies, Inc.",
+    "price": 18.57,
+    "mktCap": 20526535200
+  },
+  {
+    "symbol": "XPEV",
+    "companyName": "XPeng Inc.",
+    "price": 18.85,
+    "mktCap": 17124338569
+  }
+]

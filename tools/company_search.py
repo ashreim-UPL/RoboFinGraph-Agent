@@ -86,6 +86,11 @@ def process_company_data(company_name: str, year: str) -> Dict[str, Any]:
 
         llm_output_str = llm_response.choices[0].message.content
         llm_data  = clean_llm_json(llm_output_str)
+
+        usage = getattr(llm_response, "usage", None)
+        results["tokens_sent"] = usage.prompt_tokens if usage and hasattr(usage, "prompt_tokens") else 0
+        results["tokens_generated"] = usage.completion_tokens if usage and hasattr(usage, "completion_tokens") else 0
+        results["cost_llm"] = 0.0
         try:
             results["llm_result"] = llm_data
             company_resolver_logger.info(f"LLM successfully extracted data for {company_name}.")

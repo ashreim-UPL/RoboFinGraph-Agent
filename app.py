@@ -4,6 +4,7 @@ import os
 import sys
 import json
 import io
+import re
 import subprocess
 import traceback
 import urllib.parse
@@ -28,7 +29,7 @@ console.setFormatter(logging.Formatter('%(asctime)s | %(levelname)s | %(message)
 get_logger().addHandler(console)
 
 # Paths
-OAI_CONFIG_PATH = os.path.join(APP_DIR, "finrobot_config.json")
+OAI_CONFIG_PATH = os.path.join(APP_DIR, "langgraph_config.json")
 ORCHESTRATOR_SCRIPT = os.path.join(APP_DIR, "main.py")
 REPORT_DIR = os.path.join(APP_DIR, "report")
 
@@ -37,46 +38,31 @@ os.makedirs(os.path.join(APP_DIR, ".cache"), exist_ok=True)
 os.makedirs(REPORT_DIR, exist_ok=True)
 
 
-def register_api_keys():
+def load_llm_models(config_path: str) -> dict:
     """
-    Load model_providers and flat api_keys from config and inject into env.
+    Loads only LLM model mappings from the config JSON.
+    Returns a dict:
+      {
+        "openai_llm_models": {...},
+        "mixtral_llm_models": {...},
+        "qwen_llm_models": {...}
+      }
     """
     try:
-        with open(OAI_CONFIG_PATH, 'r', encoding='utf-8') as f:
+        with open(config_path, 'r', encoding='utf-8') as f:
             cfg = json.load(f)
+        models = {
+            "openai_llm_models": cfg.get("openai_llm_models", {}),
+            "mixtral_llm_models": cfg.get("mixtral_llm_models", {}),
+            "qwen_llm_models": cfg.get("qwen_llm_models", {}),
+        }
+        logger.info("Loaded LLM model mappings from config")
+        log_event("llm_models_loaded", {"models": list(models.keys())})
+        return models
     except Exception as e:
-        logger.error(f"register_api_keys: failed to load config: {e}")
-        log_event("register_api_keys_error", {"error": str(e)})
-        return
-
-    # Provider-based keys
-    for prov in cfg.get("model_providers", []):
-        key = prov.get("api_key", "").strip()
-        api_type = prov.get("provider", "").lower()
-        if not key:
-            continue
-        if api_type == "openai":
-            os.environ["OPENAI_API_KEY"] = key
-            logger.info("Injected OpenAI API key")
-            log_event("api_key_injected", {"provider": "openai"})
-        elif api_type == "together":
-            os.environ["TOGETHER_API_KEY"] = key
-            base = prov.get("base_url", "").strip()
-            if base:
-                os.environ["TOGETHER_BASE_URL"] = base
-            logger.info("Injected Together API key")
-            log_event("api_key_injected", {"provider": "together"})
-
-    # Flat api_keys
-    for k, v in cfg.get("api_keys", {}).items():
-        if v:
-            os.environ[k] = v
-            logger.info(f"Injected API key: {k}")
-            log_event("api_key_injected", {"key": k})
-
-
-# Inject keys on import
-register_api_keys()
+        logger.error(f"Failed to load LLM model mappings: {e}")
+        log_event("llm_models_load_error", {"error": str(e)})
+        return {}
 
 # Flask app init
 app = Flask(__name__)
@@ -110,12 +96,18 @@ def available_models():
                 if isinstance(m, str):
                     filtered[str(idx)] = m
                     idx += 1
-    logger.info(f"available_models fetched: {len(filtered)}")
-    log_event("available_models_fetched", {"count": len(filtered)})
+    
+    # NEW: Call load_llm_models to get the structured provider data
+    available_providers_llm = load_llm_models(OAI_CONFIG_PATH) #
+
+    logger.info(f"available_models fetched: {len(filtered)} models, {len(available_providers_llm)} providers")
+    log_event("available_models_fetched", {"count": len(filtered), "providers_count": len(available_providers_llm)})
+    
     return jsonify({
         "models": filtered,
         "default_agent_models": defaults,
-        "global_default_model": global_default
+        "global_default_model": global_default,
+        "available_providers_llm": available_providers_llm # # Add this to the response
     })
 
 
@@ -129,21 +121,30 @@ def report_files():
         logger.error(f"report_files error: {e}")
         return jsonify([]), 500
 
+FRONTEND_BUILD_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'frontend', 'build'))
+app = Flask(__name__, static_folder=FRONTEND_BUILD_DIR)
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_react(path):
+    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
+
+"""@app.route("/")
+def index():
+    return render_template("finrobot.html")"""
 
 @app.route("/report/<path:filename>")
 def serve_report(filename):
     return send_from_directory(REPORT_DIR, filename)
 
 
-@app.route("/")
-def index():
-    return render_template("finrobot.html")
-
-
 @app.route("/stream")
 def stream():
     logger.info(f"STREAM endpoint called with args: {request.args.to_dict()}")
-    log_event("stream_called", request.args.to_dict())    
+    log_event("stream_called", request.args.to_dict())      
     # Required params
     company = request.args.get("company")
     if not company:
@@ -162,9 +163,9 @@ def stream():
 
     # Build subprocess cmd
     cmd = [sys.executable, "-u", ORCHESTRATOR_SCRIPT,
-           company, year,
-           "--report_type", report_type,
-           "--llm_models", llm_str]
+            company, year,
+            "--report_type", report_type,
+            "--llm_models", llm_str]
     if verbose:
         cmd.append("--verbose")
 
@@ -189,23 +190,64 @@ def stream():
 
     def event_stream():
         # Read lines from subprocess
-        for raw in proc.stdout:
-            line = raw.strip()
-            if not line:
+        for raw_item in proc.stdout: # Use raw_item to represent the direct yield from proc.stdout
+            # Ensure raw_item is converted to string immediately.
+            # Use 'replace' for errors to prevent UnicodeEncodeError in this debug output,
+            # though the primary fix should be in logger.py and environment.
+            raw_string = str(raw_item).strip() 
+            
+            if not raw_string:
                 continue
-            try:
-                data = json.loads(line)
-                event_name = data.get("event_type", "message")
-                payload = data.get("data", data)
-                yield f"event: {event_name}\n"
-                yield f"data: {json.dumps(payload, ensure_ascii=False)}\n\n"
-            except json.JSONDecodeError:
+
+            # --- Debugging line to see every raw string coming in ---
+            import sys
+            sys.stderr.write(f"RAW_RECEIVED_FINAL_PARSE: {raw_string!r}\n")
+            # --- End Debugging line ---
+
+            parsed_successfully_as_structured_event = False
+            
+            # Attempt to parse the line as a logger-prefixed JSON event.
+            # This regex is specifically designed to strip the logger's INFO/WARNING/ERROR prefix
+            # and capture the potential JSON string that follows.
+            # Using re.match for start-of-string matching.
+            log_prefix_pattern = re.compile(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3} \| (INFO|WARNING|ERROR) \| (.*)$")
+            match = log_prefix_pattern.match(raw_string)
+            
+            potential_json_string = None
+            if match:
+                potential_json_string = match.group(2).strip() # Group 2 captures everything after the level and final '| '
+
+            # If it didn't match the logger prefix, or the part after the prefix doesn't start with '{',
+            # then try to find the first '{' for cases where the format might vary.
+            if not potential_json_string or not potential_json_string.startswith('{'):
+                json_start_index = raw_string.find('{')
+                if json_start_index != -1:
+                    potential_json_string = raw_string[json_start_index:].strip()
+                else:
+                    potential_json_string = None # No JSON part found at all
+
+            if potential_json_string and potential_json_string.startswith('{') and potential_json_string.endswith('}'):
+                try:
+                    data = json.loads(potential_json_string)
+                    
+                    # Ensure it's a structured event generated by your log_event function
+                    if "event_type" in data and ("payload" in data or "data" in data):
+                        event_name = data["event_type"]
+                        payload_content = data.get("payload", data.get("data", data))
+                        
+                        sys.stderr.write(f"DEBUG: YIELDING STRUCTURED EVENT: {event_name!r}\n")
+                        yield f"event: {event_name}\n"
+                        yield f"data: {json.dumps(payload_content, ensure_ascii=False)}\n\n"
+                        parsed_successfully_as_structured_event = True
+                except json.JSONDecodeError:
+                    sys.stderr.write(f"DEBUG: JSONDecodeError for: {potential_json_string!r}\n")
+                    pass # Not valid JSON, or not a structured event, or malformed JSON
+
+            if not parsed_successfully_as_structured_event:
+                # If no structured event was successfully parsed, yield the original raw_string as a generic log message.
+                sys.stderr.write(f"DEBUG: YIELDING FALLBACK LOG: {raw_string!r}\n")
                 yield f"event: log\n"
-                yield f"data: {json.dumps({"message": line}, ensure_ascii=False)}\n\n"
-        # At completion
-        proc.wait()
-        yield "event: pipeline_complete\n"
-        yield f"data: {json.dumps({"exit_code": proc.returncode}, ensure_ascii=False)}\n\n"
+                yield f"data: {json.dumps({'message': raw_string}, ensure_ascii=False)}\n\n"
 
     return Response(
         stream_with_context(event_stream()),
@@ -215,7 +257,6 @@ def stream():
             "X-Accel-Buffering": "no"
         }
     )
-
 
 if __name__ == "__main__":
     logger.info("Starting Flask app")

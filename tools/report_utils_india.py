@@ -59,7 +59,7 @@ def get_key_data_india(ticker: str, save_path: str) -> str:
 
     # BVPS
     try:
-        bvps_val = float(key_metrics.get("bookValuePerShare", 0))
+        bvps_val = float(key_metrics.get("bookValuePerShareMostRecentFiscalYear", 0))
     except Exception:
         bvps_val = 0.0
 

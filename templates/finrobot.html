@@ -7,11 +7,21 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
 </head>
 <body class="bg-gray-100 text-gray-900">
 <div id="root" class="max-w-7xl mx-auto p-6"></div>
+
+{% raw %}
 <script type="text/babel">
-const setupStepsList = [
+const { useState, useEffect, useRef } = React;
+
+// ============================================================================
+// Global Constants and Utilities
+// ============================================================================
+
+const SETUP_STEPS_LIST = [
   { key: "api", label: "Setting up APIs" },
   { key: "llm", label: "Setting up LLM Model" },
   { key: "agents", label: "Setting up Agents" },
@@ -19,92 +29,44 @@ const setupStepsList = [
   { key: "region", label: "Resolving Company Region & Peers" },
 ];
 
-// Utility for status color
-const statusColor = {
+const STATUS_COLOR = {
   pending: "bg-yellow-400",
   success: "bg-green-500",
   error: "bg-red-500",
 };
 
-// Define the agent roles that will have their own model selection
-const agentRoles = [
-  "leader",
-  "data_cot",
+// Agent roles that will receive specific model assignments from the chosen provider
+const AGENT_ROLES_FOR_MODEL_ASSIGNMENT = [
+  "resolve_company",
+  "llm_decision",
+  "data_collection_us",
+  "data_collection_indian",
+  "validate_collected_data",
+  "synchronize_data",
   "summarizer",
-  "concept_cot",
-  "thesis_cot",
-  "auditor",
-  "LLMValidator"
+  "validate_summarized_data",
+  "concept",
+  "validate_analyzed_data",
+  "thesis",
+  "audit"
 ];
 
+/**
+ * Converts a snake_case agent role key to a more readable title case.
+ * e.g., "resolve_company" -> "Resolve Company"
+ */
+const formatAgentRoleKey = (key) => {
+  return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+};
 
-function SetupProgress() {
-  return (
-    <div className="bg-white rounded-lg shadow p-4 mb-4">
-      <div className="font-semibold mb-2">Setup Progress</div>
-      <table className="w-full text-xs">
-        <tbody>
-          <tr>
-            <td><span className="inline-block w-4 h-4 rounded-full bg-yellow-400 border border-gray-300"></span></td>
-            <td>Setting up APIs</td>
-          </tr>
-          <tr>
-            <td><span className="inline-block w-4 h-4 rounded-full bg-yellow-400 border border-gray-300"></span></td>
-            <td>Setting up LLM Model</td>
-          </tr>
-          <tr>
-            <td><span className="inline-block w-4 h-4 rounded-full bg-yellow-400 border border-gray-300"></span></td>
-            <td>Setting up Agents</td>
-          </tr>
-          <tr>
-            <td><span className="inline-block w-4 h-4 rounded-full bg-yellow-400 border border-gray-300"></span></td>
-            <td>Setting up Tools</td>
-          </tr>
-          <tr>
-            <td><span className="inline-block w-4 h-4 rounded-full bg-yellow-400 border border-gray-300"></span></td>
-            <td>Resolving Company Region & Peers</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
-}
+// ============================================================================
+// Icon Components
+// ============================================================================
 
-function LoggingSetupStatus({ setupStatus }) {
-  return (
-    <div className="bg-white rounded-lg shadow p-4 mb-4">
-      <div className="font-semibold mb-2">Setup Progress</div>
-      <table className="w-full text-xs">
-        <tbody>
-          {setupStepsList.map((step) => (
-            <tr key={step.key}>
-              <td className="pr-2 py-1">
-                <span
-                  className={`inline-block w-4 h-4 rounded-full border border-gray-300 ${statusColor[setupStatus[step.key] || "pending"]}`}
-                  title={setupStatus[step.key]}
-                ></span>
-              </td>
-              <td className="py-1">{step.label}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-const { useState, useEffect, useRef } = React;
-
-// ========== Icon Components ==========
 const IconKey = () => (
   <svg className="h-4 w-4 text-gray-400 mr-1" fill="none" viewBox="0 0 24 24">
     <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
     <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" strokeWidth="2"/>
-  </svg>
-);
-
-const IconChart = () => (
-  <svg className="h-4 w-4 text-blue-400 mr-1" fill="none" viewBox="0 0 24 24">
-    <path d="M4 20V10M12 20V4M20 20V14" stroke="currentColor" strokeWidth="2"/>
   </svg>
 );
 
@@ -129,127 +91,193 @@ const IconSpinner = () => (
   </svg>
 );
 
-// ========== New Agent-Specific Model Selection Component ==========
-const AgentModelSelection = ({ agentRoles, availableModels, selectedAgentModels, setSelectedAgentModels, isRunning }) => {
-  const handleChange = (agentName, modelName) => {
-    setSelectedAgentModels(prev => ({
-      ...prev,
-      [agentName]: modelName
-    }));
-  };
+const IconGraph = () => (
+  <svg className="h-5 w-5 text-indigo-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 6l3 3m0 0l-3 3m3-3h12m-9 1l4-4m0 0l4 4m-4-4v14" />
+  </svg>
+);
+
+const IconAgent = () => (
+  <svg className="h-5 w-5 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24">
+    <circle cx="12" cy="8" r="3.5" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M5 15C5 12.2386 7.23858 10 10 10H14C16.7614 10 19 12.2386 19 15V16C19 17.1046 18.1046 18 17 18H7C5.89543 18 5 17.1046 5 16V15Z"
+          stroke="currentColor" strokeWidth="1.5" />
+  </svg>
+);
+
+// ============================================================================
+// UI Components
+// ============================================================================
+
+/**
+ * Displays the setup progress status (API, LLM, Agents, etc.).
+ * Statuses are 'pending', 'success', 'error'.
+ */
+function LoggingSetupStatus({ setupStatus }) {
+  return (
+    <div className="bg-white rounded-lg shadow p-4 mb-4">
+      <div className="font-semibold mb-2">Setup Progress</div>
+      <table className="w-full text-xs">
+        <tbody>
+          {SETUP_STEPS_LIST.map((step) => (
+            <tr key={step.key}>
+              <td className="pr-2 py-1">
+                <span
+                  className={`inline-block w-4 h-4 rounded-full border border-gray-300 ${STATUS_COLOR[setupStatus[step.key] || "pending"]}`}
+                  title={setupStatus[step.key]}
+                ></span>
+              </td>
+              <td className="py-1">{step.label}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function cleanMermaid(str) {
+  // Remove the YAML front matter if present
+  str = str.replace(/^---[\s\S]+?---/, '');
+  // Replace all \\n, \\t with real whitespace
+  str = str.replace(/\\n/g, '\n').replace(/\\t/g, '\t');
+  return str.trim();
+}
+
+
+/**
+ * Configuration panel for company, year, report type, verbose mode,
+ * and global LLM provider selection.
+ */
+const AnalysisConfig = ({
+  company, setCompany,
+  year, setYear,
+  reportType, setReportType,
+  selectedGlobalProvider, setSelectedGlobalProvider,
+  availableProviders,
+  isRunning, onStart,
+  verbose, setVerbose
+}) => {
+  const providerOptions = Object.keys(availableProviders).map(key => ({
+    key: key,
+    name: formatAgentRoleKey(key.replace(/_llm_models$/, ''))
+  }));
 
   return (
-    <div className="mb-3">
-      <label className="block text-xs text-gray-500 mb-2">Select LLM Models for Agents</label>
-      <div className="space-y-2">
-        {agentRoles.map(agentName => (
-          <div key={agentName} className="flex items-center">
-            <label htmlFor={`model-select-${agentName}`} className="block text-sm font-medium text-gray-700 w-1/3 capitalize">
-              {agentName.replace(/([A-Z])/g, ' $1').trim()}: {/* Makes "data_cot" -> "Data Cot" */}
-            </label>
-            <select
-              id={`model-select-${agentName}`}
-              className="mt-1 block w-2/3 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-              value={selectedAgentModels[agentName] || ''}
-              onChange={(e) => handleChange(agentName, e.target.value)}
-              disabled={isRunning || !availableModels.length}
-            >
-              {!availableModels.length && <option value="">No models available</option>}
-              {availableModels.map(model => (
-                <option key={model.id} value={model.name}>
-                  [{model.id}] {model.name}
-                </option>
-              ))}
-            </select>
-          </div>
-        ))}
+    <div className="bg-white rounded-lg shadow p-4 mb-4">
+      <div className="flex items-center font-semibold mb-2">
+        <IconKey />
+        Analysis Configuration
       </div>
+      <div className="mb-2">
+        <label className="block text-xs text-gray-500">Company Name or Ticker</label>
+        <input
+          className="border px-2 py-1 rounded w-full"
+          value={company}
+          onChange={e => setCompany(e.target.value)}
+          disabled={isRunning}
+        />
+      </div>
+      <div className="flex gap-2 mb-2">
+        <div className="flex-1">
+          <label className="block text-xs text-gray-500">Year</label>
+          <select
+            className="border px-2 py-1 rounded w-full"
+            value={year}
+            onChange={e => setYear(e.target.value)}
+            disabled={isRunning}
+          >
+            {[2025,2024,2023,2022,2021].map(y => (
+              <option key={y} value={y}>{y}</option>
+            ))}
+          </select>
+        </div>
+        <div className="flex-1">
+          <label className="block text-xs text-gray-500">Report Type</label>
+          <select
+            className="border px-2 py-1 rounded w-full"
+            value={reportType}
+            onChange={e => setReportType(e.target.value)}
+            disabled={isRunning}
+          >
+            <option value="kpi_bullet_insights">KPI Insights</option>
+          </select>
+        </div>
+      </div>
+      <div className="mb-3">
+        <label className="inline-flex items-center">
+          <input
+            type="checkbox"
+            className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+            checked={verbose}
+            onChange={e => setVerbose(e.target.checked)}
+            disabled={isRunning}
+          />
+          <span className="ml-2 text-sm">Verbose (debug logging)</span>
+        </label>
+      </div>
+
+      {/* Global LLM Provider Selection (Single Dropdown) */}
+      <div className="mb-3">
+        <label htmlFor="global-provider-select" className="block text-xs text-gray-500 mb-2">
+          Select Main LLM Provider for all Agents
+        </label>
+        <select
+          id="global-provider-select"
+          className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          value={selectedGlobalProvider || ''}
+          onChange={(e) => setSelectedGlobalProvider(e.target.value)}
+          disabled={isRunning || !providerOptions.length}
+        >
+          {!providerOptions.length && <option value="">No providers available</option>}
+          {providerOptions.map(provider => (
+            <option key={provider.key} value={provider.key}>
+              {provider.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Displaying selected LLM Models per agent (read-only) */}
+      {selectedGlobalProvider && availableProviders[selectedGlobalProvider] && (
+        <div className="mb-4 p-3 bg-gray-50 rounded-md border border-gray-200">
+          <h4 className="font-semibold text-sm mb-2 text-gray-700">
+            Selected Models from {providerOptions.find(p => p.key === selectedGlobalProvider)?.name || 'Provider'}:
+          </h4>
+          <div className="overflow-x-auto">
+            <table className="table-auto w-full text-xs border border-gray-200">
+              <tbody>
+                {Object.entries(availableProviders[selectedGlobalProvider]).map(([agentRoleKey, modelName]) => (
+                  <tr key={agentRoleKey} className="hover:bg-gray-100">
+                    <td className="px-2 py-1 font-medium text-gray-800 capitalize whitespace-nowrap border-b border-gray-100">
+                      {formatAgentRoleKey(agentRoleKey)}
+                    </td>
+                    <td className="px-2 py-1 text-gray-600 border-b border-gray-100 break-all">
+                      {modelName}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* Disable if no provider selected */}
+      <button
+        className="w-full py-2 bg-indigo-600 text-white rounded font-semibold flex items-center justify-center"
+        onClick={onStart}
+        disabled={isRunning || !selectedGlobalProvider} // Disable if no provider selected
+      >
+        {isRunning ? <><IconSpinner /> Processing...</> : "Start Analysis"}
+      </button>
     </div>
   );
 };
 
-
-const AnalysisConfig = ({ 
-  company, setCompany, 
-  year, setYear, 
-  reportType, setReportType,
-  selectedAgentModels, setSelectedAgentModels, // Updated prop
-  availableModels,
-  isRunning, onStart,
-  verbose, setVerbose 
-}) => (
-  <div className="bg-white rounded-lg shadow p-4 mb-4">
-    <div className="flex items-center font-semibold mb-2">
-      <IconKey />
-      Analysis Configuration
-    </div>
-    <div className="mb-2">
-      <label className="block text-xs text-gray-500">Company Name or Ticker</label>
-      <input
-        className="border px-2 py-1 rounded w-full"
-        value={company}
-        onChange={e => setCompany(e.target.value)}
-        disabled={isRunning}
-      />
-    </div>
-    <div className="flex gap-2 mb-2">
-      <div className="flex-1">
-        <label className="block text-xs text-gray-500">Year</label>
-        <select
-          className="border px-2 py-1 rounded w-full"
-          value={year}
-          onChange={e => setYear(e.target.value)}
-          disabled={isRunning}
-        >
-          {[2025,2024,2023,2022,2021].map(y => (
-            <option key={y} value={y}>{y}</option>
-          ))}
-        </select>
-      </div>
-      <div className="flex-1">
-        <label className="block text-xs text-gray-500">Report Type</label>
-        <select
-          className="border px-2 py-1 rounded w-full"
-          value={reportType}
-          onChange={e => setReportType(e.target.value)}
-          disabled={isRunning}
-        >
-          <option value="kpi_bullet_insights">KPI Insights</option>
-        </select>
-      </div>
-    </div>
-    <div className="mb-3">
-      <label className="inline-flex items-center">
-        <input
-          type="checkbox"
-          className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-          checked={verbose}
-          onChange={e => setVerbose(e.target.checked)}
-          disabled={isRunning}
-        />
-        <span className="ml-2 text-sm">Verbose (debug logging)</span>
-      </label>
-    </div>
-    
-    {/* Replaced ModelSelection with AgentModelSelection */}
-    <AgentModelSelection 
-      agentRoles={agentRoles}
-      availableModels={availableModels}
-      selectedAgentModels={selectedAgentModels}
-      setSelectedAgentModels={setSelectedAgentModels}
-      isRunning={isRunning}
-    />
-    
-    <button
-      className="w-full py-2 bg-indigo-600 text-white rounded font-semibold flex items-center justify-center"
-      onClick={onStart}
-      disabled={isRunning}
-    >
-      {isRunning ? <><IconSpinner /> Processing...</> : "Start Analysis"}
-    </button>
-  </div>
-);
-
+/**
+ * Displays the total number of LLM calls made during the analysis.
+ */
 const LLMUsage = ({ llmCalls }) => (
   <div className="bg-white rounded-lg shadow p-4 mb-4">
     <div className="flex items-center font-semibold mb-2">
@@ -262,11 +290,14 @@ const LLMUsage = ({ llmCalls }) => (
   </div>
 );
 
+/**
+ * Displays key performance indicators of the analysis pipeline.
+ */
 const PipelineKPIs = ({ kpis, reportUrl }) => {
-  const toolSuccess = kpis.tool_calls > 0 
-    ? `${kpis.successful_tool_calls}/${kpis.tool_calls}` 
+  const toolSuccess = kpis.tool_calls > 0
+    ? `${kpis.successful_tool_calls}/${kpis.tool_calls}`
     : "N/A";
-  
+
   return (
     <div className="bg-white rounded-lg shadow p-4">
       <div className="flex items-center font-semibold mb-2">
@@ -283,11 +314,11 @@ const PipelineKPIs = ({ kpis, reportUrl }) => {
         <div className="flex justify-between"><span>Answer Relevance:</span> <span>{kpis.relevance ?? "N/A"}</span></div>
         <div className="flex justify-between"><span>Faithfulness:</span> <span>{kpis.faithfulness ?? "N/A"}</span></div>
       </div>
-      
+
       {reportUrl && (
-        <a 
-          href={reportUrl} 
-          className="mt-3 block py-2 bg-green-600 text-white text-center rounded hover:bg-green-700"
+        <a
+          href={reportUrl}
+          className="mt-3 block py-2 bg-green-600 text-white text-center rounded font-semibold hover:bg-green-700"
           download
         >
           Download Report
@@ -297,18 +328,26 @@ const PipelineKPIs = ({ kpis, reportUrl }) => {
   );
 };
 
-
-function AgentSetupSidebar({ region, agentSetup }) {
-  if (!agentSetup || !agentSetup.leader || !agentSetup.agents) return null;
+/**
+ * Displays the current Agent setup (Leader and other agents) and region.
+ */
+function AgentSetupViewer({ region, agentSetup }) {
+  if (!agentSetup || !agentSetup.leader || !agentSetup.agents) {
+    return (
+      <div className="bg-white rounded-lg shadow p-4 mb-4">
+        <div className="flex items-center font-semibold mb-2">
+          <IconAgent />
+          Agent Setup: {region === "IN" ? "India" : "US"}
+        </div>
+        <div className="text-gray-400 text-xs">Loading agent details...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white rounded-lg shadow p-4 mb-4 max-h-[400px] overflow-y-auto">
       <div className="flex items-center font-semibold mb-3">
-        <svg className="h-5 w-5 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24">
-          <circle cx="12" cy="8" r="3.5" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M5 15C5 12.2386 7.23858 10 10 10H14C16.7614 10 19 12.2386 19 15V16C19 17.1046 18.1046 18 17 18H7C5.89543 18 5 17.1046 5 16V15Z"
-                stroke="currentColor" strokeWidth="1.5" />
-        </svg>
+        <IconAgent />
         <h2 className="text-lg font-semibold">Agent Setup - {region === 'IN' ? 'India' : 'US'}</h2>
       </div>
 
@@ -355,17 +394,19 @@ function AgentSetupSidebar({ region, agentSetup }) {
   );
 }
 
-
+/**
+ * Displays a table of agent and tool execution steps.
+ */
 const AgentToolTable = ({ agentSteps }) => (
   <div className="bg-white rounded-lg shadow p-4 mb-4">
     <div className="font-semibold mb-2">Agent & Tool Execution</div>
     <table className="min-w-full text-xs">
       <thead>
         <tr className="border-b">
-          <th className="text-left py-1">AGENT</th>
-          <th className="text-left py-1">TOOL</th>
-          <th className="text-left py-1">STATUS</th>
-          <th className="text-left py-1">DURATION</th>
+          <th className="text-left py-1 px-2">AGENT</th>
+          <th className="text-left py-1 px-2">TOOL</th>
+          <th className="text-left py-1 px-2">STATUS</th>
+          <th className="text-left py-1 px-2">DURATION</th>
         </tr>
       </thead>
       <tbody>
@@ -376,14 +417,14 @@ const AgentToolTable = ({ agentSteps }) => (
         ) : (
           agentSteps.map((step, i) => (
             <tr key={i} className="border-b last:border-0">
-              <td>{step.agentName}</td>
-              <td>{step.toolName}</td>
-              <td>
+              <td className="py-1 px-2">{step.agentName}</td>
+              <td className="py-1 px-2">{step.toolName}</td>
+              <td className="py-1 px-2">
                 {step.status === "Running" && <span className="text-blue-600">Running</span>}
                 {step.status === "Completed" && <span className="text-green-600">Completed</span>}
                 {step.status === "Error" && <span className="text-red-600">Error</span>}
               </td>
-              <td>{step.duration ? `${step.duration.toFixed(0)} ms` : "..."}</td>
+              <td className="py-1 px-2">{step.duration ? `${step.duration.toFixed(0)} ms` : "..."}</td>
             </tr>
           ))
         )}
@@ -392,6 +433,9 @@ const AgentToolTable = ({ agentSteps }) => (
   </div>
 );
 
+/**
+ * Displays the raw event log, parsing and formatting JSON lines for readability.
+ */
 const RawEventLog = ({ log }) => (
   <div className="bg-gray-900 rounded-lg shadow p-4 text-xs text-white font-mono h-40 overflow-y-auto">
     <div className="flex gap-4 mb-1">
@@ -400,108 +444,141 @@ const RawEventLog = ({ log }) => (
     <div>
       {log.length === 0
         ? <div className="text-gray-500">No events yet.</div>
-        : log.map((line, i) => <div key={i}>{line}</div>)
+        : log.map((line, i) => {
+            try {
+              const eventData = JSON.parse(line);
+              // Prioritize displaying messages from 'log' events
+              if (eventData.event_type === 'log' && eventData.data && eventData.data.message) {
+                return <div key={i} className="text-gray-400">{eventData.data.message}</div>;
+              }
+              // For other structured events, display their type and stringified payload
+              return <div key={i} className="text-blue-300">{eventData.event_type}: {JSON.stringify(eventData.payload || eventData.data, null, 2)}</div>;
+            } catch (e) {
+              // Fallback for non-JSON lines (should ideally not happen if backend is consistent)
+              return <div key={i} className="text-red-400">Error parsing log line: {line}</div>;
+            }
+          })
       }
     </div>
   </div>
 );
 
-// ========== Main App Component ==========
+/**
+ * Renders the LangGraph workflow using Mermaid.js syntax.
+ */
+
+  const GraphViewer = ({ mermaidSyntax }) => {
+    const graphRef = useRef(null);
+    const [cleaned, setCleaned] = useState("");
+
+    useEffect(() => {
+      console.log("GraphViewer useEffect running!"); // ← DEBUG
+      if (mermaidSyntax && graphRef.current) {
+        // ...your existing code...
+      } else {
+        setCleaned("");
+        if (graphRef.current) graphRef.current.innerHTML = "";
+      }
+    }, [mermaidSyntax]);
+
+  return (
+    <div className="bg-white rounded-lg shadow p-4 mb-8 mt-8">
+      <div className="font-semibold mb-4 flex items-center">
+        <IconGraph />
+        Workflow Graph
+      </div>
+      {mermaidSyntax ? (
+        <>
+          <div className="mb-3">
+            <div className="text-xs text-gray-500 mb-1">Cleaned Mermaid String:</div>
+            <pre className="bg-gray-100 rounded p-2 overflow-x-auto max-h-40 text-xs border border-gray-200 mb-4">
+              {cleaned}
+            </pre>
+          </div>
+          <div
+            ref={graphRef}
+            className="overflow-auto"
+            style={{ minHeight: "400px", maxHeight: "900px", border: "1px solid #ececec", borderRadius: "10px", background: "#fcfcfc" }}
+          >
+          </div>
+        </>
+      ) : (
+        <div
+          style={{ minHeight: "400px", border: "1px solid #ececec", borderRadius: "10px", background: "#fcfcfc" }}
+          className="flex items-center justify-center text-gray-400 text-xs"
+        >
+          Waiting for graph definition...
+        </div>
+      )}
+    </div>
+  );
+};
+
+
+// ============================================================================
+// Main Application Component
+// ============================================================================
+
 function App() {
-  // State management
+  // State Management
   const closedByComplete = useRef(false);
-  const closedByPipeline = useRef(false);
   const [company, setCompany] = useState("Microsoft");
   const [year, setYear] = useState("2024");
   const [reportType, setReportType] = useState("kpi_bullet_insights");
-  // Updated state for agent-specific models
-  const [selectedAgentModels, setSelectedAgentModels] = useState({}); 
+  const [selectedGlobalProvider, setSelectedGlobalProvider] = useState("");
   const [isRunning, setIsRunning] = useState(false);
   const [error, setError] = useState(null);
   const [reportUrl, setReportUrl] = useState(null);
-  const [availableModels, setAvailableModels] = useState(null);
+  const [availableProviders, setAvailableProviders] = useState({});
+  const [isLoadingModels, setIsLoadingModels] = useState(true);
   const [verbose, setVerbose] = useState(false);
   const [agentSetup, setAgentSetup] = useState(null);
   const [region, setRegion] = useState("US");
-  // Status: "pending" (yellow), "success" (green), "error" (red)
   const [setupStatus, setSetupStatus] = useState({
-    api: "pending",
-    llm: "pending",
-    agents: "pending",
-    tools: "pending",
-    region: "pending",
+    api: "pending", llm: "pending", agents: "pending", tools: "pending", region: "pending",
   });
-
-  // Real-time analysis state
   const [agentSteps, setAgentSteps] = useState([]);
   const [log, setLog] = useState([]);
   const [llmCalls, setLlmCalls] = useState(0);
   const [kpis, setKpis] = useState({
-    latency: 0,
-    tokens: 0,
-    cost: 0,
-    tool_calls: 0,
-    successful_tool_calls: 0,
-    errors: 0,
-    relevance: "N/A",
-    faithfulness: "N/A"
+    latency: 0, tokens: 0, cost: 0, tool_calls: 0, successful_tool_calls: 0,
+    errors: 0, relevance: "N/A", faithfulness: "N/A"
   });
+  const [mermaidGraphSyntax, setMermaidGraphSyntax] = useState(null); // Graph state
 
-  // Ref for EventSource connection
   const eventSourceRef = useRef(null);
 
-  // Fetch available models on component mount
+  // Effect to fetch available LLM providers on component mount
   useEffect(() => {
     let isMounted = true;
-    setAvailableModels(null);
+    setIsLoadingModels(true);
     setError(null);
-    
+
     fetch('/available_models')
       .then(response => {
-        if (!response.ok) throw new Error("Failed to load models");
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         return response.json();
       })
       .then(data => {
         if (!isMounted) return;
-        
-        // Correctly extract models list from data.models
-        const models = Object.entries(data.models || {}).map(([id, name]) => ({
-          id: parseInt(id),
-          name: name
-        }));
-        setAvailableModels(models);
-        
-        // Initialize selectedAgentModels based on backend defaults
-        const backendDefaultAgentModels = data.default_agent_models || {};
-        const globalDefaultModelName = data.global_default_model;
+        const receivedProviders = data.available_providers_llm || {};
+        setAvailableProviders(receivedProviders);
 
-        const initialAgentModels = {};
-        agentRoles.forEach(role => {
-          // Prioritize agent-specific default from backend
-          if (backendDefaultAgentModels[role]) {
-            initialAgentModels[role] = backendDefaultAgentModels[role];
-          } 
-          // Fallback to global default if available and no agent-specific default
-          else if (globalDefaultModelName && models.some(m => m.name === globalDefaultModelName)) {
-            initialAgentModels[role] = globalDefaultModelName;
-          }
-          // If no backend default, fallback to the first available model in the list
-          else if (models.length > 0) {
-            initialAgentModels[role] = models[0].name;
-          } else {
-            initialAgentModels[role] = ''; // No models available at all
-          }
-        });
-        setSelectedAgentModels(initialAgentModels);
-
+        const firstAvailableProviderKey = Object.keys(receivedProviders)[0] || '';
+        setSelectedGlobalProvider(firstAvailableProviderKey);
       })
       .catch(err => {
         if (!isMounted) return;
-        console.error("Error fetching available models:", err); // Log the actual error
-        setError("Failed to load available models from server. Check console for details.");
-        setAvailableModels([]);
+        console.error("Error fetching available models:", err);
+        setError("Failed to load available LLM providers from server. Check console for details.");
+        setAvailableProviders({});
+      })
+      .finally(() => {
+        if (isMounted) {
+          setIsLoadingModels(false);
+        }
       });
-      
+
     return () => {
       isMounted = false;
       if (eventSourceRef.current) {
@@ -510,16 +587,18 @@ function App() {
     };
   }, []);
 
-  // Start analysis function
-  function startAnalysis() {
-    // Check if any agent model is not selected
-    const unselectedAgents = agentRoles.filter(role => !selectedAgentModels[role]);
-    if (unselectedAgents.length > 0) {
-        setError(`Please select an LLM model for the following agents: ${unselectedAgents.join(', ')}`);
-        return;
+  /**
+   * Handles starting the analysis process by initiating an SSE connection
+   * and processing events.
+   */
+  const startAnalysis = () => {
+    if (!selectedGlobalProvider) {
+      setError("Please select a main LLM provider to start the analysis.");
+      return;
     }
 
-    closedByPipeline.current = false;
+    // Reset states for a new run
+    closedByComplete.current = false;
     setIsRunning(true);
     setError(null);
     setAgentSteps([]);
@@ -527,17 +606,13 @@ function App() {
     setLlmCalls(0);
     setReportUrl(null);
     setAgentSetup(null);
-    
-    // Reset KPIs
+    setMermaidGraphSyntax(null); // Clear previous graph
     setKpis({
-      latency: 0,
-      tokens: 0,
-      cost: 0,
-      tool_calls: 0,
-      successful_tool_calls: 0,
-      errors: 0,
-      relevance: "N/A",
-      faithfulness: "N/A"
+      latency: 0, tokens: 0, cost: 0, tool_calls: 0, successful_tool_calls: 0,
+      errors: 0, relevance: "N/A", faithfulness: "N/A"
+    });
+    setSetupStatus({
+      api: "pending", llm: "pending", agents: "pending", tools: "pending", region: "pending",
     });
 
     // Close existing connection if any
@@ -545,12 +620,29 @@ function App() {
       eventSourceRef.current.close();
       eventSourceRef.current = null;
     }
-    setError(null);
 
-    // Prepare llm_models for the backend
-    const llmModelsParam = encodeURIComponent(JSON.stringify(selectedAgentModels));
-    console.log("Sending llm_models:", selectedAgentModels);
+    // Prepare llm_models for the backend based on the single selected provider
+    const llmModelsToSend = {};
+    const selectedProviderConfig = availableProviders[selectedGlobalProvider];
 
+    if (selectedProviderConfig) {
+      AGENT_ROLES_FOR_MODEL_ASSIGNMENT.forEach(role => {
+        if (selectedProviderConfig[role]) {
+          llmModelsToSend[role] = selectedProviderConfig[role];
+        } else {
+          console.warn(`Model for agent role '${role}' not found in provider '${selectedGlobalProvider}'. Assigning fallback.`);
+          llmModelsToSend[role] = "default-fallback-model"; // Ensure a fallback
+        }
+      });
+    } else {
+      console.error(`Configuration for selected provider '${selectedGlobalProvider}' not found.`);
+      setError(`Configuration for selected provider '${selectedGlobalProvider}' not found. Cannot start analysis.`);
+      setIsRunning(false);
+      return;
+    }
+
+    const llmModelsParam = encodeURIComponent(JSON.stringify(llmModelsToSend));
+    console.log("Sending llm_models (resolved specific models):", llmModelsToSend);
 
     // Create SSE connection
     const eventSource = new EventSource(
@@ -558,68 +650,73 @@ function App() {
     );
     eventSourceRef.current = eventSource;
 
-
     eventSource.onmessage = (event) => {
       try {
         const eventData = JSON.parse(event.data);
-        setLog(prev => [...prev, event.data]);
+        setLog(prev => [...prev, event.data]); // Store raw event data for RawEventLog
 
-        // --- Logic for Setup Progress from generic logs ---
-        if (eventData.event_type === 'log' && eventData.data.message) {
-          const message = eventData.data.message;
-          const statusUpdates = {};
-          if (message.includes("API keys loaded successfully")) {
-            setSetupStatus(prev => ({ ...prev, api: "success" }));
-          }
-          if (message.includes("LLM config loaded for model")) {
-            setSetupStatus(prev => ({ ...prev, llm: "success" }));
-          }
-          if (message.includes("--- Final Agent Config ---")) {
-              setSetupStatus(prev => ({ ...prev, tools: "success" }));
-          }
-          try {
-            // Extract JSON portion from log message
-            const jsonPart = message.split(' - ').pop();
-            const logData = JSON.parse(jsonPart);
-            
-            if (logData.event_type === 'agent_end' && 
-                logData.data.agent_name === 'CompanyResolver' &&
-                logData.data.output.status === 'company_found') {
-              setSetupStatus(prev => ({ ...prev, region: "success" }));
-            }
-          } catch (e) {   // Not a JSON-parsable log, skip
-          }
-          if (Object.keys(statusUpdates).length > 0) {
-            setSetupStatus(prev => ({ ...prev, ...statusUpdates }));
-          }
-        }
+        // Process various event types
+        switch(eventData.event_type) {
+          case 'setup_progress': // Handle setup_progress events
+            if (eventData.data && eventData.data.step) {
+                // Determine the key from the step description
+                let statusKey = '';
+                if (eventData.data.step.includes("Setting up APIs")) statusKey = "api";
+                else if (eventData.data.step.includes("Setting up LLM Model")) statusKey = "llm"; // You'll need to send this from backend too
+                else if (eventData.data.step.includes("Setting up Agents")) statusKey = "agents";
+                else if (eventData.data.step.includes("Setting up Tools")) statusKey = "tools";
+                // For region, your backend sends 'agent_end' from CompanyResolver, which is handled below.
 
-      // Process event types
-      switch(eventData.event_type) {
-        case 'agent_start':
-          setAgentSteps(prev => [
-            ...prev, 
-            {
-              id: `${eventData.data.agent_name}-${Date.now()}`, // Unique ID
-              agentName: eventData.data.agent_name,
-              toolName: 'Processing...',
-              status: 'Running',
-              duration: null
+                if (statusKey) {
+                    setSetupStatus(prev => ({ ...prev, [statusKey]: "success" }));
+                }
             }
-          ]);
-          break;
-          case 'agent_setup':
+            break;
+          case 'agent_setup': // Specific event for agent setup completion and roles
             setAgentSetup(eventData.data.roles);
             setRegion(eventData.data.region);
-            // This confirms agents are configured.
             setSetupStatus(prev => ({ ...prev, agents: "success" }));
             break;
-           
+          case 'agent_end': // Often used for determining region resolution
+            if (eventData.data.agent_name === 'CompanyResolver' && eventData.data.output?.status === 'company_found') {
+                setSetupStatus(prev => ({ ...prev, region: "success" }));
+            }
+            break;
+          case 'agent_start': // Already handled, good for initial 'Running' state
+            setAgentSteps(prev => [
+              ...prev,
+              {
+                id: `${eventData.data.agent_name}-${Date.now()}`,
+                agentName: eventData.data.agent_name,
+                toolName: 'Processing...', // Initial state
+                status: 'Running',
+                duration: null
+              }
+            ]);
+            break;
+          case 'node_end': // Capture agent completion and tools used
+            if (eventData.payload && eventData.payload.node) {
+                // Find the corresponding agent_start entry to update it
+                setAgentSteps(prev => prev.map(step => {
+                    if (step.agentName === eventData.payload.node && step.status === 'Running') {
+                        // Assuming tool names are available in payload or extracted from logs
+                        const toolsUsed = eventData.payload.tools_used?.map(t => t.name).join(', ') || 'N/A';
+                        return {
+                            ...step,
+                            toolName: toolsUsed,
+                            status: eventData.payload.errors?.length > 0 ? 'Error' : 'Completed',
+                            duration: eventData.payload.duration ? eventData.payload.duration * 1000 : null // Convert to ms
+                        };
+                    }
+                    return step;
+                }));
+            }
+            break;
           case 'tool_result':
-            setAgentSteps(prev => prev.map(step => 
+            setAgentSteps(prev => prev.map(step =>
               step.id.startsWith(eventData.data.agent_name) && step.status === 'Running'
-                ? { 
-                    ...step, 
+                ? {
+                    ...step,
                     toolName: eventData.data.tool_name,
                     status: eventData.data.success ? 'Running' : 'Error'
                   }
@@ -631,7 +728,6 @@ function App() {
               successful_tool_calls: (prev.successful_tool_calls || 0) + (eventData.data.success ? 1 : 0)
             }));
             break;
-              
           case 'llm_metrics':
             setLlmCalls(prev => prev + 1);
             setKpis(prev => ({
@@ -640,20 +736,17 @@ function App() {
               cost: prev.cost + (eventData.data.cost || 0)
             }));
             break;
-            
           case 'pipeline_end':
             console.log("[pipeline_end] Event received:", eventData);
             setKpis(prev => ({
               ...prev,
               latency: eventData.data.end_to_end_latency_ms / 1000
             }));
-            // Extract report URL from final output
             if (eventData.data.final_output) {
               const match = eventData.data.final_output.match(/report available at: (.*)/i);
               if (match && match[1]) setReportUrl(match[1]);
             }
             break;
-            
           case 'evaluation_metric':
             console.log("evaluation_metric Event received:", eventData);
             if (eventData.data.metric_name === 'Answer Relevance') {
@@ -663,7 +756,6 @@ function App() {
               setKpis(prev => ({ ...prev, faithfulness: eventData.data.score }));
             }
             break;
-            
           case 'pipeline_error':
             console.error("Pipeline error event received:", eventData);
             setError(eventData.data.error || "Pipeline error occurred");
@@ -672,149 +764,127 @@ function App() {
               errors: prev.errors + 1
             }));
             break;
+          case 'graph_definition':
+            if (eventData.data && eventData.data.mermaid_syntax) {
+              console.log("Received Mermaid graph syntax:", eventData.data.mermaid_syntax);
+              setMermaidGraphSyntax(eventData.data.mermaid_syntax);
+            }
+            break;
+            break;
+          case 'log': // Extract tool calls from detailed log messages
+            if (eventData.data && eventData.data.message) {
+                const message = eventData.data.message;
+                const toolCallMatch = message.match(/INFO:tools\.graph_tools:Calling tool: (\w+) with kwargs: /);
+                if (toolCallMatch) {
+                    const toolName = toolCallMatch[1];
+                    // Update the last running agent with the tool being called
+                    setAgentSteps(prev => {
+                        const newSteps = [...prev];
+                        if (newSteps.length > 0) {
+                            const lastRunningAgentIndex = newSteps.findIndex(step => step.status === 'Running');
+                            if (lastRunningAgentIndex !== -1) {
+                                newSteps[lastRunningAgentIndex] = {
+                                    ...newSteps[lastRunningAgentIndex],
+                                    toolName: toolName, // Update the tool name for the running agent
+                                };
+                            }
+                        }
+                        return newSteps;
+                    });
+                }
+            }
+            break;
+          default:
+            console.log(`Unhandled event type: ${eventData.event_type}`, eventData);
         }
       } catch (e) {
-        console.error("Error parsing event:", e);
+        console.error("Error parsing SSE event data:", e, event.data);
       }
     };
 
-    eventSource.onerror = () => {
-      console.error("EventSource error:", eventSource.readyState);
-      // Removed eventData from onerror as it's not always available directly
-      if (!closedByPipeline.current) {
-        setError("Connection to server failed");
+    eventSource.onerror = (e) => {
+      console.error("EventSource connection error:", e);
+      if (!closedByComplete.current) { // Only show error if not intentionally closed
+        setError("Connection to server lost or failed to establish. Please check backend logs.");
       }
       setIsRunning(false);
       eventSource.close();
-      closedByPipeline.current = false; // reset for next run
+      closedByComplete.current = false; // Reset for next run
     };
 
-
-    // Handle pipeline completion
     eventSource.addEventListener('pipeline_complete', () => {
-      closedByPipeline.current = true;   // mark as intentional
+      closedByComplete.current = true; // Mark as intentionally closed
       setIsRunning(false);
       eventSource.close();
     });
-  }
+  };
 
-  // Loading state
-  if (availableModels === null) {
+  // Conditional Rendering for initial loading and errors
+  if (isLoadingModels) {
     return (
-      <div className="flex flex-col items-center justify-center h-64">
+      <div className="flex flex-col items-center justify-center h-screen">
         <IconSpinner />
-        <span className="mt-2 text-gray-500">Loading available LLM models...</span>
+        <span className="mt-2 text-gray-500">Loading available LLM providers...</span>
       </div>
     );
   }
 
-  // Error or no models state
-  if (error || !availableModels.length) {
+  if (error || Object.keys(availableProviders).length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center h-64">
-        <span className="text-red-600">{error || "No LLM models available from backend."}</span>
+      <div className="flex flex-col items-center justify-center h-screen">
+        <span className="text-red-600">{error || "No LLM providers available from backend."}</span>
+        <button
+            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700"
+            onClick={() => window.location.reload()}
+        >
+            Try Reloading
+        </button>
       </div>
     );
   }
 
+  // Main Application Layout
   return (
     <div>
       <h1 className="text-2xl font-bold mb-6">Financial Analyzer</h1>
       <div className="flex flex-col md:flex-row gap-6">
-        {/* Sidebar */}
+        {/* Left Sidebar: Analysis Config & LLM Usage */}
         <div className="md:w-1/3 flex flex-col gap-4">
           <AnalysisConfig
-            company={company}
-            setCompany={setCompany}
-            year={year}
-            setYear={setYear}
-            reportType={reportType}
-            setReportType={setReportType}
-            selectedAgentModels={selectedAgentModels} // Updated prop
-            setSelectedAgentModels={setSelectedAgentModels} // Updated prop
-            availableModels={availableModels}
+            company={company} setCompany={setCompany}
+            year={year} setYear={setYear}
+            reportType={reportType} setReportType={setReportType}
+            selectedGlobalProvider={selectedGlobalProvider} setSelectedGlobalProvider={setSelectedGlobalProvider}
+            availableProviders={availableProviders}
             isRunning={isRunning}
             onStart={startAnalysis}
-            verbose={verbose}
-            setVerbose={setVerbose}
+            verbose={verbose} setVerbose={setVerbose}
           />
           <LLMUsage llmCalls={llmCalls} />
         </div>
-        {/* Main area */}
+
+        {/* Middle Section: Agent/Tool Execution, Raw Log, and Workflow Graph */}
         <div className="md:w-2/3 flex flex-col gap-4">
           <AgentToolTable agentSteps={agentSteps} />
           <RawEventLog log={log} />
+          <GraphViewer mermaidSyntax={mermaidGraphSyntax} /> {/* Graph in lower-middle */}
         </div>
-        {/* Right Sidebar */}
+
+        {/* Right Sidebar: Setup Status, KPIs, Agent Setup Details */}
         <div className="md:w-1/3 flex flex-col gap-4">
           <LoggingSetupStatus setupStatus={setupStatus} />
           <PipelineKPIs kpis={kpis} reportUrl={reportUrl} />
-          
-          {/* Agent Setup Panel - Always Visible Header */}
-          <div className="bg-white rounded-lg shadow p-4 mb-4">
-            <div className="flex items-center font-semibold mb-2">
-              <svg className="h-4 w-4 text-blue-500 mr-1" fill="none" viewBox="0 0 24 24">
-                <circle cx="12" cy="8" r="3.5" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M5 15C5 12.2386 7.23858 10 10 10H14C16.7614 10 19 12.2386 19 15V16C19 17.1046 18.1046 18 17 18H7C5.89543 18 5 17.1046 5 16V15Z" 
-                      stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-              Agent Setup: {region === "IN" ? "India" : "US"}
-            </div>
-            
-            {agentSetup && agentSetup.leader && agentSetup.agents ? (
-              <>
-                <div className="mb-3">
-                  <div className="font-medium text-sm flex items-center">
-                    <svg className="h-4 w-4 text-yellow-500 mr-1" fill="none" viewBox="0 0 24 24">
-                      <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.5" />
-                      <path d="M12 8V12M12 12L14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                    </svg>
-                    Leader
-                  </div>
-                  <div className="text-xs ml-5">
-                    <div className="font-semibold">{agentSetup.leader.title}</div>
-                    <ul className="list-disc list-inside mt-1">
-                      {agentSetup.leader.responsibilities.map((resp, i) => (
-                        <li key={i} className="text-gray-600">{resp}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                
-                <div>
-                  <div className="font-medium text-sm flex items-center">
-                    <svg className="h-4 w-4 text-gray-500 mr-1" fill="none" viewBox="0 0 24 24">
-                      <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
-                      <path d="M8 12H16M12 8V16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                    </svg>
-                    Agents
-                  </div>
-                  <div className="space-y-2 mt-2">
-                    {agentSetup.agents.map((agent, index) => (
-                      <div key={index} className="text-xs ml-5">
-                        <div className="font-semibold">{agent.title}</div>
-                        <ul className="list-disc list-inside">
-                          {agent.responsibilities.map((resp, i) => (
-                            <li key={i} className="text-gray-600">{resp}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </>
-            ) : (
-              <div className="text-gray-400 text-xs">Loading agent details...</div>
-            )}
-          </div>
+          <AgentSetupViewer region={region} agentSetup={agentSetup} />
         </div>
       </div>
-      {error && <div className="mt-4 text-red-600">{error}</div>}
+      {error && <div className="mt-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-md">{error}</div>}
     </div>
   );
 }
 
+// Render the main App component
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 </script>
+{% endraw %}
 </body>
 </html>

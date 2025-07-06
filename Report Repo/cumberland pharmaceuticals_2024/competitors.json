@@ -1,0 +1,122 @@
+[
+  {
+    "symbol": "AGRX",
+    "companyName": "Agile Therapeutics, Inc.",
+    "price": 1.51,
+    "mktCap": 10425795
+  },
+  {
+    "symbol": "AKAN",
+    "companyName": "Akanda Corp.",
+    "price": 1.4198,
+    "mktCap": 3231328
+  },
+  {
+    "symbol": "ALIM",
+    "companyName": "Alimera Sciences, Inc.",
+    "price": 5.54,
+    "mktCap": 301288468
+  },
+  {
+    "symbol": "BFRI",
+    "companyName": "Biofrontera Inc.",
+    "price": 0.712,
+    "mktCap": 6725692
+  },
+  {
+    "symbol": "CPHI",
+    "companyName": "China Pharma Holdings, Inc.",
+    "price": 1.825,
+    "mktCap": 5953150
+  },
+  {
+    "symbol": "EGRX",
+    "companyName": "Eagle Pharmaceuticals, Inc.",
+    "price": 2.9,
+    "mktCap": 37578780
+  },
+  {
+    "symbol": "EVOK",
+    "companyName": "Evoke Pharma, Inc.",
+    "price": 2.6317,
+    "mktCap": 3928760
+  },
+  {
+    "symbol": "GHSI",
+    "companyName": "Guardion Health Sciences, Inc.",
+    "price": 3.22,
+    "mktCap": 4346871
+  },
+  {
+    "symbol": "IRWD",
+    "companyName": "Ironwood Pharmaceuticals, Inc.",
+    "price": 0.6981,
+    "mktCap": 112966542
+  },
+  {
+    "symbol": "IXHL",
+    "companyName": "Incannex Healthcare Limited",
+    "price": 0.214,
+    "mktCap": 20050809
+  },
+  {
+    "symbol": "KMDA",
+    "companyName": "Kamada Ltd.",
+    "price": 7.735,
+    "mktCap": 444801175
+  },
+  {
+    "symbol": "LFCR",
+    "companyName": "Lifecore Biomedical, Inc.",
+    "price": 8.125,
+    "mktCap": 300830563
+  },
+  {
+    "symbol": "LSDI",
+    "companyName": "Lucy Scientific Discovery Inc.",
+    "price": 0.5139,
+    "mktCap": 906910
+  },
+  {
+    "symbol": "MNK",
+    "companyName": "Mallinckrodt plc",
+    "price": 0.3402,
+    "mktCap": 4520986
+  },
+  {
+    "symbol": "ORGO",
+    "companyName": "Organogenesis Holdings Inc.",
+    "price": 3.695,
+    "mktCap": 468725530
+  },
+  {
+    "symbol": "PRFX",
+    "companyName": "PainReform Ltd.",
+    "price": 1.475,
+    "mktCap": 2969382
+  },
+  {
+    "symbol": "PROC",
+    "companyName": "Procaps Group S.A.",
+    "price": 1.01,
+    "mktCap": 113952240
+  },
+  {
+    "symbol": "PTPI",
+    "companyName": "Petros Pharmaceuticals, Inc.",
+    "price": 0.0323,
+    "mktCap": 1006471
+  },
+  {
+    "symbol": "RGC",
+    "companyName": "Regencell Bioscience Holdings Limited",
+    "price": 16.12,
+    "mktCap": 7971162680
+  },
+  {
+    "symbol": "SHPH",
+    "companyName": "Shuttle Pharmaceuticals Holdings, Inc.",
+    "price": 3.8,
+    "mktCap": 4067235
+  }
+]

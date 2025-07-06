@@ -12,33 +12,25 @@
   "providers": {
     "openai": {
       "api_key": "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",
-      "base_url": "https://api.openai.com/v1"
-    },
-    "together": {
-      "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
-      "base_url": "https://api.together.ai"
-    }
-  },
-
-  "model_providers": [
-    {
-      "provider": "openai",
-      "models": [
+      "base_url": "https://api.openai.com/v1",
+      "models":[
         "gpt-4.1-2025-04-14",
         "gpt-4.1-nano-2025-04-14",
         "gpt-4o-search-preview-2025-03-11"
       ]
     },
-    {
-      "provider": "together",
+    "mixtral": {
+      "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
+      "base_url": "https://api.together.ai",
       "models": [
         "Mixtral-8x7B-Instruct-v0.1",
         "Mistral-7B-Instruct-v0.2",
         "Nous-Hermes-2-Mixtral-8x7B-DPO"
       ]
     },
-    {
-      "provider": "qwen",
+    "qwen": {
+      "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
+      "base_url": "https://api.together.ai",
       "models": [
         "Qwen2.5 72B Instruct",
         "Qwen2.5 7B Instruct",
@@ -50,10 +42,10 @@
         "Qwen3 235B A22B"
       ]
     }
-  ],
+  },
 
   "openai_llm_models": {
-    "resolve_company": "gpt-4.1-2025-04-14",
+    "resolve_company": "gpt-4o-search-preview-2025-03-11",
     "llm_decision": "gpt-4.1-nano-2025-04-14",
     "data_collection_us": "gpt-4.1-nano-2025-04-14",
     "data_collection_indian": "gpt-4.1-nano-2025-04-14",
@@ -61,14 +53,14 @@
     "synchronize_data": "gpt-4.1-2025-04-14",
     "summarizer": "gpt-4.1-nano-2025-04-14",
     "validate_summarized_data": "gpt-4.1-2025-04-14",
-    "concept": "gpt-4.1-nano-2025-04-14",
+    "concept": "gpt-4.1-2025-04-14",
     "validate_analyzed_data": "gpt-4.1-2025-04-14",
     "thesis": "gpt-4.1-2025-04-14",
-    "audit": "gpt-4.1-nano-2025-04-14"
+    "audit": "gpt-4.1-2025-04-14"
   },
 
   "mixtral_llm_models": {
-    "resolve_company": "Mixtral-8x7B-Instruct-v0.1",
+    "resolve_company": "gpt-4o-search-preview-2025-03-11",
     "llm_decision": "Mistral-7B-Instruct-v0.2",
     "data_collection_us": "Nous-Hermes-2-Mixtral-8x7B-DPO",
     "data_collection_indian": "Mistral-7B-Instruct-v0.2",
@@ -83,7 +75,7 @@
   },
 
   "qwen_llm_models": {
-    "resolve_company": "Qwen2.5 72B Instruct",
+    "resolve_company": "gpt-4o-search-preview-2025-03-11",
     "llm_decision": "Qwen2.5 7B Instruct",
     "data_collection_us": "Qwen2.5 32B Instruct",
     "data_collection_indian": "Qwen2.5 3B Instruct",
