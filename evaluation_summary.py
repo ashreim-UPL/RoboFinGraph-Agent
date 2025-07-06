@@ -128,7 +128,7 @@ if __name__ == "__main__":
         if row:
             metrics.append(row)
     df = pd.DataFrame(metrics)
-    df.to_excel("finrobot_pipeline_metrics.xlsx", index=False)
+    df.to_excel("report/finrobot_pipeline_metrics.xlsx", index=False)
     print("\nSaved all metrics to finrobot_pipeline_metrics.xlsx")
 
     # 3. (Optional) Generate research plots
