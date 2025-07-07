@@ -190,6 +190,7 @@ def get_share_performance(
     plt.plot(normalized_df.index, normalized_df['benchmark'], label=f"{benchmark_ticker} Indexed Performance", color="red")
     
     plt.title(f'{company_name} vs {benchmark_ticker} - Indexed Performance Over the Past Year')
+
     plt.xlabel("Date")
     plt.ylabel("Normalized Price (Base 100)")
     plt.legend()
@@ -281,6 +282,7 @@ def get_indian_share_performance(
     plt.title(f"{ticker.replace('.NS', '')} vs {benchmark_ticker.replace('.NS', '')} - Indexed Performance Over the Past Year")
     plt.xlabel("Date")
     plt.ylabel("Normalized Price (Base 100)")
+
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
@@ -298,6 +300,8 @@ def get_pe_eps_performance(
     years: int = 4
 ) -> str:
     """Plots the PE ratio and EPS performance over the past n years."""
+
+    
 
     # 1. Fetch income statements to get EPS data from the API
     income_response = make_api_request("FMP", "/income-statement", {"symbol": ticker, "period": "annual", "limit": years + 1})
@@ -378,7 +382,10 @@ def get_pe_eps_performance(
     return f"P/E and EPS performance chart saved to <img src='{save_path}'>"
 
 def get_pe_eps_performance_indian_market(
+
     ticker: Annotated[str, "Ticker"],
+
+
     filing_date: Annotated[str | datetime, "Filing date in 'YYYY-MM-DD' format"],
     save_path: Annotated[str, "File path for saving the plot"],
     years: int = 4
@@ -386,16 +393,20 @@ def get_pe_eps_performance_indian_market(
     """Plots the PE ratio and EPS performance over the past n years."""
 
     year = int(filing_date.strftime("%Y")) if isinstance(filing_date, datetime) else int(filing_date.split("-")[0])
+
     print(year)
+
 
     # 1. Fetch income statements to get EPS data from the API
 
     # Make the API call
+
     #hist_response = make_api_request("IndianMarket", "/historical_data", {'stock_name': ticker, 'period': 'max', 'filter': 'pe'})
     #print("HISTORICAL DATA API RESPONSE:", hist_response)
 
     print("\n",ticker,"\n")
     response = make_api_request2("IndianMarket", "/stock", {"name": ticker})
+
     financials = response.get("financials", [])
 
     # Parse annual financial data
@@ -422,7 +433,9 @@ def get_pe_eps_performance_indian_market(
     eps = df['DilutedEPSExcludingExtraOrdItems'].sort_index(ascending=True).rename('EPS')
     eps = eps.astype(float)
     
+
     pe_df = pd.DataFrame(make_api_request2("IndianMarket", "/historical_data", {'stock_name': ticker, 'period': 'max', 'filter': 'pe'})['datasets'][1]['values'], columns = ['Date', 'PE'])
+
     pe_df['Date'] = pd.to_datetime(pe_df['Date'])
     list_dates = list(eps.index)
 
@@ -466,8 +479,10 @@ def get_pe_eps_performance_indian_market(
     eps = eps[eps.index <= filing_date]
     eps = eps.tail(years)  # Filter EPS to the last n years
 
+
     #print(f"PE Series: {pe_series}")
     #print(f"EPS Series: {eps}") 
+
     # 5. Plotting Logic
     fig, ax1 = plt.subplots(figsize=(14, 7))
     ax1.plot(pe_series.index, pe_series.values, color="blue", marker='o', label="P/E Ratio")
@@ -478,7 +493,9 @@ def get_pe_eps_performance_indian_market(
     ax2.plot(eps.index, eps.values, color="red", marker='x', linestyle='--', label="EPS")
     ax2.set_ylabel("EPS ($)", color="red")
 
+
     plt.title(f"{ticker} P/E Ratio and EPS Performance")
+
     fig.tight_layout()
 
     plt.savefig(save_path)
