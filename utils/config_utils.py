@@ -10,7 +10,6 @@ from langchain_community.chat_models import ChatOpenAI
 from langchain_together import ChatTogether
 from langchain.schema import BaseMessage, AIMessage
 from langchain_community.callbacks.manager import get_openai_callback
-from langchain_google_genai.callbacks import GoogleGenerativeAICallbackHandler
 from agents.state_types import AgentState, NodeState
 from datetime import datetime, timezone
 
@@ -305,17 +304,11 @@ class LangGraphLLMExecutor:
     """
     def __init__(self, node_name: str):
         self.node_name = node_name
-
-        # grab the already-prepared, mutated config
         self.config = get_app_config()
-
-        # pick provider & model for this node
         self.provider, self.model_name = get_node_model(
             node_name,
             config=self.config
         )
-
-        # initialize the actual LLM client
         self.llm = _init_llm(
             provider=self.provider,
             model_name=self.model_name,
@@ -324,7 +317,12 @@ class LangGraphLLMExecutor:
 
     def generate(self, messages: List[BaseMessage], agent_state: AgentState):
         model_start = datetime.now(timezone.utc)
-        retry_count = 0
+        
+        # Initialize metrics
+        prompt_tokens = 0.0
+        completion_tokens = 0.0
+        cost = 0.0
+        actual_retries = 0 # Track actual retries
 
         # 1) audit inputs
         for incoming in messages:
@@ -335,30 +333,27 @@ class LangGraphLLMExecutor:
             })
 
         # 2) call LLM + measure usage
-        prompt_tokens = completion_tokens = cost = 0.0
-
         if self.provider == "openai":
             with get_openai_callback() as cb:
                 response = self.llm.invoke(messages)
             prompt_tokens     = cb.prompt_tokens
             completion_tokens = cb.completion_tokens
             cost              = cb.total_cost
-        elif self.provider == "google": # NEW: Handle Google provider's callback
-            with GoogleGenerativeAICallbackHandler() as cb: # Use the specific Google callback
-                response = self.llm.invoke(messages)
+        elif self.provider == "google": 
+            response = self.llm.invoke(messages)
+            try:
+                prompt_tokens = self.llm.get_num_tokens_from_messages(messages)
+                completion_tokens = self.llm.get_num_tokens(response.content)
+            except NotImplementedError:
+                # Fallback if get_num_tokens is not implemented for some reason
+                logger.warning(f"get_num_tokens or get_num_tokens_from_messages not available for {self.provider}:{self.model_name}. Token counts may be inaccurate.")
 
-            prompt_tokens     = cb.prompt_tokens
-            completion_tokens = cb.completion_tokens
-            cost              = cb.total_cost 
+            # Calculate cost using your pre-defined pricing
+            price_in  = float(os.environ.get("GOOGLE_PRICE_INPUT", 0.0))
+            price_out = float(os.environ.get("GOOGLE_PRICE_OUTPUT", 0.0))
+            cost      = prompt_tokens * price_in + completion_tokens * price_out
 
-            # Fallback for cost calculation if callback doesn't provide it directly
-            # This relies on your `inject_provider_pricing` correctly setting GOOGLE_PRICE_INPUT/OUTPUT
-            if cost == 0.0: # Only calculate if callback didn't provide cost
-                price_in  = float(os.environ.get("GOOGLE_PRICE_INPUT", 0.0))
-                price_out = float(os.environ.get("GOOGLE_PRICE_OUTPUT", 0.0))
-                cost      = prompt_tokens * price_in + completion_tokens * price_out
-
-        else: # Existing logic for Together-hosted models (mixtral, qwen, meta, deepseek)
+        else: # Logic for Together-hosted models (mixtral, qwen, meta, deepseek)
             max_retries   = 3
             backoff_base  = 2
 
@@ -369,7 +364,7 @@ class LangGraphLLMExecutor:
                 except HTTPStatusError as e:
                     status = e.response.status_code
                     if 500 <= status < 600 and attempt < max_retries:
-                        retry_count += 1
+                        actual_retries += 1 # Increment actual_retries
                         wait = backoff_base ** (attempt - 1)
                         logger.warning(
                             f"{self.provider} 5xx ({status}), retry {attempt}/{max_retries}, backoff {wait}s"
@@ -377,12 +372,13 @@ class LangGraphLLMExecutor:
                         time.sleep(wait)
                         continue
                     else:
-                        raise
+                        raise # Re-raise for non-retriable errors or max retries reached
 
+            # Get token usage from response (prefer usage_metadata, fallback to usage)
             if hasattr(response, 'usage_metadata') and response.usage_metadata:
                 prompt_tokens     = response.usage_metadata.get("input_tokens", 0)
                 completion_tokens = response.usage_metadata.get("output_tokens", 0)
-            else: # Fallback to older `usage` attribute
+            else:
                 usage = getattr(response, "usage", {}) or {}
                 prompt_tokens     = usage.get("prompt_tokens", 0)
                 completion_tokens = usage.get("completion_tokens", 0)
@@ -391,8 +387,7 @@ class LangGraphLLMExecutor:
             price_in  = float(os.environ.get(f"{self.provider.upper()}_PRICE_INPUT", 0.0))
             price_out = float(os.environ.get(f"{self.provider.upper()}_PRICE_OUTPUT", 0.0))
             cost = prompt_tokens * price_in + completion_tokens * price_out
-            retry_count = attempt - 1 # Set retry_count from the loop
-
+            # retry_count is already handled by `actual_retries`
 
         # 3) update global agent_state totals
         agent_state.tokens_sent      += prompt_tokens
@@ -419,7 +414,7 @@ class LangGraphLLMExecutor:
             "model_start_time":  model_start.isoformat(),
             "model_end_time":    model_end.isoformat(),
             "model_duration":    (model_end - model_start).total_seconds(),
-            "retry_count":       retry_count
+            "retry_count":       actual_retries 
         }
         agent_state.memory.setdefault("models_used", []).append(record)
 
