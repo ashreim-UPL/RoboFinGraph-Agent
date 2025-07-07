@@ -57,7 +57,7 @@ def inject_provider_pricing(config: Dict[str, Any]) -> None: # RENAMED
     else:
         logger.warning("No valid Together.ai API key found for Together-hosted models. Cannot fetch Together.ai pricing dynamically.")
 
-    # Now, iterate through all providers to inject pricing into environment variables
+    # iterate through all providers to inject pricing into environment variables
     for prov, pdata in config.get("providers", {}).items():
         price_in, price_out = 0.0, 0.0
 
@@ -73,10 +73,10 @@ def inject_provider_pricing(config: Dict[str, Any]) -> None: # RENAMED
                 model_pricing = config["_together_pricing_map"].get(model_name_for_pricing, {})
                 price_in = model_pricing.get("input", price_in) # Use fallback if not found
                 price_out = model_pricing.get("output", price_out) # Use fallback if not found
+                # Store in environment
+                os.environ[f"{prov.upper()}_PRICE_INPUT"]  = str(price_in)
+                os.environ[f"{prov.upper()}_PRICE_OUTPUT"] = str(price_out)
 
-        # Store in environment
-        os.environ[f"{prov.upper()}_PRICE_INPUT"]  = str(price_in)
-        os.environ[f"{prov.upper()}_PRICE_OUTPUT"] = str(price_out)
 
         logger.info(f"Injected pricing for {prov}: in={price_in} out={price_out}")
         log_event("provider_pricing_injected", {"provider": prov, "input": price_in, "output": price_out})
@@ -139,17 +139,37 @@ def fetch_together_pricing(base_url: str, api_key: str) -> Dict[str, Dict[str, f
     Call Together’s GET /models endpoint to retrieve pricing per model.
     Returns a dict: { model_id: { "input": input_price_per_token,
                                   "output": output_price_per_token } }
-    """
-    url = base_url.rstrip("/") + "/models"
+    """   
+    url ="https://api.together.xyz/v1/models"
+    
     headers = {"Authorization": f"Bearer {api_key}"}
+    logger.debug(f"Requesting Together pricing from {url} with headers {headers}")
+
     try:
         resp = httpx.get(url, headers=headers, timeout=30.0)
+        logger.debug(f"Response status: {resp.status_code}")
+        if resp.status_code != 200:
+            logger.error(f"Bad status code: {resp.status_code}")
+            logger.error(f"Response text: {resp.text}")
+            return {}
         resp.raise_for_status()
     except Exception as e:
         logger.error(f"Failed to fetch Together models/pricing: {e}")
+        logger.error(f"Full response (if available): {getattr(resp, 'text', 'no response')}")
         return {}
 
-    models = resp.json()
+    try:
+        models = resp.json()
+    except Exception as e:
+        logger.error(f"Failed to parse JSON: {e}")
+        logger.error(f"Response text: {resp.text}")
+        return {}
+
+    if not isinstance(models, list):
+        logger.error("API did not return a list of models!")
+        logger.error(f"Full response: {models}")
+        return {}
+
     pricing_map: Dict[str, Dict[str, float]] = {}
     for m in models:
         pid = m.get("id")
@@ -157,7 +177,7 @@ def fetch_together_pricing(base_url: str, api_key: str) -> Dict[str, Dict[str, f
         pricing_map[pid] = {
             "input":  pr.get("input", 0.0),
             "output": pr.get("output", 0.0),
-        }      
+        }
     logger.info(f"Loaded pricing for {len(pricing_map)} Together models")
     return pricing_map
         
@@ -387,7 +407,7 @@ class LangGraphLLMExecutor:
             # compute cost from injected pricing
             price_in  = float(os.environ.get(f"{self.provider.upper()}_PRICE_INPUT", 0.0))
             price_out = float(os.environ.get(f"{self.provider.upper()}_PRICE_OUTPUT", 0.0))
-            cost = prompt_tokens * price_in + completion_tokens * price_out
+            cost = (prompt_tokens * price_in + completion_tokens * price_out)/1000000
             # retry_count is already handled by `actual_retries`
 
         # 3) update global agent_state totals

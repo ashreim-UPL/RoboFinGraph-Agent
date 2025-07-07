@@ -550,4 +550,3 @@ def evaluate_pipeline(agent_state: AgentState,
     return {"kpis": kpis,
             "pipeline_steps": raw_steps,
             "pipeline_matrix": pipeline_matrix}
-

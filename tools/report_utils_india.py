@@ -58,11 +58,12 @@ def get_key_data_india(ticker: str, save_path: str) -> str:
         except (TypeError, ValueError):
             continue
 
-    # BVPS
-    try:
-        bvps_val = float(key_metrics.get("bookValuePerShareMostRecentFiscalYear", 0))
-    except Exception:
-        bvps_val = 0.0
+    persharedata = key_metrics.get("persharedata", [])
+    bvps_val = 0.0
+    for entry in persharedata:
+        if entry.get("key") == "bookValuePerShareMostRecentFiscalYear":
+            bvps_val = float(entry.get("value", 0))
+            break
 
     # Market Cap
     market_cap = 0.0
