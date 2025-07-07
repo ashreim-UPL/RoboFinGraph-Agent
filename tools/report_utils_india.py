@@ -9,6 +9,7 @@ import logging
 
 
 # Import the core API calling functions from your toolkit
+
 from .global_API_toolkit import make_api_request2, save_to_file
 from .charting import *
 from .rag_api_utils import get_annual_report_section, perform_similarity_search
@@ -95,10 +96,9 @@ def get_key_data_india(ticker: str, save_path: str) -> str:
         "Market Cap (Millions)": f"{market_cap/1e6:.2f}" if market_cap else "N/A",
         "52 Week Price Range": f"{lo:.2f} - {hi:.2f}" if lo is not None and hi is not None else "N/A",
         "BVPS": f"{bvps_val:.2f}" if bvps_val else "N/A"
+
     }
     return save_to_file(json.dumps(key_data, indent=2), save_path)
-
-
 
 def get_company_profile(ticker: str, save_path: str, region: str = 'IN') -> str:
     """
@@ -179,6 +179,7 @@ def get_financial_statement(ticker: str, statement_type: str, save_path: str, fy
     """
     print(f"Fetching {statement_type} for {ticker} from IndianAPI...")
 
+
     type_map = {
         "income_statement": "INC",
         "balance_sheet": "BAL",
@@ -192,6 +193,7 @@ def get_financial_statement(ticker: str, statement_type: str, save_path: str, fy
 
     statement_code = type_map.get(statement_type)
     if not statement_code:
+      
         msg = f"Invalid statement type: {statement_type}"
         logging.error(msg)
         save_to_file(json.dumps({"error": msg}), save_path)
@@ -256,12 +258,14 @@ def get_financial_statement(ticker: str, statement_type: str, save_path: str, fy
 
 
 
+
 def get_indian_key_metrics_raw(stock: str, save_path: str = None) -> Dict[str, Any]:
     """
     Fetch raw keyMetrics data from indianapi.in for the given stock symbol.
     Returns the data exactly as received (dictionary).
     """
     
+
     response = get_cached_stock_data(stock)
     #response = make_api_request("IndianMarket", "/stock", {"name": stock})
     data = response.get('keyMetrics', {})
@@ -278,6 +282,7 @@ def get_indian_historical_prices(ticker: str, start_date: str = None, end_date: 
     endpoint = "/historical_data"  # adapt as needed
     params = {"stock_name": ticker, "period": period, "filter": filter}
     content = make_api_request("IndianMarket", endpoint, params)
+
 
     if save_path:
         save_to_file(json.dumps(content, indent=2), save_path)
@@ -388,6 +393,7 @@ def generate_share_performance_chart_indian_market(ticker: str, fyear: str, save
     return get_indian_share_performance(ticker, f"{fyear}-12-31", save_path)
 
 def generate_pe_eps_chart_indian_market(ticker: str, fyear: str, save_path: str) -> str:
+
     return get_pe_eps_performance_indian_market(ticker, f"{fyear}-12-31", save_path)
 
 def _get_financial_statement_for_table(
@@ -420,6 +426,7 @@ def _get_financial_statement_for_table(
         raise ValueError(f"Invalid statement type: {statement_type}")
 
     # Fetch data
+
     response = get_cached_stock_data(ticker)
     #response = make_api_request2("IndianMarket", "/stock", {"name": ticker})
 
@@ -534,4 +541,5 @@ def get_financial_metrics_indian_market(ticker: str, fyear: int, save_path: str,
         save_to_file(json.dumps({"error": msg}), save_path)
 
     return save_path
+
 

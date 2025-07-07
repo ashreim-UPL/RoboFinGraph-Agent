@@ -97,13 +97,17 @@ def get_key_data(
     return save_to_file(json.dumps(key_data_dict, indent=2), save_path)
 
 # --- I. Foundational Company Data Functions ---
+
 def get_company_profile(ticker: str, save_path: str) -> str:
+
     """
     Retrieves company profile and description exclusively from FMP.
     """
     print(f"Fetching company profile for {ticker} from FMP...")
     # MODIFIED: Removed all region-specific and SEC-related logic
     content = make_api_request("FMP", "/profile", {"symbol": ticker})
+    content = content.get('companyProfile', content) if isinstance(content, dict) else content
+
     return save_to_file(json.dumps(content, indent=2), save_path)
 
 def get_competitor_analysis(ticker: str, save_path: str) -> str:
@@ -113,7 +117,6 @@ def get_competitor_analysis(ticker: str, save_path: str) -> str:
     print(f"Fetching competitors for {ticker}...")
     content = make_api_request("FMP", "/stock-peers", {"symbol": ticker})
     return save_to_file(json.dumps(content, indent=2), save_path)
-
 
 
 # --- II. Core Financial Statement Functions ---
@@ -217,8 +220,6 @@ def get_sec_10k_section_7(
     """Fetches and saves SEC 10-K Section 7 (MD&A)."""
     logging.debug(f"Fetching SEC 10-K Section 7 for {sec_ticker}/{fyear}")
     return _fetch_and_save_sec_section(sec_ticker, fyear, sec_report_address,"7", save_path)
-
-# (Keep your other report_utils functions like get_key_data, get_company_profile, etc.)
 
 # --- IV. Chart and Report Generation Functions ---
 

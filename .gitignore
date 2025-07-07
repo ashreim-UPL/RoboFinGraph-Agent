@@ -14,7 +14,7 @@ projects/
 dist/
 tmp/
 filings/
-venv/
+.venv/
 /report/
 /Old Reports/
 /report- old/

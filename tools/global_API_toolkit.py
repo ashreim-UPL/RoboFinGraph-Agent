@@ -50,6 +50,7 @@ def get_api_config():
             "method": "CUSTOM",
             "api_key": os.getenv("SEC_API_KEY")
         }
+
     }
 
 # Use everywhere:
@@ -137,6 +138,64 @@ def make_api_request(
             return {"error": str(e), "payload": payload}
 
     return execute() if api_name != "IndianMarket" else force_ipv4_context().__enter__() or execute()
+
+
+def make_api_request2(
+    api_name: Annotated[Literal["FMP", "IndianMarket", "LocalRAG"], "Target API name"],
+    endpoint: Annotated[str, "API path like /query or /symbol/AAPL"],
+    params: Annotated[Optional[Dict], "Payload or query parameters"] = None
+) -> Annotated[dict, "JSON response or error"]:
+    config = API_CONFIG.get(api_name)
+    if not config or not config.get("api_key"):
+        return {"error": f"API configuration or key is missing for '{api_name}'."}
+
+    full_url = f"{config['base_url']}{endpoint}"
+    headers = {}
+    payload = params.copy() if isinstance(params, dict) else {}
+
+    if api_name == "FMP":
+        method = config.get("method", "GET").upper()
+        if "auth_param" in config:
+            payload[config["auth_param"]] = config["api_key"]
+        elif "auth_header" in config:
+            headers[config["auth_header"]] = config["api_key"]
+
+        try:
+            response = requests.request(method, full_url, json=payload if method == "POST" else None,
+                                        params=payload if method == "GET" else None, headers=headers, timeout=20)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.RequestException as e:
+            return {"error": str(e), "payload": payload}
+
+    elif api_name == "IndianMarket":
+        if "auth_param" in config:
+            payload[config["auth_param"]] = config["api_key"]
+        elif "auth_header" in config:
+            headers[config["auth_header"]] = config["api_key"]
+
+        try:
+            response = requests.get(full_url, params=payload, headers=headers, timeout=20)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.RequestException as e:
+            return {"error": str(e), "payload": payload}
+
+    elif api_name == "LocalRAG":
+        if "auth_param" in config:
+            payload[config["auth_param"]] = config["api_key"]
+        elif "auth_header" in config:
+            headers[config["auth_header"]] = config["api_key"]
+
+        try:
+            response = requests.post(full_url, json=payload, headers=headers, timeout=20)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.RequestException as e:
+            return {"error": str(e), "payload": payload}
+
+    else:
+        return {"error": f"Unknown API name '{api_name}'."}
 
 # ----------------------------------------------------------------------------
 # ESTEBAN NEW METHOD
