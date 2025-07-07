@@ -1,0 +1,536 @@
+ ITEM 7. Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations 
+
+This management&#8217;s discussion and analysis provides a review of the results of operations, financial condition and liquidity and capital resources of Visa Inc. and its subsidiaries (&#8220;Visa,&#8221; &#8220;we,&#8221; &#8220;us,&#8221; &#8220;our&#8221; and the &#8220;Company&#8221;) on a historical basis and outlines the factors that have affected recent earnings, as well as those factors that may affect future earnings. The following discussion and analysis should be read in conjunction with the consolidated financial statements and related notes included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+This section of this Form 10-K generally discusses fiscal 2021 compared to fiscal 2020. Discussions of fiscal 2020 compared to 2019 that are not included in this Form 10-K can be found in &#8220;Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations&#8221; in Part II, Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations in our fiscal 2020 Form 10-K, filed with the United States Securities and Exchange Commission on November 19, 2020. 
+
+Overview 
+
+Visa is a global payments technology company that enables innovative, reliable and secure electronic payments across more than 200 countries and territories. We facilitate global commerce and money movement across a global network of consumers, merchants, financial institutions, businesses, strategic partners and government entities through innovative technologies. Our advanced transaction processing network, VisaNet, enables authorization, clearing and settlement of payment transactions and allows us to offer products and solutions that facilitate secure, reliable, and efficient money movement for all participants in the ecosystem. 
+
+Financial overview. A summary of our as-reported U.S. GAAP and non-GAAP operating results are as follows: 
+
+##TABLE_START &#160; For the Years Ended September 30, % Change (1) 
+
+&#160; 2021 2020 2019 2021 vs. 2020 2020 vs. 2019 &#160; (in millions, except percentages and per share data) Net revenues $ 24,105 &#160; $ 21,846 $ 22,977 10 % (5 %) Operating expenses $ 8,301 &#160; $ 7,765 $ 7,976 7 % (3 %) Net income $ 12,311 &#160; $ 10,866 $ 12,080 13 % (10 %) Diluted earnings per share $ 5.63 &#160; $ 4.89 $ 5.32 15 % (8 %) 
+
+Non-GAAP operating expenses (2) 
+
+$ 8,077 &#160; $ 7,702 $ 7,596 5 % 1 % 
+
+Non-GAAP net income (2) 
+
+$ 12,933 &#160; $ 11,193 $ 12,274 16 % (9 %) 
+
+Non-GAAP diluted earnings per share (2) 
+
+$ 5.91 &#160; $ 5.04 $ 5.40 17 % (7 %) ##TABLE_END
+
+(1) Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers. 
+
+(2) For a full reconciliation of our GAAP to non-GAAP financial results, see tables in Non-GAAP financial results below. 
+
+Coronavirus. As the effects of an evolving coronavirus (&#8220;COVID-19&#8221;) pandemic continues, much remains uncertain. Our priority remains the safety of our employees, clients and the communities in which we live and operate. We are taking a phased approach to reopening our offices, with most of our employees currently working remotely. We continue to remain in close and regular contact with our employees, clients, partners and governments globally to help them navigate these challenging times. 
+
+The ongoing effects of COVID-19 remain difficult to predict due to numerous uncertainties, including the transmissibility, severity, duration and resurgence of the outbreak; new variants of the virus; the uptake and effectiveness of health and safety measures or actions that are voluntarily adopted by the public or required by governments or public health authorities, including vaccines and treatments; the speed and strength of an economic recovery, including the reopening of borders and the resumption of international travel; and the impact to our employees and our operations, the business of our clients, suppliers and business partners; and other factors identified in Part I, Item 1A &#8220;Risk Factors&#8221; in this Form 10-K. We will continue to evaluate the nature and extent of the impact to our business. 
+
+Highlights for fiscal 2021 . Net revenues were $24.1 billion, an increase of 10% over the prior year, primarily due to the year-over-year growth in payments volume, processed transactions and cross-border volume, helped by 
+
+Table of Contents 
+
+fewer COVID-19 restrictions, partially offset by higher client incentives. Exchange rate movements and our hedging program positively impacted our net revenues growth by approximately half a percentage point. 
+
+GAAP operating expenses were $8.3 billion and increased 7% over the prior year, primarily driven by higher personnel and marketing expenses, partially offset by lower general and administrative expenses. Non-GAAP operating expenses were $8.1 billion and increased 5% over the prior year, primarily driven by higher personnel and marketing expenses, partially offset by lower general and administrative expenses. Exchange rate movements negatively impacted our operating expense growth by approximately half a percentage point. 
+
+Non-GAAP financial results. We use non-GAAP financial measures of our performance which exclude certain items which we believe are not representative of our continuing operations, as they may be non-recurring or have no cash impact, and may distort our longer-term operating trends. We consider non-GAAP measures useful to investors because they provide greater transparency into management&#8217;s view and assessment of our ongoing operating performance. 
+
+&#8226; Gains and losses on equity investments. Gains and losses on equity investments include periodic non-cash fair value adjustments and gains and losses upon sale of an investment. These long-term investments are strategic in nature and are primarily private company investments. Gains and losses and the related tax impacts associated with these investments are tied to the performance of the companies that we invest in and therefore do not correlate to the underlying performance of our business. 
+
+&#8226; Amortization of acquired intangible assets. Amortization of acquired intangible assets consists of amortization of intangible assets such as developed technology, customer relationships and brands acquired in connection with business combinations executed beginning in fiscal 2019. Amortization charges for our acquired intangible assets are non-cash and are significantly affected by the timing, frequency and size of our acquisitions, rather than our core operations. As such, we have excluded this amount and the related tax impact to facilitate an evaluation of our current operating performance and comparison to our past operating performance. 
+
+&#8226; Acquisition-related costs. Acquisition-related costs consist primarily of one-time transaction and integration costs associated with our business combinations. These costs include professional fees, technology integration fees, restructuring activities and other direct costs related to the purchase and integration of acquired entities. It also includes retention equity and deferred equity compensation when they are agreed upon as part of the purchase price of the transaction but are required to be recognized as expense post-combination. We have excluded these amounts and the related tax impacts as the expenses are recognized for a limited duration and do not reflect the underlying performance of our business. 
+
+&#8226; Remeasurement of deferred tax balances. During fiscal 2021, in connection with the UK enacted legislation on June 10, 2021 that increases the tax rate from 19% to 25%, effective April 1, 2023, we remeasured our UK deferred tax liabilities, resulting in the recognition of a non-recurring, non-cash income tax expense of $1.0 billion. 
+
+During fiscal 2020, in connection with the UK enacted legislation that repealed the previous tax rate reduction from 19% to 17% that was effective on April 1, 2020, we remeasured our UK deferred tax liabilities as of the enactment date, resulting in the recognition of a non-recurring, non-cash income tax expense of $329 million. See Note 19&#8212;Income Taxes to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+&#8226; Indirect taxes. During fiscal 2021, we recognized a one-time charge within general and administrative expense of $152 million, before tax. Net of the related income tax benefit of $40 million, determined by applying applicable tax rates, non-GAAP net income increased by $112 million. This charge is to record our estimate of probable additional indirect taxes, related to prior periods, for which we could be liable as a result of certain changes in applicable law. This one-time charge is not representative of our ongoing operations. 
+
+&#8226; Resolution of a tax item. During fiscal 2020, we resolved a long-outstanding tax matter, dating back more than 12 years, relating to certain tax filing positions taken prior to our initial public offering. The resolution of this matter resulted in the recognition of a one-time charge to income tax expense of $28 million, which we believe is not representative of our continuing operations and ongoing effective tax rate. 
+
+Table of Contents 
+
+&#8226; Litigation provision. During fiscal 2019, we recorded a litigation provision of $370 million and related tax benefits of $83 million associated with the interchange multidistrict litigation. The tax impact is determined by applying applicable federal and state tax rates to the litigation provision. Under the U.S. retrospective responsibility plan, we recover the monetary liabilities related to the U.S. covered litigation through a reduction to the conversion rate of our class B common stock to shares of class A common stock. See Note 5&#8212;U.S. and Europe Retrospective Responsibility Plans and Note 20&#8212;Legal Matters to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Non-GAAP operating expenses, non-operating income (expense), income tax provision, effective income tax rate, net income and diluted earnings per share should not be relied upon as substitutes for, or considered in isolation from, measures calculated in accordance with U.S. GAAP. The following tables reconcile our as-reported financial measures, calculated in accordance with U.S. GAAP, to our respective non-GAAP financial measures: 
+
+##TABLE_START For the Year Ended September 30, 2021 Operating Expenses Non-operating Income (Expense) Income Tax Provision Effective Income Tax Rate (1) 
+
+Net Income Diluted Earnings Per Share (1) 
+
+(in millions, except percentages and per share data) As reported $ 8,301 $ 259 $ 3,752 23.4 % $ 12,311 $ 5.63 (Gains) losses on equity investments, net &#8212; (712) (159) (553) (0.25) Amortization of acquired intangible assets (51) &#8212; 12 39 0.02 Acquisition-related costs (21) &#8212; 4 17 0.01 Remeasurement of deferred tax balances &#8212; &#8212; (1,007) 1,007 0.46 Indirect taxes (152) &#8212; 40 112 0.05 Non-GAAP $ 8,077 $ (453) $ 2,642 17.0 % $ 12,933 $ 5.91 ##TABLE_END
+
+##TABLE_START For the Year Ended September 30, 2020 Operating Expenses Non-operating Income (Expense) Income Tax Provision Effective Income Tax Rate (1) 
+
+Net Income Diluted Earnings Per Share (1) 
+
+(in millions, except percentages and per share data) As reported $ 7,765 $ (291) $ 2,924 21.2 % $ 10,866 $ 4.89 (Gains) losses on equity investments, net &#8212; (101) (23) (78) (0.04) Amortization of acquired intangible assets (46) &#8212; 11 35 0.02 Acquisition-related costs (17) &#8212; 4 13 0.01 Remeasurement of deferred tax balances &#8212; &#8212; (329) 329 0.15 Resolution of a tax item &#8212; &#8212; (28) 28 0.01 Non-GAAP $ 7,702 $ (392) $ 2,559 18.6 % $ 11,193 $ 5.04 ##TABLE_END
+
+Table of Contents 
+
+##TABLE_START For the Year Ended September 30, 2019 Operating Expenses Non-operating Income (Expense) Income Tax Provision Effective Income Tax Rate (1) 
+
+Net Income Diluted Earnings Per Share (1) 
+
+(in millions, except percentages and per share data) As reported $ 7,976 $ (117) $ 2,804 18.8 % $ 12,080 $ 5.32 (Gains) losses on equity investments, net &#8212; (131) (30) (101) (0.04) Amortization of acquired intangible assets (6) &#8212; 1 5 &#8212; Acquisition-related costs (4) &#8212; 1 3 &#8212; Litigation provision (370) &#8212; 83 287 0.13 Non-GAAP $ 7,596 $ (248) $ 2,859 18.9 % $ 12,274 $ 5.40 ##TABLE_END
+
+(1) Figures in the table may not recalculate exactly due to rounding. Effective income tax rate, diluted earnings per share and their respective totals are calculated based on unrounded numbers. 
+
+Common stock repurchases. In January 2021, our board of directors authorized an $8.0 billion share repurchase program (the &#8220;January 2021 Program&#8221;). During fiscal 2021, we repurchased 40 million shares of our class A common stock in the open market for $8.7 billion. As of September 30, 2021, our January 2021 Program had remaining authorized funds of $4.8 billion for share repurchase. See Note 15&#8212;Stockholders&#8217; Equity to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Pending acquisitions. On June 24, 2021, we entered into a definitive agreement to acquire Tink AB (&#8220;Tink&#8221;) for &#8364;1.8 billion, inclusive of cash and retention incentives. This acquisition is subject to customary closing conditions, including regulatory reviews and approvals. 
+
+On July 22, 2021, we entered into a definitive agreement to acquire The Currency Cloud Group Limited (&#8220;Currencycloud&#8221;). The acquisition values Currencycloud at &#163;700 million, inclusive of cash and retention incentives. The financial consideration will be reduced by the outstanding equity of Currencycloud that we already own. This acquisition is subject to customary closing conditions, including regulatory reviews and approvals. 
+
+Terminated acquisition. On January 12, 2021, Visa and Plaid Inc. mutually terminated their merger agreement announced on January 13, 2020. See Note 20&#8212;Legal Matters to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Payments volume and processed transactions. Payments volume is the primary driver for our service revenues, and the number of processed transactions is the primary driver for our data processing revenues. 
+
+Payments volume represents the aggregate dollar amount of purchases made with cards and other form factors carrying the Visa, Visa Electron, V PAY and Interlink brands and excludes Europe co-badged volume. Nominal payments volume is denominated in U.S. dollars and is calculated each quarter by applying an established U.S. dollar/local currency exchange rate for each local currency in which our volumes are reported. Processed transactions represent transactions using cards and other form factors carrying the Visa, Visa Electron, V PAY, Interlink and PLUS brands processed on Visa&#8217;s networks. 
+
+Table of Contents 
+
+The following tables present nominal payments and cash volume: 
+
+##TABLE_START &#160; U.S. International Visa Inc. &#160; 12 months 
+
+ended June 30, (1) 
+
+12 months 
+
+ended June 30, (1) 
+
+12 months 
+
+ended June 30, (1) 
+
+2021 2020 % 
+
+Change (2) 
+
+2021 2020 % 
+
+Change (2) 
+
+2021 2020 % 
+
+Change (2) 
+
+&#160; (in billions, except percentages) 
+
+Nominal payments volume 
+
+&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+
+Consumer credit 
+
+$ 1,641 &#160; $ 1,518 8 % $ 2,396 &#160; $ 2,362 1 % $ 4,036 &#160; $ 3,880 4 % Consumer debit (3) 
+
+2,387 &#160; 1,848 29 % 2,440 &#160; 1,975 24 % 4,828 &#160; 3,824 26 % 
+
+Commercial (4) 
+
+697 &#160; 641 9 % 406 &#160; 370 10 % 1,103 &#160; 1,011 9 % Total nominal payments volume (2) 
+
+$ 4,725 &#160; $ 4,007 18 % $ 5,243 &#160; $ 4,707 11 % $ 9,968 &#160; $ 8,714 14 % 
+
+Cash volume (5) 
+
+635 &#160; 573 11 % 1,927 &#160; 2,045 (6 %) 2,561 &#160; 2,619 (2 %) 
+
+Total nominal volume (2),(6) 
+
+$ 5,359 &#160; $ 4,580 17 % $ 7,169 &#160; $ 6,753 6 % $ 12,529 &#160; $ 11,333 11 % ##TABLE_END
+
+##TABLE_START &#160; U.S. International Visa Inc. &#160; 12 months 
+
+ended June 30, (1) 
+
+12 months 
+
+ended June 30, (1) 
+
+12 months 
+
+ended June 30, (1) 
+
+2020 2019 % 
+
+Change (2) 
+
+2020 2019 % 
+
+Change (2) 
+
+2020 2019 % 
+
+Change (2) 
+
+&#160; (in billions, except percentages) 
+
+Nominal payments volume 
+
+&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+
+Consumer credit 
+
+$ 1,518 $ 1,540 (1 %) $ 2,362 $ 2,484 (5 %) $ 3,880 $ 4,024 (4 %) 
+
+Consumer debit (3) 
+
+1,848 1,699 9 % 1,975 1,878 5 % 3,824 3,577 7 % 
+
+Commercial (4) 
+
+641 634 1 % 370 381 (3 %) 1,011 1,015 &#8212; % Total nominal payments volume (2) 
+
+$ 4,007 $ 3,873 3 % $ 4,707 $ 4,743 (1 %) $ 8,714 $ 8,616 1 % 
+
+Cash volume (5) 
+
+573 573 &#8212; % 2,045 2,262 (10 %) 2,619 2,835 (8 %) 
+
+Total nominal volume (2),(6) 
+
+$ 4,580 $ 4,447 3 % $ 6,753 $ 7,005 (4 %) $ 11,333 $ 11,451 (1 %) ##TABLE_END
+
+The following table presents the change in nominal and constant payments and cash volume: 
+
+##TABLE_START International Visa Inc. 12 months ended 
+
+June 30, 
+
+2021 vs 2020 (1),(2) 
+
+12 months ended June 30, 2020 vs 2019 (1),(2) 
+
+12 months ended 
+
+June 30, 
+
+2021 vs 2020 (1),(2) 
+
+12 months ended June 30, 2020 vs 2019 (1),(2) 
+
+&#160; Nominal Constant (7) 
+
+Nominal Constant (7) 
+
+Nominal Constant (7) 
+
+Nominal Constant (7) 
+
+Payments volume growth 
+
+Consumer credit growth 1 % (1 %) (5 %) (3 %) 4 % 3 % (4 %) (2 %) 
+
+Consumer debit growth (3) 
+
+24 % 21 % 5 % 8 % 26 % 25 % 7 % 8 % 
+
+Commercial growth (4) 
+
+10 % 7 % (3 %) &#8212; % 9 % 8 % &#8212; % 1 % Total payments volume growth 11 % 9 % (1 %) 2 % 14 % 13 % 1 % 2 % 
+
+Cash volume growth (5) 
+
+(6 %) (3 %) (10 %) (7 %) (2 %) &#8212; % (8 %) (5 %) Total volume growth 6 % 5 % (4 %) (1 %) 11 % 10 % (1 %) 1 % ##TABLE_END
+
+(1) Service revenues in a given quarter are assessed based on nominal payments volume in the prior quarter. Therefore, service revenues reported for the 12 months ended September 30, 2021, 2020 and 2019, were based on nominal payments volume reported by our financial institution clients for the 12 months ended June 30, 2021, 2020 and 2019, respectively. On occasion, previously presented volume information may be updated. Prior period updates are not material. 
+
+(2) Figures in the tables may not recalculate exactly due to rounding. Percentage changes and totals are calculated based on unrounded numbers. 
+
+(3) Includes consumer prepaid volume and Interlink volume. 
+
+(4) Includes large, medium and small business credit and debit, as well as commercial prepaid volume. 
+
+(5) Cash volume generally consists of cash access transactions, balance access transactions, balance transfers and convenience checks. 
+
+(6) Total nominal volume is the sum of total nominal payments volume and cash volume. Total nominal volume is provided by our financial institution clients, subject to review by Visa. 
+
+(7) Growth on a constant-dollar basis excludes the impact of foreign currency fluctuations against the U.S. dollar. 
+
+Table of Contents 
+
+The following table provides the number of processed transactions: 
+
+##TABLE_START For the Years Ended September 30, % Change (1) 
+
+2021 2020 2019 2021 vs. 2020 2020 vs. 2019 (in millions, except percentages) Visa processed transactions 164,733 &#160; 140,839 138,329 17 % 2 % ##TABLE_END
+
+(1) Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers. On occasion, previously presented information may be updated. Prior period updates are not material. 
+
+Results of Operations 
+
+Net Revenues 
+
+Our net revenues are primarily generated from payments volume on Visa products for purchased goods and services, as well as the number of transactions processed on our network. See Note 1&#8212;Summary of Significant Accounting Policies to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report for further discussion on the components of our net revenues. 
+
+The following table presents our net revenues earned in the U.S. and internationally: 
+
+##TABLE_START &#160; For the Years Ended September 30, % Change (1) 
+
+&#160; 2021 2020 2019 2021 vs. 2020 2020 vs. 2019 &#160; (in millions, except percentages) U.S. $ 11,160 &#160; $ 10,125 $ 10,279 10 % (1 %) International 12,945 &#160; 11,721 12,698 10 % (8 %) Net revenues $ 24,105 &#160; $ 21,846 $ 22,977 10 % (5 %) ##TABLE_END
+
+(1) Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers. 
+
+Net revenues increased in fiscal 2021 primarily due to the year-over-year growth in payments volume, processed transactions and cross-border volume, helped by fewer COVID-19 restrictions, partially offset by higher client incentives. 
+
+Our net revenues are impacted by the overall strengthening or weakening of the U.S. dollar as payments volume and related revenues denominated in local currencies are converted to U.S. dollars. In fiscal 2021, exchange rate movements and our hedging program positively impacted our net revenues growth by approximately half a percentage point. 
+
+The following table presents the components of our net revenues: 
+
+##TABLE_START &#160; For the Years Ended September 30, % Change (1) 
+
+&#160; 2021 2020 2019 2021 vs. 2020 2020 vs. 2019 &#160; (in millions, except percentages) Service revenues $ 11,475 &#160; $ 9,804 $ 9,700 17 % 1 % Data processing revenues 12,792 &#160; 10,975 10,333 17 % 6 % International transaction revenues 6,530 &#160; 6,299 7,804 4 % (19 %) Other revenues 1,675 &#160; 1,432 1,313 17 % 9 % Client incentives (8,367) (6,664) (6,173) 26 % 8 % Net revenues $ 24,105 &#160; $ 21,846 $ 22,977 10 % (5 %) ##TABLE_END
+
+(1) Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers. &#160; 
+
+Table of Contents 
+
+&#8226; Service revenues increased primarily due to 14% growth in nominal payments volume. Service revenues were also impacted by select pricing modifications and business mix. 
+
+&#8226; Data processing revenues increased due to 17% growth in processed transactions, as the business laps the initial impacts of COVID-19 starting in March 2020. 
+
+&#8226; International transaction revenues increased primarily due to growth in nominal cross-border volumes, excluding transactions within Europe, of 4%, as the business laps the initial impacts of COVID-19 starting in March 2020 and border restrictions were relaxed in various markets. 
+
+&#8226; Other revenues increased as the business laps the initial impacts of COVID-19 starting in March 2020, driven by higher consulting and data services revenues. 
+
+&#8226; Client incentives increased in conjunction with the increase in payments volume during fiscal 2021. The amount of client incentives we record in future periods will vary based on changes in performance expectations, actual client performance, amendments to existing contracts or the execution of new contracts. 
+
+Operating Expenses 
+
+Our operating expenses consist of the following: 
+
+&#8226; Personnel expenses include salaries, employee benefits, incentive compensation, share-based compensation, contractor expense and severance charges. 
+
+&#8226; Marketing expenses include expenses associated with advertising and marketing campaigns, sponsorships and other related promotions of the Visa brand. 
+
+&#8226; Network and processing expenses mainly represent expenses for the operation of our processing network, including maintenance, equipment rental and fees for other data processing services. 
+
+&#8226; Professional fees mainly consist of fees for consulting, legal and other professional services. 
+
+&#8226; Depreciation and amortization expenses include amortization of purchased and internally developed software, as well as depreciation expense for property and equipment. Also included in this amount is amortization of finite-lived intangible assets primarily obtained through acquisitions. 
+
+&#8226; General and administrative expenses consist mainly of card benefits, indirect taxes, facilities costs, travel and meeting costs, foreign exchange gains and losses and other corporate expenses incurred in support of our business. 
+
+&#8226; Litigation provision represents litigation expenses and is based on management&#8217;s understanding of our litigation profile, the specifics of the cases, advice of counsel to the extent appropriate and management&#8217;s best estimate of incurred loss. 
+
+Table of Contents 
+
+The following table presents the components of our total operating expenses: 
+
+##TABLE_START &#160; For the Years Ended September 30, % Change (1) 
+
+&#160; 2021 2020 2019 2021 vs. 2020 2020 vs. 2019 &#160; (in millions, except percentages) Personnel $ 4,240 &#160; $ 3,785 $ 3,444 12 % 10 % Marketing 1,136 &#160; 971 1,105 17 % (12 %) Network and processing 730 &#160; 727 721 &#8212; % 1 % Professional fees 403 &#160; 408 454 (1 %) (10 %) Depreciation and amortization 804 &#160; 767 656 5 % 17 % General and administrative 985 &#160; 1,096 1,196 (10 %) (8 %) Litigation provision 3 &#160; 11 400 (76 %) (97 %) 
+
+Total operating expenses (2) 
+
+$ 8,301 &#160; $ 7,765 $ 7,976 7 % (3 %) ##TABLE_END
+
+(1) Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers. 
+
+(2) Operating expenses for fiscal 2021 and 2019 include significant items that we do not believe are indicative of our operating performance. See Overview within this Item 7&#8212;Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations. 
+
+&#8226; Personnel expenses increased primarily due to higher headcount and incentive compensation, reflecting our strategy to invest in future growth. 
+
+&#8226; Marketing expenses increased as we lapped reductions in spending in the prior year at the outset of COVID-19 as well as higher spending in client marketing and various campaigns, including the Olympic Games Tokyo 2020, which were held in Summer 2021. 
+
+&#8226; General and administrative expenses decreased due to lower travel expenses, favorable foreign currency fluctuations and lower usage of travel related card benefits, partially offset by a one-time charge to record our estimate of probable additional indirect taxes, related to prior periods, for which we could be liable as a result of certain changes in applicable laws. 
+
+Non-operating Income (Expense) 
+
+Non-operating income (expense) primarily includes interest expense, gains and losses earned on investments, income from derivative instruments not associated with our core business, as well as the non-service components of net periodic pension income and expense. 
+
+The following table presents the components of our non-operating income (expense): 
+
+##TABLE_START &#160; For the Years Ended September 30, % Change (1) 
+
+&#160; 2021 2020 2019 2021 vs. 2020 2020 vs. 2019 &#160; (in millions, except percentages) Interest expense, net $ (513) $ (516) $ (533) (1 %) (3 %) Investment income and other 772 &#160; 225 416 243 % (46 %) Total non-operating income (expense) $ 259 &#160; $ (291) $ (117) (189 %) 148 % ##TABLE_END
+
+(1) Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers. 
+
+&#8226; Interest expense, net decreased primarily as a result of lower interest related to income tax liabilities, partially offset by an increase in interest expense due to the issuance of debt in fiscal 2020 . See Note 10&#8212;Debt to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+&#8226; Investment income and other increased primarily due to higher gains from our equity investments, partially offset by lower interest income on our cash and investments. See Note 6&#8212;Fair Value Measurements and Investments to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Table of Contents 
+
+Effective Income Tax Rate 
+
+The following table presents our effective income tax rates: 
+
+##TABLE_START &#160; For the Years Ended September 30, &#160; 2021 2020 2019 Effective income tax rate 23 &#160; % 21 % 19 % ##TABLE_END
+
+The effective tax rate in fiscal 2021 differs from the effective tax rate in fiscal 2020 mainly due to the following: 
+
+&#8226; during fiscal 2021, a $1.0 billion non-recurring non-cash tax expense related to the remeasurement of UK deferred tax liabilities, as discussed below; 
+
+&#8226; during fiscal 2021, $255 million of tax benefits recognized as a result of the conclusion of audits by taxing authorities; and 
+
+&#8226; during fiscal 2020, a $329 million non-recurring, non-cash tax expense related to the remeasurement of UK deferred tax liabilities, as discussed below. 
+
+On June 10, 2021, the UK enacted legislation that increases the tax rate from 19% to 25%, effective April 1, 2023. On July 22, 2020, the UK enacted legislation that repealed the previous tax rate reduction from 19% to 17% that was effective on April 1, 2020. As a result, in fiscal 2021 and fiscal 2020, we recorded non-recurring, non-cash tax expense related to the remeasurement of our UK deferred tax liabilities, primarily related to intangibles recorded upon the acquisition of Visa Europe Limited (&#8220;Visa Europe&#8221;) in fiscal 2016. 
+
+Liquidity and Capital Resources 
+
+Management of Our Liquidity 
+
+We regularly evaluate cash requirements for current operations, commitments, development activities and capital expenditures, and we may elect to raise additional funds for these purposes in the future through the issuance of either debt or equity. Our treasury policies provide management with the guidelines and authority to manage liquidity risk in a manner consistent with our corporate objectives. 
+
+The objectives of our treasury policies are to: 
+
+&#8226; provide adequate liquidity to cover operating expenditures and liquidity contingency scenarios; 
+
+&#8226; ensure timely completion of payments settlement activities; 
+
+&#8226; ensure payments on required litigation settlements; 
+
+&#8226; make planned capital investments in our business; 
+
+&#8226; pay dividends and repurchase our shares at the discretion of our board of directors; and 
+
+&#8226; invest excess cash in securities that enable us to first meet our working capital and liquidity needs, and earn additional income. 
+
+Based on our current cash flow budgets and forecasts of our short-term and long-term liquidity needs, we believe that our current and projected sources of liquidity will be sufficient to meet our projected liquidity needs for more than the next 12 months. We will continue to assess our liquidity position and potential sources of supplemental liquidity in view of our operating performance, current economic and capital market conditions and other relevant circumstances. 
+
+Table of Contents 
+
+Cash Flow Data 
+
+The following table summarizes our cash flow activity for the fiscal years presented: 
+
+##TABLE_START For the Years Ended September 30, 2021 2020 2019 &#160; (in millions) Total cash provided by (used in): Operating activities $ 15,227 &#160; $ 10,440 $ 12,784 Investing activities (152) 1,427 (591) Financing activities (14,410) (3,968) (12,061) Effect of exchange rate changes on cash, cash equivalents, restricted cash and restricted cash equivalents (37) 440 (277) Increase (decrease) in cash, cash equivalents, restricted cash and restricted cash equivalents $ 628 &#160; $ 8,339 $ (145) ##TABLE_END
+
+Operating activiti es. Cash provided by operating activities in fiscal 2021 was higher than the prior fiscal year primarily due to growth in our underlying business, lower client incentive payments and timing and impact of COVID-19 on settlement in the prior fiscal year. 
+
+Investing activities. Cash was used in investing activities in fiscal 2021 compared to cash provided by investing activities in fiscal 2020, primarily due to higher purchases, net of proceeds from sales and maturities of investment securities. 
+
+Financing activities. Cash used in financing activities in fiscal 2021 was higher than the prior fiscal year primarily due to the absence of proceeds received from the issuance of senior notes in the prior year, the $3.0 billion principal debt payment upon maturity of our senior notes and higher share repurchases. See Note 10&#8212;Debt and Note 15&#8212;Stockholders&#8217; Equity , to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Sources of Liquidity 
+
+Our primary sources of liquidity are cash on hand, cash flow from our operations, our investment portfolio and access to various equity and borrowing arrangements. Funds from operations are maintained in cash and cash equivalents and short-term or long-term investment securities based upon our funding requirements, access to liquidity from these holdings and the return that these holdings provide. 
+
+Cash, cash equivalents and investments. As of September 30, 2021, our cash and cash equivalents balance were $16.5 billion and our available-for-sale debt securities were $3.2 billion. Our investment portfolio is designed to invest cash in securities which enables us to meet our working capital and liquidity needs. Our investment portfolio consists of debt securities issued by the U.S. Treasury or U.S. government-sponsored agencies. $1.5 billion of the investments are classified as current and are available to meet short-term liquidity needs. The remaining non-current investments have stated maturities of more than one year from the balance sheet date; however, they are also generally available to meet short-term liquidity needs. 
+
+Factors that may impact the liquidity of our investment portfolio include, but are not limited to, changes to credit ratings of the securities, uncertainty related to regulatory developments, actions by central banks and other monetary authorities and the ongoing strength and quality of credit markets. We will continue to review our portfolio in light of evolving market and economic conditions. However, if current market conditions deteriorate, the liquidity of our investment portfolio may be impacted and we could determine that some of our investments are impaired, which could adversely impact our financial results. We have policies that limit the amount of credit exposure to any one financial institution or type of investment. 
+
+Commercial paper program . We maintain a commercial paper program to support our working capital requirements and for other general corporate purposes. Under the program, we are authorized to issue up to $3.0 billion in outstanding notes, with maturities up to 397 days from the date of issuance. At September 30, 2021, we had no outstanding obligations under the program. See Note 10&#8212;Debt to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Table of Contents 
+
+Credit facility. We have an unsecured $5.0 billion revolving credit facility (the &#8220;Credit Facility&#8221;) which expires on July 25, 2024. As of September 30, 2021, there were no borrowings under the Credit Facility. See Note 10&#8212;Debt to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+U.S. Litigation escrow account. Pursuant to the terms of the U.S. retrospective responsibility plan, which was created to insulate Visa and our class A common shareholders from financial liability for certain litigation cases, we maintain a U.S. litigation escrow account from which monetary liabilities from settlements of, or judgments in, the U.S. covered litigation will be payable. As these funds are restricted for the sole purpose of making payments related to the U.S. covered litigation matters, we do not rely on them for other operational needs. See Note 5&#8212;U.S. and Europe Retrospective Responsibility Plans and Note 20&#8212;Legal Matters to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this repor t. 
+
+Credit Ratings 
+
+Various factors affect our credit ratings, including changes in our operating performance, the economic environment, conditions in the electronic payments industry, our financial position and changes in our business strategy. Our credit ratings are published by nationally recognized statistical rating organizations in the U.S. and have not changed from the prior-year comparable period. We do not currently foresee any reasonable circumstances under which our credit ratings would be significantly downgraded. If a downgrade were to occur, it could adversely impact, among other things, our future borrowing costs and access to capital markets. 
+
+Uses of Liquidity 
+
+Payments settlement. Payments settlement due to and from our financial institution clients can represent a substantial daily liquidity requirement. Most U.S. dollar settlements are settled within the same day and do not result in a receivable or payable balance, while settlements in currencies other than the U.S. dollar generally remain outstanding for one to two business days, which is consistent with industry practice for such transactions. In general, during fiscal 2021, we were not required to fund settlement-related working capital. At September 30, 2021, we held $9.1 billion of our total available liquidity to fund daily settlement in the event one or more of our financial institution clients are unable to settle, with the remaining liquidity available to support our working capital and other liquidity needs. See Note 12&#8212;Settlement Guarantee Management to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report . 
+
+Litigation. Judgments in and settlements of litigation or other fines imposed in investigations and proceedings, other than the U.S. covered litigation and VE territory covered litigation, which are covered by the U.S. and Europe retrospective responsibility plans, could give rise to future liquidity needs. See Note 5&#8212;U.S. and Europe Retrospective Responsibility Plans and Note 20&#8212;Legal Matters to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this repor t. 
+
+Common stock repurchases. During fiscal 2021, we repurchased 40 million shares of our class A common stock in the open market for $8.7 billion. As of September 30, 2021, our January 2021 Program had remaining authorized funds of $4.8 billion. See Note 15&#8212;Stockholders&#8217; Equity to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Dividends . During fiscal 2021, we declared and paid $2.8 billion in dividends at a quarterly rate of $0.32 per share. On October 22, 2021, our board of directors declared a quarterly cash dividend of $0.375 per share of class A common stock (determined in the case of class B and C common stock and series A, B and C convertible participating preferred stock on an as-converted basis). We expect to pay approximately $812 million in connection with this dividend on December 7, 2021. See Note 15&#8212;Stockholders&#8217; Equity to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. We expect to continue paying quarterly dividends in cash, subject to approval by the board of directors. All preferred and class B and C common stock will share ratably on an as-converted basis in such future dividends. 
+
+Capital expenditures. During fiscal 2021, our capital expenditures decreased slightly. We expect to continue investing in technology assets and payments system infrastructure to support our digital solutions and core business initiatives. 
+
+Senior notes. As of September 30, 2021, we had an outstanding aggregate principal amount relating to our fixed-rate senior notes of $21.0 billion with maturity dates ranging from September 2022 to August 2050. During fiscal 2021, we repaid $3.0 billion of principal upon maturity of our senior notes. A principal payment of $1.0 billion is 
+
+Table of Contents 
+
+due on September 14, 2022 on our fixed-rate senior notes issued in December 2015, for which we have sufficient liquidity. In August 2020, we issued a $500 million green bond as part of our commitment to sustainable living and a sustainable payments ecosystem. In fiscal 2021, we allocated $165 million to eligible green projects. See Note 10&#8212;Debt to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Client incentives. As the future cash payments for these agreements, which range in terms from less than one to fifteen years, are based on specific performance requirements, the timing of payments can vary. As of September 30, 2021, we had $5.4 billion of client incentives liability recorded on the consolidated balance sheet related to these agreements. See Note 1&#8212;Summary of Significant Accounting Policies to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Uncertain tax positions. As of September 30, 2021, we had liabilities for uncertain tax positions of $1.8 billion for which we cannot determine the range and timing of the cash payments. See Note 19&#8212;Income Taxes to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Pending acquisitions. On June 24, 2021, we entered into a definitive agreement to acquire Tink for &#8364;1.8 billion, inclusive of cash and retention incentives. This acquisition is subject to customary closing conditions, including regulatory reviews and approvals. 
+
+On July 22, 2021, we entered into a definitive agreement to acquire Currencycloud for a value of &#163;700 million, inclusive of cash and retention incentives. The financial consideration will be reduced by the outstanding equity of Currencycloud that we already own. This acquisition is subject to customary closing conditions, including regulatory reviews and approvals. See Note 2&#8212;Acquisitions to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Other uses of cash. The following table represents material, expected or contractually committed future obligations as of September 30, 2021. We believe that we will be able to fund these obligations through cash generated from our operations and available credit facility. 
+
+##TABLE_START &#160; Payments Due by Period &#160; Less than 1 Year 1-3 Years 3-5 Years More than 5 Years Total &#160; (in millions) 
+
+Purchase obligations (1) 
+
+$ 1,730 $ 685 $ 384 $ 569 $ 3,368 
+
+Leases not yet commenced (2) 
+
+1 41 58 367 467 
+
+Transition tax (3) 
+
+87 249 455 &#8212; 791 Total $ 1,818 &#160; $ 975 &#160; $ 897 &#160; $ 936 &#160; $ 4,626 &#160; ##TABLE_END
+
+(1) Represents agreements to purchase goods and services that specify significant terms, including: fixed or minimum quantities to be purchased, minimum or variable price provisions, and the approximate timing of the transaction. For obligations where the individual years of spend are not specified in the contract, we have estimated the timing of when these amounts will be spent. 
+
+(2) Represents future payments under leases that have not yet commenced and are not included in the consolidated balance sheet. For future lease payments related to leases that have commenced and are included in the consolidated balance sheet, see Note 9&#8212;Leases to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+(3) Amounts presented relate to the estimated transition tax, net of foreign tax credit carryovers, on certain foreign earnings of non-U.S. subsidiaries recognized during fiscal 2018 in connection with the Tax Cuts and Jobs Act. 
+
+Indemnifications 
+
+We indemnify our financial institution clients for settlement losses suffered due to the failure of any other client to fund its settlement obligations in accordance with our operating rules. The amount of the indemnification is limited to the amount of unsettled Visa payment transactions at any point in time. We maintain and regularly review global settlement risk policies and procedures to manage settlement risk, which may require clients to post collateral if certain credit standards are not met. See Note 1&#8212;Summary of Significant Accounting Policies and Note 12&#8212;Settlement Guarantee Management to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. 
+
+Table of Contents 
+
+Accounting Pronouncements Not Yet Adopted 
+
+In December 2019, the Financial Accounting Standards Board (&#8220;FASB&#8221;) issued Accounting Standards Board Update (&#8220;ASU&#8221;) 2019-12, which simplifies the accounting for income taxes by removing certain exceptions to the general principles in the existing guidance and making other minor improvements. The amendments in the ASU are effective on October 1, 2021. The adoption is not expected to have a material impact on our consolidated financial statements. 
+
+In January 2020, the FASB issued ASU 2020-01, which clarifies that an entity should consider observable transactions that require it to either apply or discontinue the equity method of accounting for the purposes of applying the fair value measurement alternative. The amendments in the ASU are effective on October 1, 2021. The adoption is not expected to have a material impact on our consolidated financial statements. 
+
+In March 2020, the FASB issued ASU 2020-04, which provides optional expedients and exceptions for applying U.S. GAAP to contracts, hedging relationships and other transactions that reference the London Interbank Offered Rate or another reference rate expected to be discontinued because of reference rate reform. Subsequently, the FASB also issued an amendment to this standard. The amendments in the ASU are effective upon issuance through December 31, 2022. We are evaluating the effect ASU 2020-04 and its subsequent amendment will have on our consolidated financial statements. The adoption is not expected to have a material impact on our consolidated financial statements. 
+
+Critical Accounting Estimates 
+
+Our consolidated financial statements are prepared in accordance with accounting principles generally accepted in the United States of America which require us to make judgments, assumptions and estimates that affect the amounts reported. See Note 1&#8212;Summary of Significant Accounting Policies to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data of this report. We have established policies and control procedures which seek to ensure that estimates and assumptions are appropriately governed and applied consistently from period to period. However, actual results could differ from our assumptions and estimates, and such differences could be material. 
+
+We believe that the following accounting estimates are the most critical to fully understand and evaluate our reported financial results, as they require our most subjective or complex management judgments, resulting from the need to make estimates about the effect of matters that are inherently uncertain and unpredictable. 
+
+Revenue Recognition &#8212; Client Incentives 
+
+Critical estimates. We enter into long-term incentive agreements with financial institution clients, merchants and other business partners for various programs that provide cash and other incentives designed to increase revenue by growing payments volume, increasing Visa product acceptance, winning merchant routing transactions over to our network and driving innovation. These incentives are primarily accounted for as reductions to net revenues; however, if a separate identifiable benefit at fair value can be established, they are accounted for as operating expenses. Incentives are recognized systematically and rationally based on management&#8217;s estimate of each client&#8217;s performance. These estimates are regularly reviewed and adjusted as appropriate based on changes in performance expectations, actual client performance, amendments to existing contracts or the execution of new contracts. 
+
+Assumptions and judgment. Estimation of client incentives relies on forecasts of payments and transaction volume, card issuance and card conversion. Performance is estimated using client-reported information, transactional information accumulated from our systems, historical information, market and economic conditions and discussions with our clients, merchants and business partners. 
+
+Impact if actual results differ from assumptions. If actual performance is not consistent with our estimates, client incentives may be materially different than initially recorded. Increases in incentive payments are generally driven by increased payments and transaction volume, which drive our net revenues. As a result, in the event incentive payments exceed estimates, such payments are not expected to have a material effect on our financial condition, results of operations or cash flows. The cumulative impact of a revision in estimates is recorded in the period such revisions become probable and estimable. For the year ended September 30, 2021, client incentives represented 26% of gross revenues. 
+
+Table of Contents 
+
+Legal and Regulatory Matters 
+
+Critical estimates. We are currently involved in various legal proceedings, the outcomes of which are not within our complete control or may not be known for prolonged periods of time. Management is required to assess the probability of loss and estimate the amount of such loss, if any, in preparing our consolidated financial statements. 
+
+Assumptions and judgment. We evaluate the likelihood of a potential loss from legal or regulatory proceedings to which we are a party. We record a liability for such claims when a loss is deemed probable and the amount can be reasonably estimated. Significant judgment may be required in the determination of both probability and whether a potential loss is reasonably estimable. Our judgments are subjective based on management&#8217;s understanding of the litigation profile, the specifics of each case, our history with similar proceedings, advice of in-house and outside legal counsel to the extent appropriate and management&#8217;s best estimate of incurred loss. As additional information becomes available, we reassess the potential loss related to pending claims and may revise our estimates. 
+
+We have entered into loss sharing agreements that reduce our potential liability under certain litigation. However, our U.S. retrospective responsibility plan only addresses monetary liabilities from settlements of, or final judgments in, the U.S. covered litigation. The plan&#8217;s mechanisms include the use of the U.S. litigation escrow account. The accrual related to the U.S. covered litigation could be either higher or lower than the U.S. litigation escrow account balance. Our Europe retrospective responsibility plan only covers Visa Europe territory covered litigation (and resultant liabilities and losses) relating to the covered period, subject to certain limitations, and does not cover any fines or penalties incurred in the European Commission proceedings or any other matter. See Note 5&#8212;U.S. and Europe Retrospective Responsibility Plans and Note 20&#8212;Legal Matters to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data . 
+
+Impact if actual results differ from assumptions. Due to the inherent uncertainties of the legal and regulatory processes in the multiple jurisdictions in which we operate, our judgments may be materially different than the actual outcomes, which could have material adverse effects on our business, financial conditions and results of operations. See Note 20&#8212;Legal Matters to our consolidated financial statements included in Item 8&#8212;Financial Statements and Supplementary Data . 
+
+Income Taxes 
+
+Critical estimates. In calculating our effective income tax rate, we make judgments regarding certain tax positions, including the timing and amount of deductions and allocations of income among various tax jurisdictions. 
+
+Assumptions and judgment. We have various tax filing positions with regard to the timing and amount of deductions and credits and the allocation of income among various tax jurisdictions, based on our interpretation of local tax laws. We also inventory, evaluate and measure all uncertain tax positions taken or expected to be taken on tax returns and to record liabilities for the amount of such positions that may not be sustained, or may only be partially sustained, upon examination by the relevant taxing authorities. 
+
+Impact if actual results differ from assumptions. Although we believe that our estimates and judgments are reasonable, actual results may differ from these estimates. Some or all of these judgments are subject to review by the taxing authorities. If one or more of the taxing authorities were to successfully challenge our right to realize some or all of the tax benefit we have recorded, and we were unable to realize this benefit, it could have a material adverse effect on our financial results and cash flows. 
+

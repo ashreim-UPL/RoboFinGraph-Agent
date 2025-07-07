@@ -1,0 +1,207 @@
+[
+  {
+    "Balance Sheet": "Cash",
+    "2024": "287.76",
+    "2023": "199.54"
+  },
+  {
+    "Balance Sheet": "CashEquivalents",
+    "2024": "15.31",
+    "2023": "48.97"
+  },
+  {
+    "Balance Sheet": "ShortTermInvestments",
+    "2024": "2443.50",
+    "2023": "2037.69"
+  },
+  {
+    "Balance Sheet": "CashandShortTermInvestments",
+    "2024": "2746.57",
+    "2023": "2286.20"
+  },
+  {
+    "Balance Sheet": "AccountsReceivable-TradeNet",
+    "2024": "2953.61",
+    "2023": "2543.56"
+  },
+  {
+    "Balance Sheet": "TotalReceivablesNet",
+    "2024": "3179.47",
+    "2023": "2712.87"
+  },
+  {
+    "Balance Sheet": "TotalInventory",
+    "2024": "4468.58",
+    "2023": "4141.05"
+  },
+  {
+    "Balance Sheet": "PrepaidExpenses",
+    "2024": "64.88",
+    "2023": "50.34"
+  },
+  {
+    "Balance Sheet": "OtherCurrentAssetsTotal",
+    "2024": "90.05",
+    "2023": "53.22"
+  },
+  {
+    "Balance Sheet": "TotalCurrentAssets",
+    "2024": "10549.55",
+    "2023": "9243.68"
+  },
+  {
+    "Balance Sheet": "Property/Plant/EquipmentTotal-Gross",
+    "2024": "20145.08",
+    "2023": "16813.39"
+  },
+  {
+    "Balance Sheet": "AccumulatedDepreciationTotal",
+    "2024": "-8124.60",
+    "2023": "-6789.29"
+  },
+  {
+    "Balance Sheet": "Property/Plant/EquipmentTotal-Net",
+    "2024": "14405.01",
+    "2023": "13137.89"
+  },
+  {
+    "Balance Sheet": "IntangiblesNet",
+    "2024": "25.74",
+    "2023": "25.94"
+  },
+  {
+    "Balance Sheet": "LongTermInvestments",
+    "2024": "1123.74",
+    "2023": "1112.99"
+  },
+  {
+    "Balance Sheet": "NoteReceivable-LongTerm",
+    "2024": "744.07",
+    "2023": "846.85"
+  },
+  {
+    "Balance Sheet": "OtherLongTermAssetsTotal",
+    "2024": "1.32",
+    "2023": "2.06"
+  },
+  {
+    "Balance Sheet": "TotalAssets",
+    "2024": "26849.43",
+    "2023": "24369.41"
+  },
+  {
+    "Balance Sheet": "AccountsPayable",
+    "2024": "2652.78",
+    "2023": "2435.77"
+  },
+  {
+    "Balance Sheet": "AccruedExpenses",
+    "2024": "220.13",
+    "2023": "172.96"
+  },
+  {
+    "Balance Sheet": "NotesPayable/ShortTermDebt",
+    "2024": "1240.71",
+    "2023": "1450.87"
+  },
+  {
+    "Balance Sheet": "CurrentPortofLTDebt/CapitalLeases",
+    "2024": "192.18",
+    "2023": "226.37"
+  },
+  {
+    "Balance Sheet": "OtherCurrentliabilitiesTotal",
+    "2024": "3404.23",
+    "2023": "3209.35"
+  },
+  {
+    "Balance Sheet": "TotalCurrentLiabilities",
+    "2024": "7710.03",
+    "2023": "7495.32"
+  },
+  {
+    "Balance Sheet": "LongTermDebt",
+    "2024": "724.11",
+    "2023": "823.58"
+  },
+  {
+    "Balance Sheet": "CapitalLeaseObligations",
+    "2024": "655.19",
+    "2023": "508.62"
+  },
+  {
+    "Balance Sheet": "TotalLongTermDebt",
+    "2024": "1379.30",
+    "2023": "1332.20"
+  },
+  {
+    "Balance Sheet": "TotalDebt",
+    "2024": "2812.19",
+    "2023": "3009.44"
+  },
+  {
+    "Balance Sheet": "DeferredIncomeTax",
+    "2024": "461.97",
+    "2023": "384.63"
+  },
+  {
+    "Balance Sheet": "MinorityInterest",
+    "2024": "0.17",
+    "2023": "0.16"
+  },
+  {
+    "Balance Sheet": "OtherLiabilitiesTotal",
+    "2024": "594.97",
+    "2023": "449.44"
+  },
+  {
+    "Balance Sheet": "TotalLiabilities",
+    "2024": "10146.44",
+    "2023": "9661.75"
+  },
+  {
+    "Balance Sheet": "CommonStockTotal",
+    "2024": "4.24",
+    "2023": "4.24"
+  },
+  {
+    "Balance Sheet": "AdditionalPaid-InCapital",
+    "2024": "9.42",
+    "2023": "9.42"
+  },
+  {
+    "Balance Sheet": "RetainedEarnings(AccumulatedDeficit)",
+    "2024": "16785.34",
+    "2023": "14778.36"
+  },
+  {
+    "Balance Sheet": "OtherEquityTotal",
+    "2024": "-96.01",
+    "2023": "-84.36"
+  },
+  {
+    "Balance Sheet": "TotalEquity",
+    "2024": "16702.99",
+    "2023": "14707.66"
+  },
+  {
+    "Balance Sheet": "TotalLiabilitiesShareholders'Equity",
+    "2024": "26849.43",
+    "2023": "24369.41"
+  },
+  {
+    "Balance Sheet": "TotalCommonSharesOutstanding",
+    "2024": "0.42",
+    "2023": "0.42"
+  },
+  {
+    "Balance Sheet": "TangibleBookValueperShareCommonEq",
+    "2024": "39322.56",
+    "2023": "34617.39"
+  },
+  {
+    "Balance Sheet": "periodLength",
+    "2024": "0.00",
+    "2023": "0.00"
+  }
+]

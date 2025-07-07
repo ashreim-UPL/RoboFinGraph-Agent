@@ -1,0 +1,50 @@
+[
+  {
+    "symbol": "COTY",
+    "companyName": "Coty Inc.",
+    "price": 5.09,
+    "mktCap": 4439956100
+  },
+  {
+    "symbol": "EL",
+    "companyName": "The Est\u00e9e Lauder Companies Inc.",
+    "price": 88.72,
+    "mktCap": 31948355194
+  },
+  {
+    "symbol": "ELF",
+    "companyName": "e.l.f. Beauty, Inc.",
+    "price": 130.98,
+    "mktCap": 7377893832
+  },
+  {
+    "symbol": "HNST",
+    "companyName": "The Honest Company, Inc.",
+    "price": 5.15,
+    "mktCap": 567720550
+  },
+  {
+    "symbol": "OPEN",
+    "companyName": "Opendoor Technologies Inc.",
+    "price": 0.61,
+    "mktCap": 444768080
+  },
+  {
+    "symbol": "SKIN",
+    "companyName": "The Beauty Health Company",
+    "price": 2.28,
+    "mktCap": 287307360
+  },
+  {
+    "symbol": "SKLZ",
+    "companyName": "Skillz Inc.",
+    "price": 7.34,
+    "mktCap": 130934047
+  },
+  {
+    "symbol": "TTCFQ",
+    "companyName": "Tattooed Chef, Inc.",
+    "price": 0.0001,
+    "mktCap": 8366
+  }
+]

@@ -1,0 +1,41 @@
+Certainly! Here are the performance highlights for each of Visa's business lines based on the provided information:
+
+**Consumer Payments:**  
+Visa is actively expanding digital and card-based consumer payment solutions, driven by growth in payments volume and transaction processing.  
+This segment saw a 10% increase in net revenues in fiscal 2021, primarily due to higher payments volume, processed transactions, and cross-border activity, reflecting a recovery from COVID-19 impacts.
+
+**Core Products (Credit, Debit, Prepaid):**  
+Visa’s core payment products continue to be the primary drivers of growth, offering diverse solutions for consumers, businesses, and governments.  
+In fiscal 2021, growth in credit, debit, and prepaid card usage contributed to increased transaction volumes and revenue, with debit showing particularly strong growth.
+
+**Tap to Pay and Contactless Payments:**  
+Visa is accelerating contactless payment adoption to enhance user experience and meet consumer expectations for touchless transactions.  
+Nearly 70 countries have over 50% contactless transaction penetration, with 400 million tap-to-pay-enabled cards and expanding contactless projects worldwide.
+
+**Tokenization and Digital Commerce:**  
+Visa’s tokenization technology enhances security and supports digital transaction growth, doubling network tokens issued to 2.6 billion in 17 months.  
+This rapid acceleration underpins increased digital and online payment security, facilitating safer and more seamless digital commerce.
+
+**Click to Pay and Online Checkout:**  
+Visa’s Click to Pay standardizes and streamlines online checkout, improving security and user experience across devices.  
+The initiative aims to make digital checkout as safe and simple as in physical stores, supporting the growth of e-commerce.
+
+**Cryptocurrency Payments:**  
+Visa enables cryptocurrency transactions by linking crypto wallets to its network, with $3.5 billion in crypto-linked card payments in fiscal 2021.  
+This effort bridges crypto ecosystems with traditional payments, expanding access and converting digital currencies into fiat for everyday use.
+
+**New Flows (Visa Direct and B2B Solutions):**  
+Visa’s new flows facilitate real-time, cross-border, P2P, B2C, B2B, and government payments, unlocking a vast volume opportunity.  
+Visa Direct processed 5.2 billion transactions in fiscal 2021, a 50% increase, supporting faster, more flexible money movement globally.
+
+**Visa Business Solutions (B2B Payments):**  
+Visa’s B2B offerings streamline cross-border and domestic business payments, enhancing efficiency and control for corporate clients.  
+The B2B network continues to scale, with Visa B2B Connect operating in over 100 countries, improving cross-border transaction predictability and security.
+
+**Value Added Services (Issuer, Acceptance, Risk & Identity, Advisory):**  
+Visa provides a broad suite of value-added services to enhance security, acceptance, and client insights, diversifying revenue streams.  
+These services support fraud prevention, digital issuance, and consulting, strengthening client relationships and operational resilience.
+
+**Overall Performance:**  
+Visa’s strategic focus on digital innovation, expanding payment flows, and value-added services has driven solid revenue growth and transaction volume recovery post-pandemic.  
+The company’s investments in technology, partnerships, and strategic acquisitions position it well for continued growth in a rapidly evolving payments ecosystem.

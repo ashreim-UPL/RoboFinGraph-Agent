@@ -4,19 +4,19 @@ import json
 import re
 import pandas as pd
 from datetime import datetime, date, timedelta
-from typing import Dict, Any, Annotated, Tuple
+from typing import Dict, Any, Annotated, Tuple, Union
 from collections import defaultdict
 import os
 import logging
 
 
 # Import the core API calling functions from your toolkit
-from .global_API_toolkit import make_api_request, call_sec_utility, save_to_file
+from .global_API_toolkit import make_api_request, get_10k_section, save_to_file
 from .charting import *
 
 # This new version REPLACES the previous get_key_data function.
 def get_key_data(
-    ticker_symbol: Annotated[str, "ticker_symbol"],
+    ticker: Annotated[str, "ticker"],
     filing_date: Annotated[str | datetime, "filing date of the financial report"],
     save_path: str,
     fyear: str, 
@@ -26,7 +26,7 @@ def get_key_data(
     Returns key financial data for the given ticker by calling the global_api_toolkit,
     ensuring all calls follow the standardized format.
     """
-    print(f"Fetching key data for {ticker_symbol}...")
+    print(f"Fetching key data for {ticker}...")
     
     # --- Date conversion and range calculation (no changes here) ---
     if isinstance(filing_date, str):
@@ -38,10 +38,9 @@ def get_key_data(
     end_date = filing_date_obj.strftime("%Y-%m-%d")
     
     # --- API Calls via global_api_toolkit (Refactored for Consistency) ---
-    
-    # Get Historical Data
-    hist_data_json = make_api_request("FMP", "/historical-price-eod/full", {"symbol": ticker_symbol, "from": start_date, "to": end_date})
 
+    # Get Historical Data
+    hist_data_json = make_api_request("FMP", "/historical-price-eod/full", {"symbol": ticker, "from": start_date, "to": end_date})
     hist = pd.DataFrame() # Default empty DataFrame
     if isinstance(hist_data_json, dict) and 'historical' in hist_data_json:
         data = hist_data_json['historical']
@@ -56,21 +55,21 @@ def get_key_data(
             hist['date'] = pd.to_datetime(hist['date'])
             hist = hist.set_index('date')
     # Get Company Profile
-    profile_response = make_api_request("FMP", "/profile", {"symbol": ticker_symbol})
+    profile_response = make_api_request("FMP", "/profile", {"symbol": ticker})
     profile = profile_response[0] if profile_response and isinstance(profile_response, list) else {}
     currency = profile.get("currency")
 
     # Get Analyst Ratings (using corrected endpoint and safe access)
-    rating_response = make_api_request("FMP", "/ratings-historical", {"symbol": ticker_symbol, "limit": 1})
+    rating_response = make_api_request("FMP", "/ratings-historical", {"symbol": ticker, "limit": 1})
     rating = rating_response[0].get('rating', 'N/A') if rating_response and isinstance(rating_response, list) else 'N/A'
 
     # Get Ratios for BVPS (Book Value Per Share)
-    ratios_response = make_api_request("FMP", "/ratios", {"symbol": ticker_symbol, "period": "annual", "limit": 1})
+    ratios_response = make_api_request("FMP", "/ratios", {"symbol": ticker, "period": "annual", "limit": 1})
     bvps_raw = ratios_response[0].get('bookValuePerShare', 0) if ratios_response and isinstance(ratios_response, list) else 0
     bvps_formatted = f"{bvps_raw:.2f}"
 
     # Get Market Cap
-    market_cap_response = make_api_request("FMP", "/market-capitalization", {"symbol": ticker_symbol})
+    market_cap_response = make_api_request("FMP", "/market-capitalization", {"symbol": ticker})
     market_cap_value = market_cap_response[0].get('marketCap', 0) if market_cap_response and isinstance(market_cap_response, list) else 0
     
     # --- Data Processing (no changes here) ---
@@ -98,7 +97,9 @@ def get_key_data(
     return save_to_file(json.dumps(key_data_dict, indent=2), save_path)
 
 # --- I. Foundational Company Data Functions ---
-def get_company_profile(ticker: str, save_path: str, region:str='US', **kwargs) -> str:
+
+def get_company_profile(ticker: str, save_path: str) -> str:
+
     """
     Retrieves company profile and description exclusively from FMP.
     """
@@ -109,7 +110,7 @@ def get_company_profile(ticker: str, save_path: str, region:str='US', **kwargs) 
 
     return save_to_file(json.dumps(content, indent=2), save_path)
 
-def get_competitor_analysis(ticker: str, save_path: str, **kwargs) -> str:
+def get_competitor_analysis(ticker: str, save_path: str) -> str:
     """
     Retrieves a list of competitors from FMP.
     """
@@ -119,7 +120,7 @@ def get_competitor_analysis(ticker: str, save_path: str, **kwargs) -> str:
 
 
 # --- II. Core Financial Statement Functions ---
-def get_financial_statement(ticker: str, statement_type: str, save_path: str, **kwargs) -> str:
+def get_financial_statement(ticker: str, statement_type: str, save_path: str) -> str:
     """
     Retrieves a core financial statement (income, balance, cash-flow) from FMP.
     """
@@ -153,62 +154,85 @@ def get_historical_prices(ticker: str, region: str, save_path: str) -> str:
     return save_to_file(json.dumps(content, indent=2), save_path)
 
 
-def _fetch_and_save_sec_section(ticker: str, fyear: str, section_id: str, save_path: str) -> str:
+def _fetch_and_save_sec_section(
+    sec_ticker: str,
+    fyear: str,
+    sec_report_address: str,
+    section_id: Union[int, str],
+    save_path: str
+) -> str:
     """
-    Helper function to fetch and save a single SEC 10-K section.
-    `save_path` here is the full path to the *file* to be saved.
+    Helper function to fetch and save a single SEC 10-K section using
+    the refactored get_10k_section.  Returns the file path on success,
+    or an "ERROR: ..." string on failure.
     """
     try:
-        content_dict = call_sec_utility(
-            "get_10k_section",
-            {"ticker_symbol": ticker, "fyear": fyear, "section": section_id}
+        # this will download, cache, and write to save_path for you
+        result: Dict[str, str] = get_10k_section(
+            sec_ticker=sec_ticker,
+            fyear=fyear,
+            sec_report_address=sec_report_address,
+            section=section_id,
+            save_path=save_path,
+            use_cache=True
         )
+        text = result.get("text")
+        if not text:
+            raise RuntimeError("Empty text returned")
 
-        if content_dict and isinstance(content_dict, dict) and "text" in content_dict:
-            text_to_save = content_dict["text"]
-            
-            # Use the correctly implemented save_to_file
-            save_to_file(text_to_save, save_path)
-            logging.info(f"Successfully saved SEC 10-K Section {section_id} to {save_path}")
-            return save_path
-        else:
-            error_info = content_dict.get('error', 'Unknown error') if isinstance(content_dict, dict) else 'Invalid response'
-            logging.warning(f"Could not retrieve Section {section_id} for {ticker}. Response: {error_info}")
-            return f"ERROR: Failed to retrieve Section {section_id} for {ticker}: {error_info}"
+        logging.info(f"✅ Saved Section {section_id} for {sec_ticker} → {save_path}")
+        return save_path
 
     except Exception as e:
-        logging.error(f"An error occurred while fetching Section {section_id} for {ticker}: {e}", exc_info=True)
-        return f"ERROR: Exception fetching Section {section_id} for {ticker}: {e}"
+        msg = f"ERROR: fetching Section {section_id} for {sec_ticker}: {e}"
+        logging.error(msg, exc_info=True)
+        return msg
 
-# --- New individual functions for each section ---
-def get_sec_10k_section_1(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
-    """Fetches and saves SEC 10-K Section 1."""
-    print(f"Fetching SEC 10-K Section 1 for {ticker}...")
-    return _fetch_and_save_sec_section(ticker, fyear, "1", save_path)
 
-def get_sec_10k_section_1a(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
-    """Fetches and saves SEC 10-K Section 1A."""
-    print(f"Fetching SEC 10-K Section 1A for {ticker}...")
-    return _fetch_and_save_sec_section(ticker, fyear, "1A", save_path)
+def get_sec_10k_section_1(
+    sec_ticker: str,
+    fyear: str,
+    sec_report_address: str,
+    save_path: str,
+) -> str:
+    """Fetches and saves SEC 10-K Section 1 (Business)."""
+    logging.debug(f"Fetching SEC 10-K Section 1 for {sec_ticker}/{fyear}")
+    return _fetch_and_save_sec_section(sec_ticker, fyear, sec_report_address,"1", save_path)
 
-def get_sec_10k_section_7(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
-    """Fetches and saves SEC 10-K Section 7."""
-    print(f"Fetching SEC 10-K Section 7 for {ticker}...")
-    return _fetch_and_save_sec_section(ticker, fyear, "7", save_path)
+
+def get_sec_10k_section_1a(
+    sec_ticker: str,
+    fyear: str,
+    sec_report_address: str,
+    save_path: str,
+) -> str:
+    """Fetches and saves SEC 10-K Section 1A (Risk Factors)."""
+    logging.debug(f"Fetching SEC 10-K Section 1A for {sec_ticker}/{fyear}")
+    return _fetch_and_save_sec_section(sec_ticker, fyear, sec_report_address, "1A", save_path)
+
+
+def get_sec_10k_section_7(
+    sec_ticker: str,
+    fyear: str,
+    sec_report_address: str,
+    save_path: str,
+) -> str:
+    """Fetches and saves SEC 10-K Section 7 (MD&A)."""
+    logging.debug(f"Fetching SEC 10-K Section 7 for {sec_ticker}/{fyear}")
+    return _fetch_and_save_sec_section(sec_ticker, fyear, sec_report_address,"7", save_path)
 
 # --- IV. Chart and Report Generation Functions ---
 
-def generate_share_performance_chart(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
+def generate_share_performance_chart(ticker: str, fyear: str, save_path: str) -> str:
     return get_share_performance(ticker, f"{fyear}-12-31", save_path)
 
-def generate_pe_eps_chart(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
+def generate_pe_eps_chart(ticker: str, fyear: str, save_path: str) -> str:
     return get_pe_eps_performance(ticker, f"{fyear}-12-31", save_path)
 
 def get_financial_metrics(
-    ticker_symbol: str,
+    ticker: str,
     save_path: str,
     years: int = 5,
-    **kwargs
 ) -> str:
 
     """
@@ -218,16 +242,16 @@ def get_financial_metrics(
     all_metrics_by_year = defaultdict(dict)
     params = {"limit": years + 1}
     # Fetch each endpoint via make_api_request (using /stable)
-    income_data = make_api_request("FMP", f"/income-statement?symbol={ticker_symbol}", params)
-    key_metrics_data = make_api_request("FMP", f"/key-metrics?symbol={ticker_symbol}", params)
-    ratios_data = make_api_request("FMP", f"/ratios?symbol={ticker_symbol}", params)
-    cashflow_data = make_api_request("FMP", f"/cash-flow-statement?symbol={ticker_symbol}", params)
-    profile_data = make_api_request("FMP", f"/profile?symbol={ticker_symbol}")
+    income_data = make_api_request("FMP", f"/income-statement?symbol={ticker}", params)
+    key_metrics_data = make_api_request("FMP", f"/key-metrics?symbol={ticker}", params)
+    ratios_data = make_api_request("FMP", f"/ratios?symbol={ticker}", params)
+    cashflow_data = make_api_request("FMP", f"/cash-flow-statement?symbol={ticker}", params)
+    profile_data = make_api_request("FMP", f"/profile?symbol={ticker}")
     # Handle error cases up front
     if any('error' in x for x in [income_data, key_metrics_data, ratios_data, cashflow_data]):
-        return pd.DataFrame(), "USD", ticker_symbol.upper()
+        return pd.DataFrame(), "USD", ticker.upper()
     if not all(isinstance(x, list) for x in [income_data, key_metrics_data, ratios_data, cashflow_data]):
-        return pd.DataFrame(), "USD", ticker_symbol.upper()
+        return pd.DataFrame(), "USD", ticker.upper()
 
     # --- Process metrics by year ---
     for i in range(min(years, len(income_data))):
@@ -280,7 +304,7 @@ def get_financial_metrics(
 
     # Currency and company name (fallbacks)
     currency = income_data[0].get("reportedCurrency", "USD")
-    name = ticker_symbol.upper()
+    name = ticker.upper()
     if isinstance(profile_data, list) and profile_data:
         profile = profile_data[0]
         currency = profile.get("currency", currency)

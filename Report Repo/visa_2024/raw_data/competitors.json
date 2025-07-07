@@ -1,0 +1,44 @@
+[
+  {
+    "symbol": "ALLY",
+    "companyName": "Ally Financial Inc.",
+    "price": 41.21,
+    "mktCap": 12658681750
+  },
+  {
+    "symbol": "AXP",
+    "companyName": "American Express Company",
+    "price": 328.13,
+    "mktCap": 229884268570
+  },
+  {
+    "symbol": "COF",
+    "companyName": "Capital One Financial Corporation",
+    "price": 220.91,
+    "mktCap": 141412885580
+  },
+  {
+    "symbol": "MA",
+    "companyName": "Mastercard Incorporated",
+    "price": 569.24,
+    "mktCap": 513034950120
+  },
+  {
+    "symbol": "PYPL",
+    "companyName": "PayPal Holdings, Inc.",
+    "price": 76.59,
+    "mktCap": 74486302470
+  },
+  {
+    "symbol": "SOFI",
+    "companyName": "SoFi Technologies, Inc.",
+    "price": 18.57,
+    "mktCap": 20526535200
+  },
+  {
+    "symbol": "UPST",
+    "companyName": "Upstart Holdings, Inc.",
+    "price": 73.82,
+    "mktCap": 7023596518
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "final_evaluation": {
+    "kpis": {
+      "total_pipeline_cost_usd": 0.0383,
+      "total_pipeline_latency_sec": 89.67,
+      "pipeline_nodes_sequence": [],
+      "pipeline_start_time": "2025-07-06T17:01:27.433605+00:00",
+      "pipeline_end_time": null,
+      "pipeline_total_duration_sec": null,
+      "model_steps": {
+        "Get Company Details": [],
+        "Check Region": [],
+        "India Data Collection": [],
+        "Validate Collected Data": [],
+        "Summarize Data": [
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14"
+        ],
+        "Validate Summarized Data": [],
+        "Concept Analysis": [
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14"
+        ],
+        "Validate Conceptual Insights": [],
+        "Generate Annual Report": []
+      },
+      "main_llm_provider": "openai",
+      "unique_llm_models": [
+        "gpt-4.1-2025-04-14",
+        "gpt-4.1-nano-2025-04-14",
+        "gpt-4o-search-preview-2025-03-11"
+      ],
+      "total_tokens_sent": 76881,
+      "total_tokens_generated": 6068,
+      "icaif_accuracy": 9,
+      "icaif_logicality": 9,
+      "icaif_storytelling": 8,
+      "icaif_scores": {
+        "accuracy": 9,
+        "logicality": 9,
+        "storytelling": 8
+      }
+    },
+    "icaif_scores": {
+      "accuracy": 9,
+      "logicality": 9,
+      "storytelling": 8
+    },
+    "pipeline_matrix": []
+  },
+  "icaif_scores": {
+    "accuracy": 9,
+    "logicality": 9,
+    "storytelling": 8
+  },
+  "pipeline_matrix": [],
+  "pipeline_data": [],
+  "agent_stats": {},
+  "error_log": [
+    "Processing initiated.",
+    "Critical error in Data Collection Indian Node: COMPLETED"
+  ]
+}

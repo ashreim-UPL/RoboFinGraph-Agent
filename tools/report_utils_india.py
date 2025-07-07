@@ -9,90 +9,177 @@ import logging
 
 
 # Import the core API calling functions from your toolkit
-from .global_API_toolkit import make_api_request2, call_sec_utility, save_to_file
+
+from .global_API_toolkit import make_api_request2, save_to_file
 from .charting import *
 from .rag_api_utils import get_annual_report_section, perform_similarity_search
 
 
-def get_key_data_india(
-    stock_name: str,
-    save_path: str
-) -> str:
-    from datetime import datetime, timedelta
-    import pandas as pd, json
+def get_cached_stock_data(ticker, force_refresh=False):
+    cash_dir = "cash_data"
+    os.makedirs(cash_dir, exist_ok=True)
+    fname = f"{cash_dir}/{ticker}_stock.json"
+    if os.path.exists(fname) and not force_refresh:
+        with open(fname, "r") as f:
+            return json.load(f)
+    else:
+        data = make_api_request2("IndianMarket", "/stock", {"name": ticker})
+        with open(fname, "w") as f:
+            json.dump(data, f, indent=2)
+        return data
 
-    # Fecha
-    r = make_api_request2("IndianMarket", "/stock", {"name": stock_name})
+def get_key_data_india(ticker: str, save_path: str) -> str:
 
-    if not r:
+    r= get_cached_stock_data(ticker)
+    # r = make_api_request2("IndianMarket", "/stock", {"name": ticker})
+    print(f"API response for {ticker}:\n{r}")
+
+    if not isinstance(r, dict) or not r:
+        print("API returned no or invalid data")
         return save_to_file(json.dumps({"error": "No data"}), save_path)
 
     profile = r.get("companyProfile", {})
-    curr = 'CROE'
-    
-    # Precios
-    curp = r.get("currentPrice", {})
+    curr = r.get("currency", "INR")
+    curp = r.get("currentPrice", {}) or {}
     price = curp.get("NSE") or curp.get("BSE") or 0
-    fifty_two_week = [data  for data in r.get('keyMetrics').get('priceandVolume') if data.get('key') == '52WeekLow' or data.get('key') == '52WeekHigh']
-    lo, hi = [float(data.get('value')) for data in fifty_two_week]
 
-    # Ratios/BVPS
-    km = r.get("keyMetrics", {})
-    bvps = km.get("bookValuePerShare", 0)
+    # Defensive: keyMetrics
+    key_metrics = r.get('keyMetrics') or {}
+    priceandvolume = key_metrics.get('priceandVolume') or []
+    lo = hi = None
+    for data in priceandvolume:
+        k = str(data.get('key', '')).lower()
+        v = data.get('value')
+        try:
+            if k == '52weeklow':
+                lo = float(v)
+            elif k == '52weekhigh':
+                hi = float(v)
+        except (TypeError, ValueError):
+            continue
 
-    # Market Cap probablemente en financials
-    mc = r.get('companyProfile').get('peerCompanyList')[0].get('marketCap')
+    # BVPS
+    try:
+        bvps_val = float(key_metrics.get("bookValuePerShareMostRecentFiscalYear", 0))
+    except Exception:
+        bvps_val = 0.0
 
-    # Analista
-    av = r.get("analystView", {})
-   
+    # Market Cap
+    market_cap = 0.0
+    peer_company_list = profile.get('peerCompanyList', [])
+    if peer_company_list and isinstance(peer_company_list, list):
+        first = peer_company_list[0] if isinstance(peer_company_list[0], dict) else {}
+        market_cap = float(first.get('marketCap', 0.0))
+
+    # Analyst view
+    av = r.get("analystView", [])
+    if not isinstance(av, list):
+        av = []
+    ratings = [item for item in av if item.get('ratingName') not in ('Total', '') and 'ratingValue' in item and 'numberOfAnalystsLatest' in item]
+    if ratings:
+        total_analysts = sum(int(item['numberOfAnalystsLatest']) for item in ratings)
+        weighted = sum(int(item['ratingValue']) * int(item['numberOfAnalystsLatest']) for item in ratings) / total_analysts if total_analysts else 0
+        def map_score_to_text(val):
+            if val < 1.5: return "Strong Buy"
+            if val < 2.5: return "Buy"
+            if val < 3.5: return "Hold"
+            if val < 4.5: return "Sell"
+            return "Strong Sell"
+        rating = f"{map_score_to_text(weighted)} (score: {weighted:.2f})" if total_analysts else "N/A"
+    else:
+        rating = "N/A"
 
     key_data = {
-      "Rating": av,
-      "Currency": curr,
-      "Closing Price": price,
-      "Market Cap (Millions)": f"{mc/1e6:.2f}",
-      "52 Week Price Range": f"{lo:.2f} - {hi:.2f}",
-      "BVPS": f"{bvps:.2f}"
+        "Rating": rating,
+        "Currency": curr,
+        "Closing Price": price,
+        "Market Cap (Millions)": f"{market_cap/1e6:.2f}" if market_cap else "N/A",
+        "52 Week Price Range": f"{lo:.2f} - {hi:.2f}" if lo is not None and hi is not None else "N/A",
+        "BVPS": f"{bvps_val:.2f}" if bvps_val else "N/A"
+
     }
     return save_to_file(json.dumps(key_data, indent=2), save_path)
 
-
-def get_company_profile(ticker: str, save_path: str, region: str = 'IN', **kwargs) -> str:
+def get_company_profile(ticker: str, save_path: str, region: str = 'IN') -> str:
     """
     Retrieves company profile and description exclusively from IndianAPI.
+    Returns the file path where profile is saved.
     """
     print(f"Fetching company profile for {ticker} from IndianAPI...")
 
-    # IndianAPI uses "name" instead of "symbol"
-    content = make_api_request2("IndianMarket", "/stock", {"name": ticker})
-    content = content.get('companyProfile', content) if isinstance(content, dict) else content
-    content_parsed = {'companyDescription': content.get('companyDescription', ''),
-                  'mgIndustry': content.get('mgIndustry', ''), 'metrics': content.get('peerCompanyList', {})[0]}
+    # Make API call
+    content = get_cached_stock_data(ticker)
+    # content = make_api_request("IndianMarket", "/stock", {"name": ticker})
 
-    return save_to_file(json.dumps(content_parsed, indent=2), save_path)
+    if not isinstance(content, dict):
+        logging.error(f"No valid dict response for {ticker}: got {type(content)} {content}")
+        content = {}
 
-def get_competitor_analysis(ticker: str, save_path: str, **kwargs) -> str:
+    # Unwrap if 'companyProfile' present, else use whole content
+    if 'companyProfile' in content:
+        content = content['companyProfile']
+
+    # Defensive extraction of company description and mgIndustry
+    company_desc = content.get('companyDescription', '')
+    mg_industry = content.get('mgIndustry', '')
+
+    # Defensive extraction of metrics from peerCompanyList
+    peer_companies = content.get('peerCompanyList')
+    if isinstance(peer_companies, list) and peer_companies:
+        metrics = peer_companies[0]
+    else:
+        metrics = {}
+
+    content_parsed = {
+        'companyDescription': company_desc,
+        'mgIndustry': mg_industry,
+        'metrics': metrics,
+    }
+
+    save_to_file(json.dumps(content_parsed, indent=2), save_path)
+    logging.info(f"Successfully saved company profile for {ticker} to {save_path}")
+    return save_path
+
+
+def get_competitor_analysis(ticker: str, save_path: str) -> str:
     """
     Retrieves a list of competitors (peer companies) from IndianAPI.
+    Saves the list (can be empty) to the given file path.
     """
     print(f"Fetching competitors for {ticker} from IndianAPI...")
 
-    # Llamada a la API
-    content = make_api_request2("IndianMarket", "/stock", {"name": ticker})
+    # API call
+    content = get_cached_stock_data(ticker)
+    #content = make_api_request("IndianMarket", "/stock", {"name": ticker})
+    if not isinstance(content, dict):
+        logging.error(f"No valid dict response for {ticker}: got {type(content)} {content}")
+        content = {}
 
-    # Extraer lista de competidores
-    competitors = content.get("companyProfile", {}).get("peerCompanyList", [])
+    # Try to unwrap 'companyProfile'
+    company_profile = content.get("companyProfile")
+    if not isinstance(company_profile, dict):
+        logging.warning(f"No companyProfile in response for {ticker}: {content}")
+        competitors = []
+    else:
+        competitors = company_profile.get("peerCompanyList", [])
+        if not isinstance(competitors, list):
+            logging.warning(f"peerCompanyList is not a list for {ticker}: {company_profile}")
+            competitors = []
 
-    return save_to_file(json.dumps(competitors, indent=2), save_path)
+    save_to_file(json.dumps(competitors, indent=2), save_path)
+    logging.info(f"Successfully saved competitors for {ticker} to {save_path}")
+    return save_path
 
-def get_financial_statement(ticker: str, statement_type: str, save_path:str ,year: int, **kwargs) -> str:
+
+def get_financial_statement(ticker: str, statement_type: str, save_path: str, fyear: int) -> str:
     """
     Retrieves a financial statement (income, balance, cash-flow) from IndianAPI.
+    Always saves a file (with data or an error message).
+    Returns the save_path.
     """
     print(f"Fetching {statement_type} for {ticker} from IndianAPI...")
 
-    # Map from input to IndianAPI codes
+
     type_map = {
         "income_statement": "INC",
         "balance_sheet": "BAL",
@@ -106,32 +193,69 @@ def get_financial_statement(ticker: str, statement_type: str, save_path:str ,yea
 
     statement_code = type_map.get(statement_type)
     if not statement_code:
-        raise ValueError(f"Invalid statement type: {statement_type}")
+      
+        msg = f"Invalid statement type: {statement_type}"
+        logging.error(msg)
+        save_to_file(json.dumps({"error": msg}), save_path)
+        return save_path
 
-    # Make the API call
-    response = make_api_request2("IndianMarket", "/stock", {"name": ticker})
+    # Make API call
+    response = get_cached_stock_data(ticker)
+    # response = make_api_request("IndianMarket", "/stock", {"name": ticker})
+    if not isinstance(response, dict):
+        msg = f"Invalid response for {ticker}: {response}"
+        logging.error(msg)
+        save_to_file(json.dumps({"error": msg}), save_path)
+        return save_path
+
     financials = response.get("financials", [])
+    if not isinstance(financials, list) or not financials:
+        msg = f"No financials found for {ticker}"
+        logging.warning(msg)
+        save_to_file(json.dumps({"error": msg}), save_path)
+        return save_path
+
 
     # Parse annual financial data
-    statement_data = {
-        doc['FiscalYear']: doc['stockFinancialMap'][statement_code]
-        for doc in financials
-        if doc['Type'] == 'Annual' and statement_code in doc.get("stockFinancialMap", {})
-    }
-
-    if str(year) not in statement_data:
-        raise ValueError(f"Financial data for year {year} not available for {ticker}")
+    statement_data = {}
+    for doc in financials:
+        print(doc)
+        if doc.get('Type') == 'Annual':
+            fmap = doc.get("stockFinancialMap", {})
+            if statement_code in fmap:
+                statement_data[doc['FiscalYear']] = fmap[statement_code]
+                print(statement_data)
+    """if str(fyear) not in statement_data:
+        msg = f"Financial data for year {fyear} not available for {ticker}"
+        logging.warning(msg)
+        save_to_file(json.dumps({"error": msg}), save_path)
+        return save_path"""
 
     # Optional: merge with previous year
-    current_year_df = pd.DataFrame(statement_data[str(year)])[['key', 'value']]
-    previous_df = pd.DataFrame(statement_data.get(str(year - 1), []))[['key', 'value']] if str(year - 1) in statement_data else pd.DataFrame(columns=["key", "value"])
+    def safe_dataframe(data):
+        try:
+            df = pd.DataFrame(data)
+            if "key" in df.columns and "value" in df.columns:
+                return df[["key", "value"]]
+            else:
+                logging.warning(f"Expected columns missing in data for {ticker} {statement_type} {fyear}: {df.columns}")
+                return pd.DataFrame(columns=["key", "value"])
+        except Exception as e:
+            logging.error(f"Could not build DataFrame: {e}")
+            return pd.DataFrame(columns=["key", "value"])
 
-    result_df = current_year_df.merge(previous_df, on="key", how="left")
-    result_df.columns = [code_map[statement_code], str(year), str(year - 1)]
+    current_year_df = safe_dataframe(statement_data[str(fyear)])
+    prev_year_df = safe_dataframe(statement_data.get(str(fyear - 1), []))
+
+    result_df = current_year_df.merge(prev_year_df, on="key", how="left", suffixes=('', '_prev'))
+    result_df.columns = [code_map[statement_code], str(fyear), str(fyear - 1)]
 
     # Save to file
     json_data = result_df.to_dict(orient="records")
-    return save_to_file(json.dumps(json_data, indent=2), save_path)
+    save_to_file(json.dumps(json_data, indent=2), save_path)
+    logging.info(f"Successfully saved {statement_type} for {ticker} to {save_path}")
+    return save_path
+
 
 
 
@@ -141,7 +265,9 @@ def get_indian_key_metrics_raw(stock: str, save_path: str = None) -> Dict[str, A
     Returns the data exactly as received (dictionary).
     """
     
-    response = make_api_request2("IndianMarket", "/stock", {"name": stock})
+
+    response = get_cached_stock_data(stock)
+    #response = make_api_request("IndianMarket", "/stock", {"name": stock})
     data = response.get('keyMetrics', {})
     return save_to_file(json.dumps(data, indent=2), save_path)
 
@@ -155,7 +281,8 @@ def get_indian_historical_prices(ticker: str, start_date: str = None, end_date: 
     # Make API call
     endpoint = "/historical_data"  # adapt as needed
     params = {"stock_name": ticker, "period": period, "filter": filter}
-    content = make_api_request2("IndianMarket", endpoint, params)
+    content = make_api_request("IndianMarket", endpoint, params)
+
 
     if save_path:
         save_to_file(json.dumps(content, indent=2), save_path)
@@ -196,45 +323,77 @@ def get_indian_historical_prices(ticker: str, start_date: str = None, end_date: 
     table.index = table.index.astype(str) 
     return save_to_file(json.dumps(table.to_dict()), save_path) if save_path else table
 
-def get_annual_report_sections(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
+def get_annual_report_sections_1(ticker: str, fyear: str, save_path: str) -> str:
     """
-    Fetches sections 1, 1A, and 7 from the latest 10-K filing for a US company
-    and saves each section to a separate text file.
+    Fetches sections 2 from the latest RAG for an Indian company
+    and saves each section to a single text file (full path provided).
     """
     print(f"Fetching Annual Report sections for {ticker}...")
-    
-    os.makedirs(save_path, exist_ok=True)
+
+    # Make sure only the directory is created
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+
+    # Fetch business overview data
+    company_overview = (
+        #make_api_request2("IndianMarket", "/stock", {"name": ticker})
+        get_cached_stock_data(ticker)        
+        .get('companyProfile', {})
+        .get('companyDescription', '')
+    )
+    business_overview = get_annual_report_section(ticker, fyear=fyear, section="2")['text']
+    full_text = f"{company_overview}\n\n{business_overview}"
+
+    # Save to the provided file path
+    save_to_file(full_text, save_path)
+    logging.info(f"Successfully saved {save_path}")
+    return save_path
+
+def get_annual_report_sections_7(ticker: str, fyear: str, save_path: str) -> str:
+    """
+    Fetches section 1 from the latest RAG for an Indian company
+    and saves it to a single text file (full file path provided in save_path).
+    This is equivalent to section 7 in a US 10-K.
+    """
+    print(f"Fetching Annual Report sections for {ticker}...")
+
+    # Ensure the parent directory exists, NOT the file itself
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
     # Management Discussion and Analysis Section
     section = "1"
-    management_discussion_analysis = get_annual_report_section(ticker, fyear=fyear, section=section)['text'] 
-    file_name = f"management_and_discussion_analysis.txt"
-    full_path = os.path.join(save_path, file_name)
-    save_to_file(management_discussion_analysis, full_path)
-    logging.info(f"Successfully saved {full_path}")
+    management_discussion_analysis = get_annual_report_section(ticker, fyear=fyear, section=section)['text']
+
+    save_to_file(management_discussion_analysis, save_path)
+    logging.info(f"Successfully saved {save_path}")
+    return save_path
+
+def get_annual_report_sections_1a(ticker: str, fyear: str, save_path: str) -> str:
+    """
+    Fetches section 1A (risks) from the latest RAG for an Indian company
+    and saves it to the given text file path (full path expected in save_path).
+    """
+    print(f"Fetching Annual Report sections for {ticker}...")
+
+    # Ensure the parent directory of the file exists
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
     # Risk Section
     section = "1"
-    risks = "\n".join(perform_similarity_search(ticker, fyear=fyear, section=section, question="What are the company's risks?")['chunks'])        
-    file_name = f"company_risks.txt"
-    full_path = os.path.join(save_path, file_name)
-    save_to_file(risks, full_path)
-    logging.info(f"Successfully saved {full_path}")
+    risks = "\n".join(
+        perform_similarity_search(
+            ticker, fyear=fyear, section=section, question="What are the company's risks?"
+        )['chunks']
+    )
+    save_to_file(risks, save_path)
+    logging.info(f"Successfully saved {save_path}")
+    return save_path
 
-    # Business Overview Section
-    section = "2"
-    company_oveview = make_api_request2("IndianMarket", "/stock", {"name": ticker}).get('companyProfile').get('companyDescription')
-    business_overview = get_annual_report_section(ticker, fyear=fyear, section=section)['text']
-    business_overview = f"{company_oveview}\n\n{business_overview}"
-    file_name = f"business_overview.txt"
-    full_path = os.path.join(save_path, file_name)
-    save_to_file(business_overview, full_path)
-    logging.info(f"Successfully saved {full_path}")
 
-def generate_share_performance_chart_indian_market(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
+def generate_share_performance_chart_indian_market(ticker: str, fyear: str, save_path: str) -> str:
     return get_indian_share_performance(ticker, f"{fyear}-12-31", save_path)
 
-def generate_pe_eps_chart_indian_market(ticker: str, fyear: str, save_path: str, **kwargs) -> str:
+def generate_pe_eps_chart_indian_market(ticker: str, fyear: str, save_path: str) -> str:
+
     return get_pe_eps_performance_indian_market(ticker, f"{fyear}-12-31", save_path)
 
 def _get_financial_statement_for_table(
@@ -267,7 +426,10 @@ def _get_financial_statement_for_table(
         raise ValueError(f"Invalid statement type: {statement_type}")
 
     # Fetch data
-    response = make_api_request2("IndianMarket", "/stock", {"name": ticker})
+
+    response = get_cached_stock_data(ticker)
+    #response = make_api_request2("IndianMarket", "/stock", {"name": ticker})
+
     financials = response.get("financials", [])
 
     # Filter only annual data that contains the required statement
@@ -306,57 +468,78 @@ def _get_financial_statement_for_table(
 
     return result_df
 
-def calculate_financial_metrics_indian_market(ticker:str, start_year: int, years: int, save_path: str) -> pd.DataFrame:
+def get_financial_metrics_indian_market(ticker: str, fyear: int, save_path: str, years: int = 5) -> str:
+    """
+    Calculates and saves financial metrics for a company from IndianAPI data.
+    Always writes a file (with metrics or with an error message).
+    Returns the path to the saved file.
+    """
+    try:
+        print(fyear-years)
+        df = _get_financial_statement_for_table(
+            ticker=ticker, 
+            statement_type="income_statement", 
+            start_year=fyear, 
+            years=years
+        )
 
-    df = _get_financial_statement_for_table(ticker=ticker, statement_type="income_statement", start_year=start_year, years=years)
-    # 🔧 Aplanar columnas si tienen MultiIndex o tuplas
-    if isinstance(df.columns, pd.MultiIndex):
-        df.columns = df.columns.get_level_values(-1)
-    elif any(isinstance(col, tuple) for col in df.columns):
-        df.columns = [col[-1] if isinstance(col, tuple) else col for col in df.columns]
 
-    # 🔢 Asegurar que las columnas estén en string (por seguridad)
-    df.columns = df.columns.astype(str)
+        if not isinstance(df, pd.DataFrame) or df.empty:
+            msg = f"No income statement data found for {ticker}."
+            logging.warning(msg)
+            save_to_file(json.dumps({"error": msg}), save_path)
+            return save_path
 
-    years = [col for col in df.columns if col.isdigit()]
-    
-    metrics = {}
+        # Flatten columns if MultiIndex or tuple
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = df.columns.get_level_values(-1)
+        elif any(isinstance(col, tuple) for col in df.columns):
+            df.columns = [col[-1] if isinstance(col, tuple) else col for col in df.columns]
+        df.columns = df.columns.astype(str)
 
-    revenue = df.loc['Revenue']
-    net_income = df.loc['NetIncome']
-    interest_expense = df.loc['InterestExp(Inc)Net-OperatingTotal'] if 'InterestExp(Inc)Net-OperatingTotal' in df.index else pd.Series([0]*len(df.columns), index=df.columns)
-    depreciation = df.loc['Depreciation/Amortization']
-    ebit = df.loc['OperatingIncome']
-    taxes = df.loc['ProvisionforIncomeTaxes']
-    shares = df.loc['DilutedWeightedAverageShares']
-    eps = df.loc['DilutedEPSExcludingExtraOrdItems']
+        year_cols = [col for col in df.columns if str(col).isdigit()]
+        metrics = {}
 
-    metrics['Revenue'] = round(revenue, 2)
-    metrics['Net Income'] = round(net_income, 2)
-    metrics['EBIT'] = round(ebit, 2) 
-    metrics['EBIT Margin'] = round((ebit / revenue) * 100, 2)
-    metrics['Net Income Margin'] = round((net_income / revenue) * 100, 2)
-    metrics['Effective Tax Rate'] = round((taxes / (net_income + taxes)) * 100, 2)
-    metrics['Interest Coverage'] = round((ebit / interest_expense).replace([float('inf'), -float('inf')], pd.NA), 2)
-    metrics['EBITDA'] = round(ebit + depreciation, 2)
-    metrics['EPS'] = round(eps, 2)
-    metrics['Shares'] = round(shares, 2)
+        def safe_loc(row_name, default=0):
+            return df.loc[row_name] if row_name in df.index else pd.Series([default]*len(df.columns), index=df.columns)
 
-    metrics_df = pd.DataFrame(metrics)
-    metrics_df = metrics_df.loc[years].T  # asegurar orden correcto y transpuesta
+        revenue = safe_loc('Revenue')
+        net_income = safe_loc('NetIncome')
+        interest_expense = safe_loc('InterestExp(Inc)Net-OperatingTotal')
+        depreciation = safe_loc('Depreciation/Amortization')
+        ebit = safe_loc('OperatingIncome')
+        taxes = safe_loc('ProvisionforIncomeTaxes')
+        shares = safe_loc('DilutedWeightedAverageShares')
+        eps = safe_loc('DilutedEPSExcludingExtraOrdItems')
 
-    if save_path:
-        try:
-            # Save as JSON for consistency (easy reloading)
-            df_json = metrics_df.to_dict(orient="index")
-            with open(save_path, "w", encoding="utf-8") as f:
-                json.dump({
-                    "currency": 'crore',
-                    "company_name": ticker.upper(),
-                    "metrics": df_json
-                }, f, indent=2)
-            logging.info(f"Financial metrics saved to {save_path}")
-        except Exception as e:
-            logging.error(f"Failed to save financial metrics: {e}")
+        metrics['Revenue'] = round(revenue, 2)
+        metrics['Net Income'] = round(net_income, 2)
+        metrics['EBIT'] = round(ebit, 2)
+        with pd.option_context("mode.use_inf_as_na", True):
+            metrics['EBIT Margin'] = round((ebit / revenue) * 100, 2)
+            metrics['Net Income Margin'] = round((net_income / revenue) * 100, 2)
+            metrics['Effective Tax Rate'] = round((taxes / (net_income + taxes)) * 100, 2)
+            metrics['Interest Coverage'] = round((ebit / interest_expense), 2)
+        metrics['EBITDA'] = round(ebit + depreciation, 2)
+        metrics['EPS'] = round(eps, 2)
+        metrics['Shares'] = round(shares, 2)
 
-    return metrics_df
+        metrics_df = pd.DataFrame(metrics)
+        # Only use columns for available years, and transpose for structure
+        metrics_df = metrics_df.loc[year_cols].T if year_cols else metrics_df.T
+
+        df_json = metrics_df.to_dict(orient="index")
+        save_to_file(json.dumps({
+            "currency": 'crore',
+            "company_name": ticker.upper(),
+            "metrics": df_json
+        }, indent=2), save_path)
+        logging.info(f"Financial metrics saved to {save_path}")
+    except Exception as e:
+        msg = f"Failed to calculate/save financial metrics for {ticker}: {e}"
+        logging.error(msg)
+        save_to_file(json.dumps({"error": msg}), save_path)
+
+    return save_path
+
+

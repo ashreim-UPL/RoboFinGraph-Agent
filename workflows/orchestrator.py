@@ -1,112 +1,204 @@
 # workflows/orchestrator.py
 
-from typing import Dict, Any, List, Callable
+import os
+import json
+import re
+from typing import Dict, Any, List
+from langgraph.graph import StateGraph, END, START
+from agents.state_types import AgentState,NodeStatus
+#from agents.agent_utils import inject_model_env
 from functools import partial
-from langgraph.graph import StateGraph, END
-from graph_utils.state_types import AgentState
-from agents.single_agent import SingleAssistant
+import traceback
 
-
-
-# Import agent creation functions
-from config.agent_library import (
-    get_data_collector_us, get_data_collector_india,
-    get_concept_summarizer_global, get_thesis_creator,
-    get_shadow_auditor, get_io_agent, get_summarizer_agent,
-    get_validation_agent
+import tools.graph_tools as graph_tools
+from agents.agent_library import (
+    resolve_company_node,
+    region_decision_node,
+    data_collection_us_node,
+    data_collection_indian_node,
+    validate_collected_data_node,
+    synchronize_data_node,
+    summarization_node,
+    validate_summarized_data_node,
+    concept_analysis_node,
+    validate_analyzed_data_node,
+    generate_report_node,
+    run_evaluation_node,
 )
 
-# Import the node logic and the actual tool functions
-from . import graph_nodes
-from tools import report_utils
+from utils.logger import get_logger, log_event
+from utils.config_utils import inject_model_env, get_node_model, get_provider_creds, _init_llm
 
-def run_orchestration(company: str, year: str, config: Dict[str, Any]):
-    """
-    Initializes agents and builds the graph for the financial analysis workflow.
-    """
-    # 1. Instantiate agents
-    thesis_agent = get_thesis_creator(config)
-    audit_agent = get_shadow_auditor(config)
-    io_agent = get_io_agent(config)
+logger = get_logger()
 
-    summarizer_agent = get_summarizer_agent(config)
-    concept_agent = get_concept_summarizer_global(config)
-    validation_agent = get_validation_agent(config)
 
-    # 2. Define the Graph
-    workflow = StateGraph(AgentState)
 
-    # 3. Add Nodes to the Graph
-    workflow.add_node("resolve_company", graph_nodes.resolve_company_node)
-    workflow.add_node("data_collection", graph_nodes.data_collection_node)
-    workflow.add_node("validate_collected_data", partial(graph_nodes.validate_collected_data_node, agent=validation_agent))
-    workflow.add_node("synchronize_data", lambda state: {})  # Stub for now
-    workflow.add_node("summarization", partial(graph_nodes.summarization_node, agent=summarizer_agent))
-    workflow.add_node("conceptual_analysis", partial(graph_nodes.conceptual_analysis_node, agent=concept_agent))
-    workflow.add_node("generate_report", partial(graph_nodes.generate_report_node, agent=thesis_agent))
-    workflow.add_node("save_report", partial(graph_nodes.save_report_node, io_agent=io_agent))
-    workflow.add_node("run_evaluation", partial(graph_nodes.run_evaluation_node, audit_agent=audit_agent))
-    workflow.add_node("save_evaluation_report", partial(graph_nodes.save_evaluation_report_node, io_agent=io_agent))
-
-    # LLM Decision Node (pre-data)
-    workflow.add_node("llm_decision", partial(graph_nodes.llm_decision_node, agent=validation_agent))
-
-    # 4. Wire Up Edges
-    workflow.set_entry_point("resolve_company")
-    workflow.add_edge("resolve_company", "llm_decision")
-
-    workflow.add_conditional_edges(
-        "llm_decision",
-        lambda state: getattr(state, "llm_decision", "end"),
-        {
-            "continue": "data_collection",
-            "valid": "data_collection",     
-            "approved": "data_collection",     
-            "end": END
-        }
-    )
-
-    # After data collection → run validation on collected files
-    workflow.add_edge("data_collection", "validate_collected_data")
-
-    workflow.add_conditional_edges(
-        "validate_collected_data",
-        lambda state: getattr(state, "llm_decision", "end"),
-        {
-            "data_collection_continue": "synchronize_data",
-            "valid": "synchronize_data", 
-            "end": END
-        }
-    )
-
-    # Standard downstream flow
-    workflow.add_edge("synchronize_data", "summarization")
-    workflow.add_edge("summarization", "conceptual_analysis")
-    workflow.add_edge("conceptual_analysis", "generate_report")
-    workflow.add_edge("generate_report", "save_report")
-    workflow.add_edge("save_report", "run_evaluation")
-    workflow.add_edge("run_evaluation", "save_evaluation_report")
-    workflow.add_edge("save_evaluation_report", END)
-
-    # Consolidate initial state definition
-    report_work_dir = f"report/{company}_{year}"
-    initial_state_for_graph = {
+def run_orchestration(
+    company: str,
+    year: str,
+    config: dict,
+    report_type: str,
+    verbose: bool
+):
+    final_state = None
+    logger.info(f"Orchestration start → {company} ({year}), report_type={report_type}, verbose={verbose}")
+    log_event("orchestration_start", {
         "company": company,
         "year": year,
-        "work_dir": report_work_dir,
-        "messages": [], 
-        "llm_decision": "continue", 
+        "report_type": report_type,
+        "verbose": verbose
+    })
+
+    log_event("setup_progress", {"step": "Setting up APIs"})
+
+    # === 1. Inject all required LLM envs for this pipeline
+    llm_models = config.get("llm_models", {})
+    for agent_name, model_name in llm_models.items():
+        if not model_name:
+            continue
+        try:
+            provider, _ = get_node_model(agent_name, config)
+            creds = get_provider_creds(provider, config)
+            model_config = {
+                "api_type": provider,
+                "model": model_name,
+                "api_key": creds.get("api_key"),
+                "base_url": creds.get("base_url"),
+            }
+            inject_model_env(model_config)
+            logger.info(f"Injected env for agent '{agent_name}' → model '{model_name}'")
+            log_event("model_env_injected", {"agent": agent_name, "model": model_name})
+        except Exception as e:
+            logger.error(f"Env injection failed for '{agent_name}': {e}")
+            log_event("model_env_error", {"agent": agent_name, "error": str(e)})
+
+    log_event("setup_progress", {"step": "Setting up Agents"})
+    logger.info("All agents instantiated")
+    log_event("agents_ready", {"agents": list(llm_models.keys())})
+
+    # --- Progress: Tools / Graph construction ---
+    log_event("setup_progress", {"step": "Setting up Tools"})
+
+  # === 2. Build StateGraph
+
+    g = StateGraph(AgentState)
+    #g.add_edge(START, "Resolve Company")
+    g.add_node("Resolve Company", resolve_company_node)
+    g.set_entry_point("Resolve Company")
+    g.add_node("Branch Decision", region_decision_node)
+    g.add_edge("Resolve Company", "Branch Decision")
+    g.add_node("Data Collection US", data_collection_us_node)
+    g.add_node("Data Collection India", data_collection_indian_node)
+    g.add_conditional_edges(
+        "Branch Decision",
+        lambda state: state.llm_decision,  # This lambda reads the 'llm_decision' from the state
+                                            # which was updated by llm_decision_node.
+        {
+            "us": "Data Collection US",
+            "india": "Data Collection India",
+            "end": END,
+        }
+    )
+
+    g.add_node("Validate Collected Data", validate_collected_data_node)
+    g.add_edge("Data Collection US",   "Validate Collected Data")
+    g.add_edge("Data Collection India","Validate Collected Data")
+    g.add_node("Synchronize Data", synchronize_data_node)
+    g.add_edge("Validate Collected Data", "Synchronize Data")
+    g.add_node("Summarize", summarization_node)
+    g.add_edge("Synchronize Data", "Summarize")
+    g.add_node("Validate Summaries", validate_summarized_data_node)
+    g.add_edge("Summarize", "Validate Summaries")
+    g.add_node("Conceptual Analysis", concept_analysis_node)
+    g.add_edge("Validate Summaries", "Conceptual Analysis")
+    g.add_node("Validate Analyzed Data", validate_analyzed_data_node)
+    g.add_edge("Conceptual Analysis", "Validate Analyzed Data")
+    g.add_node("Generate Report", generate_report_node)
+    g.add_edge("Validate Analyzed Data", "Generate Report")
+    g.add_node("Run Evaluation", run_evaluation_node)
+    g.add_edge("Generate Report", "Run Evaluation")
+    g.add_edge("Run Evaluation", END)
+
+    logger.info("Graph edges configured")
+    log_event("graph_edges_configured", {})
+
+    # === 3. Prepare work dir & initial state
+    report_dir = os.path.join("report", f"{company}_{year}")
+    os.makedirs(report_dir, exist_ok=True)
+    initial_state = {
+        "company": company,
+        "year": year,
+        "work_dir": report_dir,
+        "messages": [],
+        "llm_decision": "continue",
     }
+    logger.info(f"Workdir prepared at {report_dir}")
+    log_event("initial_state_ready", {"company": company, "year": year, "work_dir": report_dir})
 
-    print(f"Report directory initialized to: {initial_state_for_graph['work_dir']}")
+    # === 4. Compile & stream
+    final_state = None
+    last_agent_state = None
+    try:
+        app = g.compile()
+        logger.info("Graph compiled; starting execution")
+        print(json.dumps({"event_type": "pipeline_start"}, ensure_ascii=False))
+        
+        # --- NEW: Get Mermaid graph definition and send to frontend ---
+        mermaid_graph = app.get_graph().draw_mermaid_png() # Or .draw_mermaid_yaml(), etc.
+        # .draw_mermaid_png() might return bytes, you might need .draw_mermaid_yaml() or .draw_mermaid_svg()
+        # Let's assume .draw_mermaid_yaml() gives a string
+        # If it returns a string, you can directly log it.
+        # If it returns something else, you might need to convert.
+        # Check LangGraph docs for the best method to get string output.
 
-    # 5. Compile and Run
-    app = workflow.compile()
-    print("Graph compiled. Starting execution...")
+        # For demonstration, let's use the simplest .get_graph().draw_mermaid() if available
+        # or mock it if a direct string output method isn't immediately obvious from docs.
+        # The best method is app.get_graph().draw_mermaid() which generates the string.
+        try:
+            mermaid_definition = app.get_graph().draw_mermaid()
+            clean_mermaid = re.sub(r'<[^>]+>', '', mermaid_definition)
+            log_event("graph_definition", {"mermaid_syntax": clean_mermaid})
+            logger.info("Sent Mermaid graph definition to frontend.")
+        except Exception as graph_err:
+            logger.error(f"Failed to get Mermaid graph definition: {graph_err}")
+            log_event("graph_definition_error", {"error": str(graph_err)})
+        # --- END NEW ---
 
-    # Pass the correctly populated initial_state_for_graph
-    for event in app.stream(initial_state_for_graph): 
-        print(event)
-        print("---")
+        for event in app.stream(initial_state):
+            logger.info(f"Event: {event}")
 
-    print("\n✅ Orchestration completed. Check logs and output files.\n")
+            # Save the latest state (dict with .memory) if available
+            payload = event.get("payload") if isinstance(event, dict) else None
+            if isinstance(payload, dict) and 'memory' in payload:
+                last_agent_state = payload
+
+            if isinstance(event, dict) and event.get("type") == "pipeline_complete":
+                final_state = event.get("payload")
+        log_event("pipeline_complete", {})
+        logger.info("Orchestration completed successfully")
+        log_event("orchestration_completed", {"company": company, "year": year})
+
+        # === Save/Print Pipeline Metrics at the end ===
+        # Prefer the last agent state if it has pipeline_data
+        metrics_state = last_agent_state or final_state
+        pipeline_data = None
+        if metrics_state and 'memory' in metrics_state and 'pipeline_data' in metrics_state['memory']:
+            pipeline_data = metrics_state['memory']['pipeline_data']
+            # Print metrics as table
+            from tabulate import tabulate
+            log_event("pipeline_metrics_table", {"table": pipeline_data})
+
+            # Save metrics as JSON
+            metrics_path = os.path.join(report_dir, "pipeline_metrics.json")
+            with open(metrics_path, "w", encoding="utf-8") as f:
+                json.dump(pipeline_data, f, indent=2, ensure_ascii=False)
+            logger.info(f"Saved pipeline node metrics to {metrics_path}")
+
+    except Exception as e:
+        err_trace = traceback.format_exc()
+        logger.error(f"Orchestration failed: {e}")
+        log_event("orchestration_failed", {"error": str(e), "traceback": err_trace})
+        log_event("orchestration_failed", {"error": str(e)})
+        raise
+
+    return last_agent_state or final_state

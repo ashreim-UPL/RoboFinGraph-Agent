@@ -1,0 +1,276 @@
+ ITEM 1. Business 
+
+OVERVIEW 
+
+Visa is one of the world&#8217;s leaders in digital payments. Our mission is to connect the world through the most innovative, reliable and secure payments network &#8212; enabling individuals, businesses and economies to thrive. We facilitate global commerce and money movement across more than 200 countries and territories among a global set of consumers, merchants, financial institutions, businesses, strategic partners and government entities through innovative technologies. 
+
+Since Visa&#8217;s inception in 1958, Visa has been in the business of facilitating payments between consumers and businesses. With new ways to pay, we have evolved into a global company that is a trusted engine of commerce, working to provide payment solutions for everyone, everywhere. We are focused on extending, enhancing and investing in our proprietary network, VisaNet, while seeking new ways to offer products and services and become a single connection point for facilitating any payment transaction, using our network, other networks, or a combination of networks. We offer products and solutions that facilitate secure, reliable and efficient money movement for all participants in the ecosystem. 
+
+&#8226; We facilitate secure, reliable and convenient transactions among financial institutions, merchants and consumers. We have traditionally referred to this as the &#8220;four-party&#8221; model. As the payments ecosystem continues to evolve, we have broadened this model to include digital banks, digital wallets and a range of financial technology companies (fintechs), governments and non-governmental organizations (NGOs). We provide transaction processing services (primarily authorization, clearing and settlement) to our financial institution and merchant clients through VisaNet, our advanced transaction processing network. During fiscal year 2021, we saw 232 billion payments and cash transactions with Visa&#8217;s brand, equating to an average of 637 million transactions per day. Of the 232 billion total transactions, 165 billion were processed by Visa. 
+
+&#8226; We offer a wide range of Visa-branded payment products that our 15,100 financial institution clients use to develop and offer core business solutions, including credit, debit, prepaid and cash access programs for individual, business and government account holders. During fiscal year 2021, Visa&#8217;s total payments and cash volume was $13 trillion, and 3.7 billion credentials were available worldwide to be used at more than 80 million (1) merchant locations. 
+
+&#8226; We take an open partnership approach and seek to provide value by enabling access to our global network, including offering our technology capabilities through application programming interfaces (APIs). We partner with both traditional and emerging players to innovate and expand the payments ecosystem, allowing them to leverage the resources of our platform to scale and grow their businesses more quickly and effectively. 
+
+&#8226; We are accelerating the migration to digital payments and evolving Visa to be a &#8220;network of networks&#8221; to enable the movement of money through all available networks. We aim to provide a single connection point so that Visa clients can enable money movement for businesses, governments, and consumers regardless of which network is used to start or complete the transaction; ultimately, helping to unify a complex payments ecosystem. Visa&#8217;s network of networks approach creates opportunities by facilitating person-to-person (P2P), business-to-consumer (B2C), business-to-business (B2B), business-to-small business (B2b) and government-to-consumer (G2C) payments, in addition to consumer to business (C2B) payments. 
+
+&#8226; We provide value added services to our clients, including issuer solutions; acceptance solutions; risk and identity solutions; and advisory services. 
+
+&#8226; We invest in and promote our brand to the benefit of our clients and partners through advertising, promotional and sponsorship initiatives with FIFA, the International Olympic Committee, the International Paralympic Committee and the National Football League (NFL), among others. We also use these sponsorship assets to showcase our payment innovations. 
+
+(1) Data provided to Visa by acquiring institutions and other third parties. 
+
+Table of Contents 
+
+FISCAL YEAR 2021 KEY STATISTICS 
+
+(1) Please see Item 7&#8211;Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations for a reconciliation of our GAAP to non-GAAP financial results. 
+
+OUR CORE BUSINESS 
+
+In an example of a typical Visa C2B payment transaction, the consumer purchases goods or services from a merchant using a Visa card or payment product. The merchant presents the transaction data to an acquirer, usually a bank or third-party processing firm that supports acceptance of Visa cards or payment products, for verification and processing. Through VisaNet, the acquirer presents the transaction data to Visa, which in turn contacts the issuer to check the account holder&#8217;s account or credit line for authorization. After the transaction is authorized, the issuer effectively pays the acquirer an amount equal to the value of the transaction, minus the interchange reimbursement fee, and then posts the transaction to the consumer&#8217;s account. The acquirer pays the amount of the purchase, minus the merchant discount rate (MDR), to the merchant. 
+
+Visa earns revenue by facilitating money movement across more than 200 countries and territories among a global set of consumers, merchants, financial institutions, businesses, strategic partners and government entities through innovative technologies. Net revenues consist of service revenues, data processing revenues, international transaction revenues and other revenues, minus client incentive arrangements we have with our clients. We have one reportable segment, which is Payment Services. We generally do not experience any pronounced seasonality in our business. 
+
+Visa is not a financial institution. We do not issue cards, extend credit, or set rates and fees for account holders of Visa products nor do we earn revenues from, or bear credit risk with respect to, any of these activities. Interchange reimbursement fees reflect the value merchants receive from accepting our products and play a key role in balancing the costs and benefits that account holders and merchants derive from participating in our payments networks. Generally, interchange reimbursement fees are collected from acquirers and paid to issuers. We establish default interchange reimbursement fees that apply absent other established settlement terms. In addition, we do not earn revenues from the fees that merchants are charged by acquirers for acceptance, including 
+
+Table of Contents 
+
+the MDR. Our acquiring clients are generally responsible for soliciting merchants as well as establishing and earning these fees. 
+
+Our net revenues in fiscal year 2021 consisted of the following: 
+
+Table of Contents 
+
+Visa&#8217;s strategy is to accelerate our revenue growth in consumer payments, new flows and value added services, and fortify the key foundations of our business model. 
+
+We seek to accelerate revenue growth in three primary areas &#8212; consumer payments, new flows and value added services. 
+
+Consumer Payments 
+
+We are accelerating efforts to move approximately $18 trillion (2) in consumer spending still exchanged in cash and check to cards and digital accounts on Visa&#8217;s network of networks. 
+
+Core Products 
+
+Visa&#8217;s growth has been driven by the strength of our core products &#8212; credit, debit and prepaid products. 
+
+Credit: Credit cards and digital credentials allow consumers and businesses to access credit to pay for goods and services. Credit cards are affiliated with programs operated by financial institution clients, co-brand partners, fintechs and affinity partners. 
+
+Debit: Debit cards and digital credentials allow consumers and small businesses to purchase goods and services using funds held in their bank accounts. Debit cards enable account holders to transact in person, online or via mobile without needing cash or checks and without accessing a line of credit. The Visa/PLUS Global ATM network also provides debit, credit and prepaid account holders with cash access, and other banking capabilities, in more than 200 countries and territories worldwide through issuing and acquiring partnerships with both financial institutions and independent ATM operators. 
+
+(2) Estimate as of December 2018. 
+
+Table of Contents 
+
+Prepaid: Prepaid cards and digital credentials draw from a designated balance funded by individuals, businesses or governments. Prepaid cards address many use cases and needs, including general purpose reloadable, payroll, government and corporate disbursements, healthcare, gift and travel. Visa-branded prepaid cards also play an important part in financial inclusion, bringing payment solutions to those with limited or no access to traditional banking products. 
+
+Capabilities 
+
+We offer capabilities, tools and solutions that enable consumer payments and help our clients grow as digital commerce, new technologies and new participants continue to transform the payments ecosystem. Some of our offerings include: 
+
+Tap to Pay 
+
+As we seek to improve the user experience in the face-to-face environment, contactless payments or tap to pay, which is tapping a contactless card or mobile device on a terminal to make a payment, has emerged as a preferred way to pay among consumers in many countries around the world. Tap to pay adoption is growing and many consumers have come to expect touchless payment experiences. In addition, Visa continues to work with payments industry partners and governments to support raising contactless payment limits. 
+
+Globally we have more than 20 countries with more than 90 percent contactless penetration and nearly 70 countries where tap to pay is more than 50 percent of face-to-face transactions. Excluding the United States, nearly 70 percent of face-to-face transactions globally were contactless. In the U.S., Visa has more than 15 percent contactless penetration. We have 400 million tap-to-pay-enabled Visa cards, and now three cities have above 25 percent face-to-face tap-to-pay penetration: New York, San Francisco and San Jose. We have activated nearly 500 contactless public transport projects worldwide and have nearly 750 projects in our pipeline. 
+
+Tokenization 
+
+Visa Token Service (VTS) brings trust to digital commerce innovation. As consumers increasingly rely on digital transactions, VTS is designed to enhance the digital ecosystem through improved authorization, reduced fraud and improved customer experience. VTS helps protect digital transactions by replacing 16-digit Visa account numbers with a token protecting the underlying account information. This security technology can work for a variety of payment transactions, both in the physical and online space. 
+
+The issuance of network tokens continues to accelerate. In the past 17 months, we have more than doubled the number of network tokens issued from one billion to 2.6 billion. By comparison, it took nearly six years to reach our first one billion network tokens. 
+
+Click to Pay 
+
+Click to Pay provides a simplified and more consistent cardholder checkout experience online by removing time-consuming key entry of personal information and enabling consumer and transaction data to be passed securely between payments network participants. Based on the EMV&#174; Secure Remote Commerce industry standard, Click to Pay brings a standardized and streamlined approach to online checkout and meets the needs of consumers shopping across a growing number of connected devices. The goal of Click to Pay is to make digital payments safe, consistent, and interoperable like the checkout experience in physical stores. 
+
+Cryptocurrency 
+
+We enable cryptocurrencies for everyday payments through our global presence, partnership approach and trusted brand. We want to serve as the bridge between the crypto ecosystem and our global network, which would enable our clients to provide consumers the ability to easily convert cryptocurrencies into fiat and access our global network of more than 80 million merchant locations and 15,100 financial institutions. In fiscal year 2021, we had $3.5 billion in payments volume on crypto-linked card programs, which are crypto wallets linked to Visa credentials 
+
+Table of Contents 
+
+where cryptocurrencies are converted to fiat currency before funds can be accessed through the Visa credential. We are advancing this effort through our partnerships with nearly 60 crypto platforms on crypto-linked Visa card programs. We are also building infrastructure capabilities and value added services to support crypto use cases, including future settlement in digital currencies, a new Visa Crypto API platform to help financial institutions create a cryptocurrency offering, assisting central banks as they evaluate digital currencies and a growing number of other services and infrastructure capabilities. 
+
+New Flows 
+
+New flows represent a $185 trillion (3) volume opportunity. Visa&#8217;s network of networks approach creates opportunities to capture new sources of money movement through card and non-card flows for consumers, businesses and governments around the world by facilitating P2P, B2C, B2B, B2b and G2C payments. 
+
+Visa Direct 
+
+Visa Direct is Visa&#8217;s global, real-time (4) push payments platform, which reverses the traditional card payment flow by allowing payment originators, through their acquirer, to push funds directly to eligible debit and prepaid cards or accounts. It helps facilitate fast, simple and secure money movement around the world, enabling businesses and consumers to send money directly to a bank account or card, including domestic or cross-border payouts and payments, P2P, payments to small businesses, and corporate, worker, insurance and government payouts. 
+
+In fiscal year 2021, we had 5.2 billion Visa Direct transactions, an increase of 50 percent year over year, and more than 20 use cases and 500 programs. Visa Direct connected 16 card-based networks, 66 automated clearing house (ACH) schemes, seven real time payment (RTP) networks and five gateways. With the addition of Visa Direct Payouts, Visa Direct provides access to almost 6 billion credentials across more than 200 countries and territories. 
+
+Visa Business Solutions 
+
+We are also extending our network with B2B payments. Our three strategic areas of focus include investing and growing card-based payments, accelerating our efforts in non-card, cross-border payments and digitizing domestic accounts payable and accounts receivable processes. We offer a portfolio of business payment solutions, including small business, corporate (travel) cards, purchasing cards, virtual cards and digital credentials, non-card cross-border B2B payment options and disbursement accounts, covering most major industry segments around the world. Business solutions are designed to bring efficiency, controls and automation to small businesses, commercial and government payment processes, ranging from employee travel to fully integrated, invoice-based payables. 
+
+Visa B2B Connect is a multilateral B2B cross-border payments network designed to facilitate transactions from the bank of origin directly to the beneficiary bank, helping streamline settlement and optimize payments for financial institutions&#8217; corporate client base. The network delivers B2B cross-border payments that are predictable, flexible, data-rich, secure and cost-effective. Visa B2B Connect continues to scale, with the ability to operate in more than 100 countries and territories. 
+
+(3) McKinsey Global Payments Map and Visa Analysis, 2018. 
+
+(4) Actual fund availability varies by receiving financial institution, receiving account type, region and whether the transaction is domestic or cross-border. 
+
+Table of Contents 
+
+Value Added Services 
+
+Value added services represent an opportunity for us to diversify our revenue with products and solutions that differentiate our network, deepen our client relationships and deliver innovative solutions across other networks. 
+
+Issuer Solutions 
+
+Visa Debit Processing Service (DPS) is one of the largest issuer processors of Visa debit transactions in the world and is able to deliver agility at scale. Visa DPS provides a wide range of debit, prepaid and credit value added services to clients including call center services, data analytics, campaign management, fraud and risk solutions, and a white-label branded mobile app. Visa DPS continues to extend and expand our capabilities in modern, API-based issuer processing solutions called DPS Forward, which will be used for both the U.S. and international markets. We have expanded Visa DPS into Europe, providing European issuers in select countries access to a comprehensive and end-to-end solution, from core processing services to value added services. 
+
+We also provide a range of other services and digital solutions to issuers, such as account controls, digital issuance, branded consumer experiences and buy now pay later (BNPL) capabilities. BNPL or installment payments allow shoppers the flexibility to pay for a purchase in equal payments over a defined period of time. Visa is investing in installments as a payments strategy &#8212; by offering our own solution, Visa Installments &#8212; and by partnering with innovative installments providers who use our cards and services to support a wider variety of installment options. Visa Installments offers issuing banks the opportunity to offer Visa cardholders the option to divide their total purchase amount into smaller payments during or after checkout, at the store and online at participating merchants. 
+
+Acceptance Solutions 
+
+Cybersource is a global payment management platform that provides modular, digital capabilities in addition to the traditional gateway function of connecting merchants to payment processing. Using Cybersource, merchants of all sizes can improve the way their consumers engage and transact, mitigate fraud and security risk, lower operational costs and adapt to changing business requirements. Cybersource white-labeled capabilities provide new and enhanced payment integrations with ecommerce platforms, enabling sellers and acquirers to provide tailored commerce experiences with payments seamlessly embedded. Cybersource enables an omnichannel solution with a cloud-based architecture to deliver more innovation at the point-of-sale. 
+
+In addition, we provide secure, reliable services for merchants and acquirers that reduce friction and drive acceptance. Examples include Global Urban Mobility, which allows transit operators to accept Visa contactless payments in addition to proprietary closed-loop payment solutions; Rapid Seller Onboarding, which enables digital onboarding of small businesses and acquirers; and Visa Account Updater, which provides updated account information to merchants to strengthen customer relationships and retention. Visa also offers dispute management services, including a network agnostic solution with Verifi that enables merchants to prevent and resolve disputes with a single connection. 
+
+Risk and Identity Solutions 
+
+Visa&#8217;s risk and identity solutions transform data into insights for near real-time decisions and facilitate account holder authentication to help clients prevent fraud and protect account holder data. With the increasing popularity of omnichannel commerce among consumers, preventing fraud helps increase trust in digital payments. Solutions such as Visa Advanced Authorization, Visa Secure, Visa Advanced Identity Score, Visa Consumer Authentication Service, and payment-decisioning solutions from CardinalCommerce empower financial institutions and merchants with tools that help automate and simplify fraud prevention and enhance payment security. 
+
+These value added payment security tools layer on top of a suite of programs that protect the safety and integrity of the payment ecosystem, and along with our investments in intelligence and technology, help to prevent, detect and mitigate threats. These programs and Visa&#8217;s fraud prevention expertise are among the core benefits of being part of the Visa network. Through the combined efforts of security and identity tools and services, payment and cyber intelligence, insights and learnings from client/partner breach investigations and law enforcement 
+
+Table of Contents 
+
+engagement, Visa helps protect financial institutions and merchants from fraud and solve payment security challenges. 
+
+Advisory Services 
+
+Visa Consulting and Analytics is the payments consulting advisory arm of Visa. The combination of our deep payments expertise, proprietary analytical models applied to a breadth of data and our economic intelligence allows us to identify actionable insights, make recommendations and help implement solutions that can drive better business decisions and measurable outcomes for clients. Visa Consulting and Analytics offers consulting services for issuers, acquirers, merchants, fintechs and other partners, spanning the entire customer journey from acquisition to retention. 
+
+We are fortifying the key foundations of our business model, which consist of becoming a network of networks, our technology platforms, security, brand and talent. 
+
+Network of Networks 
+
+Visa strives to become a network of networks, offering a single connection point for senders and receivers to enable money movement to all endpoints and to all form factors, using all available networks. 
+
+Technology Platforms 
+
+Visa&#8217;s technology platforms include software, hardware, data centers and a large telecommunications infrastructure, each with a distinct architecture and operational footprint wrapped with several layers of security and protection technologies. Visa&#8217;s three data centers are a critical part of our global processing environment and have a high redundancy of network connectivity, power and cooling designed to provide continuous availability of systems. Together, these systems deliver the secure, convenient and reliable service that our clients and consumers expect from the Visa brand. 
+
+Security 
+
+Our in-depth, multi-layer security approach includes a formal program to devalue sensitive and/or personal data through various cryptographic means; embedded security in the software development lifecycle; identity and access management controls to protect against unauthorized access; and advanced cyber detection and response capabilities. We deploy security&#8239;tools&#8239;that help keep our clients and consumers safe, while providing buyer and seller solutions that help make Visa the best way to pay and be paid. We also invest significantly&#8239;in our comprehensive approach to cybersecurity. We&#8239;deploy&#8239;security technologies to strengthen data confidentiality, integrity and service availability, emphasizing core cybersecurity capabilities to minimize risk.&#8239; 
+
+Brand 
+
+Visa&#8217;s brand strength helps deliver added value to our clients and their customers, financial institutions, merchants and partners through compelling brand expressions, a wide range of products and services as well as innovative brand and marketing efforts. In line with our commitment to an expansive and diverse range of partnerships for the benefit of our stakeholders, Visa is the only brand in the world that is a top sponsor of FIFA, the Olympic Games, and the NFL and is one of the most active sponsors of women&#8217;s football around the world. 
+
+This year, we launched a multi-year brand initiative to spotlight the diverse capabilities of our network and our commitment to enabling global economic inclusion. The &#8220;Meet Visa&#8221; campaign reintroduced Visa as a network working for everyone. 
+
+Table of Contents 
+
+Talent 
+
+Attracting, developing and retaining the best talent globally is critical to our continued success. Our workforce grew from approximately 20,500 in fiscal year 2020 to approximately 21,500 employees in fiscal year 2021. Visa employees are located in more than 80 countries, with more than 49 percent located outside the U.S. Voluntary workforce turnover (rolling 12-month attrition) was 9.3 percent as of September 30, 2021. At the end of fiscal year 2021, Visa&#8217;s global workforce was 58 percent male and 42 percent female, and women represented 35 percent of Visa&#8217;s leadership (defined as vice president level and above). In the U.S., ethnicity of our workforce was 41 percent Asian, 7 percent Black, 12 percent Hispanic, 3 percent Other and 37 percent White. For our U.S. leadership, the breakdown was 20 percent Asian, 6 percent Black, 12 percent Hispanic, 2 percent Other and 59 percent White. 
+
+At Visa, we have an unwavering commitment to inclusion and diversity, and we foster an inclusive workplace to encourage diversity of thought, culture and background. In 2020, we established &#8220;Stand Together&#8221; goals in support of social justice and racial equality in the U.S. focused on our people, our community and our company. We are proud of the progress we made in fiscal year 2021, including the launch of the Visa Black Scholars and Jobs Program in the U.S. with the inaugural class of 50 Visa Black Scholars who will participate in year-round programs and training aimed at developing their professional and technical skills. Upon graduation, all Scholars who have met their commitments will be offered a full-time job with Visa. 
+
+We have also increased the number of underrepresented employees in the U.S. We are supporting Visa&#8217;s commitment to recruit and retain diverse talent by launching employee development programs and partnering with several non-profit and community organizations, as well as historically black colleges and a generally more diverse set of universities to develop our talent pipeline. Visa is committed to pay equity, regardless of gender or race/ethnicity, and conducts pay equity analyses on an annual basis. More details regarding our human capital management, as well as enhanced workforce disclosures that include our 2020 Consolidated EEO-1 Report and our 2020 Environmental, Social and Governance (ESG) Report can be found on our website at usa.visa.com/about-visa/esg.html . 
+
+For additional information, please see the section titled &#8220;Talent and Human Capital Management&#8221; in Visa&#8217;s 2021 Proxy Statement. 
+
+FINTECH AND DIGITAL PARTNERSHIPS 
+
+Fintechs are key enablers of new payment experiences and new flows. Our work with fintechs has opened new points of acceptance, extended credit at the point of sale, made cross-border money flows more efficient, moved B2B spend onto Visa&#8217;s network, expedited payroll and provided digital wallet customers access to our services. 
+
+To better serve fintechs, Visa has a suite of streamlined commercial programs and digital onboarding tools. Our Fintech Fast Track program enables qualifying fintechs to quickly launch and scale their programs. The program has welcomed hundreds of fintechs who are actively engaged in the program. 
+
+With our startup engagement programs, the Visa Everywhere Initiative and the Inclusive Fintech 50, early-stage companies can build payment solutions based on our capabilities. With Visa Fintech Partner Connect, a program launched globally this year, we are helping our clients tap into innovations emerging from the fintech community. The program is designed to help financial institutions quickly connect with a vetted and curated set of technology providers, helping Visa&#8217;s issuing partners create digital-first experiences without the cost and complexity of building the back-end technology in-house. 
+
+MERGERS AND ACQUISITIONS AND STRATEGIC INVESTMENTS 
+
+Visa continually explores opportunities to augment our capabilities and provide meaningful value to our clients. Mergers and acquisitions and strategic investments complement our internal development and enhance our partnerships to align with Visa&#8217;s priorities. Visa applies a rigorous business analysis to our acquisitions and investments to ensure they will differentiate our network, provide value added services and accelerate growth. 
+
+In fiscal year 2021, we acquired YellowPepper to accelerate our network of networks strategy in Latin America and the Caribbean by becoming a single point of access for initiating multiple transaction types and significantly reducing the time-to-market and cost for issuers and processors to launch card and account agnostic payments solutions. 
+
+Table of Contents 
+
+On June 24, 2021, we signed a definitive agreement to acquire Tink AB (Tink), a European open banking platform that enables financial institutions, fintechs and merchants to build tailored financial management tools, products and services for European consumers and businesses based on their financial data. 
+
+On July 22, 2021, we signed a definitive agreement to acquire The Currency Cloud Group Limited (Currencycloud), a UK-based global platform that enables banks and fintechs to provide innovative foreign exchange solutions for cross-border payments. The Tink and Currencycloud transactions are subject to regulatory approvals and other customary closing conditions. 
+
+Environmental, Social and Governance 
+
+As a trusted brand, Visa has an opportunity and responsibility to contribute to a more inclusive, equitable and sustainable world. We believe that economies that include everyone everywhere, uplift everyone everywhere. As we build business resilience and long-term value, we are committed to managing the risks and opportunities that arise from ESG issues. We are focused on empowering people and economies; securing commerce and protecting customers; investing in our workforce; protecting the planet; and operating responsibly. Our 2020 ESG report, which provides enhanced ESG disclosures is available on our website at usa.visa.com/about-visa/esg.html . 
+
+INTELLECTUAL PROPERTY 
+
+We own and manage the Visa brand, which stands for acceptance, security, convenience, speed and reliability. Our portfolio of Visa-owned trademarks is important to our business. Generally, trademark registrations are valid indefinitely as long as they are in use and/or maintained. We give our clients access to these assets through agreements with our issuers and acquirers, which authorize the use of our trademarks in connection with their participation in our payments network. Additionally, we have filed patent applications in the U.S. and international jurisdictions covering certain aspects of our proprietary technology and new innovations, and own a number of patents, patent applications and other intellectual property relating to our business. We rely on a combination of patent, trademark, copyright and trade secret laws in the U.S. and other jurisdictions, as well as confidentiality procedures and contractual provisions, to protect our proprietary technology. 
+
+COMPETITION 
+
+The global payments industry continues to undergo dynamic change. Existing and emerging competitors compete with Visa&#8217;s network and payment solutions for consumers and for participation by financial institutions and merchants. Technology and innovation are shifting consumer habits and driving growth opportunities in ecommerce, mobile payments, blockchain technology and digital currencies. These advances are enabling new entrants, many of which depart from traditional network payment models. In certain countries, the evolving regulatory landscape is creating local networks or enabling additional processing competition. 
+
+We compete against all forms of payment. This includes paper-based payments, primarily cash and checks, and all forms of electronic payments. Our electronic payment competitors principally include: 
+
+Global or Multi-Regional Networks: These networks typically offer a range of branded, general purpose card payment products that consumers can use at millions of merchant locations around the world. Examples include Mastercard, American Express, Discover, JCB and UnionPay. These competitors may be more concentrated in specific geographic regions, such as JCB in Japan and Discover in the U.S., or have a leading position in certain countries, such as UnionPay in China. See Item 1A&#8212;Risk Factors&#8212;Regulatory Risks&#8212;Government-imposed obligations and/or restrictions on international payment systems may prevent us from competing against providers in certain countries, including significant markets such as China, India and Russia . Based on available data, Visa is one of the largest retail electronic funds transfer networks used throughout the world. 
+
+Table of Contents 
+
+The following chart compares our network with these network competitors for calendar year 2020 (1) : 
+
+##TABLE_START Visa Mastercard American Express JCB Diners Club Payments Volume ($B) 8,911 4,743 1,005 308 166 Total Volume ($B) 11,383 6,337 1,011 317 178 Total Transactions (B) 205 126 9 5 3 Cards (M) 3,586 2,334 112 141 65 ##TABLE_END
+
+(1) Mastercard, American Express, JCB and Diners Club / Discover data sourced from The Nilson Report issue 1199 (June 2021). Mastercard excludes Maestro and Cirrus figures. American Express, Diners Club / Discover, and JCB include business from third-party issuers. JCB figures include other payment-related products and some figures are estimates. 
+
+Local and Regional Networks: Operated in many countries, these networks often have the support of government influence or mandate. In some cases, they are owned by financial institutions or payment processors. These networks typically focus on debit payment products, and may have strong local acceptance, and recognizable brands. Examples include STAR, NYCE, and Pulse in the U.S., Interac in Canada, EFTPOS in Australia and Mir in Russia. 
+
+Alternative Payment Providers: These providers such as digital wallets, closed commerce ecosystems, BNPL solutions, cryptocurrency platforms, and account-to-account systems often have a primary focus of enabling payments through ecommerce and mobile channels; however, they are expanding or may expand their offerings to the physical point of sale. These companies may process payments using in-house account transfers between parties, electronic funds transfer networks like the ACH, global or local networks like Visa, or some combination of the foregoing. In some cases, these entities are both a partner and a competitor to Visa. 
+
+ACH and RTP Networks: These networks are often governed by local regulations. Primarily focused on interbank transfers, many are adding capabilities that may make them more competitive for retail payments. We also compete with closed-loop payment systems, emerging payments networks, wire transfers and electronic benefit transfers. 
+
+Payment Processors: We compete with payment processors for the processing of Visa transactions. These processors may benefit from mandates requiring them to handle processing under local regulation. For example, as a result of regulation in Europe under the Interchange Fee Regulation (IFR), we may face competition from other networks, processors and other third parties who could process Visa transactions directly with issuers and acquirers. 
+
+Value Added Products and Service Providers: We face competition from companies that provide alternatives to our value added products and services, including information services and consulting firms that provide consulting services and insights to financial institutions, merchants and governments and technology companies that provide cyber and fraud solutions. Regulatory initiatives could also lead to increased competition in this space. 
+
+We believe our fundamental value proposition of security, convenience, speed and reliability as well as the number of credentials and our acceptance footprint help us to succeed. In addition, we understand the needs of the individual markets in which we operate and partner with local financial institutions, merchants, fintechs, governments, NGOs and business organizations to provide tailored and innovative solutions. Our network of networks strategy implies that we have and we will continue to utilize other networks to facilitate the movement of money. We believe Visa is well-positioned competitively due to our global brand, our broad set of payment products and value added services, and our proven track record of processing payment transactions securely and reliably. 
+
+GOVERNMENT REGULATION 
+
+As a global payments technology company, we are subject to complex and evolving global regulations in the various jurisdictions in which our products and services are used. The most significant government regulations that impact our business are discussed below. For further discussion of how global regulations may impact our business, see Item 1A-Risk Factors-Regulatory Risks . 
+
+Anti-Corruption, Anti-Money Laundering, Anti-Terrorism and Sanctions: We are subject to anti-corruption laws and regulations, including the U.S. Foreign Corrupt Practices Act (FCPA), the UK Bribery Act and other laws that generally prohibit the making or offering of improper payments to foreign government officials and political figures for the purpose of obtaining or retaining business or to gain an unfair business advantage. We are also 
+
+Table of Contents 
+
+subject to anti-money laundering and anti-terrorist financing laws and regulations, including the U.S. Bank Secrecy Act. In addition, we are subject to economic and trade sanctions programs administered by the Office of Foreign Assets Control (OFAC) in the U.S. Therefore, we do not permit financial institutions or other entities that are domiciled in countries or territories subject to comprehensive OFAC trade sanctions (currently, Cuba, Iran, North Korea, Syria and Crimea), or that are included on OFAC&#8217;s list of Specially Designated Nationals and Blocked Persons, to issue or acquire Visa cards or engage in transactions using our services. 
+
+Government-Imposed Market Participation Restrictions: Certain governments, including China, India, Indonesia, Russia, Thailand and Vietnam, have taken actions to promote domestic payments systems and/or certain issuers, payments networks or processors, by imposing regulations that favor domestic providers, impose local ownership requirements on processors, require data localization or mandate that domestic processing be done in that country. 
+
+Interchange Rates and Fees: An increasing number of jurisdictions around the world regulate or influence debit and credit interchange reimbursement rates in their regions. For example, the U.S. Dodd-Frank Wall Street Reform and Consumer Act (Dodd-Frank Act) limits interchange reimbursement rates for certain debit card transactions in the U.S., the European Union (EU) IFR limits interchange rates in Europe (as discussed below), and the Reserve Bank of Australia and the Central Bank of Brazil regulate average permissible levels of interchange. 
+
+Internet Transactions: Many jurisdictions have adopted regulations that require payment system participants to monitor, identify, filter, restrict or take other actions with regard to certain types of payment transactions on the Internet, such as gambling, digital currencies, the purchase of cigarettes or alcohol and other controversial transaction types. 
+
+Network Exclusivity and Routing: In the U.S., the Dodd-Frank Act limits network exclusivity and restrictions on merchant routing choice for the debit and prepaid market segments. Other jurisdictions impose similar limitations, such as the IFR&#8217;s prohibition in Europe on restrictions that prevent multiple payment brands or functionality on the same card. 
+
+No-surcharge Rules: We have historically enforced rules that prohibit merchants from charging higher prices to consumers who pay using Visa products instead of other means. However, merchants&#8217; ability to surcharge varies by geographic market as well as Visa product type, and continues to be impacted by litigation, regulation and legislation. 
+
+Privacy and Data Protection: Aspects of our operations or business are subject to privacy, data use and data security regulations, which impact the way we use and handle data, operate our products and services and even impact our ability to offer a product or service. In addition, regulators are proposing new laws or regulations that could require Visa to adopt certain cybersecurity and data-handling practices, create new individual privacy rights and impose increased obligations on companies handling personal data. 
+
+Supervisory Oversight of the Payments Industry: Visa is subject to financial sector oversight and regulation in substantially all of the jurisdictions in which we operate. In the U.S., for example, the Federal Financial Institutions Examination Council (FFIEC) has supervisory oversight over Visa under applicable federal banking laws and policies as a technology service provider to U.S. financial institutions. The federal banking agencies comprising the FFIEC are the Federal Reserve Board, the Comptroller of the Currency, the Federal Deposit Insurance Corporation and the National Credit Union Administration. Visa also may be separately examined by the Bureau of Consumer Financial Protection as a service provider to the banks that issue Visa-branded consumer credit and debit card products. Central banks in other countries/regions, including Europe, India, Russia, Ukraine and the United Kingdom (as discussed below), have recognized or designated Visa as a retail payment system under various types of financial stability regulations. Visa is also subject to oversight by banking and financial sector authorities in other jurisdictions, such as Brazil and Hong Kong. 
+
+European and United Kingdom Regulations and Supervisory Oversight: Visa in Europe continues to be subject to complex and evolving regulation in the United Kingdom and the European Economic Area (EEA). Specifically, in the United Kingdom, Visa Europe is designated as a Recognized Payment System, bringing it within the scope of the Bank of England&#8217;s supervisory powers and subject to various requirements, including on issues such as governance and risk management designed to maintain the stability of the United Kingdom&#8217;s financial system. Visa Europe is also regulated by the United Kingdom&#8217;s Payment Systems Regulator (PSR), which has wide-ranging powers and authority to review our business practices, systems, rules and fees with respect to promoting competition and innovation in the United Kingdom, and ensuring payments meet account holder needs. 
+
+Table of Contents 
+
+Furthermore, there are a number of EU regulations that impact our business. As discussed above, the IFR regulates interchange rates within Europe, requires Visa Europe to separate its payment card scheme activities from processing activities for accounting, organization, and decision-making purposes within the EU and imposes limitations on network exclusivity and routing. National competent authorities in the EU are responsible for monitoring and enforcing the IFR in their markets. We are also subject to regulations governing privacy and data protection, anti-bribery, anti-money laundering, anti-terrorism and sanctions. Other regulations in Europe, such as the second Payment Services Directive (PSD2), require, among other things, that our financial institution clients provide certain customer account access rights to emerging non-financial institution players. PSD2 also includes strong customer authentication requirements for certain transactions that could impose both operational complexity on Visa and negatively impact consumer payment experiences. 
+
+Post-Brexit, the United Kingdom has adopted various European regulations, including regulations that impact the payments ecosystem such as the IFR and PSD2. The PSR is responsible for monitoring Visa Europe&#8217;s compliance with the IFR as adopted in the United Kingdom. 
+
+ESG and Sustainability: Certain governments around the world are adopting laws and regulations pertaining to ESG performance, transparency and reporting. Regulations may include mandated corporate reporting on ESG overall (e.g., EU Sustainable Reporting Directive) or in individual areas such as mandated reporting on climate-related financial disclosures. 
+
+Additional Regulatory Developments: Various regulatory agencies across the world also continue to examine a wide variety of other issues, including mobile payment transactions, tokenization, access rights for non-financial institutions, money transfer services, identity theft, account management guidelines, disclosure rules, security and marketing that could affect our financial institution clients and our business. Furthermore, following the passage of PSD2 in Europe, several countries, including Australia, Brazil, Canada, Hong Kong and Mexico, are contemplating granting or have already granted various types of access rights to third party processors, including access to consumer account data maintained by our financial institution clients. These changes could have negative implications for our business depending on how the regulations are framed and implemented. 
+
+AVAILABLE INFORMATION 
+
+Our corporate website is usa.visa.com/about-visa.html . Our annual reports on Form 10-K, our quarterly reports on Form 10-Q, our current reports on Form 8-K, proxy statements and any amendments to those reports filed or furnished pursuant to the U.S. Securities Exchange Act of 1934, as amended, can be viewed at www.sec.gov and our investor relations website at investor.visa.com as soon as reasonably practicable after these materials are electronically filed with or furnished to the U.S. Securities and Exchange Commission (SEC). In addition, we routinely post financial and other information, which could be deemed to be material to investors, on our investor relations website. Information regarding our ESG, corporate responsibility and sustainability initiatives is also available on our website at usa.visa.com/about-visa/esg.html. The content of any of our websites referred to in this report is not incorporated by reference into this report or any other filings with the SEC. 
+
+Table of Contents 
+

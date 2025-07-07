@@ -1,0 +1,207 @@
+[
+  {
+    "Balance Sheet": "Cash",
+    "2022": "164.60",
+    "2021": "129.92"
+  },
+  {
+    "Balance Sheet": "CashEquivalents",
+    "2022": "14.09",
+    "2021": "36.93"
+  },
+  {
+    "Balance Sheet": "ShortTermInvestments",
+    "2022": "3121.44",
+    "2021": "4744.25"
+  },
+  {
+    "Balance Sheet": "CashandShortTermInvestments",
+    "2022": "3300.13",
+    "2021": "4911.10"
+  },
+  {
+    "Balance Sheet": "AccountsReceivable-TradeNet",
+    "2022": "2384.37",
+    "2021": "2295.03"
+  },
+  {
+    "Balance Sheet": "TotalReceivablesNet",
+    "2022": "2553.58",
+    "2021": "2450.11"
+  },
+  {
+    "Balance Sheet": "TotalInventory",
+    "2022": "4129.67",
+    "2021": "2938.81"
+  },
+  {
+    "Balance Sheet": "PrepaidExpenses",
+    "2022": "42.50",
+    "2021": "38.04"
+  },
+  {
+    "Balance Sheet": "OtherCurrentAssetsTotal",
+    "2022": "162.07",
+    "2021": "29.12"
+  },
+  {
+    "Balance Sheet": "TotalCurrentAssets",
+    "2022": "10187.95",
+    "2021": "10367.18"
+  },
+  {
+    "Balance Sheet": "Property/Plant/EquipmentTotal-Gross",
+    "2022": "15228.61",
+    "2021": "14017.24"
+  },
+  {
+    "Balance Sheet": "AccumulatedDepreciationTotal",
+    "2022": "-5728.02",
+    "2021": "-4600.82"
+  },
+  {
+    "Balance Sheet": "Property/Plant/EquipmentTotal-Net",
+    "2022": "10733.66",
+    "2021": "10418.65"
+  },
+  {
+    "Balance Sheet": "IntangiblesNet",
+    "2022": "21.23",
+    "2021": "24.33"
+  },
+  {
+    "Balance Sheet": "LongTermInvestments",
+    "2022": "1213.44",
+    "2021": "1205.16"
+  },
+  {
+    "Balance Sheet": "NoteReceivable-LongTerm",
+    "2022": "848.05",
+    "2021": "509.75"
+  },
+  {
+    "Balance Sheet": "OtherLongTermAssetsTotal",
+    "2022": "55.41",
+    "2021": "56.79"
+  },
+  {
+    "Balance Sheet": "TotalAssets",
+    "2022": "23059.74",
+    "2021": "22581.86"
+  },
+  {
+    "Balance Sheet": "AccountsPayable",
+    "2022": "2056.78",
+    "2021": "3441.44"
+  },
+  {
+    "Balance Sheet": "AccruedExpenses",
+    "2022": "101.33",
+    "2021": "134.31"
+  },
+  {
+    "Balance Sheet": "NotesPayable/ShortTermDebt",
+    "2022": "0.00",
+    "2021": "915.41"
+  },
+  {
+    "Balance Sheet": "CurrentPortofLTDebt/CapitalLeases",
+    "2022": "2060.87",
+    "2021": "322.10"
+  },
+  {
+    "Balance Sheet": "OtherCurrentliabilitiesTotal",
+    "2022": "2737.75",
+    "2021": "2454.39"
+  },
+  {
+    "Balance Sheet": "TotalCurrentLiabilities",
+    "2022": "6956.73",
+    "2021": "7267.65"
+  },
+  {
+    "Balance Sheet": "LongTermDebt",
+    "2022": "817.21",
+    "2021": "811.76"
+  },
+  {
+    "Balance Sheet": "CapitalLeaseObligations",
+    "2022": "350.87",
+    "2021": "312.63"
+  },
+  {
+    "Balance Sheet": "TotalLongTermDebt",
+    "2022": "1168.08",
+    "2021": "1124.39"
+  },
+  {
+    "Balance Sheet": "TotalDebt",
+    "2022": "3228.95",
+    "2021": "2361.90"
+  },
+  {
+    "Balance Sheet": "DeferredIncomeTax",
+    "2022": "395.49",
+    "2021": "380.24"
+  },
+  {
+    "Balance Sheet": "MinorityInterest",
+    "2022": "0.15",
+    "2021": "0.14"
+  },
+  {
+    "Balance Sheet": "OtherLiabilitiesTotal",
+    "2022": "507.54",
+    "2021": "395.77"
+  },
+  {
+    "Balance Sheet": "TotalLiabilities",
+    "2022": "9027.99",
+    "2021": "9168.19"
+  },
+  {
+    "Balance Sheet": "CommonStockTotal",
+    "2022": "4.24",
+    "2021": "4.24"
+  },
+  {
+    "Balance Sheet": "AdditionalPaid-InCapital",
+    "2022": "9.42",
+    "2021": "9.42"
+  },
+  {
+    "Balance Sheet": "RetainedEarnings(AccumulatedDeficit)",
+    "2022": "14073.02",
+    "2021": "13467.38"
+  },
+  {
+    "Balance Sheet": "OtherEquityTotal",
+    "2022": "-54.93",
+    "2021": "-67.37"
+  },
+  {
+    "Balance Sheet": "TotalEquity",
+    "2022": "14031.75",
+    "2021": "13413.67"
+  },
+  {
+    "Balance Sheet": "TotalLiabilitiesShareholders'Equity",
+    "2022": "23059.74",
+    "2021": "22581.86"
+  },
+  {
+    "Balance Sheet": "TotalCommonSharesOutstanding",
+    "2022": "0.42",
+    "2021": "0.42"
+  },
+  {
+    "Balance Sheet": "TangibleBookValueperShareCommonEq",
+    "2022": "33034.80",
+    "2021": "31570.14"
+  },
+  {
+    "Balance Sheet": "periodLength",
+    "2022": "0.00",
+    "2021": "0.00"
+  }
+]

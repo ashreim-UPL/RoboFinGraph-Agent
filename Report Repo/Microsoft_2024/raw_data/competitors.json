@@ -1,0 +1,62 @@
+[
+  {
+    "symbol": "AI",
+    "companyName": "C3.ai, Inc.",
+    "price": 25.75,
+    "mktCap": 3370314500
+  },
+  {
+    "symbol": "BB",
+    "companyName": "BlackBerry Limited",
+    "price": 4.35,
+    "mktCap": 2597332800
+  },
+  {
+    "symbol": "CORZ",
+    "companyName": "Core Scientific, Inc.",
+    "price": 18,
+    "mktCap": 5360793120
+  },
+  {
+    "symbol": "CRWD",
+    "companyName": "CrowdStrike Holdings, Inc.",
+    "price": 514.1,
+    "mktCap": 128138396800
+  },
+  {
+    "symbol": "CRWV",
+    "companyName": "CoreWeave, Inc. Class A Common Stock",
+    "price": 164.38,
+    "mktCap": 78898640794
+  },
+  {
+    "symbol": "NET",
+    "companyName": "Cloudflare, Inc.",
+    "price": 191.27,
+    "mktCap": 66340091582
+  },
+  {
+    "symbol": "ORCL",
+    "companyName": "Oracle Corporation",
+    "price": 237.32,
+    "mktCap": 666591535600
+  },
+  {
+    "symbol": "PANW",
+    "companyName": "Palo Alto Networks, Inc.",
+    "price": 201.82,
+    "mktCap": 134573576000
+  },
+  {
+    "symbol": "PLTR",
+    "companyName": "Palantir Technologies Inc.",
+    "price": 134.36,
+    "mktCap": 304044587600
+  },
+  {
+    "symbol": "ZETA",
+    "companyName": "Zeta Global Holdings Corp.",
+    "price": 15.45,
+    "mktCap": 3266887050
+  }
+]

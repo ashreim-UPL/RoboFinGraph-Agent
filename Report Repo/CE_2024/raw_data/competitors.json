@@ -1,0 +1,56 @@
+[
+  {
+    "symbol": "ASIX",
+    "companyName": "AdvanSix Inc.",
+    "price": 25.29,
+    "mktCap": 678093183
+  },
+  {
+    "symbol": "AVY",
+    "companyName": "Avery Dennison Corporation",
+    "price": 183.24,
+    "mktCap": 14324896944
+  },
+  {
+    "symbol": "BAK",
+    "companyName": "Braskem S.A.",
+    "price": 3.41,
+    "mktCap": 1410713522
+  },
+  {
+    "symbol": "DOW",
+    "companyName": "Dow Inc.",
+    "price": 28.46,
+    "mktCap": 20117292520
+  },
+  {
+    "symbol": "EMN",
+    "companyName": "Eastman Chemical Company",
+    "price": 79.57,
+    "mktCap": 9187152200
+  },
+  {
+    "symbol": "FMC",
+    "companyName": "FMC Corporation",
+    "price": 44.23,
+    "mktCap": 5524725070
+  },
+  {
+    "symbol": "HUN",
+    "companyName": "Huntsman Corporation",
+    "price": 11.11,
+    "mktCap": 1930318060
+  },
+  {
+    "symbol": "IFF",
+    "companyName": "International Flavors & Fragrances Inc.",
+    "price": 76.33,
+    "mktCap": 19524450700
+  },
+  {
+    "symbol": "LYB",
+    "companyName": "LyondellBasell Industries N.V.",
+    "price": 62.01,
+    "mktCap": 19930014000
+  }
+]

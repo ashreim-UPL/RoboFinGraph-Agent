@@ -1,0 +1,86 @@
+[
+  {
+    "symbol": "GPRO",
+    "companyName": "GoPro, Inc.",
+    "price": 0.7448,
+    "mktCap": 119307675
+  },
+  {
+    "symbol": "HEAR",
+    "companyName": "Turtle Beach Corporation",
+    "price": 17.8,
+    "mktCap": 357411540
+  },
+  {
+    "symbol": "KOSS",
+    "companyName": "Koss Corporation",
+    "price": 5.23,
+    "mktCap": 49035434
+  },
+  {
+    "symbol": "LPL",
+    "companyName": "LG Display Co., Ltd.",
+    "price": 3.61,
+    "mktCap": 3610000064
+  },
+  {
+    "symbol": "MICS",
+    "companyName": "The Singing Machine Company, Inc.",
+    "price": 0.74,
+    "mktCap": 7205269
+  },
+  {
+    "symbol": "PCRFY",
+    "companyName": "Panasonic Holdings Corporation",
+    "price": 9.36,
+    "mktCap": 21849329848
+  },
+  {
+    "symbol": "SNEJF",
+    "companyName": "Sony Group Corporation",
+    "price": 25.234,
+    "mktCap": 152034929487
+  },
+  {
+    "symbol": "SONO",
+    "companyName": "Sonos, Inc.",
+    "price": 11.12,
+    "mktCap": 1335367440
+  },
+  {
+    "symbol": "SONY",
+    "companyName": "Sony Group Corporation",
+    "price": 25.58,
+    "mktCap": 154119580577
+  },
+  {
+    "symbol": "UEIC",
+    "companyName": "Universal Electronics Inc.",
+    "price": 6.95,
+    "mktCap": 91531500
+  },
+  {
+    "symbol": "VUZI",
+    "companyName": "Vuzix Corporation",
+    "price": 2.78,
+    "mktCap": 211953872
+  },
+  {
+    "symbol": "VZIO",
+    "companyName": "VIZIO Holding Corp.",
+    "price": 11.35,
+    "mktCap": 2298431739
+  },
+  {
+    "symbol": "WLDS",
+    "companyName": "Wearable Devices Ltd.",
+    "price": 1.49,
+    "mktCap": 1533180
+  },
+  {
+    "symbol": "WLDSW",
+    "companyName": "Wearable Devices Ltd.",
+    "price": 1.49,
+    "mktCap": 1676915
+  }
+]

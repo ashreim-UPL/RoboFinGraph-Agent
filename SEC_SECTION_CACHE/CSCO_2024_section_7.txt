@@ -1,0 +1,539 @@
+ Item 7. Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations ##TABLE_END
+
+Forward-Looking Statements 
+
+This Annual Report on Form 10-K, including this Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations, contains forward-looking statements regarding future events and our future results that are subject to the safe harbors created under the Securities Act of 1933, as amended (the &#8220;Securities Act&#8221;), and the Securities Exchange Act of 1934, as amended (the &#8220;Exchange Act&#8221;). All statements other than statements of historical facts are statements that could be deemed forward-looking statements. These statements are based on current expectations, estimates, forecasts, and projections about the industries in which we operate and the beliefs and assumptions of our management. Words such as &#8220;expects,&#8221; &#8220;anticipates,&#8221; &#8220;targets,&#8221; &#8220;goals,&#8221; &#8220;projects,&#8221; &#8220;intends,&#8221; &#8220;plans,&#8221; &#8220;believes,&#8221; &#8220;momentum,&#8221; &#8220;seeks,&#8221; &#8220;estimates,&#8221; &#8220;continues,&#8221; &#8220;endeavors,&#8221; &#8220;strives,&#8221; &#8220;may,&#8221; variations of such words, and similar expressions are intended to identify such forward-looking statements. In addition, any statements that refer to projections of our future financial performance, our anticipated growth and trends in our businesses, and other characterizations of future events or circumstances are forward-looking statements. Readers are cautioned that these forward-looking statements are only predictions and are subject to risks, uncertainties, and assumptions that are difficult to predict, including those under &#8220;Part I, Item 1A. Risk Factors,&#8221; and elsewhere herein. Therefore, actual results may differ materially and adversely from those expressed in any forward-looking statements. We undertake no obligation to revise or update any forward-looking statements for any reason. 
+
+OVERVIEW 
+
+Cisco designs and sells a broad range of technologies that help to power, secure, and draw insights from the Internet. We are integrating artificial intelligence (AI) into our product portfolios across networking, security, collaboration and observability to simplify how our technology is delivered, managed and optimized and to help customers maximize the business value of their technology investments and accelerate their digital transformation. 
+
+A summary of our results is as follows (in millions, except percentages and per-share amounts): 
+
+##TABLE_START Three Months Ended Years Ended July 27, 2024 July 29, 2023 Variance July 27, 2024 July 29, 2023 Variance Revenue $ 13,642 &#160; $ 15,203 (10) % $ 53,803 &#160; $ 56,998 (6) % Gross margin percentage 64.4 &#160; % 64.1 % 0.3 pts 64.7 &#160; % 62.7 % 2.0 pts Research and development $ 2,179 &#160; $ 1,953 12 % $ 7,983 &#160; $ 7,551 6 % Sales and marketing $ 2,841 &#160; $ 2,579 10 % $ 10,364 &#160; $ 9,880 5 % General and administrative $ 763 &#160; $ 690 11 % $ 2,813 &#160; $ 2,478 14 % Total R&#38;D, sales and marketing, general and administrative $ 5,783 &#160; $ 5,222 11 % $ 21,160 &#160; $ 19,909 6 % Total as a percentage of revenue 42.4 &#160; % 34.3 % 8.1 pts 39.3 &#160; % 34.9 % 4.4 pts Restructuring and other charges included in operating expenses $ 112 &#160; $ 203 (45) % $ 789 &#160; $ 531 49 % Operating income as a percentage of revenue 19.2 &#160; % 28.0 % (8.8) pts 22.6 &#160; % 26.4 % (3.8) pts Interest and other income (loss), net $ (222) $ 218 NM $ 53 &#160; $ 287 (82) % Income tax percentage 9.8 &#160; % 11.5 % (1.7) pts 15.6 &#160; % 17.7 % (2.1) pts Net income $ 2,162 &#160; $ 3,958 (45) % $ 10,320 &#160; $ 12,613 (18) % Net income as a percentage of revenue 15.8 &#160; % 26.0 % (10.2) pts 19.2 &#160; % 22.1 % (2.9) pts Earnings per share&#8212;diluted $ 0.54 &#160; $ 0.97 (44) % $ 2.54 &#160; $ 3.07 (17) % ##TABLE_END
+
+Percentages may not recalculate due to rounding. 
+
+NM &#8212; Not meaningful 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Fiscal 2024 Compared with Fiscal 2023 
+
+In fiscal 2024, total revenue decreased by 6% compared with fiscal 2023. In March 2024, we completed the acquisition of Splunk Inc. (&#8220;Splunk&#8221;), which contributed approximately $1.4 billion in total revenue for fiscal 2024. Within total revenue, product revenue decreased by 9% and services revenue increased by 5%. In fiscal 2024, total software revenue was $18.4 billion across all product areas and services, an increase of 9%, driven by the contribution of Splunk. Total subscription revenue increased 11%, partially driven by the contribution of Splunk. 
+
+During the first nine months of fiscal 2024, we experienced a decline in product demand as customers continued to scrutinize spend as they needed additional time to implement elevated levels of product shipments received in prior quarters. In the fourth quarter of fiscal 2024 we saw improvement in product demand across all geographic segments and customer markets as customers largely completed the installation of their product shipments. While we continue to operate in a highly competitive environment and the overall macroeconomic environment remains challenging and uncertain, we plan to continue to invest in key priority areas with the objective of driving profitable growth over the long term. 
+
+Total gross margin increased by 2.0 percentage points. Product gross margin increased by 2.0 percentage points, largely driven by favorable product mix, productivity benefits and benefits from Splunk, partially offset by negative impacts from pricing. As a percentage of revenue, research and development, sales and marketing, and general and administrative expenses, collectively, increased by 4.4 percentage points. Operating income as a percentage of revenue decreased by 3.8 percentage points driven primarily by incremental operating expenses from Splunk, higher restructuring and other charges and higher amortization of purchased intangible assets in fiscal 2024. Diluted earnings per share decreased by 17%, driven by a decrease of 18% in net income partially offset by a decrease in diluted share count of 43 million shares. 
+
+In terms of our geographic segments, revenue from the Americas decreased by $1.5 billion, EMEA revenue decreased by $1.0 billion and revenue in our APJC segment decreased by $0.7 billion. We experienced a product revenue decline in the enterprise and service provider and cloud markets. Product revenue in the public sector market was flat. From a product category perspective, total product revenue decreased 9% year over year, driven by a decline in revenue in Networking of 15%, partially offset by growth in Security of 32% and Observability of 27%, each driven in large part by the contribution of Splunk. Product revenue grew in Collaboration by 2%. 
+
+We remain focused on delivering innovation across our technologies to assist our customers in executing on their digital transformations and on accelerating innovation across our portfolio. We believe that we are making progress on our strategic priorities. 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Fourth Quarter Snapshot 
+
+For the fourth quarter of fiscal 2024, as compared with the fourth quarter of fiscal 2023, total revenue decreased by 10%. Within total revenue, product revenue decreased by 15% and services revenue increased by 6%. With regard to our geographic segment performance, on a year-over-year basis, revenue in Americas decreased by 11%, EMEA decreased by 11% and APJC decreased by 6%. From a product category perspective, we experienced a product revenue decline in Networking, partially offset by growth in Security and Observability, driven in large part by the contribution of Splunk. Product revenue in Collaboration was flat. Total gross margin increased by 0.3 percentage points, driven by favorable product mix and the contribution from Splunk, partially offset by negative impacts from pricing. As a percentage of revenue, research and development, sales and marketing, and general and administrative expenses, collectively, increased by 8.1 percentage points. Operating income as a percentage of revenue decreased by 8.8 percentage points primarily driven by incremental operating expenses from Splunk and higher amortization of purchased intangible assets. Diluted earnings per share decreased by 44%, driven by a decrease in net income of 45%, partially offset by a decrease in diluted share count of 58 million shares. 
+
+Strategy and Priorities 
+
+Across the globe, businesses and organizations of every size are leveraging Cisco technology to transform and drive better outcomes and experiences. We also help customers navigate emerging technological shifts. Our strategy is to securely connect everything to make those desired outcomes and experiences possible for our customers. 
+
+For a full discussion of our strategy and priorities, see &#8220;Item 1. Business.&#8221; 
+
+Other Key Financial Measures 
+
+The following is a summary of our other key financial measures for fiscal 2024 compared with fiscal 2023 (in millions): 
+
+##TABLE_START Fiscal 2024 Fiscal 2023 Cash and cash equivalents and investments $17,854 $26,146 Cash provided by operating activities $10,880 $19,886 Remaining performance obligations $41,048 $34,868 Repurchases of common stock&#8212;stock repurchase program $5,764 $4,271 Dividends paid $6,384 $6,302 Inventories $3,373 $3,644 Total debt $30,962 $8,391 ##TABLE_END
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+CRITICAL ACCOUNTING ESTIMATES 
+
+The preparation of financial statements and related disclosures in conformity with accounting principles generally accepted in the United States requires us to make judgments, assumptions, and estimates that affect the amounts reported in the Consolidated Financial Statements and accompanying notes. Note 2 to the Consolidated Financial Statements describes the significant accounting policies and methods used in the preparation of the Consolidated Financial Statements. The accounting policies described below are significantly affected by critical accounting estimates. Such accounting policies require significant judgments, assumptions, and estimates used in the preparation of the Consolidated Financial Statements, and actual results could differ materially from the amounts reported based on these policies. 
+
+Revenue Recognition 
+
+We enter into contracts with customers that can include various combinations of products and services which are generally distinct and accounted for as separate performance obligations. As a result, our contracts may contain multiple performance obligations. We determine whether arrangements are distinct based on whether the customer can benefit from the product or service on its own or together with other resources that are readily available and whether our commitment to transfer the product or service to the customer is separately identifiable from other obligations in the contract. We classify our hardware, perpetual software licenses, and SaaS as distinct performance obligations. Term software licenses represent multiple obligations, which include software licenses and software maintenance. In transactions where we deliver hardware or software, we are typically the principal and we record revenue and costs of goods sold on a gross basis. 
+
+We recognize revenue upon transfer of control of promised goods or services in a contract with a customer in an amount that reflects the consideration we expect to receive in exchange for those products or services. Transfer of control occurs once the customer has the contractual right to use the product, generally upon shipment, electronic delivery (or when the software is available for download by the customer), or once title and risk of loss has transferred to the customer. Transfer of control can also occur over time for software maintenance and services as the customer receives the benefit over the contract term. Our hardware and perpetual software licenses are distinct performance obligations where revenue is recognized upfront upon transfer of control. Term software licenses include multiple performance obligations where the term licenses are recognized upfront upon transfer of control, with the associated software maintenance revenue recognized ratably over the contract term as services and software updates are provided. SaaS arrangements do not include the right for the customer to take possession of the software during the term, and therefore have one distinct performance obligation which is satisfied over time with revenue recognized ratably over the contract term as the customer consumes the services. On our product sales, we record consideration from shipping and handling on a gross basis within net product sales. We record our revenue net of any associated sales taxes. 
+
+Revenue is allocated among these performance obligations in a manner that reflects the consideration that we expect to be entitled to for the promised goods or services based on standalone selling prices (SSP). SSP is estimated for each distinct performance obligation and judgment may be required in their determination. The best evidence of SSP is the observable price of a product or service when we sell the goods separately in similar circumstances and to similar customers. In instances where SSP is not directly observable, we determine SSP using information that may include market conditions and other observable inputs. 
+
+We assess relevant contractual terms in our customer contracts to determine the transaction price. We apply judgment in identifying contractual terms and determining the transaction price as we may be required to estimate variable consideration when determining the amount of revenue to recognize. Variable consideration includes potential contractual penalties and various rebate, cooperative marketing and other incentive programs that we offer to our distributors, channel partners and customers. When determining the amount of revenue to recognize, we estimate the expected usage of these programs, applying the expected value or most likely estimate and update the estimate at each reporting period as actual utilization becomes available. We also consider the customers&#8217; right of return in determining the transaction price, where applicable. If actual credits received by distributors under these programs were to deviate significantly from our estimates, which are based on historical experience, our revenue could be adversely affected. 
+
+See Note 3 to the Consolidated Financial Statements for more details. 
+
+Inventory Valuation and Liability for Purchase Commitments with Contract Manufacturers and Suppliers 
+
+Inventory is written down based on excess and obsolete inventories, determined primarily by future demand forecasts. Inventory write-downs are measured as the difference between the cost of the inventory and net realizable value, based upon assumptions about future demand, and are charged to the provision for inventory, which is a component of our cost of sales. At 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+the point of the loss recognition, a new, lower cost basis for that inventory is established, and subsequent changes in facts and circumstances do not result in the restoration or increase in that newly established cost basis. 
+
+We record a liability for firm, noncancelable, and unconditional purchase commitments with contract manufacturers and suppliers for quantities in excess of our future demand forecasts consistent with the valuation of our excess and obsolete inventory. 
+
+Our provision for inventory was $576 million, $307 million, and $102 million in fiscal 2024, 2023, and 2022, respectively. The provision for the liability related to purchase commitments with contract manufacturers and suppliers was $243 million, $423 million, and $227 million in fiscal 2024, 2023, and 2022, respectively. If there were to be a sudden and significant decrease in demand for our products, if there were a higher incidence of inventory obsolescence because of rapidly changing technology or customer requirements, or if supply constraints were to continue, we could be required to increase our inventory write-downs, and our liability for purchase commitments with contract manufacturers and suppliers, and accordingly our profitability, could be adversely affected. We regularly evaluate our exposure for inventory write-downs, and the adequacy of our liability for purchase commitments. For further discussion around the supply chain impacts and risks, see &#8220;&#8212;Results of Operations&#8212;Gross Margin&#8212;Supply Chain Impacts and Risks&#8221; and &#8220;&#8212;Liquidity and Capital Resources&#8212;Inventory Supply Chain&#8221; under Item 7 of this report. 
+
+Loss Contingencies 
+
+We are subject to the possibility of various losses arising in the ordinary course of business. We consider the likelihood of the incurrence of a liability, as well as our ability to reasonably estimate the amount of loss, in determining loss contingencies. An estimated loss contingency is accrued when it is probable that a liability has been incurred and the amount of loss can be reasonably estimated. We regularly evaluate information available to us to determine whether such accruals should be made or adjusted and whether new accruals are required. 
+
+Third parties, including customers, have in the past and may in the future assert claims or initiate litigation related to exclusive patent, copyright, trademark, and other intellectual property rights to technologies and related standards that are relevant to us. These assertions have increased over time as a result of our growth and the general increase in the pace of patent claims assertions, particularly in the United States. If any infringement or other intellectual property claim made against us by any third party is successful, or if we fail to develop non-infringing technology or license the proprietary rights on commercially reasonable terms and conditions, our business, operating results, and financial condition could be materially and adversely affected. 
+
+Valuation of Goodwill and Purchased Intangible Assets 
+
+Goodwill 
+
+Our methodology for allocating the purchase price relating to purchase acquisitions is determined through established valuation techniques. Goodwill represents a residual value as of the acquisition date, which in most cases results in measuring goodwill as an excess of the purchase consideration transferred plus the fair value of any noncontrolling interest in the acquired company over the fair value of net assets acquired, including contingent consideration. We perform goodwill impairment tests on an annual basis in the fourth fiscal quarter and between annual tests in certain circumstances for each reporting unit. The assessment of fair value for goodwill and purchased intangible assets is based on factors that market participants would use in an orderly transaction in accordance with the guidance for the fair value measurement of nonfinancial assets. 
+
+In response to changes in industry and market conditions, we could be required to strategically realign our resources and consider restructuring, disposing of, or otherwise exiting businesses, which could result in an impairment of goodwill. There was no impairment of goodwill in fiscal 2024, 2023, and 2022. For the annual impairment testing in fiscal 2024, the excess of the fair value over the carrying value for each of our reporting units was $47.0 billion for the Americas, $65.9 billion for EMEA, and $25.3 billion for APJC. 
+
+During the fourth quarter of fiscal 2024, we performed a sensitivity analysis for goodwill impairment with respect to each of our respective reporting units and determined that a hypothetical 10% decline in the fair value of each reporting unit would not result in an impairment of goodwill for any reporting unit. 
+
+Purchased Intangible Assets 
+
+The accounting for acquisitions requires significant estimates and judgments in the valuation of purchased intangible assets. Critical estimates used in the valuation of purchased intangible assets include, but are not limited to, the amount and timing of expected future cash flows, useful lives and discount rates. While our estimates of fair value are based on assumptions that are 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+believed to be reasonable, these assumptions are inherently uncertain and unpredictable and would not reflect unanticipated events and circumstances that may occur. 
+
+We make judgments about the recoverability of purchased intangible assets with finite lives whenever events or changes in circumstances indicate that an impairment may exist. Recoverability of purchased intangible assets with finite lives is measured by comparing the carrying amount of the asset group to the future undiscounted cash flows the asset group is expected to generate. We review indefinite-lived intangible assets for impairment annually or whenever events or changes in circumstances indicate that the asset might be impaired. If the asset is considered impaired, the amount of any impairment is measured as the difference between the carrying value and the fair value of the impaired asset. Assumptions and estimates about future values and remaining useful lives of our purchased intangible assets are complex and subjective. They can be affected by a variety of factors, including external factors such as industry and economic trends, and internal factors such as changes in our business strategy and our internal forecasts. Our ongoing consideration of all the factors described previously could result in impairment charges in the future, which could adversely affect our net income. 
+
+Income Taxes 
+
+We are subject to income taxes in the United States and numerous foreign jurisdictions. Our effective tax rates differ from the statutory rate, primarily due to the tax impact of state taxes, foreign operations, R&#38;D tax credits, foreign-derived intangible income deductions, global intangible low-taxed income, tax audit settlements, nondeductible compensation, and international realignments. Our effective tax rate was 15.6%, 17.7%, and 18.4% in fiscal 2024, 2023, and 2022, respectively. 
+
+Significant judgment is required in evaluating our uncertain tax positions and determining our provision for income taxes. Although we believe our reserves are reasonable, no assurance can be given that the final tax outcome of these matters will not be different from that which is reflected in our historical income tax provisions and accruals. We adjust these reserves in light of changing facts and circumstances, such as the closing of a tax audit or the refinement of an estimate. To the extent that the final tax outcome of these matters is different than the amounts recorded, such differences will impact the provision for income taxes in the period in which such determination is made. The provision for income taxes includes the impact of reserve provisions and changes to reserves that are considered appropriate, as well as the related net interest and penalties. 
+
+Significant judgment is also required in determining any valuation allowance recorded against deferred tax assets. In assessing the need for a valuation allowance, we consider all available evidence, including past operating results, estimates of future taxable income, and the feasibility of tax planning strategies. If we change our determination as to the amount of deferred tax assets that can be realized, we will adjust our valuation allowance with a corresponding impact to the provision for income taxes in the period in which such determination is made. 
+
+Our provision for income taxes is subject to volatility and could be adversely impacted by earnings being lower than anticipated in countries that have lower tax rates and higher than anticipated in countries that have higher tax rates; by changes in the valuation of our deferred tax assets and liabilities; by changes to foreign-derived intangible income deduction, global intangible low-tax income and base erosion and anti-abuse tax, research and development capitalization and amortization, and corporate alternative minimum tax laws, regulations, or interpretations thereof; by expiration of or lapses in tax incentives; by transfer pricing adjustments, including the effect of acquisitions on our legal structure; by tax effects of nondeductible compensation; by tax costs related to intercompany realignments; by changes in accounting principles; or by changes in tax laws and regulations, treaties, or interpretations thereof, including changes to the taxation of earnings of our foreign subsidiaries, the deductibility of expenses attributable to foreign income, and the foreign tax credit rules. Significant judgment is required to determine the recognition and measurement attributes prescribed in the accounting guidance for uncertainty in income taxes. The OECD, an international association comprised of 38 countries, including the United States, has made changes, including a Pillar Two framework that imposes a minimum tax rate of 15% in each taxing jurisdiction, and is contemplating additional changes to numerous long-standing tax principles. There can be no assurance that these changes and any contemplated changes if finalized, once adopted by countries, will not have an adverse impact on our provision for income taxes. As a result of certain of our ongoing employment and capital investment actions and commitments, our income in certain countries was subject to reduced tax rates. Our failure to meet these commitments could adversely impact our provision for income taxes. In addition, we are subject to the continuous examination of our income tax returns by the IRS and other tax authorities. We regularly assess the likelihood of adverse outcomes resulting from these examinations to determine the adequacy of our provision for income taxes. There can be no assurance that the outcomes from these continuous examinations will not have an adverse impact on our operating results and financial condition. 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+RESULTS OF OPERATIONS 
+
+A discussion regarding our financial condition and results of operations for fiscal 2024 compared to fiscal 2023 is presented below. A discussion regarding our financial condition and results of operations for fiscal 2023 compared to fiscal 2022, with the exception of Product Revenue by Category, which is discussed herein, can be found under Item 7 in our Annual Report on Form 10-K for the fiscal year ended July 29, 2023, filed with the SEC on September 7, 2023. 
+
+Revenue 
+
+The following table presents the breakdown of revenue between product and services (in millions, except percentages): 
+
+##TABLE_START Years Ended 2024 vs. 2023 
+
+July 27, 2024 July 29, 2023 July 30, 2022 Variance in Dollars Variance in Percent Revenue: Product $ 39,253 &#160; $ 43,142 $ 38,018 $ (3,889) (9) % Percentage of revenue 73.0 &#160; % 75.7 % 73.7 % &#160; &#160; Services 14,550 &#160; 13,856 13,539 694 5 % Percentage of revenue 27.0 &#160; % 24.3 % 26.3 % &#160; &#160; Total $ 53,803 &#160; $ 56,998 $ 51,557 $ (3,195) (6) % ##TABLE_END
+
+Amounts may not sum and percentages may not recalculate due to rounding. 
+
+Total revenue for fiscal 2024 includes approximately $1.4 billion relating to the acquisition of Splunk, which consisted of approximately $1.1 billion in product revenue and approximately $240 million in services revenue. 
+
+We manage our business primarily on a geographic basis, organized into three geographic segments. Our revenue, which includes product and services for each segment, is summarized in the following table (in millions, except percentages): 
+
+##TABLE_START Years Ended 2024 vs. 2023 July 27, 2024 July 29, 2023 July 30, 2022 Variance in Dollars Variance in Percent Revenue: &#160; &#160; &#160; &#160; Americas $ 31,971 &#160; $ 33,447 $ 29,814 $ (1,476) (4) % Percentage of revenue 59.4 &#160; % 58.7 % 57.8 % &#160; &#160; EMEA 14,117 &#160; 15,135 13,715 (1,018) (7) % Percentage of revenue 26.2 &#160; % 26.6 % 26.6 % &#160; &#160; APJC 7,716 &#160; 8,417 8,027 (701) (8) % Percentage of revenue 14.3 &#160; % 14.8 % 15.6 % &#160; &#160; Total $ 53,803 &#160; $ 56,998 $ 51,557 $ (3,195) (6) % ##TABLE_END
+
+Amounts may not sum and percentages may not recalculate due to rounding. 
+
+Total revenue in fiscal 2024 decreased by 6% compared with fiscal 2023. Product revenue decreased by 9% and services revenue increased by 5%. Our total revenue reflected declines across each of our geographic segments. 
+
+In addition to the impact of macroeconomic factors, including the IT spending environment and the level of spending by government entities, revenue by segment in a particular period may be significantly impacted by the timing of revenue recognition for complex transactions with multiple performance obligations. In addition, certain customers tend to make large and sporadic purchases, and the revenue related to these transactions may also be affected by the timing of revenue recognition, which in turn would impact the revenue of the relevant segment. 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Product Revenue by Segment 
+
+The following table presents the breakdown of product revenue by segment (in millions, except percentages): 
+
+##TABLE_START Years Ended 2024 vs. 2023 July 27, 2024 July 29, 2023 July 30, 2022 Variance in Dollars Variance in Percent Product revenue: &#160; &#160; &#160; &#160; &#160; Americas $ 23,142 &#160; $ 25,019 $ 21,620 $ (1,877) (8) % Percentage of product revenue 59.0 &#160; % 58.0 % 56.9 % &#160; &#160; EMEA 10,645 &#160; 11,866 10,545 (1,221) (10) % Percentage of product revenue 27.1 &#160; % 27.5 % 27.7 % &#160; &#160; APJC 5,466 &#160; 6,257 5,854 (791) (13) % Percentage of product revenue 13.9 &#160; % 14.5 % 15.4 % &#160; &#160; Total $ 39,253 &#160; $ 43,142 $ 38,018 $ (3,889) (9) % ##TABLE_END
+
+Amounts may not sum and percentages may not recalculate due to rounding. 
+
+Americas 
+
+Product revenue in the Americas segment decreased by 8%. The product revenue decrease was driven by declines in the enterprise and service provider and cloud markets, partially offset by growth in the public sector market. The acquisition of Splunk contributed $784 million of product revenue to the Americas segment in fiscal 2024. From a country perspective, product revenue decreased by 7% in the United States, 11% in Canada, 10% in Mexico and 11% in Brazil. 
+
+EMEA 
+
+The decrease in product revenue in the EMEA segment of 10% was driven by declines across each of our customer markets. The acquisition of Splunk contributed $228 million of product revenue to the EMEA segment for fiscal 2024. From a country perspective, product revenue decreased by 10% in the United Kingdom, 14% in Germany and 11% in France. 
+
+APJC 
+
+Product revenue in the APJC segment decreased by 13%, driven by declines across each of our customer markets. The acquisition of Splunk contributed $122 million of product revenue to the APJC segment in fiscal 2024. From a country perspective, product revenue decreased by 8% in Japan, 5% in Australia, 17% in India and 35% in China. 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Product Revenue by Category 
+
+In addition to the primary view on a geographic basis, we also prepare financial information related to product categories and customer markets for various purposes. Effective fiscal 2024, we began reporting our product revenue in the following categories: Networking, Security, Collaboration, and Observability and conformed our product revenue for prior periods to the current year presentation. 
+
+The following table presents product revenue by category (in millions, except percentages): 
+
+##TABLE_START Years Ended 2024 vs. 2023 2023 vs. 2022 July 27, 2024 July 29, 2023 July 30, 2022 Variance in Dollars Variance in Percent Variance in Dollars Variance in Percent Product revenue: &#160; &#160; &#160; &#160; &#160; Networking $ 29,229 &#160; $ 34,570 $ 29,265 $ (5,341) (15) % $ 5,305 18 % Security 5,075 &#160; 3,859 3,699 1,216 32 % 160 4 % Collaboration 4,113 &#160; 4,052 4,472 61 2 % (420) (9) % Observability 837 &#160; 661 581 176 27 % 80 14 % Total $ 39,253 &#160; $ 43,142 $ 38,018 $ (3,889) (9) % $ 5,124 13 % ##TABLE_END
+
+Amounts may not sum and percentages may not recalculate due to rounding. 
+
+Networking 
+
+Fiscal 2024 Compared with Fiscal 2023 
+
+The Networking product category consists of our core networking technologies of switching, routing, wireless, and servers. Revenue from the Networking product category decreased by 15%, or $5.3 billion. During fiscal 2024, we saw customers scrutinizing spend and needing additional time to implement elevated levels of product shipments received in prior quarters. Revenue declined in both campus switching and data center switching, primarily driven by declines in our Catalyst 9000 series and Nexus 9000 series offerings. We experienced a revenue decline in enterprise routing, although we saw revenue growth in our SD-WAN offerings. The decrease in wireless was primarily driven by our WiFi-6 products and Meraki offerings. We also saw a revenue decline in routed optical networking. 
+
+Fiscal 2023 Compared with Fiscal 2022 
+
+Revenue from the Networking product category increased by 18%, or $5.3 billion. Revenue grew in both campus switching and data center switching. This was primarily driven by strong growth in our Catalyst 9000 series, Nexus 9000 series and Meraki switching offerings. The increase in enterprise routing was primarily driven by growth in Catalyst 8000 routers, SD-WAN and IoT routing offerings. Wireless grew primarily driven by our WiFi-6 products and Meraki offerings. Revenue in routed optical networking was flat, primarily driven by growth in our Core routing portfolio, including our Cisco 8000 series offerings and growth in our webscale provider market. 
+
+Security 
+
+Fiscal 2024 Compared with Fiscal 2023 
+
+The Security product category consists of our Network Security, Identity and Access Management, SASE and Threat Intelligence, Detection, and Response offerings. Revenue in our Security product category increased by 32%, or $1.2 billion, primarily driven by the contribution of Splunk offerings and growth across the portfolio. The Security product category grew 4%, not including the contribution from Splunk offerings. 
+
+Fiscal 2023 Compared with Fiscal 2022 
+
+Revenue in the Security product category increased by 4%, or $160 million, primarily driven by growth in our Secure Access Service Edge and Zero Trust offerings. 
+
+Collaboration 
+
+Fiscal 2024 Compared with Fiscal 2023 
+
+The Collaboration product category consists of our Webex Suite, Collaboration Devices, Contact Center and CPaaS offerings. Revenue in our Collaboration product category increased 2%, or $61 million, primarily driven by growth across the portfolio, except our Meetings offering. 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Fiscal 2023 Compared with Fiscal 2022 
+
+Revenue in the Collaboration product category decreased 9%, or $420 million, primarily driven by declines in Collaboration Devices and Meetings, partially offset by growth in our Calling and Contact Center offerings. 
+
+Observability 
+
+Fiscal 2024 Compared with Fiscal 2023 
+
+The Observability product category consists of our network assurance, monitoring and analytics and observability suite offerings. Revenue in our Observability product category increased by 27%, or $176 million, driven by growth in our ThousandEyes offering and the contribution from Observability Suite, our Splunk offering. Product revenue in the Observability product category increased 15%, not including the contribution from Splunk. 
+
+Fiscal 2023 Compared with Fiscal 2022 
+
+Revenue in our Observability product category increased 14%, or $80 million, driven by growth in our ThousandEyes and monitoring and analytics offerings. 
+
+Services Revenue by Segment 
+
+The following table presents the breakdown of services revenue by segment (in millions, except percentages): 
+
+##TABLE_START Years Ended 2024 vs. 2023 July 27, 2024 July 29, 2023 July 30, 2022 Variance in Dollars Variance in Percent Services revenue: &#160; &#160; &#160; &#160; &#160; Americas $ 8,829 &#160; $ 8,427 $ 8,194 $ 402 5 % Percentage of service revenue 60.7 &#160; % 60.8 % 60.5 % EMEA 3,472 &#160; 3,269 3,171 203 6 % Percentage of service revenue 23.9 &#160; % 23.6 % 23.4 % APJC 2,249 &#160; 2,160 2,173 89 4 % Percentage of service revenue 15.5 &#160; % 15.6 % 16.0 % Total $ 14,550 &#160; $ 13,856 $ 13,539 $ 694 5 % ##TABLE_END
+
+Amounts may not sum and percentages may not recalculate due to rounding. 
+
+Services revenue increased 5%, driven by growth in our solution support, advisory services and software support offerings. The acquisition of Splunk also contributed to the growth in services revenue for fiscal 2024. Services revenue increased across all of our geographic segments. Services revenue grew 3%, not including the contribution from Splunk. 
+
+Gross Margin 
+
+The following table presents the gross margin for products and services (in millions, except percentages): 
+
+##TABLE_START AMOUNT PERCENTAGE Years Ended July 27, 2024 July 29, 2023 July 30, 2022 July 27, 2024 July 29, 2023 July 30, 2022 Gross margin: Product $ 24,914 &#160; $ 26,552 $ 23,204 63.5 &#160; % 61.5 % 61.0 % Services 9,914 &#160; 9,201 9,044 68.1 &#160; % 66.4 % 66.8 % Total $ 34,828 &#160; $ 35,753 $ 32,248 64.7 &#160; % 62.7 % 62.5 % ##TABLE_END
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Product Gross Margin 
+
+The following table summarizes the key factors that contributed to the change in product gross margin percentage from fiscal 2023 to fiscal 2024: 
+
+##TABLE_START Product Gross Margin Percentage Fiscal 2023 61.5 &#160; % 
+
+Productivity (1) 
+
+1.7 &#160; % Product pricing (0.6) % Mix of products sold 2.0 &#160; % Amortization of purchased intangible assets (0.9) % Others (0.2) % Fiscal 2024 63.5 &#160; % ##TABLE_END
+
+(1) Productivity includes overall manufacturing-related costs, such as component costs, warranty expense, provision for inventory, freight, logistics, shipment volume, and other items not categorized elsewhere. 
+
+Product gross margin increased by 2.0 percentage points primarily driven by favorable product mix, productivity benefits, largely driven by lower freight and other costs, and benefits from Splunk. This was partially offset by the amortization of purchased intangible assets primarily related to Splunk, and negative impacts from pricing. 
+
+Supply Chain Impacts and Risks 
+
+In past periods, we took multiple actions in order to mitigate component shortages and address significant supply constraints. These supply constraints resulted in the need to secure long-term supply and increased inventory supply chain balances compared to historical levels. This in turn has significantly increased our supply chain exposure, which has resulted in negative impacts to our product gross margin in recent periods and may result in further negative impacts in future periods. This exposure includes potential material excess and obsolete or other charges if product demand significantly decreases for a sustained duration, we are unable to generate demand for certain products planned for development, or we are unable to mitigate the remaining supply chain exposures. 
+
+Services Gross Margin 
+
+Our services gross margin percentage increased by 1.7 percentage points primarily due to higher sales volume, lower headcount-related and delivery costs, lower variable compensation expense and favorable mix of service offerings. 
+
+Our services gross margin normally experiences some fluctuations due to various factors such as the timing of contract initiations in our renewals, our strategic investments in headcount, and the resources we deploy to support the overall service business. Other factors include the mix of service offerings, as the gross margin from our advanced services is typically lower than the gross margin from technical support services. 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Gross Margin by Segment 
+
+The following table presents the total gross margin for each segment (in millions, except percentages): 
+
+##TABLE_START AMOUNT PERCENTAGE Years Ended July 27, 2024 July 29, 2023 July 30, 2022 July 27, 2024 July 29, 2023 July 30, 2022 Gross margin: Americas $ 21,372 &#160; $ 21,350 $ 19,117 66.8 &#160; % 63.8 % 64.1 % EMEA 9,755 &#160; 10,016 8,969 69.1 &#160; % 66.2 % 65.4 % APJC 5,187 &#160; 5,424 5,241 67.2 &#160; % 64.4 % 65.3 % Segment total 36,312 &#160; 36,788 33,326 67.5 &#160; % 64.5 % 64.6 % Unallocated corporate items (1) 
+
+(1,484) (1,035) (1,078) Total $ 34,828 &#160; $ 35,753 $ 32,248 64.7 &#160; % 62.7 % 62.5 % ##TABLE_END
+
+(1) The unallocated corporate items include the effects of amortization and impairments of acquisition-related intangible assets, share-based compensation expense, significant litigation settlements and other contingencies, charges related to asset impairments and restructurings, and certain other charges. We do not allocate these items to the gross margin for each segment because management does not include such information in measuring the performance of the operating segments. 
+
+Amounts may not sum and percentages may not recalculate due to rounding. 
+
+We experienced a gross margin percentage increase in our Americas segment due to productivity benefits, favorable product mix and higher services gross margin, partially offset by negative impacts from pricing. 
+
+Gross margin in our EMEA segment increased due to favorable product mix, productivity benefits and higher services gross margin, partially offset by negative impacts from pricing. 
+
+The APJC segment gross margin percentage increase was due to favorable product mix and productivity benefits, partially offset by negative impacts from pricing. 
+
+Research and Development (&#8220;R&#38;D&#8221;), Sales and Marketing, and General and Administrative (&#8220;G&#38;A&#8221;) Expenses 
+
+R&#38;D, sales and marketing, and G&#38;A expenses are summarized in the following table (in millions, except percentages): 
+
+##TABLE_START Years Ended 2024 vs. 2023 July 27, 2024 July 29, 2023 July 30, 2022 Variance in Dollars Variance in Percent Research and development $ 7,983 &#160; $ 7,551 $ 6,774 $ 432 6 % Percentage of revenue 14.8 &#160; % 13.2 % 13.1 % Sales and marketing 10,364 &#160; 9,880 9,085 484 5 % Percentage of revenue 19.3 &#160; % 17.3 % 17.6 % General and administrative 2,813 &#160; 2,478 2,101 335 14 % Percentage of revenue 5.2 &#160; % 4.3 % 4.1 % Total $ 21,160 &#160; $ 19,909 $ 17,960 $ 1,251 6 % Percentage of revenue 39.3 &#160; % 34.9 % 34.8 % ##TABLE_END
+
+R&#38;D Expenses 
+
+R&#38;D expenses increased due to higher share-based compensation expense, incremental expenses from Splunk, higher cash compensation from acquisitions and higher discretionary spending, partially offset by lower headcount-related expenses and lower variable compensation expense. 
+
+We continue to invest in R&#38;D in order to bring a broad range of products to market in a timely fashion. If we believe that we are unable to enter a particular market in a timely manner with internally developed products, we may purchase or license technology from other businesses, or we may partner with or acquire businesses as an alternative to internal R&#38;D. 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Sales and Marketing Expenses 
+
+Sales and marketing expenses increased primarily due to incremental expenses from Splunk, higher share-based compensation expense, higher discretionary spending, higher headcount-related expenses and higher cash compensation from acquisitions, partially offset by lower contracted services spending and lower variable compensation expense. 
+
+G&#38;A Expenses 
+
+G&#38;A expenses increased due to higher acquisition-related costs, incremental expenses from Splunk, higher share-based compensation expense, higher discretionary spending and higher headcount-related expenses, partially offset by lower contracted services spending and lower variable compensation expense. 
+
+Effect of Foreign Currency 
+
+In fiscal 2024, foreign currency fluctuations, net of hedging, increased the combined R&#38;D, sales and marketing, and G&#38;A expenses by approximately $30 million, or 0.2%, compared with fiscal 2023. 
+
+Amortization of Purchased Intangible Assets 
+
+The following table presents the amortization of purchased intangible assets including impairment charges (in millions): 
+
+##TABLE_START Years Ended July 27, 2024 July 29, 2023 July 30, 2022 Amortization of purchased intangible assets: Cost of sales $ 955 &#160; $ 649 $ 749 Operating expenses 698 &#160; 282 328 Total $ 1,653 &#160; $ 931 $ 1,077 ##TABLE_END
+
+The increase in amortization of purchased intangible assets was primarily due to amortization of purchased intangibles from our recent acquisitions, including $569 million due to the acquisition of Splunk, and impairment charges of $145 million in fiscal 2024. These increases were partially offset by certain purchased intangible assets that became fully amortized. The impairment charges were primarily due to declines in estimated fair value resulting from reductions in or the elimination of expected future cash flows associated with certain of our IPR&#38;D intangible assets. 
+
+Restructuring and Other Charges 
+
+We recognized total restructuring and other charges, included in operating expenses, of $789 million and $531 million in fiscal 2024 and 2023, respectively. 
+
+In the first quarter of fiscal 2025, we announced a restructuring plan in order to allow us to invest in key growth opportunities and drive more efficiencies in our business. This restructuring plan is expected to impact approximately 7% of our global workforce. The total pre-tax charges are estimated to be up to $1 billion. We expect this plan to be substantially completed by the end of fiscal 2025. 
+
+In the third quarter of fiscal 2024, we initiated a restructuring plan in order to realign the organization and enable further investment in key priority areas, of which approximately 5% of our global workforce would be impacted. In connection with this plan, we incurred charges of $654 million for fiscal 2024 and the plan is substantially complete. 
+
+In fiscal 2023, we announced a restructuring plan in order to rebalance the organization and enable further investment in key priority areas. We incurred cumulative charges of $670 million and completed this plan in fiscal 2024. 
+
+We expect to reinvest substantially all of the cost savings from these restructuring plans in our key priority areas and key growth opportunities. As a result, the overall cost savings from these restructuring plans are not expected to be material for future periods. 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Operating Income 
+
+The following table presents our operating income and our operating income as a percentage of revenue (in millions, except percentages): ##TABLE_START Years Ended July 27, 2024 July 29, 2023 July 30, 2022 Operating income $ 12,181 &#160; $ 15,031 $ 13,969 Operating income as a percentage of revenue 22.6 &#160; % 26.4 % 27.1 % ##TABLE_END
+
+Operating income decreased by 19%, and as a percentage of revenue operating income decreased by 3.8 percentage points. These changes were primarily from a revenue decrease, incremental operating expenses from Splunk, higher restructuring and other charges and higher amortization of purchased intangible assets, partially offset by a gross margin percentage increase (driven by favorable product mix, productivity benefits, partially offset by negative impacts from pricing). 
+
+Interest and Other Income (Loss), Net 
+
+Interest Income (Expense), Net The following table summarizes interest income and interest expense (in millions): 
+
+##TABLE_START Years Ended 2024 vs. 2023 July 27, 2024 July 29, 2023 July 30, 2022 Variance in Dollars Interest income $ 1,365 &#160; $ 962 $ 476 $ 403 Interest expense (1,006) (427) (360) (579) Interest income (expense), net $ 359 &#160; $ 535 $ 116 $ (176) ##TABLE_END
+
+Interest income increased driven by a higher average balance of cash and available-for-sale debt investments and higher interest rates. The increase in interest expense was primarily driven by higher interest rates and the issuances of senior notes and commercial paper during fiscal 2024. We incurred incremental net interest expense of approximately $500 million during fiscal 2024 to finance the acquisition of Splunk. We expect lower interest income in future periods due to a lower average balance of cash and available-for-sale debt investments and higher interest expense due to the higher outstanding balance of debt. 
+
+Other Income (Loss), Net The components of other income (loss), net, are summarized as follows (in millions): 
+
+##TABLE_START Years Ended 2024 vs. 2023 July 27, 2024 July 29, 2023 July 30, 2022 Variance in Dollars Gains (losses) on investments, net: Available-for-sale debt investments $ (67) $ (21) $ 9 $ (46) Marketable equity investments 65 &#160; 37 (38) 28 Privately held investments (164) (193) 486 29 Net gains (losses) on investments (166) (177) 457 11 Other gains (losses), net (140) (71) (65) (69) Other income (loss), net $ (306) $ (248) $ 392 $ (58) ##TABLE_END
+
+The change in our other income (loss), net was primarily driven by higher losses in our available-for-sale debt investments and unfavorable impacts from foreign exchange, partially offset by higher gains on our marketable equity investments and lower net losses on our privately held investments. 
+
+Provision for Income Taxes 
+
+The provision for income taxes resulted in an effective tax rate of 15.6% for fiscal 2024, compared with 17.7% for fiscal 2023. The net 2.1 percentage points decrease in the effective tax rate was primarily due to an increase in discrete tax benefits relating to prior year return-to-provision true up and an increase in stock-based compensation windfall benefit. 
+
+For a full reconciliation of our effective tax rate to the U.S. federal statutory rate of 21% and for further explanation of our provision for income taxes, see Note 18 to the Consolidated Financial Statements. 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+LIQUIDITY AND CAPITAL RESOURCES 
+
+The following sections discuss the effects of changes in our balance sheet, our capital allocation strategy including stock repurchase program and dividends, our contractual obligations, and certain other commitments and activities on our liquidity and capital resources. 
+
+Balance Sheet and Cash Flows 
+
+Cash and Cash Equivalents and Investments The following table summarizes our cash and cash equivalents and investments (in millions): 
+
+##TABLE_START &#160; July 27, 2024 July 29, 2023 Increase (Decrease) Cash and cash equivalents $ 7,508 &#160; $ 10,123 $ (2,615) Available-for-sale debt investments 9,865 &#160; 15,592 (5,727) Marketable equity securities 481 &#160; 431 50 Total $ 17,854 &#160; $ 26,146 $ (8,292) ##TABLE_END
+
+The net decrease in cash and cash equivalents and investments from fiscal 2023 to fiscal 2024 was primarily driven by a net outflow for the acquisition of Splunk of $27.5 billion, cash returned to stockholders in the form of cash dividends of $6.4 billion and repurchases of common stock of $5.8 billion, repayment of debt of $1.8 billion, net cash paid for our other acquisitions, excluding Splunk, of $1.3 billion and capital expenditures of $0.7 billion. These uses of cash were partially offset by the issuance of senior notes for net proceeds of $13.4 billion, net cash provided by operating activities of $10.9 billion and net issuances of commercial paper notes of $10.8 billion. The net cash provided by operating activities during fiscal 2024 includes the fiscal 2023 federal tax payment of $2.8 billion that was deferred by the IRS as a result of the California floods and the U.S. transition tax payment of $1.4 billion. 
+
+We maintain an investment portfolio of various holdings, types, and maturities. We classify our investments as short-term investments based on their nature and their availability for use in current operations. We believe the overall credit quality of our portfolio is strong, with our cash equivalents and our available-for-sale debt investment portfolio consisting primarily of high quality investment-grade securities. We believe that our strong cash and cash equivalents and investments position allows us to use our cash resources for strategic investments to gain access to new technologies, for acquisitions, for customer financing activities, for working capital needs, and for the repurchase of shares of common stock and payment of dividends as discussed below. 
+
+Securities Lending We periodically engage in securities lending activities with certain of our available-for-sale debt investments. These transactions are accounted for as a secured lending of the securities, and the securities are typically loaned only on an overnight basis. We require collateral equal to at least 102% of the fair market value of the loaned security and that the collateral be in the form of cash or liquid, high-quality assets. We engage in these secured lending transactions only with highly creditworthy counterparties, and the associated portfolio custodian has agreed to indemnify us against collateral losses. We did not experience any losses in connection with the secured lending of securities during the periods presented. As of July 27, 2024 and July 29, 2023, we had no outstanding securities lending transactions. 
+
+Free Cash Flow and Capital Allocation As part of our capital allocation strategy, we target to return a minimum of 50% of our free cash flow annually to our stockholders through cash dividends and repurchases of common stock. 
+
+We define free cash flow as net cash provided by operating activities less cash used to acquire property and equipment. The following table reconciles our net cash provided by operating activities to free cash flow (in millions): 
+
+##TABLE_START Years Ended July 27, 2024 July 29, 2023 July 30, 2022 Net cash provided by operating activities $ 10,880 &#160; $ 19,886 $ 13,226 Acquisition of property and equipment (670) (849) (477) Free cash flow $ 10,210 &#160; $ 19,037 $ 12,749 ##TABLE_END
+
+We expect that cash provided by operating activities may fluctuate in future periods as a result of a number of factors, including fluctuations in our operating results, the rate at which products are shipped during the quarter (which we refer to as shipment linearity), the timing and collection of accounts receivable and financing receivables, inventory and supply chain management, 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+deferred revenue and the timing and amount of tax and other payments. For additional discussion, see &#8220;Part I, Item 1A. Risk Factors&#8221; in this report. 
+
+We consider free cash flow to be a liquidity measure that provides useful information to management and investors because of our intent to return a stated percentage of free cash flow to stockholders in the form of dividends and stock repurchases. We further regard free cash flow as a useful measure because it reflects cash that can be used to, among other things, invest in our business, make strategic acquisitions, repurchase common stock, and pay dividends on our common stock, after deducting capital investments. A limitation of the utility of free cash flow as a measure of financial performance and liquidity is that the free cash flow does not represent the total increase or decrease in our cash balance for the period. In addition, we have other required uses of cash, including repaying the principal of our outstanding indebtedness. Free cash flow is not a measure calculated in accordance with U.S. generally accepted accounting principles and should not be regarded in isolation or as an alternative for net cash provided by operating activities or any other measure calculated in accordance with such principles, and other companies may calculate free cash flow in a different manner than we do. 
+
+The following table summarizes the dividends paid and stock repurchases (in millions, except per-share amounts): 
+
+##TABLE_START DIVIDENDS STOCK REPURCHASE PROGRAM TOTAL Years Ended Per Share Amount Shares Weighted-Average Price per Share Amount Amount July 27, 2024 $ 1.58 &#160; $ 6,384 &#160; 117 &#160; $ 49.45 &#160; $ 5,764 &#160; $ 12,148 &#160; July 29, 2023 $ 1.54 $ 6,302 88 $ 48.49 $ 4,271 $ 10,573 July 30, 2022 $ 1.50 $ 6,224 146 $ 52.82 $ 7,734 $ 13,958 ##TABLE_END
+
+On August 14, 2024, our Board of Directors declared a quarterly dividend of $0.40 per common share to be paid on October 23, 2024, to all stockholders of record as of the close of business on October 2, 2024. Future dividends will be subject to the approval of our Board of Directors. 
+
+The remaining authorized amount for stock repurchases under this program is approximately $5.2 billion, with no termination date. 
+
+Accounts Receivable, Net &#160; The following table summarizes our accounts receivable, net (in millions): 
+
+##TABLE_START &#160; July 27, 2024 July 29, 2023 Increase (Decrease) Accounts receivable, net $ 6,685 &#160; $ 5,854 $ 831 ##TABLE_END
+
+Our accounts receivable net, as of July 27, 2024 increased by approximately 14% compared with the end of fiscal 2023, primarily due to timing and amount of product and service billings at the end of fiscal 2024 compared with the end of fiscal 2023. 
+
+Inventory Supply Chain The following table summarizes our inventories and inventory purchase commitments with contract manufacturers and suppliers (in millions): 
+
+##TABLE_START &#160; July 27, 2024 July 29, 2023 July 30, 2022 Variance vs. July 29, 2023 Variance vs. July 30, 2022 Inventories $ 3,373 &#160; $ 3,644 $ 2,568 $ (271) $ 805 Inventory purchase commitments $ 5,158 &#160; $ 7,253 $ 12,964 $ (2,095) $ (7,806) Inventory deposits and prepayments $ 973 &#160; $ 1,109 $ 1,484 $ (136) $ (511) ##TABLE_END
+
+The following table summarizes our inventory purchase commitments with contract manufacturers and suppliers by period (in millions): 
+
+##TABLE_START &#160; July 27, 2024 July 29, 2023 July 30, 2022 Variance vs. July 29, 2023 Variance vs. July 30, 2022 Less than 1 year $ 3,952 &#160; $ 5,270 $ 9,954 $ (1,318) $ (6,002) 1 to 3 years 1,085 &#160; 1,783 2,240 (698) (1,155) 3 to 5 years 121 &#160; 200 770 (79) (649) Total $ 5,158 &#160; $ 7,253 $ 12,964 $ (2,095) $ (7,806) ##TABLE_END
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Inventory as of July 27, 2024 decreased by 7% and inventory purchase commitments with contract manufacturers and suppliers decreased by 29% from our balances at the end of fiscal 2023. The combined decrease of 22% in our inventory and inventory purchase commitments as compared with the end of fiscal 2023 was primarily due to our continued efforts to work with contract manufacturers and suppliers to optimize our inventory and purchase commitment levels. 
+
+We have increased our levels of inventory in order to help mitigate risks in our supply chain. We also began increasing our inventory supply chain balances starting in fiscal 2021 in order to address significant supply constraints seen industry-wide. The increases were primarily due to arrangements to secure supply and pricing for certain product components and commitments with contract manufacturers to meet customer demand and to address extended lead times, as well as advance payments with suppliers to secure future supply, as a result of the supply constraints. Our risks of future material excess and obsolete inventory and related losses are further outlined in the Result of Operations&#8212;Product Gross Margin section. 
+
+We purchase components from a variety of suppliers and use several contract manufacturers to provide manufacturing services for our products. During the normal course of business, in order to manage manufacturing lead times and help ensure adequate component supply, we enter into agreements with contract manufacturers and suppliers that allow them to procure inventory based upon criteria as defined by us or that establish the parameters defining our requirements and our commitment to securing manufacturing capacity. 
+
+Our inventory purchase commitments are for short-term product manufacturing requirements as well as for commitments to suppliers to secure manufacturing capacity. Certain of our inventory purchase commitments are entered into directly with suppliers and relate to fixed-dollar commitments to secure supply and pricing for certain product components for multi-year periods. A significant portion of our reported purchase commitments arising from these agreements are firm, noncancelable, and unconditional commitments. In certain instances, these agreements allow us the option to cancel, reschedule, and adjust our requirements based on our business needs prior to firm orders being placed. 
+
+Inventory and supply chain management remain areas of focus as we balance the need to maintain supply chain flexibility to help ensure competitive lead times with the risk of inventory obsolescence because of supply constraints, rapidly changing technology and customer requirements. We believe the amount of our inventory and inventory purchase commitments is appropriate for our current and expected customer demand and revenue levels. 
+
+Financing Receivables and Guarantees The following table summarizes our financing receivables (in millions): 
+
+##TABLE_START &#160; July 27, 2024 July 29, 2023 Increase (Decrease) Loan receivables, net $ 5,808 &#160; $ 5,857 $ (49) Lease receivables, net 906 &#160; 978 (72) Total, net $ 6,714 &#160; $ 6,835 $ (121) ##TABLE_END
+
+Financing Receivables Our financing arrangements include loans and leases. Our loan receivables include customer financing for purchases of our hardware, software and services (including technical support and advanced services), and also may include additional funds for other costs associated with network installation and integration of our products and services. Lease receivables include sales-type leases. Arrangements related to leases are generally collateralized by a security interest in the underlying assets. Financing receivables decreased by 2% as compared with the end of fiscal 2023. 
+
+Financing Guarantees In the normal course of business, third parties may provide financing arrangements to our customers and channel partners under financing programs. The financing arrangements provided by third parties are related to leases and loans and typically have terms of up to three years. In some cases, we provide guarantees to third parties for these lease and loan arrangements. The financing arrangements to channel partners consist of revolving short-term financing provided by third parties, with payment terms generally ranging from 60 to 90 days. In certain instances, these financing arrangements result in a transfer of our receivables to the third party. The receivables are derecognized upon transfer, as these transfers qualify as true sales, and we receive payments for the receivables from the third party based on our standard payment terms. 
+
+The volume of channel partner financing was $27.1 billion, $32.1 billion, and $27.9 billion in fiscal 2024, 2023, and 2022, respectively. These financing arrangements facilitate the working capital requirements of the channel partners, and in some cases, we guarantee a portion of these arrangements. The balance of the channel partner financing subject to guarantees was $1.2 billion and $1.7 billion as of July 27, 2024 and July 29, 2023, respectively. We could be called upon to make payments under these guarantees in the event of nonpayment by the channel partners. Historically, our payments under these arrangements have been immaterial. Where we provide a guarantee, we defer the revenue associated with the channel partner financing arrangement in accordance with revenue recognition policies, or we record a liability for the fair value of the guarantees. In either case, the deferred revenue is recognized as revenue when the guarantee is removed. As of July 27, 2024, 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+the total maximum potential future payments related to these guarantees was approximately $127 million, of which approximately $13 million was recorded as deferred revenue. 
+
+Borrowings 
+
+Senior Notes The following table summarizes the principal amount of our senior notes (in millions): 
+
+##TABLE_START &#160; Maturity Date July 27, 2024 July 29, 2023 Senior notes: Fixed-rate notes: 2.20% September 20, 2023 $ &#8212; &#160; $ 750 3.625% March 4, 2024 &#8212; &#160; 1,000 3.50% June 15, 2025 500 &#160; 500 4.90% February 26, 2026 1,000 &#160; &#8212; 2.95% February 28, 2026 750 &#160; 750 2.50% September 20, 2026 1,500 &#160; 1,500 4.80% February 26, 2027 2,000 &#160; &#8212; 4.85% February 26, 2029 2,500 &#160; &#8212; 4.95% February 26, 2031 2,500 &#160; &#8212; 5.05% February 26, 2034 2,500 &#160; &#8212; 5.90% February 15, 2039 2,000 &#160; 2,000 5.50% January 15, 2040 2,000 &#160; 2,000 5.30% February 26, 2054 2,000 &#160; &#8212; 5.35% February 26, 2064 1,000 &#160; &#8212; Total $ 20,250 &#160; $ 8,500 ##TABLE_END
+
+In February 2024, we issued senior notes for an aggregate principal amount of $13.5 billion. 
+
+Interest is payable semiannually on each class of the senior fixed-rate notes, each of which is redeemable by us at any time, subject to a make-whole premium. We were in compliance with all debt covenants as of July 27, 2024. 
+
+Commercial Paper We have a short-term debt financing program in which up to $15.0 billion is available through the issuance of commercial paper notes. We use the proceeds from the issuance of commercial paper notes for general corporate purposes. We had $10.9 billion in commercial paper notes outstanding as of July 27, 2024, and no commercial paper notes outstanding as of July 29, 2023. 
+
+Credit Facility On February 2, 2024, we entered into an amended and restated 5-year $5.0 billion unsecured revolving credit agreement. The interest rate for the credit agreement is determined based on a formula using certain market rates. The credit agreement requires that we comply with certain covenants, including that we maintain an interest coverage ratio (defined in the agreement as the ratio of consolidated EBITDA to consolidated interest expense) of not less than 3.0 to 1.0. As of July 27, 2024, we were in compliance with all associated covenants and we had not borrowed any funds under our credit agreement. 
+
+Remaining Performance Obligations The following table presents the breakdown of remaining performance obligations (in millions): 
+
+##TABLE_START &#160; July 27, 2024 July 29, 2023 Increase (Decrease) Product $ 20,055 &#160; $ 15,802 $ 4,253 Services 20,993 &#160; 19,066 1,927 Total $ 41,048 &#160; $ 34,868 $ 6,180 Short-term RPO $ 20,882 &#160; $ 17,910 $ 2,972 Long-term RPO 20,166 &#160; 16,958 3,208 Total $ 41,048 &#160; $ 34,868 $ 6,180 ##TABLE_END
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Total remaining performance obligations increased 18% in fiscal 2024. Total remaining performance obligations as of July 27, 2024 includes $3.5 billion related to the acquisition of Splunk. Remaining performance obligations for product increased 27% and remaining performance obligations for services increased 10%, compared to fiscal 2023. We expect approximately 51% of total remaining performance obligations to be recognized as revenue over the next 12 months. 
+
+Deferred Revenue The following table presents the breakdown of deferred revenue (in millions): 
+
+##TABLE_START &#160; July 27, 2024 July 29, 2023 Increase (Decrease) Product $ 13,219 &#160; $ 11,505 $ 1,714 Services 15,256 &#160; 14,045 1,211 Total $ 28,475 &#160; $ 25,550 $ 2,925 Reported as: Current $ 16,249 &#160; $ 13,908 $ 2,341 Noncurrent 12,226 &#160; 11,642 584 Total $ 28,475 &#160; $ 25,550 $ 2,925 ##TABLE_END
+
+Total deferred revenue increased 11% in fiscal 2024. The increase in deferred product revenue of 15% was primarily due to the contribution from the Splunk acquisition of $1.7 billion and increased deferrals related to our recurring software offerings. The increase in deferred services revenue of 9% was driven by higher business volume and the impact of contract renewals and the contribution of the Splunk acquisition, partially offset by ongoing amortization of deferred services revenue. 
+
+Contractual Obligations 
+
+The impact of contractual obligations on our liquidity and capital resources in future periods should be analyzed in conjunction with the factors that impact our cash flows from operations discussed previously. In addition, we plan for and measure our liquidity and capital resources through an annual budgeting process. The following table summarizes our contractual obligations at July 27, 2024 (in millions): 
+
+##TABLE_START &#160; PAYMENTS DUE BY PERIOD July 27, 2024 Total Less than 1 Year 1 to 3 Years 3 to 5 Years More than 5 Years Operating leases $ 1,420 $ 409 $ 502 $ 256 $ 253 Purchase commitments with contract manufacturers and suppliers 5,158 3,952 1,085 121 &#8212; Other purchase obligations 3,998 1,295 1,736 822 145 Senior notes 20,253 500 5,253 2,500 12,000 Transition tax payable 4,092 1,819 2,273 &#8212; &#8212; Other long-term liabilities 1,557 &#8212; 232 178 1,147 Total by period $ 36,478 $ 7,975 $ 11,081 $ 3,877 $ 13,545 Other long-term liabilities (uncertainty in the timing of future payments) 1,789 Total $ 38,267 ##TABLE_END
+
+Operating Leases For more information on our operating leases, see Note 8 to the Consolidated Financial Statements. 
+
+Purchase Commitments with Contract Manufacturers and Suppliers We purchase components from a variety of suppliers and use several contract manufacturers to provide manufacturing services for our products. Our inventory purchase commitments are for short-term product manufacturing requirements as well as for commitments to suppliers to secure manufacturing capacity. Certain of our inventory purchase commitments are directly with suppliers and relate to fixed-dollar commitments to secure supply and pricing for certain product components for multi-year periods. A significant portion of our reported purchase commitments arising from these agreements are firm, noncancelable, and unconditional commitments. We record a liability for firm, noncancelable, and unconditional purchase commitments for quantities in excess of our future demand forecasts consistent with the valuation of our excess and obsolete inventory. See further discussion in &#8220;Inventory Supply Chain.&#8221; 
+
+CISCO SYSTEMS, INC. 
+
+MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS (Continued) 
+
+Other Purchase Obligations Other purchase obligations represent an estimate of all contractual obligations in the ordinary course of business, other than operating leases and commitments with contract manufacturers and suppliers, for which we have not received the goods or services. Purchase orders are not included in the preceding table as they typically represent our authorization to purchase rather than binding contractual purchase obligations. 
+
+Long-Term Debt The amount of long-term debt in the preceding table represents the principal amount of the respective debt instruments. See Note 12 to the Consolidated Financial Statements. 
+
+Transition Tax Payable Transition tax payable represents future cash tax payments associated with the one-time U.S. transition tax on accumulated earnings for foreign subsidiaries as a result of the Tax Cuts and Jobs Act (&#8220;the Tax Act&#8221;). 
+
+Other Long-Term Liabilities Other long-term liabilities primarily include noncurrent income taxes payable, accrued liabilities for deferred compensation, deferred tax liabilities, and certain other long-term liabilities. Due to the uncertainty in the timing of future payments, our noncurrent income taxes payable of approximately $1.7 billion and deferred tax liabilities of $76 million were presented as one aggregated amount in the total column on a separate line in the preceding table. Noncurrent income taxes payable include uncertain tax positions. See Note 18 to the Consolidated Financial Statements. 
+
+Other Commitments 
+
+In connection with our acquisitions, we have agreed to pay certain additional amounts contingent upon the continued employment with us of certain employees of the acquired entities. See Note 4 to the Consolidated Financial Statements. 
+
+We also have certain funding commitments primarily related to our privately held investments. The funding commitments were $0.2 billion and $0.3 billion as of July 27, 2024 and July 29, 2023, respectively. 
+
+In the ordinary course of business, we have privately held investments and provide financing to certain customers. Certain of these investments are considered to be variable interest entities. We evaluate on an ongoing basis our privately held investments and customer financings, and we have determined that as of July 27, 2024 there were no material unconsolidated variable interest entities. 
+
+On an ongoing basis, we reassess our privately held investments and customer financings to determine if they are variable interest entities and if we would be regarded as the primary beneficiary pursuant to the applicable accounting guidance. As a result of this ongoing assessment, we may be required to make additional disclosures or consolidate these entities. Because we may not control these entities, we may not have the ability to influence these events. 
+
+We provide financing guarantees, which are generally for various third-party financing arrangements extended to our channel partners. We could be called upon to make payments under these guarantees in the event of nonpayment by the channel partners. See the previous discussion of these financing guarantees under &#8220;Financing Receivables and Guarantees.&#8221; 
+
+Liquidity and Capital Resource Requirements 
+
+Based on past performance and current expectations, we believe our cash and cash equivalents, investments, cash generated from operations, and ability to access capital markets and committed credit lines will satisfy, through at least the next 12 months, our liquidity requirements, both in total and domestically, including the following: working capital needs (including inventory and other supply related payments), capital expenditures, investment requirements, stock repurchases, cash dividends, contractual obligations, commitments, principal and interest payments on debt, pending acquisitions, future customer financings, and other liquidity requirements associated with our operations. There are no other transactions, arrangements, or relationships with unconsolidated entities or other persons that are reasonably likely to materially affect the liquidity and the availability of, as well as our requirements for, capital resources. 
+
+##TABLE_START 

@@ -1,0 +1,562 @@
+ Item 1. Business 
+
+Basis of Presentation 
+
+In this Annual Report on Form 10-K, the term "Celanese" refers to Celanese Corporation, a Delaware corporation, and not its subsidiaries. The terms "Company," "we," "our" and "us" refer to Celanese and its subsidiaries on a consolidated basis. The term "Celanese U.S." refers to the Company's subsidiary, Celanese US Holdings LLC, a Delaware limited liability company, and not its subsidiaries. 
+
+Industry 
+
+This Annual Report on Form 10-K includes industry data obtained from industry publications and surveys, as well as our own internal company surveys. Third-party industry publications, surveys and forecasts generally state that the information contained therein has been obtained from sources believed to be reliable. 
+
+Overview 
+
+We are a global chemical and specialty materials company. We are a leading global producer of high performance engineered polymers that are used in a variety of high-value applications, as well as one of the world's largest producers of acetyl products, which are intermediate chemicals for nearly all major industries. As a recognized innovator in the chemicals industry, we engineer and manufacture a wide variety of products essential to everyday living. Our broad product portfolio serves a diverse set of end-use applications including automotive, chemical additives, construction, consumer and industrial adhesives, medical, consumer electronics, energy storage, filtration, paints and coatings, paper and packaging, industrial applications and textiles. Our products enjoy leading global positions due to our differentiated business models, large global production capacity, operating efficiencies, proprietary technology and competitive cost structures. 
+
+Our large and diverse global customer base primarily consists of major companies across a broad array of industries. We hold geographically balanced global positions and participate in diversified end-use applications. We combine a demonstrated track record of execution, strong performance built on differentiated business models and a clear focus on growth and value creation. Known for operational excellence, reliability and execution of our business strategies, we partner with our customers around the globe to deliver best-in-class technologies and solutions. 
+
+Celanese's history began in 1918, the year that its predecessor company, The American Cellulose &#38; Chemical Manufacturing Company, was incorporated. The company, which manufactured cellulose acetate, was founded by Swiss brothers Drs. Camille and Henri Dreyfus. The current Celanese was incorporated in 2004 under the laws of the State of Delaware and is a U.S.-based public company traded on the New York Stock Exchange under the ticker symbol CE. 
+
+Headquartered in Irving, Texas, our operations are primarily located in North America, Europe and Asia and consist of 58 global production facilities and an additional 20 strategic affiliate production facilities. As of December 31, 2023, we employed 12,410 people worldwide. 
+
+Business Segment Overview 
+
+Effective December 31, 2022, we reorganized our operating and reportable segments to align with recent structural and management reporting changes. The change reflects the resegmentation of the former Acetate Tow operating and reportable segment into the Acetyl Chain operating and reportable segment. This reorganization reflects the culmination of a shift in operating strategy and organizational hierarchy, with a focus on integration, collaboration and maximization of value creation through its global optionality and integrated chain model of the underlying businesses. 
+
+We operate principally through two business segments: Engineered Materials and the Acetyl Chain. See Business Segments in this Item 1. Business and Note 21 - Segment Information and Note 22 - Revenue Recognition in the accompanying consolidated financial statements for further information. 
+
+Business Segments 
+
+Engineered Materials 
+
+##TABLE_START Products Major End-Use Applications Principal Competitors Key Raw Materials &#8226; Nylon compounds or formulations 
+
+&#8226; High temperature nylons ("HTN") 
+
+&#8226; Polyoxymethylene ("POM") 
+
+&#8226; Polyethylene terephthalate ("PET") 
+
+&#8226; Polybutylene terephthalate ("PBT") 
+
+&#8226; Ultra-high molecular weight polyethylene ("UHMW-PE") 
+
+&#8226; Long-fiber reinforced thermoplastics ("LFRT") 
+
+&#8226; Liquid crystal polymers ("LCP") 
+
+&#8226; Thermoplastic elastomers ("TPE") 
+
+&#8226; Thermoplastic vulcanizates ("TPV") 
+
+&#8226; Polypropylene compounds or formulations 
+
+&#8226; Polyphenylene sulfide ("PPS") 
+
+&#8226; Ethylene vinyl acetate ("EVA") pharmaceutical grade copolymers 
+
+&#8226; Ethylene acrylic elastomers ("EAE") 
+
+&#8226; Automotive 
+
+&#8226; Medical 
+
+&#8226; Industrial 
+
+&#8226; Energy storage 
+
+&#8226; Consumer electronics 
+
+&#8226; Appliances 
+
+&#8226; Construction 
+
+&#8226; Filtration equipment 
+
+&#8226; Telecommunications 
+
+&#8226; Beverages 
+
+&#8226; Electrical 
+
+&#8226; Mobility 
+
+&#8226; Connectivity 
+
+&#8226; Anhui Jinhe Industrial Co., Ltd. 
+
+&#8226; Ascend Performance Materials LLC 
+
+&#8226; BASF SE 
+
+&#8226; Daicel Corporation ("Daicel") 
+
+&#8226; DOMO Chemicals 
+
+&#8226; E. I. du Pont de Nemours and Company 
+
+&#8226; Kingfa Science and Technology 
+
+&#8226; Korea Petrochemical Ind. Co, Ltd ("KPIC") 
+
+&#8226; Envalior GmbH 
+
+&#8226; SABIC Innovative Plastics 
+
+&#8226; Solvay S.A. 
+
+Other regional competitors: 
+
+&#8226; Asahi Kasei Corporation 
+
+&#8226; Braskem S.A. 
+
+&#8226; Mitsubishi Gas Chemical Company, Inc. 
+
+&#8226; Sumitomo Corporation 
+
+&#8226; Teijin Limited 
+
+&#8226; Toray Industries, Inc. 
+
+&#8226; HMD 
+
+&#8226; Adipic acid 
+
+&#8226; Formaldehyde 
+
+&#8226; DMT 
+
+&#8226; BDO 
+
+&#8226; Ethylene 
+
+&#8226; Fiberglass 
+
+&#8226; Polypropylene 
+
+&#8226; Acetic anhydride 
+
+&#8226; Propylene 
+
+&#8226; Ethylene propylene diene monomer 
+
+&#8226; Base Oil 
+
+&#8226; PA6 
+
+&#8226; PA66 
+
+&#8226; Para-dichlorobenzene 
+
+&#8226; Diketene 
+
+&#8226; TPEE 
+
+&#8226; PTMEG 
+
+&#8226; Flame Retardants 
+
+&#8226; DDDA 
+
+&#8226; PTA 
+
+&#8226; Methyl acrylate 
+
+&#8226; Precious metals 
+
+&#8226; PET 
+
+##TABLE_END
+
+&#8226; Overview 
+
+Our Engineered Materials segment includes our engineered materials business and certain strategic affiliates. The engineered materials business leverages our leading project pipeline model to more rapidly commercialize projects. Our unique approach is based on deep customer engagement to develop new projects that are aligned with our skill domains to address critical customer needs and ensure our success and growth. 
+
+Engineered Materials is a project-based business where growth is driven by increasing new project commercializations from the pipeline. Our project pipeline model leverages competitive advantages that include our global assets and resources, marketplace presence, broad materials portfolio and differentiated capabilities. Our global assets and resources are represented by our operations, including polymerization, compounding, research and development, and customer technology centers in all regions of the world, including Belgium, Brazil, Canada, China, Germany, India, Italy, Japan, Luxembourg, Mexico, Singapore, South Korea, Switzerland, Taiwan, the United Kingdom and the U.S., along with sites associated with our 17 strategic affiliates in China, Germany, Japan, Luxembourg, Netherlands, Saudi Arabia, South Korea, United Kingdom and the U.S. 
+
+Our broad marketplace presence reflects our deep understanding of global and customer trends, including the growing global demand for more sophisticated vehicles, elevated environmental considerations, increased global connectivity, and improved health and wellness. These global trends drive a range of needed customer solutions, such as vehicle lightweighting, precise components, aesthetics and appearance, low emissions, heat resistance and low-friction for medical applications, that we are uniquely positioned to address with our materials portfolio. In addition, the opportunity pipeline process identifies a number of emerging trends early, enabling faster growth. 
+
+Our materials portfolio offers differentiated chemical and physical properties that enable them to perform in a variety of conditions. These include enduring a wide range of temperatures, resisting adverse chemical interactions and withstanding deformation. Nylon compounds are used in a range of applications including automotive, consumer, electrical, electronic and industrial. These value-added applications in diverse end uses support the business' global growth objectives. POM, PBT and LFRT are used in a broad range of performance-demanding applications, including fuel system components, automotive safety systems, consumer electronics, appliances, industrial products and medical applications. UHMW-PE is used in battery separators, industrial products, filtration equipment, coatings and medical applications. Primary end uses for LCP are electrical applications or products and consumer electronics. Thermoplastic elastomers offer unique attributes for use in automotive, appliances, consumer goods, electrical, electronic and industrial applications. 
+
+We also have several differentiated polymer technologies designed for the utility industry, the oil and gas industry, original equipment manufacturers and companies that enhance supply chain efficiency. These include composite technologies for the utility industry that deliver greater reliability, capacity and performance for utility transmission lines. 
+
+Our differentiated capabilities are highlighted in our intimate and unique customer engagement which allows us to work across the entirety of our customers' value chain. For example, in the automotive industry we work with original equipment manufacturers as well as system and tier suppliers and injection molders in numerous areas, including polymer formulation and functionality, part and structural design, mold design, color development, part testing and part processing. This broad access allows us to create a demand pull for our solutions. This business segment also includes 17 strategic affiliates that complement our global reach, improve our ability to capture growth opportunities in emerging economies and positions us as a leading participant in the global specialty polymers industry. 
+
+In July 2020, we announced that we are establishing a European Compounding Center of Excellence at our Forli, Italy facility, which includes the intended consolidation of our compounding operations in Kaiserslautern, Germany; Wehr, Germany; and Ferrara Marconi, Italy. This consolidation was completed in 2023 and are included in our Engineered Materials segment. 
+
+In November 2022, we acquired a majority of the Mobility &#38; Materials business (the "M&#38;M Business") of DuPont de Nemours, Inc. ("DuPont") pursuant to a definitive transaction agreement entered into in February 2022 by us, DuPont and an affiliate of DuPont (the "M&#38;M Acquisition"). The M&#38;M Acquisition was completed for a purchase price of $11.0 billion, subject to transaction adjustments. The M&#38;M Business is a leading global producer of engineering thermoplastics and elastomers serving a variety of end-uses including automotive, electrical and electronics, consumer goods and industrial applications. The acquired M&#38;M Business product portfolio includes numerous specialty materials with global leadership positions in nylons, specialty nylons polyesters and elastomers. See Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information. 
+
+On September 27, 2023, we formed a food ingredients joint venture with Mitsui &#38; Co., Ltd. ("Mitsui") under the name Nutrinova. We contributed receivables, inventory, property, plant and equipment, certain other assets, other liabilities, technology and employees of our food ingredients business while retaining a 30% interest in the joint venture. Mitsui acquired the remaining 70% interest in the food ingredients business for a purchase price of $503 million. See Note 4 - Acquisitions, Dispositions and Plant Closures in the accompanying consolidated financial statements for further information. 
+
+&#8226; Key Products 
+
+Nylon. Our nylon products include Nylfor &#174; A (PA 6.6), Nylfor &#174; B (PA 6), NILAMID &#174; (PA 6, PA 66, PPA), FRIANYL &#174; (flame retardant PA 6, PA 66, PPA compounds), ECOMID &#174; (recycled polyamide), Zytel &#174; (PA, PA 6, PA 66, PA 610, PA 612), Zytel &#174; HTN (PPA) and Zytel &#174; LCPA (long-chain polyamide) and are used in automotive, appliances, electrical, medical, industrial and consumer applications due to their mechanical properties, dimensional stability, high impact resistance, resistance to organic solvents, high wear and fatigue resistance even at high temperatures, and easy processing and molding. 
+
+POM . Commonly known as polyacetal in the chemical industry, POM is sold by our engineered materials business under the trademarks Celcon &#174; , Hostaform &#174; and Tarnoform &#174; . POM is used for diverse end-use applications in the automotive, industrial, consumer and medical industries. These applications include mechanical parts in automotive fuel system components and window lift systems, water handling, conveyor belts, sprinkler systems, drug delivery systems and gears in large and small home appliances. 
+
+We continue to innovate and broaden the portfolio of Celcon &#174; , Hostaform &#174; and Tarnoform &#174; in order to support the industry needs for higher performing polyacetal. We have expanded our portfolio to include products with higher impact resistance and stiffness, low emissions, improved wear resistance and enhanced appearance such as laser marking and metallic effects. We 
+
+launched POM ECO-B, a sustainable polyacetal, which allows customers to realize reduction in carbon dioxide emissions in their end-use products and advance toward their renewable content goals. 
+
+Korea Engineering Plastics Co., Ltd., our 50%-owned strategic affiliate, manufactures POM and other engineering resins in the Asia-Pacific region. For further discussion, see Strategic Affiliates in this Item 1. Business . 
+
+National Methanol Company, our 25% owned strategic affiliate, produces methanol which is a key feedstock for POM production. Its production facilities are located in Saudi Arabia. For further discussion, see Strategic Affiliates in this Item 1. Business . 
+
+The primary raw material for POM is formaldehyde, which is manufactured from methanol. Raw materials are sourced from internal production and from third parties, generally through long-term contracts. 
+
+Polyesters. Our products include a series of thermoplastic polyesters including Celanex &#174; PBT, Crastin &#174; PBT, Melinex &#174; , Mylar &#174; and Thermx &#174; PCT (polycyclohexylene-dimethylene terephthalate), as well as Rynite &#174; PET, a polyester resin. These products are used in a wide variety of automotive, electrical, medical, industrial and consumer applications, including ignition system parts, radiator grilles, electrical switches, medical devices, insulation, photovoltaic panels, critical energy components, appliance and sensor housings, light emitting diodes and technical fibers. 
+
+UHMW-PE. Celanese is a global leader in UHMW-PE products, which are sold under the GUR &#174; trademark. They are highly engineered thermoplastics designed for a variety of industrial, consumer and medical applications. Primary applications for the material include lead acid battery separators, heavy machine components, lithium ion separator membranes, and noise and vibration dampening tapes. Several specialty grades are also produced for applications in high performance filtration equipment, ballistic fibers, thermoplastic and elastomeric additives, as well as medical implants. 
+
+LFRT. Celstran &#174; and Factor &#174; , our LFRT products, impart extra strength and stiffness, making them more suitable for larger parts than conventional thermoplastics. These products are used in automotive, transportation and industrial applications, such as instrument panels, consoles and front end modules. LFRTs meet a wide range of end-user requirements and are excellent candidates for metal replacement where they provide the required structural integrity with significant weight reduction, corrosion resistance and the potential to lower manufacturing costs. 
+
+LCP. Vectra &#174; and Zenite &#174; , our LCP brands, are primarily used in electrical and electronics applications for precision parts with thin walls and complex shapes and applications requiring heat dissipation. They are also used in high heat cookware applications. 
+
+TPE. Forprene &#174; , Sofprene &#174; T, Laprene &#174; and Hytrel &#174; , our TPE brands, are primarily used in automotive, construction, appliances and consumer applications due to their ability to combine the advantages of both flexible and plastic materials. These materials are selected for their ability to stretch and return to their near original shape creating a longer life and better physical range than other materials. 
+
+TPV. Santoprene TM , Dytron TM and Geolast TM , our TPV trademarks, are chemically cross-linked, high-performance materials which leverage a unique combination of engineering thermoplastic and elastomer properties. These products are used in future mobility, infrastructure, medical and sustainability applications. 
+
+Elastomers. Vamac &#174; EAE, our elastomer brand, is primarily used in variety of demanding automotive applications, including electric and hybrid vehicle components. These materials can be formulated to provide excellent resistance to extreme temperatures and fluids. 
+
+Polypropylene. Our polypropylene products include Polifor &#174; and Tecnoprene &#174; and are primarily used in automotive, appliances, electrical and consumer applications due to their high impact and fatigue resistance, exceptional rigidity at high temperatures and an ability to withstand chemical agents. 
+
+VitalDose &#174; . Our ethylene vinyl acetate ("EVA") copolymers, sold under the VitalDose &#174; trademark, are an enabling technology used for controlled-release drugs, medical implants and combination devices, including drug-eluting implants, reliable controlled-release performance in subcutaneous and surgical implants, intravitreal and extraocular devices. 
+
+&#8226; Customers 
+
+Engineered Materials' principal customers are original equipment manufacturers and their suppliers serving the automotive, medical, industrial and consumer industries. We utilize our customer options mapping process to collaborate with our customers to identify customized solutions that leverage our broad range of polymers and technical expertise. Our engineered materials business has long-standing relationships through multi-year and annual arrangements with many of its major customers and utilizes distribution partners to expand its customer base. 
+
+Because Engineered Materials is a project-based business focused on solutions, the pricing of products in this segment is primarily based on the value-in-use and is generally independent of changes in the cost of raw materials. Therefore, in general, margins may expand or contract in response to changes in raw material costs. 
+
+See Note 22 - Revenue Recognition in the accompanying consolidated financial statements for further information. 
+
+Acetyl Chain 
+
+##TABLE_START Products (1) 
+
+Major End-Use Applications Principal Competitors Key Raw Materials &#8226; Acetic acid 
+
+&#8226; Vinyl acetate monomer ("VAM") 
+
+&#8226; Vinyl acetate ethylene ("VAE") emulsions 
+
+&#8226; Conventional emulsions 
+
+&#8226; Ethylene vinyl acetate ("EVA") resins and compounds 
+
+&#8226; Low-density polyethylene resins ("LDPE") 
+
+&#8226; Redispersible Powders ("RDP") 
+
+&#8226; Acetic anhydride 
+
+&#8226; Ethyl acetate 
+
+&#8226; Formaldehyde 
+
+&#8226; Butyl acetate 
+
+&#8226; Acetate tow 
+
+&#8226; Acetate flake 
+
+&#8226; Paints 
+
+&#8226; Coatings 
+
+&#8226; Adhesives 
+
+&#8226; Textiles 
+
+&#8226; Paper finishing 
+
+&#8226; Flexible packaging 
+
+&#8226; Lamination products 
+
+&#8226; Pharmaceuticals 
+
+&#8226; Films 
+
+&#8226; Inks 
+
+&#8226; Plasticizers 
+
+&#8226; Solvents 
+
+&#8226; Automotive parts 
+
+&#8226; External thermal insulation composite systems 
+
+&#8226; Tiling 
+
+&#8226; Plasters and renders 
+
+&#8226; Lubricants 
+
+&#8226; Filtration 
+
+&#8226; Arkema 
+
+&#8226; BASF SE 
+
+&#8226; Cerdia 
+
+&#8226; Chang Chun Petrochemical Co., Ltd. 
+
+&#8226; Daicel 
+
+&#8226; Dairen Chemical Corporation 
+
+&#8226; Dow Inc. 
+
+&#8226; Eastman Chemical Company 
+
+&#8226; ExxonMobil Chemical 
+
+&#8226; Huayi Chemical Co., Ltd. 
+
+&#8226; INEOS 
+
+&#8226; Jiangsu Sopo (Group) Co., Ltd. 
+
+&#8226; Kuraray Co., Ltd. 
+
+&#8226; LyondellBasell Industries N.V. 
+
+&#8226; Nippon Gohsei 
+
+&#8226; Showa Denko K.K. 
+
+&#8226; Sipchem 
+
+&#8226; Wacker Chemie AG 
+
+&#8226; Methanol 
+
+&#8226; Carbon monoxide 
+
+&#8226; Ethylene 
+
+&#8226; Acetic acid 
+
+&#8226; VAM 
+
+&#8226; VAE emulsions 
+
+&#8226; Conventional emulsions 
+
+&#8226; Acrylate esters 
+
+&#8226; Styrene 
+
+&#8226; Polyvinyl alcohol 
+
+&#8226; Wood pulp 
+
+&#8226; Acetic anhydride 
+
+##TABLE_END
+
+_____________________________ 
+
+(1) Our globally-integrated value chain positions us to provide solutions with carbon capture content across all products in the Acetyl Chain as well as other methanol derived products like acetal copolymers, including POM. 
+
+&#8226; Overview 
+
+The Acetyl Chain segment, which includes the integrated chain of acetic acid, VAM, acetic anhydride, acetate esters, emulsion polymers, EVA polymers, redispersible powders, and acetate tow businesses, is active in every major global industrial sector and serves diverse consumer end-use applications. The Acetyl Chain operates as an integrated business with the breadth and flexibility to sell solutions across the segment and across global geographies utilizing various feedstocks. These solutions include traditional vinyl-based end uses, such as paints and coatings and adhesives, as well as other unique, high-value end uses including flexible packaging, thermal laminations, wire and cable, and compounds. 
+
+Our acetyl chain business produces and supplies acetyl products, including acetic acid, VAM, acetic anhydride and acetate esters. These products are generally used as starting materials for colorants, paints, adhesives, coatings and pharmaceuticals. 
+
+Our acetyl chain business also produces organic solvents and intermediates for pharmaceutical, agricultural and chemical products. 
+
+We have focused in recent years on enhancing our ability to drive incremental value through our global production network and productivity initiatives as well as proactively managing the acetyl chain business in response to trade flows and prevailing industry trends. 
+
+Our Acetyl Chain segment has production sites in Belgium, Canada, China, Germany, Mexico, the Netherlands, Singapore, Sweden, Switzerland and the U.S. We are a global industry leader, with a broad acetyls product portfolio, leading technology, low cost production footprint and a global supply chain. We believe our production technology is among the lowest cost in the industry and provides us with global growth opportunities through low cost expansions and a cost advantage over our competitors. With decades of experience, advanced proprietary process technology and favorable capital and production costs, we are a leading global producer of acetic acid, VAM and VAE. AOPlus &#174; 3 technology extends our historical technology advantage in acetic acid and enables us to construct a world scale greenfield acetic acid facility at a lower capital cost than our competitors. Our VAntage &#174; 2 technology enables us to increase VAM capacity to meet growing customer demand globally with minimal investment. VAM produced by the acetyl chain business is a primary raw material for our emulsion polymers and EVA polymers businesses. 
+
+Our emulsion polymers business is a leading global producer of vinyl acetate-based emulsions and develops products and application technologies to improve performance, create value and drive innovation in applications such as paints and coatings, adhesives, construction, glass fiber, textiles and paper. Our emulsion polymers products are sold under globally and regionally recognized brands including EcoVAE &#174; , Mowilith &#174; , Vinamul &#174; , Celvolit &#174; , Dur-O-Set &#174; , TufCOR &#174; , Avicor &#174; , Flexbond &#174; and Resyn &#174; . 
+
+Our EVA polymers business is a leading North American manufacturer of a full range of specialty EVA resins and compounds, as well as select grades of LDPE. Sold under the Ateva &#174; brand, these products are used in many applications, including flexible packaging films, lamination film products, hot melt adhesives, automotive parts and carpeting. 
+
+Our RDP business is a leading global producer of redispersible polymer powders, sold under the Elotex&#174; brand. The business consumes polymer emulsions which are converted into powdered thermoplastic resin materials. RDP products are used in a variety of applications in the mortar industry, including decorative mortar, exterior insulation and finish systems, gypsum-based materials, plaster and render, self-leveling floor systems, skim coat and tile adhesives. 
+
+Our acetate tow business is a leading global producer and supplier of acetate tow and acetate flake, primarily used in filter products applications. We hold an approximately 30% ownership interest in three separate ventures in China that produce acetate flake and acetate tow. China National Tobacco Corporation, a Chinese state-owned tobacco entity, has been our venture partner for over three decades. 
+
+&#8226; Key Products 
+
+Acetyl Products. Acetyl products include acetic acid, VAM, acetic anhydride and acetate esters. Acetic acid is primarily used to manufacture VAM, purified terephthalic acid and other acetyl derivatives. VAM is used in a variety of adhesives, paints, films, coatings and textiles. Acetic anhydride is a raw material used in the production of cellulose acetate, detergents and pharmaceuticals. Acetate esters are used in solvents for ink formulations, surface coatings, adhesives and pharmaceutical industries. We manufacture acetic acid, VAM and acetic anhydride for our own use in producing downstream, value-added products, as well as for sale to third parties. 
+
+Acetic acid and VAM leverage global supply and demand fundamentals. The principal raw materials in these products are carbon monoxide, methanol and ethylene. We generally purchase carbon monoxide under long-term contracts, and we also produce carbon monoxide in our Clear Lake facility. We generally purchase methanol and ethylene under both annual and multi-year contracts. Methanol and ethylene are commodity products and generally available from a wide variety of sources, while carbon monoxide is typically purpose-made in close proximity. 
+
+We have a joint venture, Fairway Methanol LLC ("Fairway"), with Mitsui, in which we own a 50% interest, for the production of methanol at our integrated chemical plant in Clear Lake, Texas. The methanol unit utilizes natural gas in the U.S. Gulf Coast region as a feedstock. Almost all of our North American methanol needs are met from our share of the production, as well as the long-term contract we have with our joint venture partner, Mitsui. 
+
+In December 2023, we began carbon capture and utilization ("CCU") operations at our Clear Lake site as part of our Fairway joint venture. The unit is expected to capture CO2 industrial emissions and produce low-carbon methanol which will help our global customers meet the growing demand for more sustainable and circular solutions. The products will be launched under the ECO-CC name and be supported through third-party mass balance tracking and life cycle assessment processes. 
+
+Solvents and Derivatives. We manufacture a variety of solvents, formaldehyde and other chemicals, which in turn are used in the manufacture of paints, coatings, adhesives and other products. Many solvents and derivatives products are derived from our production of acetic acid. Primary products are: 
+
+&#8226; Ethyl acetate, an acetate ester that is a solvent used in coatings, inks and adhesives; 
+
+&#8226; Butyl acetate, an acetate ester that is a solvent used in inks, pharmaceuticals and perfume; and 
+
+&#8226; Formaldehyde and paraformaldehyde, which are primarily used to produce adhesive resins for plywood, particle board, coatings, POM engineering resins and a compound used in making polyurethane. 
+
+Emulsion Polymers. Our emulsion polymers business produces conventional vinyl- and acrylate-based emulsions and VAE emulsions. VAE emulsions are a key component of water-based architectural coatings, adhesives, non-wovens, textiles, glass fiber and other applications. VAE emulsions are in high demand in Europe and Asia as they enable low volatile organic compound paints, specifically in interior paints. 
+
+EVA Polymers. Our EVA polymers business produces low-density polyethylene, EVA resins and compounds. Low-density polyethylene is produced in high-pressure reactors from ethylene, while EVA resins and compounds are produced in high-pressure reactors from ethylene and VAM. 
+
+Redispersible Powders . Our RDP business uses a number of emulsions in manufacturing redispersible powders to meet requirements for various applications and formulated to fit our customers' needs for optimal production. 
+
+Acetate tow and acetate flake . Acetate tow is a fiber used primarily in cigarette filters. In order to produce acetate tow, we first produce acetate flake by processing wood pulp with acetic acid and acetic anhydride. Wood pulp generally comes from reforested trees and is purchased externally from a variety of sources, and acetic anhydride is an intermediate chemical that we produce from acetic acid in our intermediate chemistry business. Acetate flake is then further processed into acetate tow. 
+
+&#8226; Customers 
+
+Our acetyl chain business sells its products both directly to customers and through distributors. Acetic acid, VAM, acetate esters and acetic anhydride are global businesses, and we generally supply our customers under a mix of short- and long-term agreements. Acetic acid, VAM and acetic anhydride customers produce intermediate chemicals and polymers used in water-based paints, adhesives, paper coatings, polyesters, film modifiers, pharmaceuticals, cellulose acetate and textiles. We have long-standing relationships with most of these customers. Solvents and derivatives are sold to a diverse group of regional and multinational customers under multi-year contracts and on the basis of long-standing relationships. Solvents and derivatives customers are primarily engaged in the production of paints, coatings and adhesives. We manufacture formaldehyde for our own use as well as for sale to a few regional customers. 
+
+Emulsion, RDP and EVA polymers products are sold to a diverse group of regional, family owned and multinational customers. Customers of our emulsion polymers and RDP business are manufacturers of water-based paints and coatings, adhesives, paper, building and construction products, glass fiber, non-wovens, textiles and premixed dry mortars. Customers of our EVA polymers business are engaged in the manufacture of a variety of products, including hot melt adhesives, automotive components, thermal laminations, and flexible and food packaging materials. 
+
+Acetate tow is sold principally to the major tobacco companies that account for a majority of worldwide cigarette production. Many sales are conducted under contracts with pricing for one or more years. As a result, margins may expand or contract in response to changes in market conditions over these similar periods, and we may be unable to adjust pricing due to other factors, such as the intense level of competition in the industry. 
+
+Pricing of our products within the Acetyl Chain segment is influenced by industry utilization, changes in the cost of raw materials, sensitivity to demand and the value-in-use. Therefore, in general, there is a direct correlation between these factors and our net sales for most Acetyl Chain products. This impact to pricing typically lags changes in raw material costs over months or quarters and impacts profit margins over those periods. 
+
+See Note 22 - Revenue Recognition in the accompanying consolidated financial statements for further information. 
+
+Other Activities 
+
+Other Activities primarily consists of corporate center costs, including administrative activities such as finance, information technology and human resource functions, interest income and expense associated with our financing activities and results of our captive insurance companies. Our two wholly-owned captive insurance companies are a key component of our global risk management program, as well as a form of self-insurance for our liability, property and workers compensation risks. The captive insurance companies retain risk at levels approved by management and obtain reinsurance coverage from third parties to limit the net risk retained. Other Activities also includes the interest cost, expected return on assets and net actuarial gains and losses components of our net periodic benefit cost for our defined benefit pension plans and other postretirement plans, which are not allocated to our business segments. Ongoing merger, acquisition and integration related costs are also included in Other Activities. 
+
+Strategic Affiliates 
+
+Our strategic affiliates represent an important component of our strategy. During 2022, we acquired interests in several global strategic affiliates as part of the M&#38;M Acquisition, described further below. On September 27, 2023, we formed a food ingredients joint venture with Mitsui under the name Nutrinova, also described below. 
+
+We have a substantial portfolio of affiliates in various regions, including Asia-Pacific, Europe, North America and the Middle East. These affiliates have sizeable operations and are significant within their industries. 
+
+With shared characteristics such as products, applications and manufacturing technology, these strategic affiliates complement and extend our technology and specialty materials portfolio. We have historically entered into these investments to gain access to local demand, minimize costs and accelerate growth in areas we believe have significant future business potential. 
+
+Our strategic affiliates contribute substantial earnings and cash flows to us. During the year ended December 31, 2023, our equity method strategic affiliates generated combined sales of $2.1 billion, resulting in our recording $67 million of equity in net earnings of affiliates and $124 million of dividends. 
+
+Our strategic affiliates as of December 31, 2023 are as follows: 
+
+##TABLE_START Location of Headquarters Ownership Partner(s) Year Entered Equity Investments Engineered Materials National Methanol Company Saudi Arabia 25 % Saudi Basic Industries Corporation (50%); Duke Energy Arabian Ltd. (25%) 1981 Nutrinova Netherlands B.V. Netherlands 30 % Mitsui &#38; Co., Ltd. (70%) 2023 Korea Engineering Plastics Co., Ltd. South Korea 50 % Mitsubishi Gas Chemical Company, Inc. (40%); Mitsubishi Corporation (10%) 1999 Fortron Industries, LLC U.S. 50 % Kureha America Inc. (50%) 1992 Toray Celanese Co., Ltd. Japan 50 % Toray (50%) 2022 DuBay Polymer GmbH Germany 50 % Lanxess AG (50%) 2022 DuPont Teijin Films UK Ltd. now known as Mylar Specialty Films UK Limited 
+
+United Kingdom 50 % Teijin Limited (50%) 2022 DuPont Teijin Films Netherlands B.V. 
+
+Netherlands 50 % Teijin Limited (50%) 2022 DuPont Teijin Films Luxembourg S.A. now known as Mylar Specialty Films Luxembourg S.A. 
+
+Luxembourg 50 % Teijin Limited (50%) 2022 DuPont Teijin Films U.S. Limited Partnership now known as Mylar Specialty Films U.S. Limited Partnership 
+
+U.S. 50 % Teijin Limited (50%) 2022 Teijin-DuPont Films, Incorporated now known as Mylar Specialty Films Incorporated 
+
+U.S. 50 % Teijin Limited (50%) 2022 Consolidated Investments Engineered Materials DuPont Teijin Films China Ltd. now known as Mylar Specialty Films China Limited 
+
+China 51 % Teijin Limited (49%) 2022 DuPont Teijin Hongji Films Ningbo Co. Ltd. China 26 % Teijin Limited (73.99%) 2022 DuPont Hongji Films Foshan Co. Ltd. China 26 % Teijin Limited (73.99%) 2022 Celanese Filaments-Americas, LLC 
+
+U.S. 70 % Xingda (30%) 2022 DuPont Filaments-Europe, B.V. 
+
+Netherlands 70 % Xingda (30%) 2022 Celanese Xingda Filaments Co., Ltd. 
+
+China 70 % Xingda (30%) 2022 Acetyl Chain Fairway Methanol LLC U.S. 50 % Mitsui &#38; Co., Ltd. (50%) 2014 Equity Investments Without Readily Determinable Fair Value Acetyl Chain Kunming Cellulose Fibers Company, Limited China 30 % China National Tobacco Corporation (70%) 1993 Nantong Cellulose Fibers Company, Limited China 31 % China National Tobacco Corporation (69%) 1986 Zhuhai Cellulose Fibers Company, Limited China 30 % China National Tobacco Corporation (70%) 1993 ##TABLE_END
+
+National Methanol Company. National Methanol Company ("Ibn Sina") is one of the world's largest producers of methyl tertiary-butyl ether, a gasoline additive. Its production facilities are located in Saudi Arabia. Saudi Basic Industries Corporation ("SABIC") is responsible for all product marketing. Methanol is a key feedstock for POM production and is produced by our Ibn Sina affiliate which provides an economic hedge against raw material costs in our engineered materials business. 
+
+Nutrinova Netherlands B.V. Nutrinova Netherlands B.V. ("Nutrinova") is a producer of Sunett &#174; acesulfame potassium (Ace-K) and Nutrinova &#174; sorbates, which are used to improve the safety, shelf-life and taste of its customers' products including food and beverages, personal care, pet food, household cleaning products and pharmaceutical products. 
+
+Korea Engineering Plastics Co., Ltd. Korea Engineering Plastics Co., Ltd. ("KEPCO") is a leading producer of POM in South Korea. KEPCO has polyacetal production facilities in Ulsan, South Korea, compounding facilities for PBT and nylon in Pyongtaek, South Korea, and participates with Mitsubishi Gas Chemical Company, Inc. in a world-scale POM facility in Nantong, China. In December 2020, we signed a memorandum of understanding with our joint venture partners to restructure KEPCO, in which we and our joint venture partners will receive exclusive offtake rights to POM in Asia and global marketing rights without restrictions. In April 2022, we completed the joint venture restructuring of KEPCO. As part of the restructuring of KEPCO, we paid KEPCO $5 million and will have paid 5 equal annual installments of &#8364;24 million on October 1 of each year from 2022 to 2026. This resulted in an increase to our investment in KEPCO of $134 million. Our joint venture partner has made and will make similar payments to KEPCO. The restructuring did not result in a change in ownership percentage of KEPCO, nor a change in control, and KEPCO will continue to be accounted for as an equity method investment. 
+
+Fortron Industries, LLC. Fortron Industries, LLC ("Fortron") is a global producer of PPS, sold under the Fortron &#174; brand, which is used in a wide variety of automotive and other applications, especially those requiring heat and/or chemical resistance. Fortron's facility is located in Wilmington, North Carolina. This venture combines our sales, marketing, distribution, compounding and manufacturing expertise with the PPS polymer technology expertise of Kureha America Inc. 
+
+Toray Celanese Co., Ltd. Toray Celanese Co., Ltd. manufactures Hytrel &#174; for sale primarily in the Japanese market. Hytrel &#174; is a versatile material with the ability to flex in multiple directions long after rubber would break. Its strength and durability, combined with its heat resilience and chemical resistance make it an essential ingredient in automotive and construction applications due to its ability to combine the advantages of both flexible and plastic materials. 
+
+DuBay Polymer GmbH. DuBay Polymer GmbH is a manufacturing joint venture with Lanxess AG for the production of PBT-based products. 
+
+DuPont Teijin Films. DuPont Teijin Films is a leading global producer of PET and polyethylene naphthalate ("PEN") polyester films, which are used in a wide variety of end markets from healthcare to industrial and electronics. Mylar &#174; and Melinex &#174; brand films, known for their wide range of performance capabilities, are used in a variety of applications. 
+
+DuPont Filaments. DuPont Filaments is a joint venture with Xingda for the production and sale of nylon and PBT-based filament products used in the personal care, construction and industrial end-markets. 
+
+Acetyl Chain strategic ventures. Our Acetyl Chain ventures generally fund their operations using operating cash flow and pay dividends based on each ventures' performance in the preceding year. In 2023, 2022 and 2021, we received cash dividends of $125 million, $132 million and $146 million, respectively. 
+
+Although our ownership interest in each of our Acetyl Chain ventures exceeds 20%, we account for these investments at cost after considering observable price changes for similar instruments, minus impairment, if any, because we determined that we cannot exercise significant influence over these entities due to local government investment in and influence over these entities, limitations on our involvement in the day-to-day operations and the present inability of the entities to provide timely financial information prepared in accordance with generally accepted accounting principles in the United States of America. Further, these investments were determined not to have a readily determinable fair value. 
+
+Other Equity Method Investments 
+
+InfraServs. We hold indirect ownership interests in several German InfraServ Groups that own and develop industrial parks and provide various technical and administrative services to tenants. Our ownership interest in the equity investments in InfraServ affiliates are as follows: 
+
+##TABLE_START As of December 31, 2023 (In percentages) InfraServ GmbH &#38; Co. Gendorf KG 30 InfraServ GmbH &#38; Co. Hoechst KG 31 Yncoris GmbH &#38; Co. KG 22 ##TABLE_END
+
+Intellectual Property 
+
+We attach importance to protecting our intellectual property, including safeguarding our confidential information and through our patents, trademarks and copyrights, in order to preserve our investment in research and development, manufacturing and marketing. Patents may cover processes, equipment, products, intermediate products and product uses. We also seek to register trademarks as a means of protecting the brand names of our Company and products. 
+
+Patents. In most industrial countries, patent protection exists for new substances and formulations, as well as for certain unique applications and production processes. However, we do business in regions of the world where intellectual property protection may be limited and difficult to enforce. 
+
+Confidential Information. We maintain stringent information security policies and procedures wherever we do business. Such information security policies and procedures include data encryption, controls over the disclosure and safekeeping of confidential information and trade secrets, as well as employee awareness training. 
+
+Trademarks. Amcel &#174; , AOPlus &#174; , Ateva &#174; , Avicor &#174; , Celanese &#174; , Celanex &#174; , Celanyl &#174; , Celcon &#174; , Celstran &#174; , Celvolit &#174; , Clarifoil &#174; , Crastin &#174; , Dur-O-Set &#174; , Dytron &#174; , ECOMID &#174; , EcoVAE &#174; , Elotex &#174; , Factor &#174; , Flexbond &#174; , Forprene &#174; , FRIANYL &#174; , Fortron &#174; , Geolast &#174; , GHR &#174; , GUR &#174; , Hostaform &#174; , Hytrel &#174; , Laprene &#174; , Melinex &#174; , MetaLX &#174; , Micromax &#174; , Mowilith &#174; , MT &#174; , Mylar &#174; , NILAMID &#174; , Nylfor &#174; , OmniLon &#174; , Pibifor &#174; , Pibiter &#174; , Polifor &#174; , Resyn &#174; , Rynite &#174; , Santoprene &#174; , SlideX &#174; , Sofprene &#174; , Sofpur &#174; , Talcoprene &#174; , Tarnoform &#174; , Tecnoprene &#174; , TufCOR &#174; , Tynex &#174; , Vamac &#174; , VAntage &#174; , Vectra &#174; , Vinac &#174; , Vinamul &#174; , VitalDose &#174; , Zenite &#174; , Zytel &#174; and certain other branded products and services named in this document are registered or reserved trademarks or service marks owned or licensed by Celanese. The foregoing is not intended to be an exhaustive or comprehensive list of all registered or reserved trademarks and service marks owned or licensed by Celanese. Fortron &#174; is a registered trademark of Fortron Industries LLC. Hostaform &#174; is a registered trademark of Hoechst GmbH. Mowilith &#174; and NILAMID &#174; are registered trademarks of Celanese in most European countries. 
+
+We monitor competitive developments and defend against infringements on our intellectual property rights. Neither Celanese nor any particular business segment is materially dependent upon any one patent, trademark, copyright or trade secret. 
+
+Environmental and Other Regulation 
+
+Matters pertaining to environmental and other regulations are discussed in Item 1A. Risk Factors , as well as Note 2 - Summary of Accounting Policies , Note 13 - Environmental and Note 19 - Commitments and Contingencies in the accompanying consolidated financial statements. 
+
+We expect to incur approximately $50 million to $70 million in capital expenditures for environmental control measures in each of 2024 and 2025. 
+
+Climate Change 
+
+Climate change is one of the most challenging and significant issues facing the world today, and we seek to do our part to make sustainable progress toward addressing this challenge. 
+
+The nature of our operations is energy and fossil fuel intensive. We have therefore invested in capital projects to increase energy efficiency, improve reliability, recover and reuse waste heat, and increase our purchase of renewable energy as well as more sustainable raw materials. These include a combined heat and power unit at our Lanaken, Belgium facility, a waste-to- 
+
+energy system in Nanjing, China, using solar energy at our Clear Lake, Texas facility designed for use by us and our onsite industrial partners, and a carbon dioxide capture and conversion to methanol project at our Clear Lake, Texas facility. 
+
+We are focused on developing products to help our customers meet their sustainability goals. Examples include products for improving the sustainability of building and construction materials, adhesives, fiber coatings, flexible packaging, vehicle lightweighting and powering electric vehicles. We are also focused on making our own products from more sustainable sources, including increasing our offering products using biocertified content or recycled feedstocks. We believe these capabilities, together with trends such as the automobile industry's commitment towards improved energy efficiency and clean energy, present market opportunities for us. 
+
+With the fourth quarter 2023 publication of our 2022-2023 Sustainability Report, we have reported gross Scope 1 and Scope 2 greenhouse gas ("GHG") emissions for 2021 and 2022 using The Greenhouse Gas Protocol, A Corporate Accounting and Reporting Standard , as a guide. Updated 2023 emissions figures were not available at the time of this Form 10-K filing. We have also announced a Scope 1 and 2 GHG emissions reduction target described in our 2022-2023 Sustainability Report, obtained limited external assurance on our 2021 and 2022 environmental metrics, and are working to better understand where we can further reduce our GHG emissions sources and to continue to integrate the M&#38;M Business into our GHG measurement and reporting processes. 
+
+For information on the risks we face related to climate change and other sustainability matters as well as, potential legislative and regulatory developments in this area that may increase our operating costs, potentially significantly, please see the risk factors in Item 1A. Risk Factors titled "We are subject to financial, regulatory, physical and transition risks associated with climate change or other sustainability matters as well as potential legislation, regulation and international accords to address climate change and other sustainability matters," "Changes in environmental, health and safety regulations in the jurisdictions where we manufacture or sell our products could lead to a decrease in demand for or significant restrictions on use and/or production of our products and raw materials" and "Our aspirations, goals, and initiatives related to sustainability, and our public statements and disclosures regarding them, expose us to risks." Climate-related regulatory risks are assessed as a part of our Enterprise Risk Management process. However, due to the level of uncertainty regarding what legislative or regulatory requirements may be enacted, it is not possible for us to estimate the impact of climate-related developments on our results of operations or financial conditions. 
+
+Human Capital Resources 
+
+Workforce Composition and Diversity, Equity and Inclusion 
+
+Our business is operated by a diverse and global workforce, with employees in the following key geographies: 
+
+##TABLE_START Employees as of December 31, 2023 North America U.S. 4,248 Other North America 709 Total 4,957 &#160; Europe Germany 1,918 Other Europe 2,597 Total 4,515 &#160; Asia China 1,785 Other Asia 1,057 Total 2,842 &#160; Rest of World 96 &#160; Total 12,410 &#160; ##TABLE_END
+
+We believe that providing a workplace that promotes mutual respect and inclusion for all employees is critical to our success and to driving innovation and growth. To that end, we continue to make progress in our efforts to promote diversity, equity and inclusion in our Company. In order to enhance our visibility to a diverse pipeline of talent and broaden our candidate pool, we engage with historically black colleges and universities ("HBCUs"), trade associations and other professional groups. We also promote engagement globally through 68 chapters of nine different Employee Resource Groups designed to inspire, develop and increase the representation and engagement of underrepresented groups. 
+
+As of December 31, 2023: 
+
+&#8226; globally, women represent approximately 33% of our senior leadership team and 26% of our overall workforce; and 
+
+&#8226; in the U.S., people of color represent approximately 11% of our senior leadership team and 28% of our overall workforce. 
+
+The following shows our attrition rate for the year ended December 31, 2023: 
+
+##TABLE_START Attrition Rate Employee Category Global employees 10.5 % Women (globally) 9.5 % People of Color (U.S.) 12.8 % ##TABLE_END
+
+Stewardship: Health, Safety and Environmental 
+
+We focus on more than the occupational health and safety of our employees, contractors and any visitors to our sites. We have an expanded view and measurement of "Stewardship" that includes process safety and environmental events since these incidents may have an impact on our communities. Our Stewardship values and guiding principles are centered on a commitment to do no harm to our workforce, environment, people or communities. 
+
+Achieving and maintaining stewardship excellence is a process of continuous improvement. Our values include a commitment to the health and safety of our employees, contractors, communities and the environment. 
+
+We utilize a mixture of leading and lagging indicators to assess the Stewardship performance of our operations. Lagging indicators for occupational health and safety include Total Recordable Incident Rate ("TRIR") and Lost Time Incident Rate ("LTIR") based upon the number of incidents per 200,000 work hours of both employees and contractors. Process Safety lagging indicators follow the industry standard from API RP 754 for Tier 1 and Tier 2 events for incident count, rate, and severity. In 2023, the criteria for tracking release to the environment was enhanced to a criteria that includes impact to the community and notification to a regulatory authority outside of routine communications. 
+
+Examples of Stewardship Tier 3 leading indicators include reporting and resolution of near miss events and high potential events, losses of primary containment releases and challenges to process safety systems. 
+
+For the year ended December 31, 2023, we had a TRIR of 0.11 and an LTIR of 0.03. Through deliberate actions and intentions to understand and recognize our employees' contributions to stewardship excellence, we have reduced our TRIR rate by 58% from 2022. 
+
+Rounding out our Stewardship performance in 2023, we had 5 Tier 1 and Tier 2 process safety incidents and 5 environmental incidents. Any other loss of primary containment incidents, challenges to pressure relief systems, safety instrumented systems and safe operating limits are tracked as Tier 3 leading indicators. Our expanded tracking of leading indicator events helps identify potential emerging deficiencies that enables us to take continuous improvement actions. For example, this past year we concentrated heavily on improving our hazard identification and risk assessment and migration systems, which included expanding these concepts beyond process safety. We are also working to strengthen and fully integrate our stewardship management systems and developing new ways to establish and maintain an effective stewardship culture in a changing and evolving world around us so that all members of our workforce understand and act on their responsibilities seriously, leaders lead, and the entire workforce is fully involved and engaged. We continue to strive to create a workplace where every worker can return home safely every day. 
+
+Talent Development 
+
+We are committed to fostering an engaging and inclusive workplace with opportunities for collaboration, development and leadership. Our Talent Management strategies provide a consistent and efficient approach to how we acquire talent, manage performance, develop bench strength, support development and help employees reach their fullest potential. 
+
+We have a structured approach to reviewing talent with management, as well as with the Board of Directors. This includes discussions of employee development, executive succession, diversity, talent pipelines and workforce planning requirements. We regularly report to the Board of Directors on talent management strategies across functional areas, and annually review executive succession with the Board of Directors. 
+
+Available Information &#8212; Securities and Exchange Commission ("SEC") Filings and Corporate Governance Materials 
+
+We make available free of charge, through the investor portion of our internet website (http://investors.celanese.com), our annual reports on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K and amendments to those reports filed or furnished pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of 1934, as well as ownership reports on Form 3 and Form 4, as soon as reasonably practicable after electronically filing such material with, or furnishing it to, the SEC. References to our website in this report are provided as a convenience, and the information on our website is not, and shall not be deemed to be a part of this report or incorporated into any other filings we make with the SEC. The SEC maintains a website that contains reports, proxy and information statements, and other information regarding issuers, including Celanese Corporation, that electronically file with the SEC at http://www.sec.gov. 
+
+We also make available free of charge, through our website, our Corporate Governance Guidelines of our Board of Directors and the charters of each of the standing committees of our Board of Directors. 
+

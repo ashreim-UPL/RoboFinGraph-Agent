@@ -1,0 +1,598 @@
+{
+  "final_evaluation": {
+    "kpis": {
+      "total_pipeline_cost_usd": 0.0411,
+      "total_pipeline_latency_sec": 166.79,
+      "pipeline_nodes_sequence": [
+        "Get Company Details",
+        "Check Region",
+        "US Data Collection",
+        "Validate Collected Data",
+        "Summarize Data",
+        "Validate Summarized Data",
+        "Concept Analysis",
+        "Validate Conceptual Insights",
+        "Generate Annual Report"
+      ],
+      "pipeline_start_time": "2025-07-06T17:09:29.291095+00:00",
+      "pipeline_end_time": "2025-07-06T17:12:16.165738+00:00",
+      "pipeline_total_duration_sec": 166.87,
+      "model_steps": {
+        "Get Company Details": [],
+        "Check Region": [],
+        "US Data Collection": [],
+        "Validate Collected Data": [],
+        "Summarize Data": [
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14"
+        ],
+        "Validate Summarized Data": [],
+        "Concept Analysis": [
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14"
+        ],
+        "Validate Conceptual Insights": [],
+        "Generate Annual Report": []
+      },
+      "main_llm_provider": "openai",
+      "unique_llm_models": [
+        "gpt-4.1-2025-04-14",
+        "gpt-4.1-nano-2025-04-14",
+        "gpt-4o-search-preview-2025-03-11"
+      ],
+      "total_tokens_sent": 97018,
+      "total_tokens_generated": 6211,
+      "icaif_accuracy": 7,
+      "icaif_logicality": 8,
+      "icaif_storytelling": 9,
+      "icaif_scores": {
+        "accuracy": 7,
+        "logicality": 8,
+        "storytelling": 9
+      }
+    },
+    "pipeline_steps": [
+      {
+        "current_node": "Get Company Details",
+        "status": "success",
+        "start_time": "2025-07-06T17:09:29.291095+00:00",
+        "end_time": "2025-07-06T17:09:34.167250+00:00",
+        "duration": 4.876155,
+        "cost_llm": 0.0,
+        "tokens_sent": 0,
+        "tokens_generated": 0,
+        "tools_used": [],
+        "errors": [],
+        "files_read": [],
+        "files_created": [],
+        "custom_metrics": {}
+      },
+      {
+        "current_node": "Check Region",
+        "status": "success",
+        "start_time": "2025-07-06T17:09:34.169252+00:00",
+        "end_time": "2025-07-06T17:09:34.169252+00:00",
+        "duration": 0.0,
+        "cost_llm": 0.0,
+        "tokens_sent": 0,
+        "tokens_generated": 0,
+        "tools_used": [],
+        "errors": [],
+        "files_read": [],
+        "files_created": [],
+        "custom_metrics": {}
+      },
+      {
+        "current_node": "US Data Collection",
+        "status": "success",
+        "start_time": "2025-07-06T17:09:34.171735+00:00",
+        "end_time": "2025-07-06T17:10:36.157304+00:00",
+        "duration": 61.985569,
+        "cost_llm": 0.0,
+        "tokens_sent": 0,
+        "tokens_generated": 0,
+        "tools_used": [],
+        "errors": [],
+        "files_read": [],
+        "files_created": [],
+        "custom_metrics": {}
+      },
+      {
+        "current_node": "Validate Collected Data",
+        "status": "success",
+        "start_time": "2025-07-06T17:10:36.159238+00:00",
+        "end_time": "2025-07-06T17:10:36.161307+00:00",
+        "duration": 0.002069,
+        "cost_llm": 0.0,
+        "tokens_sent": 0,
+        "tokens_generated": 0,
+        "tools_used": [],
+        "errors": [],
+        "files_read": [],
+        "files_created": [],
+        "custom_metrics": {}
+      },
+      {
+        "current_node": "Summarize Data",
+        "status": "success",
+        "start_time": "2025-07-06T17:10:36.165476+00:00",
+        "end_time": "2025-07-06T17:11:09.761838+00:00",
+        "duration": 33.596362,
+        "cost_llm": 0.010545900000000002,
+        "tokens_sent": 88695,
+        "tokens_generated": 4191,
+        "tools_used": [
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14",
+          "openai:gpt-4.1-nano-2025-04-14"
+        ],
+        "errors": [],
+        "files_read": [],
+        "files_created": [],
+        "custom_metrics": {}
+      },
+      {
+        "current_node": "Validate Summarized Data",
+        "status": "success",
+        "start_time": "2025-07-06T17:11:09.780834+00:00",
+        "end_time": "2025-07-06T17:11:09.780834+00:00",
+        "duration": 0.0,
+        "cost_llm": 0.0,
+        "tokens_sent": 0,
+        "tokens_generated": 0,
+        "tools_used": [],
+        "errors": [],
+        "files_read": [],
+        "files_created": [],
+        "custom_metrics": {}
+      },
+      {
+        "current_node": "Concept Analysis",
+        "status": "success",
+        "start_time": "2025-07-06T17:11:09.793030+00:00",
+        "end_time": "2025-07-06T17:12:16.009867+00:00",
+        "duration": 66.216837,
+        "cost_llm": 0.030554,
+        "tokens_sent": 8213,
+        "tokens_generated": 1766,
+        "tools_used": [
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14",
+          "openai:gpt-4.1-2025-04-14"
+        ],
+        "errors": [],
+        "files_read": [],
+        "files_created": [],
+        "custom_metrics": {}
+      },
+      {
+        "current_node": "Validate Conceptual Insights",
+        "status": "success",
+        "start_time": "2025-07-06T17:12:16.033877+00:00",
+        "end_time": "2025-07-06T17:12:16.033877+00:00",
+        "duration": 0.0,
+        "cost_llm": 0.0,
+        "tokens_sent": 0,
+        "tokens_generated": 0,
+        "tools_used": [],
+        "errors": [],
+        "files_read": [],
+        "files_created": [],
+        "custom_metrics": {}
+      },
+      {
+        "current_node": "Generate Annual Report",
+        "status": "success",
+        "start_time": "2025-07-06T17:12:16.051080+00:00",
+        "end_time": "2025-07-06T17:12:16.165738+00:00",
+        "duration": 0.114658,
+        "cost_llm": 0.0,
+        "tokens_sent": 0,
+        "tokens_generated": 0,
+        "tools_used": [],
+        "errors": [],
+        "files_read": [],
+        "files_created": [],
+        "custom_metrics": {}
+      }
+    ],
+    "icaif_scores": {
+      "accuracy": 7,
+      "logicality": 8,
+      "storytelling": 9
+    },
+    "pipeline_matrix": [
+      [
+        "Get Company Details",
+        1,
+        4.9,
+        0,
+        "unknown",
+        "unknown"
+      ],
+      [
+        "Check Region",
+        1,
+        0.0,
+        0,
+        "unknown",
+        "unknown"
+      ],
+      [
+        "US Data Collection",
+        1,
+        62.0,
+        0,
+        "unknown",
+        "unknown"
+      ],
+      [
+        "Validate Collected Data",
+        1,
+        0.0,
+        0,
+        "unknown",
+        "unknown"
+      ],
+      [
+        "Summarize Data",
+        1,
+        33.6,
+        0,
+        "unknown",
+        "unknown"
+      ],
+      [
+        "Validate Summarized Data",
+        1,
+        0.0,
+        0,
+        "unknown",
+        "unknown"
+      ],
+      [
+        "Concept Analysis",
+        1,
+        66.2,
+        0,
+        "unknown",
+        "unknown"
+      ],
+      [
+        "Validate Conceptual Insights",
+        1,
+        0.0,
+        0,
+        "unknown",
+        "unknown"
+      ],
+      [
+        "Generate Annual Report",
+        1,
+        0.1,
+        0,
+        "unknown",
+        "unknown"
+      ]
+    ]
+  },
+  "icaif_scores": {
+    "accuracy": 7,
+    "logicality": 8,
+    "storytelling": 9
+  },
+  "pipeline_matrix": [
+    [
+      "Get Company Details",
+      1,
+      4.9,
+      0,
+      "unknown",
+      "unknown"
+    ],
+    [
+      "Check Region",
+      1,
+      0.0,
+      0,
+      "unknown",
+      "unknown"
+    ],
+    [
+      "US Data Collection",
+      1,
+      62.0,
+      0,
+      "unknown",
+      "unknown"
+    ],
+    [
+      "Validate Collected Data",
+      1,
+      0.0,
+      0,
+      "unknown",
+      "unknown"
+    ],
+    [
+      "Summarize Data",
+      1,
+      33.6,
+      0,
+      "unknown",
+      "unknown"
+    ],
+    [
+      "Validate Summarized Data",
+      1,
+      0.0,
+      0,
+      "unknown",
+      "unknown"
+    ],
+    [
+      "Concept Analysis",
+      1,
+      66.2,
+      0,
+      "unknown",
+      "unknown"
+    ],
+    [
+      "Validate Conceptual Insights",
+      1,
+      0.0,
+      0,
+      "unknown",
+      "unknown"
+    ],
+    [
+      "Generate Annual Report",
+      1,
+      0.1,
+      0,
+      "unknown",
+      "unknown"
+    ]
+  ],
+  "pipeline_data": [
+    {
+      "current_node": "Get Company Details",
+      "status": "success",
+      "start_time": "2025-07-06T17:09:29.291095+00:00",
+      "end_time": "2025-07-06T17:09:34.167250+00:00",
+      "duration": 4.876155,
+      "cost_llm": 0.0,
+      "tokens_sent": 0,
+      "tokens_generated": 0,
+      "tools_used": [],
+      "errors": [],
+      "files_read": [],
+      "files_created": [],
+      "custom_metrics": {}
+    },
+    {
+      "current_node": "Check Region",
+      "status": "success",
+      "start_time": "2025-07-06T17:09:34.169252+00:00",
+      "end_time": "2025-07-06T17:09:34.169252+00:00",
+      "duration": 0.0,
+      "cost_llm": 0.0,
+      "tokens_sent": 0,
+      "tokens_generated": 0,
+      "tools_used": [],
+      "errors": [],
+      "files_read": [],
+      "files_created": [],
+      "custom_metrics": {}
+    },
+    {
+      "current_node": "US Data Collection",
+      "status": "success",
+      "start_time": "2025-07-06T17:09:34.171735+00:00",
+      "end_time": "2025-07-06T17:10:36.157304+00:00",
+      "duration": 61.985569,
+      "cost_llm": 0.0,
+      "tokens_sent": 0,
+      "tokens_generated": 0,
+      "tools_used": [],
+      "errors": [],
+      "files_read": [],
+      "files_created": [],
+      "custom_metrics": {}
+    },
+    {
+      "current_node": "Validate Collected Data",
+      "status": "success",
+      "start_time": "2025-07-06T17:10:36.159238+00:00",
+      "end_time": "2025-07-06T17:10:36.161307+00:00",
+      "duration": 0.002069,
+      "cost_llm": 0.0,
+      "tokens_sent": 0,
+      "tokens_generated": 0,
+      "tools_used": [],
+      "errors": [],
+      "files_read": [],
+      "files_created": [],
+      "custom_metrics": {}
+    },
+    {
+      "current_node": "Summarize Data",
+      "status": "success",
+      "start_time": "2025-07-06T17:10:36.165476+00:00",
+      "end_time": "2025-07-06T17:11:09.761838+00:00",
+      "duration": 33.596362,
+      "cost_llm": 0.010545900000000002,
+      "tokens_sent": 88695,
+      "tokens_generated": 4191,
+      "tools_used": [
+        "openai:gpt-4.1-nano-2025-04-14",
+        "openai:gpt-4.1-nano-2025-04-14",
+        "openai:gpt-4.1-nano-2025-04-14",
+        "openai:gpt-4.1-nano-2025-04-14",
+        "openai:gpt-4.1-nano-2025-04-14",
+        "openai:gpt-4.1-nano-2025-04-14",
+        "openai:gpt-4.1-nano-2025-04-14",
+        "openai:gpt-4.1-nano-2025-04-14"
+      ],
+      "errors": [],
+      "files_read": [],
+      "files_created": [],
+      "custom_metrics": {}
+    },
+    {
+      "current_node": "Validate Summarized Data",
+      "status": "success",
+      "start_time": "2025-07-06T17:11:09.780834+00:00",
+      "end_time": "2025-07-06T17:11:09.780834+00:00",
+      "duration": 0.0,
+      "cost_llm": 0.0,
+      "tokens_sent": 0,
+      "tokens_generated": 0,
+      "tools_used": [],
+      "errors": [],
+      "files_read": [],
+      "files_created": [],
+      "custom_metrics": {}
+    },
+    {
+      "current_node": "Concept Analysis",
+      "status": "success",
+      "start_time": "2025-07-06T17:11:09.793030+00:00",
+      "end_time": "2025-07-06T17:12:16.009867+00:00",
+      "duration": 66.216837,
+      "cost_llm": 0.030554,
+      "tokens_sent": 8213,
+      "tokens_generated": 1766,
+      "tools_used": [
+        "openai:gpt-4.1-2025-04-14",
+        "openai:gpt-4.1-2025-04-14",
+        "openai:gpt-4.1-2025-04-14",
+        "openai:gpt-4.1-2025-04-14",
+        "openai:gpt-4.1-2025-04-14",
+        "openai:gpt-4.1-2025-04-14"
+      ],
+      "errors": [],
+      "files_read": [],
+      "files_created": [],
+      "custom_metrics": {}
+    },
+    {
+      "current_node": "Validate Conceptual Insights",
+      "status": "success",
+      "start_time": "2025-07-06T17:12:16.033877+00:00",
+      "end_time": "2025-07-06T17:12:16.033877+00:00",
+      "duration": 0.0,
+      "cost_llm": 0.0,
+      "tokens_sent": 0,
+      "tokens_generated": 0,
+      "tools_used": [],
+      "errors": [],
+      "files_read": [],
+      "files_created": [],
+      "custom_metrics": {}
+    },
+    {
+      "current_node": "Generate Annual Report",
+      "status": "success",
+      "start_time": "2025-07-06T17:12:16.051080+00:00",
+      "end_time": "2025-07-06T17:12:16.165738+00:00",
+      "duration": 0.114658,
+      "cost_llm": 0.0,
+      "tokens_sent": 0,
+      "tokens_generated": 0,
+      "tools_used": [],
+      "errors": [],
+      "files_read": [],
+      "files_created": [],
+      "custom_metrics": {}
+    }
+  ],
+  "agent_stats": {
+    "Get Company Details": {
+      "requests": 1,
+      "latencies": [
+        4.876155
+      ],
+      "errors": 0
+    },
+    "Check Region": {
+      "requests": 1,
+      "latencies": [
+        0.0
+      ],
+      "errors": 0
+    },
+    "US Data Collection": {
+      "requests": 1,
+      "latencies": [
+        61.985569
+      ],
+      "errors": 0
+    },
+    "Validate Collected Data": {
+      "requests": 1,
+      "latencies": [
+        0.002069
+      ],
+      "errors": 0
+    },
+    "Summarize Data": {
+      "requests": 1,
+      "latencies": [
+        33.596362
+      ],
+      "errors": 0
+    },
+    "Validate Summarized Data": {
+      "requests": 1,
+      "latencies": [
+        0.0
+      ],
+      "errors": 0
+    },
+    "Concept Analysis": {
+      "requests": 1,
+      "latencies": [
+        66.216837
+      ],
+      "errors": 0
+    },
+    "Validate Conceptual Insights": {
+      "requests": 1,
+      "latencies": [
+        0.0
+      ],
+      "errors": 0
+    },
+    "Generate Annual Report": {
+      "requests": 1,
+      "latencies": [
+        0.114658
+      ],
+      "errors": 0
+    }
+  },
+  "error_log": [
+    "Processing initiated.",
+    "Critical error in Data Collection US Node: COMPLETED"
+  ]
+}

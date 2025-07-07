@@ -6,9 +6,6 @@ import json
 import logging
 from datetime import datetime
 from typing import Dict, Any, Optional, List
-from tools.audit_utils import (
-    calculate_token_cost, validate_pipeline_accuracy  # replaced broken import
-)
 
 # === Logger Setup ===
 LOG_DIR = "logs"
@@ -18,9 +15,17 @@ _log_formatter = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
 _logger = logging.getLogger("FinRobotLogger")
 _logger.setLevel(logging.INFO)
 
-_file_handler = logging.FileHandler(os.path.join(LOG_DIR, "finrobot_events.log"))
+_file_handler = logging.FileHandler(os.path.join(LOG_DIR, "finrobot_events.log"), encoding="utf-8")
+_file_handler.setLevel(logging.INFO )
 _file_handler.setFormatter(_log_formatter)
 _logger.addHandler(_file_handler)
+
+import sys
+_stream_handler = logging.StreamHandler(sys.stdout)
+_stream_handler.setFormatter(_log_formatter)
+_stream_handler.setStream(sys.stdout)
+_stream_handler.encoding = 'utf-8' 
+_logger.addHandler(_stream_handler)
 
 # === Logger Access API ===
 def setup_logging():
