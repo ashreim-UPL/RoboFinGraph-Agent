@@ -248,13 +248,24 @@ def data_collection_us_node(agent_state: AgentState) -> Dict[str, Any]:
         updated_error_log = list(agent_state.error_log) + collection_results["errors"]
 
         messages = list(agent_state.messages) # Start with existing messages
+        now = datetime.now(timezone.utc).isoformat()
+
         for f in collection_results["collected_files"]:
-            messages.append(HumanMessage(content=f"Successfully collected: {os.path.basename(f)}"))
+            agent_state.messages.append({
+            "role":    "assistant",
+            "content": f"Successfully collected: {os.path.basename(f)}",
+            "ts":      now
+            })
+
         for err in collection_results["errors"]:
-            messages.append(HumanMessage(content=f"Error during data collection: {err}"))
+            agent_state.messages.append({
+            "role":    "assistant",
+            "content": f"Error during data collection: {err}",
+            "ts":      now
+            })
             
         errors_list = collection_results.get("errors", []) # Safely get 'errors', default to empty list if not present
-        status = NodeStatus.COMPLETED.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
+        status = NodeStatus.SUCCESS.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
 
         agent_state.llm_provider = "NA"
         agent_state.llm_model = "NA"
@@ -315,13 +326,24 @@ def data_collection_indian_node(agent_state: AgentState) -> AgentState:
         updated_error_log = list(agent_state.error_log) + collection_results["errors"]
 
         messages = list(agent_state.messages) # Start with existing messages
+        now = datetime.now(timezone.utc).isoformat()
+
         for f in collection_results["collected_files"]:
-            messages.append(HumanMessage(content=f"Successfully collected: {os.path.basename(f)}"))
+            agent_state.messages.append({
+            "role":    "assistant",
+            "content": f"Successfully collected: {os.path.basename(f)}",
+            "ts":      now
+            })
+
         for err in collection_results["errors"]:
-            messages.append(HumanMessage(content=f"Error during data collection: {err}"))
-            
+            agent_state.messages.append({
+            "role":    "assistant",
+            "content": f"Error during data collection: {err}",
+            "ts":      now
+            })
+
         errors_list = collection_results.get("errors", []) # Safely get 'errors', default to empty list if not present
-        status = NodeStatus.COMPLETED.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
+        status = NodeStatus.SUCCESS.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
 
         agent_state.llm_provider = "NA"
         agent_state.llm_model = "NA"
@@ -473,19 +495,6 @@ def summarization_node(agent_state: AgentState) -> AgentState:
             agent_state,
         )
         text = resp.content.strip()
-
-        # IF NOde is LLM we don't need this here- testing
-        """agent_state.llm_provider = str(executor.provider)
-        agent_state.llm_model = str(executor.model_name)
-        # === LOG LLM/AGENT USAGE ===
-        agent_state.memory.setdefault("models_used", []).append({
-            "agent": "summarization",
-            "provider": agent_state.llm_provider,
-            "model": agent_state.llm_model,
-            "tokens_sent": agent_state.tokens_sent,
-            "tokens_generated": agent_state.tokens_generated,
-            "cost_llm": agent_state.cost_llm,
-        })"""
 
         # --- write out to preliminary_dir ---
         out_path = prelim_dir / f"{key}.txt"
@@ -724,7 +733,6 @@ def parse_icaif_scores(response: str) -> dict:
             scores[key] = int(m2.group(1)) if m2 else None
 
     return scores
-
 def run_evaluation_node(agent_state: "AgentState") -> "AgentState":
     """
     Perform final pipeline evaluation: quantitative KPIs + qualitative LLM audit.
@@ -748,8 +756,7 @@ def run_evaluation_node(agent_state: "AgentState") -> "AgentState":
     # Save ICAIF prompt for debug
     work_dir = getattr(agent_state, "work_dir", ".")
     os.makedirs(work_dir, exist_ok=True)
-    prompt_path = os.path.join(work_dir, "icaif_prompt_debug.txt")
-    with open(prompt_path, "w", encoding="utf-8") as f:
+    with open(os.path.join(work_dir, "icaif_prompt_debug.txt"), "w", encoding="utf-8") as f:
         f.write(icaif_prompt)
 
     # Run the LLM for ICAIF
@@ -757,51 +764,54 @@ def run_evaluation_node(agent_state: "AgentState") -> "AgentState":
     icaif_response = getattr(icaif_response_msg, "content", str(icaif_response_msg))
 
     # Save ICAIF LLM response for debug
-    response_path = os.path.join(work_dir, "icaif_response_debug.txt")
-    with open(response_path, "w", encoding="utf-8") as f:
+    with open(os.path.join(work_dir, "icaif_response_debug.txt"), "w", encoding="utf-8") as f:
         f.write(icaif_response)
 
     # Parse ICAIF scores
     icaif_scores = parse_icaif_scores(icaif_response)
     # Save parsed scores for debug
-    scores_path = os.path.join(work_dir, "icaif_scores_debug.json")
-    with open(scores_path, "w", encoding="utf-8") as f:
+    with open(os.path.join(work_dir, "icaif_scores_debug.json"), "w", encoding="utf-8") as f:
         json.dump(icaif_scores, f, indent=2, ensure_ascii=False)
 
     # === 3) Quantitative & Qualitative evaluation (pass ICAIF scores to KPIs) ===
     result = evaluate_pipeline(agent_state, icaif_scores=icaif_scores)
     pipeline_steps = result.get("pipeline_steps", [])
+    global_provider = result["kpis"].get("main_llm_provider", "unknown")
 
-    # === 4) Build pipeline matrix (agent stats) ===
-    agent_stats = defaultdict(lambda: {"requests": 0, "latencies": [], "errors": 0})
-    for step in pipeline_steps:
-        node = step.get("current_node", "unknown")   # Updated for new schema!
-        agent_stats[node]["requests"] += 1
-        agent_stats[node]["latencies"].append(step.get("duration", 0))
-        if step.get("errors"):
-            agent_stats[node]["errors"] += len(step.get("errors"))
-
+    # === 4) Build pipeline matrix, extracting provider/model per step ===
     pipeline_matrix = []
-    for agent_name, stat in agent_stats.items():
-        avg_latency = (sum(stat["latencies"]) / len(stat["latencies"])) if stat["latencies"] else 0
+    for step in pipeline_steps:
+        node     = step.get("current_node", "unknown")
+        latency  = round(step.get("duration", 0.0), 1)
+        errors   = len(step.get("errors", []))
+        # pick the first tool_used for provider/model
+        tools = step.get("tools_used", []) or []
+        if tools:
+            provider, model = tools[0].split(":", 1)
+        else:
+            provider, model = global_provider, "unknown"
         pipeline_matrix.append([
-            agent_name,
-            stat["requests"],
-            round(avg_latency, 1),
-            stat["errors"],
-            stat.get("provider", "unknown"),
-            stat.get("model", "unknown"),
+            node,
+            1,              # each step ran exactly once
+            latency,
+            errors,
+            provider,
+            model,
         ])
 
     # === 5) Save back to agent_state ===
-    result["icaif_scores"] = icaif_scores
+    result["icaif_scores"]    = icaif_scores
     result["pipeline_matrix"] = pipeline_matrix
     agent_state.memory["final_evaluation"] = result
     agent_state.accuracy_score = result["kpis"].get("total_pipeline_cost_usd", 0)
 
     # === 6) Pretty print to console ===
-    print("### ICAIF Ratings ###")
-    print(tabulate(icaif_scores.items(), headers=["Criterion", "Score"], tablefmt="github"))
+    if icaif_scores:
+        print("### ICAIF Ratings ###")
+        print(tabulate(icaif_scores.items(), headers=["Criterion", "Score"], tablefmt="github"))
+    else:
+        print("### No ICAIF scores available ###")
+
     print("\n### Pipeline Matrix ###")
     print(tabulate(
         pipeline_matrix,
@@ -812,11 +822,10 @@ def run_evaluation_node(agent_state: "AgentState") -> "AgentState":
     # === 7) Persist all evaluation data ===
     metrics_to_save = {
         "final_evaluation": result,
-        "icaif_scores": icaif_scores,
-        "pipeline_matrix": pipeline_matrix,
-        "pipeline_data": pipeline_steps,
-        "agent_stats": dict(agent_stats),
-        "error_log": getattr(agent_state, "error_log", []),
+        "icaif_scores":     icaif_scores,
+        "pipeline_matrix":  pipeline_matrix,
+        "pipeline_data":    pipeline_steps,
+        "error_log":        getattr(agent_state, "error_log", []),
     }
     out_path = os.path.join(work_dir, "pipeline_metrics.json")
     try:

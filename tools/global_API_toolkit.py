@@ -129,8 +129,9 @@ def make_api_request(
         try:
             response = requests.request(method, full_url, json=payload if method == "POST" else None,
                                         params=payload if method == "GET" else None, headers=headers, timeout=20)
-            print("Sleeping for 1.5s to respect IndianMarket API rate limit.")
-            time.sleep(1.5)
+            if api_name == "IndianMarket":
+                print("Sleeping for 1.5s to respect IndianMarket API rate limit.")
+                time.sleep(1.5)
             response.raise_for_status()
             # print("reached api request: ", api_name, " response: ", response.json())
             return response.json()

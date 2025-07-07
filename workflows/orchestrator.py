@@ -123,7 +123,10 @@ def run_orchestration(
     log_event("graph_edges_configured", {})
 
     # === 3. Prepare work dir & initial state
-    report_dir = os.path.join("report", f"{company}_{year}")
+    provider = config.get("default_provider", "openai")
+    # include provider in driectory to run evaluation tests
+    report_dir = os.path.join("report", f"{company}_{year}_{provider}")
+
     os.makedirs(report_dir, exist_ok=True)
     initial_state = {
         "company": company,
