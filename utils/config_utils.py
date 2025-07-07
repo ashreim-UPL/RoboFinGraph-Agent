@@ -10,6 +10,7 @@ from langchain_community.chat_models import ChatOpenAI
 from langchain_together import ChatTogether
 from langchain.schema import BaseMessage, AIMessage
 from langchain_community.callbacks.manager import get_openai_callback
+from langchain_google_genai import ChatGoogleGenerativeAI
 from agents.state_types import AgentState, NodeState
 from datetime import datetime, timezone
 

@@ -60,7 +60,7 @@
         "deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free"
       ]
     },
-    "goole": {
+    "google": {
       "api_key": "AIzaSyAFKx0rQBsSUdTBboKed5SYHAz01XZD6TQ",
       "base_url": "https://api.notused.com",
       "models": [
