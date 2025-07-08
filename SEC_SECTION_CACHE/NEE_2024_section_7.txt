@@ -1,0 +1,738 @@
+ Item 7. Management&#8217;s Discussion and Analysis of Financial Condition and Results of Operations 
+
+OVERVIEW 
+
+NEE&#8217;s operating performance is driven primarily by the operations of its two principal businesses, FPL, which serves approximately 5.9 million customer accounts in Florida and is one of the largest electric utilities in the U.S., and NEER, which together with affiliated entities is the world's largest generator of renewable energy from the wind and sun based on 2023 MWh produced on a net generation basis, as well as a world leader in battery storage . The table below presents net income (loss) attributable to NEE and earnings (loss) per s hare attributable to NEE, assuming dilution, by reportable segment, FPL and NEER. Corporate and Other is primarily comprised of the operating results of other business activities, as well as other income and expense items, including interest expense, and eliminating entries, and may include the net effect of rounding. See Note 16 for additional segment information. The following discussion should be read in conjunction with the Notes to Consolidated Financial Statements contained herein and all comparisons are with the corresponding items in the prior year. 
+
+##TABLE_START Net Income (Loss) Attributable to NEE Earnings (Loss) Per Share Attributable to NEE, Assuming Dilution Years Ended December 31, Years Ended December 31, 2023 2022 2021 2023 2022 2021 (millions) 
+
+FPL 
+
+$ 4,552 &#160; $ 3,701 $ 3,206 $ 2.24 &#160; $ 1.87 $ 1.63 
+
+NEER (a) 
+
+3,558 &#160; 285 599 1.75 &#160; 0.14 0.30 
+
+Corporate and Other 
+
+(800) 161 (232) (0.39) 0.09 (0.12) NEE $ 7,310 &#160; $ 4,147 $ 3,573 $ 3.60 &#160; $ 2.10 $ 1.81 ##TABLE_END ______________________ 
+
+(a) NEER&#8217;s results reflect an allocation of interest expense from NEECH based on a deemed capital structure of 70% debt and differential membership interests sold by NextEra Energy Resources' subsidiaries. 
+
+For the five years ended December 31, 2023, NEE delivered a total shareholder return of approximately 56.4%, compared to the S&#38;P 500&#8217;s 107.2% return, the S&#38;P 500 Utilities' 41.0% return and the Dow Jones U.S. Electricity's 39.6% return. The historical stock performance of NEE's common stock shown in the performance graph below is not necessarily indicative of future stock price performance. 
+
+s 
+
+Adjusted Earnings 
+
+NEE prepares its financial statements under GAAP. However, management uses earnings adjusted for certain items (adjusted earnings), a non-GAAP financial measure, internally for financial planning, analysis of performance, reporting of results to the Board of Directors and as an input in determining performance-based compensation under NEE&#8217;s employee incentive compensation plans. NEE also uses adjusted earnings when communicating its financial results and earnings outlook to analysts and investors. NEE &#8217;s management believes that adjusted earnings provide a more meaningful representation of NEE's fundamental earnings power. Although these amounts are properly reflected in the determination of net income under GAAP, management believes that the amount and/or nature of such items make period to period comparisons of operations difficult and potentially confusing. Adjusted earnings do not represent a substitute for net income, as prepared under GAAP. 
+
+The following table provides details of the after-tax adjustments to net income considered in computing NEE's adjusted earnings discussed above. 
+
+##TABLE_START Years Ended December 31, 2023 2022 2021 (millions) Net gains (losses) associated with non-qualifying hedge activity (a) 
+
+$ 1,497 &#160; $ (696) $ (1,576) Differential membership interests-related &#8211; NEER 
+
+$ (49) $ (87) $ (98) 
+
+NEP investment gains, net &#8211; NEER (b) 
+
+$ (963) $ 186 $ 27 
+
+Gain on disposal of a business (c) 
+
+$ 306 &#160; $ &#8212; $ &#8212; Change in unrealized gains (losses) on equity securities held in NEER's nuclear decommissioning funds and OTTI, net &#8211; NEER 
+
+$ 116 &#160; $ (324) $ 199 
+
+Impairment charges related to investment in Mountain Valley Pipeline &#8211; NEER (d) 
+
+$ (38) $ (674) $ &#8212; ##TABLE_END
+
+______________________ 
+
+(a) For 2023, 2022 and 2021, approximately $1,729 million of gains, $1,257 million of losses and $1,735 million of losses, respectively, are included in NEER's net income; the balance is included in Corporate and Other. The change in non-qualifying hedge activity is primarily attributable to changes in forward power and natural gas prices, interest rates and foreign currency exchange rates, as well as the reversal of previously recognized unrealized mark-to-market gains or losses as the underlying transactions were realized. 
+
+(b) See Note 4 &#8211; Nonrecurring Fair Value Measurements for a discussion of an impairment charge related to the investment in NEP in 2023. 
+
+(c) Approximately $300 million of gains are included in FPL's net income; the balance is included in NEER. See Note 1 &#8211; Disposal of Businesses/Assets and Sale of Noncontrolling Ownership Interests for a discussion of the sale of FPL's ownership interest in its Florida City Gas business (FCG). 
+
+(d) See Note 4 &#8211; Nonrecurring Fair Value Measurements for a discussion of the impairment charge in 2022 related to the investment in Mountain Valley Pipeline, LLC (Mountain Valley Pipeline). 
+
+NEE segregates into two categories unrealized mark-to-market gains and losses and timing impacts related to derivative transactions. The first category, referred to as non-qualifying hedges, represents certain energy derivative, interest rate derivative and foreign currency transactions entered into as economic hedges, which do not meet the requirements for hedge accounting, or for which hedge accounting treatment is not elected or has been discontinued. Changes in the fair value of those transactions are marked to market and reported in the consolidated statements of income, resulting in earnings volatility because the economic offset to certain of the positions are generally not marked to market. As a consequence, NEE's net income reflects only the movement in one part of economically-linked transactions. For example, a gain (loss) in the non-qualifying hedge category for certain energy derivatives is offset by decreases (increases) in the fair value of related physical asset positions in the portfolio or contracts, which are not marked to market under GAAP. For this reason, NEE's management views results expressed excluding the impact of the non-qualifying hedges as a meaningful measure of current period performance. The second category, referred to as trading activities, which is included in adjusted earnings, represents the net unrealized effect of actively traded positions entered into to take advantage of expected market price movements and all other commodity hedging activities. At FPL, substantially all changes in the fair value of energy derivative transactions are deferred as a regulatory asset or liability until the contracts are settled, and, upon settlement, any gains or losses are passed through the fuel clause. See Note 3. 
+
+2023 Summary 
+
+Net income attributable to NEE for 2023 was higher than 2022 by $3,163 million, or $1.50 per share, assuming dilution, due to higher results at NEER and FPL, partly offset by lower results at Corporate and Other. 
+
+FPL's net income increased by $851 million in 2023 primarily driven by continued investments in plant in service and other property and the gain on sale of FPL's ownership interest in the FCG business. 
+
+NEER's results increased in 2023 primarily driven by favorable non-qualifying hedge activity compared to 2022, higher earnings from new investments, lower impairment charges related to its investment in Mountain Valley Pipeline, partly offset by the OTTI impairment related to the investment in NEP. In 2023, NEER added approximately 1,651 MW of new wind generating capacity and 2,073 MW of solar generating capacity and increased its backlog of contracted renewable development projects. 
+
+Corporate and Other's results in 2023 decreased primarily due to unfavorable non-qualifying hedge activity. 
+
+s 
+
+NEE and its subsidiaries require funds to support and grow their businesses. These funds are primarily provided by cash flows from operations, borrowings or issuances of short- and long-term debt and, from time to time, issuances of equity securities, proceeds from differential membership investors, the sale of tax credits and sales of assets to NEP or third parties. See Liquidity and Capital Resources. 
+
+RESULTS OF OPERATIONS 
+
+Net income attributable to NEE for 2023 was $7.31 billion compared to $4.15 billion in 2022. In 2023, net income attributable to NEE increased primarily due to higher results at NEER and FPL, partly offset by lower results at Corporate and Other. The comparison of the results of operations for the years ended December 31, 2022 and 2021 are included in Management's Discussion in NEE's and FPL's Annual Report on Form 10-K for the year ended December 31, 2022 . 
+
+In September 2022, subsidiaries of NextEra Energy Resources sold to a NEP subsidiary a 67% controlling ownership interest in a battery storage facility with storage capacity of 230 MW. In December 2022, subsidiaries of NextEra Energy Resources sold (i) a 49% controlling ownership interest in three wind generation facilities and one solar plus battery facility with a total generating capacity of 1,437 MW and 65 MW of battery storage capacity, two of which facilities were under construction and achieved commercial operations in 2023, and (ii) their 100% ownership interest in three wind generation facilities with a total generating capacity of 347 MW to a NEP subsidiary. See Note 1 &#8211; Disposal of Businesses/Assets and Sale of Noncontrolling Ownership Interests. 
+
+In March 2023, a wholly owned subsidiary of NextEra Energy Resources acquired a portfolio of renewable energy projects as well as the related service provider. See Note 6 &#8211; RNG Acquisition. In June 2023, subsidiaries of NextEra Energy Resources sold to a NEP subsidiary their 100% ownership interests in five wind generation facilities and three solar generation facilities with a total generating capacity of 688 MW. In November 2023, FPL sold its ownership interests in FCG. See Note 1 &#8211; Disposal of Businesses/Assets and Sale of Noncontrolling Ownership Interests. 
+
+NEE's effective income tax rate for 2023 and 2022 was approximately 14% and 15%, respectively. The rates for both years reflect the impact of renewable energy tax credits. See Note 5. In August 2022, the IRA was enacted which significantly expanded tax incentives for clean energy (see Item 1. Business &#8211; NEER &#8211; Clean Energy and Other Operations &#8211; Clean Energy &#8211; Policy Incentives for Renewable Energy Projects). 
+
+FPL: Results of Operations 
+
+FPL obtains its operating revenues primarily from the sale of electricity to retail customers at rates established by the FPSC through b ase rates and cost recovery clause mechanisms. FPL&#8217;s net income for 2023 and 2022 was $4,552 million and $3,701 million, respectively, representing an increase of $851 million. The increase was primarily driven by higher earnings from investments in plant in service and other property and the gain on sale of FPL's ownership interest in the FCG business. Such investments grew FPL's average rate base by approximately $6.9 billion in 2023 and reflect, among other things, solar generation additions, ongoing transmission and distribution additions, and the addition of the 1,246 MW Dania Beach Clean Energy Center which was placed in service on May 31, 2022. 
+
+During 2023, the FPSC approved FPL's request to begin recovering eligible storm costs of approximately $1.3 billion, primarily related to surcharges for Hurricanes Ian and Nicole which impacted FPL's service area in 2022. FPL implemented an interim storm restoration charge in April 2023 for eligible storm restoration costs. See Note 1 &#8211; Storm Funds, Storm Reserves and Storm Cost Recovery. 
+
+The use of reserve amortization is permitted by the 2021 rate agreement. See Item 1. Business &#8211; FPL &#8211; FPL Regulation &#8211; FPL Electric Rate Regulation &#8211; Base Rates &#8211; Base Rates Effective January 2022 through December 2025 for additional information on the 2021 rate agreement. In order to earn a targeted regulatory ROE, subject to limitations associated with the 2021 rate agreement, reserve amortization is calculated using a trailing thirteen-month average of retail rate base and capital structure in conjunction with the trailing twelve months regulatory retail base net operating income, which primarily includes the retail base portion of base and other revenues, net of O&#38;M, depreciation and amortization, interest and tax expenses. In general, the net impact of these income statement line items must be adjusted, in part, by reserve amortization to earn the targeted regulatory ROE. In certain periods, reserve amortization is reversed so as not to exceed the targeted regulatory ROE. The drivers of FPL's net income not reflected in the reserve amortization calculation typically include wholesale and transmission service revenues and expenses, cost recovery clause revenues and expenses, AFUDC &#8211; equity and revenue and costs not recoverable from retail customers. FPL recorded reserve amortization of approximately $227 million in 2023 and a one-time reserve amortization adjustment of $114 million in 2022. See Depreciation and Amortization Expense below. FPL's regulatory ROE for 2023 and 2022 was approximately 11.80% and 11.74%, respectively. 
+
+On September 28, 2023, the Florida Supreme Court ruled on the appeal of the FPSC&#8217;s final order regarding FPL&#8217;s 2021 rate agreement and remanded the FPSC's order back to the FPSC. See Note 1 &#8211; Base Rates Effective January 2022 through December 2025. 
+
+s 
+
+During 2023, operating revenues increased $1,083 million primarily related to an increase in storm cost recovery revenues as discussed in Cost Recovery Clauses below. 
+
+Retail Base 
+
+FPL&#8217;s retail base revenues for 2023 and 2022 reflect the 2021 rate agreement. Retail base revenues increased approximately $618 million during the year ended December 31, 2023 primarily related to new retail base rates under the 2021 rate agreement. Retail revenues were also impacted by an increase of approximately 1.2% in the average number of customer accounts, partly offset by a decrease of 0.6% in the average usage per retail customer. See Note 1 &#8211; Rate Regulation. 
+
+Cost Recovery Clauses 
+
+Revenues from fuel and other cost recovery clauses and pass-through costs, such as franchise fees, revenue taxes and storm-related surcharges, are largely a pass-through of costs. Such revenues also include a return on investment allowed to be recovered through the cost recovery clauses on certain assets, primarily related to certain solar, environmental projects, storm protection plan investments and the unamortized balance of the regulatory asset associated with FPL's acquisition of certain generation facilities. See Item 1. Business &#8211; FPL &#8211; FPL Regulation &#8211; FPL Electric Rate Regulation &#8211; Cost Recovery Clauses. Under-recovery or over-recovery of cost recovery clause and other pass-through costs (deferred clause and franchise expenses and revenues) can significantly affect NEE's and FPL's operating cash flows. The 2023 net decrease in under-recovery of cost recovery clauses impacting FPL's operating cash flows was approximately $1,104 million, primarily related to lower fuel prices and recovery of fuel cost incurred in 2022, but recovered in rates in 2023. 
+
+The increase in operating revenues in 2023 reflects higher storm cost recovery revenues of approximately $1,117 million primarily associated with Hurricanes Ian and Nicole, as discussed above. The increase in operating revenues in 2023 were partly offset by decreases in fuel cost recovery revenues of approximately $714 million primarily as a result of lower fuel and energy prices. In 2023 and 2022, cost recovery clauses contributed approximately $369 million and $261 million, respectively, to FPL&#8217;s net income. 
+
+Other Items Impacting FPL's Consolidated Statements of Income 
+
+Fuel, Purchase Power and Interchange Expense 
+
+Fuel, purchased power and interchange expense decreased $927 million in 2023 primarily related to lower fuel and energy prices. 
+
+Depreciation and Amortization Expense 
+
+The major components of FPL&#8217;s depreciation and amortization expense are as follows: 
+
+##TABLE_START Years Ended December 31, 2023 2022 (millions) 
+
+Reserve amortization recorded under the 2021 rate agreement 
+
+$ (227) $ &#8212; One-time reserve adjustment recorded under the 2021 rate agreement &#8212; &#160; (114) Other depreciation and amortization recovered under base rates (excluding reserve amortization) and other 
+
+2,468 &#160; 2,404 Depreciation and amortization primarily recovered under cost recovery clauses and storm-recovery cost amortization 
+
+1,548 &#160; 405 Total $ 3,789 &#160; $ 2,695 ##TABLE_END
+
+Depreciation expense increased $1,094 million during 2023 primarily reflecting amortization of deferred storm costs expenses primarily associated with Hurricanes Ian and Nicole as discussed above, of approximately $1,114 million, partly offset by the impact of reserve amortization. In 2022, FPL recorded a one-time reserve amortization adjustment of approximately $114 million as required under the 2021 rate agreement, 50% of which was used to reduce the capital recovery regulatory asset balance and the other 50% to increase the storm reserve regulatory liability. Reserve amortization, or reversal of such amortization, reflects adjustments to accrued asset removal costs provided under the 2021 rate agreement in order to achieve the targeted regulatory ROE. Reserve amortization is recorded as either an increase or decrease to accrued asset removal costs which is reflected in noncurrent regulatory assets on NEE's and FPL's consolidated balance sheets. At December 31, 2023, approximately $1,223 million of reserve amortization remains available under the 2021 rate agreement. 
+
+Gains on Disposal of Businesses/Assets &#8211; net 
+
+In 2023, gains on disposal of businesses/assets &#8211; net primarily relate to the sale of ownership interests in the FCG business. See Note 1 &#8211; Disposal of Businesses/Assets and Sale of Noncontrolling Ownership Interests. 
+
+Interest Expense 
+
+Interest expense increased $346 million primarily due to higher average interest rates and higher average debt balances. 
+
+s 
+
+NEER: Results of Operations 
+
+NEER owns, develops, constructs, manages and operates electric generation facilities in wholesale energy markets in the U.S. and Canada and also includes assets and investments in other businesses with a clean energy focus, such as battery storage and renewable fuels. NEER also provides full energy and capacity requirements services, engages in power and fuel marketing and trading activities, owns, develops, constructs and operates rate-regulated transmission facilities and transmission lines and invests in natural gas, natural gas liquids and oil production and pipeline infrastructure assets. NEER&#8217;s net income less net loss attributable to noncontrolling interests for 2023 and 2022 was $3,558 million and $285 million, respectively, resulting in an increase in 2023 of $3,273 million. The primary drivers, on an after-tax basis, of the change are in the following table. 
+
+##TABLE_START Increase (Decrease) From Prior Period Year Ended December 31, 2023 (millions) 
+
+New investments (a) 
+
+$ 714 &#160; 
+
+Existing clean energy (a) 
+
+(214) 
+
+Gas infrastructure (a) 
+
+(21) 
+
+Customer supply (b) 
+
+334 &#160; 
+
+NEET (a) 
+
+(2) Other, including interest expense, corporate general and administrative expenses and other investment income (451) 
+
+Change in non-qualifying hedge activity (c) 
+
+2,986 &#160; Change in unrealized gains/losses on equity securities held in nuclear decommissioning funds and OTTI, net (c) 
+
+440 &#160; 
+
+NEP investment gains, net (c) 
+
+(1,149) 
+
+Impairment charges related to investment in Mountain Valley Pipeline (c)(d) 
+
+636 &#160; Change in net income less net loss attributable to noncontrolling interests $ 3,273 &#160; ##TABLE_END ______________________ 
+
+(a) Reflects after-tax project contributions, including the net effect of deferred income taxes and other benefits associated with renewable energy tax credits for wind, solar and storage projects, as applicable (see Note 1 &#8211; Income Taxes and &#8211; Noncontrolling Interests and Note 5), but excludes allocation of interest expense and corporate general and administrative expenses except for an allocated credit support charge related to guarantees issued to conduct business activities. Results from projects, pipelines and rate-regulated transmission facilities and transmission lines are included in new investments during the first twelve months of operation or ownership. Project results, including repowered wind projects, are included in existing clean energy, pipeline results are included in gas infrastructure and rate-regulated transmission facilities and transmission lines are included in NEET beginning with the thirteenth month of operation or ownership. 
+
+(b) Excludes allocation of interest expense and corporate general and administrative expenses except for an allocated credit support charge related to guarantees issued to conduct business activities. 
+
+(c) See Overview &#8211; Adjusted Earnings for additional information. 
+
+(d) See Note 4 &#8211; Nonrecurring Fair Value Measurements for a discussion of the first quarter 2022 impairment charge related to the investment in Mountain Valley Pipeline. 
+
+New Investments 
+
+Results from new investments in 2023 increased primarily due to higher earnings related to new wind and solar generation and battery storage facilities that entered service during or after 2022. 
+
+Other Factors 
+
+Supplemental to the primary drivers of the changes in NEER's results discussed above, the discussion below describes changes in certain line items set forth in NEE's consolidated statements of income as they relate to NEER. 
+
+Operating Revenues 
+
+Operating revenues for 2023 increased $5,952 million primarily due to: 
+
+&#8226; the impact of non-qualifying commodity hedges due primarily to changes in energy prices (approximately $2,529 million of gains during 2023 compared to $2,670 million of losses for 2022), 
+
+&#8226; net increases in revenues of $647 million from the customer supply and gas infrastructure businesses, 
+
+&#8226; revenues from new investments of $390 million, and 
+
+&#8226; higher revenues from NEET of $84 million, 
+
+partly offset by, 
+
+&#8226; lower revenues from existing clean energy assets of $371 million primarily due to lower wind revenues primarily reflecting lower wind resource. 
+
+Operating Expenses &#8211; net 
+
+Operating expenses &#8211; net for 2023 increased $566 million primarily due to increases of $342 million in O&#38;M expenses and $287 million in depreciation and amortization expenses, partly offset by decreases of $41 million in fuel, purchased power and interchange expenses. The increases were primarily associated with growth across the NEER businesses. 
+
+Gains on Disposal of Businesses/Assets &#8211; net 
+
+In 2022, gains on disposal of businesses/assets &#8211; net primarily relate to the sale of ownership interests in wind, solar and battery 
+
+s 
+
+storage projects to NEP and the resolution of a contingency related to the December 2021 sale of ownership interests in wind and solar projects. See Note 1 &#8211; Disposal of Businesses/Assets and Sale of Noncontrolling Ownership Interests. 
+
+Interest Expense 
+
+NEER's interest expense for 2023 increased $1,001 million primarily reflecting approximately $617 million of unfavorable impacts related to changes in the fair value of interest rate derivative instruments as well as higher interest expense primarily due to higher average interest rates and higher average debt balances. 
+
+Equity in Earnings (Losses) of Equity Method Investees 
+
+NEER recognized $649 million of equity in losses of equity method investees in 2023 compared to $202 million of equity in earnings of equity method investees for the prior year. The decrease in 2023 primarily reflects an impairment charge of approximately $1.2 billion ($0.9 billion after tax) related to the investment in NEP and a decrease in equity in earnings (losses) of NEP recorded in 2023 primarily due to unfavorable impacts related to changes in the fair value of interest rate derivative instruments, partly offset by the absence of impairment charges of approximately $0.8 billion ($0.6 billion after tax) related to the investment in Mountain Valley Pipeline recorded in the first quarter of 2022 (see Note 4 &#8211; Nonrecurring Fair Value Measurements). 
+
+Change in Unrealized Gains (Losses) on Equity Securities Held in NEER's Nuclear Decommissioning Funds &#8211; net 
+
+In 2023, the changes in the fair value of equity securities in NEER's nuclear decommissioning funds related to favorable market conditions in 2023 compared to unfavorable market conditions in the prior year. 
+
+Income Taxes 
+
+NEER's effective income tax rate for 2023 and 2022 was approximately 7% and 39%, respectively, and is primarily based on the composition of pretax income in 2023 and pretax loss in 2022 as well as the impact of renewable energy tax credits. PTCs from wind and solar projects and ITCs from solar, battery storage and certain wind projects are included in NEER&#8217;s earnings. PTCs are recognized as wind and solar energy is generated and sold based on a per kWh rate prescribed in applicable federal and state statutes. See Note 1 &#8211; Income Taxes for a discussion of renewable energy tax credits, Note 5 and Note 16. 
+
+Corporate and Other: Results of Operations 
+
+Corporate and Other is primarily comprised of the operating res ults of other business activities, as well as corporate interest income and expenses. Corporate and Other allocates a portion of NEECH's corporate interest expense to NextEra Energy Resources. Interest expense is allocated based on a deemed capital structure of 70% debt and differential membership interests sold by NextEra Energy Resources' subsidiaries. 
+
+Corporate and Other's results decreased $961 million during 2023 primarily due to unfavorable after-tax impacts of approximately $793 million, as compared to the prior year, related to non-qualifying hedge activity as a result of changes in the fair value of interest rate derivative instruments as well as higher average interest rates and higher average debt balances. 
+
+LIQUIDITY AND CAPITAL RESOURCES 
+
+NEE and its subsidiaries require funds to support and grow their businesses. These funds are used for, among other things, working capital (see Note 1 &#8211; Storm Funds, Storm Reserves and Storm Cost Recovery ), capital expenditures (see Note 15 &#8211; Commitments), investments in or acquisitions of assets and businesses (see Note 6), payment of maturing debt and related derivative obligations (see Note 13 and Note 3) and, from time to time, redemption or repurchase of outstanding debt or equity securities. It is anticipated that these requirements will be satisfied through a combination of cash flows from operations, short- and long-term borrowings, the issuance of short- and long-term debt (see Note 13) and, from time to time, equity securities, proceeds from differential membership investors, the sale of renewable energy tax credits (see Note 1 - Income Taxes) and sales of assets to NEP or third parties (see Note 1 &#8211; Disposal of Businesses/Assets and Sale of Noncontrolling Ownership Interests) , consistent with NEE&#8217;s and FPL&#8217;s objective of maintaining, on a long-term basis, a capital structure that will support a strong investment grade credit rating. NEE, FPL and NEECH rely on access to credit and capital markets as significant sources of liquidity for capital requirements and other operations that are not satisfied by operating cash flows. The inability of NEE, FPL and NEECH to maintain their current credit ratings could affect their ability to raise short- and long-term capital, their cost of capital and the execution of their respective financing strategies, and could require the posting of additional collateral under certain agreements. 
+
+In October 2015, NEE authorized a program to purchase, from time to time, up to $150 million of common units representing limited partner interests in NEP. Under the program, purchases may be made in amounts, at prices and at such times as NEE or its subsidiaries deem appropriate, all subject to market conditions and other considerations. The purchases may be made in the open market or in privately negotiated transactions. Any purchases will be made in such quantities, at such prices, in such manner and on such terms and conditions as determined by NEE or its subsidiaries in their discretion, based on factors such as market and business conditions, applicable legal requirements and other factors. The common unit purchase program does not require NEE to acquire any specific number of common units and may be modified or terminated by NEE at any time. The purpose of the program is not to cause NEP&#8217;s common units to be delisted from the New York Stock Exchange or to cause the common units to be deregistered with the SEC. As of December 31, 2023, the dollar value of units that may yet be purchased by NEE under this program was $114 million. At December 31, 2023, NEE owned a noncontrolling general partner interest in NEP and beneficially owned approximately 52.6% of NEP&#8217;s voting power. 
+
+s 
+
+Cash Flows 
+
+NEE's sources and uses of cash for 2023, 2022 and 2021 were as follows: 
+
+##TABLE_START Years Ended December 31, 2023 2022 2021 (millions) Sources of cash: Cash flows from operating activities $ 11,301 &#160; $ 8,262 $ 7,553 Issuances of long-term debt, including premiums and discounts 13,857 &#160; 13,856 16,683 Proceeds from differential membership investors 2,745 &#160; 4,158 2,779 Proceeds from the sale of Florida City Gas business 924 &#160; &#8212; &#8212; Sale of independent power and other investments of NEER 1,883 &#160; 1,564 2,761 Issuances of common stock/equity units &#8211; net 4,514 &#160; 1,460 14 Net increase in commercial paper and other short-term debt 2,308 &#160; 957 &#8212; Payments from related parties under a cash sweep and credit support agreement &#8211; net 1,213 &#160; 240 47 Proceeds from sale of noncontrolling interests &#8212; &#160; &#8212; 65 Other sources &#8211; net 
+
+&#8212; &#160; 89 40 Total sources of cash 38,745 &#160; 30,586 29,942 Uses of cash: Capital expenditures, independent power and other investments and nuclear fuel purchases (25,113) (19,283) (16,077) Retirements of long-term debt (7,978) (4,525) (9,594) Net decrease in commercial paper and other short-term debt &#8212; &#160; &#8212; (426) Dividends on common stock (3,782) (3,352) (3,024) Other uses &#8211; net 
+
+(1,889) (1,294) (1,052) Total uses of cash (38,762) (28,454) (30,173) Effects of currency translation on cash, cash equivalents and restricted cash (4) (7) 1 Net increase (decrease) in cash, cash equivalents and restricted cash $ (21) $ 2,125 $ (230) ##TABLE_END
+
+For significant financing activity that occurred subsequent to December 31, 2023, see Note 13. 
+
+NEE's primary capital requirements are for expanding and enhancing FPL's electric system and generation facilities to continue to provide reliable service to meet customer electricity demands and for funding NEER's investments in independent power and other projects. See Note 15 &#8211; Commitments for estimated capital expenditures in 2024 through 2028. 
+
+The following table provides a summary of capital investments for 2023 , 2022 and 2021 . 
+
+##TABLE_START Years Ended December 31, 2023 2022 2021 (millions) FPL: Generation: New 
+
+$ 3,163 &#160; $ 2,079 $ 1,046 Existing 
+
+1,441 &#160; 1,804 1,531 Transmission and distribution 4,292 &#160; 4,553 4,495 Nuclear fuel 98 &#160; 118 159 General and other 688 &#160; 581 878 Other, primarily change in accrued property additions and exclusion of AFUDC &#8211; equity 
+
+(282) 50 (539) Total 
+
+9,400 &#160; 9,185 7,570 NEER: Wind 4,793 &#160; 3,481 3,777 Solar (includes solar plus battery storage projects) 4,980 &#160; 2,869 2,011 Other clean energy 2,781 &#160; 827 332 Nuclear (includes nuclear fuel) 
+
+228 &#160; 214 241 Natural gas pipelines 524 &#160; 236 229 Other gas infrastructure 1,575 &#160; 1,215 669 Rate-regulated transmission (2021 includes an acquisition, see Note 6 &#8211; Gridliance) 317 &#160; 431 980 Other 454 &#160; 372 124 Total 
+
+15,652 &#160; 9,645 8,363 Corporate and Other 61 &#160; 453 144 Total capital expenditures, independent power and other investments and nuclear fuel purchases $ 25,113 &#160; $ 19,283 $ 16,077 ##TABLE_END
+
+s 
+
+Liquidity 
+
+At December 31, 2023, NEE's total net available liquidity was approximately $12.2 billion. The table below provides the components of FPL's and NEECH's net available liquidity at December 31, 2023. 
+
+##TABLE_START Maturity Date FPL NEECH Total FPL NEECH (millions) 
+
+Syndicated revolving credit facilities (a) 
+
+$ 3,420 $ 10,739 $ 14,159 2025 &#8211; 2028 
+
+2024 &#8211; 2028 
+
+Issued letters of credit (3) (593) (596) 3,417 10,146 13,563 
+
+Bilateral revolving credit facilities (b) 
+
+580 1,350 1,930 2024 &#8211; 2025 
+
+2024 &#8211; 2026 
+
+Borrowings (b) 
+
+(255) &#8212; (255) 325 1,350 1,675 
+
+Letter of credit facilities (c) 
+
+&#8212; 3,530 3,530 2024 &#8211; 2026 
+
+Issued letters of credit &#8212; (2,797) (2,797) &#8212; 733 733 Subtotal 3,742 12,229 15,971 Cash and cash equivalents 57 2,631 2,688 Commercial paper and other short-term borrowings outstanding (2,629) (2,276) (4,905) Amounts due to related parties under the CSCS agreement (see Note 8) &#8212; (1,511) (1,511) Net available liquidity $ 1,170 $ 11,073 $ 12,243 ##TABLE_END
+
+______________________ 
+
+( a) Provide for the funding of loans up to the amount of the credit facility and the issuance of letters of credit up to $3,200 million ($450 million for FPL and $2,750 million for NEECH). The entire amount of the credit facilities is available for general corporate purposes and to provide additional liquidity in the event of a loss to the companies&#8217; or their subsidiaries&#8217; operating facilities (including, in the case of FPL, a transmission and distribution property loss). FPL&#8217;s syndicated revolving credit facilities are also available to support the purchase of $1,319 million of pollution control, solid waste disposal and industrial development revenue bonds in the event they are tendered by individual bondholders and not remarketed prior to maturity as well as the repayment of approximately $1,812 million of floating rate notes in the event an individual noteholder requires repayment at specified dates prior to maturity. As of December 31, 2023, approximately $3,311 million of NEECH's syndicated revolving credit facilities expire over the next 12 months. 
+
+(b) Only available for the funding of loans. As of December 31, 2023, approximately $205 million of FPL's and $650 million of NEECH's bilateral revolving credit facilities expire over the next 12 months. See Note 13 regarding increases in capacity and borrowings subsequent to December 31, 2023. 
+
+(c) Only available for the issuance of letters of credit. As of December 31, 2023, approximately $500 million of the letter of credit facilities expire over the next 12 months. 
+
+Approximately 71 banks, located globally, participate in FPL&#8217;s and NEECH&#8217;s revolving credit facilities, with no one bank providing more than 5% of the combined revolving credit facilities. Pursuant to a 1998 guarantee agreement, NEE guarantees the payment of NEECH&#8217;s debt obligations under its revolving credit facilities. In order for FPL or NEECH to borrow or to have letters of credit issued under the terms of their respective revolving credit facilities and, also for NEECH, its letter of credit facilities, FPL, in the case of FPL, and NEE, in the case of NEECH, are required, among other things, to maintain a ratio of funded debt to total capitalization that does not exceed a stated ratio. The FPL and NEECH revolving credit facilities also contain default and related acceleration provisions relating to, among other things, failure of FPL and NEE, as the case may be, to maintain the respective ratio of funded debt to total capitalization at or below the specified ratio. At December 31, 2023, each of NEE and FPL was in compliance with its required ratio. 
+
+Capital Support 
+
+Guarantees, Letters of Credit, Surety Bonds and Indemnifications (Guarantee Arrangements) 
+
+Certain subsidiaries of NEE issue guarantees and obtain letters of credit and surety bonds, as well as provide indemnities, to facilitate commercial transactions with third parties and financings. Substantially all of the guarantee arrangements are on behalf of NEE&#8217;s consolidated subsidiaries, as discussed in more detail below. See Note 8 regarding guarantees of obligations on behalf of NEP subsidiaries. NEE is not required to recognize liabilities associated with guarantee arrangements issued on behalf of its consolidated subsidiaries unless it becomes probable that they will be required to perform. At December 31, 2023, NEE believes that there is no material exposure related to these guarantee arrangements. 
+
+NEE subsidiaries issue guarantees related to equity contribution agreements and engineering, procurement and construction agreements, associated with the development, construction and financing of certain power generation facilities (see Note 1 - Structured Payables) and a natural gas pipeline project under construction, as well as a related natural gas transportation agreement. Commitments associated with these activities are included and/or disclosed in the contracts table in Note 15. 
+
+In addition, at December 31, 2023, NEE subsidiaries had approximately $6.1 billion in guarantees related to obligations under PPAs and acquisition agreements, nuclear-related activities, payment obligations related to PTCs, support for NEER's retail electricity provider activities, as well as other types of contractual obligations (see Note 15 &#8211; Commitments). 
+
+s 
+
+In some instances, subsidiaries of NEE elect to issue guarantees instead of posting other forms of collateral required under certain financing arrangements, as well as for other project-level cash management activities. At December 31, 2023, these guarantees totaled approximately $1.2 billion and support, among other things, cash management activities, including those related to debt service and operations and maintenance service agreements, as well as other specific project financing requirements. 
+
+Subsidiaries of NEE also issue guarantees to support customer supply and proprietary power and gas trading activities, including the buying and selling of wholesale energy commodities. At December 31, 2023, the estimated mark-to-market exposure (the total amount that these subsidiaries of NEE could be required to fund based on energy commodity market prices at December 31, 2023) plus contract settlement net payables, net of collateral posted for obligations under these guarantees totaled approximately $1.8 billion. 
+
+At December 31, 2023, subsidiaries of NEE also had approximately $5.1 billion of standby letters of credit and approximately $1.6 billion of surety bonds to support certain of the commercial activities discussed above. FPL's and NEECH's credit facilities are available to support substantially all of the standby letters of credit. 
+
+In addition, as part of contract negotiations in the normal course of business, certain subsidiaries of NEE have agreed and in the future may agree to make payments to compensate or indemnify other parties, including those associated with asset divestitures, for possible unfavorable financial consequences resulting from specified events. The specified events may include, but are not limited to, an adverse judgment in a lawsuit, or the imposition of additional taxes due to a change in tax law or interpretations of the tax law. NEE is unable to estimate the maximum potential amount of future payments by its subsidiaries under some of these contracts because events that would obligate them to make payments have not occurred or, if any such event has occurred, they have not been notified of its occurrence. 
+
+NEECH, a 100% owned subsidiary of NEE, provides funding for, and holds ownership interests in, NEE's operating subsidiaries other than FPL. NEE has fully and unconditionally guaranteed certain payment obligations of NEECH, including most of its debt and all of its debentures registered pursuant to the Securities Act of 1933 and commercial paper issuances, as well as most of its payment guarantees and indemnifications, and NEECH has guaranteed certain debt and other obligations of subsidiaries within the NEER segment. Certain guarantee arrangements described above contain requirements for NEECH and FPL to maintain a specified credit rating. For a discussion of credit rating downgrade triggers, see Credit Ratings below. 
+
+NEE fully and unconditionally guarantees NEECH debentures pursuant to a guarantee agreement, dated as of June 1, 1999 (1999 guarantee) and NEECH junior subordinated debentures pursuant to an indenture, dated as of September 1, 2006 (2006 guarantee). The 1999 guarantee is an unsecured obligation of NEE and ranks equally and ratably with all other unsecured and unsubordinated indebtedness of NEE. The 2006 guarantee is unsecured and subordinate and junior in right of payment to NEE senior indebtedness (as defined therein). No payment on those junior subordinated debentures may be made under the 2006 guarantee until all NEE senior indebtedness has been paid in full in certain circumstances. NEE&#8217;s and NEECH&#8217;s ability to meet their financial obligations are primarily dependent on their subsidiaries&#8217; net income, cash flows and their ability to pay upstream dividends or to repay funds to NEE and NEECH. The dividend-paying ability of some of the subsidiaries is limited by contractual restrictions which are contained in outstanding financing agreements. 
+
+s 
+
+Summarized financial information of NEE and NEECH is as follows: 
+
+##TABLE_START Year Ended December 31, 2023 Issuer/Guarantor Combined (a) 
+
+NEECH Consolidated (b) 
+
+NEE Consolidated (b) 
+
+(millions) Operating revenues $ (20) $ 9,878 &#160; $ 28,114 &#160; Operating income (loss) $ (359) $ 3,918 &#160; $ 10,237 &#160; Net income (loss) $ (867) $ 1,736 &#160; $ 6,282 &#160; Net income (loss) attributable to NEE/NEECH $ (867) $ 2,764 &#160; $ 7,310 &#160; ##TABLE_END
+
+##TABLE_START December 31, 2023 Issuer/Guarantor Combined (a) 
+
+NEECH Consolidated (b) 
+
+NEE Consolidated (b) 
+
+(millions) Total current assets $ 1,860 &#160; $ 10,559 &#160; $ 15,361 &#160; Total noncurrent assets $ 2,491 &#160; $ 76,550 &#160; $ 162,128 &#160; Total current liabilities $ 6,709 &#160; $ 20,192 &#160; $ 27,963 &#160; Total noncurrent liabilities $ 28,874 &#160; $ 47,940 &#160; $ 90,502 &#160; Redeemable noncontrolling interests $ &#8212; &#160; $ 1,256 &#160; $ 1,256 &#160; Noncontrolling interests $ &#8212; &#160; $ 10,300 &#160; $ 10,300 &#160; ##TABLE_END
+
+______________________ 
+
+(a) Excludes intercompany transactions, and investments in, and equity in earnings of, subsidiaries. 
+
+(b) Information has been prepared on the same basis of accounting as NEE's consolidated financial statements. 
+
+Shelf Registration 
+
+In March 2021, NEE, NEECH and FPL filed a shelf registration statement with the SEC for an unspecified amount of securities, which became effective upon filing. The amount of securities issuable by the companies is established from time to time by their respective boards of directors. Securities that may be issued under the registration statement include, depending on the registrant, senior debt securities, subordinated debt securities, junior subordinated debentures, first mortgage bonds, common stock, preferred stock, depositary shares, stock purchase contracts, stock purchase units, warrants and guarantees related to certain of those securities. 
+
+s 
+
+Credit Ratings 
+
+NEE&#8217;s liquidity, ability to access credit and capital markets, cost of borrowings and collateral posting requirements under certain agreements is dependent on its and its subsidiaries credit ratings. At February 16, 2024, Moody&#8217;s Investors Service, Inc. (Moody&#8217;s), S&#38;P Global Ratings (S&#38;P) and Fitch Ratings, Inc. (Fitch) had assigned the following credit ratings to NEE, FPL and NEECH: 
+
+##TABLE_START Moody's (a) 
+
+S&#38;P (a) 
+
+Fitch (a) 
+
+NEE: (b) 
+
+Corporate credit rating 
+
+Baa1 A- A- 
+
+FPL: (b) 
+
+Corporate credit rating 
+
+A1 A A First mortgage bonds 
+
+Aa2 A+ AA- Senior unsecured notes 
+
+A1 A A+ Pollution control, solid waste disposal and industrial development revenue bonds (c) 
+
+VMIG-1/P-1 A-1 F1 Commercial paper 
+
+P-1 A-1 F1 
+
+NEECH: (b) 
+
+Corporate credit rating 
+
+Baa1 A- A- Debentures 
+
+Baa1 BBB+ A- Junior subordinated debentures 
+
+Baa2 BBB BBB Commercial paper 
+
+P-2 A-2 F2 ##TABLE_END
+
+_________________________ 
+
+(a) A security rating is not a recommendation to buy, sell or hold securities and should be evaluated independently of any other rating. The rating is subject to revision or withdrawal at any time by the assigning rating organization. 
+
+(b) The outlook indicated by each of Moody's, S&#38;P and Fitch is stable. 
+
+(c) Short-term ratings are presented as all bonds outstanding are currently paying a short-term interest rate. At FPL's election, a portion or all of the bonds may be adjusted to a long-term interest rate. 
+
+NEE and its subsidiaries have no credit rating downgrade triggers that would accelerate the maturity dates of outstanding debt. A change in ratings is not an event of default under applicable debt instruments, and while there are conditions to drawing on the credit facilities noted above, the maintenance of a specific minimum credit rating is not a condition to drawing on these credit facilities. 
+
+Commitment fees and interest rates on loans under these credit facilities&#8217; agreements are tied to credit ratings. A ratings downgrade also could reduce the accessibility and increase the cost of commercial paper and other short-term debt issuances and borrowings and additional or replacement credit facilities. In addition, a ratings downgrade could result in, among other things, the requirement that NEE subsidiaries post collateral under certain agreements and guarantee arrangements, including, but not limited to, those related to fuel procurement, power sales and purchases, nuclear decommissioning funding, debt-related reserves and trading activities. FPL&#8217;s and NEECH&#8217;s credit facilities are available to support these potential requirements. 
+
+Covenants 
+
+NEE's charter does not limit the dividends that may be paid on its common stock. As a practical matter, the ability of NEE to pay dividends on its common stock is dependent upon, among other things, dividends paid to it by its subsidiaries. For example, FPL pays dividends to NEE in a manner consistent with FPL's long-term targeted capital structure. However, the mortgage securing FPL's first mortgage bonds contains provisions which, under certain conditions, restrict the payment of dividends to NEE and the issuance of additional first mortgage bonds. Additionally, in some circumstances, the mortgage restricts the amount of retained earnings that FPL can use to pay cash dividends on its common stock. The restricted amount may change based on factors set out in the mortgage. Other than this restriction on the payment of common stock dividends, the mortgage does not restrict FPL's use of retained earnings. At December 31, 2023, no retained earnings were restricted by these provisions of the mortgage and, in light of FPL's current financial condition and level of earnings, management does not expect that planned financing activities or dividends would be affected by these limitations. 
+
+FPL may issue first mortgage bonds under its mortgage subject to its meeting an adjusted net earnings test set forth in the mortgage, wh ich generally requires adjusted net earnings to be at least twice the annual interest requirements on, or at least 10% of the aggregate principal amount of, FPL&#8217;s first mortgage bonds including those to be issued and all indebtedness of FPL that ranks prior or equal to the first mortgage bonds. At December 31, 2023, coverage for the 12 months ended December 31, 2023 would have been approximately 9.6 times the annual interest requirements and approximately 4.1 times the aggregate principal requirements. New first mortgage bonds are also limited to an amount equal to the sum of 60% of unfunded property additions after adjustments to offset property retirements, the amount of retired first mortgage bonds or qualified lien bonds and the amount of cash on deposit with the mortgage trustee. At December 31, 2023, FPL could have issued in excess of $34 billion of additional first mortgage bonds based on the unfunded property additions and retired first mortgage bonds. At December 31, 2023, no cash was deposited with the mortgage trustee for these purposes. 
+
+s 
+
+In September 2006, NEE and NEECH executed a Replacement Capital Covenant (as amended, September 2006 RCC) in connection with NEECH's offering of $350 million principal amount of Series B Enhanced Junior Subordinated Debentures due 2066 (Series B junior subordinated debentures). The September 2006 RCC is for the benefit of persons that buy, hold or sell a specified series of long-term indebtedness (covered debt) of NEECH (other than the Series B junior subordinated debentures) or, in certain cases, of NEE. NEECH's 3.50% Debentures, Series due April 1, 2029 have been designated as the covered debt under the September 2006 RCC. The September 2006 RCC provides that NEECH may redeem, and NEE or NEECH may purchase, any Series B junior subordinated debentures on or before October 1, 2036, only to the extent that the redemption or purchase price does not exceed a specified amount of proceeds from the sale of qualifying securities, subject to certain limitations described in the September 2006 RCC. Qualifying securities are securities that have equity-like characteristics that are the same as, or more equity-like than, the Series B junior subordinated debentures at the time of redemption or purchase, which are sold within 365 days prior to the date of the redemption or repurchase of the Series B junior subordinated debentures. 
+
+In June 2007, NEE and NEECH executed a Replacement Capital Covenant (as amended, June 2007 RCC) in connection with NEECH's offering of $400 million principal amount of its Series C Junior Subordinated Debentures due 2067 (Series C junior subordinated debentures). The June 2007 RCC is for the benefit of persons that buy, hold or sell a specified series of covered debt of NEECH (other than the Series C junior subordinated debentures) or, in certain cases, of NEE. NEECH's 3.50% Debentures, Series due April 1, 2029 have been designated as the covered debt under the June 2007 RCC. The June 2007 RCC provides that NEECH may redeem or purchase, or satisfy, discharge or defease (collectively, defease), and NEE and any majority-owned subsidiary of NEE or NEECH may purchase, any Series C junior subordinated debentures on or before June 15, 2037, only to the extent that the principal amount defeased or the applicable redemption or purchase price does not exceed a specified amount raised from the issuance, during the 365 days prior to the date of that redemption, purchase or defeasance, of qualifying securities that have equity-like characteristics that are the same as, or more equity-like than, the applicable characteristics of the Series C junior subordinated debentures at the time of redemption, purchase or defeasance, subject to certain limitations described in the June 2007 RCC. 
+
+CRITICAL ACCOUNTING POLICIES AND ESTIMATES 
+
+NEE&#8217;s significant accounting policies are described in Note 1 to the consolidated financial statements, which were prepared under GAAP. Critical accounting policies are those that NEE believes are both most important to the portrayal of its financial condition and results of operations, and require complex, subjective judgments, often as a result of the need to make estimates and assumptions about the effect of matters that are inherently uncertain. Judgments and uncertainties affecting the application of those policies may result in materially different amounts being reported under different conditions or using different assumptions. 
+
+NEE considers the following policies to be the most critical in understanding the judgments that are involved in preparing its consolidated financial statements: 
+
+Accounting for Derivatives and Hedging Activities 
+
+NEE uses derivative instruments (primarily swaps, options, futures and forwards) to manage the physical and financial risks inherent in the purchase and sale of fuel and electricity, as well as interest rate and foreign currency exchange rate risk associated primarily with outstanding and expected future debt issuances and borrowings. In addition, NEE, through NEER, uses derivatives to optimize the value of its power generation and gas infrastructure assets and engages in power and fuel marketing and trading activities to take advantage of expected future favorable price movements. 
+
+Nature of Accounting Estimates 
+
+Accounting pronouncements require the use of fair value accounting if certain conditions are met, which may require significant judgment to measure the fair value of assets and liabilities. This applies not only to traditional financial derivative instruments, but to any contract having the accounting characteristics of a derivative. As a result, significant judgment must be used in applying derivatives accounting guidance to contracts. In the event changes in interpretation occur, it is possible that contracts that currently are excluded from derivatives accounting rules would have to be recorded on the balance sheet at fair value, with changes in the fair value recorded in the statement of income. 
+
+Assumptions and Accounting Approach 
+
+Derivative instruments, when required to be marked to market, are recorded on the balance sheet at fair value using a combination of market and income approaches. Fair values for some of the longer-term contracts where liquid markets are not available are derived through the use of industry-standard valuation techniques, such as internally developed models which estimate the fair value of a contract by calculating the present value of the difference between the contract price and the forward prices. Forward prices represent the price at which a buyer or seller could contract today to purchase or sell a commodity at a future date. The near-term forward market for electricity is generally liquid and therefore the prices in the early years of the forward curves reflect observable market quotes. However, in the later years, the market is much less liquid and forward price curves must be developed using factors including the forward prices for the commodities used as fuel to generate electricity, the expected system heat rate (which measures the efficiency of power plants in converting fuel to electricity) in the region where the 
+
+s 
+
+purchase or sale takes place, and a fundamental forecast of expected spot prices based on modeled supply and demand in the region. NEE estimates the fair value of interest rate and foreign currency derivatives using an income approach based on a discounted cash flows valuation technique utilizing the net amount of estimated future cash inflows and outflows related to the derivative agreements. The assumptions in these models are critical since any changes therein could have a significant impact on the fair value of the derivative. 
+
+At FPL, substantially all changes in the fair value of energy derivative transactions are deferred as a regulatory asset or liability until the contracts are settled, and, upon settlement, any gains or losses are passed through the fuel clause . See Note 3. 
+
+In NEE&#8217;s non-rate regulated operations, predominantly NextEra Energy Resources, essentially all changes in the derivatives&#8217; fair value for power purchases and sales, fuel sales and trading activities are recognized on a net basis in operating revenues and the equity method investees&#8217; related activity is recognized in equity in earnings (losses) of equity method investees in NEE&#8217;s consolidated statements of income. 
+
+For interest rate and foreign currency derivative instruments, all changes in the derivatives' fair value are recognized in interest expense and the equity method investees' related activity is recognized in equity in earnings (losses) of equity method investees in NEE's consolidated statements of income. NEE estimates the fair value of these derivatives using an income approach based on a discounted cash flows valuation technique utilizing observable inputs. 
+
+Certain derivative transactions at NEER are entered into as economic hedges but the transactions do not meet the requirements for hedge accounting, hedge accounting treatment is not elected or hedge accounting has been discontinued. Changes in the fair value of those transactions are marked to market and reported in the consolidated statements of income, resulting in earnings volatility. These changes in fair value are reflected in the non-qualifying hedge category in computing adjusted earnings and could be significant to NEER&#8217;s results because the economic offset to the positions are not marked to market. As a consequence, NEE's net income reflects only the movement in one part of economically-linked transactions. For example, a gain (loss) in the non-qualifying hedge category for certain energy derivatives is offset by decreases (increases) in the fair value of related physical asset positions in the portfolio or contracts, which are not marked to market under GAAP. For this reason, NEE&#8217;s management views results expressed excluding the unrealized mark-to-market impact of the non-qualifying hedges as a meaningful measure of current period performance. For additional information regarding derivative instruments, see Note 3, Overview and Energy Marketing and Trading and Market Risk Sensitivity. 
+
+Accounting for Pension Benefits 
+
+NEE sponsors a qualified noncontributory defined benefit pension plan for substantially all employees of NEE and its subsidiaries. Management believes that, based on actuarial assumptions and the well-funded status of the pension plan, NEE will not be required to make any cash contributions to the qualified pension plan in the near future. The qualified pension plan has a fully funded trust dedicated to providing benefits under the plan. NEE allocates net periodic income associated with the pension plan to its subsidiaries annually using specific criteria. 
+
+Nature of Accounting Estimates 
+
+For the pension plan, the benefit obligation is the actuarial present value, as of the December 31 measurement date, of all benefits attributed by the pension benefit formula to employee service rendered to that date. The amount of benefit to be paid depends on a number of future events incorporated into the pension benefit formula, including an estimate of the average remaining life of employees/survivors as well as the average years of service rendered. The projected benefit obligation is measured based on assumptions concerning future interest rates and future employee compensation levels. NEE derives pension income from actuarial calculations based on the plan&#8217;s provisions and various management assumptions including discount rate, rate of increase in compensation levels and expected long-term rate of return on plan assets. 
+
+Assumptions and Accounting Approach 
+
+Accounting guidance requires recognition of the funded status of the pension plan in the balance sheet, with changes in the funded status recognized in other comprehensive income within shareholders&#8217; equity in the year in which the changes occur. Since NEE is the plan sponsor, and its subsidiaries do not have separate rights to the plan assets or direct obligations to their employees, this accounting guidance is reflected at NEE and not allocated to the subsidiaries. The portion of previously unrecognized actuarial gains and losses and prior service costs or credits that are estimated to be allocable to FPL as net periodic (income) cost in future periods and that otherwise would be recorded in accumulated other comprehensive income are classified as regulatory assets and liabilities at NEE in accordance with regulatory treatment. 
+
+s 
+
+Net periodic pension income is calculated using a number of actuarial assumptions. Those assumptions for the years ended December 31, 2023, 2022 and 2021 include: 
+
+##TABLE_START &#160; 2023 2022 2021 Discount rate 5.05 % 2.87 % 2.53 % Salary increase 4.90 % 4.90 % 4.40 % Expected long-term rate of return, net of investment management fees 8.00 % 7.35 % 7.35 % Weighted-average interest crediting rate 3.82 % 3.79 % 3.82 % ##TABLE_END
+
+In developing these assumptions, NEE evaluated input, including other qualitative and quantitative factors, from its actuaries and consultants, as well as information available in the marketplace. Discount rates are established using the full yield curve approach. In addition, for the expected long-term rate of return on pension plan assets, NEE considered different models, capital market return assumptions and historical returns for a portfolio with an equity/bond asset mix similar to its pension fund, as well as its pension fund's historical compounded returns. NEE will continue to evaluate all of its actuarial assumptions, including its expected rate of return, at least annually, and will adjust them as appropriate. 
+
+NEE utilizes in its determination of pension income a market-related valuation of plan assets. This market-related valuation reduces year-to-year volatility and recognizes investment gains or losses over a five-year period following the year in which they occur. Investment gains or losses for this purpose are the difference between the expected return calculated using the market-related value of plan assets and the actual return realized on those plan assets. Since the market-related value of plan assets recognizes gains or losses over a five-year period, the future value of plan assets will be affected as previously deferred gains or losses are recognized. Such gains and losses together with other differences between actual results and the estimates used in the actuarial valuations are deferred and recognized in determining pension income only to the extent they exceed 10% of the greater of projected benefit obligations or the market-related value of plan assets. 
+
+The following table illustrates the effect on net periodic pension income of changing the critical actuarial assumptions discussed above, while holding all other assumptions constant: 
+
+##TABLE_START Increase (Decrease) in 2023 
+
+Net Periodic Pension Income 
+
+Change in Assumption NEE FPL (millions) Expected long-term rate of return 0.5% $ 25 $ 16 Discount rate (0.5)% $ 1 $ 1 Salary increase 0.5% $ (2) $ (1) ##TABLE_END
+
+NEE also utilizes actuarial assumptions about mortality to help estimate obligations of the pension plan. NEE has adopted the latest revised mortality tables and mortality improvement scales released by the Society of Actuaries, which did not have a material impact on the pension plan's obligation. 
+
+See Note 12. 
+
+Carrying Value of Long-Lived Assets 
+
+NEE evaluates long-lived assets for impairment when events or changes in circumstances indicate that the carrying amount may not be recoverable. 
+
+Nature of Accounting Estimates 
+
+The amount of future net cash flows, the timing of the cash flows and the determination of an appropriate interest rate all involve estimates and judgments about future events. In particular, the aggregate amount of cash flows determines whether an impairment exists, and the timing of the cash flows is critical in determining fair value. Because each assessment is based on the facts and circumstances associated with each long-lived asset, the effects of changes in assumptions cannot be generalized. 
+
+s 
+
+Assumptions and Accounting Approach 
+
+An impairment loss is required to be recognized if the carrying value of the asset exceeds the undiscounted future net cash flows associated with that asset. The impairment loss to be recognized is the amount by which the carrying value of the long-lived asset exceeds the asset&#8217;s fair value. In most instances, the fair value is determined by discounting estimated future cash flows using an appropriate interest rate. 
+
+Carrying Value of Equity Method Investments 
+
+NEE tests its equity method investments for impairment whenever events or changes in circumstances indicate that the fair value of the investment is less than the carrying value . 
+
+Nature of Accounting Estimates 
+
+Indicators of impairment may include, but are not limited to, a series of operating losses of an investee, the absence of an ability to recover the carrying amount of the investment, the inability of the investee to sustain an earnings capacity and a current fair value of an investment that may be less than its carrying value. If indicators of impairment exist, an estimate of the investment&#8217;s fair value will be calculated. Approaches for estimating fair value include, among others, an income approach using a probability-weighted discounted cash flows model, a market approach using an earnings before interest, taxes, depreciation and amortization (EBITDA) multiple model, and a market observable transaction. The probability assigned to each scenario as well as the cash flows and EBITDA multiple identified are critical in determining fair value. 
+
+Assumptions and Accounting Approach 
+
+An impairment loss is required to be recognized if the impairment is deemed to be other than temporary. Assessment of whether an investment is other than temporarily impaired involves, among other factors, consideration of the length of time that the fair value is below the carrying value, current expected performance relative to the expected performance when the investment was initially made, performance relative to peers, industry performance relative to the economy, credit rating, regulatory actions and legal and permitting challenges. If management is unable to reasonably assert that an impairment is temporary or believes that there will not be full recovery of the carrying value of its investment, then the impairment is considered to be other than temporary. Investments that are other than temporarily impaired are written down to their estimated fair value and cannot subsequently be written back up for increases in estimated fair value. Impairment losses are recorded in equity in earnings (losses) of equity method investees in NEE&#8217;s consolidated statements of income. See Note 4 &#8211; Nonrecurring Fair Value Measurements. 
+
+Decommissioning and Dismantlement 
+
+NEE accounts for asset retirement obligations and conditional asset retirement obligations (collectively, AROs) under accounting guidance that requires a liability for the fair value of an ARO to be recognized in the period in which it is incurred if it can be reasonably estimated, with the offsetting associated asset retirement costs capitalized as part of the carrying amount of the long-lived assets. NEE's AROs relate primarily to decommissioning obligations of FPL's and NEER's nuclear units and to obligations for the dismantlement of certain of NEER's wind and solar facilities. 
+
+Nature of Accounting Estimates 
+
+The calculation of the future cost of retiring long-lived assets, including nuclear decommissioning and plant dismantlement costs, involves estimating the amount and timing of future expenditures and making judgments concerning whether or not such costs are considered a legal obligation. Estimating the amount and timing of future expenditures includes, among other things, making projections of when assets will be retired and ultimately decommissioned and how costs will escalate with inflation. In addition, NEE also makes interest rate and rate of return projections on its investments in determining recommended funding requirements for nuclear decommissioning costs. Periodically, NEE is required to update these estimates and projections which can affect the annual expense amounts recognized, the liabilities recorded and the annual funding requirements for nuclear decommissioning costs. For example, an increase of 0.25% in the assumed escalation rates for nuclear decommissioning costs would increase NEE&#8217;s AROs at December 31, 2023 by approximately $93 million. 
+
+Assumptions and Accounting Approach 
+
+FPL &#8211; For ratemaking purpos es, FPL accrues and funds for nuclear plant decommissioning costs over the expected service life of each unit based on studies that are approved by the FPSC. The most recent studies, filed in 2020, reflect, among other things, the expiration dates of the operating licenses for FPL&#8217;s nuclear units at the time of the studies. FPL&#8217;s portion of the future cost of decommissioning its four nuclear units, including spent fuel storage above what is expected to be refunded by the DOE under a spent fuel settlement agreement, is estimated to be approximately $9.4 billion, or $2.5 billion expressed in 2023 dollars. The ultimate costs of decommissioning reflect the applications submitted to the NRC for the extension of Turkey Point Units Nos. 3 and 4 and St. Lucie Units Nos. 1 and 2 licenses for an additional 20 years. 
+
+s 
+
+FPL accrues the cost of dismantling its other generation plants over the expected service life of each unit based on studies filed with the FPSC. Unlike nuclear decommissioning, dismantlement costs are not funded. The most recent studies became effective January 1, 2022. At December 31, 2023, FPL&#8217;s portion of the ultimate cost to dismantle its other generation units is approximately $2.4 billion, or $1.2 billion expressed in 2023 dollars. The majority of the dismantlement costs are not reported as AROs. FPL accrues for interim removal costs over the life of the related assets based on depreciation studies approved by the FPSC. Any differences between the amount of the ARO and the amount recorded for ratemaking purposes are reported as a regulatory asset or liability in accordance with regulatory accounting. 
+
+The components of FPL&#8217;s decommissioning of nuclear plants, dismantlement of plants and other accrued asset removal costs are as follows: 
+
+##TABLE_START Nuclear Decommissioning Other Generation Plant Dismantlement Interim Removal Costs and Other Total December 31, December 31, December 31, December 31, 2023 2022 2023 2022 2023 2022 2023 2022 (millions) 
+
+AROs (a) 
+
+$ 1,882 &#160; $ 1,807 $ 283 &#160; $ 362 $ 5 &#160; $ 7 $ 2,170 &#160; 
+
+$ 2,176 &#160; Less capitalized ARO asset net of accumulated depreciation 
+
+59 &#160; 61 28 &#160; 40 &#8212; &#160; 1 87 &#160; 102 
+
+Accrued asset removal costs (b) 
+
+480 &#160; 406 182 &#160; 179 (1,023) (494) (361) 91 Asset retirement obligation regulatory expense difference (c) 
+
+4,202 &#160; 3,515 (150) (212) &#8212; &#160; (18) 4,052 &#160; 3,285 Accrued decommissioning, dismantlement and other accrued asset removal costs (d) 
+
+$ 6,505 &#160; $ 5,667 $ 287 &#160; $ 289 $ (1,018) $ (506) $ 5,774 &#160; $ 5,450 ##TABLE_END
+
+______________________ 
+
+(a) See Note 11. 
+
+(b) Included in noncurrent regulatory liabilities on NEE&#8217;s and FPL&#8217;s consolidated balance sheets, except for $1,021 million and $532 million which are related to interim removal costs and are included in noncurrent regulatory assets as of December 31, 2023 and 2022, respectively. See Note 1 &#8211; Rate Regulation. 
+
+(c) Included in noncurrent regulatory liabilities on NEE's and FPL's consolidated balance sheets, except for $14 million and $38 million which are related to other generation plant dismantlement and are included in noncurrent regulatory assets as of December 31, 2023 and 2022, respectively. 
+
+(d) Represents total amount accrued for ratemaking purposes. 
+
+NEER &#8211; NEER records liabilities for the present value of its expected nuclear plant decommissioning costs which are determined using various internal and external data and applying a probability percentage to a variety of scenarios regarding the life of the plant and timing of decommissioning. The liabilities are being accreted using the interest method through the date decommissioning activities are expected to be complete. At December 31, 2023 and 2022 , the AROs for decommissioning of NEER&#8217;s nuclear plants approximate d $607 million and $ 604 million, respectively. NEER&#8217;s portion of the ultimate cost of decommissioning its nuclear plants, including costs associated with spent fuel storage above what is expected to be refunded by the DOE under a spent fuel settlement agreement, is estimated to be approxima tely $9.8 billion, or $2.2 billion ex pressed in 2023 dollars. 
+
+See Note 1 &#8211; Asset Retirement Obligations and &#8211; Decommissioning of Nuclear Plants, Dismantlement of Plants and Other Accrued Asset Removal Costs and Note 11. 
+
+Regulatory Accounting 
+
+Certain of NEE's businesses are subject to rate regulation which results in the recording of regulatory assets and liabilities. See Note 1 &#8211; Rate Regulation for details regarding NEE&#8217;s regulatory assets and liabilities. 
+
+Nature of Accounting Estimates 
+
+Regulatory assets and liabilities represent probable future revenues that will be recovered from or refunded to customers through the ratemaking process. Regulatory assets and liabilities are included in rate base or otherwise earn (pay) a return on investment during the recovery period. 
+
+Assumptions and Accounting Approach 
+
+Accounting guidance allows regulators to create assets and impose liabilities that would not be recorded by non-rate regulated entities. If NEE's rate-regulated entities, primarily FPL, were no longer subject to cost-based rate regulation, the existing regulatory assets and liabilities would be written off unless regulators specify an alternative means of recovery or refund. In addition, the regulators, including the FPSC for FPL, have the authority to disallow recovery of costs that they consider excessive or imprudently incurred. Such costs may include, among others, fuel and O&#38;M expenses, the cost of replacing power lost when generation facilities are unavailable, storm restoration costs and costs associated with the construction or acquisition of new facilities. The continued applicability of regulatory accounting is assessed at each reporting period. 
+
+s 
+
+ENERGY MARKETING AND TRADING AND MARKET RISK SENSITIVITY 
+
+NEE and FPL are exposed to risks associated with adverse changes in commodity prices, interest rates and equity prices. Financial instruments and positions affecting the financial statements of NEE and FPL described below are held primarily for purposes other than trading. Market risk is measured as the potential loss in fair value resulting from hypothetical reasonably possible changes in commodity prices, interest rates or equity prices over the next year. Management has established risk management policies to monitor and manage such market risks, as well as credit risks. 
+
+Commodity Price Risk 
+
+NEE and FPL use derivative instruments (primarily swaps, options, futures and forwards) to manage the physical and financial risks inherent in the purchase and sale of fuel and electricity. In addition, NEE, through NEER, uses derivatives to optimize the value of its power generation and gas infrastructure assets and engages in power and fuel marketing and trading activities to take advantage of expected future favorable price movements. See Critical Accounting Policies and Estimates &#8211; Accounting for Derivatives and Hedging Activities and Note 3. 
+
+During 2022 and 2023, the changes in the fair value of NEE&#8217;s consolidated subsidiaries&#8217; energy contract derivative instruments were as follows: 
+
+##TABLE_START Hedges on Owned Assets Trading Non- Qualifying FPL Cost Recovery Clauses NEE Total (millions) Fair value of contracts outstanding at December 31, 2021 
+
+$ 978 $ (1,392) $ 1 $ (413) Reclassification to realized at settlement of contracts 
+
+(355) 1,094 (197) 542 Value of contracts acquired 
+
+16 54 &#8212; 70 Net option premium purchases (issuances) 
+
+146 12 &#8212; 158 Changes in fair value excluding reclassification to realized 
+
+392 (3,689) 212 (3,085) Fair value of contracts outstanding at December 31, 2022 
+
+1,177 (3,921) 16 (2,728) Reclassification to realized at settlement of contracts 
+
+(369) 154 &#160; (9) (224) Value of contracts acquired 
+
+6 &#160; 95 &#160; &#8212; &#160; 101 &#160; Net option premium purchases (issuances) 
+
+183 &#160; 17 &#160; &#8212; &#160; 200 &#160; Changes in fair value excluding reclassification to realized 
+
+340 &#160; 2,178 &#160; 5 &#160; 2,523 &#160; Fair value of contracts outstanding at December 31, 2023 
+
+1,337 &#160; (1,477) 12 &#160; (128) Net margin cash collateral paid (received) 
+
+360 &#160; Total mark-to-market energy contract net assets (liabilities) at December 31, 2023 
+
+$ 1,337 &#160; $ (1,477) $ 12 &#160; $ 232 &#160; ##TABLE_END
+
+NEE&#8217;s total mark-to-market energy contract net assets (liabilities) at December 31, 2023 shown above are included on the consolidated balance sheets as follows: 
+
+##TABLE_START December 31, 2023 (millions) Current derivative assets $ 1,541 &#160; Noncurrent derivative assets 1,594 &#160; Current derivative liabilities (802) Noncurrent derivative liabilities (2,101) NEE's total mark-to-market energy contract net liabilities $ 232 &#160; ##TABLE_END
+
+s 
+
+The sources of fair value estimates and maturity of energy contract derivative instruments at December 31, 2023 were as follows: 
+
+##TABLE_START Maturity 2024 2025 2026 2027 2028 Thereafter Total (millions) Trading: Quoted prices in active markets for identical assets $ (780) $ (248) $ (22) $ (15) $ 34 $ 45 $ (986) Significant other observable inputs 611 379 194 121 37 15 1,357 Significant unobservable inputs 537 101 44 32 12 240 966 Total 368 232 216 138 83 300 1,337 
+
+Owned Assets &#8211; Non-Qualifying: 
+
+&#160; &#160; &#160; &#160; &#160; &#160; Quoted prices in active markets for identical assets (21) (87) (38) (15) (14) 5 (170) Significant other observable inputs (224) (278) (239) (186) (99) (242) (1,268) Significant unobservable inputs 46 (34) (39) (38) (4) 30 (39) Total (199) (399) (316) (239) (117) (207) (1,477) 
+
+Owned Assets &#8211; FPL Cost Recovery Clauses: 
+
+&#160; &#160; &#160; &#160; &#160; &#160; Quoted prices in active markets for identical assets &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; Significant other observable inputs (8) (2) (1) (1) &#8212; &#8212; (12) Significant unobservable inputs 13 11 (1) 1 &#8212; &#8212; 24 Total 5 9 (2) &#8212; &#8212; &#8212; 12 Total sources of fair value $ 174 $ (158) $ (102) $ (101) $ (34) $ 93 $ (128) ##TABLE_END
+
+With respect to commodities, NEE&#8217;s Exposure Management Committee (EMC), which is comprised of certain members of senior management, and NEE's chief executive officer are responsible for the overall approval of market risk management policies and the delegation of approval and authorization levels. The EMC and NEE's chief executive officer receive periodic updates on market positions and related exposures, credit exposures and overall risk management activities. 
+
+NEE uses a value-at-risk (VaR) model to measure commodity price market risk in its trading and mark-to-market portfolios. The VaR is the estimated loss of market value based on a one-day holding period at a 95% confidence level using historical simulation methodology. The VaR figures are as follows: 
+
+##TABLE_START Trading (a) 
+
+Non-Qualifying Hedges 
+
+and Hedges in FPL Cost Recovery Clauses (b) 
+
+Total FPL NEER NEE FPL NEER NEE FPL NEER NEE (millions) December 31, 2022 $ &#8212; $ 41 $ 41 $ 3 $ 148 $ 145 $ 3 $ 125 $ 120 December 31, 2023 $ &#8212; &#160; $ 4 &#160; $ 4 &#160; $ 2 &#160; $ 114 &#160; $ 116 &#160; $ 2 &#160; $ 113 &#160; $ 111 &#160; 
+
+Average for the year ended December 31, 2023 
+
+$ &#8212; &#160; $ 12 &#160; $ 12 &#160; $ 3 &#160; $ 135 &#160; $ 134 &#160; $ 3 &#160; $ 134 &#160; $ 133 &#160; ##TABLE_END
+
+______________________ 
+
+(a) The VaR figures for the trading portfolio include positions that are marked to market. Taking into consideration offsetting unmarked non-derivative positions, such as physical inventory, the trading VaR figures were approximately $1 million and $18 million at December 31, 2023 and 2022, respectively. 
+
+(b) Non-qualifying hedges are employed to reduce the market risk exposure to physical assets or contracts which are not marked to market. The VaR figures for the non-qualifying hedges and hedges in FPL cost recovery clauses category do not represent the economic exposure to commodity price movements. 
+
+Interest Rate Risk 
+
+NEE's and FPL's financial results are exposed to risk resulting from changes in interest rates as a result of their respective outstanding a nd expected future issuances of d ebt, investments in special use funds and other investments. NEE and FPL manage their respective interest rate exposure by monitoring current interest rates, entering into interest rate contracts and using a combination of fixed rate and variable rate debt. Interest rate contracts are used to mitigate and adjust interest rate exposure when deemed appropriate based upon market conditions or when required by financing agreements. 
+
+s 
+
+The following are estimates of the fair value of NEE's and FPL's financial instruments that are exposed to interest rate risk: 
+
+##TABLE_START &#160; December 31, 2023 &#160; December 31, 2022 &#160; Carrying Amount Estimated 
+
+Fair Value (a) 
+
+&#160; Carrying Amount Estimated 
+
+Fair Value (a) 
+
+&#160; (millions) NEE: &#160; &#160; &#160; &#160; &#160; Fixed income securities: &#160; &#160; &#160; &#160; &#160; Special use funds $ 2,222 &#160; $ 2,222 &#160; $ 2,061 $ 2,061 Other investments, primarily debt securities $ 1,802 &#160; $ 1,802 &#160; $ 781 $ 781 Long-term debt, including current portion $ 68,306 &#160; $ 64,103 &#160; $ 61,889 $ 57,892 Interest rate contracts &#8211; net unrealized gains (losses) 
+
+$ (249) $ (249) $ 392 $ 392 FPL: &#160; &#160; &#160; &#160; &#160; Fixed income securities: Special use funds $ 1,658 &#160; $ 1,658 &#160; $ 1,572 $ 1,572 Other investments &#8211; debt securities 
+
+$ &#8212; &#160; $ &#8212; &#160; $ 114 $ 114 Long-term debt, including current portion $ 25,274 &#160; $ 23,430 &#160; $ 21,002 $ 19,364 ##TABLE_END ______________________ 
+
+(a) See Note 3 and Note 4. 
+
+The special use funds of NEE and FPL consist of restricted funds set aside to cover the cost of storm damage for FPL and for the decommissioning of NEE's and FPL's nuclear power plants. See Note 1 &#8211; Storm Funds, Storm Reserves and Storm Cost Recovery. A portion of these funds is invested in fixed income debt securities primarily carried at estimated fair value. At FPL, changes in fair value, including any credit losses, result in a corresponding adjustment to the related regulatory asset or liability accounts based on current regulatory treatment. The changes in fair value for NEE's non-rate regulated operations result in a corresponding adjustment to other comprehensive income, except for credit losses and unrealized losses on available for sale securities intended or required to be sold prior to recovery of the amortized cost basis, which are reported in current period earnings. Because the funds set aside by FPL for storm damage could be needed at any time, the related investments are generally more liquid and, therefore, are less sensitive to changes in interest rates. The nuclear decommissioning funds, in contrast, are generally invested in longer-term securities. 
+
+At December 31, 2023, NEE had interest rate contracts with a net notional amount of approximately $25.6 billion to manage exposure to the variability of cash flows primarily associated with expected future and outstanding debt issuances at NEECH and NEER. In January 2024, NEECH entered into a $4.0 billion interest rate contract which reduced the net notional amount. See Note 3. 
+
+Based upon a hypothetical 10% decrease in interest rates, the fair value of NEE&#8217;s net liabilities would increase by approxim ately $2,705 million ($1,093 million f or FPL) at December 31, 2023. 
+
+Equity Price Risk 
+
+NEE and FPL are exposed to risk resulting from changes in prices for equity securities. For example, NEE&#8217;s nuclear decommissioning reserve funds include marketable equity securities carried at their market value of approximately $5,290 million and $4,437 million ($3,536 million and $2,905 million for FPL) at December 31, 2023 and 2022, respectively. NEE's and FPL&#8217;s investment strategy for equity securities in their nuclear decommissioning reserve funds emphasizes marketable securities which are broadly diversified. At December 31, 2023, a hypothetical 10% decrease in the prices quoted on stock exchanges would result in an approximately $494 million ($322 million for FPL) reduction in fair value. For FPL, a corresponding adjustment would be made to the related regulatory asset or liability accounts based on current regulatory treatment, and for NEE&#8217;s non-rate regulated operations, a corresponding amount would be recorded in change in unrealized gains (losses) on equity securities held in NEER's nuclear decommissioning funds &#8211; net in NEE's consolidated statements of income. 
+
+Credit Risk 
+
+NEE and its subsidiaries, including FPL, are also exposed to credit risk through their energy marketing and trading operations. Credit risk is the risk that a financial loss will be incurred if a counterparty to a transaction does not fulfill its financial obligation. NEE manages counterparty credit risk for its subsidiaries with energy marketing and trading operations through established policies, including counterparty credit limits, and in some cases credit enhancements, such as cash prepayments, letters of credit, cash and other collateral and guarantees. 
+
+s 
+
+Credit risk is also managed through the use of master netting agreements. NEE&#8217;s credit department monitors current and forward credit exposure to counterparties and their affiliates, both on an individual and an aggregate basis. For all derivative and contractual transactions, NEE&#8217;s energy marketing and trading operations, which include FPL's energy marketing and trading division, are exposed to losses in the event of nonperformance by counterparties to these transactions. Some relevant considerations when assessing NEE&#8217;s energy marketing and trading operations&#8217; credit risk exposure include the following: 
+
+&#8226; Operations are primarily concentrated in the energy industry. 
+
+&#8226; Trade receivables and other financial instruments are predominately with energy, utility and financial services related companies, as well as municipalities, cooperatives and other trading companies in the U.S. 
+
+&#8226; Overall credit risk is managed through established credit policies and is overseen by the EMC. 
+
+&#8226; Prospective and existing customers are reviewed for creditworthiness based upon established standards, with customers not meeting minimum standards providing various credit enhancements or secured payment terms, such as letters of credit or the posting of margin cash collateral. 
+
+&#8226; Master netting agreements are used to offset cash and noncash gains and losses arising from derivative instruments with the same counterparty. NEE&#8217;s policy is to have master netting agreements in place with significant counterparties. 
+
+Based on NEE&#8217;s policies and risk exposures related to credit, NEE and FPL do not anticipate a material adverse effect on their financial statements as a result of counterparty nonperformance. At December 31, 2023, NEE's credit risk exposure associated with its energy marketing and trading counterparties, taking into account collateral and contractual netting rights, totaled approximately $3.5 billion ($83 million for FPL), of which approximately 93% (100% for FPL) was with companies that have investment grade credit ratings. See Note 1 &#8211; Credit Losses and Note 3. 
+

@@ -51,6 +51,7 @@ def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
             print(f"[!] SEC Metadata Error: {metadata.get('error','No filings found')}")
             return {}
         filing_date = metadata["filedAt"].split("T")[0]
+        state.filing_date = filing_date
         return {"filing_date": filing_date}
 
     except Exception as e:

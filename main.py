@@ -72,19 +72,6 @@ def main():
             verbose     = args.verbose
         )
 
-        # only print tables when in an interactive terminal
-        if sys.stdout.isatty():
-            print("\nICAIF Ratings:")
-            print(tabulate(
-                headers=["Criterion", "Score"],
-                tablefmt="plain"
-            ))
-            print("\nPipeline Matrix:")
-            print(tabulate(
-                headers=["Agent", "Requests", "Avg Latency (s)", "Errors", "Provider", "Model"],
-                tablefmt="plain"
-            ))
-
     except ImportError as e:
         logger.error("Module 'workflows.orchestrator' not found.")
         log_event("orchestration_import_error", {"error": str(e)})

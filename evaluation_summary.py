@@ -18,7 +18,7 @@ python_exe = sys.executable  # Path to the active Python interpreter
 # === Configurations ===
 companies = ["Apple", "Amazon", "Nvidea", "DMART", "MRF Tyres"] #openai
 years = ["2024", "2023"]
-providers = ["qwen", "meta", "deepseek","google"]  # List of LLM providers/ don't use MIXTRAL too small conext window for summrizer
+providers = ["openai", "qwen"]  # , "meta", "deepseek","google" List of LLM providers/ don't use MIXTRAL too small conext window for summrizer
 config_file = "langgraph_config.json"
 main_py_path = "main.py"   # Entry-point script
 

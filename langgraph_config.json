@@ -110,7 +110,7 @@
     "data_collection_indian": "Qwen/Qwen3-235B-A22B-fp8-tput",
     "validate_collected_data": "Qwen/Qwen3-235B-A22B-fp8-tput",
     "synchronize_data": "Qwen/Qwen3-235B-A22B-fp8-tput",
-    "summarizer": "Qwen2.5-72B-Instruct-Turbo",
+    "summarizer": "Qwen/Qwen2.5-72B-Instruct-Turbo",
     "validate_summarized_data": "Qwen/Qwen2.5-VL-72B-Instruct",
     "concept": "Qwen/Qwen3-235B-A22B-fp8-tput",
     "validate_analyzed_data": "Qwen/Qwen3-235B-A22B-fp8-tput",
