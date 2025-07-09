@@ -8,8 +8,10 @@ from PIL import Image
 import sys
 from datetime import datetime, timedelta
 import inspect
-from typing import Dict, Any, List, Callable, Tuple
+from typing import Dict, Any, List, Callable, Tuple, Optional
+from collections import Counter, defaultdict
 from langchain.schema import HumanMessage
+from tabulate import tabulate
 
 from utils.logger import get_logger, log_event, log_agent_step, log_cost_estimate
 from utils.config_utils import LangGraphLLMExecutor
@@ -17,10 +19,11 @@ from prompts.summarization_intsruction import summarization_prompt_library
 from prompts.report_summaries import report_section_specs
 from agents.state_types import AgentState
 from agents.state_types import TOOL_MAP, TOOL_IN_MAP
-from collections import Counter
+
 
 logger = get_logger()
 logger = logging.getLogger(__name__)
+
 
 # --- Node Functions ---
 def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
@@ -50,6 +53,7 @@ def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
             print(f"[!] SEC Metadata Error: {metadata.get('error','No filings found')}")
             return {}
         filing_date = metadata["filedAt"].split("T")[0]
+        state.filing_date = filing_date
         return {"filing_date": filing_date}
 
     except Exception as e:
@@ -93,7 +97,8 @@ def collect_indian_financial_data(state: AgentState) -> Dict[str, List[str]]:
             errors.append(msg)
             continue
 
-        tool_fn = TOOL_IN_MAP[tool_name]
+        tool_info = TOOL_IN_MAP[tool_name]
+        tool_fn = tool_info["function"]
         try:
             os.makedirs(os.path.dirname(out_file_path), exist_ok=True)
             sig = inspect.signature(tool_fn)
@@ -168,7 +173,8 @@ def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
             errors.append(msg)
             continue
 
-        tool_fn = TOOL_MAP[tool_name]
+        tool_info = TOOL_MAP[tool_name]
+        tool_fn = tool_info["function"]
         try:
             os.makedirs(os.path.dirname(out_file_path), exist_ok=True)
             sig = inspect.signature(tool_fn)
@@ -429,9 +435,6 @@ def generate_concept_insights(
         insights[section_key] = response.content
         count += 1
 
-    # after loop, you can also do
-    print("Insight keys produced:", list(insights.keys()))
-
     return insights, count
 
 
@@ -462,74 +465,215 @@ def validate_insights(insights: Dict[str, str]) -> Dict[str, Any]:
         "overall_score": overall_score
     }
 
-def evaluate_pipeline(
-    agent_state: "AgentState",
-    icaif_scores: dict = None   
-) -> Dict[str, Any]:
-    from collections import Counter
-    from datetime import datetime
+def print_pipeline_kpis(pipeline_data):
+    """
+    Given a list of per-node dicts (pipeline_data), prints concise tables:
+    Node Status, Duration & Cost, Tools, Functions, Errors/File I/O.
+    """
+    if not pipeline_data:
+        print("\n[No pipeline data available to display]\n", flush=True)
+        return
 
-    steps = agent_state.memory.get("pipeline_data", []) or []
-    models_used = agent_state.memory.get("models_used", []) or []
-    nodes_sequence = agent_state.memory.get("pipeline_nodes", [])
-
-    # --- Aggregate LLM KPIs from models_used ---
-    filtered = [
-        m for m in models_used
-        if m.get("provider") and m["provider"].lower() not in ("none", "", "na")
-        and m.get("model") and m["model"].lower() not in ("none", "", "na")
-    ]
-    provider_counts = Counter(m["provider"] for m in filtered)
-    most_common_provider = provider_counts.most_common(1)[0][0] if provider_counts else "None"
-    unique_models = sorted(set(m["model"] for m in filtered))
-    total_tokens_sent = sum(m.get("tokens_sent", 0) for m in filtered)
-    total_tokens_generated = sum(m.get("tokens_generated", 0) for m in filtered)
-    total_cost_llm = sum(m.get("cost_llm", 0.0) for m in filtered)
-
-    # --- KPIs from pipeline steps (non-LLM metrics) ---
-    total_latency = sum(s.get("duration", 0.0) for s in steps if isinstance(s, dict))
-    # To avoid 'unhashable type: list', just take the node name string, not a list!
-    model_steps = {}
-    for s in steps:
-        node_name = s.get("current_node") or s.get("node")
-        if node_name:
-            model_steps[str(node_name)] = s.get("tools_used", [])
-
-    # --- Pipeline start/end/duration ---
-    pipeline_start = agent_state.memory.get("pipeline_start_time")
-    pipeline_end   = agent_state.memory.get("pipeline_end_time")
-    pipeline_duration = None
-    if pipeline_start and pipeline_end:
+    def short_ts(ts):
         try:
-            start_dt = datetime.fromisoformat(pipeline_start)
-            end_dt   = datetime.fromisoformat(pipeline_end)
-            pipeline_duration = (end_dt - start_dt).total_seconds()
+            return datetime.fromisoformat(ts).strftime("%Y-%m-%d %H:%M:%S")
         except Exception:
-            pipeline_duration = None
+            return ts
 
-    # --- KPIs output ---
+    # 1) Node Status
+    status_cols = ["current_node", "status"]
+    status_table = [
+        {col: row.get(col, "-") for col in status_cols}
+        for row in pipeline_data
+    ]
+    print("\n=== Node Status ===", flush=True)
+    print(tabulate(status_table, headers="keys", tablefmt="plain"), flush=True)
+
+    # 2) Duration & Cost Metrics
+    time_cost_table = [
+        {
+            "current_node":     row.get("current_node", "-"),
+            "start_time":       short_ts(row.get("start_time", "")),
+            "end_time":         short_ts(row.get("end_time", "")),
+            "duration":         row.get("duration", "-"),
+            "cost_llm":         row.get("cost_llm", "-"),
+            "tokens_sent":      row.get("tokens_sent", "-"),
+            "tokens_generated": row.get("tokens_generated", "-"),
+        }
+        for row in pipeline_data
+    ]
+
+    print("\n=== Duration & Cost Metrics ===", flush=True)
+    print(tabulate(time_cost_table, headers="keys", tablefmt="plain"), flush=True)
+
+    # 3) Tools Used
+    tool_table = [
+        {
+            "current_node": row.get("current_node", "-"),
+            "LLMs_used":   ", ".join(list(dict.fromkeys(row.get("tools_used", [])))) or "-",
+        }
+        for row in pipeline_data
+    ]
+    print("\n=== LLMs ===")
+    print(tabulate(tool_table, headers="keys", tablefmt="plain"))
+
+    # 4) Functions Used
+    function_table = [
+        {
+            "current_node": row.get("current_node", "-"),
+            "functions_used": ", ".join(row.get("functions_used", [])) or "-",
+        }
+        for row in pipeline_data
+    ]
+    print("\n=== Functions ===")
+    print(tabulate(function_table, headers="keys", tablefmt="plain"))
+
+    # 5) Errors & File I/O
+    io_table = [
+        {
+            "current_node":  row.get("current_node", "-"),
+            "errors":        ", ".join(row.get("errors", [])) or "-",
+            "files_read":    ", ".join(row.get("files_read", [])) or "-",
+            "files_created": ", ".join(row.get("files_created", [])) or "-",
+        }
+        for row in pipeline_data
+    ]
+    print("\n=== Errors & File I/O ===")
+    print(tabulate(io_table, headers="keys", tablefmt="plain"))
+
+def evaluate_pipeline(agent_state: AgentState, icaif_scores: Optional[dict] = None) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    """
+    Evaluates the pipeline execution and generates quantitative and qualitative metrics,
+    including LLM KPIs, per-step analysis, and ICAIF scores (if provided).
+    Returns:
+      - results: dictionary of all evaluation metrics and pipeline data
+      - metrics_to_save: streamlined dict suitable for persistence to disk
+    """
+
+    # --- Extract pipeline state ---
+    raw_steps      = agent_state.memory.get("pipeline_data", []) or []
+    models_used    = agent_state.memory.get("models_used", []) or []
+    nodes_sequence = agent_state.memory.get("pipeline_nodes", []) or []
+    ps = agent_state.memory.get("pipeline_start_time")
+    pe = agent_state.memory.get("pipeline_end_time")
+
+    # --- LLM KPIs ---
+    valid_calls = [m for m in models_used if m.get("provider") and m.get("model")]
+    provider_counts = Counter(m["provider"] for m in valid_calls)
+    main_provider   = provider_counts.most_common(1)[0][0] if provider_counts else None
+    unique_models   = sorted({m["model"] for m in valid_calls})
+    total_tokens_in  = sum(m.get("tokens_sent", 0) for m in valid_calls)
+    total_tokens_out = sum(m.get("tokens_generated", 0) for m in valid_calls)
+    total_cost       = sum(m.get("cost_llm", 0.0) for m in valid_calls)
+
+    # --- Pipeline-level metrics ---
+    total_latency = sum(s.get("duration", 0.0) for s in raw_steps if isinstance(s, dict))
+    total_retries = sum(s.get("retry_count", 0) for s in raw_steps if isinstance(s, dict))
+    try:
+        pipeline_duration = (datetime.fromisoformat(pe) - datetime.fromisoformat(ps)).total_seconds()
+    except Exception:
+        pipeline_duration = None
+
+    # --- Per-node tool aggregation (for summary use only) ---
+    grouped_tools = defaultdict(list)
+    for s in raw_steps:
+        if not isinstance(s, dict):
+            continue
+        node = s.get("current_node") or s.get("node")
+        for t in s.get("tools_used", []):
+            grouped_tools[node].append(t)
+    model_steps = {node: sorted(set(grouped_tools[node])) for node in grouped_tools}
+
+    # --- KPIs dictionary ---
     kpis = {
-        "total_pipeline_cost_usd":      round(total_cost_llm, 4),
-        "total_pipeline_latency_sec":   round(total_latency, 2),
-        "pipeline_nodes_sequence":      nodes_sequence,
-        "pipeline_start_time":          pipeline_start,
-        "pipeline_end_time":            pipeline_end,
-        "pipeline_total_duration_sec":  round(pipeline_duration, 2) if pipeline_duration is not None else None,
-        "model_steps":                  model_steps,
-        "main_llm_provider":            most_common_provider,
-        "unique_llm_models":            unique_models,
-        "total_tokens_sent":            total_tokens_sent,
-        "total_tokens_generated":       total_tokens_generated,
+        "total_pipeline_cost_usd":     round(total_cost, 4),
+        "total_pipeline_latency_sec":  round(total_latency, 2),
+        "total_retries":               total_retries,
+        "pipeline_nodes_sequence":     nodes_sequence,
+        "pipeline_start_time":         ps,
+        "pipeline_end_time":           pe,
+        "pipeline_total_duration_sec": round(pipeline_duration, 2) if pipeline_duration is not None else None,
+        "model_steps":                 model_steps,
+        "main_llm_provider":           main_provider,
+        "unique_llm_models":           unique_models,
+        "total_tokens_sent":           total_tokens_in,
+        "total_tokens_generated":      total_tokens_out,
     }
     if icaif_scores:
         kpis.update({
-            'icaif_accuracy':     icaif_scores.get('accuracy'),
-            'icaif_logicality':   icaif_scores.get('logicality'),
-            'icaif_storytelling': icaif_scores.get('storytelling'),
-            'icaif_scores':       icaif_scores,
+            "icaif_accuracy":     icaif_scores.get("accuracy"),
+            "icaif_logicality":   icaif_scores.get("logicality"),
+            "icaif_storytelling": icaif_scores.get("storytelling"),
+            "icaif_scores":       icaif_scores,
         })
+        print("### ICAIF Ratings ###")
+        print(tabulate(
+            icaif_scores.items(),
+            headers=["Criterion", "Score"],
+            tablefmt="github"
+        ))
+    else:
+        print("### No ICAIF scores available ###")
 
-    return {
-        "kpis":           kpis,
-        "pipeline_steps": steps,
+    # --- Build the pipeline_matrix (per step) ---
+    pipeline_matrix = []
+    cumulative_cost = 0.0
+    for s in raw_steps:
+        if not isinstance(s, dict):
+            continue
+        node    = s.get("current_node") or s.get("node")
+        requests= 1
+        latency = round(s.get("duration", 0.0), 2)
+        errors  = len(s.get("errors", []))
+        tools   = s.get("tools_used", [])
+        if tools:
+            first = tools[0].split(":", 1)
+            provider, model = first[0], first[1] if len(first) > 1 else ""
+        else:
+            provider, model = "unknown", "unknown"
+        # Get the step LLM cost
+        step_cost = s.get("cost_llm", 0.0) or 0.0
+        cumulative_cost += step_cost
+        # Use dict instead of list!
+        pipeline_matrix.append({
+            "Agent": node,
+            "Requests": requests,
+            "Avg Latency (sec)": latency,
+            "Errors": errors,
+            "Provider": provider,
+            "Model": model,
+            "Step LLM Cost (USD)": round(step_cost, 6),
+            "Cumulative LLM Cost (USD)": round(cumulative_cost, 6),
+            # Optionally add more fields as needed
+        })
+        s.setdefault("retry_count", 0)
+
+
+    print_pipeline_kpis(pipeline_matrix)
+
+    # --- Register function usage for orchestration traceability ---
+    rec = getattr(agent_state, "_current_node_record", None)
+    if rec is not None:
+        rec.setdefault("functions_used", []).append("evaluate_pipeline")
+
+    # --- Collect result and persist structure ---
+    results = {
+        "kpis": kpis,
+        "pipeline_steps": raw_steps,
+        "pipeline_matrix": pipeline_matrix,
+        "icaif_scores": icaif_scores,
     }
+    metrics_to_save = {
+        "final_evaluation":   results,
+        "icaif_scores":       icaif_scores,
+        "pipeline_matrix":    pipeline_matrix,
+        "pipeline_data":      raw_steps,
+        "error_log":          agent_state.error_log,
+    }
+    # (Persist to disk logic should be outside this function for separation of concerns)
+
+    # --- Set state outputs (for chaining/side effects) ---
+    agent_state.memory["final_evaluation"] = results
+    agent_state.accuracy_score = kpis.get("total_pipeline_cost_usd", 0.0)
+
+    return results, metrics_to_save

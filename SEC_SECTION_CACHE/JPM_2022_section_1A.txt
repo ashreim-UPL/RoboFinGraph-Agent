@@ -1,0 +1,1422 @@
+ Item 1A. Risk Factors. 
+
+The following discussion sets forth the material risk factors that could affect JPMorgan Chase&#8217;s financial condition and operations. Readers should not consider any descriptions of these factors to be a complete set of all potential risks that could affect the Firm. Any of the risk factors discussed below could by itself, or combined with other factors, materially and adversely affect JPMorgan Chase&#8217;s business, results of operations, financial condition, capital position, liquidity, competitive position or reputation, including by materially increasing expenses or decreasing revenues, which could result in material losses or a decrease in earnings. 
+
+Summary 
+
+The principal risk factors that could adversely affect JPMorgan Chase&#8217;s business, results of operations, financial condition, capital position, liquidity, competitive position or reputation include: 
+
+&#8226; Risks related to the COVID-19 pandemic , including the ongoing effects of the pandemic which could harm the global economy and negatively affect JPMorgan Chase&#8217;s businesses. 
+
+&#8226; Regulatory risks, including the impact that applicable laws, rules and regulations in the highly-regulated financial services industry, as well as changes to or in the application, interpretation or enforcement of those laws, rules and regulations, can have on JPMorgan Chase&#8217;s business and operations; the ways in which differences in financial services regulation in different jurisdictions or with respect to certain competitors can disadvantage JPMorgan Chase&#8217;s business; the penalties and collateral consequences, and higher compliance and operational costs, that JPMorgan Chase may incur when resolving a regulatory investigation; risks associated with complying with anti-money laundering, economic sanctions and anti-corruption laws; the ways in which less predictable legal and regulatory frameworks in certain countries can negatively impact JPMorgan Chase&#8217;s operations and financial results; and the losses that security holders will absorb if JPMorgan Chase were to enter into a resolution. 
+
+&#8226; Political risks, including the potential negative effects on JPMorgan Chase&#8217;s businesses due to economic uncertainty or instability caused by political developments. 
+
+&#8226; Market risks, including the effects that economic and market events and conditions, governmental policies, changes in interest rates and credit spreads, and market fluctuations can have on JPMorgan Chase&#8217;s consumer and wholesale businesses and its investment and market-making positions. 
+
+&#8226; Credit risks, including potential negative effects from adverse changes in the financial condition of clients, customers, counterparties, custodians and central counterparties; and the potential for losses due to declines in the value of collateral in stressed market 
+
+conditions or from concentrations of credit and market risk. 
+
+&#8226; Liquidity risks, including the risk that JPMorgan Chase&#8217;s liquidity could be impaired by market-wide illiquidity or disruption, unforeseen liquidity or capital requirements, the inability to sell assets, default by a significant market participant, unanticipated outflows of cash or collateral, or lack of market or customer confidence in JPMorgan Chase; the dependence of JPMorgan Chase &#38; Co. on the cash flows of its subsidiaries; the adverse effects that any downgrade in any of JPMorgan Chase&#8217;s credit ratings may have on its liquidity and cost of funding; and potential negative impacts on JPMorgan Chase&#8217;s funding, investments and financial products, as well as litigation risks, associated with the transition from U.S. dollar LIBOR and other benchmark rates. 
+
+&#8226; Capital risks, including the risk that any failure by or inability of JPMorgan Chase to maintain the required level and composition of capital, or unfavorable changes in applicable capital requirements, could limit JPMorgan Chase&#8217;s ability to distribute capital to shareholders or to support its business activities. 
+
+&#8226; Operational risks, including risks associated with JPMorgan Chase&#8217;s dependence on its operational systems and the competence, integrity, health and safety of its employees, as well as the systems and employees of third parties and service providers; the potential negative effects of failing to identify and address operational risks related to the introduction of or changes to products, services and delivery platforms; risks from JPMorgan Chase&#8217;s exposure to operational systems of third parties; legal and regulatory risks related to safeguarding personal information; the harm that could be caused by a successful cyber attack affecting JPMorgan Chase or by other extraordinary events; risks associated with JPMorgan Chase&#8217;s risk management framework, its models and estimations and associated judgments used in its stress testing and financial statements, and controls over disclosure and financial reporting; and potential adverse effects of failing to comply with heightened regulatory and other standards for the oversight of vendors and other service providers. 
+
+&#8226; Strategic risks, including the damage to JPMorgan Chase&#8217;s competitive standing and results that could occur if management fails to develop and execute effective business strategies; risks associated with the significant and increasing competition that JPMorgan Chase faces; and the potential adverse impacts of climate change on JPMorgan Chase&#8217;s business operations, clients and customers. 
+
+&#8226; Conduct risks, including the negative impact that can result from the failure of employees to conduct themselves in accordance with JPMorgan Chase&#8217;s expectations, policies and practices. 
+
+##TABLE_START 9 
+
+##TABLE_END
+
+Part I 
+
+&#8226; Reputation risks, including the potential adverse effects on JPMorgan Chase&#8217;s relationships with its clients, customers, shareholders, regulators and other stakeholders that could arise from employee misconduct, security breaches, inadequate risk management, compliance or operational failures, litigation and regulatory investigations, failure to satisfy expectations concerning social and environmental concerns, failure to effectively manage conflicts of interest or to satisfy fiduciary obligations, or other factors that could damage JPMorgan Chase&#8217;s reputation. 
+
+&#8226; Country risks, including potential impacts on JPMorgan Chase&#8217;s businesses from an outbreak or escalation of hostilities between countries or within a country or region; and the potential adverse effects of local economic, political, regulatory and social factors on JPMorgan Chase&#8217;s business and revenues in certain countries. 
+
+&#8226; People risks, including the criticality of attracting and retaining qualified and diverse employees; and the potential adverse effects of unfavorable changes in immigration or travel policies on JPMorgan Chase&#8217;s workforce. 
+
+&#8226; Legal risks relating to litigation and regulatory and government investigations. 
+
+The above summary is subject in its entirety to the discussion of the risk factors set forth below. 
+
+COVID-19 Pandemic 
+
+Ongoing effects of the COVID-19 pandemic could harm the global economy and negatively affect JPMorgan Chase&#8217;s businesses. 
+
+On March 11, 2020, the World Health Organization declared the outbreak of a strain of novel coronavirus disease, COVID-19, to be a global pandemic. The COVID-19 pandemic and governmental responses to the pandemic, which included the institution of social distancing and shelter-in-place requirements in certain areas of the U.S. and other countries, resulted in adverse impacts on global economic conditions, including: 
+
+&#8226; significant disruption and volatility in the financial markets 
+
+&#8226; significant disruption of global supply chains, and 
+
+&#8226; closures of many businesses, leading to loss of revenues and increased unemployment. 
+
+The adverse economic conditions caused by the pandemic have had a negative impact on certain of JPMorgan Chase&#8217;s businesses and results of operations, including: 
+
+&#8226; reduction in demand for certain products and services from JPMorgan Chase&#8217;s clients and customers, resulting in lower revenue, and 
+
+&#8226; increases in the allowance for credit losses during the early stages of the pandemic. 
+
+Although global economic conditions have been improving despite the continuation of the COVID-19 pandemic, any ongoing negative economic impacts arising from the pandemic or any prolongation or worsening of the pandemic, including as a result of additional waves or variants of the COVID-19 disease or the emergence of other diseases that have similar outcomes, could have significant adverse effects on JPMorgan Chase&#8217;s businesses, results of operations and financial condition, including: 
+
+&#8226; recognition of charge-offs and increases in the allowance for credit losses, including any delayed recognition of charge-offs due to the impact of government stimulus actions or payment assistance provided to clients and customers 
+
+&#8226; material impacts on the value of securities, derivatives and other financial instruments which JPMorgan Chase owns or in which it makes markets 
+
+&#8226; downgrades in JPMorgan Chase&#8217;s credit ratings 
+
+&#8226; constraints on liquidity or capital due to elevated levels of deposits, increases in risk-weighted assets (&#8220;RWA&#8221;) related to supporting client activities, downgrades in client credit ratings, regulatory actions or other factors, any or all of which could require JPMorgan Chase to take or refrain from taking actions that it otherwise would under its liquidity and capital management strategies, and 
+
+&#8226; the possibility that significant portions of JPMorgan Chase&#8217;s workforce are unable to work effectively, including because of illness, quarantines, shelter-in-place arrangements, government actions or other restrictions in connection with the pandemic. 
+
+The extent to which the COVID-19 pandemic negatively affects JPMorgan Chase&#8217;s businesses, results of operations and financial condition, as well as its regulatory capital and liquidity ratios, will depend on future developments that are uncertain and cannot be fully predicted, including: 
+
+&#8226; the ultimate scope and duration of the pandemic 
+
+&#8226; the effectiveness and acceptance of vaccines, and their availability in certain regions 
+
+&#8226; actions taken by governmental authorities and other third parties in response to the pandemic, and 
+
+&#8226; the effect that the pandemic or any prolongation or worsening of the pandemic may have on the pace of economic growth, inflation, the strength of labor markets, particularly in light of the expiration of government assistance programs, and the potential for changes in consumer 
+
+##TABLE_START 
+
+##TABLE_END
+
+behavior that could have longer-term impacts on certain economic sectors. 
+
+In addition, JPMorgan Chase's participation in U.S. government programs designed to support individuals, households and businesses impacted by the economic disruptions caused by the COVID-19 pandemic, whether directly or indirectly, including on behalf of customers and clients or by affiliated entities, newly-acquired businesses or companies in which JPMorgan Chase has made principal investments, could be criticized and subject JPMorgan Chase to: 
+
+&#8226; increased governmental and regulatory scrutiny 
+
+&#8226; negative publicity, and 
+
+&#8226; increased exposure to litigation, 
+
+any or all of which could increase JPMorgan Chase&#8217;s operational, legal and compliance costs and damage its reputation. To the extent that the COVID-19 pandemic adversely affects JPMorgan Chase&#8217;s business, results of operations and financial condition, it may also have the effect of heightening many of the other risks described below. 
+
+Regulatory 
+
+JPMorgan Chase&#8217;s businesses are highly regulated, and the laws, rules and regulations that apply to JPMorgan Chase have a significant impact on its business and operations. 
+
+JPMorgan Chase is a financial services firm with operations worldwide. JPMorgan Chase must comply with the laws, rules and regulations that apply to its operations in all of the jurisdictions around the world in which it does business. Regulation of the financial services industry is extensive. 
+
+The regulation and supervision of financial services firms has expanded significantly over an extended period of time. The increased regulation and supervision of JPMorgan Chase has affected the way that it conducts its business and structures its operations. JPMorgan Chase could be required to make further changes to its business and operations in response to expanded supervision or to new or changed laws, rules and regulations. These types of developments could result in JPMorgan Chase incurring additional costs in connection with complying with applicable laws, rules and regulations, which could reduce its profitability. Furthermore, JPMorgan Chase&#8217;s entry into or acquisition of a new business or an increase in its principal investments may require JPMorgan Chase to comply with additional laws, rules, and regulations. 
+
+In response to new and existing laws, rules and regulations and expanded supervision, JPMorgan Chase has in the past been and could in the future be, required to: 
+
+&#8226; limit the products and services that it offers 
+
+&#8226; reduce the liquidity that it can provide through its market-making activities 
+
+&#8226; refrain from engaging in business opportunities that it might otherwise pursue 
+
+&#8226; pay higher taxes, assessments, levies or other governmental charges, including in connection with the resolution of tax examinations 
+
+&#8226; incur losses with respect to fraudulent transactions perpetrated against its customers 
+
+&#8226; dispose of certain assets, and do so at times or prices that are disadvantageous 
+
+&#8226; impose restrictions on certain business activities, or 
+
+&#8226; increase the prices that it charges for products and services, which could reduce the demand for them. 
+
+In particular, JPMorgan Chase&#8217;s businesses and results of operations could be adversely impacted by changes in laws, rules and regulations, or changes in the application, interpretation or enforcement of laws, rules and regulations, that: 
+
+&#8226; proscribe or institute more stringent restrictions on certain financial services activities 
+
+&#8226; impose new requirements relating to the impact of business activities on environmental, social and governance (&#8220;ESG&#8221;) concerns, the management of risks associated with those concerns and the offering of products intended to achieve ESG-related objectives, or 
+
+&#8226; introduce changes to antitrust or anti-competition laws, rules and regulations that adversely affect the business activities of JPMorgan Chase. 
+
+Differences in financial services regulation can be disadvantageous for JPMorgan Chase&#8217;s businesses. 
+
+The content and application of laws, rules and regulations affecting financial services firms sometimes vary according to factors such as the size of the firm, the jurisdiction in which it is organized or operates, and other criteria. For example: 
+
+&#8226; larger firms such as JPMorgan Chase are often subject to more stringent supervision and regulation 
+
+&#8226; financial technology companies and other non-traditional competitors may not be subject to banking regulation, or may be supervised by a national or state regulatory agency that does not have the same resources or regulatory priorities as the regulatory agencies which supervise more diversified financial services firms, or 
+
+&#8226; the financial services regulatory framework in a particular jurisdiction may favor financial institutions that are based in that jurisdiction. 
+
+These types of differences in the regulatory framework can result in JPMorgan Chase losing market share to competitors that are less regulated or not subject to regulation, especially with respect to unregulated financial products. 
+
+##TABLE_START 11 
+
+##TABLE_END
+
+Part I 
+
+There can also be significant differences in the ways that similar regulatory initiatives affecting the financial services industry are implemented in the U.S. and in other countries and regions in which JPMorgan Chase does business. For example, when adopting rules that are intended to implement a global regulatory standard, a national regulator may introduce additional or more restrictive requirements, which can create competitive disadvantages for financial services firms, such as JPMorgan Chase, that may be subject to those enhanced regulations. 
+
+Legislative and regulatory initiatives outside the U.S. could require JPMorgan Chase to make significant modifications to its operations and legal entity structure in the relevant countries or regions in order to comply with those requirements. These include laws, rules and regulations that have been adopted or proposed relating to: 
+
+&#8226; the establishment of locally-based intermediate holding companies or operating subsidiaries 
+
+&#8226; requirements to maintain minimum amounts of capital or liquidity in locally-based subsidiaries 
+
+&#8226; the separation (or &#8220;ring fencing&#8221;) of core banking products and services from markets activities 
+
+&#8226; the resolution of financial institutions 
+
+&#8226; requirements for executing or settling transactions on exchanges or through central counterparties (&#8220;CCPs&#8221;) 
+
+&#8226; position limits and reporting rules for derivatives 
+
+&#8226; governance and accountability regimes 
+
+&#8226; conduct of business and control requirements, and 
+
+&#8226; restrictions on compensation. 
+
+These types of differences, inconsistencies and conflicts in financial services regulation have required and could in the future require JPMorgan Chase to: 
+
+&#8226; divest assets or restructure its operations 
+
+&#8226; absorb increased operational, capital and liquidity costs 
+
+&#8226; change the prices that it charges for its products and services 
+
+&#8226; curtail the products and services that it offers to its customers and clients 
+
+&#8226; curtail other business opportunities, including acquisitions or principal investments, that it otherwise would have pursued, or 
+
+&#8226; incur higher costs for complying with different legal and regulatory frameworks. 
+
+Any or all of these factors could harm JPMorgan Chase&#8217;s ability to compete against other firms that are not subject to the same laws, rules and regulations or supervisory oversight, or harm JPMorgan Chase&#8217;s businesses, results of operations and profitability. 
+
+Resolving regulatory investigations can subject JPMorgan Chase to significant penalties and collateral consequences, and could result in higher compliance costs or restrictions on its operations. 
+
+JPMorgan Chase&#8217;s operations are subject to heightened oversight and scrutiny from regulatory authorities in many jurisdictions. JPMorgan Chase has paid significant fines, provided other monetary relief, incurred other penalties and experienced other repercussions in connection with resolving investigations and enforcement actions by governmental agencies. JPMorgan Chase could become subject to similar regulatory resolutions or other actions in the future, and addressing the requirements of any such resolutions or actions could result in JPMorgan Chase incurring higher operational and compliance costs, including devoting substantial resources to the required remediation, or needing to comply with other restrictions. 
+
+In connection with resolving specific regulatory investigations or enforcement actions, certain regulators have required JPMorgan Chase and other financial institutions to admit wrongdoing with respect to the activities that gave rise to the resolution. These types of admissions can lead to: 
+
+&#8226; greater exposure in litigation 
+
+&#8226; damage to reputation 
+
+&#8226; disqualification from doing business with certain clients or customers, or in specific jurisdictions, or 
+
+&#8226; other direct and indirect adverse effects. 
+
+Furthermore, U.S. government officials have demonstrated a willingness to bring criminal actions against financial institutions and have required that institutions plead guilty to criminal offenses or admit other wrongdoing in connection with resolving regulatory investigations or enforcement actions. Resolutions of this type can have significant collateral consequences for the subject financial institution, including: 
+
+&#8226; loss of clients, customers and business 
+
+&#8226; restrictions on offering certain products or services, and 
+
+&#8226; losing permission to operate certain businesses, either temporarily or permanently. 
+
+JPMorgan Chase expects that: 
+
+&#8226; it and other financial services firms will continue to be subject to heightened regulatory scrutiny and governmental investigations and enforcement actions 
+
+&#8226; regulators will continue to require that financial institutions be penalized for actual or deemed violations of law with formal and punitive enforcement actions, including the imposition of significant monetary and other sanctions, rather than resolving these matters through informal supervisory actions; and 
+
+##TABLE_START 
+
+##TABLE_END
+
+&#8226; regulators will be more likely to pursue formal enforcement actions and resolutions against JPMorgan Chase to the extent that it has previously been subject to other governmental investigations or enforcement actions. 
+
+If JPMorgan Chase fails to meet the requirements of any resolution of a governmental investigation or enforcement action, or to maintain risk and control processes that meet the heightened standards and expectations of its regulators, it could be required to, among other things: 
+
+&#8226; enter into further resolutions of investigations or enforcement actions 
+
+&#8226; pay additional regulatory penalties or enter into judgments, or 
+
+&#8226; accept material regulatory restrictions on, or changes in the management of, its businesses. 
+
+In these circumstances, JPMorgan Chase could also become subject to other sanctions, or to prosecution or civil litigation with respect to the conduct that gave rise to an investigation or enforcement action. 
+
+JPMorgan Chase can face greater risks of non-compliance and incur higher operational and compliance costs under laws, rules and regulations relating to anti-money laundering, economic sanctions, embargo programs and anti-corruption. 
+
+JPMorgan Chase must comply with laws, rules and regulations throughout the world relating to anti-money laundering, economic sanctions, embargo programs and anti-corruption which can increase its risks of non-compliance and costs associated with the implementation and maintenance of complex compliance programs. A violation of any of these legal and regulatory requirements could subject JPMorgan Chase, or individual employees, to regulatory enforcement actions as well as significant civil and criminal penalties. In addition, certain national and multi-national bodies and governmental agencies outside the U.S. have adopted laws, rules or regulations that conflict with or prohibit a firm such as JPMorgan Chase from complying with laws, rules and regulations to which it is otherwise subject, creating conflict of law issues that also increase its risks of non-compliance in those jurisdictions. 
+
+JPMorgan Chase&#8217;s operations and financial results can be negatively impacted in countries with less predictable legal and regulatory frameworks . 
+
+JPMorgan Chase conducts existing and new business in certain countries in which the application of the rule of law is inconsistent or less predictable, including with respect to: 
+
+&#8226; the absence of a statutory or regulatory basis or guidance for engaging in specific types of business or transactions 
+
+&#8226; conflicting or ambiguous laws, rules and regulations, or the inconsistent application or interpretation of existing laws, rules and regulations 
+
+&#8226; uncertainty concerning the enforceability of contractual, intellectual property or other obligations 
+
+&#8226; difficulty in competing in economies in which the government controls or protects all or a portion of the local economy or specific businesses, or where graft or corruption may be pervasive, and 
+
+&#8226; the threat of arbitrary regulatory investigations, civil litigations or criminal prosecutions, the termination of licenses required to operate in the local market or the suspension of business relationships with governmental bodies. 
+
+If the application of the laws, rules and regulations in a particular country is susceptible to producing inconsistent or unexpected outcomes, this can create a more difficult environment in which JPMorgan Chase conducts its business and could negatively affect JPMorgan Chase&#8217;s operations and reduce its earnings with respect to that country. For example, conducting business could require JPMorgan Chase to devote significant additional resources to understanding, and monitoring changes in, local laws, rules and regulations, as well as structuring its operations to comply with local laws, rules and regulations and implementing and administering related internal policies and procedures. 
+
+There can be no assurance that JPMorgan Chase will always be successful in its efforts to fully understand and to conduct its business in compliance with the laws, rules and regulations of all of the jurisdictions in which it operates, and the risk of non-compliance can be greater in countries that have less predictable legal and regulatory systems. 
+
+Requirements for the orderly resolution of JPMorgan Chase could result in JPMorgan Chase having to restructure or reorganize its businesses and could increase its funding or operational costs or curtail its businesses. 
+
+JPMorgan Chase is required under Federal Reserve and FDIC rules to prepare and submit periodically to those agencies a detailed plan for rapid and orderly resolution in bankruptcy, without extraordinary government support, in the event of material financial distress or failure. The agencies&#8217; evaluation of JPMorgan Chase&#8217;s resolution plan may change, and the requirements for resolution plans may be modified from time to time. Any such determinations or modifications could result in JPMorgan Chase needing to make changes to its legal entity structure or to certain internal or external activities, which could increase its funding or operational costs, or hamper its ability to serve clients and customers. 
+
+If the Federal Reserve and the FDIC were both to determine that a resolution plan submitted by JPMorgan Chase has deficiencies, they could jointly impose more stringent capital, leverage or liquidity requirements or restrictions on JPMorgan Chase&#8217;s growth, activities or operations. The agencies could also require that JPMorgan Chase restructure, reorganize or divest assets or businesses in 
+
+##TABLE_START 13 
+
+##TABLE_END
+
+Part I 
+
+ways that could materially and adversely affect JPMorgan Chase&#8217;s operations and strategy. 
+
+Holders of JPMorgan Chase &#38; Co.&#8217;s debt and equity securities will absorb losses if it were to enter into a resolution. 
+
+Federal Reserve rules require that JPMorgan Chase &#38; Co. (the &#8220;Parent Company&#8221;) maintain minimum levels of unsecured external long-term debt and other loss-absorbing capacity with specific terms (&#8220;eligible LTD&#8221;) for purposes of recapitalizing JPMorgan Chase&#8217;s operating subsidiaries if the Parent Company were to enter into a resolution either: 
+
+&#8226; in a bankruptcy proceeding under Chapter 11 of the U.S. Bankruptcy Code, or 
+
+&#8226; in a receivership administered by the FDIC under Title II of the Dodd-Frank Act (&#8220;Title II&#8221;). 
+
+If the Parent Company were to enter into a resolution, holders of eligible LTD and other debt and equity securities of the Parent Company will absorb the losses of the Parent Company and its subsidiaries. 
+
+The preferred &#8220;single point of entry&#8221; strategy under JPMorgan Chase&#8217;s resolution plan contemplates that only the Parent Company would enter bankruptcy proceedings. JPMorgan Chase&#8217;s subsidiaries would be recapitalized, as needed, so that they could continue normal operations or subsequently be divested or wound down in an orderly manner. As a result, the Parent Company&#8217;s losses and any losses incurred by its subsidiaries would be imposed first on holders of the Parent Company&#8217;s equity securities and thereafter on its unsecured creditors, including holders of eligible LTD and other debt securities. Claims of holders of those securities would have a junior position to the claims of creditors of JPMorgan Chase&#8217;s subsidiaries and to the claims of priority (as determined by statute) and secured creditors of the Parent Company. 
+
+Accordingly, in a resolution of the Parent Company in bankruptcy, holders of eligible LTD and other debt securities of the Parent Company would realize value only to the extent available to the Parent Company as a shareholder of JPMorgan Chase Bank, N.A. and its other subsidiaries, and only after any claims of priority and secured creditors of the Parent Company have been fully repaid. 
+
+The FDIC has similarly indicated that a single point of entry recapitalization model could be a desirable strategy to resolve a systemically important financial institution, such as the Parent Company, under Title II. However, the FDIC has not formally adopted a single point of entry resolution strategy. 
+
+If the Parent Company were to approach, or enter into, a resolution, none of the Parent Company, the Federal Reserve or the FDIC is obligated to follow JPMorgan Chase&#8217;s preferred resolution strategy, and losses to holders of eligible LTD and other debt and equity securities of the 
+
+Parent Company, under whatever strategy is ultimately followed, could be greater than they might have been under JPMorgan Chase&#8217;s preferred strategy. 
+
+Political 
+
+Economic uncertainty or instability caused by political developments can negatively impact JPMorgan Chase&#8217;s businesses. 
+
+Political developments in the U.S. and other countries can cause uncertainty in the economic environment and market conditions in which JPMorgan Chase operates its businesses. Certain monetary, fiscal and other policy initiatives and proposals could significantly affect U.S. and global economic growth and cause higher volatility in the financial markets, including: 
+
+&#8226; monetary policies and actions taken by the Federal Reserve and other central banks or governmental authorities, including any sustained large-scale asset purchases or any suspension or reversal of those actions 
+
+&#8226; fiscal policies, including with respect to taxation and spending 
+
+&#8226; actions that governments take or fail to take in response to the effects of the COVID-19 pandemic, as well as the effectiveness of any actions taken 
+
+&#8226; isolationist foreign policies 
+
+&#8226; an outbreak or escalation of hostilities or other geopolitical instabilities 
+
+&#8226; economic sanctions 
+
+&#8226; the implementation of tariffs and other protectionist trade policies, or 
+
+&#8226; other governmental policies or actions adopted or taken in response to political or social pressures. 
+
+These types of political developments, and uncertainty about the possible outcomes of these developments, could: 
+
+&#8226; erode investor confidence in the U.S. economy and financial markets, which could potentially undermine the status of the U.S. dollar as a safe haven currency 
+
+&#8226; provoke retaliatory countermeasures by other countries and otherwise heighten tensions in diplomatic relations 
+
+&#8226; lead to the withdrawal of government support for agencies and enterprises such as the U.S. Federal National Mortgage Association and the U.S. Federal Home Loan Mortgage Corporation (together, the &#8220;U.S. GSEs&#8221;) 
+
+&#8226; increase concerns about whether the U.S. government will be funded, and its outstanding debt serviced, at any particular time 
+
+&#8226; result in periodic shutdowns of the U.S. government or governments in other countries 
+
+##TABLE_START 
+
+##TABLE_END
+
+&#8226; increase investor reliance on actions by the Federal Reserve or other central banks, or influence investor perceptions concerning government support of sectors of the economy or the economy as a whole 
+
+&#8226; adversely affect the financial condition or credit ratings of clients and counterparties with which JPMorgan Chase does business, or 
+
+&#8226; cause JPMorgan Chase to refrain from engaging in business opportunities that it might otherwise pursue. 
+
+These factors could lead to: 
+
+&#8226; slower growth rates, rising inflation or recession 
+
+&#8226; greater market volatility 
+
+&#8226; a contraction of available credit and the widening of credit spreads 
+
+&#8226; erosion of adequate risk premium on certain financial assets 
+
+&#8226; diminished investor and consumer confidence 
+
+&#8226; lower investment growth 
+
+&#8226; large-scale sales of government debt and other debt and equity securities in the U.S. and other countries 
+
+&#8226; reduced commercial activity among trading partners 
+
+&#8226; the potential for a currency redenomination by a particular country 
+
+&#8226; the possible departure of a country from, or the dissolution of, a political or economic alliance or treaty 
+
+&#8226; potential expropriation or nationalization of assets, or 
+
+&#8226; other market dislocations, including the spread of unfavorable economic conditions from a particular country or region to other countries or regions. 
+
+Any of these potential outcomes could cause JPMorgan Chase to suffer losses on its market-making positions or in its investment portfolio, reduce its liquidity and capital levels, increase credit risk, hamper its ability to deliver products and services to its clients and customers, and weaken its results of operations and financial condition. 
+
+Market 
+
+Economic and market events and conditions can materially affect JPMorgan Chase&#8217;s businesses and investment and market-making positions. 
+
+JPMorgan Chase&#8217;s results of operations can be negatively affected by adverse changes in any of the following: 
+
+&#8226; investor, consumer and business sentiment 
+
+&#8226; events that reduce confidence in the financial markets 
+
+&#8226; inflation or deflation 
+
+&#8226; high unemployment or, conversely, a tightening labor market 
+
+&#8226; the availability and cost of capital, liquidity and credit 
+
+&#8226; levels and volatility of interest rates, credit spreads and market prices for currencies, equities and commodities, and the duration of any changes in levels or volatility 
+
+&#8226; the economic effects of an outbreak or escalation of hostilities, terrorism or other geopolitical instabilities, cyber attacks, climate change, natural disasters, severe weather conditions, health emergencies, the spread of infectious diseases, epidemics or pandemics or other extraordinary events beyond JPMorgan Chase&#8217;s control, and 
+
+&#8226; the health of the U.S. and global economies. 
+
+All of these are affected by global economic, market and political events and conditions, as well as regulatory restrictions. 
+
+In addition, JPMorgan Chase&#8217;s investment portfolio and market-making businesses can suffer losses due to unanticipated market events, including: 
+
+&#8226; severe declines in asset values 
+
+&#8226; unexpected credit events 
+
+&#8226; unforeseen events or conditions that may cause previously uncorrelated factors to become correlated (and vice versa) 
+
+&#8226; the inability to effectively hedge market and other risks related to market-making and investment portfolio positions, or 
+
+&#8226; other market risks that may not have been appropriately taken into account in the development, structuring or pricing of a financial instrument. 
+
+If JPMorgan Chase experiences significant losses in its investment portfolio or from market-making activities, this could reduce JPMorgan Chase&#8217;s profitability and its liquidity and capital levels, and thereby constrain the growth of its businesses. 
+
+JPMorgan Chase&#8217;s consumer businesses can be negatively affected by adverse economic conditions and governmental policies. 
+
+JPMorgan Chase&#8217;s consumer businesses are particularly affected by U.S. and global economic conditions, including: 
+
+&#8226; personal and household income distribution 
+
+&#8226; unemployment or underemployment 
+
+&#8226; prolonged periods of exceptionally low interest rates 
+
+&#8226; housing prices 
+
+&#8226; the level of inflation and its effect on prices for goods and services 
+
+&#8226; consumer and small business confidence levels, and 
+
+&#8226; changes in consumer spending or in the level of consumer debt. 
+
+##TABLE_START 15 
+
+##TABLE_END
+
+Part I 
+
+Heightened levels of unemployment or underemployment that result in reduced personal and household income could negatively affect consumer credit performance to the extent that consumers are less able to service their debts. In addition, sustained low growth, low or negative interest rates, inflationary pressures or recessionary conditions could diminish customer demand for the products and services offered by JPMorgan Chase&#8217;s consumer businesses. 
+
+Adverse economic conditions could also lead to an increase in delinquencies, additions to the allowance for credit losses and higher net charge-offs, which can reduce JPMorgan Chase&#8217;s earnings. These consequences could be significantly worse in certain geographies and industry segments where declining industrial or manufacturing activity has resulted in or could result in higher levels of unemployment, or where high levels of consumer debt, such as outstanding student loans, could impair the ability of customers to pay their other consumer loan obligations. 
+
+JPMorgan Chase&#8217;s earnings from its consumer businesses could also be adversely affected by governmental policies and actions that affect consumers, including: 
+
+&#8226; policies and initiatives relating to medical insurance, education, immigration, employment status and housing, and 
+
+&#8226; policies aimed at the economy more broadly, such as higher taxes and increased regulation which could result in reductions in consumer disposable income. 
+
+In addition, governmental proposals to permit student loan obligations to be discharged in bankruptcy proceedings could, if enacted into law, encourage certain of JPMorgan Chase&#8217;s customers to declare personal bankruptcy and thereby trigger defaults and charge-offs of credit card and other consumer loans extended to those customers. 
+
+Unfavorable market and economic conditions can have an adverse effect on JPMorgan Chase&#8217;s wholesale businesses. 
+
+In JPMorgan Chase&#8217;s wholesale businesses, market and economic factors can affect the volume of transactions that JPMorgan Chase executes for its clients or for which it advises clients, and, therefore, the revenue that JPMorgan Chase receives from those transactions. These factors can also influence the willingness of other financial institutions and investors to participate in capital markets transactions that JPMorgan Chase manages, such as loan syndications or securities underwritings. Furthermore, if a significant and sustained deterioration in market conditions were to occur, the profitability of JPMorgan Chase&#8217;s capital markets businesses, including its loan syndication, securities underwriting and leveraged lending activities, could be reduced to the extent that those businesses: 
+
+&#8226; earn less fee revenue due to lower transaction volumes, including when clients are unwilling or unable to refinance their outstanding debt obligations in unfavorable market conditions, or 
+
+&#8226; dispose of portions of credit commitments at a loss, or hold larger residual positions in credit commitments that cannot be sold at favorable prices. 
+
+An adverse change in market conditions in particular segments of the economy, such as a sudden and severe downturn in oil and gas prices or an increase in commodity prices, or sustained changes in consumer behavior that affect specific economic sectors, could have a material adverse effect on clients of JPMorgan Chase whose operations or financial condition are directly or indirectly dependent on the health or stability of those market segments or economic sectors, as well as clients that are engaged in related businesses. JPMorgan Chase could incur losses on its loans and other credit commitments to clients that operate in, or are dependent on, any sector of the economy that is under stress. 
+
+The fees that JPMorgan Chase earns from managing client assets or holding assets under custody for clients could be diminished by declining asset values or other adverse macroeconomic conditions. For example, higher interest rates or a downturn in financial markets could affect the valuations of client assets that JPMorgan Chase manages or holds under custody, which, in turn, could affect JPMorgan Chase&#8217;s revenue from fees that are based on the amount of assets under management or custody. Similarly, adverse macroeconomic or market conditions could prompt outflows from JPMorgan Chase funds or accounts, or cause clients to invest in products that generate lower revenue. Substantial and unexpected withdrawals from a JPMorgan Chase fund can also hamper the investment performance of the fund, particularly if the outflows create the need for the fund to dispose of fund assets at disadvantageous times or prices, and could lead to further withdrawals based on the weaker investment performance. 
+
+An economic downturn or sustained changes in consumer behavior that results in shifts in consumer and business spending could also have a negative impact on certain of JPMorgan Chase&#8217;s wholesale clients, and thereby diminish JPMorgan Chase&#8217;s earnings from its wholesale operations. For example, the businesses of certain of JPMorgan Chase&#8217;s wholesale clients are dependent on consistent streams of rental income from commercial real estate properties which are owned or being built by those clients. Sustained adverse economic conditions could result in reductions in the rental cash flows that owners or developers receive from their tenants which, in turn, could depress the values of the properties and impair the ability of borrowers to service or refinance their commercial real estate loans. These consequences could result in JPMorgan Chase experiencing increases in the allowance for credit losses, higher delinquencies, defaults and charge-offs within its commercial real estate loan portfolio and incurring higher costs for servicing a larger volume of delinquent loans in that portfolio, thereby reducing JPMorgan Chase&#8217;s earnings from its wholesale businesses. 
+
+##TABLE_START 
+
+##TABLE_END
+
+Changes in interest rates and credit spreads can adversely affect certain of JPMorgan Chase&#8217;s revenue and income streams related to its traditional banking and funding activities. 
+
+In general, a low or negative interest rate environment may cause: 
+
+&#8226; net interest margins to be compressed, which could reduce the amounts that JPMorgan Chase earns on its investment securities portfolio to the extent that it is unable to reinvest contemporaneously in higher-yielding instruments 
+
+&#8226; unanticipated or adverse changes in depositor behavior, which could negatively affect JPMorgan Chase&#8217;s broader asset and liability management strategy 
+
+&#8226; JPMorgan Chase to reduce the amount of deposits that it accepts from customers and clients, which could result in lower revenues, and 
+
+&#8226; a reduction in the value of JPMorgan Chase&#8217;s mortgage servicing rights (&#8220;MSRs&#8221;) asset, thereby decreasing revenues. 
+
+When credit spreads widen, it becomes more expensive for JPMorgan Chase to borrow. JPMorgan Chase&#8217;s credit spreads may widen or narrow not only in response to events and circumstances that are specific to JPMorgan Chase but also as a result of general economic and geopolitical events and conditions. Changes in JPMorgan Chase&#8217;s credit spreads will affect, positively or negatively, JPMorgan Chase&#8217;s earnings on certain liabilities, such as derivatives, that are recorded at fair value. 
+
+When interest rates are increasing, JPMorgan Chase can generally be expected to earn higher net interest income. However, higher interest rates can also lead to: 
+
+&#8226; fewer originations of commercial and residential real estate loans 
+
+&#8226; losses on underwriting exposures 
+
+&#8226; the loss of deposits, including in the event that JPMorgan Chase makes incorrect assumptions about depositor behavior 
+
+&#8226; unrealized mark-to-market losses on available-for-sale (&#8220;AFS&#8221;) securities held in the investment securities portfolio 
+
+&#8226; lower net interest income if central banks introduce interest rate increases more quickly than anticipated and this results in a misalignment in the pricing of short-term and long-term borrowings 
+
+&#8226; less liquidity in the financial markets, and 
+
+&#8226; higher funding costs. 
+
+All of these outcomes could adversely affect JPMorgan Chase&#8217;s earnings or its liquidity and capital levels. Higher interest rates can also negatively affect the payment 
+
+performance on loans within JPMorgan Chase&#8217;s consumer and wholesale loan portfolios that are linked to variable interest rates. If borrowers of variable rate loans are unable to afford higher interest payments, those borrowers may reduce or stop making payments, thereby causing JPMorgan Chase to incur losses and increased operational costs related to servicing a higher volume of delinquent loans. 
+
+JPMorgan Chase&#8217;s results may be materially affected by market fluctuations and significant changes in the value of financial instruments. 
+
+The value of securities, derivatives and other financial instruments which JPMorgan Chase owns or in which it makes markets can be materially affected by market fluctuations. Market volatility, illiquid market conditions and other disruptions in the financial markets may make it extremely difficult to value certain financial instruments. Subsequent valuations of financial instruments in future periods, in light of factors then prevailing, may result in significant changes in the value of these instruments. In addition, at the time of any disposition of these financial instruments, the price that JPMorgan Chase ultimately realizes will depend on the demand and liquidity in the market at that time and may be materially lower than their current fair value. Any of these factors could cause a decline in the value of financial instruments that JPMorgan Chase owns or in which it makes markets, which may have an adverse effect on JPMorgan Chase&#8217;s results of operations. 
+
+JPMorgan Chase&#8217;s risk management and monitoring processes, including its stress testing framework, seek to quantify and control JPMorgan Chase&#8217;s exposure to more extreme market moves. However, JPMorgan Chase&#8217;s hedging and other risk management strategies may not be effective, and it could incur significant losses, if extreme market events were to occur. 
+
+Credit 
+
+JPMorgan Chase can be negatively affected by adverse changes in the financial condition of clients, counterparties, custodians and CCPs. 
+
+JPMorgan Chase routinely executes transactions with clients and counterparties such as corporations, financial institutions, asset managers, hedge funds, securities exchanges and government entities within and outside the U.S. Many of these transactions expose JPMorgan Chase to the credit risk of its clients and counterparties, and can involve JPMorgan Chase in disputes and litigation if a client or counterparty defaults. JPMorgan Chase can also be subject to losses or liability where a financial institution that it has appointed to provide custodial services for client assets or funds becomes insolvent as a result of fraud or the failure to abide by existing laws and obligations. 
+
+A default by, or the financial or operational failure of, a CCP through which JPMorgan Chase executes contracts would require JPMorgan Chase to replace those contracts, thereby 
+
+##TABLE_START 17 
+
+##TABLE_END
+
+Part I 
+
+increasing its operational costs and potentially resulting in losses. In addition, JPMorgan Chase can be exposed to losses if a member of a CCP in which JPMorgan Chase is also a member defaults on its obligations to the CCP because of requirements that each member of the CCP absorb a portion of those losses. Furthermore, JPMorgan Chase can be subject to bearing its share of non-default losses incurred by a CCP, including losses from custodial, settlement or investment activities or due to cyber or other security breaches. 
+
+As part of its clearing services activities, JPMorgan Chase is exposed to the risk of nonperformance by its clients, which it seeks to mitigate by requiring clients to provide adequate collateral. JPMorgan Chase is also exposed to intra-day credit risk of its clients in connection with providing cash management, clearing, custodial and other transaction services to those clients. If a client for which JPMorgan Chase provides these services becomes bankrupt or insolvent, JPMorgan Chase may incur losses, become involved in disputes and litigation with one or more CCPs, the client&#8217;s bankruptcy estate and other creditors, or be subject to regulatory investigations. All of the foregoing events can increase JPMorgan Chase&#8217;s operational and litigation costs, and JPMorgan Chase may suffer losses to the extent that any collateral that it has received is insufficient to cover those losses. 
+
+Transactions with government entities, including national, state, provincial, municipal and local authorities, can expose JPMorgan Chase to enhanced sovereign, credit, operational and reputation risks. Government entities may, among other things, claim that actions taken by government officials were beyond the legal authority of those officials or repudiate transactions authorized by a previous incumbent government. These types of actions have in the past caused, and could in the future cause, JPMorgan Chase to suffer losses or hamper its ability to conduct business in the relevant jurisdiction. 
+
+In addition, local laws, rules and regulations could limit JPMorgan Chase&#8217;s ability to resolve disputes and litigation in the event of a counterparty default or unwillingness to make previously agreed-upon payments, which could subject JPMorgan Chase to losses. 
+
+Disputes may arise with counterparties to derivatives contracts with regard to the terms, the settlement procedures or the value of underlying collateral. The disposition of those disputes could cause JPMorgan Chase to incur unexpected transaction, operational and legal costs, or result in credit losses. These consequences can also impair JPMorgan Chase&#8217;s ability to effectively manage its credit risk exposure from its market activities, or cause harm to JPMorgan Chase&#8217;s reputation. 
+
+The financial or operational failure of a significant market participant, such as a major financial institution or a CCP, or concerns about the creditworthiness of such a market participant, can have a cascading effect within the financial markets. JPMorgan Chase&#8217;s businesses could be 
+
+significantly disrupted by such an event, particularly if it leads to other market participants incurring significant losses, experiencing liquidity issues or defaulting, and JPMorgan Chase is likely to have significant interrelationships with, and credit exposure to, such a significant market participant. 
+
+JPMorgan Chase may suffer losses if the value of collateral declines in stressed market conditions. 
+
+During periods of market stress or illiquidity, JPMorgan Chase&#8217;s credit risk may be further increased when: 
+
+&#8226; JPMorgan Chase fails to realize the fair value of the collateral it holds 
+
+&#8226; collateral is liquidated at prices that are not sufficient to recover the full amount owed to it, or 
+
+&#8226; counterparties are unable to post collateral, whether for operational or other reasons. 
+
+Furthermore, disputes with counterparties concerning the valuation of collateral may increase in times of significant market stress, volatility or illiquidity, and JPMorgan Chase could suffer losses during these periods if it is unable to realize the fair value of collateral or to manage declines in the value of collateral. 
+
+JPMorgan Chase could incur significant losses arising from concentrations of credit and market risk. 
+
+JPMorgan Chase is exposed to greater credit and market risk to the extent that groupings of its clients or counterparties: 
+
+&#8226; engage in similar or related businesses, or in businesses in related industries 
+
+&#8226; do business in the same geographic region, or 
+
+&#8226; have business profiles, models or strategies that could cause their ability to meet their obligations to be similarly affected by changes in economic conditions. 
+
+For example, a significant deterioration in the credit quality of one of JPMorgan Chase&#8217;s borrowers or counterparties could lead to concerns about the creditworthiness of other borrowers or counterparties in similar, related or dependent industries. This type of interrelationship could exacerbate JPMorgan Chase&#8217;s credit, liquidity and market risk exposure and potentially cause it to incur losses, including fair value losses in its market-making businesses and investment portfolios. In addition, JPMorgan Chase may be required to increase the allowance for credit losses with respect to certain clients or industries in order to align with directives or expectations of its banking regulators. 
+
+Similarly, challenging economic conditions that affect a particular industry or geographic area could lead to concerns about the credit quality of JPMorgan Chase&#8217;s borrowers or counterparties not only in that particular industry or geography but in related or dependent industries, wherever located. These conditions could also heighten concerns about the ability of customers of 
+
+##TABLE_START 
+
+##TABLE_END
+
+JPMorgan Chase&#8217;s consumer businesses who live in those areas or work in those affected industries or related or dependent industries to meet their obligations to JPMorgan Chase. JPMorgan Chase regularly monitors various segments of its credit and market risk exposures to assess the potential risks of concentration or contagion, but its efforts to diversify or hedge its exposures against those risks may not be successful. 
+
+JPMorgan Chase&#8217;s consumer businesses can also be harmed by an excessive expansion of consumer credit by bank or non-bank competitors. Heightened competition for certain types of consumer loans could prompt industry-wide reactions such as significant reductions in the pricing or margins of those loans or the making of loans to less-creditworthy borrowers. If large numbers of consumers subsequently default on their loans, whether due to weak credit profiles, an economic downturn or other factors, this could impair their ability to repay obligations owed to JPMorgan Chase and result in higher charge-offs and other credit-related losses. More broadly, widespread defaults on consumer debt could lead to recessionary conditions in the U.S. economy, and JPMorgan Chase&#8217;s consumer businesses may earn lower revenues in such an environment. 
+
+If JPMorgan Chase is unable to reduce positions effectively during a market dislocation, this can increase both the market and credit risks associated with those positions and the level of RWA that JPMorgan Chase holds on its balance sheet. These factors could adversely affect JPMorgan Chase&#8217;s capital position, funding costs and the profitability of its businesses. 
+
+Liquidity 
+
+JPMorgan Chase&#8217;s ability to operate its businesses could be impaired if its liquidity is constrained. 
+
+JPMorgan Chase&#8217;s liquidity could be impaired at any given time by factors such as: 
+
+&#8226; market-wide illiquidity or disruption 
+
+&#8226; unforeseen liquidity or capital requirements, including as a result of changes in laws, rules and regulations 
+
+&#8226; inability to sell assets, or to sell assets at favorable times or prices 
+
+&#8226; default by a CCP or other significant market participant 
+
+&#8226; unanticipated outflows of cash or collateral 
+
+&#8226; unexpected loss of consumer deposits or higher than anticipated draws on lending-related commitments, and 
+
+&#8226; lack of market or customer confidence in JPMorgan Chase or financial institutions in general. 
+
+A reduction in JPMorgan Chase&#8217;s liquidity may be caused by events over which it has little or no control. For example, during periods of market stress, low investor confidence and significant market illiquidity could result in higher 
+
+funding costs for JPMorgan Chase and could limit its access to some of its traditional sources of liquidity. 
+
+JPMorgan Chase may need to raise funding from alternative sources if its access to stable and lower-cost sources of funding, such as deposits and borrowings from Federal Home Loan Banks, is reduced. Alternative sources of funding could be more expensive or limited in availability. JPMorgan Chase&#8217;s funding costs could also be negatively affected by actions that JPMorgan Chase may take in order to: 
+
+&#8226; satisfy applicable liquidity coverage ratio and net stable funding ratio requirements 
+
+&#8226; address obligations under its resolution plan, or 
+
+&#8226; satisfy regulatory requirements in jurisdictions outside the U.S. relating to the pre-positioning of liquidity in subsidiaries that are material legal entities. 
+
+More generally, if JPMorgan Chase fails to effectively manage its liquidity, this could constrain its ability to fund or invest in its businesses and subsidiaries, and thereby adversely affect its results of operations. 
+
+JPMorgan Chase &#38; Co. is a holding company and depends on the cash flows of its subsidiaries to make payments on its outstanding securities. 
+
+JPMorgan Chase &#38; Co. is a holding company that holds the stock of JPMorgan Chase Bank, N.A. and an intermediate holding company, JPMorgan Chase Holdings LLC (the &#8220;IHC&#8221;). The IHC in turn generally holds the stock of JPMorgan Chase&#8217;s subsidiaries other than JPMorgan Chase Bank, N.A. and its subsidiaries. The IHC also owns other assets and provides intercompany lending to the holding company. 
+
+The holding company is obligated to contribute to the IHC substantially all the net proceeds received from securities issuances (including issuances of senior and subordinated debt securities and of preferred and common stock). 
+
+The ability of JPMorgan Chase Bank, N.A. and the IHC to make payments to the holding company is also limited. JPMorgan Chase Bank, N.A. is subject to regulatory restrictions on its dividend distributions, as well as capital adequacy requirements, such as the Supplementary Leverage Ratio (&#8220;SLR&#8221;), and liquidity requirements and other regulatory restrictions on its ability to make payments to the holding company. The IHC is prohibited from paying dividends or extending credit to the holding company if certain capital or liquidity thresholds are breached or if limits are otherwise imposed by JPMorgan Chase&#8217;s management or Board of Directors. 
+
+As a result of these arrangements, the ability of the holding company to make various payments is dependent on its receiving dividends from JPMorgan Chase Bank, N.A. and dividends and borrowings from the IHC. These limitations could affect the holding company&#8217;s ability to: 
+
+&#8226; pay interest on its debt securities 
+
+##TABLE_START 19 
+
+##TABLE_END
+
+Part I 
+
+&#8226; pay dividends on its equity securities 
+
+&#8226; redeem or repurchase outstanding securities, and 
+
+&#8226; fulfill its other payment obligations. 
+
+These arrangements could also result in the holding company seeking protection under bankruptcy laws or otherwise entering into resolution proceedings at a time earlier than would have been the case absent the existence of the capital and liquidity thresholds to which the IHC is subject. 
+
+Reductions in JPMorgan Chase&#8217;s credit ratings may adversely affect its liquidity and cost of funding. 
+
+JPMorgan Chase &#38; Co. and certain of its principal subsidiaries are rated by credit rating agencies. Rating agencies evaluate both general and firm-specific and industry-specific factors when determining credit ratings for a particular financial institution, including: 
+
+&#8226; expected future profitability 
+
+&#8226; risk management practices 
+
+&#8226; legal expenses 
+
+&#8226; ratings differentials between bank holding companies and their bank and non-bank subsidiaries 
+
+&#8226; regulatory developments 
+
+&#8226; assumptions about government support, and 
+
+&#8226; economic and geopolitical developments. 
+
+JPMorgan Chase closely monitors and manages, to the extent that it is able, factors that could influence its credit ratings. However, there is no assurance that JPMorgan Chase&#8217;s credit ratings will not be lowered in the future. Furthermore, any such downgrade could occur at times of broader market instability when JPMorgan Chase&#8217;s options for responding to events may be more limited and general investor confidence is low. 
+
+A reduction in JPMorgan Chase&#8217;s credit ratings could curtail JPMorgan Chase&#8217;s business activities and reduce its profitability in a number of ways, including: 
+
+&#8226; reducing its access to capital markets 
+
+&#8226; materially increasing its cost of issuing and servicing securities 
+
+&#8226; triggering additional collateral or funding requirements, and 
+
+&#8226; decreasing the number of investors and counterparties that are willing or permitted to do business with or lend to JPMorgan Chase. 
+
+Any rating reduction could also increase the credit spreads charged by the market for taking credit risk on JPMorgan Chase &#38; Co. and its subsidiaries. This could, in turn, adversely affect the value of debt and other obligations of JPMorgan Chase &#38; Co. and its subsidiaries. 
+
+The reform and replacement of benchmark rates could adversely affect financial instruments issued, funded, serviced or held by JPMorgan Chase and expose it to litigation and other disputes. 
+
+Interest rate, equity, foreign exchange rate and other types of indices which are deemed to be &#8220;benchmarks,&#8221; including those in widespread and longstanding use, have been the subject of ongoing international, national and other regulatory scrutiny and initiatives for reform, including: 
+
+&#8226; changes to the rules and methodologies under which certain benchmarks are administered 
+
+&#8226; initiatives designed to discourage or prohibit the use of certain benchmarks by market participants 
+
+&#8226; the introduction of alternative reference rates to be used by market participants in lieu of certain benchmarks, and 
+
+&#8226; legislative proposals and actions providing for the replacement of reference rates under existing contracts and instruments that are linked to certain benchmarks with alternative reference rates . 
+
+Some of these reforms are already effective while others are still to be implemented or are under consideration. These and other reforms relating to benchmarks could: 
+
+&#8226; cause certain benchmarks to be substantially modified or to be permanently discontinued 
+
+&#8226; lead to disruptions in the financial markets, including in connection with the transition to alternative reference rates 
+
+&#8226; give rise to litigation and other disputes 
+
+&#8226; cause reputational harm to the extent that operational and technology systems are not sufficiently prepared for the transition to alternative reference rates, or 
+
+&#8226; have other consequences which cannot be fully anticipated. 
+
+Any of these developments, and any future initiatives to regulate, reform or change the administration of benchmarks, could result in adverse consequences to the return on, value of and market for loans, mortgages, securities, derivatives and other financial instruments whose returns are linked to any such benchmark, including those issued, funded, serviced or held by JPMorgan Chase. 
+
+Changes in the manner in which certain benchmarks are administered, or the general increased regulatory scrutiny of those benchmarks, could increase the costs and risks of administering or otherwise participating in the setting of those benchmarks and complying with regulations or requirements relating to those benchmarks. Such factors may have the effect of discouraging market participants from continuing to administer or contribute to certain benchmarks, trigger further changes in the rules or methodologies under which certain benchmarks are 
+
+##TABLE_START 
+
+##TABLE_END
+
+administered or lead to the discontinuation of certain benchmarks. 
+
+Regulators, industry bodies and other market participants in the U.S. and other countries continue to engage in initiatives to develop, introduce and encourage the use of alternative reference rates to replace certain benchmarks, and certain of these alternative rates have gained or are gaining acceptance among market participants. However, there is no assurance that: 
+
+&#8226; any of these new rates will be similar to, or produce the economic equivalent of, the benchmarks that they seek to replace 
+
+&#8226; arrangements by market participants to prepare for the discontinuation of certain benchmarks and the transition to alternative reference rates will be fully effective, or 
+
+&#8226; a particular alternative reference rate will be widely accepted by market participants, or that market acceptance of that rate will not be hindered by the introduction of other reference rates. 
+
+If a particular benchmark were to be discontinued and an alternative reference rate has not been successfully introduced or widely accepted within the market, this could result in significant adverse effects on the financial markets. For example, vast amounts of loans, mortgages, securities, derivatives and other financial instruments are linked to the London Interbank Offered Rate (&#8220;LIBOR&#8221;) benchmark. ICE Benchmark Administration, the administrator of LIBOR, has announced that the publication of the principal tenors of U.S. dollar LIBOR will cease after June 30, 2023, and significant progress has been made by regulators, industry bodies and market participants to introduce and implement the Secured Overnight Financing Rate (&#8220;SOFR&#8221;) as a replacement rate for U.S. dollar LIBOR. However, if an alternative reference rate such as SOFR has not achieved sufficient market acceptance when the publication of the principal tenors of U.S. dollar LIBOR is discontinued, or if market participants have not otherwise implemented effective transitional arrangements to address that discontinuation, this could result in widespread dislocation in the financial markets, volatility in the pricing of securities, derivatives and other instruments, and the suppression of capital markets activities, all of which could have a negative impact on JPMorgan Chase&#8217;s results of operations and on U.S. dollar LIBOR-linked securities, credit or other instruments which are issued, funded, serviced or held by JPMorgan Chase. 
+
+JPMorgan Chase could also become involved in litigation and other types of disputes with clients, customers, counterparties and investors as a consequence of the transition from U.S. dollar LIBOR and other benchmark rates to replacement rates, including claims that JPMorgan Chase has: 
+
+&#8226; treated clients, customers, counterparties or investors unfairly, or caused them to experience losses, higher financing costs or lower returns on investments 
+
+&#8226; failed to appropriately communicate the effects of the transition from benchmark rates on the products that JPMorgan Chase has sold to its clients and customers, or failed to disclose purported conflicts of interest 
+
+&#8226; made inappropriate product recommendations to or investments on behalf of its clients, or sold products that did not serve their intended purpose, in connection with the transition from benchmark rates 
+
+&#8226; engaged in anti-competitive behavior, or in the manipulation of markets or specific benchmarks, in connection with the discontinuation of or transition from benchmark rates, or 
+
+&#8226; disadvantaged clients, customers, counterparties or investors when interpreting or making determinations under the terms of agreements or financial instruments. 
+
+These types of claims could subject JPMorgan Chase to higher legal expenses and operational costs, require it to pay significant amounts in connection with resolving litigation and other disputes, and harm its reputation. 
+
+Capital 
+
+Maintaining the required level and composition of capital may impact JPMorgan Chase&#8217;s ability to support business activities, meet evolving regulatory requirements and distribute capital to shareholders. 
+
+JPMorgan Chase is subject to various regulatory capital requirements, including leverage- and risk-based capital requirements. In addition, as a Globally Systemically Important Bank (&#8220;GSIB&#8221;), JPMorgan Chase is required to hold additional capital buffers, including a GSIB surcharge, a SCB, and a countercyclical buffer, each of which is reassessed at least annually. The amount of capital that JPMorgan Chase is required to hold in order to satisfy these leverage-and risk-based requirements could increase at any given time due to factors such as: 
+
+&#8226; actions by banking regulators, including changes in laws, rules, and regulations 
+
+&#8226; actions taken by the Federal Reserve or the U.S. government in response to the economic effects of systemic events, such as the actions taken in response to the COVID-19 pandemic which led to an expansion of the Federal Reserve balance sheet, growth in deposits held by JPMorgan Chase and other U.S. financial institutions and, consequently, an increase in leverage exposure and the GSIB surcharge 
+
+&#8226; changes in the composition of JPMorgan Chase&#8217;s balance sheet or developments that could increase risk weighted assets such as increased market risk, customer delinquencies, client credit rating downgrades or other factors, and 
+
+##TABLE_START 21 
+
+##TABLE_END
+
+Part I 
+
+&#8226; increases in estimated stress losses as determined by the Federal Reserve under the Comprehensive Capital Analysis and Review, which could increase JPMorgan Chase&#8217;s SCB. 
+
+Any failure by or inability of JPMorgan Chase to maintain the required level and composition of capital, or unfavorable changes in applicable capital requirements, could have an adverse impact on JPMorgan Chase&#8217;s shareholders, such as: 
+
+&#8226; reducing the amount of common stock that JPMorgan Chase is permitted to repurchase 
+
+&#8226; requiring the issuance of, or prohibiting the redemption of, capital instruments in a manner inconsistent with JPMorgan Chase&#8217;s capital management strategy 
+
+&#8226; constraining the amount of dividends that may be paid on common stock, or 
+
+&#8226; curtailing JPMorgan Chase&#8217;s business activities or operations. 
+
+Operational 
+
+JPMorgan Chase&#8217;s businesses are dependent on the effectiveness of its operational systems and those of other market participants. 
+
+JPMorgan Chase&#8217;s businesses rely on the ability of JPMorgan Chase&#8217;s financial, accounting, transaction execution, data processing and other operational systems to process, record, monitor and report a large number of transactions on a continuous basis, and to do so accurately, quickly and securely. In addition to proper design, installation, maintenance and training, the effective functioning of JPMorgan Chase&#8217;s operational systems depends on: 
+
+&#8226; the quality of the information contained in those systems, as inaccurate, outdated or corrupted data can significantly compromise the functionality or reliability of a particular system and other systems to which it transmits or from which it receives information, and 
+
+&#8226; the ability of JPMorgan Chase to appropriately maintain and upgrade its systems on a regular basis, and to ensure that any changes introduced to its systems are managed carefully to ensure security and operational continuity and adhere to all applicable legal and regulatory requirements. 
+
+JPMorgan Chase also depends on its ability to access and use the operational systems of its vendors, custodians and other market participants, including clearing and payment systems, CCPs, securities exchanges and data processing, security and technology companies (including those that provide cloud computing services). 
+
+The ineffectiveness, failure or other disruption of operational systems upon which JPMorgan Chase depends, including due to a systems malfunction, cyberbreach or other systems failure, could result in unfavorable ripple 
+
+effects in the financial markets and for JPMorgan Chase and its clients and customers, including: 
+
+&#8226; delays or other disruptions in providing services, liquidity or information to clients and customers 
+
+&#8226; the inability to settle transactions or obtain access to funds and other assets, including those for which physical settlement and delivery is required 
+
+&#8226; failure to timely settle or confirm transactions 
+
+&#8226; the possibility that funds transfers, capital markets trades or other transactions are executed erroneously, as a result of illegal conduct or with unintended consequences 
+
+&#8226; financial losses, including due to loss-sharing requirements of CCPs, payment systems or other market infrastructures, or as possible restitution to clients and customers 
+
+&#8226; higher operational costs associated with replacing services provided by a system that is unavailable 
+
+&#8226; client or customer dissatisfaction with JPMorgan Chase&#8217;s products and services 
+
+&#8226; regulatory fines, penalties, or other sanctions against JPMorgan Chase 
+
+&#8226; loss of confidence in the ability of JPMorgan Chase, or financial institutions generally, to protect against and withstand operational disruptions, or 
+
+&#8226; harm to JPMorgan Chase&#8217;s reputation. 
+
+As the speed, frequency, volume, interconnectivity and complexity of transactions continue to increase, it can become more challenging to effectively maintain and upgrade JPMorgan Chase&#8217;s operational systems and infrastructure, especially due to the heightened risks that: 
+
+&#8226; attempts by third parties to defraud JPMorgan Chase or its clients and customers may increase, evolve or become more complex, particularly during periods of market disruption or economic uncertainty 
+
+&#8226; errors made by JPMorgan Chase or another market participant, whether inadvertent or malicious, cause widespread system disruption 
+
+&#8226; isolated or seemingly insignificant errors in operational systems compound, or migrate to other systems over time, to become larger issues 
+
+&#8226; failures in synchronization or encryption software, or degraded performance of microprocessors, could cause disruptions in operational systems, or the inability of systems to communicate with each other, and 
+
+&#8226; third parties may attempt to block the use of key technology solutions by claiming that the use infringes on their intellectual property rights. 
+
+If JPMorgan Chase&#8217;s operational systems, or those of newly-acquired businesses or of external parties on which 
+
+##TABLE_START 
+
+##TABLE_END
+
+JPMorgan Chase&#8217;s businesses depend, are unable to meet the requirements of JPMorgan Chase&#8217;s businesses and operations or bank regulatory standards, or if they fail or have other significant shortcomings, JPMorgan Chase could be materially and adversely affected. 
+
+A successful cyber attack affecting JPMorgan Chase could cause significant harm to JPMorgan Chase and its clients and customers. 
+
+JPMorgan Chase experiences numerous attempted cyber attacks on its computer systems, software, networks and other technology assets on a daily basis from various actors, including groups acting on behalf of hostile countries, cyber-criminals, &#8220;hacktivists&#8221; (i.e., individuals or groups that use technology to promote a political agenda or social change) and others. These cyber attacks can take many forms, including attempts to introduce computer viruses or malicious code, which are commonly referred to as &#8220;malware,&#8221; into JPMorgan Chase&#8217;s systems. These attacks are often designed to: 
+
+&#8226; obtain unauthorized access to confidential information belonging to JPMorgan Chase or its clients, customers, counterparties or employees 
+
+&#8226; manipulate data 
+
+&#8226; destroy data or systems with the aim of rendering services unavailable 
+
+&#8226; disrupt, sabotage or degrade service on JPMorgan Chase&#8217;s systems 
+
+&#8226; steal money, or 
+
+&#8226; extort money through the use of so-called &#8220;ransomware.&#8221; 
+
+JPMorgan Chase has also experienced significant distributed denial-of-service attacks which are intended to disrupt online banking services. 
+
+JPMorgan Chase has experienced security breaches due to cyber attacks in the past, and it is inevitable that additional breaches will occur in the future. Any such breach could result in serious and harmful consequences for JPMorgan Chase or its clients and customers. 
+
+A principal reason that JPMorgan Chase cannot provide absolute security against cyber attacks is that it may not always be possible to anticipate, detect or recognize threats to JPMorgan Chase&#8217;s systems, or to implement effective preventive measures against all breaches. This is because: 
+
+&#8226; the techniques used in cyber attacks change frequently and are increasingly sophisticated, and therefore may not be recognized until launched 
+
+&#8226; cyber attacks can originate from a wide variety of sources, including JPMorgan Chase&#8217;s own employees, cyber-criminals, hacktivists, groups linked to terrorist organizations or hostile countries, or third parties whose objective is to disrupt the operations of financial institutions more generally 
+
+&#8226; JPMorgan Chase does not have control over the cybersecurity of the systems of the large number of clients, customers, counterparties and third-party service providers with which it does business, and 
+
+&#8226; it is possible that a third party, after establishing a foothold on an internal network without being detected, might obtain access to other networks and systems. 
+
+The risk of a security breach due to a cyber attack could increase in the future due to factors such as: 
+
+&#8226; JPMorgan Chase&#8217;s ongoing expansion of its mobile banking and other internet-based product offerings and its internal use of internet-based products and applications, including those that use cloud computing services 
+
+&#8226; the acquisition of new businesses, and 
+
+&#8226; the increased use of remote access and third party video conferencing solutions to facilitate work-from-home arrangements for employees. 
+
+In addition, a third party could misappropriate confidential information obtained by intercepting signals or communications from mobile devices used by JPMorgan Chase&#8217;s employees. 
+
+A successful penetration or circumvention of the security of JPMorgan Chase&#8217;s systems or the systems of a vendor, governmental body or another market participant could cause serious negative consequences, including: 
+
+&#8226; significant disruption of JPMorgan Chase&#8217;s operations and those of its clients, customers and counterparties, including losing access to operational systems 
+
+&#8226; misappropriation of confidential information of JPMorgan Chase or that of its clients, customers, counterparties, employees or regulators 
+
+&#8226; disruption of or damage to JPMorgan Chase&#8217;s systems and those of its clients, customers and counterparties 
+
+&#8226; the inability, or extended delays in the ability, to fully recover and restore data that has been stolen, manipulated or destroyed, or the inability to prevent systems from processing fraudulent transactions 
+
+&#8226; violations by JPMorgan Chase of applicable privacy and other laws 
+
+&#8226; financial loss to JPMorgan Chase or to its clients, customers, counterparties or employees 
+
+&#8226; loss of confidence in JPMorgan Chase&#8217;s cybersecurity and business resiliency measures 
+
+&#8226; dissatisfaction among JPMorgan Chase&#8217;s clients, customers or counterparties 
+
+&#8226; significant exposure to litigation and regulatory fines, penalties or other sanctions, and 
+
+&#8226; harm to JPMorgan Chase&#8217;s reputation. 
+
+##TABLE_START 23 
+
+##TABLE_END
+
+Part I 
+
+The extent of a particular cyber attack and the steps that JPMorgan Chase may need to take to investigate the attack may not be immediately clear, and it may take a significant amount of time before such an investigation can be completed. While such an investigation is ongoing, JPMorgan Chase may not necessarily know the full extent of the harm caused by the cyber attack, and that damage may continue to spread. These factors may inhibit JPMorgan Chase&#8217;s ability to provide rapid, full and reliable information about the cyber attack to its clients, customers, counterparties and regulators, as well as the public. Furthermore, it may not be clear how best to contain and remediate the harm caused by the cyber attack, and certain errors or actions could be repeated or compounded before they are discovered and remediated. Any or all of these factors could further increase the costs and consequences of a cyber attack. 
+
+JPMorgan Chase can be negatively affected if it fails to identify and address operational risks associated with the introduction of or changes to products, services and delivery platforms. 
+
+When JPMorgan Chase launches a new product or service, introduces a new platform for the delivery or distribution of products or services (including mobile connectivity, electronic trading and cloud computing), acquires or invests in a business or makes changes to an existing product, service or delivery platform, it may not fully appreciate or identify new operational risks that may arise from those changes, or may fail to implement adequate controls to mitigate the risks associated with those changes. Any significant failure in this regard could diminish JPMorgan Chase&#8217;s ability to operate one or more of its businesses or result in: 
+
+&#8226; potential liability to clients, counterparties and customers 
+
+&#8226; increased operating expenses 
+
+&#8226; higher litigation costs, including regulatory fines, penalties and other sanctions 
+
+&#8226; damage to JPMorgan Chase&#8217;s reputation 
+
+&#8226; impairment of JPMorgan Chase&#8217;s liquidity 
+
+&#8226; regulatory intervention, or 
+
+&#8226; weaker competitive standing. 
+
+Any of the foregoing consequences could materially and adversely affect JPMorgan Chase&#8217;s businesses and results of operations. 
+
+JPMorgan Chase&#8217;s operational costs and customer satisfaction could be adversely affected by the failure of an external operational system. 
+
+External operational systems with which JPMorgan is connected, whether directly or indirectly, can be sources of operational risk to JPMorgan Chase. JPMorgan Chase may be exposed not only to a systems failure or cyber attack that may be experienced by a vendor or market 
+
+infrastructure with which JPMorgan Chase is directly connected, but also to a systems breakdown or cyber attack involving another party to which such a vendor or infrastructure is connected. Similarly, retailers, data aggregators and other external parties with which JPMorgan Chase&#8217;s customers do business can increase JPMorgan Chase&#8217;s operational risk. This is particularly the case where activities of customers or those parties are beyond JPMorgan Chase&#8217;s security and control systems, including through the use of the internet, cloud computing services, and personal smart phones and other mobile devices or services. 
+
+If an external party obtains access to customer account data on JPMorgan Chase&#8217;s systems, and that party experiences a cyberbreach of its own systems or misappropriates that data, this could result in a variety of negative outcomes for JPMorgan Chase and its clients and customers, including: 
+
+&#8226; heightened risk that external parties will be able to execute fraudulent transactions using JPMorgan Chase&#8217;s systems 
+
+&#8226; losses from fraudulent transactions, as well as potential liability for losses that exceed thresholds established in consumer protection laws, rules and regulations 
+
+&#8226; increased operational costs to remediate the consequences of the external party&#8217;s security breach, and 
+
+&#8226; reputational harm arising from the perception that JPMorgan Chase&#8217;s systems may not be secure. 
+
+As JPMorgan Chase&#8217;s interconnectivity with clients, customers and other external parties continues to expand, JPMorgan Chase increasingly faces the risk of operational failure or cyber attacks with respect to the systems of those parties. Security breaches affecting JPMorgan Chase&#8217;s clients or customers, or systems breakdowns or failures, security breaches or human error or misconduct affecting other external parties, may require JPMorgan Chase to take steps to protect the integrity of its own operational systems or to safeguard confidential information, including restricting the access of customers to their accounts. These actions can increase JPMorgan Chase&#8217;s operational costs and potentially diminish customer satisfaction and confidence in JPMorgan Chase. 
+
+Furthermore, the widespread and expanding interconnectivity among financial institutions, clearing banks, CCPs, payment processors, financial technology companies, securities exchanges, clearing houses and other financial market infrastructures increases the risk that the disruption of an operational system involving one institution or entity, including due to a cyber attack, may cause industry-wide operational disruptions that could materially affect JPMorgan Chase&#8217;s ability to conduct business. 
+
+##TABLE_START 
+
+##TABLE_END
+
+JPMorgan Chase&#8217;s operations rely on its ability, and the ability of key external parties, to maintain appropriately-staffed workforces, and on the competence, trustworthiness, health and safety of employees. 
+
+JPMorgan Chase&#8217;s ability to operate its businesses efficiently and profitably, to offer products and services that meet the expectations of its clients and customers, and to maintain an effective risk management framework is highly dependent on its ability to staff its operations appropriately and on the competence, integrity, health and safety of its employees. JPMorgan Chase is similarly dependent on the workforces of other parties on which JPMorgan Chase&#8217;s operations rely, including vendors, custodians and financial markets infrastructures. JPMorgan Chase&#8217;s businesses could be materially and adversely affected by: 
+
+&#8226; the ineffective implementation of business decisions 
+
+&#8226; any failure to institute controls that appropriately address risks associated with business activities, or to appropriately train employees with respect to those risks and controls 
+
+&#8226; staffing shortages, particularly in tight labor markets 
+
+&#8226; a significant operational breakdown or failure, theft, fraud or other unlawful conduct, or 
+
+&#8226; other negative outcomes caused by human error or misconduct by an employee of JPMorgan Chase or of another party on which JPMorgan Chase&#8217;s operations depend. 
+
+JPMorgan Chase&#8217;s operations could also be impaired if the measures taken by it or by governmental authorities to help ensure the health and safety of its employees are ineffective, or if any external party on which JPMorgan Chase relies fails to take appropriate and effective actions to protect the health and safety of its employees. 
+
+JPMorgan Chase faces substantial legal and operational risks in safeguarding personal information. 
+
+JPMorgan Chase&#8217;s businesses are subject to complex and evolving laws, rules and regulations, both within and outside the U.S., governing the privacy and protection of personal information of individuals. The protected parties can include: 
+
+&#8226; JPMorgan Chase&#8217;s current, prospective and former clients and customers 
+
+&#8226; clients and customers of JPMorgan Chase&#8217;s clients and customers 
+
+&#8226; current, prospective and former employees, and 
+
+&#8226; employees of JPMorgan Chase&#8217;s vendors, counterparties and other external parties. 
+
+Ensuring that JPMorgan Chase&#8217;s collection, use, sharing and storage of personal information comply with all applicable laws, rules and regulations in all relevant jurisdictions, including where the laws of different jurisdictions are in conflict, can: 
+
+&#8226; increase JPMorgan Chase&#8217;s compliance and operating costs 
+
+&#8226; hinder the development of new products or services, curtail the offering of existing products or services, or affect how products and services are offered to clients and customers 
+
+&#8226; demand significant oversight by JPMorgan Chase&#8217;s management, and 
+
+&#8226; require JPMorgan Chase to structure its businesses, operations and systems in less efficient ways. 
+
+Not all of JPMorgan Chase&#8217;s clients, customers, vendors, counterparties and other external parties may have appropriate controls in place to protect the confidentiality of the information exchanged between them and JPMorgan Chase, particularly where information is transmitted by electronic means. JPMorgan Chase could be exposed to litigation or regulatory fines, penalties or other sanctions if personal information of clients, customers, employees or others were to be mishandled or misused, such as situations where such information is: 
+
+&#8226; erroneously provided to parties who are not permitted to have the information, or 
+
+&#8226; intercepted or otherwise compromised by unauthorized third parties. 
+
+Concerns regarding the effectiveness of JPMorgan Chase&#8217;s measures to safeguard personal information, or even the perception that those measures are inadequate, could cause JPMorgan Chase to lose existing or potential clients and customers, and thereby reduce JPMorgan Chase&#8217;s revenues. Furthermore, any failure or perceived failure by JPMorgan Chase to comply with applicable privacy or data protection laws, rules and regulations may subject it to inquiries, examinations and investigations that could result in requirements to modify or cease certain operations or practices, significant liabilities or regulatory fines, penalties or other sanctions. Any of these could damage JPMorgan Chase&#8217;s reputation and otherwise adversely affect its businesses. 
+
+In recent years, well-publicized incidents involving the inappropriate collection, use, sharing or storage of personal information have led to expanded governmental scrutiny of practices relating to the safeguarding of personal information by companies in the U.S. and other countries. That scrutiny has in some cases resulted in, and could in the future lead to, the adoption of stricter laws, rules and regulations relating to the collection, use, sharing and storage of personal information. These types of laws, rules and regulations could prohibit or significantly restrict financial services firms such as JPMorgan Chase from sharing information among affiliates or with third parties such as vendors, and thereby increase compliance costs, or could restrict JPMorgan Chase&#8217;s use of personal data when developing or offering products or services to customers. These restrictions could also inhibit JPMorgan Chase&#8217;s 
+
+##TABLE_START 25 
+
+##TABLE_END
+
+Part I 
+
+development or marketing of certain products or services, or increase the costs of offering them to customers. 
+
+JPMorgan Chase&#8217;s operations, results and reputation could be harmed by occurrences of extraordinary events beyond its control. 
+
+JPMorgan Chase&#8217;s business and operational systems could be seriously disrupted, and its reputation could be harmed, by events or contributing factors that are wholly or partially beyond its control, including material instances of: 
+
+&#8226; cyber attacks 
+
+&#8226; security breaches of its physical premises, including threats to health and safety 
+
+&#8226; power, telecommunications or internet outages, or shutdowns of mass transit 
+
+&#8226; failure of, or loss of access to, technology or operational systems, including any resulting loss of critical data 
+
+&#8226; damage to or loss of property or assets of JPMorgan Chase or third parties, and any consequent injuries, including in connection with any construction projects undertaken by JPMorgan Chase 
+
+&#8226; effects of climate change 
+
+&#8226; natural disasters or severe weather conditions 
+
+&#8226; accidents such as explosions or structural failures 
+
+&#8226; health emergencies, the spread of infectious diseases, epidemics or pandemics, or 
+
+&#8226; events arising from local or larger-scale civil unrest, any outbreak or escalation of hostilities or terrorist acts. 
+
+JPMorgan Chase maintains a Firmwide resiliency program that is intended to enable it to recover critical business functions and supporting assets, including staff, technology and facilities, in the event of a business disruption, including due to the occurrence of an extraordinary event beyond its control. There can be no assurance that JPMorgan Chase&#8217;s resiliency plans will fully mitigate all potential business continuity risks to JPMorgan Chase, its clients, and customers and third parties with which it does business, or that its resiliency plans will be adequate to address the effects of simultaneous occurrences of multiple business disruption events. In addition, JPMorgan Chase&#8217;s ability to respond effectively to a business disruption event could be hampered to the extent that the members of its workforce, physical assets or systems and other support infrastructure needed to address the event are geographically dispersed, or conversely, if such an event were to occur in an area in which they are concentrated. Further, should extraordinary events or the factors that cause or contribute to those events become more chronic, the disruptive effects of those events on JPMorgan Chase&#8217;s business and operations, and on its clients, customers, 
+
+counterparties and employees, could become more significant and long-lasting. 
+
+Any significant failure or disruption of JPMorgan Chase&#8217;s operations or operational systems, or the occurrence of one or more extraordinary events that are beyond its control, could: 
+
+&#8226; hinder JPMorgan Chase&#8217;s ability to provide services to its clients and customers or to transact with its counterparties 
+
+&#8226; require it to expend significant resources to correct the failure or disruption or to address the event 
+
+&#8226; cause it to incur losses or liabilities, including from loss of revenue, damage to or loss of property, or injuries 
+
+&#8226; disrupt market infrastructure systems on which JPMorgan Chase&#8217;s businesses rely 
+
+&#8226; expose it to litigation or regulatory fines, penalties or other sanctions, and 
+
+&#8226; harm its reputation. 
+
+Enhanced regulatory and other standards for the oversight of vendors and other service providers can result in higher costs and other potential exposures. 
+
+JPMorgan Chase must comply with enhanced regulatory and other standards associated with doing business with vendors and other service providers, including standards relating to the outsourcing of functions as well as the performance of significant banking and other functions by subsidiaries. JPMorgan Chase incurs significant costs and expenses in connection with its initiatives to address the risks associated with oversight of its internal and external service providers. JPMorgan Chase&#8217;s failure to appropriately assess and manage these relationships, especially those involving significant banking functions, shared services or other critical activities, could materially adversely affect JPMorgan Chase. Specifically, any such failure could result in: 
+
+&#8226; potential harm to clients and customers, and any liability associated with that harm 
+
+&#8226; regulatory fines, penalties or other sanctions 
+
+&#8226; lower revenues, and the opportunity cost from lost revenues 
+
+&#8226; increased operational costs, or 
+
+&#8226; harm to JPMorgan Chase&#8217;s reputation. 
+
+JPMorgan Chase&#8217;s risk management framework may not be effective in identifying and mitigating every risk to JPMorgan Chase. 
+
+Any inadequacy or lapse in JPMorgan Chase&#8217;s risk management framework, governance structure, practices, models or reporting systems could expose it to unexpected losses, and its financial condition or results of operations could be materially and adversely affected. Any such inadequacy or lapse could: 
+
+##TABLE_START 
+
+##TABLE_END
+
+&#8226; hinder the timely escalation of material risk issues to JPMorgan Chase&#8217;s senior management and Board of Directors 
+
+&#8226; lead to business decisions that have negative outcomes for JPMorgan Chase 
+
+&#8226; require significant resources and time to remediate 
+
+&#8226; lead to non-compliance with laws, rules and regulations 
+
+&#8226; attract heightened regulatory scrutiny 
+
+&#8226; expose JPMorgan Chase to regulatory investigations or legal proceedings 
+
+&#8226; subject it to litigation or regulatory fines, penalties or other sanctions 
+
+&#8226; lead to potential harm to customers and clients, and any liability associated with that harm 
+
+&#8226; harm its reputation, or 
+
+&#8226; otherwise diminish confidence in JPMorgan Chase. 
+
+JPMorgan Chase relies on data to assess its various risk exposures. Any deficiencies in the quality or effectiveness of JPMorgan Chase&#8217;s data gathering, analysis and validation processes could result in ineffective risk management practices. These deficiencies could also result in inaccurate risk reporting. 
+
+Many of JPMorgan Chase&#8217;s risk management strategies and techniques consider historical market behavior and to some degree are based on management&#8217;s subjective judgment or assumptions. For example, many models used by JPMorgan Chase are based on assumptions regarding historical correlations among prices of various asset classes or other market indicators. In times of market stress, including difficult or less liquid market environments, or in the event of other unforeseen circumstances, previously uncorrelated indicators may become correlated. Conversely, previously-correlated indicators may become uncorrelated at those times. Sudden market movements and unanticipated market or economic movements could, in some circumstances, limit the effectiveness of JPMorgan Chase&#8217;s risk management strategies, causing it to incur losses. 
+
+JPMorgan Chase could recognize unexpected losses, its capital levels could be reduced and it could face greater regulatory scrutiny if its models, estimations or judgments, including those used in its financial statements, prove to be inadequate or incorrect. 
+
+JPMorgan Chase has developed and uses a variety of models and other analytical and judgment-based estimations to measure, monitor and implement controls over its market, credit, capital, liquidity, operational and other risks. JPMorgan Chase also uses internal models and estimations as a basis for its stress testing and in connection with the preparation of its financial statements under U.S. generally accepted accounting principles (&#8220;U.S. GAAP&#8221;). 
+
+These models and estimations are based on a variety of assumptions and historical trends, and are periodically reviewed and modified as necessary. The models and estimations that JPMorgan Chase uses may not be effective in all cases to identify, observe and mitigate risk due to a variety of factors, such as: 
+
+&#8226; reliance on historical trends that may not persist in the future, including assumptions underlying the models and estimations such as correlations among certain market indicators or asset prices 
+
+&#8226; inherent limitations associated with forecasting uncertain economic and financial outcomes 
+
+&#8226; historical trend information may be incomplete, or may not be indicative of severely negative market conditions such as extreme volatility, dislocation or lack of liquidity 
+
+&#8226; sudden illiquidity in markets or declines in prices of certain loans and securities may make it more difficult to value certain financial instruments 
+
+&#8226; technology that is introduced to run models or estimations may not perform as expected, or may not be well understood by the personnel using the technology 
+
+&#8226; models and estimations may contain erroneous data, valuations, formulas or algorithms, and 
+
+&#8226; review processes may fail to detect flaws in models and estimations. 
+
+JPMorgan Chase may experience unexpected losses if models, estimates or judgments used or applied in connection with its risk management activities or the preparation of its financial statements prove to have been inadequate or incorrect. For example, where quoted market prices are not available for certain financial instruments that require a determination of their fair value, JPMorgan Chase may make fair value determinations based on internally developed models or other means which ultimately rely to some degree on management estimates and judgment. 
+
+Similarly, JPMorgan Chase establishes an allowance for expected credit losses related to its credit exposures which requires difficult, subjective and complex judgments including forecasts of how economic conditions might impair the ability of JPMorgan Chase&#8217;s borrowers and counterparties to repay their loans or other obligations. These types of estimates and judgments may not prove to be accurate due to a variety of factors, as noted above. In addition, certain models used by JPMorgan Chase as a basis for the determination of the allowance for expected credit losses experienced heightened performance risk in the economic environment during the early stages of the COVID-19 pandemic. These models are based on historical experience of internally-developed macroeconomic scenarios, and when the current and forecasted environment is significantly different from the scenarios 
+
+##TABLE_START 27 
+
+##TABLE_END
+
+Part I 
+
+underlying those models, JPMorgan Chase may need to apply a greater degree of judgment and analytics to inform any adjustments that it has made or may make to model outputs. 
+
+Some of the models and other analytical and judgment-based estimations used by JPMorgan Chase in managing risks are subject to review by, and require the approval of, JPMorgan Chase&#8217;s regulators. These reviews are required before JPMorgan Chase may use those models and estimations for calculating market risk RWA, credit risk RWA and operational risk RWA under Basel III. If JPMorgan Chase&#8217;s models or estimations are not approved by its regulators, it may be subject to higher capital charges, which could adversely affect its financial results or limit the ability to expand its businesses. 
+
+Lapses in controls over disclosure or financial reporting could materially affect JPMorgan Chase&#8217;s profitability or reputation. 
+
+There can be no assurance that JPMorgan Chase&#8217;s disclosure controls and procedures will be effective in every circumstance, or that a material weakness or significant deficiency in internal control over financial reporting will not occur. Any such lapses or deficiencies could result in inaccurate financial reporting which, in turn, could: 
+
+&#8226; materially and adversely affect JPMorgan Chase&#8217;s business and results of operations or financial condition 
+
+&#8226; restrict its ability to access the capital markets 
+
+&#8226; require it to expend significant resources to correct the lapses or deficiencies 
+
+&#8226; expose it to litigation or regulatory fines, penalties or other sanctions 
+
+&#8226; harm its reputation, or 
+
+&#8226; otherwise diminish investor confidence in JPMorgan Chase. 
+
+Strategic 
+
+If JPMorgan Chase&#8217;s management fails to develop and execute effective business strategies, and to anticipate changes affecting those strategies, JPMorgan Chase&#8217;s competitive standing and results could suffer. 
+
+JPMorgan Chase&#8217;s business strategies significantly affect its competitive standing and operations. These strategies relate to: 
+
+&#8226; the products and services that JPMorgan Chase offers 
+
+&#8226; the geographies in which it operates 
+
+&#8226; the types of clients and customers that it serves 
+
+&#8226; the businesses that it acquires or in which it invests 
+
+&#8226; the counterparties with which it does business, and 
+
+&#8226; the methods and distribution channels by which it offers products and services. 
+
+If management makes choices about these strategies and goals that prove to be incorrect, do not accurately assess the competitive landscape and industry trends, or fail to address changing regulatory and market environments or the expectations of clients, customers, investors, employees and other stakeholders, then the franchise values and growth prospects of JPMorgan Chase&#8217;s businesses may suffer and its earnings could decline. 
+
+JPMorgan Chase&#8217;s growth prospects also depend on management&#8217;s ability to develop and execute effective business plans to address these strategic priorities, both in the near term and over longer time horizons. Management&#8217;s effectiveness in this regard will affect JPMorgan Chase&#8217;s ability to develop and enhance its resources, control expenses and return capital to shareholders. Each of these objectives could be adversely affected by any failure on the part of management to: 
+
+&#8226; devise effective business plans and strategies 
+
+&#8226; offer products and services that meet changing expectations of clients and customers 
+
+&#8226; allocate capital in a manner that promotes long-term stability to enable JPMorgan Chase to build and invest in market-leading businesses, even in a highly stressed environment 
+
+&#8226; allocate capital appropriately due to imprecise modeling or subjective judgments made in connection with those allocations 
+
+&#8226; appropriately address concerns of clients, customers, investors, employees and other stakeholders, including with respect to social and sustainability matters 
+
+&#8226; react quickly to changes in market conditions or market structures, or 
+
+&#8226; develop and enhance the operational, technology, risk, financial and managerial resources necessary to grow and manage JPMorgan Chase&#8217;s businesses. 
+
+Furthermore, JPMorgan Chase may incur costs in connection with disposing of excess properties, premises and facilities, and those costs could be material to its results of operations in a given period. 
+
+JPMorgan Chase faces significant and increasing competition in the rapidly evolving financial services industry. 
+
+JPMorgan Chase operates in a highly competitive environment in which it must evolve and adapt to the significant changes as a result of changes in financial regulation, technological advances, increased public scrutiny and changes in economic conditions. JPMorgan Chase expects that competition in the U.S. and global financial services industry will continue to be intense. Competitors include: 
+
+&#8226; other banks and financial institutions 
+
+&#8226; trading, advisory and investment management firms 
+
+##TABLE_START 
+
+##TABLE_END
+
+&#8226; finance companies 
+
+&#8226; technology companies, and 
+
+&#8226; other nonbank firms that are engaged in providing similar products and services. 
+
+JPMorgan Chase cannot provide assurance that the significant competition in the financial services industry will not materially and adversely affect its future results of operations. 
+
+New competitors in the financial services industry continue to emerge. For example, technological advances and the growth of e-commerce have made it possible for non-depository institutions to offer products and services that traditionally were banking products. These advances have also allowed financial institutions and other companies to provide electronic and internet-based financial solutions, including electronic securities and cryptocurrency trading, payments processing and online automated algorithmic-based investment advice. Furthermore, both financial institutions and their non-banking competitors face the risk that payments processing and other products and services, including deposits and other traditional banking products, could be significantly disrupted by the use of new technologies, such as cryptocurrencies and other applications that use secure distributed ledgers, that require no intermediation. New technologies have required and could require JPMorgan Chase to spend more to modify or adapt its products to attract and retain clients and customers or to match products and services offered by its competitors, including technology companies. In addition, new technologies may be used by customers, or breached or infiltrated by third parties, in unexpected ways, which can increase JPMorgan Chase&#8217;s costs for complying with laws, rules and regulations that apply to the offering of products and services through those technologies and reduce the income that JPMorgan Chase earns from providing products and services through those technologies. 
+
+Ongoing or increased competition may put pressure on the pricing for JPMorgan Chase&#8217;s products and services or may cause JPMorgan Chase to lose market share, particularly with respect to traditional banking products. This competition may be on the basis of quality and variety of products and services offered, transaction execution, innovation, reputation and price. The failure of any of JPMorgan Chase&#8217;s businesses to meet the expectations of clients and customers, whether due to general market conditions, under-performance, a decision not to offer a particular product or service, changes in client and customer expectations or other factors, could affect JPMorgan Chase&#8217;s ability to attract or retain clients and customers. Any such impact could, in turn, reduce JPMorgan Chase&#8217;s revenues. Increased competition also may require JPMorgan Chase to make additional capital investments in its businesses, or to extend more of its capital on behalf of its clients in order to remain competitive. 
+
+The effects of climate change could adversely impact JPMorgan Chase and its clients. 
+
+JPMorgan Chase operates in many regions, countries and communities around the world where its businesses, and the activities of its clients and customers, could be impacted by climate change. Climate change could manifest as a financial risk to JPMorgan Chase either through changes in the physical climate or from the process of transitioning to a low-carbon economy, including changes in climate policy or in the regulation of financial institutions with respect to risks posed by climate change. 
+
+Climate-related physical risks include acute weather events, such as hurricanes and floods, and chronic shifts in the climate, such as altered distribution and intensity of rainfall, prolonged droughts or flooding, increased frequency of wildfires, rising sea levels, or a rising heat index. Climate-related physical risks could have adverse financial and other impacts on JPMorgan Chase, both directly on its business and operations and as a result of impacts to its clients and customers, including: 
+
+&#8226; declines in asset values, including due to the destruction or degradation of property 
+
+&#8226; reduced availability of insurance 
+
+&#8226; significant interruptions to business operations, including supply chain disruption, and 
+
+&#8226; systemic changes to geographies, regional economies and sectors, and any resulting population migration or unemployment. 
+
+Transition risks arise from the process of adjusting to a low-carbon economy. In addition to possible changes in climate policy and financial regulation, potential transition risks may include economic and other changes engendered by the development of low-carbon technological advances (e.g., electric vehicles and renewable energy) and/or changes in consumer preferences towards low-carbon goods and services. Transition risks could be further accelerated by the occurrence of changes in the physical climate. The possible adverse impacts of transition risks to both JPMorgan Chase and its clients and customers include: 
+
+&#8226; sudden devaluation of assets, including unanticipated write-downs (&#8220;stranded assets&#8221;) 
+
+&#8226; increased operational and compliance costs driven by changes in climate policy and/or regulations 
+
+&#8226; negative consequences to business models, and the need to make changes in response to those consequences, and 
+
+&#8226; damage to JPMorgan Chase&#8217;s reputation, including as a result of any perception that its business practices are contrary to public policy or stakeholder preferences. 
+
+Both physical risks and transition risks could have negative impacts on the revenues, financial condition or creditworthiness of JPMorgan&#8217;s clients and customers, and on its exposure to those clients and customers. 
+
+##TABLE_START 29 
+
+##TABLE_END
+
+Part I 
+
+Conduct 
+
+Conduct failure by JPMorgan Chase employees can harm clients and customers, impact market integrity, damage JPMorgan Chase&#8217;s reputation and trigger litigation and regulatory action. 
+
+JPMorgan Chase&#8217;s employees interact with clients, customers and counterparties, and with each other, every day. All employees are expected to demonstrate values and exhibit the behaviors that are an integral part of JPMorgan Chase&#8217;s Code of Conduct and How We Do Business Principles, including JPMorgan Chase&#8217;s commitment to &#8220;do first class business in a first class way.&#8221; JPMorgan Chase endeavors to embed conduct risk management throughout an employee&#8217;s life cycle, including recruiting, onboarding, training and development, and performance management. Conduct risk management is also an integral component of JPMorgan Chase&#8217;s promotion and compensation processes. 
+
+Notwithstanding these expectations, policies and practices, certain employees have engaged in improper or illegal conduct in the past. These instances of misconduct have resulted in litigation, and resolutions of governmental investigations or enforcement actions involving consent orders, deferred prosecution agreements, non-prosecution agreements and other civil or criminal sanctions. There is no assurance that further inappropriate or unlawful actions by employees will not occur, lead to a violation of the terms of these resolutions (and associated consequences), or that any such actions will always be detected, deterred or prevented. 
+
+JPMorgan Chase&#8217;s reputation could be harmed, and collateral consequences could result, from a failure by one or more employees to conduct themselves in accordance with JPMorgan Chase&#8217;s expectations, policies and practices, including by acting in ways that harm clients, customers, other market participants or other employees. Some examples of this include: 
+
+&#8226; improperly selling and marketing JPMorgan Chase&#8217;s products or services 
+
+&#8226; engaging in insider trading, market manipulation or unauthorized trading 
+
+&#8226; engaging in improper or fraudulent behavior in connection with government relief programs 
+
+&#8226; facilitating a transaction where a material objective is to achieve a particular tax, accounting or financial disclosure treatment that may be subject to scrutiny by governmental or regulatory authorities, or where the proposed treatment is unclear or may not reflect the economic substance of the transaction 
+
+&#8226; failing to fulfill fiduciary obligations or other duties owed to clients or customers 
+
+&#8226; violating antitrust or anti-competition laws by colluding with other market participants 
+
+&#8226; using electronic communications channels that have not been approved by JPMorgan Chase 
+
+&#8226; engaging in discriminatory behavior or harassment with respect to clients, customers or employees, or acting contrary to JPMorgan Chase&#8217;s goal of fostering a diverse and inclusive workplace 
+
+&#8226; managing or reporting risks in ways that subordinate JPMorgan Chase&#8217;s risk appetite to business performance goals or employee compensation objectives, and 
+
+&#8226; misappropriating property, confidential or proprietary information, or technology assets belonging to JPMorgan Chase, its clients and customers or third parties. 
+
+The consequences of any failure by one or more employees to conduct themselves in accordance with JPMorgan Chase&#8217;s expectations, policies or practices could include litigation, or regulatory or other governmental investigations or enforcement actions. Any of these proceedings or actions could result in judgments, settlements, fines, penalties or other sanctions, or lead to: 
+
+&#8226; financial losses 
+
+&#8226; increased operational and compliance costs 
+
+&#8226; greater scrutiny by regulators and other parties 
+
+&#8226; regulatory actions that require JPMorgan Chase to restructure, curtail or cease certain of its activities 
+
+&#8226; the need for significant oversight by JPMorgan Chase&#8217;s management 
+
+&#8226; loss of clients or customers, and 
+
+&#8226; harm to JPMorgan Chase&#8217;s reputation. 
+
+The foregoing risks could be heightened with respect to newly-acquired businesses if JPMorgan Chase fails to successfully integrate employees of those businesses or any of those employees do not conduct themselves in accordance with JPMorgan Chase's expectations, policies and practices. 
+
+Reputation 
+
+Damage to JPMorgan Chase&#8217;s reputation could harm its businesses. 
+
+Maintaining trust in JPMorgan Chase is critical to its ability to attract and retain clients, customers, investors and employees. Damage to JPMorgan Chase&#8217;s reputation can therefore cause significant harm to JPMorgan Chase&#8217;s business and prospects, and can arise from numerous sources, including: 
+
+&#8226; employee misconduct, including discriminatory behavior or harassment with respect to clients, customers or employees, or actions that are contrary to JPMorgan Chase&#8217;s goal of fostering a diverse and inclusive workplace 
+
+##TABLE_START 
+
+##TABLE_END
+
+&#8226; security breaches, including as a result of cyber attacks 
+
+&#8226; failure to safeguard client, customer or employee information 
+
+&#8226; failure to manage risks associated with its business activities or those of its clients, including those that may be unpopular among one or more constituencies 
+
+&#8226; failure to fully discharge publicly-announced commitments to support social and sustainability initiatives 
+
+&#8226; non-compliance with laws, rules, and regulations 
+
+&#8226; operational failures 
+
+&#8226; litigation or regulatory fines, penalties or other sanctions 
+
+&#8226; actions taken in executing regulatory and governmental requirements during a global or regional health emergency 
+
+&#8226; regulatory investigations or enforcement actions, or resolutions of these matters, and 
+
+&#8226; failure or perceived failure to comply with laws, rules or regulations by JPMorgan Chase or its clients, customers, counterparties or other parties, including newly-acquired businesses, companies in which JPMorgan Chase has made principal investments, parties to joint ventures with JPMorgan Chase, and vendors with which JPMorgan Chase does business. 
+
+JPMorgan Chase&#8217;s reputation may be significantly damaged by adverse publicity or negative information regarding JPMorgan Chase, whether or not true, that may be published or broadcast by the media or posted on social media, non-mainstream news services or other parts of the internet. This latter risk can be magnified by the speed and pervasiveness with which information is disseminated through those channels. 
+
+Social and environmental activists are increasingly targeting financial services firms such as JPMorgan Chase with public criticism for their relationships with clients that are engaged in certain sensitive industries, including businesses whose products are or are perceived to be harmful to human health, or whose activities negatively affect or are perceived to negatively affect the environment, workers&#8217; rights or communities. Activists have also engaged in public protests at JPMorgan Chase&#8217;s headquarters and other properties. Activist criticism of JPMorgan Chase&#8217;s relationships with clients in sensitive industries could potentially engender dissatisfaction among clients, customers, investors and employees with how JPMorgan Chase addresses social and sustainability concerns in its business activities. Alternatively, yielding to activism targeted at certain sensitive industries could damage JPMorgan Chase&#8217;s relationships with clients and customers, and with governmental or regulatory bodies in jurisdictions in which JPMorgan Chase does business, whose views are not aligned with those of social and 
+
+environmental activists. In either case, the resulting harm to JPMorgan Chase&#8217;s reputation could: 
+
+&#8226; cause certain clients and customers to cease doing business with JPMorgan Chase 
+
+&#8226; impair JPMorgan Chase&#8217;s ability to attract new clients and customers, or to expand its relationships with existing clients and customers 
+
+&#8226; diminish JPMorgan Chase&#8217;s ability to hire or retain employees 
+
+&#8226; prompt JPMorgan Chase to cease doing business with certain clients or customers. 
+
+&#8226; cause certain investors to divest from investments in securities of JPMorgan Chase, or 
+
+&#8226; attract scrutiny from governmental or regulatory bodies. 
+
+Actions by the financial services industry generally or individuals in the industry can also affect JPMorgan Chase&#8217;s reputation. For example, the reputation of the industry as a whole can be damaged by concerns that: 
+
+&#8226; consumers have been treated unfairly by a financial institution, or 
+
+&#8226; a financial institution has acted inappropriately with respect to the methods used to offer products to customers 
+
+If JPMorgan Chase is perceived to have engaged in these types of behaviors, this could weaken its reputation among clients or customers. 
+
+Failure to effectively manage potential conflicts of interest or to satisfy fiduciary obligations can result in litigation and enforcement actions, as well as damage JPMorgan Chase&#8217;s reputation. 
+
+JPMorgan Chase&#8217;s ability to manage potential conflicts of interest is highly complex due to the broad range of its business activities which encompass a variety of transactions, obligations and interests with and among JPMorgan Chase&#8217;s clients and customers. JPMorgan Chase can become subject to litigation and enforcement actions, and its reputation can be damaged, by the failure or perceived failure to: 
+
+&#8226; adequately address or appropriately disclose conflicts of interest, including potential conflicts of interest that may arise in connection with providing multiple products and services in, or having one or more investments related to, the same transaction 
+
+&#8226; deliver appropriate standards of service and quality 
+
+&#8226; treat clients and customers with the appropriate standard of care 
+
+&#8226; use client and customer data responsibly and in a manner that meets legal requirements and regulatory expectations 
+
+##TABLE_START 31 
+
+##TABLE_END
+
+Part I 
+
+&#8226; provide fiduciary products or services in accordance with the applicable legal and regulatory standards, or 
+
+&#8226; handle or use confidential information of customers or clients appropriately or in compliance with applicable data protection and privacy laws, rules and regulations. 
+
+A failure or perceived failure to appropriately address conflicts of interest or fiduciary obligations could result in customer dissatisfaction, litigation and regulatory fines, penalties or other sanctions, and heightened regulatory scrutiny and enforcement actions, all of which can lead to lost revenue and higher operating costs and cause serious harm to JPMorgan Chase&#8217;s reputation. 
+
+Country 
+
+An outbreak or escalation of hostilities between countries or within a country or region could have a material adverse effect on the global economy and on JPMorgan Chase&#8217;s businesses within the affected region or globally. 
+
+Aggressive actions by hostile governments or groups, including armed conflict or intensified cyber attacks, could expand in unpredictable ways by drawing in other countries or escalating into full-scale war with potentially catastrophic consequences, particularly if one or more of the combatants possess nuclear weapons. Depending on the scope of the conflict, the hostilities could result in: 
+
+&#8226; worldwide economic disruption 
+
+&#8226; heightened volatility in financial markets 
+
+&#8226; severe declines in asset values, accompanied by widespread sell-offs of investments 
+
+&#8226; substantial depreciation of local currencies, potentially leading to defaults by borrowers and counterparties in the affected region 
+
+&#8226; disruption of global trade, and 
+
+&#8226; diminished consumer, business and investor confidence. 
+
+Any of the above consequences could have significant negative effects on JPMorgan Chase&#8217;s operations and earnings, both in the countries or regions directly affected by the hostilities or globally. Further, if the U.S. were to become directly involved in such a conflict, this could lead to a curtailment of any operations that JPMorgan Chase may have in the affected countries or region, as well as in any nation that is aligned against the U.S. in the hostilities. JPMorgan Chase could also experience more numerous and aggressive cyber attacks launched by or under the sponsorship of one or more of the adversaries in such a conflict. 
+
+JPMorgan Chase&#8217;s business and operations in certain countries can be adversely affected by local economic, political, regulatory and social factors. 
+
+Some of the countries in which JPMorgan Chase conducts business have economies or markets that are less developed and more volatile or may have political, legal and 
+
+regulatory regimes that are less established or predictable than other countries in which JPMorgan Chase operates. In addition, in some jurisdictions in which JPMorgan Chase conducts business, the local economy and business activity are subject to substantial government influence or control. Some of these countries have in the past experienced economic disruptions, including: 
+
+&#8226; extreme currency fluctuations 
+
+&#8226; high inflation 
+
+&#8226; low or negative growth, and 
+
+&#8226; defaults or reduced ability to service sovereign debt. 
+
+The governments in these countries have sometimes reacted to these developments by imposing restrictive policies that adversely affect the local and regional business environment, such as: 
+
+&#8226; price, capital or exchange controls, including imposition of punitive transfer and convertibility restrictions or forced currency exchange 
+
+&#8226; expropriation or nationalization of assets or confiscation of property, including intellectual property, and 
+
+&#8226; changes in laws, rules and regulations. 
+
+The impact of these actions could be accentuated in trading markets that are smaller, less liquid and more volatile than more-developed markets. These types of government actions can negatively affect JPMorgan Chase&#8217;s operations in the relevant country, either directly or by suppressing the business activities of local clients or multi-national clients that conduct business in the jurisdiction. 
+
+In addition, emerging markets countries, as well as certain more developed countries, have been susceptible to unfavorable social developments arising from poor economic conditions or governmental actions, including: 
+
+&#8226; widespread demonstrations, civil unrest or general strikes 
+
+&#8226; crime and corruption 
+
+&#8226; security and personal safety issues 
+
+&#8226; an outbreak or escalation of hostilities 
+
+&#8226; overthrow of incumbent governments 
+
+&#8226; terrorist attacks, and 
+
+&#8226; other forms of internal discord. 
+
+These economic, political, regulatory and social developments have in the past resulted in, and in the future could lead to, conditions that can adversely affect JPMorgan Chase&#8217;s operations in those countries and impair the revenues, growth and profitability of those operations. In addition, any of these events or circumstances in one country can affect JPMorgan Chase&#8217;s operations and investments in another country or countries, including in the U.S. 
+
+##TABLE_START 
+
+##TABLE_END
+
+People 
+
+JPMorgan Chase&#8217;s ability to attract and retain qualified and diverse employees is critical to its success. 
+
+JPMorgan Chase&#8217;s employees are its most important resource, and in many areas of the financial services industry, competition for qualified personnel is intense. JPMorgan Chase endeavors to attract talented and diverse new employees and retain, develop and motivate its existing employees. JPMorgan Chase's efforts to retain talented and diverse employees can be particularly challenging when members of its workforce are targeted for recruitment by competitors. If JPMorgan Chase were unable to continue to attract or retain qualified and diverse employees, including successors to the Chief Executive Officer, members of the Operating Committee and other senior leaders, JPMorgan Chase&#8217;s performance, including its competitive position, could be materially and adversely affected. 
+
+Unfavorable changes in immigration or travel policies could adversely affect JPMorgan Chase&#8217;s businesses and operations. 
+
+JPMorgan Chase relies on the skills, knowledge and expertise of employees located throughout the world. Changes in immigration or travel policies in the U.S. and other countries that unduly restrict or otherwise make it more difficult for employees or their family members to work in, or travel to or transfer between, jurisdictions in which JPMorgan Chase has operations or conducts its business could inhibit JPMorgan Chase&#8217;s ability to attract and retain qualified employees, and thereby dilute the quality of its workforce, or could prompt JPMorgan Chase to make structural changes to its worldwide or regional operating models that cause its operations to be less efficient or more costly. 
+
+Legal 
+
+JPMorgan Chase faces significant legal risks from litigation and formal and informal regulatory and government investigations. 
+
+JPMorgan Chase is named as a defendant or is otherwise involved in many legal proceedings, including class actions and other litigation or disputes with third parties. Actions currently pending against JPMorgan Chase may result in judgments, settlements, fines, penalties or other sanctions adverse to JPMorgan Chase. Any of these matters could materially and adversely affect JPMorgan Chase&#8217;s business, financial condition or results of operations, or cause serious reputational harm. As a participant in the financial services industry, it is likely that JPMorgan Chase will continue to experience a high level of litigation and regulatory and government investigations related to its businesses and operations. 
+
+Regulators and other government agencies conduct examinations of JPMorgan Chase and its subsidiaries both on a routine basis and in targeted exams, and JPMorgan Chase&#8217;s businesses and operations are subject to 
+
+heightened regulatory oversight. This heightened regulatory scrutiny, or the results of such an investigation or examination, may lead to additional regulatory investigations or enforcement actions. There is no assurance that those actions will not result in resolutions or other enforcement actions against JPMorgan Chase. Furthermore, a single event involving a potential violation of law or regulation may give rise to numerous and overlapping investigations and proceedings, either by multiple federal, state or local agencies and officials in the U.S. or, in some instances, regulators and other governmental officials in non-U.S. jurisdictions. 
+
+If another financial institution violates a law or regulation relating to a particular business activity or practice, this will often give rise to an investigation by regulators and other governmental agencies of the same or similar activity or practice by JPMorgan Chase. 
+
+These and other initiatives by U.S. and non-U.S. governmental authorities may subject JPMorgan Chase to judgments, settlements, fines, penalties or other sanctions, and may require JPMorgan Chase to restructure its operations and activities or to cease offering certain products or services. All of these potential outcomes could harm JPMorgan Chase&#8217;s reputation or lead to higher operational costs, thereby reducing JPMorgan Chase&#8217;s profitability, or result in collateral consequences. In addition, the extent of JPMorgan Chase&#8217;s exposure to legal and regulatory matters can be unpredictable and could, in some cases, exceed the amount of reserves that JPMorgan Chase has established for those matters. 
+
+##TABLE_START 33 
+
+##TABLE_END
+

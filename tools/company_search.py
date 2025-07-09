@@ -1,16 +1,14 @@
 from openai import OpenAI
 import os
 import json
-import asyncio
 import logging
 from typing import Dict, Any, Optional
 import re
 
+from utils.logger import get_logger, log_event
+
 # Ensure this import path is correct for your project structure.
 from tools.global_API_toolkit import make_api_request
-
-
-
 
 def process_company_data(company_name: str, year: str) -> Dict[str, Any]:
     """
@@ -25,21 +23,23 @@ def process_company_data(company_name: str, year: str) -> Dict[str, Any]:
                         validation status, accuracy, and a message.
     """
 
-    # Suppress warnings if running this as a standalone snippet without full project structure
-    logging.basicConfig(level=logging.INFO)
-    company_resolver_logger = logging.getLogger("CompanyResolver")
+    # Prepare the result dict
+    results: Dict[str, Any] = {
+        "llm_result": None,
+        "message": "Processing initiated.",
+        "tokens_sent": 0,
+        "tokens_generated": 0,
+        "cost_llm": 0.0,
+    }
 
-    # OpenAI API client initialization
+    # 2. Check API key
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
-        # A positive and assertive way to handle missing API key
-        raise ValueError("OPENAI_API_KEY environment variable is not set. Please ensure it is configured for seamless operation.")
-    client = OpenAI(api_key=api_key)
+        err = "OPENAI_API_KEY is not set. Please configure it."
+        log_event("company_data_error", {"company": company_name, "year": year, "error": err})
+        raise ValueError(err)
 
-    results = {
-        "llm_result": None,
-        "message": "Processing initiated."
-    }
+    client = OpenAI(api_key=api_key)
 
     # --- Phase 1: LLM Information Extraction ---
     try:
@@ -65,71 +65,53 @@ def process_company_data(company_name: str, year: str) -> Dict[str, Any]:
         Do not add any text or other explanation. Keep your response as JSON output only.
         """
 
+        # Manually specify pricing for gpt-4o-search-preview (USD per 1 000 tokens)
+        PRICE_PROMPT_PER_1K     = 0.002  # e.g. $0.002 per 1 000 prompt tokens
+        PRICE_COMPLETION_PER_1K = 0.002  # e.g. $0.002 per 1 000 completion tokens
+
         llm_response = client.chat.completions.create(
             model="gpt-4o-search-preview-2025-03-11",
-            messages=[{"role": "user", "content": prompt}]
+            messages=[{"role": "user", "content": prompt}],
+            timeout=20,
         )
-        def clean_llm_json(llm_output_str):
-            # Remove markdown code block fences (``` or ```json ... ```)
-            code_block_pattern = r"```(?:json)?(.*?)```"
-            match = re.search(code_block_pattern, llm_output_str, re.DOTALL)
-            if match:
-                json_str = match.group(1).strip()
-            else:
-                # No code block detected, use raw string
-                json_str = llm_output_str.strip()
-            # Try parsing
-            try:
-                return json.loads(json_str)
-            except Exception as e:
-                raise ValueError(f"Could not parse LLM output as JSON. Error: {e}\nRaw output:\n{llm_output_str}")
 
-        llm_output_str = llm_response.choices[0].message.content
-        llm_data  = clean_llm_json(llm_output_str)
+        # 5. Parse JSON out of any markdown fences
+        raw = llm_response.choices[0].message.content
+        m = re.search(r"```(?:json)?(.*?)```", raw, re.DOTALL)
+        json_str = m.group(1).strip() if m else raw.strip()
+        llm_data = json.loads(json_str)
+        results["llm_result"] = llm_data
 
-        usage = getattr(llm_response, "usage", None)
-        results["tokens_sent"] = usage.prompt_tokens if usage and hasattr(usage, "prompt_tokens") else 0
-        results["tokens_generated"] = usage.completion_tokens if usage and hasattr(usage, "completion_tokens") else 0
-        results["cost_llm"] = 0.0
-        try:
-            results["llm_result"] = llm_data
-            company_resolver_logger.info(f"LLM successfully extracted data for {company_name}.")
-        except Exception as e:
-            results["message"] = f"LLM output could not be set: {e}"
-            results["success_score"] = 0
-            company_resolver_logger.error(f"LLM produced invalid JSON for {company_name}: {llm_data}")
-            return results
+        # 6. Extract tokens
+        usage            = getattr(llm_response, "usage", {}) or {}
+        prompt_toks = getattr(usage, "prompt_tokens",     0)
+        completion_toks = getattr(usage, "completion_tokens", 0)
+        results["tokens_sent"]      = prompt_toks
+        results["tokens_generated"] = completion_toks
+        # 7. Compute cost using our hard-coded rates
+        cost = (
+            (prompt_toks     * PRICE_PROMPT_PER_1K) +
+            (completion_toks * PRICE_COMPLETION_PER_1K)
+        ) / 1_000 
+
+        results["cost_llm"] = cost
+
+        # 8. Log structured success
+        log_event(
+            "company_data_extracted",
+            {
+                "company": company_name,
+                "year": year,
+                "tokens_sent": prompt_toks,
+                "tokens_generated": completion_toks,
+                "cost_llm": cost
+            }
+        )
 
     except Exception as e:
-        results["message"] = f"Error during LLM data extraction: {e}"
-        results["accuracy_score"] = 0
-        company_resolver_logger.critical(f"Critical error during LLM call for {company_name}: {e}", exc_info=True)
-        return results
+        msg = f"Error during LLM data extraction: {e}"
+        log_event("company_data_error", {"company": company_name, "year": year, "error": str(e)})
+        results["message"]        = msg
+        # leave tokens & cost at their zero defaults
+
     return results
-
-# --- Example Usage ---
-def main():
-    # Ensure OPENAI_API_KEY is set in your environment variables before running
-    # e.g., in PowerShell: $env:OPENAI_API_KEY="sk-proj-YOUR-KEY-HERE"
-
-    print(f"\n--- Processing Company: 'TLSA' ---")
-    tesla_result = process_company_data("Tesla", "2024")
-    print(json.dumps(tesla_result, indent=2))
-
-    print(f"\n--- Processing Company: 'Starlink' ---")
-    # For Starlink, LLM might return a ticker, but FMP won't have a public profile for it,
-    # leading to FMP_Verification_Unavailable or Hallucination_Detected if LLM gives wrong ticker.
-    starlink_result = process_company_data("Starlink", "2024")
-    print(json.dumps(starlink_result, indent=2))
-
-    print(f"\n--- Processing Company: 'QuantumLeap Innovations'")
-    # LLM might not even give a ticker for a fictional company, or FMP won't find it.
-    quantum_result = process_company_data("QuantumLeap Innovations", "2024")
-    print(json.dumps(quantum_result, indent=2))
-    
-    print(f"\n--- Processing Company: 'Abble' ---")
-    apple_result = process_company_data("Apple Inc.", "2024")
-    print(json.dumps(apple_result, indent=2))
-
-if __name__ == "__main__":
-    main()
