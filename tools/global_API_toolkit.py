@@ -68,6 +68,19 @@ CACHE_DIR = os.path.join(os.path.dirname(__file__), ".cache")
 # ----------------------------------------------------------------------------
 # Utility Helpers
 # ----------------------------------------------------------------------------
+def get_cached_stock_data(ticker, force_refresh=False):
+    cash_dir = "cash_data"
+    os.makedirs(cash_dir, exist_ok=True)
+    fname = f"{cash_dir}/{ticker}_stock.json"
+    if os.path.exists(fname) and not force_refresh:
+        with open(fname, "r") as f:
+            return json.load(f)
+    else:
+        data = make_api_request("IndianMarket", "/stock", {"name": ticker})
+        with open(fname, "w") as f:
+            json.dump(data, f, indent=2)
+        return data
+        
 @contextmanager
 def force_ipv4_context():
     original = socket.getaddrinfo
@@ -84,61 +97,49 @@ def normalize_path(path: str) -> str:
 # Smart API Request Handler (FMP, India, RAG, etc.)
 # ----------------------------------------------------------------------------
 def make_api_request(
-    api_name: Annotated[Literal["FMP", "IndianMarket", "LocalRAG"], "Target API name"],
-    endpoint: Annotated[str, "API path like /query or /symbol/AAPL"],
-    params: Annotated[Optional[Dict], "Payload or query parameters"] = None
-) -> Annotated[dict, "JSON response or error"]:
-    config = get_api_config()[api_name]
-
-    if not config or not config.get("api_key"):
+    api_name: Literal["FMP", "IndianMarket", "LocalRAG"],
+    endpoint: str,
+    params: Optional[Dict] = None
+) -> dict:
+    # Load config and validate
+    config = get_api_config().get(api_name, {})
+    api_key = config.get("api_key")
+    if not api_key:
         return {"error": f"API configuration or key is missing for '{api_name}'."}
 
-    full_url = f"{config['base_url']}{endpoint}"
+    # Build URL, method, headers, payload
+    full_url = f"{config['base_url'].rstrip('/')}{endpoint}"
     method = config.get("method", "GET").upper()
-    headers = {}
+    headers: Dict[str, str] = {}
     payload = params.copy() if isinstance(params, dict) else {}
 
-    if api_name == "IndianMarket":
-        if "statement" not in payload and "stats" in payload:
-            hint = str(payload["stats"]).lower()
-            for k, v in {"income": "yoy_results", "earning": "yoy_results", "cash": "cashflow", "balance": "balancesheet", "quarter": "quarter_results"}.items():
-                if k in hint:
-                    payload["statement"] = v
-                    break
-        
+    # Inject auth
+    if "auth_param" in config:
+        payload[config["auth_param"]] = api_key
+    elif "auth_header" in config:
+        headers[config["auth_header"]] = api_key
 
-    if api_name == "LocalRAG":
-        q = payload.get("question", "").lower()
-        if "year" not in payload:
-            match = re.search(r"\\b(19|20)\\d{2}\\b", q)
-            if match:
-                payload["year"] = int(match.group(0))
-        if "section" not in payload:
-            for k, s in {"risk": "risk", "governance": "governance", "board": "governance", "revenue": "Management", "overview": "Management"}.items():
-                if k in q:
-                    payload["section"] = s
-                    break
-
-    if api_name != "LocalRAG":
-        if "auth_param" in config:
-            payload[config["auth_param"]] = config["api_key"]
-        elif "auth_header" in config:
-            headers[config["auth_header"]] = config["api_key"]
-
-    def execute():
+    # Core request logic
+    def _execute() -> dict:
         try:
-            response = requests.request(method, full_url, json=payload if method == "POST" else None,
-                                        params=payload if method == "GET" else None, headers=headers, timeout=20)
-            if api_name == "IndianMarket":
-                print("Sleeping for 1.5s to respect IndianMarket API rate limit.")
-                time.sleep(1.5)
-            response.raise_for_status()
-            # print("reached api request: ", api_name, " response: ", response.json())
-            return response.json()
+            if method == "GET":
+                resp = requests.get(full_url, params=payload, headers=headers, timeout=20)
+            else:
+                resp = requests.post(full_url, json=payload, headers=headers, timeout=20)
+            resp.raise_for_status()
+            return resp.json()
         except requests.exceptions.RequestException as e:
             return {"error": str(e), "payload": payload}
 
-    return execute() if api_name != "IndianMarket" else force_ipv4_context().__enter__() or execute()
+    # Special handling for IndianMarket
+    if api_name == "IndianMarket":
+        with force_ipv4_context():
+            result = _execute()
+        print("Sleeping for 1.5s to respect IndianMarket API rate limit.")
+        time.sleep(1.5)
+    else:
+        result = _execute()
+    return result
 
 
 def make_api_request2(
@@ -198,61 +199,6 @@ def make_api_request2(
     else:
         return {"error": f"Unknown API name '{api_name}'."}
 
-# ----------------------------------------------------------------------------
-# ESTEBAN NEW METHOD
-# ----------------------------------------------------------------------------
-
-def make_api_request2(
-    api_name: Annotated[Literal["FMP", "IndianMarket", "LocalRAG"], "Target API name"],
-    endpoint: Annotated[str, "API path like /query or /symbol/AAPL"],
-    params: Annotated[Optional[Dict], "Payload or query parameters"] = None
-) -> Annotated[dict, "JSON response or error"]:
-    config = API_CONFIG.get(api_name)
-    if api_name == "IndianMarket":
-        config["api_key"] = "sk-live-9CBc5SINdlUtl74sNSNTI7Yyc0aBYak5h46FRMzz"
-    if not config or not config.get("api_key"):
-        return {"error": f"API configuration or key is missing for '{api_name}'."}
-
-    full_url = f"{config['base_url']}{endpoint}"
-    headers = {}
-    payload = params.copy() if isinstance(params, dict) else {}
-    retries=5
-    delay=3
-    if api_name == "IndianMarket":
-        if "auth_param" in config:
-            payload[config["auth_param"]] = config["api_key"]
-        elif "auth_header" in config:
-            headers[config["auth_header"]] = config["api_key"]
-
-        for attempt in range(retries):
-            try:
-                with force_ipv4_context():
-                    response = requests.get(full_url, params=payload, headers=headers, timeout=20)
-                response.raise_for_status()
-                return response.json()
-            except requests.exceptions.RequestException as e:
-                if attempt < retries - 1:
-                    print(f"API request failed (attempt {attempt+1}/{retries}): {e}. Retrying in {delay} seconds...")
-                    time.sleep(delay)
-                else:
-                    print(f"API request failed after {retries} attempts: {e}")
-                    return {"error": str(e), "payload": payload}
-
-    elif api_name == "LocalRAG":
-        if "auth_param" in config:
-            payload[config["auth_param"]] = config["api_key"]
-        elif "auth_header" in config:
-            headers[config["auth_header"]] = config["api_key"]
-
-        try:
-            response = requests.post(full_url, json=payload, headers=headers, timeout=20)
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.RequestException as e:
-            return {"error": str(e), "payload": payload}
-
-    else:
-        return {"error": f"Unknown API name '{api_name}'."}
 # ----------------------------------------------------------------------------
 # SEC Toolkit Wrapper
 # ----------------------------------------------------------------------------

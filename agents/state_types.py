@@ -9,34 +9,131 @@ import tools.report_utils as report_utils
 import tools.report_utils_india as report_utils_indian
 
 
-TOOL_MAP: Dict[str, Any] = {
-    "get_sec_10k_section_1":    report_utils.get_sec_10k_section_1,
-    "get_sec_10k_section_1a":   report_utils.get_sec_10k_section_1a,
-    "get_sec_10k_section_7":    report_utils.get_sec_10k_section_7,
-    "get_company_profile":      report_utils.get_company_profile,
-    "get_key_data":             report_utils.get_key_data,
-    "get_competitors":          report_utils.get_competitor_analysis,
-    "get_income_statement":     partial(report_utils.get_financial_statement, statement_type="income_statement"),
-    "get_balance_sheet":        partial(report_utils.get_financial_statement, statement_type="balance_sheet"),
-    "get_cash_flow":            partial(report_utils.get_financial_statement, statement_type="cash_flow_statement"),
-    "get_pe_eps_chart":         report_utils.generate_pe_eps_chart,
-    "get_share_performance_chart": report_utils.generate_share_performance_chart,
-    "get_financial_metrics":        report_utils.get_financial_metrics,
+TOOL_MAP: Dict[str, Dict[str, Any]] = {
+    "get_sec_10k_section_1": {
+        "function": report_utils.get_sec_10k_section_1,
+        "file_type": "txt",
+        "location": "filing"
+    },
+    "get_sec_10k_section_1a": {
+        "function": report_utils.get_sec_10k_section_1a,
+        "file_type": "txt",
+        "location": "filing"
+    },
+    "get_sec_10k_section_7": {
+        "function": report_utils.get_sec_10k_section_7,
+        "file_type": "txt",
+        "location": "filing"
+    },
+    "get_company_profile": {
+        "function": report_utils.get_company_profile,
+        "file_type": "json",
+        "location": "raw_data"
+    },
+    "get_key_data": {
+        "function": report_utils.get_key_data,
+        "file_type": "json",
+        "location": "summaries" # Assuming key_data is a summary output
+    },
+    "get_competitors": {
+        "function": report_utils.get_competitor_analysis,
+        "file_type": "json",
+        "location": "raw_data"
+    },
+    "get_income_statement": {
+        "function": partial(report_utils.get_financial_statement, statement_type="income_statement"),
+        "file_type": "json",
+        "location": "raw_data"
+    },
+    "get_balance_sheet": {
+        "function": partial(report_utils.get_financial_statement, statement_type="balance_sheet"),
+        "file_type": "json",
+        "location": "raw_data"
+    },
+    "get_cash_flow": {
+        "function": partial(report_utils.get_financial_statement, statement_type="cash_flow_statement"),
+        "file_type": "json",
+        "location": "raw_data"
+    },
+    "get_pe_eps_chart": {
+        "function": report_utils.generate_pe_eps_chart,
+        "file_type": "png",
+        "location": "summaries"
+    },
+    "get_share_performance_chart": {
+        "function": report_utils.generate_share_performance_chart,
+        "file_type": "png",
+        "location": "summaries"
+    },
+    "get_financial_metrics": {
+        "function": report_utils.get_financial_metrics,
+        "file_type": "json",
+        "location": "summaries"
+    },
 }
 
-TOOL_IN_MAP: Dict[str, Any] = {
-    "get_sec_10k_section_1":    report_utils_indian.get_annual_report_sections_1,
-    "get_sec_10k_section_1a":   report_utils_indian.get_annual_report_sections_1a,
-    "get_sec_10k_section_7":    report_utils_indian.get_annual_report_sections_7,
-    "get_company_profile":      report_utils_indian.get_company_profile,
-    "get_key_data":             report_utils_indian.get_key_data_india,
-    "get_competitors":          report_utils_indian.get_competitor_analysis,
-    "get_income_statement":     partial(report_utils_indian.get_financial_statement, statement_type="income_statement"),
-    "get_balance_sheet":        partial(report_utils_indian.get_financial_statement, statement_type="balance_sheet"),
-    "get_cash_flow":            partial(report_utils_indian.get_financial_statement, statement_type="cash_flow_statement"),
-    "get_pe_eps_chart":         report_utils_indian.generate_pe_eps_chart_indian_market,
-    "get_share_performance_chart": report_utils_indian.generate_share_performance_chart_indian_market,
-    "get_financial_metrics":        report_utils_indian.get_financial_metrics_indian_market,
+TOOL_IN_MAP: Dict[str, Dict[str, Any]] = {
+    "get_sec_10k_section_1": {
+        "function": report_utils_indian.get_annual_report_sections_1,
+        "file_type": "txt",
+        "location": "filing"
+    },
+    "get_sec_10k_section_1a": {
+        "function": report_utils_indian.get_annual_report_sections_1a,
+        "file_type": "txt",
+        "location": "filing"
+    },
+    "get_sec_10k_section_7": {
+        "function": report_utils_indian.get_annual_report_sections_7,
+        "file_type": "txt",
+        "location": "filing"
+    },
+    "get_company_profile": {
+        "function": report_utils_indian.get_company_profile,
+        "file_type": "json",
+        "location": "raw_data"
+    },
+    "get_key_data": { # Renamed to 'get_key_data' for consistency with main TOOL_MAP,
+                      # even if the function name itself implies India-specific data.
+        "function": report_utils_indian.get_key_data_india,
+        "file_type": "json",
+        "location": "summaries" # Assuming this is a summarized output
+    },
+    "get_competitors": {
+        "function": report_utils_indian.get_competitor_analysis,
+        "file_type": "json",
+        "location": "raw_data"
+    },
+    "get_income_statement": {
+        "function": partial(report_utils_indian.get_financial_statement, statement_type="income_statement"),
+        "file_type": "json",
+        "location": "raw_data"
+    },
+    "get_balance_sheet": {
+        "function": partial(report_utils_indian.get_financial_statement, statement_type="balance_sheet"),
+        "file_type": "json",
+        "location": "raw_data"
+    },
+    "get_cash_flow": {
+        "function": partial(report_utils_indian.get_financial_statement, statement_type="cash_flow_statement"),
+        "file_type": "json",
+        "location": "raw_data"
+    },
+    "get_pe_eps_chart": {
+        "function": report_utils_indian.generate_pe_eps_chart_indian_market,
+        "file_type": "png",
+        "location": "summaries"
+    },
+    "get_share_performance_chart": {
+        "function": report_utils_indian.generate_share_performance_chart_indian_market,
+        "file_type": "png",
+        "location": "summaries"
+    },
+    "get_financial_metrics": {
+        "function": report_utils_indian.get_financial_metrics_indian_market,
+        "file_type": "json",
+        "location": "summaries"
+    },
 }
 
 # --- LangGraph Agent State Type ---- #
@@ -72,6 +169,7 @@ class AgentState(BaseModel):
     audit_notes:          List[str] = Field(default_factory=list)
 
     llm_decision:         Optional[str] = None
+    termination_reason:   Optional[str] = None
     validation_result_key:Optional[str] = None
 
     start_time:        Optional[datetime] = None
@@ -112,64 +210,55 @@ class AgentState(BaseModel):
 
     def get_data_collection_tasks(self) -> List[Dict[str, str]]:
         """
-        Build a list of tasks with target filenames for data collection based on state directories.
+        Build a list of tasks with target filenames for data collection
+        based on the instance's region (self.region) and the appropriate TOOL_MAP.
         """
         tasks: List[Dict[str, str]] = []
-        # SEC sections
-        for section in ["1", "1a", "7"]:
-            key = f"get_sec_10k_section_{section}"
-            filename = f"sec_10k_section_{section}.txt"
-            tasks.append({
-                "task": key,
-                "file": os.path.join(self.filing_dir, filename)
-            })
-        # JSON data in raw
-        for task_name in ["get_company_profile", "get_competitors",
-                           "get_income_statement", "get_balance_sheet", "get_cash_flow"]:
-            json_file = task_name.replace("get_", "") + ".json"
+
+        # Map location string to actual directory path
+        location_map = {
+            "filing": self.filing_dir,
+            "raw_data": self.raw_data_dir,
+            "summaries": self.summaries_dir,
+        }
+
+        # Select the appropriate TOOL_MAP based on self.region
+        selected_tool_map: Dict[str, Dict[str, Any]]
+        region_lower = self.region.lower() # Ensure comparison is case-insensitive
+
+        if region_lower in ("india" or "in"):
+            selected_tool_map = TOOL_IN_MAP # For India specific tools
+            print(f"INFO: Using TOOL_IN_MAP for region: {self.region}")
+        else:
+            selected_tool_map = TOOL_MAP # For US specific tools
+            print(f"INFO: Using TOOL_MAP for region: {self.region}")
+
+        for task_name, metadata in selected_tool_map.items(): # Iterate over the selected map
+            file_type = metadata.get("file_type")
+            location_key = metadata.get("location")
+
+            if not file_type or not location_key:
+                print(f"WARNING: {task_name} entry in selected TOOL_MAP is missing 'file_type' or 'location'. Skipping.")
+                continue
+
+            base_filename = task_name.replace("get_", "")
+            filename = f"{base_filename}.{file_type}"
+
+            target_dir = location_map.get(location_key)
+            if not target_dir:
+                print(f"WARNING: Invalid 'location' specified for '{task_name}': '{location_key}' in selected TOOL_MAP. Skipping.")
+                continue
+
+            full_file_path = os.path.join(target_dir, filename)
+
             tasks.append({
                 "task": task_name,
-                "file": os.path.join(self.raw_data_dir, json_file)
-            })
-        # charts and metrics in summaries
-        for task_name, ext in [("get_financial_metrics", "json"), ("get_key_data", "json"), ("get_pe_eps_chart", "png"), ("get_share_performance_chart", "png")]:
-            filename = task_name.replace("get_", "") + (".png" if ext=="png" else ".json")
-            tasks.append({
-                "task": task_name,
-                "file": os.path.join(self.summaries_dir, filename)
+                "file": full_file_path
             })
         return tasks
 
 # -------------------   Indian Specific eventually coudl be integrated
-    def get_in_data_collection_tasks(self) -> List[Dict[str, str]]:   
-        """
-        Build a list of tasks with target filenames for data collection based on state directories.
-        """
-        tasks: List[Dict[str, str]] = []
-        # SEC sections
-        for section in ["1", "1a", "7"]:
-            key = f"get_sec_10k_section_{section}"
-            filename = f"sec_10k_section_{section}.txt"
-            tasks.append({
-                "task": key,
-                "file": os.path.join(self.filing_dir, filename)
-            })
-        # JSON data in raw
-        for task_name in ["get_company_profile", "get_competitors",
-                           "get_income_statement", "get_balance_sheet", "get_cash_flow"]:
-            json_file = task_name.replace("get_", "") + ".json"
-            tasks.append({
-                "task": task_name,
-                "file": os.path.join(self.raw_data_dir, json_file)
-            })
-        # charts and metrics in summaries
-        for task_name, ext in [("get_pe_eps_chart", "png"), ("get_share_performance_chart", "png"), ("get_financial_metrics", "json"), ("get_key_data", "json")]:
-            filename = task_name.replace("get_", "") + (".png" if ext=="png" else ".json")
-            tasks.append({
-                "task": task_name,
-                "file": os.path.join(self.summaries_dir, filename)
-            })
-        return tasks
+# Usign same general function now get_data_collection_tasks
 # --- Instrumentation & Observability Types ---- #
 class NodeStatus(str, Enum):
     PENDING = "pending"

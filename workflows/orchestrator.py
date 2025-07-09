@@ -120,17 +120,41 @@ def run_orchestration(
     g.add_edge("Data Collection US",   "Validate Collected Data")
     g.add_edge("Data Collection India","Validate Collected Data")
     g.add_node("Synchronize Data", synchronize_data_node)
-    g.add_edge("Validate Collected Data", "Synchronize Data")
+    g.add_conditional_edges(
+        "Validate Collected Data",
+        lambda state: state.llm_decision,
+        {
+            "continue": "Synchronize Data",
+            "end": END,
+        }
+    )
+    #g.add_edge("Validate Collected Data", "Synchronize Data")
     g.add_node("Summarize", summarization_node)
     g.add_edge("Synchronize Data", "Summarize")
     g.add_node("Validate Summaries", validate_summarized_data_node)
     g.add_edge("Summarize", "Validate Summaries")
     g.add_node("Conceptual Analysis", concept_analysis_node)
-    g.add_edge("Validate Summaries", "Conceptual Analysis")
+    g.add_conditional_edges(
+        "Validate Summaries",
+        lambda state: state.llm_decision,
+        {
+            "continue": "Conceptual Analysis",
+            "end": END,
+        }
+    )
+    # g.add_edge("Validate Summaries", "Conceptual Analysis")
     g.add_node("Validate Analyzed Data", validate_analyzed_data_node)
     g.add_edge("Conceptual Analysis", "Validate Analyzed Data")
     g.add_node("Generate Report", generate_report_node)
-    g.add_edge("Validate Analyzed Data", "Generate Report")
+    g.add_conditional_edges(
+        "Validate Analyzed Data",
+        lambda state: state.llm_decision,
+        {
+            "continue": "Generate Report",
+            "end": END,
+        }
+    )
+    #g.add_edge("Validate Analyzed Data", "Generate Report")
     g.add_node("Run Evaluation", run_evaluation_node)
     g.add_edge("Generate Report", "Run Evaluation")
     g.add_edge("Run Evaluation", END)
@@ -172,15 +196,16 @@ def run_orchestration(
         # Stream events and always update current_graph_state with the latest full state
         for event in app.stream(current_graph_state): # Start stream with the initialized state
             logger.info(f"Event: {event}")
+            if "__end__" in event:
+                # Grab the final state and stop streaming
+                final_state = event["__end__"]
+                current_graph_state = final_state
+                break
 
             # LangGraph stream yields {node_name: updated_state_dict} or {'__end__': final_state_dict}
             for node_name, node_output_state in event.items():
                 # node_output_state is the full updated AgentState at that point
                 current_graph_state = node_output_state
-                if node_name == "__end__":
-                    # If it's the __end__ event, we've received the final state.
-                    # The loop will terminate naturally after this.
-                    break # Exit inner loop, outer loop will finish
 
         # --- AFTER THE STREAM LOOP ---
         # current_graph_state now holds the actual final state of the graph.
@@ -193,24 +218,26 @@ def run_orchestration(
         # Check for early termination reason
         llm_decision = return_state.get("llm_decision")
         if llm_decision == "end":
-            reason = return_state.get("termination_reason", "No specific reason provided for early termination.")
+            reason = return_state.get("termination_reason", "Unknoww reason")
             logger.info(f"Orchestration terminated early: {reason}")
-            log_event("orchestration_completed", {"company": company, "year": year, "status": "terminated_early", "reason": reason})
+            status = "terminated_early"
+        else:
+            logger.info("Completed full run")
+            status = "success"
 
-            # Explicitly state that metrics/tables are skipped for early termination
-            logger.info("Skipping metrics extraction and table printing for early termination (llm_decision='end').")
-            return return_state # Exit here, as no further metrics/tables are expected
-
-        else: # This path is for a full, successful graph completion (llm_decision is 'us' or 'india')
-            logger.info("Orchestration completed successfully")
-            log_event("orchestration_completed", {"company": company, "year": year, "status": "success"})
-
+        log_event("orchestration_completed", {
+            "company": company,
+            "year": year,
+            "status": status,
+            "reason": reason if llm_decision == "end" else "",
+        })
 
         # --- Guard against missing memory for all subsequent operations for SUCCESSFUL runs ---
         # This block only executes if llm_decision was NOT 'end'.
         if return_state and 'memory' in return_state:
             # Check for specific keys before printing
-            region_value = return_state.get("llm_decision", "N/A") # llm_decision is at root level of state
+            region_value = return_state.get("region", "N/A")
+            llm_decision_value = return_state.get("llm_decision", "N/A") # llm_decision is at root level of state
 
             # Calculate actual duration from start/end times in memory
             duration_value = "N/A"
@@ -222,9 +249,6 @@ def run_orchestration(
                 except Exception as dur_err:
                     logger.error(f"Error calculating duration: {dur_err}")
                     duration_value = "Calculation Error"
-
-            print("region: ", region_value)
-            print("duration:", duration_value)
 
             # Extract ICAIF Ratings data (assuming it's in memory.final_evaluation.icaif_scores)
             icaif_ratings_data = return_state['memory'].get('final_evaluation', {}).get('icaif_scores', [])
@@ -242,9 +266,6 @@ def run_orchestration(
                 is_pipeline_empty = not bool(pipeline_data)
 
                 if is_icaif_empty and is_pipeline_empty:
-                    # This case should ideally not be reached if llm_decision was not 'end'
-                    # and the full pipeline ran successfully to produce data.
-                    # If it is reached, it means the full pipeline ran but produced no data.
                     print("Full orchestration completed, but no relevant data found for output.")
                 else:
                     print("\nICAIF Ratings:")
@@ -259,11 +280,9 @@ def run_orchestration(
 
                     print("\nPipeline Matrix:")
                     if not is_pipeline_empty:
-                        print(tabulate(
-                            tabular_data=pipeline_data,
-                            headers=["Agent", "Requests", "Avg Latency (s)", "Errors", "Provider", "Model"],
-                            tablefmt="plain" # Or "github" as per your node's print
-                        ))
+                        graph_tools.print_pipeline_kpis(pipeline_data)
+                        print("Total Duration", duration_value)
+
                     else:
                         print("[Data for Pipeline Matrix not available.]")
 

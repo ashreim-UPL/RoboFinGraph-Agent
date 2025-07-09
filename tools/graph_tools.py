@@ -11,6 +11,7 @@ import inspect
 from typing import Dict, Any, List, Callable, Tuple, Optional
 from collections import Counter, defaultdict
 from langchain.schema import HumanMessage
+from tabulate import tabulate
 
 from utils.logger import get_logger, log_event, log_agent_step, log_cost_estimate
 from utils.config_utils import LangGraphLLMExecutor
@@ -22,6 +23,86 @@ from agents.state_types import TOOL_MAP, TOOL_IN_MAP
 
 logger = get_logger()
 logger = logging.getLogger(__name__)
+
+def print_pipeline_kpis(pipeline_data):
+    """
+    Given a list of per-node dicts (pipeline_data), prints three concise tables:
+    1) Node Status
+    2) Duration & Cost Metrics (with human-readable timestamps)
+    3) I/O, Tools & Errors
+    """
+    if not pipeline_data:
+        print("\n[No pipeline data available to display]\n", flush=True)
+        return
+
+    def short_ts(ts):
+        try:
+            return datetime.fromisoformat(ts).strftime("%Y-%m-%d %H:%M:%S")
+        except Exception:
+            return ts
+
+    # 1) Node Status
+    status_cols = ["current_node", "status"]
+    status_table = [
+        {col: row.get(col) for col in status_cols}
+        for row in pipeline_data
+    ]
+    print("\n=== Node Status ===", flush=True)
+    print(tabulate(status_table, headers="keys", tablefmt="plain"), flush=True)
+
+    # 2) Duration & Cost Metrics
+    time_cost_table = []
+    for row in pipeline_data:
+        time_cost_table.append({
+            "current_node":     row["current_node"],
+            "start_time":       short_ts(row["start_time"]),
+            "end_time":         short_ts(row["end_time"]),
+            "duration":         row["duration"],
+            "cost_llm":         row["cost_llm"],
+            "tokens_sent":      row["tokens_sent"],
+            "tokens_generated": row["tokens_generated"],
+        })
+    print("\n=== Duration & Cost Metrics ===", flush=True)
+    print(tabulate(time_cost_table, headers="keys", tablefmt="plain"), flush=True)
+
+    # 1) Tools & Functions
+    tools = row.get("tools_used", [])
+    # show inly single LLM model if used multiple times
+
+    unique_tools = list(dict.fromkeys(tools))
+    tool_table = [
+        {
+            "current_node":    row["current_node"],
+            "tools_used":      ", ".join(unique_tools) or "-",
+        }
+        for row in pipeline_data
+    ]
+    print("\n=== Tools ===")
+    print(tabulate(tool_table, headers="keys", tablefmt="plain"))
+
+    function_table = [
+        {
+            "current_node":    row["current_node"],
+            "functions_used":  ", ".join(row.get("functions_used", [])) or "-",
+        }
+        for row in pipeline_data
+    ]
+    print("\n=== Functions ===")
+    print(tabulate(function_table, headers="keys", tablefmt="plain"))
+
+    # 2) Errors & File I/O
+    cols_io = ["current_node", "errors", "files_read", "files_created"]
+    io_table = [
+        {
+            "current_node": row["current_node"],
+            "errors":       ", ".join(row.get("errors", [])) or "-",
+            "files_read":   ", ".join(row.get("files_read", [])) or "-",
+            "files_created":", ".join(row.get("files_created", [])) or "-",
+        }
+        for row in pipeline_data
+    ]
+    print("\n=== Errors & File I/O ===")
+    print(tabulate(io_table, headers="keys", tablefmt="plain"))
 
 # --- Node Functions ---
 def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
@@ -95,7 +176,8 @@ def collect_indian_financial_data(state: AgentState) -> Dict[str, List[str]]:
             errors.append(msg)
             continue
 
-        tool_fn = TOOL_IN_MAP[tool_name]
+        tool_info = TOOL_IN_MAP[tool_name]
+        tool_fn = tool_info["function"]
         try:
             os.makedirs(os.path.dirname(out_file_path), exist_ok=True)
             sig = inspect.signature(tool_fn)
@@ -170,7 +252,8 @@ def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
             errors.append(msg)
             continue
 
-        tool_fn = TOOL_MAP[tool_name]
+        tool_info = TOOL_MAP[tool_name]
+        tool_fn = tool_info["function"]
         try:
             os.makedirs(os.path.dirname(out_file_path), exist_ok=True)
             sig = inspect.signature(tool_fn)
@@ -430,9 +513,6 @@ def generate_concept_insights(
 
         insights[section_key] = response.content
         count += 1
-
-    # after loop, you can also do
-    print("Insight keys produced:", list(insights.keys()))
 
     return insights, count
 

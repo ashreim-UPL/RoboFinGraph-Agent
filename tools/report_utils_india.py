@@ -10,29 +10,17 @@ import logging
 
 # Import the core API calling functions from your toolkit
 
-from .global_API_toolkit import make_api_request2, save_to_file
-from .charting import *
+from .global_API_toolkit import save_to_file, get_cached_stock_data
+from .charting import get_indian_share_performance, get_pe_eps_performance_indian_market
 from .rag_api_utils import get_annual_report_section, perform_similarity_search
 
 
-def get_cached_stock_data(ticker, force_refresh=False):
-    cash_dir = "cash_data"
-    os.makedirs(cash_dir, exist_ok=True)
-    fname = f"{cash_dir}/{ticker}_stock.json"
-    if os.path.exists(fname) and not force_refresh:
-        with open(fname, "r") as f:
-            return json.load(f)
-    else:
-        data = make_api_request2("IndianMarket", "/stock", {"name": ticker})
-        with open(fname, "w") as f:
-            json.dump(data, f, indent=2)
-        return data
 
 def get_key_data_india(ticker: str, save_path: str) -> str:
 
     r= get_cached_stock_data(ticker)
     # r = make_api_request2("IndianMarket", "/stock", {"name": ticker})
-    print(f"API response for {ticker}:\n{r}")
+    # print(f"API response for {ticker}:\n{r}")
 
     if not isinstance(r, dict) or not r:
         print("API returned no or invalid data")

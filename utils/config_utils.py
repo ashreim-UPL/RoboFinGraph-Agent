@@ -37,6 +37,31 @@ def load_config(config_path: str = None) -> Dict[str, Any]:
 
 def inject_provider_pricing(config: Dict[str, Any]) -> None: # RENAMED
     # First, handle Together.ai pricing dynamically for all Together-hosted models
+
+    GOOGLE_STATIC_PRICING = {
+        "gemini-pro": {
+            "input":  (0.000125, 0.000250),
+            "output": (0.000375, 0.000500),
+        },
+        "gemini-pro-vision": {
+            # midpoint of gemini-pro
+            "input":  (0.000125 + 0.000250) / 2,   # 0.0001875
+            "output": (0.000375 + 0.000500) / 2,   # 0.0004375
+        },
+        "gemini-1.5-pro": {
+            "input":  0.0035,
+            "output": 0.0105,
+        },
+        "gemini-1.5-flash": {
+            "input":  0.00035,
+            "output": 0.000525,
+        },
+        "models/embedding-001": {
+            "input":  0.0001,
+            "output": 0.0,         # embeddings don’t cost for “output” tokens
+        },
+    }
+
     together_api_key_found = False
     together_base_url = None
     together_api_key = None
@@ -57,29 +82,42 @@ def inject_provider_pricing(config: Dict[str, Any]) -> None: # RENAMED
     else:
         logger.warning("No valid Together.ai API key found for Together-hosted models. Cannot fetch Together.ai pricing dynamically.")
 
-    # iterate through all providers to inject pricing into environment variables
-    for prov, pdata in config.get("providers", {}).items():
-        price_in, price_out = 0.0, 0.0
+    # Create a place to store per‐model pricing
+    config["provider_model_pricing"] = {}
+    for prov, pdata in config["providers"].items():
+        default_in  = pdata.get("pricing", {}).get("input",  0.0)
+        default_out = pdata.get("pricing", {}).get("output", 0.0)
+        models = pdata.get("models", [])
 
-        # Prioritize pricing from the config itself if explicitly defined
-        if "pricing" in pdata:
-            price_in = pdata["pricing"].get("input", 0.0)
-            price_out = pdata["pricing"].get("output", 0.0)
+        per_model = {}
+        if prov == "openai":
+            for m in models:
+                per_model[m] = {"input": default_in, "output": default_out}
 
-        # For Together-hosted models, try to get dynamic pricing from the fetched map
-        elif prov != "openai" and prov != "google" and config.get("_together_pricing_map"):
-            model_name_for_pricing = pdata.get("models")[0] if pdata.get("models") else None
-            if model_name_for_pricing:
-                model_pricing = config["_together_pricing_map"].get(model_name_for_pricing, {})
-                price_in = model_pricing.get("input", price_in) # Use fallback if not found
-                price_out = model_pricing.get("output", price_out) # Use fallback if not found
-                # Store in environment
-                os.environ[f"{prov.upper()}_PRICE_INPUT"]  = str(price_in)
-                os.environ[f"{prov.upper()}_PRICE_OUTPUT"] = str(price_out)
+        elif prov == "google":
+            for m, info in GOOGLE_STATIC_PRICING.items():
+                in_rate  = info["input"]  if isinstance(info["input"], float)  else info["input"][1]
+                out_rate = info["output"] if isinstance(info["output"], float) else (info["output"][1] if info["output"] else 0.0)
+                per_model[m] = {"input": in_rate, "output": out_rate}
 
+        else:
+            tmap = config.get("_together_pricing_map", {})
+            for m in models:
+                pm = tmap.get(m, {})
+                per_model[m] = {
+                    "input":  pm.get("input",  default_in),
+                    "output": pm.get("output", default_out)
+                }
 
-        logger.info(f"Injected pricing for {prov}: in={price_in} out={price_out}")
-        log_event("provider_pricing_injected", {"provider": prov, "input": price_in, "output": price_out})
+        config["provider_model_pricing"][prov] = per_model
+        for prov, models in config["provider_model_pricing"].items():
+            for model_name, prices in models.items():
+                key_base = model_name
+                os.environ[f"{key_base}_PRICE_INPUT"]  = str(prices["input"])
+                os.environ[f"{key_base}_PRICE_OUTPUT"] = str(prices["output"])
+        # (Optional) Log it all for debug
+        for m, prices in per_model.items():
+            log_event("model_pricing_set", {"provider": prov, "model": m, **prices})
 
 def prepare_config_and_env(
     config_path: str,
@@ -248,10 +286,8 @@ def inject_model_env(model_config: Dict[str, Any]) -> None:
     if api_type == "openai":
         os.environ["OPENAI_API_KEY"] = model_config.get("api_key", "")
         os.environ["OPENAI_BASE_URL"] = model_config.get("base_url", "")
-    elif api_type == "google": # Corrected syntax
+    elif api_type == "google": 
         os.environ["GOOGLE_API_KEY"] = model_config.get("api_key", "")
-        # Google Generative AI typically doesn't use a configurable base_url for direct API
-        # Set to empty string if base_url is None in config to prevent errors
         os.environ["GOOGLE_BASE_URL"] = model_config.get("base_url", "") or "" 
     else: # Covers Together and other Together-hosted providers
         os.environ["TOGETHER_API_KEY"] = model_config.get("api_key", "")
@@ -303,7 +339,7 @@ def _init_llm(provider: str, model_name: str, config: Dict[str, Any]) -> Any:
             model=model_name,
             temperature=temperature,
             max_tokens=max_tokens,
-            request_timeout=tool_timeout,
+            timeout=tool_timeout,
         )
     else:
         # 1) Push into the Together env vars
@@ -370,9 +406,10 @@ class LangGraphLLMExecutor:
                 logger.warning(f"get_num_tokens or get_num_tokens_from_messages not available for {self.provider}:{self.model_name}. Token counts may be inaccurate.")
 
             # Calculate cost using your pre-defined pricing
-            price_in  = float(os.environ.get("GOOGLE_PRICE_INPUT", 0.0))
-            price_out = float(os.environ.get("GOOGLE_PRICE_OUTPUT", 0.0))
-            cost      = prompt_tokens * price_in + completion_tokens * price_out
+            key_base     = f"{self.model_name}"
+            price_in  = float(os.environ.get(f"{key_base}_PRICE_INPUT",  0.0))
+            price_out = float(os.environ.get(f"{key_base}_PRICE_OUTPUT", 0.0))
+            cost      = (prompt_tokens * price_in + completion_tokens * price_out)/1000
 
         else: # Logic for Together-hosted models (mixtral, qwen, meta, deepseek)
             max_retries   = 3
@@ -405,8 +442,9 @@ class LangGraphLLMExecutor:
                 completion_tokens = usage.get("completion_tokens", 0)
 
             # compute cost from injected pricing
-            price_in  = float(os.environ.get(f"{self.provider.upper()}_PRICE_INPUT", 0.0))
-            price_out = float(os.environ.get(f"{self.provider.upper()}_PRICE_OUTPUT", 0.0))
+            key_base     = f"{self.model_name}"
+            price_in  = float(os.environ.get(f"{key_base}_PRICE_INPUT",  0.0))
+            price_out = float(os.environ.get(f"{key_base}_PRICE_OUTPUT", 0.0))
             cost = (prompt_tokens * price_in + completion_tokens * price_out)/1000000
             # retry_count is already handled by `actual_retries`
 
