@@ -1,29 +1,51 @@
+# ==== Personal & Config Files ====
 PERSONAL_KEYS
 finrobot_config.json
+
+# ==== Python Bytecode & Cache ====
 __pycache__/
 *.pyc
 *.pyo
+*.pyo
+*.bak
+*.json.bak.json
+
+# ==== Environment & Virtualenv ====
+.venv/
+venv/
+venv/pyvenv.cfg
 .env/
 .env.*
-.ipynb_checkpoints/
+.env
+
+# ==== Data, Cache, Checkpoints ====
 .cache/
-*.csv
-*.jpg
-*.png
-quant/
-coding/
-*.egg-info/
-.DS_Store
-projects/
+data/
+.ipynb_checkpoints/
+SEC_SECTION_CACHE/
+
+# ==== Logs ====
+logs/
+logs/*.log
+*.log
+
+# ==== Output, Build, Reports ====
 dist/
 tmp/
 filings/
-.venv/
 report/
 Old Reports/
 report- old/
-venv/pyvenv.cfg
+projects/
+
+# ==== Frontend Artifacts ====
 frontend/vite-ui/
 frontend/node_modules/
-logs/*.log
-venv/
+node_modules/
+
+# ==== OS & Editor Artifacts ====
+.DS_Store
+Thumbs.db
+
+# ==== Miscellaneous ====
+# (add other patterns here as needed)
