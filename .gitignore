@@ -1,23 +1,22 @@
-PERSONAL_KEYS
-finrobot_config.json
-__pycache__/
-.ipynb_checkpoints/
+# Ignore log directories and files
+logs/
+*.log
+
+# Ignore virtual environment
+venv/
+.env
+
+# Ignore data, cache, and other large or generated directories
 .cache/
-*.csv
-*.jpg
-*.png
-quant/
-coding/
-*.egg-info/
+data/
+report/
+SEC_SECTION_CACHE/
+node_modules/
+*.bak
+*.json.bak.json
+
+# Ignore OS & editor artifacts
 .DS_Store
-projects/
-dist/
-tmp/
-filings/
-.venv/
-/report/
-/Old Reports/
-/report- old/
-venv/pyvenv.cfg
-frontend/vite-ui
-frontend/node_modules
+Thumbs.db
+*.pyc
+__pycache__/
