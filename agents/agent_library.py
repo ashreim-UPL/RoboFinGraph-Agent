@@ -56,7 +56,6 @@ def record_node(node_key: str):
         @wraps(fn)
         def wrapper(agent_state: AgentState, *args, **kwargs):
             node_start = datetime.now(timezone.utc)
-
             # --- TRACK NODE SEQUENCE ---
             pipeline_nodes = agent_state.memory.setdefault("pipeline_nodes", [])
             if not pipeline_nodes or pipeline_nodes[-1] != node_key:
@@ -72,6 +71,7 @@ def record_node(node_key: str):
                 "tokens_sent": 0,
                 "tokens_generated": 0,
                 "tools_used": [],
+                "functions_used": [],
                 "errors": [],
                 "files_read": [],
                 "files_created": [],
@@ -98,13 +98,25 @@ def record_node(node_key: str):
                 agent_state.error_log.append(f"{node_key}: {e}")
                 raise
             finally:
+                # finish timing
                 node_end = datetime.now(timezone.utc)
-                record["end_time"] = node_end.isoformat()
-                record["duration"] = (node_end - node_start).total_seconds()
-
-                # Update pipeline_end_time each node
+                record["end_time"]   = node_end.isoformat()
+                record["duration"]   = (node_end - node_start).total_seconds()
                 agent_state.memory["pipeline_end_time"] = node_end.isoformat()
 
+                # — Inject LLM KPIs only if this node actually ran an LLM call —
+                models = agent_state.memory.get("models_used", [])
+                if models:
+                    last = models[-1]
+                    # only pull in metrics if it’s our node
+                    if last.get("agent") == node_key:
+                        record["tokens_sent"]      = last.get("tokens_sent", 0)
+                        record["tokens_generated"] = last.get("tokens_generated", 0)
+                        record["cost_llm"]         = last.get("cost_llm", 0.0)
+                        record["tools_used"]       = [f"{last.get('provider')}:{last.get('model')}"]
+
+
+                # append & stream node_end
                 pipeline.append(record)
                 sys.stdout.write(json.dumps({
                     "event_type": "node_end",
@@ -139,6 +151,12 @@ def resolve_company_node(agent_state: AgentState) -> AgentState:
     try:
         # 2. Call the  process_company_data function.
         result = process_company_data(company_query, year) 
+
+        # <-- record that function call -->
+        rec = getattr(agent_state, "_current_node_record", None)
+        if rec is not None:
+            rec.setdefault("functions_used", []).append("process_company_data")
+
         # 3. Update the agent_state with the LLM's results.
         data = result.get("llm_result", {}) if result else {}
 
@@ -162,7 +180,7 @@ def resolve_company_node(agent_state: AgentState) -> AgentState:
         model_end = datetime.now(timezone.utc)
         model_duration = (model_end - model_start).total_seconds()
         agent_state.memory.setdefault("models_used", []).append({
-            "agent": "company search",
+            "agent": "Get Company Details",
             "provider": "OpenAI",
             "model": "gpt-4o-search-preview-2025-03-11",
             "tokens_sent": result.get("tokens_sent", 0),
@@ -207,6 +225,8 @@ def region_decision_node(agent_state: AgentState) -> AgentState:
             branch = "india"
         else:
             # If region is detected but not 'us' or 'india', route to 'end'
+            agent_state.termination_reason = "Unsupported region"
+            agent_state.error_log.append(f"Unsupported region: {region}")
             branch = "end"
 
     # 3) Persist both the “decision” and the explicit branch flag
@@ -241,20 +261,35 @@ def data_collection_us_node(agent_state: AgentState) -> Dict[str, Any]:
     
         # Call the comprehensive data collection tool
         collection_results = collect_us_financial_data(agent_state)
-  
+        # <-- record that function call -->
+        rec = getattr(agent_state, "_current_node_record", None)
+        if rec is not None:
+            rec.setdefault("functions_used", []).append("collect_us_financial_data")
+
         # Update the AgentState based on the results from the tool
         # Ensure raw_data_files and error_log are lists in AgentState
         updated_raw_data_files = list(agent_state.raw_data_files) + collection_results["collected_files"]
         updated_error_log = list(agent_state.error_log) + collection_results["errors"]
 
         messages = list(agent_state.messages) # Start with existing messages
+        now = datetime.now(timezone.utc).isoformat()
+
         for f in collection_results["collected_files"]:
-            messages.append(HumanMessage(content=f"Successfully collected: {os.path.basename(f)}"))
+            agent_state.messages.append({
+            "role":    "assistant",
+            "content": f"Successfully collected: {os.path.basename(f)}",
+            "ts":      now
+            })
+
         for err in collection_results["errors"]:
-            messages.append(HumanMessage(content=f"Error during data collection: {err}"))
+            agent_state.messages.append({
+            "role":    "assistant",
+            "content": f"Error during data collection: {err}",
+            "ts":      now
+            })
             
         errors_list = collection_results.get("errors", []) # Safely get 'errors', default to empty list if not present
-        status = NodeStatus.COMPLETED.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
+        status = NodeStatus.SUCCESS.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
 
         agent_state.llm_provider = "NA"
         agent_state.llm_model = "NA"
@@ -308,20 +343,36 @@ def data_collection_indian_node(agent_state: AgentState) -> AgentState:
     
         # Call the comprehensive data collection tool
         collection_results = collect_indian_financial_data(agent_state)
-  
+
+        # <-- record that function call -->
+        rec = getattr(agent_state, "_current_node_record", None)
+        if rec is not None:
+            rec.setdefault("functions_used", []).append("collect_indian_financial_data")
+
         # Update the AgentState based on the results from the tool
         # Ensure raw_data_files and error_log are lists in AgentState
         updated_raw_data_files = list(agent_state.raw_data_files) + collection_results["collected_files"]
         updated_error_log = list(agent_state.error_log) + collection_results["errors"]
 
         messages = list(agent_state.messages) # Start with existing messages
+        now = datetime.now(timezone.utc).isoformat()
+
         for f in collection_results["collected_files"]:
-            messages.append(HumanMessage(content=f"Successfully collected: {os.path.basename(f)}"))
+            agent_state.messages.append({
+            "role":    "assistant",
+            "content": f"Successfully collected: {os.path.basename(f)}",
+            "ts":      now
+            })
+
         for err in collection_results["errors"]:
-            messages.append(HumanMessage(content=f"Error during data collection: {err}"))
-            
+            agent_state.messages.append({
+            "role":    "assistant",
+            "content": f"Error during data collection: {err}",
+            "ts":      now
+            })
+
         errors_list = collection_results.get("errors", []) # Safely get 'errors', default to empty list if not present
-        status = NodeStatus.COMPLETED.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
+        status = NodeStatus.SUCCESS.value if not errors_list else NodeStatus.PARTIAL_FAILURE.value
 
         agent_state.llm_provider = "NA"
         agent_state.llm_model = "NA"
@@ -360,30 +411,45 @@ def validate_collected_data_node(agent_state: AgentState) -> AgentState:
     # 1. Build the list of expected files
     tasks = agent_state.get_data_collection_tasks()
 
+    # <-- record that function call -->
+    rec = getattr(agent_state, "_current_node_record", None)
+    if rec is not None:
+        rec.setdefault("functions_used", []).append("get_data_collection_tasks")
+
     # 2. Delegate existence + JSON validity to helper
     result = validate_raw_data(tasks)
+ 
+    # <-- record that function call -->
+    rec = getattr(agent_state, "_current_node_record", None)
+    if rec is not None:
+        rec.setdefault("functions_used", []).append("validate_raw_data")
     
     # ----------------------------------
-
-    # 3. Capture which files we actually read
-    #for path in result["files_read"]:
-    #    node_state.files_read.append(path)
+    # 3. Capture which files we actually read and replace the collected log
+    for path in result["files_read"]:
+        agent_state.raw_data_files.append(path)
 
     # 4. Compute pass/fail
     total      = result["total"]
     valid_cnt  = result["valid_count"]
     if valid_cnt == total:
+        agent_state.llm_decision       = "continue"
         agent_state.accuracy_score        = 1.0
         agent_state.validation_result_key = "valid"
     else:
+        agent_state.llm_decision       = "end"
         agent_state.accuracy_score        = 0.0
         agent_state.validation_result_key = "invalid"
 
         missing = result.get("missing_files", [])
         corrupt = result.get("corrupt_files", [])
         reasons = []
-        if missing: reasons.append(f"missing: {missing}")
-        if corrupt: reasons.append(f"corrupt: {corrupt}")
+        if missing: 
+            reasons.append(f"missing: {missing}")
+            agent_state.termination_reason = "Missing files"
+        if corrupt: 
+            reasons.append(f"corrupt: {corrupt}")
+            agent_state.termination_reason = "Corrupt files"
 
         agent_state.error_log.append(
             f"validate_collected_data failed ({'; '.join(reasons)})"
@@ -447,7 +513,7 @@ def summarization_node(agent_state: AgentState) -> AgentState:
         os.path.basename(task["file"]): task["file"]
         for task in agent_state.get_data_collection_tasks()
     }
-
+    
     for key in required:
         spec = summarization_prompt_library[key]
 
@@ -474,19 +540,6 @@ def summarization_node(agent_state: AgentState) -> AgentState:
         )
         text = resp.content.strip()
 
-        # IF NOde is LLM we don't need this here- testing
-        """agent_state.llm_provider = str(executor.provider)
-        agent_state.llm_model = str(executor.model_name)
-        # === LOG LLM/AGENT USAGE ===
-        agent_state.memory.setdefault("models_used", []).append({
-            "agent": "summarization",
-            "provider": agent_state.llm_provider,
-            "model": agent_state.llm_model,
-            "tokens_sent": agent_state.tokens_sent,
-            "tokens_generated": agent_state.tokens_generated,
-            "cost_llm": agent_state.cost_llm,
-        })"""
-
         # --- write out to preliminary_dir ---
         out_path = prelim_dir / f"{key}.txt"
         out_path.write_text(text, encoding="utf-8")
@@ -497,6 +550,14 @@ def summarization_node(agent_state: AgentState) -> AgentState:
     # persist into state
     agent_state.memory["summaries"] = summaries
     agent_state.preliminary_files = files
+    print(f"[DEBUG] Summarizer executor → provider={executor.provider}, model={executor.model_name}")
+    print("agent state llm ", agent_state.llm_provider)
+    print("agent state model ", agent_state.llm_model)
+    print("llm cost", agent_state.cost_llm)
+    print("llm tokens sent", agent_state.tokens_sent)
+    print("llm tokens generated", agent_state.tokens_generated)
+
+    input("model check")
 
     return agent_state
 
@@ -514,6 +575,11 @@ def validate_summarized_data_node(agent_state: AgentState) -> AgentState:
     # 2) Delegate to our validation utility
     result = validate_summaries(summaries, specs)
 
+    # <-- record that function call -->
+    rec = getattr(agent_state, "_current_node_record", None)
+    if rec is not None:
+        rec.setdefault("functions_used", []).append("validate_summaries")
+
     # 3) Store the raw validation results
     agent_state.memory["summary_validation"] = result
 
@@ -521,10 +587,15 @@ def validate_summarized_data_node(agent_state: AgentState) -> AgentState:
     overall = result.get("overall_score", 0.0)
     agent_state.accuracy_score        = overall
     agent_state.validation_result_key = "valid" if overall >= 1.0 else "invalid"
+    agent_state.llm_decision       = "continue"
+
 
     # 5) If any section failed, we end the pipeline
     if overall < 1.0:
         agent_state.memory["branch"] = "end"
+        agent_state.termination_reason = "Summary validation failed"
+        agent_state.error_log.append("Summary validation failed")
+        agent_state.llm_decision       = "end"
 
     agent_state.llm_provider = "None"
     agent_state.llm_model = "None"
@@ -552,6 +623,11 @@ def concept_analysis_node(agent_state: AgentState) -> AgentState:
     raw = agent_state.memory.get("summaries", {})
     insights, _ = generate_concept_insights(raw, executor, agent_state.company_details["company_name"])
     agent_state.memory["concepts"] = insights
+
+    # <-- record that function call -->
+    rec = getattr(agent_state, "_current_node_record", None)
+    if rec is not None:
+        rec.setdefault("functions_used", []).append("generate_concept_insights")
 
     # write out only the eight canonical files
     sum_dir = Path(agent_state.summaries_dir)
@@ -594,6 +670,11 @@ def validate_analyzed_data_node(agent_state: AgentState) -> AgentState:
     # 2) Call our shared validation util
     result = validate_insights(insights)
 
+    # <-- record that function call -->
+    rec = getattr(agent_state, "_current_node_record", None)
+    if rec is not None:
+        rec.setdefault("functions_used", []).append("validate_insights")
+
     # 3) Persist raw validation results
     agent_state.memory["insight_validation"] = result
 
@@ -601,10 +682,15 @@ def validate_analyzed_data_node(agent_state: AgentState) -> AgentState:
     overall = result.get("overall_score", 0.0)
     agent_state.accuracy_score        = overall
     agent_state.validation_result_key = "valid" if overall >= 1.0 else "invalid"
+    agent_state.llm_decision       = "continue"
 
     # 5) If any section failed, terminate the pipeline
     if overall < 1.0:
         agent_state.memory["branch"] = "end"
+        agent_state.termination_reason = "Insight validation failed"
+        agent_state.error_log.append("Insight validation failed")
+        agent_state.llm_decision       = "end"
+
 
     agent_state.llm_provider = "None"
     agent_state.llm_model = "None"
@@ -674,6 +760,10 @@ def generate_report_node(agent_state: AgentState) -> AgentState:
         summaries         = appendix,   # now a proper filename→content map
     )
 
+    rec = getattr(agent_state, "_current_node_record", None)
+    if rec is not None:
+        rec.setdefault("functions_used", []).append("build_annual_report")
+
     # 6) Record the PDF on state so you can inspect it
     agent_state.memory["final_report_path"]   = str(pdf_path)
     agent_state.memory["final_report_status"] = result
@@ -724,8 +814,9 @@ def parse_icaif_scores(response: str) -> dict:
             scores[key] = int(m2.group(1)) if m2 else None
 
     return scores
-
-def run_evaluation_node(agent_state: "AgentState") -> "AgentState":
+    
+@record_node("Run Evaluation")
+def run_evaluation_node(agent_state: AgentState) -> AgentState:
     """
     Perform final pipeline evaluation: quantitative KPIs + qualitative LLM audit.
     Enhanced to include ICAIF scoring and a pipeline stats matrix.
@@ -737,7 +828,6 @@ def run_evaluation_node(agent_state: "AgentState") -> "AgentState":
 
     # === 2) ICAIF LLM-based report scoring ===
     report_text = agent_state.memory.get("generated_report_text", "")
-
     icaif_prompt = (
         "You are a financial analyst. Evaluate the following report on ICAIF criteria.\n"
         "[Accuracy], [Logicality], [Storytelling] — provide scores 0-10:\n\n"
@@ -745,85 +835,95 @@ def run_evaluation_node(agent_state: "AgentState") -> "AgentState":
     )
     messages = [HumanMessage(content=icaif_prompt)]
 
-    # Save ICAIF prompt for debug
+    # Save prompt & response for debug...
     work_dir = getattr(agent_state, "work_dir", ".")
     os.makedirs(work_dir, exist_ok=True)
-    prompt_path = os.path.join(work_dir, "icaif_prompt_debug.txt")
-    with open(prompt_path, "w", encoding="utf-8") as f:
-        f.write(icaif_prompt)
+    (Path(work_dir) / "icaif_prompt_debug.txt").write_text(icaif_prompt, encoding="utf-8")
 
-    # Run the LLM for ICAIF
-    icaif_response_msg = audit_executor.llm(messages)
-    icaif_response = getattr(icaif_response_msg, "content", str(icaif_response_msg))
-
-    # Save ICAIF LLM response for debug
-    response_path = os.path.join(work_dir, "icaif_response_debug.txt")
-    with open(response_path, "w", encoding="utf-8") as f:
-        f.write(icaif_response)
+    icaif_response_msg = audit_executor.generate(messages, agent_state)
+    icaif_response = icaif_response_msg.content
+    (Path(work_dir) / "icaif_response_debug.txt").write_text(icaif_response, encoding="utf-8")
 
     # Parse ICAIF scores
     icaif_scores = parse_icaif_scores(icaif_response)
-    # Save parsed scores for debug
-    scores_path = os.path.join(work_dir, "icaif_scores_debug.json")
-    with open(scores_path, "w", encoding="utf-8") as f:
-        json.dump(icaif_scores, f, indent=2, ensure_ascii=False)
+    (Path(work_dir) / "icaif_scores_debug.json").write_text(
+        json.dumps(icaif_scores, indent=2), encoding="utf-8"
+    )
 
-    # === 3) Quantitative & Qualitative evaluation (pass ICAIF scores to KPIs) ===
-    result = evaluate_pipeline(agent_state, icaif_scores=icaif_scores)
-    pipeline_steps = result.get("pipeline_steps", [])
+    # === 3) Quantitative & Qualitative evaluation ===
+    result          = evaluate_pipeline(agent_state, icaif_scores=icaif_scores)
+    pipeline_steps  = result.get("pipeline_steps", [])
+    global_provider = result["kpis"].get("main_llm_provider", "unknown")
 
-    # === 4) Build pipeline matrix (agent stats) ===
-    agent_stats = defaultdict(lambda: {"requests": 0, "latencies": [], "errors": 0})
-    for step in pipeline_steps:
-        node = step.get("current_node", "unknown")   # Updated for new schema!
-        agent_stats[node]["requests"] += 1
-        agent_stats[node]["latencies"].append(step.get("duration", 0))
-        if step.get("errors"):
-            agent_stats[node]["errors"] += len(step.get("errors"))
+    # --- record that we called evaluate_pipeline() ---
+    rec = getattr(agent_state, "_current_node_record", None)
+    if rec is not None:
+        rec.setdefault("functions_used", []).append("evaluate_pipeline")
 
+    # === 4) Build the Pipeline Matrix including Functions Used ===
     pipeline_matrix = []
-    for agent_name, stat in agent_stats.items():
-        avg_latency = (sum(stat["latencies"]) / len(stat["latencies"])) if stat["latencies"] else 0
+    for step in pipeline_steps:
+        node       = step.get("current_node", "unknown")
+        latency    = round(step.get("duration", 0.0), 1)
+        errors     = len(step.get("errors", []))
+
+        # grab provider/model from tools_used
+        tools = step.get("tools_used", [])
+        if tools:
+            provider, model = tools[0].split(":", 1)
+        else:
+            provider, model = global_provider, "unknown"
+
+        # join the functions_used list into a string
+        funcs = step.get("functions_used", [])
+        funcs_str = ", ".join(funcs) if funcs else "[none]"
+
         pipeline_matrix.append([
-            agent_name,
-            stat["requests"],
-            round(avg_latency, 1),
-            stat["errors"],
-            stat.get("provider", "unknown"),
-            stat.get("model", "unknown"),
+            node,  # Agent
+            1,     # Requests
+            latency,
+            errors,
+            provider,
+            model,
+            funcs_str
         ])
 
-    # === 5) Save back to agent_state ===
-    result["icaif_scores"] = icaif_scores
+    # === 5) Save back to state ===
+    result["icaif_scores"]    = icaif_scores
     result["pipeline_matrix"] = pipeline_matrix
     agent_state.memory["final_evaluation"] = result
-    agent_state.accuracy_score = result["kpis"].get("total_pipeline_cost_usd", 0)
+    agent_state.accuracy_score = result["kpis"].get("total_pipeline_cost_usd", 0.0)
 
-    # === 6) Pretty print to console ===
-    print("### ICAIF Ratings ###")
-    print(tabulate(icaif_scores.items(), headers=["Criterion", "Score"], tablefmt="github"))
+    # === 6) Pretty-print to console ===
+    if icaif_scores:
+        print("### ICAIF Ratings ###")
+        print(tabulate(
+            icaif_scores.items(),
+            headers=["Criterion", "Score"],
+            tablefmt="github"
+        ))
+    else:
+        print("### No ICAIF scores available ###")
+
     print("\n### Pipeline Matrix ###")
     print(tabulate(
         pipeline_matrix,
-        headers=["Agent", "Requests", "Avg Latency (sec)", "Errors", "Provider", "Model"],
+        headers=["Agent", "Requests", "Avg Latency (sec)", "Errors",
+                 "Provider", "Model", "Functions Used"],
         tablefmt="github"
     ))
 
-    # === 7) Persist all evaluation data ===
+    # === 7) Persist to disk ===
     metrics_to_save = {
-        "final_evaluation": result,
-        "icaif_scores": icaif_scores,
-        "pipeline_matrix": pipeline_matrix,
-        "pipeline_data": pipeline_steps,
-        "agent_stats": dict(agent_stats),
-        "error_log": getattr(agent_state, "error_log", []),
+        "final_evaluation":   result,
+        "icaif_scores":       icaif_scores,
+        "pipeline_matrix":    pipeline_matrix,
+        "pipeline_data":      pipeline_steps,
+        "error_log":          agent_state.error_log,
     }
-    out_path = os.path.join(work_dir, "pipeline_metrics.json")
-    try:
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(metrics_to_save, f, indent=2, default=str)
-        print(f"[✓] Pipeline metrics saved to {out_path}")
-    except Exception as e:
-        print(f"[!] Could not save pipeline metrics: {e}")
+    out_path = Path(work_dir) / "pipeline_metrics.json"
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(metrics_to_save, f, indent=2, default=str)
+    print(f"[✓] Pipeline metrics saved to {out_path}")
 
     return agent_state

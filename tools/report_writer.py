@@ -337,17 +337,6 @@ class ReportLabUtils:
         content.append(Paragraph("Competitors Analysis", subtitle_style))
         content.append(Paragraph(summaries.get("competitors_analysis.txt",""), custom_style))
 
-        print("\n======= DEBUG: ReportLabUtils.build_annual_report ASSET MAP =======")
-        print("ticker_symbol:", ticker_symbol)
-        print("filing_date:", filing_date)
-        print("output_pdf_path:", output_pdf_path)
-        #print("Section Map:", summaries)
-        print("Share Performance Image:", share_performance_image_path, "Exists:", os.path.exists(share_performance_image_path) if share_performance_image_path else 'N/A')
-        print("PE/EPS Image:", pe_eps_performance_image_path, "Exists:", os.path.exists(pe_eps_performance_image_path) if pe_eps_performance_image_path else 'N/A')
-        print("Report Sections:")
-        for k,v in summaries.items():
-            print(f"  {k}: {'FOUND' if v and not v.startswith('Content file not found') else 'MISSING'} ({len(v) if isinstance(v,str) else 'N/A'})")
-        print("===================================================================\n")
 
         doc.build(content)
 

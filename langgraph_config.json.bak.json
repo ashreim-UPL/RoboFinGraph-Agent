@@ -12,67 +12,27 @@
   "providers": {
     "openai": {
       "api_key": "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",
-      "base_url": "https://api.openai.com/v1",
-      "models":[
-        "gpt-4.1-2025-04-14",
-        "gpt-4.1-nano-2025-04-14",
-        "gpt-4o-search-preview-2025-03-11"
-      ]
+      "base_url": "https://api.openai.com/v1"
     },
     "mixtral": {
         "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
-        "base_url": "https://api.together.xyz/v1",
-        "models": [
-            "mistralai/Mixtral-8x7B-Instruct-v0.1",
-            "mistralai/Mistral-7B-Instruct-v0.2",
-            "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO"
-        ]
+        "base_url": "https://api.together.xyz/v1"
     },
     "qwen": {
         "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
-        "base_url": "https://api.together.xyz/v1",
-        "models": [
-            "Qwen/Qwen2.5-7B-Instruct",
-            "Qwen/Qwen2.5-Coder-32B-Instruct",
-            "Qwen/Qwen2.5-72B-Instruct",
-            "Qwen/Qwen2.5-72B-Instruct-Turbo",
-            "Qwen/Qwen3-235B-A22B-fp8-tput",
-            "Qwen/Qwen2.5-VL-72B-Instruct"
-        ]
+        "base_url": "https://api.together.xyz/v1"
     },
     "meta": {
       "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
-      "base_url": "https://api.together.xyz/v1",
-      "models": [
-        "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
-        "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-        "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-        "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
-        "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"
-      ]
+      "base_url": "https://api.together.xyz/v1"
     },
     "deepseek": {
       "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
-      "base_url": "https://api.together.xyz/v1",
-      "models": [
-        "deepseek-ai/DeepSeek-V3",
-        "deepseek-ai/DeepSeek-V3-p-dp",
-        "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-        "deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
-        "deepseek-ai/DeepSeek-R1",
-        "deepseek-ai/DeepSeek-V3"
-      ]
+      "base_url": "https://api.together.xyz/v1"
     },
     "google": {
       "api_key": "AIzaSyAFKx0rQBsSUdTBboKed5SYHAz01XZD6TQ",
-      "base_url": "https://api.notused.com",
-      "models": [
-        "gemini-pro",
-        "gemini-pro-vision",
-        "gemini-1.5-pro",
-        "gemini-1.5-flash",
-        "models/embedding-001"
-      ]
+      "base_url": "https://api.notused.com"
     }
   },
   "openai_llm_models": {

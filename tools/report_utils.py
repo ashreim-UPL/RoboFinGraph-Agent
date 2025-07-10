@@ -12,7 +12,7 @@ import logging
 
 # Import the core API calling functions from your toolkit
 from .global_API_toolkit import make_api_request, get_10k_section, save_to_file
-from .charting import *
+from .charting import get_share_performance, get_pe_eps_performance
 
 # This new version REPLACES the previous get_key_data function.
 def get_key_data(

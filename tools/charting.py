@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 import logging
 
 # Import our standardized API toolkit
-from .global_API_toolkit import make_api_request, make_api_request2
+from .global_API_toolkit import make_api_request, get_cached_stock_data
 
 # --- Helper function to process historical data ---
 def _get_historical_data_df(ticker: str, start_date: str, end_date: str) -> pd.DataFrame:
@@ -52,7 +52,7 @@ def _get_historical_prices_df_indian_market(ticker: str, start_date: str, end_da
     # Make API call
     endpoint = "/historical_data"  # adapt as needed
     params = {"stock_name": ticker, "period": period, "filter": filter}
-    content = make_api_request2("IndianMarket", endpoint, params)
+    content = make_api_request("IndianMarket", endpoint, params)
 
 
     # Parse 'datasets' like in your second example, or adapt if structure differs
@@ -394,9 +394,6 @@ def get_pe_eps_performance_indian_market(
 
     year = int(filing_date.strftime("%Y")) if isinstance(filing_date, datetime) else int(filing_date.split("-")[0])
 
-    print(year)
-
-
     # 1. Fetch income statements to get EPS data from the API
 
     # Make the API call
@@ -404,9 +401,9 @@ def get_pe_eps_performance_indian_market(
     #hist_response = make_api_request("IndianMarket", "/historical_data", {'stock_name': ticker, 'period': 'max', 'filter': 'pe'})
     #print("HISTORICAL DATA API RESPONSE:", hist_response)
 
-    print("\n",ticker,"\n")
-    response = make_api_request2("IndianMarket", "/stock", {"name": ticker})
-
+    # response = make_api_request("IndianMarket", "/stock", {"name": ticker})
+    # avoidign multiple requests to API due its instability
+    response= get_cached_stock_data(ticker)
     financials = response.get("financials", [])
 
     # Parse annual financial data
@@ -434,7 +431,7 @@ def get_pe_eps_performance_indian_market(
     eps = eps.astype(float)
     
 
-    pe_df = pd.DataFrame(make_api_request2("IndianMarket", "/historical_data", {'stock_name': ticker, 'period': 'max', 'filter': 'pe'})['datasets'][1]['values'], columns = ['Date', 'PE'])
+    pe_df = pd.DataFrame(make_api_request("IndianMarket", "/historical_data", {'stock_name': ticker, 'period': 'max', 'filter': 'pe'})['datasets'][1]['values'], columns = ['Date', 'PE'])
 
     pe_df['Date'] = pd.to_datetime(pe_df['Date'])
     list_dates = list(eps.index)
