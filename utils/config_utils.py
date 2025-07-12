@@ -3,6 +3,8 @@ import json
 from pathlib import Path
 import httpx
 from httpx import HTTPStatusError
+import socket
+from contextlib import contextmanager
 import time
 from typing import Any, List, Dict, Tuple
 from threading import Lock
@@ -19,6 +21,185 @@ from utils.logger import get_logger, log_event
 logger = get_logger()
 _APP_CONFIG: Dict[str, Any] = {}
 _APP_CONFIG_LOCK = Lock()
+
+#====================================================================================================#
+#                               Unified Pre Flight API Check Begin                                   #
+#====================================================================================================#
+# Your provided force_ipv4_context
+@contextmanager
+def force_ipv4_context():
+    original = socket.getaddrinfo
+    try:
+        # Filter out non-IPv4 address information
+        socket.getaddrinfo = lambda *args, **kwargs: [
+            info for info in original(*args, **kwargs) if info[0] == socket.AF_INET
+        ]
+        yield
+    finally:
+        socket.getaddrinfo = original
+
+def check_provider_health(prov_name: str, prov_conf: Dict[str, Any]) -> Tuple[str, bool, str]:
+    """
+    Check API connectivity and health for a provider.
+    Returns: (provider name, healthy:bool, error_message:str)
+    """
+    url = prov_conf.get("base_url")
+    key = prov_conf.get("api_key")
+    headers = {}
+    health_url = None
+
+    # Simple heuristics for known providers
+    if not url:
+        return (prov_name, False, "No base_url defined")
+    url = url.rstrip("/")
+
+    if "openai" in prov_name.lower():
+        health_url = f"{url}/models"
+        headers = {"Authorization": f"Bearer {key}"} if key else {}
+    elif "google" in prov_name.lower():
+        health_url = f"{url}/v1beta/models" 
+        headers = {"x-goog-api-key": key} if key else {}
+    else:
+        health_url = f"{url}/models"
+        headers = {"Authorization": f"Bearer {key}"} if key else {}
+
+    try:
+        resp = httpx.get(health_url, headers=headers, timeout=10)
+        resp.raise_for_status()
+        return (prov_name, True, "OK")
+    except Exception as e:
+        logger.error(f"Health check failed for {prov_name}: {e}")
+        return (prov_name, False, str(e))
+
+def check_external_api_health(api_name: str, api_url: str, api_key: str = None, auth_type: str = None) -> Tuple[str, bool, str]:
+    """Check connectivity for external (non-LLM) APIs such as FMP, SEC, Indian Market, etc."""
+    headers = {"Content-Type": "application/json"} # Default header, good practice
+    url = api_url
+    
+    # Apply authentication if specified
+    if auth_type == "bearer" and api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
+
+    # Specific handling for SEC API: User-Agent header is crucial
+    if "sec" in api_name.lower():
+        headers["User-Agent"] = "TawasolSolutionServicesLLC AbdulJalilShreim@tawasol-llc.com" 
+        logger.info(f"Adding User-Agent header for SEC API: {headers['User-Agent']}")
+    
+    # --- DIRECT FIX FOR INDIAN MARKET API: Inject x-api-key header ---
+    context_manager = nullcontext() # Default, no special context
+    if "indian" in api_name.lower():
+        print(f"DEBUG: 'indian' matched for {api_name}. Applying force_ipv4_context.") # Keep user's debug print
+        context_manager = force_ipv4_context()
+        if api_key:
+            headers["x-api-key"] = api_key # Directly add the x-api-key header
+            logger.debug(f"Adding x-api-key header for {api_name}.")
+        else:
+            return (api_name, False, "API key missing for IndianMarket.") # Fail early if key is absent
+
+    try:
+        with context_manager: # Apply the context manager
+            resp = httpx.get(url, headers=headers, timeout=10)
+            resp.raise_for_status() # Raises HTTPStatusError for 4xx/5xx responses
+        return (api_name, True, "OK")
+    except httpx.HTTPStatusError as e:
+        error_detail = f"HTTP Error {e.response.status_code}: {e.response.text}"
+        logger.error(f"Health check failed for {api_name} (HTTP): {error_detail}")
+        return (api_name, False, error_detail)
+    except httpx.RequestError as e:
+        error_detail = f"Network or Request Error: {e}"
+        logger.error(f"Health check failed for {api_name} (Network): {error_detail}")
+        return (api_name, False, error_detail)
+    except Exception as e:
+        error_detail = f"An unexpected error occurred: {e}"
+        logger.error(f"Health check failed for {api_name} (Unexpected): {error_detail}")
+        return (api_name, False, error_detail)
+
+# Helper for nullcontext if not available in older Python versions
+try:
+    from contextlib import nullcontext
+except ImportError:
+    # Python < 3.7 compatibility for nullcontext
+    @contextmanager
+    def nullcontext():
+        yield
+
+def check_all_critical_apis(config: Dict[str, Any]) -> List[Tuple[str, bool, str]]:
+    """Checks all LLM providers and all external data APIs."""
+    results = []
+    # 1. LLM/Provider APIs
+    for prov, prov_conf in config.get("providers", {}).items():
+        results.append(check_provider_health(prov, prov_conf))
+
+    # 2. External Data APIs (by convention from config["api_keys"], but adapt if yours differs)
+    # Add all your custom data APIs here, using the config values
+    # OpenAI is both LLM and API, so already covered above. 
+    # FMP example:
+    fmp_api_key = config.get("api_keys", {}).get("FMP_API_KEY", None)
+    fmp_base = os.environ.get("FMP_BASE_URL", "https://financialmodelingprep.com/api/v3")
+    if fmp_api_key:
+        fmp_url = f"{fmp_base}/profile/AAPL?apikey={fmp_api_key}"
+        results.append(check_external_api_health("FMP", fmp_url, fmp_api_key, "query"))
+    # SEC example:
+    sec_base = os.environ.get("SEC_BASE_URL", "https://data.sec.gov")
+    sec_url = f"{sec_base}/submissions/CIK0000320193.json"
+    results.append(check_external_api_health("SEC", sec_url, None, None))
+    # IndianMarket example:
+    indian_api_key = config.get("api_keys", {}).get("INDIAN_API_KEY", None)
+    indian_base = os.environ.get("INDIAN_BASE_URL", "https://stock.indianapi.in")
+    if indian_api_key:
+        indian_url = f"{indian_base}/news"
+        results.append(check_external_api_health("IndianMarket", indian_url, indian_api_key, "x-api-key"))
+    # Add more APIs as needed following the above pattern
+    return results
+
+def assert_all_critical_apis_healthy(config: Dict[str, Any]):
+    results = check_all_critical_apis(config)
+    print_health_report(results)  # Pretty summary
+    unhealthy = [r for r in results if not r[1]]
+    for prov, ok, msg in results:
+        status = "✅" if ok else "❌"
+        logger.info(f"{status} API '{prov}': {msg}")
+        log_event("api_health_check", {"api": prov, "status": status, "msg": msg})
+    if unhealthy:
+        reason = "; ".join([f"{prov}: {msg}" for prov, _, msg in unhealthy])
+        logger.critical(f"API preflight check failed: {reason}")
+        raise SystemExit(f"Aborting pipeline. Unhealthy APIs: {reason}")
+
+def print_health_report(results):
+    """
+    Prints a formatted summary of provider health check results.
+    """
+    GREEN = "\033[92m"
+    RED = "\033[91m"
+    YELLOW = "\033[93m"
+    RESET = "\033[0m"
+    BOLD = "\033[1m"
+
+    print("\n" + BOLD + "="*40)
+    print("   PROVIDER HEALTH CHECK SUMMARY")
+    print("="*40 + RESET)
+
+    ok_count = 0
+    fail_count = 0
+
+    for prov, ok, msg in results:
+        if ok:
+            print(f"{GREEN}✔ {prov:<12}{RESET} {msg}")
+            ok_count += 1
+        else:
+            print(f"{RED}✗ {prov:<12}{RESET} {msg.strip().splitlines()[0]}")
+            fail_count += 1
+
+    print(BOLD + "-"*40 + RESET)
+    if fail_count == 0:
+        print(GREEN + BOLD + "ALL PROVIDERS HEALTHY. Pipeline may proceed." + RESET)
+    else:
+        print(RED + BOLD + f"HEALTH CHECK FAILURE: {fail_count} provider(s) UNHEALTHY!" + RESET)
+        print(YELLOW + "Pipeline startup aborted. See above for details." + RESET)
+    print(BOLD + "="*40 + RESET + "\n")
+#====================================================================================================#
+#                               Unified Pre Flight API Check End                                     #
+#====================================================================================================#
 
 def get_config_path() -> Path:
     """Resolve config path from env or fallback location."""
@@ -157,6 +338,9 @@ def prepare_config_and_env(
         mc = resolve_model_config(model, app_config)
         inject_model_env(mc)
         logger.info(f"Env preloaded for agent '{agent}' → model '{model}'")
+
+    # API HEALTH CHECK - fail fast if any provider is down!
+    # assert_all_critical_apis_healthy(app_config) -temporray disable to avoid rate limits
 
     # finally, stash the fully‐mutated config
     with _APP_CONFIG_LOCK:
