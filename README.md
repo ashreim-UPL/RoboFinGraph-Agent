@@ -1,9 +1,3 @@
-Here’s your document, **now enhanced** with the “How to Run” section, polished for clarity and seamless integration.
-You can copy-paste this directly into your README.md.
-
----
-
-````markdown
 ![Logo](./docs/logo.png)
 
 ## How It Works
@@ -156,14 +150,3 @@ Include 1–2 impactful figures here, such as:
 [FMP API](https://site.financialmodelingprep.com/developer/docs)
 [OpenAI GPT-4](https://platform.openai.com/docs/)
 
-```
-
----
-
-**Tips:**
-- Place this after your project title/intro and before any team/contribution/license section.
-- Add your real diagrams in `/docs/` and reference them as shown for visual impact.
-- Adjust section numbers or details as your repo evolves.
-
-Let me know if you want an even more detailed quickstart, contribution, or FAQ section!
-```
