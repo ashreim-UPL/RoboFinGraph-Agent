@@ -19,7 +19,7 @@ from flask import Flask, jsonify, request, Response, stream_with_context, send_f
 from flask_cors import CORS
 
 from utils.logger import get_logger, log_event
-from utils.config_utils import resolve_model_config, inject_model_env
+from utils.config_utils import resolve_model_config, inject_model_env, get_app_config
 
 logger = get_logger()
 
@@ -65,7 +65,10 @@ def load_llm_models(config_path: str) -> dict:
         return {}
 
 # Flask app init
-app = Flask(__name__)
+# app = Flask(__name__)
+# CORS(app, resources={r"/stream": {"origins": "*"}, r"/available_models": {"origins": "*"}})
+FRONTEND_BUILD_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'frontend', 'build'))
+app = Flask(__name__, static_folder=FRONTEND_BUILD_DIR)
 CORS(app, resources={r"/stream": {"origins": "*"}, r"/available_models": {"origins": "*"}})
 
 
@@ -82,33 +85,17 @@ def _load_full_config() -> Dict[str, Any]:
         return {}
 
 
-@app.route("/available_models")
-def available_models():
-    cfg = _load_full_config()
-    providers = cfg.get("model_providers", [])
-    defaults = cfg.get("llm_models", {})
-    global_default = cfg.get("default_llm_model")
-    filtered = {}
-    idx = 0
-    for p in providers:
-        if p.get("api_key", "").strip():
-            for m in p.get("models", []):
-                if isinstance(m, str):
-                    filtered[str(idx)] = m
-                    idx += 1
-    
-    # NEW: Call load_llm_models to get the structured provider data
-    available_providers_llm = load_llm_models(OAI_CONFIG_PATH) #
 
-    logger.info(f"available_models fetched: {len(filtered)} models, {len(available_providers_llm)} providers")
-    log_event("available_models_fetched", {"count": len(filtered), "providers_count": len(available_providers_llm)})
-    
-    return jsonify({
-        "models": filtered,
-        "default_agent_models": defaults,
-        "global_default_model": global_default,
-        "available_providers_llm": available_providers_llm # # Add this to the response
-    })
+@app.route('/available_models')
+def available_models():
+    config = get_app_config()
+    def gather_models():
+        results = {}
+        for prov in config.get("providers", {}).keys():
+            model_map = config.get(f"{prov}_llm_models", {})
+            results[prov] = list(set(model_map.values()))
+        return results
+    return jsonify(gather_models())
 
 
 @app.route("/report_files")
@@ -125,16 +112,16 @@ FRONTEND_BUILD_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'fr
 app = Flask(__name__, static_folder=FRONTEND_BUILD_DIR)
 
 @app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def serve_react(path):
-    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
-        return send_from_directory(app.static_folder, path)
-    else:
-        return send_from_directory(app.static_folder, 'index.html')
+#@app.route('/<path:path>')
+#def serve_react(path):
+#    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+#        return send_from_directory(app.static_folder, path)
+#    else:
+#        return send_from_directory(app.static_folder, 'index.html')
 
-"""@app.route("/")
+@app.route("/")
 def index():
-    return render_template("finrobot.html")"""
+    return render_template("robofingraph.html")
 
 @app.route("/report/<path:filename>")
 def serve_report(filename):

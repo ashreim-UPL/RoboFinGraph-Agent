@@ -19,15 +19,11 @@ def get_key_data(
     ticker: Annotated[str, "ticker"],
     filing_date: Annotated[str | datetime, "filing date of the financial report"],
     save_path: str,
-    fyear: str, 
-    region: str 
 ) -> str:
     """
     Returns key financial data for the given ticker by calling the global_api_toolkit,
     ensuring all calls follow the standardized format.
     """
-    print(f"Fetching key data for {ticker}...")
-    
     # --- Date conversion and range calculation (no changes here) ---
     if isinstance(filing_date, str):
         filing_date_obj = datetime.strptime(filing_date, "%Y-%m-%d")
@@ -137,7 +133,7 @@ def get_financial_statement(ticker: str, statement_type: str, save_path: str) ->
 
 # --- III. Key Performance Metrics Functions ---
 
-def get_key_metrics(ticker: str, region: str, save_path: str) -> str:
+def get_key_metrics(ticker: str, save_path: str) -> str:
     """
     Retrieves key financial metrics from FMP.
     """
@@ -180,7 +176,7 @@ def _fetch_and_save_sec_section(
         if not text:
             raise RuntimeError("Empty text returned")
 
-        logging.info(f"✅ Saved Section {section_id} for {sec_ticker} → {save_path}")
+        logging.info(f" Saved Section {section_id} for {sec_ticker} → {save_path}")
         return save_path
 
     except Exception as e:

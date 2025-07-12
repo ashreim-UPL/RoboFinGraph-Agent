@@ -47,12 +47,14 @@ def run_orchestration(
     # Ensure it includes all expected keys of AgentState, especially 'memory' and 'termination_reason'.
     # This also sets up the report_dir early and consistently.
     provider = config.get("default_provider", "openai")
-    report_dir = os.path.join("report", f"{company}_{year}_{provider}")
+    upper_provider = provider.upper()
+    upper_company = company.upper()
+    report_dir = os.path.join("report", f"{upper_company}_{year}_{upper_provider}")
 
-    os.makedirs(report_dir, exist_ok=True) # Ensure workdir exists
+    #os.makedirs(report_dir, exist_ok=True) # Ensure workdir exists
 
     current_graph_state = {
-        "company": company,
+        "company": upper_company,
         "year": year,
         "work_dir": report_dir,
         "messages": [],
@@ -63,7 +65,7 @@ def run_orchestration(
 
     logger.info(f"Orchestration start → {company} ({year}), report_type={report_type}, verbose={verbose}")
     log_event("orchestration_start", {
-        "company": company,
+        "company": upper_company,
         "year": year,
         "report_type": report_type,
         "verbose": verbose
@@ -169,17 +171,7 @@ def run_orchestration(
     # === 4. Compile & stream
     try:
         app = g.compile()
-        # Graph PNG and Mermaid generation code
-        try:
-            png_bytes = app.get_graph().draw_mermaid_png()
-            graph_path = os.path.join(report_dir, "orchestration_graph.png")
-            with open(graph_path, "wb") as f:
-                f.write(png_bytes)
-            logger.info(f"Saved orchestration graph to {graph_path}")
-            log_event("graph_png_saved", {"path": graph_path})
-        except Exception as e:
-            logger.error(f"Failed to generate graph PNG: {e}")
-            log_event("graph_png_error", {"error": str(e)})
+
 
         logger.info("Graph compiled; starting execution")
         print(json.dumps({"event_type": "pipeline_start"}, ensure_ascii=False))

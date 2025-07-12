@@ -8,12 +8,17 @@ from contextlib import contextmanager
 import time
 from typing import Any, List, Dict, Tuple
 from threading import Lock
-from langchain.chat_models import ChatOpenAI
+
+# --- LangChain providers and callbacks: use langchain_community ---
+from langchain_community.chat_models import ChatOpenAI
+from langchain_community.callbacks import get_openai_callback
+# If you use the callback manager variant, uncomment and use this:
+# from langchain_community.callbacks.manager import get_openai_callback
+
 from langchain_together import ChatTogether
 from langchain.schema import BaseMessage, AIMessage
-from langchain.callbacks import get_openai_callback
-# from langchain_community.callbacks.manager import get_openai_callback
 from langchain_google_genai import ChatGoogleGenerativeAI
+
 from agents.state_types import AgentState, NodeState
 from datetime import datetime, timezone
 
@@ -264,42 +269,44 @@ def inject_provider_pricing(config: Dict[str, Any]) -> None: # RENAMED
     else:
         logger.warning("No valid Together.ai API key found for Together-hosted models. Cannot fetch Together.ai pricing dynamically.")
 
-    # Create a place to store per‐model pricing
+    # Create a place to store per-model pricing
     config["provider_model_pricing"] = {}
+
     for prov, pdata in config["providers"].items():
-        default_in  = pdata.get("pricing", {}).get("input",  0.0)
+        default_in = pdata.get("pricing", {}).get("input", 0.0)
         default_out = pdata.get("pricing", {}).get("output", 0.0)
-        models = pdata.get("models", [])
-
         per_model = {}
-        if prov == "openai":
-            for m in models:
-                per_model[m] = {"input": default_in, "output": default_out}
 
-        elif prov == "google":
-            for m, info in GOOGLE_STATIC_PRICING.items():
-                in_rate  = info["input"]  if isinstance(info["input"], float)  else info["input"][1]
-                out_rate = info["output"] if isinstance(info["output"], float) else (info["output"][1] if info["output"] else 0.0)
+        # Get assigned models for this provider
+        assignment_block = config.get(f"{prov}_llm_models", {})
+        assigned_models = set(assignment_block.values())
+
+        if prov == "google":
+            for m in assigned_models:
+                # Use static pricing for known Google models, fallback to default
+                info = GOOGLE_STATIC_PRICING.get(m, None)
+                in_rate = info["input"] if info and isinstance(info["input"], float) else (info["input"][1] if info and isinstance(info["input"], tuple) else default_in)
+                out_rate = info["output"] if info and isinstance(info["output"], float) else (info["output"][1] if info and isinstance(info["output"], tuple) else default_out)
                 per_model[m] = {"input": in_rate, "output": out_rate}
-
-        else:
+        elif prov != "openai" and "together" in pdata.get("base_url", ""):
             tmap = config.get("_together_pricing_map", {})
-            for m in models:
+            for m in assigned_models:
                 pm = tmap.get(m, {})
                 per_model[m] = {
-                    "input":  pm.get("input",  default_in),
+                    "input": pm.get("input", default_in),
                     "output": pm.get("output", default_out)
                 }
+        else:
+            for m in assigned_models:
+                per_model[m] = {"input": default_in, "output": default_out}
 
         config["provider_model_pricing"][prov] = per_model
-        for prov, models in config["provider_model_pricing"].items():
-            for model_name, prices in models.items():
-                key_base = model_name
-                os.environ[f"{key_base}_PRICE_INPUT"]  = str(prices["input"])
-                os.environ[f"{key_base}_PRICE_OUTPUT"] = str(prices["output"])
-        # (Optional) Log it all for debug
-        for m, prices in per_model.items():
-            log_event("model_pricing_set", {"provider": prov, "model": m, **prices})
+
+        # Inject pricing into environment variables and log
+        for model_name, prices in per_model.items():
+            os.environ[f"{model_name}_PRICE_INPUT"] = str(prices["input"])
+            os.environ[f"{model_name}_PRICE_OUTPUT"] = str(prices["output"])
+            log_event("model_pricing_set", {"provider": prov, "model": model_name, **prices})
 
 def prepare_config_and_env(
     config_path: str,
@@ -480,18 +487,18 @@ def inject_model_env(model_config: Dict[str, Any]) -> None:
 
 def resolve_model_config(model_name: str, config: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Find the provider entry for `model_name` and return its config,
-    looking up credentials from config['providers'].
+    Find the provider entry for `model_name` based on the *_llm_models mapping.
     """
     for provider_name, provider_data in config.get("providers", {}).items():
-        if "models" in provider_data and model_name in provider_data["models"]:
+        assignment_map = config.get(f"{provider_name}_llm_models", {})
+        if model_name in assignment_map.values():
             return {
                 "model": model_name,
                 "api_key": provider_data.get("api_key", ""),
                 "api_type": provider_name,
                 "base_url": provider_data.get("base_url", "")
             }
-    raise ValueError(f"Model '{model_name}' not found in config providers.")
+    raise ValueError(f"Model '{model_name}' not found in config assignments.")
 
 def _init_llm(provider: str, model_name: str, config: Dict[str, Any]) -> Any:
     """

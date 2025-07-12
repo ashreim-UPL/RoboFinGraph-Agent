@@ -18,7 +18,7 @@ if not os.path.isdir(".cache"):
     os.makedirs(".cache")
 
 def main():
-    parser = argparse.ArgumentParser(description="FinRobot Annual Report Orchestration")
+    parser = argparse.ArgumentParser(description="RoboFinGraph Annual Report Orchestration")
     parser.add_argument("company",    type=str, help="Company name (e.g., 'Apple Inc.')")
     parser.add_argument("year",       type=str, help="Year to analyze (e.g., '2023')")
     parser.add_argument("--config",   type=str, default="langgraph_config.json",

@@ -1,20 +1,18 @@
 import os
 import json
 from pathlib import Path
-from typing import Dict, Any, List, Tuple
+from typing import Dict, Any, List
 from functools import wraps
 from datetime import datetime, timezone
 from tabulate import tabulate
-from collections import defaultdict
 import re
 import sys
 from utils.logger import get_logger, log_event
 from langchain.schema import HumanMessage
-import uuid
 from agents.agent_utils import normalize_date
 
 from utils.config_utils import LangGraphLLMExecutor
-from agents.state_types import AgentState, NodeState, TOOL_MAP, NodeStatus
+from agents.state_types import AgentState, NodeStatus
 from tools.company_search import process_company_data
 from tools.graph_tools import generate_concept_insights, validate_summaries, validate_insights, evaluate_pipeline, collect_us_financial_data, validate_raw_data, collect_indian_financial_data
 from pathlib import Path
@@ -82,11 +80,11 @@ def record_node(node_key: str):
             if not agent_state.memory.get("pipeline_start_time"):
                 agent_state.memory["pipeline_start_time"] = node_start.isoformat()
 
-            sys.stdout.write(json.dumps({
-                "event_type": "node_start",
-                "data": {"node": node_key, "timestamp": record["start_time"]}
-            }) + "\n")
-            sys.stdout.flush()
+            #sys.stdout.write(json.dumps({
+            #    "event_type": "node_start",
+            #    "data": {"node": node_key, "timestamp": record["start_time"]}
+            #}) + "\n")
+            #sys.stdout.flush()
 
             try:
                 setattr(agent_state, "_current_node_record", record)
@@ -118,11 +116,11 @@ def record_node(node_key: str):
 
                 # append & stream node_end
                 pipeline.append(record)
-                sys.stdout.write(json.dumps({
-                    "event_type": "node_end",
-                    "data": record
-                }) + "\n")
-                sys.stdout.flush()
+                #sys.stdout.write(json.dumps({
+                #    "event_type": "node_end",
+                #    "data": record
+                #}) + "\n")
+                #sys.stdout.flush()
 
             return result
         return wrapper
@@ -242,6 +240,9 @@ def data_collection_us_node(agent_state: AgentState) -> Dict[str, Any]:
     """
 
     try:
+        #create directory if not existing
+        os.makedirs(agent_state.work_dir, exist_ok=True)
+
         # Prepare the high-level arguments needed by the comprehensive tool
         # Ensure these match the parameters expected by collect_us_financial_data
         
@@ -324,6 +325,8 @@ def data_collection_indian_node(agent_state: AgentState) -> AgentState:
     Invoke all data‐collection tools (India); currently identical to US.
     """
     try:
+        #create directory if not existing
+        os.makedirs(agent_state.work_dir, exist_ok=True)
         # Prepare the high-level arguments needed by the comprehensive tool
         # Ensure these match the parameters expected by collect_Indian_financial_data
         

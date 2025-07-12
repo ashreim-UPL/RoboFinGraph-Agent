@@ -274,9 +274,9 @@ class ReportLabUtils:
         full_length = right_column_width - 2 * margin
 
         data = [
-            ["FinRobot"],
+            ["RoboFinGraph"],
             ["Team9 - UOA"],
-            ["GitHub:ashreim-UPL/FinRobot-Langgraph.git"],
+            ["GitHub:ashreim-UPL/RoboFinGraph-Langgraph.git"],
             [f"Report date: {filing_date}"],
         ]
         col_widths = [full_length]

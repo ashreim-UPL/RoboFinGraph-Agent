@@ -1,7 +1,8 @@
 # utils/logger.py
-# Centralized logging module for FinRobot
+# Centralized logging module for RoboFinGraph
 
 import os
+import sys
 import json
 import logging
 from datetime import datetime
@@ -12,30 +13,53 @@ LOG_DIR = "logs"
 os.makedirs(LOG_DIR, exist_ok=True)
 
 _log_formatter = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
-_logger = logging.getLogger("FinRobotLogger")
+_logger = logging.getLogger("RoboFinGraphLogger")
 _logger.setLevel(logging.INFO)
 
-_file_handler = logging.FileHandler(os.path.join(LOG_DIR, "finrobot_events.log"), encoding="utf-8")
-_file_handler.setLevel(logging.INFO )
+# File handler - logs everything
+_file_handler = logging.FileHandler(os.path.join(LOG_DIR, "robofingraph_events.log"), encoding="utf-8")
+_file_handler.setLevel(logging.INFO)
 _file_handler.setFormatter(_log_formatter)
 _logger.addHandler(_file_handler)
 
-import sys
+# Stream handler - only show WARNING or above in CLI
 _stream_handler = logging.StreamHandler(sys.stdout)
+_stream_handler.setLevel(logging.WARNING)  # Only WARNING/ERROR shown on CLI
 _stream_handler.setFormatter(_log_formatter)
-_stream_handler.setStream(sys.stdout)
-_stream_handler.encoding = 'utf-8' 
 _logger.addHandler(_stream_handler)
 
-# === Logger Access API ===
 def setup_logging():
-    # Already initialized above, this function exists for symmetry.
     pass
 
-def get_logger(name: str = "FinRobotLogger") -> logging.Logger:
+def get_logger(name: str = "RoboFinGraphLogger") -> logging.Logger:
     return _logger
 
-# === Core Logging ===
+def _truncate(val, n=100):
+    if isinstance(val, str) and len(val) > n:
+        return val[:n-3] + "..."
+    if isinstance(val, list) and len(val) > 5:
+        return val[:2] + ["...(truncated, {} items)".format(len(val))]
+    return val
+
+def cli_human_summary(event_type, payload):
+    """
+    Print a human-friendly message for the CLI. Only show important keys, and truncate any long content.
+    """
+    summary_keys = [
+        "company", "year", "status", "termination_reason", "error_log", "accuracy_score",
+        "work_dir", "raw_data_files"
+    ]
+    msg = [f"{event_type.upper()}:"]
+    if isinstance(payload, dict):
+        for k in summary_keys:
+            if k in payload:
+                val = payload[k]
+                if k == "raw_data_files":
+                    msg.append(f"- {k}: {len(val)} files")
+                else:
+                    msg.append(f"- {k}: {_truncate(val)}")
+    print("\n[RoboFinGraph] " + " | ".join(msg))
+
 def log_event(event_type: str, payload: Dict[str, Any], session_id: Optional[str] = None) -> None:
     entry = {
         "timestamp": datetime.utcnow().isoformat(),
@@ -45,16 +69,20 @@ def log_event(event_type: str, payload: Dict[str, Any], session_id: Optional[str
     }
     _logger.info(json.dumps(entry))
 
+    # Show CLI human summary for warnings/errors/key events (customize if needed)
+    if event_type.lower() in {"error", "tool_failure", "terminate", "pipeline_end"}:
+        cli_human_summary(event_type, payload)
+
 def log_agent_step(agent_name: str, input_text: str, output_text: str, tool_used: Optional[str] = None, session_id: Optional[str] = None) -> None:
     log_event("agent_step", {
         "agent": agent_name,
-        "input": input_text,
-        "output": output_text,
+        "input": input_text[:100],
+        "output": output_text[:100],
         "tool": tool_used
     }, session_id=session_id)
 
 def log_final_summary(summary: str, session_id: Optional[str] = None) -> None:
-    log_event("final_summary", {"summary": summary}, session_id=session_id)
+    log_event("final_summary", {"summary": summary[:100]}, session_id=session_id)
 
 def log_cost_estimate(agent_outputs: List[str], session_id: Optional[str] = None) -> None:
     cost = calculate_token_cost(agent_outputs)
@@ -101,11 +129,19 @@ def log_audit_result(agent: str, hallucinations: List[str], context: str = "", s
         "agent": agent,
         "hallucinations": hallucinations,
         "explanation": explanation,
-        "timestamp": datetime.now(datetime.timezone.utc).isoformat()
+        "timestamp": datetime.now().isoformat()
     }
     log_event("audit", entry, session_id=session_id or agent)
 
-# === Concept Matching Helper ===
+# Optional: Table/summary printer for pipeline runs
+def print_pipeline_status(memory):
+    steps = memory.get('pipeline_data', [])
+    print("\n[Pipeline Status]")
+    print(f"{'Node':25} | {'Status':10} | {'Duration':8}")
+    print("-" * 48)
+    for s in steps:
+        print(f"{s.get('current_node','')[:25]:25} | {str(s.get('status','-'))[:10]:10} | {str(s.get('duration','-'))[:8]:8}")
+
 def match_file_to_concept(section_name: str, file_list: List[str]) -> Optional[str]:
     from openai import OpenAI
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))

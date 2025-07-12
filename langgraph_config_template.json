@@ -12,67 +12,27 @@
   "providers": {
     "openai": {
       "api_key": "YOUR_OPENAI_KEY_HERE",
-      "base_url": "https://api.openai.com/v1",
-      "models":[
-        "gpt-4.1-2025-04-14",
-        "gpt-4.1-nano-2025-04-14",
-        "gpt-4o-search-preview-2025-03-11"
-      ]
+      "base_url": "https://api.openai.com/v1"
     },
     "mixtral": {
         "api_key": "YOUR_TOGETHER_KEY_HERE",
-        "base_url": "https://api.together.xyz/v1",
-        "models": [
-            "mistralai/Mixtral-8x7B-Instruct-v0.1",
-            "mistralai/Mistral-7B-Instruct-v0.2",
-            "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO"
-        ]
+        "base_url": "https://api.together.xyz/v1"
     },
     "qwen": {
         "api_key": "YOUR_TOGETHER_KEY_HERE",
-        "base_url": "https://api.together.xyz/v1",
-        "models": [
-            "Qwen/Qwen2.5-7B-Instruct",
-            "Qwen/Qwen2.5-Coder-32B-Instruct",
-            "Qwen/Qwen2.5-72B-Instruct",
-            "Qwen/Qwen2.5-72B-Instruct-Turbo",
-            "Qwen/Qwen3-235B-A22B-fp8-tput",
-            "Qwen/Qwen2.5-VL-72B-Instruct"
-        ]
+        "base_url": "https://api.together.xyz/v1"
     },
     "meta": {
       "api_key": "YOUR_TOGETHER_KEY_HERE",
-      "base_url": "https://api.together.xyz/v1",
-      "models": [
-        "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
-        "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-        "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-        "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
-        "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"
-      ]
+      "base_url": "https://api.together.xyz/v1"
     },
     "deepseek": {
       "api_key": "YOUR_TOGETHER_KEY_HERE",
-      "base_url": "https://api.together.xyz/v1",
-      "models": [
-        "deepseek-ai/DeepSeek-V3",
-        "deepseek-ai/DeepSeek-V3-p-dp",
-        "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-        "deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
-        "deepseek-ai/DeepSeek-R1",
-        "deepseek-ai/DeepSeek-V3"
-      ]
+      "base_url": "https://api.together.xyz/v1"
     },
     "google": {
       "api_key": "YOUR_GOOGLE_KEY_HERE",
-      "base_url": "https://generativelanguage.googleapis.com/",
-      "models": [
-        "gemini-pro",
-        "gemini-pro-vision",
-        "gemini-1.5-pro",
-        "gemini-1.5-flash",
-        "models/embedding-001"
-      ]
+      "base_url": "https://generativelanguage.googleapis.com/"
     }
   },
   "openai_llm_models": {

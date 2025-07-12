@@ -10,7 +10,7 @@ import logging
 
 # Import the core API calling functions from your toolkit
 
-from .global_API_toolkit import save_to_file, get_cached_stock_data
+from .global_API_toolkit import save_to_file, get_cached_stock_data, make_api_request
 from .charting import get_indian_share_performance, get_pe_eps_performance_indian_market
 from .rag_api_utils import get_annual_report_section, perform_similarity_search
 
@@ -208,12 +208,10 @@ def get_financial_statement(ticker: str, statement_type: str, save_path: str, fy
     # Parse annual financial data
     statement_data = {}
     for doc in financials:
-        print(doc)
         if doc.get('Type') == 'Annual':
             fmap = doc.get("stockFinancialMap", {})
             if statement_code in fmap:
                 statement_data[doc['FiscalYear']] = fmap[statement_code]
-                print(statement_data)
     """if str(fyear) not in statement_data:
         msg = f"Financial data for year {fyear} not available for {ticker}"
         logging.warning(msg)
@@ -464,7 +462,6 @@ def get_financial_metrics_indian_market(ticker: str, fyear: int, save_path: str,
     Returns the path to the saved file.
     """
     try:
-        print(fyear-years)
         df = _get_financial_statement_for_table(
             ticker=ticker, 
             statement_type="income_statement", 
@@ -504,11 +501,12 @@ def get_financial_metrics_indian_market(ticker: str, fyear: int, save_path: str,
         metrics['Revenue'] = round(revenue, 2)
         metrics['Net Income'] = round(net_income, 2)
         metrics['EBIT'] = round(ebit, 2)
-        with pd.option_context("mode.use_inf_as_na", True):
-            metrics['EBIT Margin'] = round((ebit / revenue) * 100, 2)
-            metrics['Net Income Margin'] = round((net_income / revenue) * 100, 2)
-            metrics['Effective Tax Rate'] = round((taxes / (net_income + taxes)) * 100, 2)
-            metrics['Interest Coverage'] = round((ebit / interest_expense), 2)
+
+        metrics['EBIT Margin'] = round((ebit / revenue) * 100, 2)
+        metrics['Net Income Margin'] = round((net_income / revenue) * 100, 2)
+        metrics['Effective Tax Rate'] = round((taxes / (net_income + taxes)) * 100, 2)
+        metrics['Interest Coverage'] = round((ebit / interest_expense), 2)
+
         metrics['EBITDA'] = round(ebit + depreciation, 2)
         metrics['EPS'] = round(eps, 2)
         metrics['Shares'] = round(shares, 2)

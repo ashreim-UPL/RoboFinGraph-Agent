@@ -1,11 +1,8 @@
 import os
 import json
-import asyncio
-import time
 from pathlib import Path
 import logging
 from PIL import Image
-import sys
 from datetime import datetime, timedelta
 import inspect
 from typing import Dict, Any, List, Callable, Tuple, Optional
@@ -19,7 +16,7 @@ from prompts.summarization_intsruction import summarization_prompt_library
 from prompts.report_summaries import report_section_specs
 from agents.state_types import AgentState
 from agents.state_types import TOOL_MAP, TOOL_IN_MAP
-
+from tools.global_API_toolkit import get_10k_metadata
 
 logger = get_logger()
 logger = logging.getLogger(__name__)
@@ -33,22 +30,19 @@ def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
     """
     print("---Fetching SEC Metadata---")
     try:
-        sec_ticker = state.company_details['identifiers']['sec_ticker']
+        sec_ticker = state.company_details['sec_ticker']
         report_year = int(state.year)
         filing_year = report_year + 1
         start_date = f"{filing_year}-01-01"
-        end_date   = f"{filing_year}-05-31"
+        end_date   = f"{filing_year+1}-06-30"
 
         # call your real helper directly:
-        from tools.global_API_toolkit import get_10k_metadata
+
         metadata = get_10k_metadata(
-            ticker_symbol=sec_ticker,
-            fyear=filing_year,
-            save_path =state.filing_files,
+            sec_ticker=sec_ticker,
             start_date=start_date,
             end_date=end_date
         )
-
         if not metadata or "error" in metadata:
             print(f"[!] SEC Metadata Error: {metadata.get('error','No filings found')}")
             return {}
@@ -76,7 +70,6 @@ def collect_indian_financial_data(state: AgentState) -> Dict[str, List[str]]:
     filing_date = state.filing_date
     fyear = state.year
     company_details = state.company_details
-    
    
     collected_files = []
     errors = []
@@ -85,7 +78,6 @@ def collect_indian_financial_data(state: AgentState) -> Dict[str, List[str]]:
     os.makedirs(base_raw_data_dir, exist_ok=True)
 
     for task_def in state.get_data_collection_tasks():
-        print(task_def)
     
         tool_name = task_def["task"]
         output_filename = task_def["file"]
@@ -126,7 +118,7 @@ def collect_indian_financial_data(state: AgentState) -> Dict[str, List[str]]:
                     # If a required parameter is missing and no default, raise error
                     raise ValueError(f"Missing required argument for tool '{tool_name}': '{p_name}'")
 
-            logger.info(f"Calling tool: {tool_name} with kwargs: {kwargs}")
+            #logger.info(f"Calling tool: {tool_name} with kwargs: {kwargs}")
             tool_fn(**kwargs) # Execute the individual tool
             collected_files.append(out_file_path)
 
@@ -151,22 +143,25 @@ def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
     filing_date = state.filing_date
     fyear = state.year
     company_details = state.company_details
-    
    
     collected_files = []
     errors = []
+
+    # if fillign date is not availabe get it from sec_meta_data
+    if  not filing_date:
+        get_sec_metadata_node(state)
+        filing_date = state.filing_date
+
 
     base_raw_data_dir = os.path.join(work_dir, "raw_data")
     os.makedirs(base_raw_data_dir, exist_ok=True)
 
     for task_def in state.get_data_collection_tasks():
-        print(task_def)
     
         tool_name = task_def["task"]
         output_filename = task_def["file"]
         out_file_path = os.path.join(output_filename)
-        
-        
+           
         if tool_name not in TOOL_MAP:          
             msg = f"Tool '{tool_name}' not found in TOOL_MAP. Skipping."
             logger.warning(msg)
@@ -203,7 +198,7 @@ def collect_us_financial_data(state: AgentState) -> Dict[str, List[str]]:
                     # If a required parameter is missing and no default, raise error
                     raise ValueError(f"Missing required argument for tool '{tool_name}': '{p_name}'")
 
-            logger.info(f"Calling tool: {tool_name} with kwargs: {kwargs}")
+            #logger.info(f"Calling tool: {tool_name} with kwargs: {kwargs}")
             tool_fn(**kwargs) # Execute the individual tool
             collected_files.append(out_file_path)
 
@@ -649,7 +644,7 @@ def evaluate_pipeline(agent_state: AgentState, icaif_scores: Optional[dict] = No
         s.setdefault("retry_count", 0)
 
 
-    print_pipeline_kpis(pipeline_matrix)
+    #print_pipeline_kpis(pipeline_matrix)
 
     # --- Register function usage for orchestration traceability ---
     rec = getattr(agent_state, "_current_node_record", None)

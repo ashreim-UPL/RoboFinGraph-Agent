@@ -43,7 +43,6 @@ def get_annual_report_section(
     }
 
     section_title = sections_dict[ticker_symbol][str(section)]
-    print(section_title)
 
     payload ={
         "ticker":ticker_symbol,
