@@ -19,8 +19,6 @@
 5. **Auditing:**  
    - Optionally applies rubric-based scoring (inspired by ICAIF) for hallucination detection, completeness, and LLM output validation.
 
----
-
 ## How to Run RoboFinGraph
 
 ### 1. Prepare Your Configuration
