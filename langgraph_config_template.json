@@ -1,8 +1,8 @@
 {
   "api_keys": {
-    "FMP_API_KEY": "h39fQ5nHOcfTMSQhsIJQzOwZKnocttbE",
-    "SEC_API_KEY": "5a878201d139df95002fcca9208296106588cb85d2447a923585f37a4c14fbd3",
-    "INDIAN_API_KEY": "sk-live-2aAhNceOphbuVSsHeyQx6sxsw9MJBQvnxyE3VKIJ"
+    "FMP_API_KEY": "YOUR_KEY_HERE",
+    "SEC_API_KEY": "YOUR_KEY_HERE",
+    "INDIAN_API_KEY": "YOUR_KEY_HERE"
   },
   "default_provider": "qwen",
   "temperature": 0.3,
@@ -11,7 +11,7 @@
 
   "providers": {
     "openai": {
-      "api_key": "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",
+      "api_key": "YOUR_OPENAI_KEY_HERE",
       "base_url": "https://api.openai.com/v1",
       "models":[
         "gpt-4.1-2025-04-14",
@@ -20,7 +20,7 @@
       ]
     },
     "mixtral": {
-        "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
+        "api_key": "YOUR_TOGETHER_KEY_HERE",
         "base_url": "https://api.together.xyz/v1",
         "models": [
             "mistralai/Mixtral-8x7B-Instruct-v0.1",
@@ -29,7 +29,7 @@
         ]
     },
     "qwen": {
-        "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
+        "api_key": "YOUR_TOGETHER_KEY_HERE",
         "base_url": "https://api.together.xyz/v1",
         "models": [
             "Qwen/Qwen2.5-7B-Instruct",
@@ -41,7 +41,7 @@
         ]
     },
     "meta": {
-      "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
+      "api_key": "YOUR_TOGETHER_KEY_HERE",
       "base_url": "https://api.together.xyz/v1",
       "models": [
         "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
@@ -52,7 +52,7 @@
       ]
     },
     "deepseek": {
-      "api_key": "242490f7fd85226d09982fe8044b3271e5b53dd60cf538e55fa335a5e0599fd6",
+      "api_key": "YOUR_TOGETHER_KEY_HERE",
       "base_url": "https://api.together.xyz/v1",
       "models": [
         "deepseek-ai/DeepSeek-V3",
@@ -64,7 +64,7 @@
       ]
     },
     "google": {
-      "api_key": "AIzaSyD-Jvcl_K3KePGQIkICHK-XUfW0uunB1Hw",
+      "api_key": "YOUR_GOOGLE_KEY_HERE",
       "base_url": "https://generativelanguage.googleapis.com/",
       "models": [
         "gemini-pro",

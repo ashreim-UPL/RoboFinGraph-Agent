@@ -1,0 +1,6 @@
+{
+  "error": "422 Client Error: Unprocessable Entity for url: https://stock.indianapi.in/historical_data?name=DMART",
+  "payload": {
+    "name": "DMART"
+  }
+}
