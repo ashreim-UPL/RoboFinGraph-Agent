@@ -1,4 +1,4 @@
-![Logo](./docs/logo.png)
+![Logo](./doc/logo.png)
 
 ## How It Works
 
@@ -128,8 +128,8 @@ Include 1–2 impactful figures here, such as:
 
 *Example placeholders:*
 
-![Pipeline Overview](./docs/pipeline_overview.png)
-![Rubric Scores vs Baseline](./docs/results_rubric_comparison.png)
+![Pipeline Overview](./doc/pipeline_overview.png)
+![Rubric Scores vs Baseline](./doc/results_rubric_comparison.png)
 
 ---
 
