@@ -11,7 +11,7 @@
 
   "providers": {
     "openai": {
-      "api_key": "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",
+      "api_key": "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",
       "base_url": "https://api.openai.com/v1",
       "models":[
         "gpt-4.1-2025-04-14",
@@ -64,8 +64,8 @@
       ]
     },
     "google": {
-      "api_key": "AIzaSyAFKx0rQBsSUdTBboKed5SYHAz01XZD6TQ",
-      "base_url": "https://api.notused.com",
+      "api_key": "AIzaSyD-Jvcl_K3KePGQIkICHK-XUfW0uunB1Hw",
+      "base_url": "https://generativelanguage.googleapis.com/",
       "models": [
         "gemini-pro",
         "gemini-pro-vision",
