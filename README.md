@@ -139,10 +139,11 @@ Include 1–2 impactful figures here, such as:
 
 ## References
 
-[FinRobot (Zhou et al. 2024)](https://arxiv.org/abs/2411.08804)
-[LangGraph](https://github.com/langchain-ai/langgraph)
-[ICAIF Benchmark](https://acm-icaif.org/)
-[IndianStockMarket API](https://indianapi.in/indian-stock-market)
-[FMP API](https://site.financialmodelingprep.com/developer/docs)
-[OpenAI GPT-4](https://platform.openai.com/docs/)
+- [FinRobot (Zhou et al. 2024)](https://arxiv.org/abs/2411.08804)  
+- [LangGraph](https://github.com/langchain-ai/langgraph)  
+- [ICAIF Benchmark](https://acm-icaif.org/)  
+- [IndianStockMarket API](https://indianapi.in/indian-stock-market)  
+- [FMP API](https://site.financialmodelingprep.com/developer/docs)  
+- [OpenAI GPT-4](https://platform.openai.com/docs/)
+
 
