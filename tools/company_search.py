@@ -70,7 +70,7 @@ def process_company_data(company_name: str, year: str) -> Dict[str, Any]:
         PRICE_COMPLETION_PER_1K = 0.002  # e.g. $0.002 per 1 000 completion tokens
 
         llm_response = client.chat.completions.create(
-            model="gpt-4o-search-preview-2025-03-11",
+            model="gpt-4o-mini-search-preview",
             messages=[{"role": "user", "content": prompt}],
             timeout=20,
         )
@@ -81,6 +81,10 @@ def process_company_data(company_name: str, year: str) -> Dict[str, Any]:
         json_str = m.group(1).strip() if m else raw.strip()
         llm_data = json.loads(json_str)
         results["llm_result"] = llm_data
+
+        # if region shows North Amerca chnage to USA
+        if llm_data.get("region") == "North America":
+            llm_data["region"] = "USA"
 
         # 6. Extract tokens
         usage            = getattr(llm_response, "usage", {}) or {}
