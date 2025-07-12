@@ -34,36 +34,34 @@
 ### 2. Set Up the Python Environment
 
 - **Create and activate a virtual environment:**
-  ```sh
+
   python -m venv venv
   # On Mac/Linux:
   source venv/bin/activate
   # On Windows:
   venv\Scripts\activate
-````
+
 
 * **Install dependencies:**
 
-  ```sh
   pip install -r requirements.txt
-  ```
+
 
 ### 3. Run the Pipeline
 
 * Use the following command format:
 
-  ```sh
+
   python main.py "<company_name>" <year> [--provider <provider_name>]
-  ```
+
 
   * `<company_name>`: The target company (use quotes if the name has spaces)
   * `<year>`: The reporting year (e.g., 2024)
   * `--provider`: *(optional)* LLM provider to use (`qwen`, `openai`, etc.; OpenAI is default)
 * **Example:**
 
-  ```sh
   python main.py "Tata Consultancy Services" 2024 --provider qwen
-  ```
+
 
 ### 4. Supported Providers
 
