@@ -14,10 +14,6 @@
       "api_key": "YOUR_OPENAI_KEY_HERE",
       "base_url": "https://api.openai.com/v1"
     },
-    "mixtral": {
-        "api_key": "YOUR_TOGETHER_KEY_HERE",
-        "base_url": "https://api.together.xyz/v1"
-    },
     "qwen": {
         "api_key": "YOUR_TOGETHER_KEY_HERE",
         "base_url": "https://api.together.xyz/v1"
@@ -48,20 +44,6 @@
     "validate_analyzed_data": "gpt-4.1-2025-04-14",
     "thesis": "gpt-4.1-2025-04-14",
     "audit": "gpt-4.1-2025-04-14"
-  },
-  "mixtral_llm_models": {
-    "resolve_company": "gpt-4o-search-preview-2025-03-11",
-    "llm_decision":                 "mistralai/Mistral-7B-Instruct-v0.2",
-    "data_collection_us":           "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
-    "data_collection_indian":       "mistralai/Mistral-7B-Instruct-v0.2",
-    "validate_collected_data":      "mistralai/Mixtral-8x7B-Instruct-v0.1",
-    "synchronize_data":             "mistralai/Mixtral-8x7B-Instruct-v0.1",
-    "summarizer":                   "mistralai/Mistral-7B-Instruct-v0.2",
-    "validate_summarized_data":     "mistralai/Mixtral-8x7B-Instruct-v0.1",
-    "concept":                      "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
-    "validate_analyzed_data":       "mistralai/Mixtral-8x7B-Instruct-v0.1",
-    "thesis":                       "mistralai/Mixtral-8x7B-Instruct-v0.1",
-    "audit":                        "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO"
   },
   "qwen_llm_models": {
     "resolve_company": "gpt-4o-search-preview-2025-03-11",

@@ -464,10 +464,7 @@ def get_node_model(node_name: str, config: Dict[str, Any], provider: str = None)
 
 def get_provider_creds(provider: str, config: Dict[str, Any]) -> Dict[str, Any]:
     """Return API keys/base_url for a given provider, with together-fallback for other models."""
-    p = provider
-    if p in ("mixtral", "qwen", "deepseek", "meta"):
-        p = "together"
-    creds = config.get("providers", {}).get(p, {})
+    creds = config.get("providers", {}).get(provider, {})
     if not creds:
         raise ValueError(f"No credentials for provider '{p}'")
     return creds

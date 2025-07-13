@@ -94,7 +94,7 @@ def run_orchestration(
             logger.error(f"Env injection failed for '{agent_name}': {e}")
             log_event("model_env_error", {"agent": agent_name, "error": str(e)})
 
-    log_event("setup_progress", {"step": "Setting up Agents"})
+    log_event("setup_progress", {"step": "Setting up LLM Model"})
     logger.info("All agents instantiated")
     log_event("agents_ready", {"agents": list(llm_models.keys())})
 
@@ -102,24 +102,24 @@ def run_orchestration(
 
     # === 2. Build StateGraph (Graph definition remains the same)
     g = StateGraph(AgentState)
-    g.add_node("Resolve Company", resolve_company_node)
-    g.set_entry_point("Resolve Company")
-    g.add_node("Branch Decision", region_decision_node)
-    g.add_edge("Resolve Company", "Branch Decision")
-    g.add_node("Data Collection US", data_collection_us_node)
+    g.add_node("Get Company Details", resolve_company_node)
+    g.set_entry_point("Get Company Details")
+    g.add_node("Check Region", region_decision_node)
+    g.add_edge("Get Company Details", "Check Region")
+    g.add_node("US Data Collection", data_collection_us_node)
     g.add_node("Data Collection India", data_collection_indian_node)
     g.add_conditional_edges(
-        "Branch Decision",
+        "Check Region",
         lambda state: state.llm_decision,
         {
-            "us": "Data Collection US",
+            "us": "US Data Collection",
             "india": "Data Collection India",
             "end": END,
         }
     )
 
     g.add_node("Validate Collected Data", validate_collected_data_node)
-    g.add_edge("Data Collection US",   "Validate Collected Data")
+    g.add_edge("US Data Collection",   "Validate Collected Data")
     g.add_edge("Data Collection India","Validate Collected Data")
     g.add_node("Synchronize Data", synchronize_data_node)
     g.add_conditional_edges(
@@ -131,34 +131,34 @@ def run_orchestration(
         }
     )
     #g.add_edge("Validate Collected Data", "Synchronize Data")
-    g.add_node("Summarize", summarization_node)
-    g.add_edge("Synchronize Data", "Summarize")
-    g.add_node("Validate Summaries", validate_summarized_data_node)
-    g.add_edge("Summarize", "Validate Summaries")
-    g.add_node("Conceptual Analysis", concept_analysis_node)
+    g.add_node("Summarize Data", summarization_node)
+    g.add_edge("Synchronize Data", "Summarize Data")
+    g.add_node("Validate Summarized Data", validate_summarized_data_node)
+    g.add_edge("Summarize Data", "Validate Summarized Data")
+    g.add_node("Concept Analysis", concept_analysis_node)
     g.add_conditional_edges(
-        "Validate Summaries",
+        "Validate Summarized Data",
         lambda state: state.llm_decision,
         {
-            "continue": "Conceptual Analysis",
+            "continue": "Concept Analysis",
             "end": END,
         }
     )
-    # g.add_edge("Validate Summaries", "Conceptual Analysis")
-    g.add_node("Validate Analyzed Data", validate_analyzed_data_node)
-    g.add_edge("Conceptual Analysis", "Validate Analyzed Data")
-    g.add_node("Generate Report", generate_report_node)
+    # g.add_edge("Validate Summaries", "Concept Analysis")
+    g.add_node("Validate Conceptual Analysis", validate_analyzed_data_node)
+    g.add_edge("Concept Analysis", "Validate Conceptual Analysis")
+    g.add_node("Generate Annual Report", generate_report_node)
     g.add_conditional_edges(
-        "Validate Analyzed Data",
+        "Validate Conceptual Analysis",
         lambda state: state.llm_decision,
         {
-            "continue": "Generate Report",
+            "continue": "Generate Annual Report",
             "end": END,
         }
     )
-    #g.add_edge("Validate Analyzed Data", "Generate Report")
+    #g.add_edge("Validate Conceptual Insights", "Generate Annual Report")
     g.add_node("Run Evaluation", run_evaluation_node)
-    g.add_edge("Generate Report", "Run Evaluation")
+    g.add_edge("Generate Annual Report", "Run Evaluation")
     g.add_edge("Run Evaluation", END)
 
     logger.info("Graph edges configured")
@@ -167,7 +167,7 @@ def run_orchestration(
     # === 3. Prepare work dir (already done by initializing current_graph_state)
     logger.info(f"Workdir prepared at {report_dir}")
     log_event("initial_state_ready", {"company": company, "year": year, "work_dir": report_dir})
-
+    log_event("setup_progress", {"step": "Setting up Agents"})
     # === 4. Compile & stream
     try:
         app = g.compile()
@@ -299,6 +299,18 @@ def run_orchestration(
                 logger.info(f"Saved pipeline node metrics to {metrics_path}")
             else:
                 logger.warning("No pipeline metrics data available in final state to save.")
+
+            # After saving the report file
+            report_filename =  report_filename = return_state['memory'].get('final_report_path') 
+            report_url = "/" + report_filename.replace("\\", "/")
+
+            log_event(
+                event_type="final_report_generated",
+                payload={
+                    "report_url": report_url,
+                    "message": "Final report generated successfully."
+                }
+            )
 
         else: # This else block is for when a successful run (not 'end') still has missing memory
             logger.warning("Final state or its memory is missing. Cannot extract metrics for printing/saving for successful run.")

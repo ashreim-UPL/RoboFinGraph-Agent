@@ -5,7 +5,7 @@ import os
 import sys
 import json
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any, Optional, List
 
 # === Logger Setup ===
@@ -27,6 +27,13 @@ _stream_handler = logging.StreamHandler(sys.stdout)
 _stream_handler.setLevel(logging.WARNING)  # Only WARNING/ERROR shown on CLI
 _stream_handler.setFormatter(_log_formatter)
 _logger.addHandler(_stream_handler)
+
+def _safe_json(obj):
+    if hasattr(obj, "isoformat"):
+        return obj.isoformat()
+    if hasattr(obj, "value"):
+        return obj.value
+    return str(obj)
 
 def setup_logging():
     pass
@@ -62,16 +69,21 @@ def cli_human_summary(event_type, payload):
 
 def log_event(event_type: str, payload: Dict[str, Any], session_id: Optional[str] = None) -> None:
     entry = {
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "event_type": event_type,
         "session_id": session_id or "global",
         "payload": payload
     }
+    # print(json.dumps({"event_type": "test_event", "payload": {"hello": "frontend"} }), flush=True)
+
     _logger.info(json.dumps(entry))
+
+    print(json.dumps(entry, default=_safe_json), flush=True)
 
     # Show CLI human summary for warnings/errors/key events (customize if needed)
     if event_type.lower() in {"error", "tool_failure", "terminate", "pipeline_end"}:
         cli_human_summary(event_type, payload)
+
 
 def log_agent_step(agent_name: str, input_text: str, output_text: str, tool_used: Optional[str] = None, session_id: Optional[str] = None) -> None:
     log_event("agent_step", {
@@ -83,14 +95,6 @@ def log_agent_step(agent_name: str, input_text: str, output_text: str, tool_used
 
 def log_final_summary(summary: str, session_id: Optional[str] = None) -> None:
     log_event("final_summary", {"summary": summary[:100]}, session_id=session_id)
-
-def log_cost_estimate(agent_outputs: List[str], session_id: Optional[str] = None) -> None:
-    cost = calculate_token_cost(agent_outputs)
-    log_event("cost_estimate", {"total_cost": cost}, session_id=session_id)
-
-def log_evaluation(agent_outputs: List[str], session_id: Optional[str] = None) -> None:
-    accuracy = validate_pipeline_accuracy([{"status": "ok" if a else "fail"} for a in agent_outputs])
-    log_event("evaluation", accuracy, session_id=session_id)
 
 # === Tool & Audit Logs ===
 def classify_hallucination_type(filename: str, tool_name: str, failure_type: str) -> str:

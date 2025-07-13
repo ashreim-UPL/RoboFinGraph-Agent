@@ -55,6 +55,14 @@ def record_node(node_key: str):
         def wrapper(agent_state: AgentState, *args, **kwargs):
             node_start = datetime.now(timezone.utc)
             # --- TRACK NODE SEQUENCE ---
+            # --- Log agent_start here ---
+            log_event(
+                event_type="agent_start",
+                payload={
+                    "agent_name": node_key,
+                    "step": f"Starting {node_key}"
+                }
+            )
             pipeline_nodes = agent_state.memory.setdefault("pipeline_nodes", [])
             if not pipeline_nodes or pipeline_nodes[-1] != node_key:
                 pipeline_nodes.append(node_key)
@@ -80,11 +88,6 @@ def record_node(node_key: str):
             if not agent_state.memory.get("pipeline_start_time"):
                 agent_state.memory["pipeline_start_time"] = node_start.isoformat()
 
-            #sys.stdout.write(json.dumps({
-            #    "event_type": "node_start",
-            #    "data": {"node": node_key, "timestamp": record["start_time"]}
-            #}) + "\n")
-            #sys.stdout.flush()
 
             try:
                 setattr(agent_state, "_current_node_record", record)
@@ -116,11 +119,17 @@ def record_node(node_key: str):
 
                 # append & stream node_end
                 pipeline.append(record)
-                #sys.stdout.write(json.dumps({
-                #    "event_type": "node_end",
-                #    "data": record
-                #}) + "\n")
-                #sys.stdout.flush()
+
+                # --- Log node_end here ---
+                log_event(
+                    event_type="node_end",
+                    payload={
+                        "node": node_key,
+                        "tools_used": record["tools_used"],
+                        "errors": "",
+                        "duration": record["duration"]
+                    }
+                )
 
             return result
         return wrapper
@@ -128,12 +137,23 @@ def record_node(node_key: str):
 
 # === Graph Node Implementations ===
 
-@record_node("Get Company Details")
+@record_node("Get_Company_Details")
 def resolve_company_node(agent_state: AgentState) -> AgentState: 
     """
     Resolves company details using the specialized 'process_company_data' tool (LLM-only).
     This node updates agent_state with comprehensive company_details directly from the LLM.
     """
+
+    log_event(
+        event_type="node_end",
+        payload={
+            "node": "__Start__",
+            "tools_used": "",
+            "errors": "",
+            "duration": 0
+        }
+    )
+
     model_start = datetime.now(timezone.utc)
     # 1. Get the company query from AgentState.
     company_query = agent_state.company 
@@ -189,6 +209,37 @@ def resolve_company_node(agent_state: AgentState) -> AgentState:
             "model_duration": model_duration, 
         })
 
+        log_event(
+            event_type="company_data_extracted",
+            payload={
+                "official_name": agent_state.company_details.get("official_name"),
+                "company_name": agent_state.company,
+                "segments": agent_state.company_details.get("segments", []),
+                "industry": agent_state.company_details.get("industry"),
+                "fmp_ticker": agent_state.company_details.get("fmp_ticker"),
+                "sec_ticker": agent_state.company_details.get("sec_ticker"),
+                "yfinance_ticker": agent_state.company_details.get("yfinance_ticker"),
+                "region": agent_state.company_details.get("region"),
+                "currency": agent_state.company_details.get("currency"),
+                "peers": [
+                    peer["name"]
+                    for peer in agent_state.company_details.get("peers", [])
+                    if isinstance(peer, dict) and "name" in peer
+                ] if agent_state.company_details.get("peers") and isinstance(agent_state.company_details["peers"][0], dict)
+                else agent_state.company_details.get("peers", [])
+            }
+        )
+
+        log_event(
+            event_type="agent_end",
+            payload={
+                "agent_name": "Get_Company_Details",
+                "output": {
+                    "status": "company_found"
+                }
+            }
+        )
+
     except Exception as e:
         error_msg = f"resolve_company_node error: {e}"
         agent_state.error_log.append(error_msg) 
@@ -197,7 +248,7 @@ def resolve_company_node(agent_state: AgentState) -> AgentState:
         agent_state.accuracy_score = 0.0
     return agent_state
 
-@record_node("Check Region")
+@record_node("Check_Region")
 def region_decision_node(agent_state: AgentState) -> AgentState:
     """
     Determine data‐collection branch based on company region (no LLM).
@@ -233,7 +284,7 @@ def region_decision_node(agent_state: AgentState) -> AgentState:
 
     return agent_state
 
-@record_node("US Data Collection")
+@record_node("US_Data_Collection")
 def data_collection_us_node(agent_state: AgentState) -> Dict[str, Any]:
     """
     High-level node to orchestrate US-specific data collection using a dedicated tool.
@@ -319,7 +370,7 @@ def data_collection_us_node(agent_state: AgentState) -> Dict[str, Any]:
             "status": NodeStatus.ERROR.value
         }
 
-@record_node("India Data Collection")
+@record_node("India_Data_Collection")
 def data_collection_indian_node(agent_state: AgentState) -> AgentState:
     """
     Invoke all data‐collection tools (India); currently identical to US.
@@ -404,7 +455,7 @@ def data_collection_indian_node(agent_state: AgentState) -> AgentState:
             "status": NodeStatus.ERROR.value
         }
 
-@record_node("Validate Collected Data")
+@record_node("Validate_Collected_Data")
 def validate_collected_data_node(agent_state: AgentState) -> AgentState:
     """
     Verify each expected raw file exists and is valid JSON via our shared tool.
@@ -480,7 +531,7 @@ def synchronize_data_node(agent_state: AgentState) -> AgentState:
     agent_state.memory["normalized_data"] = agent_state.memory.get("raw_data", {})
     return agent_state
 
-@record_node("Summarize Data")
+@record_node("Summarize_Data")
 def summarization_node(agent_state: AgentState) -> AgentState:
     """
     1) For each required summary spec:
@@ -491,6 +542,17 @@ def summarization_node(agent_state: AgentState) -> AgentState:
     3) Track the file names in agent_state.preliminary_files
     4) Also stash the dict of <summary_name>->text in agent_state.memory["summaries"]
     """
+
+    log_event(
+        event_type="node_end",
+        payload={
+            "node": "Synchronize_Data",
+            "tools_used": "",
+            "errors": "",
+            "duration": 0
+        }
+    )
+
     executor = LangGraphLLMExecutor("summarizer")
     executor.agent_state = agent_state
    
@@ -556,7 +618,7 @@ def summarization_node(agent_state: AgentState) -> AgentState:
 
     return agent_state
 
-@record_node("Validate Summarized Data")
+@record_node("Validate_Summarized_Data")
 def validate_summarized_data_node(agent_state: AgentState) -> AgentState:
     """
     Check that each section summary exists and meets basic criteria.
@@ -607,7 +669,7 @@ def validate_summarized_data_node(agent_state: AgentState) -> AgentState:
 
     return agent_state
 
-@record_node("Concept Analysis")
+@record_node("Conceptual_Analysis")
 def concept_analysis_node(agent_state: AgentState) -> AgentState:
     """
     Generate conceptual insights for each summary section using our shared helper.
@@ -635,23 +697,9 @@ def concept_analysis_node(agent_state: AgentState) -> AgentState:
             p.write_text(insights[key], encoding="utf-8")
             agent_state.summary_files.append(str(p))
 
-    # IF NOde is LLM we don't need this here- testing
-    """agent_state.llm_provider = str(executor.provider)
-    agent_state.llm_model = str(executor.model_name)
-
-    # === LOG LLM/AGENT USAGE ===
-    agent_state.memory.setdefault("models_used", []).append({
-        "agent": "analysis",
-        "provider": agent_state.llm_provider,
-        "model": agent_state.llm_model,
-        "tokens_sent": agent_state.tokens_sent,
-        "tokens_generated": agent_state.tokens_generated,
-        "cost_llm": agent_state.cost_llm,
-    })"""
-
     return agent_state
 
-@record_node("Validate Conceptual Insights")
+@record_node("Validate_Conceptual_Analysis")
 def validate_analyzed_data_node(agent_state: AgentState) -> AgentState:
     """
     Validate each conceptual insight section:
@@ -702,7 +750,7 @@ def validate_analyzed_data_node(agent_state: AgentState) -> AgentState:
 
     return agent_state
 
-@record_node("Generate Annual Report")
+@record_node("Generate_Annual_Report")
 def generate_report_node(agent_state: AgentState) -> AgentState:
     """
     Build out individual report‐section text files from the in-memory summaries,
@@ -809,7 +857,7 @@ def parse_icaif_scores(response: str) -> dict:
             scores[key] = int(m2.group(1)) if m2 else None
 
     return scores
-@record_node("Run Evaluation")
+@record_node("Run_Evaluation")
 def run_evaluation_node(agent_state: AgentState) -> AgentState:
     """
     Perform final pipeline evaluation: quantitative KPIs + qualitative LLM audit.

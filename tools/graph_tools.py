@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 from langchain.schema import HumanMessage
 from tabulate import tabulate
 
-from utils.logger import get_logger, log_event, log_agent_step, log_cost_estimate
+from utils.logger import get_logger, log_event, log_agent_step
 from utils.config_utils import LangGraphLLMExecutor
 from prompts.summarization_intsruction import summarization_prompt_library
 from prompts.report_summaries import report_section_specs
@@ -32,17 +32,17 @@ def get_sec_metadata_node(state: AgentState) -> Dict[str, str]:
     try:
         sec_ticker = state.company_details['sec_ticker']
         report_year = int(state.year)
-        filing_year = report_year + 1
+        filing_year = report_year
         start_date = f"{filing_year}-01-01"
         end_date   = f"{filing_year+1}-06-30"
 
         # call your real helper directly:
-
         metadata = get_10k_metadata(
             sec_ticker=sec_ticker,
             start_date=start_date,
             end_date=end_date
         )
+
         if not metadata or "error" in metadata:
             print(f"[!] SEC Metadata Error: {metadata.get('error','No filings found')}")
             return {}
@@ -670,5 +670,18 @@ def evaluate_pipeline(agent_state: AgentState, icaif_scores: Optional[dict] = No
     # --- Set state outputs (for chaining/side effects) ---
     agent_state.memory["final_evaluation"] = results
     agent_state.accuracy_score = kpis.get("total_pipeline_cost_usd", 0.0)
+
+    log_event(
+        event_type="pipeline_end",
+        payload={
+            "latency": pipeline_duration,
+            "tokens": total_tokens_in + total_tokens_out,
+            "cost": round(cumulative_cost, 6),
+            "accuracy": icaif_scores.get("accuracy"),
+            "logicality": icaif_scores.get("logicality"),
+            "storytelling": icaif_scores.get("storytelling"),
+        }
+    )
+
 
     return results, metrics_to_save

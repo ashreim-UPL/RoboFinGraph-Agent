@@ -177,7 +177,7 @@ def get_10k_metadata(
         "size": limit,
         "sort": [{"filedAt": {"order": "desc"}}],
     }
-
+    print("query: ",query)
     # This is the actual call to your SEC API.
     # The previous example contained a mock here; this is the real one.
     resp = query_api.get_filings(query)
