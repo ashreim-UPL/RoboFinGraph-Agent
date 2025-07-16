@@ -180,10 +180,20 @@ def resolve_company_node(agent_state: AgentState) -> AgentState:
 
         agent_state.company_details = data
         agent_state.region = data.get("region", agent_state.region) if data else agent_state.region
-        raw_filing_date = (
-            data.get(f"filing_date_{agent_state.year}") or data.get("filing_date") if data else None
-        )
-        agent_state.filing_date = normalize_date(raw_filing_date)        
+        # Flexible lookup of any filing‑date key containing both “filing” and the year
+        raw_filing_date = None
+        for key, val in data.items():
+            # normalize key: lower‑case, replace underscores with spaces
+            nk = key.strip().lower().replace("_", " ")
+            if "filing date" in nk and agent_state.year in nk:
+                raw_filing_date = val
+                break
+
+        # fallback to any top‑level "filing_date"
+        if raw_filing_date is None:
+            raw_filing_date = data.get("filing_date")
+
+        agent_state.filing_date = normalize_date(raw_filing_date) 
         agent_state.validation_result_key = result.get("validation_status", "valid") if result else "Node_Error"
         agent_state.accuracy_score = result.get("accuracy_score", 0.0) if result else 0.0
         agent_state.sec_report_address= data.get("sec_report_address") if data else None

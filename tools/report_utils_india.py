@@ -64,7 +64,14 @@ def get_key_data_india(ticker: str, save_path: str) -> str:
     av = r.get("analystView", [])
     if not isinstance(av, list):
         av = []
-    ratings = [item for item in av if item.get('ratingName') not in ('Total', '') and 'ratingValue' in item and 'numberOfAnalystsLatest' in item]
+    # Keep any entry with a non‑empty name and both fields present
+    ratings = [
+        item for item in av
+        if item.get("ratingName")                 # non‑empty name
+        and "ratingValue" in item
+        and "numberOfAnalystsLatest" in item
+    ]
+    #ratings = [item for item in av if item.get('ratingName') not in ('Total', '') and 'ratingValue' in item and 'numberOfAnalystsLatest' in item]
     if ratings:
         total_analysts = sum(int(item['numberOfAnalystsLatest']) for item in ratings)
         weighted = sum(int(item['ratingValue']) * int(item['numberOfAnalystsLatest']) for item in ratings) / total_analysts if total_analysts else 0
@@ -77,7 +84,6 @@ def get_key_data_india(ticker: str, save_path: str) -> str:
         rating = f"{map_score_to_text(weighted)} (score: {weighted:.2f})" if total_analysts else "N/A"
     else:
         rating = "N/A"
-
     key_data = {
         "Rating": rating,
         "Currency": curr,
