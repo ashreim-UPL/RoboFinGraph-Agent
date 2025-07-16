@@ -382,120 +382,105 @@ def get_pe_eps_performance(
     return f"P/E and EPS performance chart saved to <img src='{save_path}'>"
 
 def get_pe_eps_performance_indian_market(
-
     ticker: Annotated[str, "Ticker"],
-
-
     filing_date: Annotated[str | datetime, "Filing date in 'YYYY-MM-DD' format"],
     save_path: Annotated[str, "File path for saving the plot"],
     years: int = 4
 ) -> str:
-    """Plots the PE ratio and EPS performance over the past n years."""
+    """Plots the P/E ratio and EPS performance over the past n years, in a double-line style."""
 
-    year = int(filing_date.strftime("%Y")) if isinstance(filing_date, datetime) else int(filing_date.split("-")[0])
-
-    # 1. Fetch income statements to get EPS data from the API
-
-    # Make the API call
-
-    #hist_response = make_api_request("IndianMarket", "/historical_data", {'stock_name': ticker, 'period': 'max', 'filter': 'pe'})
-    #print("HISTORICAL DATA API RESPONSE:", hist_response)
-
-    # response = make_api_request("IndianMarket", "/stock", {"name": ticker})
-    # avoidign multiple requests to API due its instability
-    response= get_cached_stock_data(ticker)
-    financials = response.get("financials", [])
-
-    # Parse annual financial data
-    statement_data = {
-        doc['EndDate']: doc['stockFinancialMap']['INC']
-        for doc in financials
-        if doc['Type'] == 'Annual' and 'INC' in doc.get("stockFinancialMap", {})
-    }
-
-    df = pd.DataFrame()
-    for date, income_statement in statement_data.items():
-        if int(date[:4]) <= year:
-            if df.empty:
-                df = pd.DataFrame(income_statement)[['key', 'value']].rename(columns={'key': 'metric', 'value': date})
-            else:
-                df = df.merge(
-                    pd.DataFrame(income_statement)[['key', 'value']].rename(columns={'key': 'metric', 'value': date}),
-                    on='metric',
-                    how='outer'
-                )
-
-    df.set_index('metric', inplace=True)
-    df = df.T
-    eps = df['DilutedEPSExcludingExtraOrdItems'].sort_index(ascending=True).rename('EPS')
-    eps = eps.astype(float)
-    
-
-    pe_df = pd.DataFrame(make_api_request("IndianMarket", "/historical_data", {'stock_name': ticker, 'period': 'max', 'filter': 'pe'})['datasets'][1]['values'], columns = ['Date', 'PE'])
-
-    pe_df['Date'] = pd.to_datetime(pe_df['Date'])
-    list_dates = list(eps.index)
-
-    pes = {}
-    
-    for date in list_dates:
-        d = pd.to_datetime(date)
-        pe_df_upper = pe_df[(pe_df['Date'] >= d)]
-        pe_df_upper = pe_df_upper.sort_values(by='Date', ascending=True).reset_index(drop=True)
-
-        pe_df_lower = pe_df[(pe_df['Date'] <= d)]
-        pe_df_lower = pe_df_lower.sort_values(by='Date', ascending=True).reset_index(drop=True)
-
-        upper = pe_df_upper.head(1)
-        lower = pe_df_lower.tail(1)
-
-        pe = pd.concat([lower, upper], ignore_index=True)
-        pe['PE'] = pe['PE'].astype(float)
-
-        pe_list = pe['PE'].to_list() 
-        pe_dates = pe['Date'].to_list()
-
-        d2_d1 = (pe_dates[1] - pe_dates[0]).days
-        d_d1 = (d - pe_dates[0]).days
-
-        if d_d1 <= 0 or d2_d1 <= 0:
-            pe_in_d=pe_list[0]
-        else:
-            pe_in_d=round(pe_list[0] + (pe_list[1] - pe_list[0]) * (d_d1 / d2_d1), 2)
-
-        pes[date] = pe_in_d
-    
-    pe_series = pd.Series(pes).sort_index(ascending=True)
-    pe_series.index = pd.to_datetime(pe_series.index)
+    # 1. Normalize filing_date
     filing_date = pd.to_datetime(filing_date)
 
-    pe_series = pe_series[pe_series.index <= filing_date] 
-    pe_series = pe_series.tail(years)  # Keep only the last n years of data
+    # 2. Fetch PE + EPS data
+    response = make_api_request(
+        "IndianMarket",
+        "/historical_data",
+        {"stock_name": ticker, "period": "max", "filter": "pe"}
+    )
+    datasets = response.get("datasets", [])
+    if len(datasets) < 2:
+        raise ValueError(f"No PE/EPS data returned for {ticker}")
 
-    eps.index = pd.to_datetime(eps.index)
-    eps = eps[eps.index <= filing_date]
-    eps = eps.tail(years)  # Filter EPS to the last n years
+    # 3. Build a DataFrame
+    records = []
+    for entry in datasets:
+        metric = entry.get("metric", "")
+        for date_str, value in entry.get("values", []):
+            records.append({"date": date_str, "metric": metric, "value": value})
 
+    df = (
+        pd.DataFrame(records)
+          .assign(date=lambda d: pd.to_datetime(d["date"]))
+          .pivot(index="date", columns="metric", values="value")
+          .sort_index()
+    )
 
-    #print(f"PE Series: {pe_series}")
-    #print(f"EPS Series: {eps}") 
+    if "EPS" not in df.columns or "Price to Earning" not in df.columns:
+        raise ValueError(f"Required metrics not found for {ticker}")
 
-    # 5. Plotting Logic
-    fig, ax1 = plt.subplots(figsize=(14, 7))
-    ax1.plot(pe_series.index, pe_series.values, color="blue", marker='o', label="P/E Ratio")
+    eps = df["EPS"]
+    pe_raw = df["Price to Earning"]
+
+    # 4. Filter up to filing_date, drop NaNs, then select last `years` points
+    eps_valid = eps[eps.index <= filing_date].dropna()
+    selected_dates = eps_valid.tail(years).index
+
+    # 5. Interpolate P/E at those exact dates
+    pe_df = (
+        pe_raw.reset_index()
+              .rename(columns={"Price to Earning": "PE"})
+              .dropna(subset=["PE"])
+    )
+    pes = {}
+    for target in selected_dates:
+        pe_df["delta"] = (pe_df["date"] - target).abs()
+        nearest = pe_df.nsmallest(2, "delta")
+
+        d1, v1 = nearest["date"].iloc[0], nearest["PE"].iloc[0]
+        if len(nearest) == 1:
+            pes[target] = v1
+        else:
+            d2, v2 = nearest["date"].iloc[1], nearest["PE"].iloc[1]
+            span_days = (d2 - d1).days
+            weight = ((target - d1).days / span_days) if span_days else 0
+            pes[target] = round(v1 + (v2 - v1) * weight, 2)
+
+    pe_series = pd.Series(pes).sort_index()
+    eps_series = eps_valid.loc[pe_series.index]
+
+    # 6. Plot both as lines with markers, matching the JPMorgan style
+    fig, ax1 = plt.subplots(figsize=(12, 6))
+
+    # P/E line
+    ax1.plot(
+        pe_series.index, pe_series.values,
+        marker="o", linestyle="-", linewidth=2,
+        label="P/E Ratio", color="tab:blue"
+    )
     ax1.set_xlabel("Date")
-    ax1.set_ylabel("P/E Ratio", color="blue")
+    ax1.set_ylabel("P/E Ratio", color="tab:blue")
+    ax1.tick_params(axis='y', labelcolor="tab:blue")
+    ax1.grid(True, linestyle="--", alpha=0.3)
 
+    # EPS line on secondary axis
     ax2 = ax1.twinx()
-    ax2.plot(eps.index, eps.values, color="red", marker='x', linestyle='--', label="EPS")
-    ax2.set_ylabel("EPS ($)", color="red")
+    ax2.plot(
+        eps_series.index, eps_series.values,
+        marker="x", linestyle="--", linewidth=2,
+        label="EPS", color="tab:red"
+    )
+    ax2.set_ylabel("EPS ($)", color="tab:red")
+    ax2.tick_params(axis='y', labelcolor="tab:red")
 
+    # Combined legend
+    lines1, labels1 = ax1.get_legend_handles_labels()
+    lines2, labels2 = ax2.get_legend_handles_labels()
+    ax1.legend(lines1 + lines2, labels1 + labels2, loc="upper left")
 
-    plt.title(f"{ticker} P/E Ratio and EPS Performance")
-
+    plt.title(f"{ticker} P/E Ratio and EPS Performance ({years}-Year)")
     fig.tight_layout()
-
     plt.savefig(save_path)
     plt.close(fig)
 
-    return f"P/E and EPS performance chart saved to <img src='{save_path}'>"
+    return f"P/E and EPS performance chart saved to: {save_path}"

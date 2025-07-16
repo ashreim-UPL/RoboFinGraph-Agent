@@ -302,7 +302,7 @@ def run_orchestration(
 
             # After saving the report file
             report_filename =  report_filename = return_state['memory'].get('final_report_path') 
-            report_url = "/" + report_filename.replace("\\", "/")
+            report_url = "/" + report_filename.replace("\\", "/") if report_filename else "N/A"
 
             log_event(
                 event_type="final_report_generated",
