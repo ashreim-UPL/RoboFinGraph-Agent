@@ -276,7 +276,7 @@ class ReportLabUtils:
         data = [
             ["RoboFinGraph"],
             ["Team9 - UOA"],
-            ["GitHub:ashreim-UPL/RoboFinGraph-Langgraph.git"],
+            ["GitHub:ashreim-UPL/RoboFinGraph-Agent.git"],
             [f"Report date: {filing_date}"],
         ]
         col_widths = [full_length]
